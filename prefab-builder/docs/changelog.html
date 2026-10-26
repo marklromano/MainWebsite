@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Changelog | Romano Assets</title>
+<meta name="description" content="Changelog: documentation for the All In One Prefab Builder Kit for Unity.">
+<link rel="canonical" href="https://marklromano.github.io/prefab-builder/docs/changelog.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Changelog">
+<meta property="og:description" content="Changelog: documentation for the All In One Prefab Builder Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/prefab-builder/docs/changelog.html">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Prefab Builder docs</a><span class="pill">v0.8.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html" aria-current="page">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html" aria-current="page">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Prefab Builder</a><span>/</span><span>Reference</span></nav>
+<h1 id="changelog">Changelog</h1>
+<p>All notable changes to the All In One Prefab Builder Kit (called the All In One World Builder Kit up to 0.5.0). Versions follow <a href="https://semver.org">Semantic Versioning</a>.</p>
+<h2 id="080---2026-10-10">[0.8.0] - 2026-10-10 <a class="anchor" href="#080---2026-10-10" aria-label="Link to this section">#</a></h2>
+<p><strong>Updating:</strong> delete the old product folder (<code>Assets/AllInOnePrefabBuilderKit</code>, or <code>Assets/AllInOneWorldBuilderKit</code> as it was
+called) before importing this version; your kits and settings are in the data folder and are kept. See the README.</p>
+<h3 id="added">Added <a class="anchor" href="#added" aria-label="Link to this section">#</a></h3>
+<ul>
+<li><strong>The Move tab</strong> (first; Alt+Shift+M): <strong>Move</strong>, <strong>Rotate</strong> and <strong>Scale</strong> what's placed with the kit's snapping instead of
+  Unity's handles — 1, 2 and 3 switch between them (only there). Drag the object itself onto anything (a roof, a table);
+  Move snaps to the pieces nearby and the grid on the axes
+  dragged; Rotate turns round X, Y or Z in steps (R, Shift+R a step round the up axis), back onto the grid; Scale stretches by the box's
+  faces (onto the grid) or evenly in steps by its corners, the bottom staying put. Ctrl moves freely. One Undo step per drag; works in
+  Prefab Mode.</li>
+<li><strong>Anchor</strong> for the Move tab — Point (click a corner, the middle of an edge or face or the centre of the selection) or Pivot —
+  and Move, Rotate and Scale work from there (the anchor lands on the grid). Plus <strong>Move by</strong> (an exact amount), <strong>Put on the ground</strong>,
+  <strong>Turn each at random</strong>, <strong>Straighten</strong> and <strong>Reset scale</strong>.</li>
+<li><strong>Check &gt; Clipping:</strong> finds placed pieces that go into each other (by their colliders, or their boxes without), outlines them in
+  red, and pushes them apart — floors, scatter and the pieces of one fence, closure or spline left out.</li>
+<li><strong>Check &gt; Validate:</strong> the scene against the rule set's rules — spacing, setback from the road, triangle budgets, heavy scatter,
+  crowded cells, mixed styles, and two lighting checks (not static; no lightmap UVs) — listed by rule and marked in the Scene view.</li>
+<li><strong>Check &gt; Play:</strong> click a spot and Play starts there — the player (tagged Player, else the Main Camera at eye height) put on it
+  facing the view, and put back when Play ends; a game that places its own player reads the spot from <code>PlayFromHere</code>.</li>
+<li><strong>Check &gt; Measure:</strong> click two points for the distance (along the ground, up or down) and the time to walk, run or drive it;
+  click as many points as you like along a path.</li>
+<li><strong>Check &gt; Performance:</strong> what the whole scene (or the selection) costs to draw — objects and triangles against the rule set's
+  budgets, materials, shadow casters, and the heaviest meshes (click to select their copies).</li>
+<li><strong>Place on anything:</strong> every tool aims at and lands on models without colliders too — a pack's models placed straight in (as
+  in Demo City): roofs, roads, tables — by hidden stand-ins of their meshes; nothing is added to the models.</li>
+<li><strong>Fence moved to the Dress tab</strong> (Dress &gt; Fence; Alt+Shift+E still opens it): fencing yards, lots and parks is dressing a street.</li>
+<li><strong>The Physics tab</strong> (Alt+Shift+H): real physics for building — what drops lands on the ground, roofs, tables, shelves and
+  each other, with colliders or without, and you see it fall. The fall runs in a hidden copy of the area, so nothing else
+  in the scene moves and nothing physical is left on the pieces. Space is the main action in every tool.</li>
+<li><strong>Place:</strong> drop the picked pieces — or copies of the selection — under the mouse, <strong>throw</strong> them from you at a
+    spot, spread them over a <strong>box</strong>, along a <strong>line</strong> or round a <strong>ring</strong> you drag, or <strong>stamp</strong> one where its ghost shows;
+    tumbling or upright, scaled at random.
+    One Undo step per drop; N drops them again with a new mix.</li>
+<li><strong>Scatter:</strong> spread the selection at random, <strong>explode</strong> it from a point, <strong>heap</strong> it into a pile, or <strong>nudge</strong> each
+    piece a little — they fly, land and settle.</li>
+<li><strong>Arrange:</strong> line the selection up along a line or an arc, round a circle, in a grid, or <strong>level</strong> it — select, press
+    Space (or the button), then draw where they go; each lands on what's under it. Its <strong>Settle</strong> section drops the
+    selection onto what's under it, or <strong>untangles</strong> it (U): pieces inside each other pushed apart, sunken ones lifted back
+    on top — then, if asked, settled.</li>
+<li>
+<p><strong>Physics settings</strong> every tool shares: bounce, friction, keep upright, time to settle.</p>
+</li>
+<li>
+<p><strong>Move &gt; Select</strong> (4): pick placed pieces by a box (its base dragged, then its height) or a circle drawn on the ground, a ball, or everything on screen; only
+  pieces like the selection, of a size or at a height; new, add (Shift), subtract (Ctrl) or intersect (both).</p>
+</li>
+<li>
+<p><strong>Move &gt; Show / Hide</strong> (5): hide or lock every placed piece of a category (roads, buildings, props, scatter) while you
+  work, or show only one; the tools aim through what's hidden. Unity's own scene visibility: the scene is untouched.</p>
+</li>
+<li>
+<p><strong>Dress &gt; Vary</strong>: makes what's placed look less copied — each piece swapped for a lookalike from its kit (same category,
+  footprint and name family), its materials for the pack's own alternatives, tinted with a palette colour, turned round.
+  Click a piece, or Space for the selection; Back to original. Only the variety the kits have; no pack file changed.</p>
+</li>
+<li>
+<p><strong>Floor signs</strong> (Dress &gt; Signs, <strong>On the surface</strong>): your text laid flat on the ground, a wall or a roof where you click —
+  no board — reading the right way up from where you look; R turns it, editable after placing like any sign.</p>
+</li>
+<li>Signs: <strong>Turn (°)</strong> turns the text (and its backing) on the face, for every sign.</li>
+<li>
+<p><strong>Dress &gt; Decals</strong>: an image — graffiti, road markings, stains, posters, logos — laid flat on the ground, a wall or a roof
+  where you click (on the grid on the ground); width, turn, tint and brightness, editable after placing; recent images as buttons. The kit's own Decal
+  shader (Built-in, URP, HDRP), one shared material per image and tint.</p>
+</li>
+<li>
+<p><strong>Place &gt; Roads</strong> (7): drag a road across the ground and the right tiles go down — straights, corners, T-junctions,
+  crossroads and dead ends from your kit, turned the right way — joined to the roads already there (a straight it crosses
+  becomes a crossroad). Tiles are sorted by their open sides, read from their kerbs; the plainest of each shape first, or
+  your pick. One Undo step per road.</p>
+</li>
+<li>
+<p><strong>Fence &gt; Draw</strong>: drag the line a fence runs along — corners where it turns, all the way round if it ends where it began.</p>
+</li>
+<li>
+<p><strong>Dress &gt; Cables</strong>: cables hung between two points, sagging in the middle — a wire (power lines, washing lines) or
+  bunting; click pole to pole (from the pole's top) until Esc; sag, thickness, colours,
+  spacing and size; select cables to change them and drag their ends. A Cable component makes its own mesh, so the scene
+  keeps only its numbers; shared materials from the render pipeline's own. One Undo step each.</p>
+</li>
+<li>
+<p><strong>Tilt with T</strong>: the other way to turn things. T tilts the next piece (Stamp, the Physics tab's Stamp) or the
+  selection (the Move tab) a Turn step — its front down; Shift+T up — on its foot, so nothing sinks into the ground; hold T and
+  move the mouse to tilt freely, as held R turns.</p>
+</li>
+<li>
+<p>While R or T is held, the axis it turns or tilts about shows through the piece, with the ring it goes round (green: turn,
+  red: tilt) — Stamp, Row, Signs, Decals and the Physics tab's Stamp.</p>
+</li>
+<li>
+<p><strong>Turn</strong> under the Grid row: how far a press of R turns and T tilts (5° to 90°); with its box ticked, each press first
+  puts the piece back on those steps. Holding R or T turns or tilts freely, any angle.</p>
+</li>
+<li>
+<p>The sample Kenney models have lightmap UVs, so Demo City's lighting can be baked.</p>
+</li>
+<li><strong>Sample content:</strong> Kenney's <strong>Modular Buildings</strong> (CC0) as a second sample kit (×5 blocks), and two new scenes in
+  <code>Samples/Showcase</code>: <strong>Showcase City</strong> (a little city of the sample kits) and <strong>Try It</strong> (half built, to try the tools on),
+  each with camera spots. Both draw in the Built-in pipeline and URP.</li>
+<li>
+<p><strong>Terrain Material Follows Pipeline</strong> (a component): a terrain takes the render pipeline's own terrain material when it's
+  loaded, so a scene made in one pipeline never draws its ground pink in another.</p>
+</li>
+<li>
+<p><strong>Hold R to turn freely</strong> while placing (Stamp, the Physics tab's Stamp, Row, Signs, Decals): move the mouse sideways for
+  any angle, the piece staying where it is — let go and it's back under the mouse (a click while R is still held places it
+  where it was turned); a tap of R still turns a step.</p>
+</li>
+<li>
+<p><strong>Your own order</strong>: drag a tab or a tool along its bar, or a piece to another place in the palette — the number keys
+  follow (Shift+1 is the first tab, 1 the first tool, whichever they are); the ⋮ menu puts everything back in order.</p>
+</li>
+</ul>
+<h3 id="changed">Changed <a class="anchor" href="#changed" aria-label="Link to this section">#</a></h3>
+<ul>
+<li><strong>A keymap that makes sense</strong> (mouse over the Scene view or the window, window open): <strong>Shift+1–7</strong> pick the tabs in order, <strong>1–9</strong> the
+  tools of the tab that's open, and every tool has a key of its own straight to it from any tab — <strong>S</strong> Select, <strong>M</strong> Move,
+  <strong>P</strong> Stamp, <strong>B</strong> Brush, <strong>A</strong> Arrange, the rest free to set. The keys lead the names on the buttons, greyed: "⇧2 Place", "1 Stamp". The old
+  Alt+Shift tab and tool keys (Alt+Shift+1–5, M, H, B, R, J, K, I, E, X) are gone; Alt+Shift+W still opens the window.</li>
+<li>Settings &gt; Hotkeys: <strong>Reset all</strong> puts every shortcut you changed back to its default keys.</li>
+<li>Every mode's help is one or two lines now (the docs keep the detail); click the help (or its ✕) to put it away until ? is
+  pressed again.</li>
+<li>The mode buttons under the tabs share the row evenly, as the tabs do, their number before their name; when they don't fit, the row scrolls.</li>
+<li>The window fits any width: a row of choice buttons that doesn't fit becomes a drop-down; other rows of buttons and fields
+  sit side by side when there's room and stack (or carry on on a second line) when there isn't; labels take a share of the
+  window instead of a fixed width; notes wrap; long names shrink instead of pushing the panel wider.</li>
+<li>The tabs are Move, Place, Physics, Dress, Fix, Check and Settings: the Advanced tab is gone (its tools, when they come, will
+  find a home of their own).</li>
+<li>The Place tools are in a new order: Stamp, Erase, Brush, Fill, Row, Spline.</li>
+<li><strong>Row works like Stamp before the drag:</strong> R turns the piece under the mouse a Turn step (held: any angle) and a click
+  places just that one; drag and the row lays the rest turned the same way. While dragging, R turns the pieces together,
+  each where it stands. Row has no <strong>Fronts face</strong> any more: its pieces stand centred on the line as their models do,
+  turned only by R.</li>
+<li><strong>The cutaway</strong> (Move &gt; Show / Hide, and a Cutaway line in the Scene overlay for every tool): <strong>Top</strong> (C) slices away what's
+  above a height — roofs, the floors above — and <strong>Side</strong> (Shift+C) what's between the camera and an upright plane, to see
+  and build inside, through the middle of a building. Drag the cut's arrow in the Scene view to put it anywhere. Only the
+  Scene view's picture changes, and every tool aims through what's cut, onto the floor inside.</li>
+<li><strong>Straighten</strong> (G, or the button beside Turn): what you're placing turned and tilted back to none — straight on the grid
+  again — in Stamp, Row, Signs, Decals and the Physics tab's Stamp.</li>
+<li>The palette's pictures grow to fill the width of the window (the slider sets about how big they are), with no ragged gap.</li>
+<li>The <strong>+n packs</strong> button is gone from the mode bar: <strong>⋮ &gt; Add Pack</strong> still lists the folders that look like packs.</li>
+</ul>
+<h3 id="fixed">Fixed <a class="anchor" href="#fixed" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>Place &gt; Roads: the straight stretches use the tile named for it (road-straight) — before, a tile as open but painted with a
+  zebra crossing (road-crossing) could be picked, and every stretch of road had a crossing on it.</li>
+<li>The sample kit's street lights face the way their arm reaches, so Dress &gt; Street hangs their lamps over the road (their
+  arms pointed at the houses).</li>
+<li>The showcase scenes (Showcase City, Try It) are rebuilt: plain roads, lights over the road, room between the buildings,
+  nothing clipping, and grass out to the horizon.</li>
+<li>Row: starting the drag no longer turns the pieces away from the way the ghost showed them (after turning it with R).</li>
+<li>A press of R or T after turning freely went to the nearest Turn step and then a step on, so it could skip one (50° to
+  180°): it goes to the next step that way (50° to 90°).</li>
+<li>On the grid, a piece narrower than the grid goes in the middle of the cell under the mouse — before, its edge went on the
+  nearest grid line, which could leave it up to half a cell away from the pointer.</li>
+<li>Placing on top of buildings and props: what a piece stands on — a roof, a table, a shelf — no longer counts as being in
+  its way (its box reaches past where things stand on it), so Stamp's ghost isn't red there and Brush, Fill, Row and Spline
+  no longer leave those pieces out. Only what a piece actually runs into does.</li>
+<li>Palette colours go on the parts they're for: a piece's walls take a wall colour, its trim a trim colour, its accents an
+  accent colour (Fix &gt; Randomize and Dress &gt; Vary) — told by each material's name, else by how much of the piece it covers;
+  glass and lights are left alone. Before, the whole piece took one colour. Choose <strong>Any colour</strong>, or tick the palette's
+  colours to use (each shown with its swatch), instead of choosing roles; only colours the selected pieces have parts for
+  are offered.</li>
+</ul>
+<h2 id="070---2026-09-30">[0.7.0] - 2026-09-30 <a class="anchor" href="#070---2026-09-30" aria-label="Link to this section">#</a></h2>
+<p>Quick wins, a sample kit and a demo town to try them on.</p>
+<h3 id="added_1">Added <a class="anchor" href="#added_1" aria-label="Link to this section">#</a></h3>
+<ul>
+<li><strong>Sample kit:</strong> Kenney's City Kits (Commercial, Industrial, Roads, Suburban — CC0) ship in <code>Samples/</code>; one click (the
+  empty palette, the tour, or ⋮ &gt; Add the sample kit) makes them one kit, sorted, at one scale on a 10 m grid.</li>
+<li><strong>Demo City</strong> (<code>Samples/Demo</code>): a small town built from the sample models — roads with crossings, a fenced park, shops,
+  houses, towers, industry, street lights, a road closure and woodland on a grass terrain — to try every tool on.</li>
+<li><strong>Fix &gt; Replace:</strong> pick the new piece in the palette and swap the selected objects for it — or every copy of a piece
+  (Replace all) — each where the old one was: place, turn, own scale, folder, its bottom lined up with the old one's. A
+  warning when the footprints differ. One Undo step.</li>
+<li><strong>Place &gt; Erase:</strong> drag a circle over the scene to remove kit pieces — every piece, only the ones picked in the palette,
+  or one category — with ground and road pieces left alone (Leave floors). Only kit pieces are ever erased. One Undo step
+  per stroke; Alt+Shift+X opens it.</li>
+<li><strong>Re-roll (N):</strong> lay the last Fill, Brush stroke, Row or Spline again in the same place with a new random mix, in one
+  Undo step — and <strong>Shift+N</strong> selects what was just placed. Buttons for both in the Scene overlay of every Place tool.</li>
+<li><strong>Saved sets:</strong> select a few placed pieces and <strong>Save as set</strong> (the bar above the palette): the set joins the My Sets
+  kit and is placed from the palette as one piece — snapped and turned together. It's a prefab in your data folder, so
+  changing it changes every copy.</li>
+<li><strong>Fences that meet:</strong> Fence sees any fence already there (built with Fence or Row, placed by hand — anything in the
+  Fence category): corners snap onto its corners and posts, a side that nearly meets it lands on its line, and no piece is
+  placed where a fence piece stands — a side two yards share is fenced once. The fences stay separate.</li>
+<li><strong>Quick pick (Alt+Shift+Q):</strong> a search box at the mouse (or the Quick pick button by the palette's search) — type part of
+  a name, Enter, and you're placing it (or it's added to the Brush, Row, Fill… list).</li>
+<li><strong>Build prefabs:</strong> every tool works inside Prefab Mode — pieces go into the prefab being edited (under its root, in its
+  folders), aimed at its own ground and snapped to its own pieces; the scene behind it is never touched.</li>
+<li><strong>First-run tour:</strong> a small card at the top of the Place tab takes a new user through the Prefab Builder one step at a
+  time (Back, Next): add a pack, pick a piece, place it, snapping, the other tools, Dress and Fix, help. Skip hides it;
+  ⋮ &gt; Show the tour again starts it over.</li>
+<li><strong>Alt-click to pick in every tool:</strong> the eyedropper Stamp had now works in Brush, Row, Spline, Fill, Fence, Erase, the Dress
+  tools and Replace — a placed piece Alt-clicked is picked as if clicked in the palette.</li>
+<li><strong>Drop on the palette:</strong> drag prefabs, models, whole folders or Hierarchy objects onto the palette to add them all to a kit
+  in one go — in a category, or each in the one the scanner guesses.</li>
+<li><strong>Pack check</strong> on the Add Pack review screen: what the scan found across the pack, counted (materials for another render
+  pipeline, broken shaders, empty slots, no mesh, scaled roots, odd pivots, characters, weak guesses) — Show them, and
+  Unity's Render Pipeline Converter in URP projects.</li>
+<li><strong>Fix &gt; Doubles:</strong> finds copies of the same piece stacked in the same spot (a double click, a paste twice) and removes
+  the extras, keeping one in each spot — one Undo step.</li>
+<li><strong>Flip</strong> (Signs, and the closure's Sign tab): turns a sign's text round onto the board's other face without turning the sign.</li>
+<li><strong>Copy support info</strong> (the window's ⋮ menu): versions, render pipeline and kits on the clipboard, to paste into a
+  support request.</li>
+<li><strong>What's new:</strong> after an update, a small card at the top of the window lists what the version adds — once.</li>
+<li>The kit's tools raise <code>WorldBuilderEvents.Removed</code> for what Replace, Erase and Doubles remove.</li>
+</ul>
+<h3 id="changed_1">Changed <a class="anchor" href="#changed_1" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>A piece dragged from the palette into the Scene view follows the grid and snaps to the pieces nearby while you drag
+  (its ghost, as in Stamp), and lands exactly there — before, Unity dropped it freely and it was snapped afterwards.</li>
+<li>The scanner tells URP and HDRP apart: a URP material in an HDRP project (or the other way round) is flagged as pink too.</li>
+<li>The scanner measures which way a road piece's lanes run (from its raised kerbs) and faces it along them: Stamp's arrow points
+  where the next piece of road goes, and Row's "along" lays road tiles lanes-first. To update a kit, Review it (Settings &gt;
+  Kits) — fronts you set by hand are kept.</li>
+<li>The scanner never files a tall, narrow piece as a floor: "road-sign-stop" is a sign and a bridge pillar a prop, not road —
+  so Street dressing and Leave floors never take them for road surface.</li>
+<li>A fence meeting another end to end or at a corner is never red: a fence already there counts as in the way only short of
+  its ends (a new one crossing its middle still is).</li>
+<li>Placed pieces are named after their kit piece, and the Stamp panel shows it — never the placeable copy's file name, which
+  can carry a code where two pieces share a name ("building-a_fe68"). The sample kit names such pieces by their pack
+  ("commercial building-a", "industrial building-a").</li>
+<li>The Prefab Builder window, opened from the Tools menu, is brought back into view if it was floating off the screen.</li>
+<li>A sign has a backing board only when Backing board is on: a piece with no flat face starts with one, but switching it off
+  takes it away (before, it was kept whatever was set). The plain sign keeps its board.</li>
+<li>On a Terrain with "Only on the ground" on and Terrain awareness off, the Brush says so — and offers to turn it on.</li>
+<li>The road a closure lays beyond keeps its turn (R, ↻) for each road piece: one pack's roads needing a turn no longer turn
+  another pack's the wrong way. (A turn set before this update is kept only for road pieces picked for the part; press R once
+  for a pack whose copied roads need it.)</li>
+</ul>
+<h3 id="fixed_1">Fixed <a class="anchor" href="#fixed_1" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>Esc: Unity won't let Escape be a shortcut, so the kit's three Esc shortcuts were ignored (with a warning in the Console)
+  and Esc didn't cancel a Row, Fill or Fence drag. The tools now read the key itself: Esc cancels, puts Stamp's piece down,
+  or hands the Scene view back to Unity's tools. No more warning.</li>
+<li>The Brush painted nothing near pieces placed straight from a pack's model and scaled by hand (as in Demo City): it sized
+  them with the kit's scale twice (a 2 m tree counted as 100 m across), so every spot looked crowded. It now sizes what's
+  standing by what it covers in the scene.</li>
+<li>"Follow the ground" stood a new fence (or a row) on top of a fence already there when it ran alongside it: fences have
+  colliders, and the ground under them was taken to be the fence. Nothing stands on a fence now.</li>
+<li>A closure's road beyond was laid at the model's raw size (Kenney's 1 m tiles) past a road placed straight from a pack's
+  models and scaled up by hand (Demo City): it copied the tile's own prefab. It lays the kit's piece, at the kit's scale.</li>
+<li>Replace made the new piece ten times too big when the old one was a pack's model scaled up by hand to the kit's scale
+  (Demo City): it took the kit's scale for a hand scale.</li>
+</ul>
+<h2 id="060---2026-09-29">[0.6.0] - 2026-09-29 <a class="anchor" href="#060---2026-09-29" aria-label="Link to this section">#</a></h2>
+<p>A round of improvements to every Place and Dress tool, the palette and the window, from early-access feedback.</p>
+<h3 id="added_2">Added <a class="anchor" href="#added_2" aria-label="Link to this section">#</a></h3>
+<ul>
+<li><strong>Renamed: the All In One Prefab Builder Kit.</strong> The window is the <strong>Prefab Builder</strong>, its menu <strong>Tools &gt; All In One
+  Prefab Builder</strong>, its shortcuts under "All In One Prefab Builder" (shortcuts you changed need setting again). Your data
+  folder, kits and settings are unchanged.</li>
+<li><strong>A cleaner window:</strong> flat tabs, each tool in titled cards (its pieces, its settings with Grouping in a section of its own,
+  the palette with a count), a two-row palette filter bar, soft tiles behind the pictures, and one notice bar look for
+  what's selected, renaming and new categories.</li>
+<li><strong>Fill: Area / Selection / Inverse.</strong> Selection fills the outline of what's selected, Margin out past it (or inside it);
+  Inverse fills round the selection — <strong>Round it</strong> metres round it, or a dragged rectangle as its bounds — or <strong>Inside</strong>
+  what it closes off (a fenced yard, a courtyard). Stay on this floor keeps to the floors selected. When pieces find no
+  room, Fill says why.</li>
+<li><strong>Floors on top of the ground</strong> (Stamp, Row, Fill; on by default): ground and road pieces sit just above the ground under
+  their whole footprint — never sunk into it or flickering with it.</li>
+<li><strong>Row and Spline</strong> share their settings, in the same order: Count and <strong>Gapped to fit</strong> (exactly Count pieces spaced
+  evenly along the line; a closed spline all the way round), random order (mostly random: never three of the same in a
+  row), follow the ground; Spline has Curved besides.</li>
+<li><strong>Fence</strong> follows the outline of what's selected (an L-shaped area gets an L-shaped fence); each fence is one object,
+  and changing Margin with it (or what it goes round) selected builds it again. Its picked pieces have roles: Panel, Post,
+  Gate, Corner.</li>
+<li><strong>Stamp:</strong> More &gt; Random turn, Random scale and Tilt to the slope, rolled again after every stamp.</li>
+<li><strong>Brush and Fill</strong> share their settings and values (the Brush has its Radius besides): Density (with how many pieces it
+  makes), Stay on this floor, Place over red and More (random turn and scale, only on the ground, tilt to the slope).</li>
+<li><strong>One grouping for every tool</strong> (Stamp, Brush, Row, Spline, Fill, Fence, Closures), with an on / off switch: what's
+  placed goes into it, and Combine merges it into a few meshes, keeping the pieces' colliders.</li>
+<li><strong>Street:</strong> <strong>Mirror sides</strong> (each piece has its twin straight across the road) and <strong>Turn (°)</strong> per kind; kinds as tabs
+  — double-click one to rename it, right-click to move or remove it, + to add one.</li>
+<li><strong>Closures:</strong> the Wall takes pieces from the palette, with its invisible collider as a switch of its own; Over road
+  already there; Turn round is a setting; clicking and dragging look through what stands in the way.</li>
+<li><strong>Signs:</strong> text depth, and a backing board that follows the text (its size set by hand if you like).</li>
+<li><strong>Pieces:</strong> <strong>Rename</strong> (right-click in the palette), kept through re-scans — its placeable copy, the placed copies still
+  named after it and their folders follow. A new <strong>category</strong> or <strong>floor type</strong> files the placed copies in their new folder
+  too. <strong>New category…</strong> makes one of your own, with a scene folder.</li>
+<li><strong>The Selected bar</strong> above the palette: a kit piece selected in the scene is framed in orange in the palette — <strong>Pick
+  up</strong>, <strong>Rename…</strong>, its menu. Something that isn't in a kit yet (a prefab, a model, a scene object): <strong>Add to kit</strong> makes
+  it a piece of a kit — or of My Pieces, a kit of your own — in a category, in one go.</li>
+<li><strong>Leave out duplicate pieces</strong> (the ⋮ menu): the same name and size in any kit — one of each kept.</li>
+<li><strong>The Scene overlay</strong> shows each tool's most used settings — the same settings as its panel, kept in step both ways — and
+  the Grid row, in the same place for every tool that follows it.</li>
+<li><strong>Messages</strong> show as a bold box across the top of the Scene view (amber when there's something to fix).</li>
+<li>A <strong>Clear</strong> button under every list of more than one picked piece.</li>
+<li>Runtime: <code>WorldBuilderFence</code> (what a fence goes round).</li>
+</ul>
+<h3 id="changed_2">Changed <a class="anchor" href="#changed_2" aria-label="Link to this section">#</a></h3>
+<ul>
+<li><strong>Snap to pieces</strong> (was Lego snap) and <strong>the grid</strong> are separate switches — either, both (snapping to a piece wins) or
+  neither. Snap to pieces puts a piece flush against the pieces near it and lines it up along that side as well as it can;
+  flat tiles snap side by side (a road brought up to a road lies right beside it); a piece takes the turn of what it snaps
+  to; with Place over red on, a piece pushed into another still lines up with it. The Flush, "snap dropped pieces" and
+  "snap after moving" options are gone.</li>
+<li>The grid is the same for every tool that places things (Stamp, Brush, Row, Spline, Fill, Fence, Signs) and every one
+  follows it, with faint grid lines while placing; its row is only in the Scene overlay. Row runs along X or Z only with
+  the grid on (Ctrl: any angle).</li>
+<li>Row, Spline, Fence and Signs have Snap to pieces too: their first piece, points and corners snap to the pieces near them.</li>
+<li>Picked pieces are listed with pictures, scrolling past three; the settings scroll on their own past eight lines; the
+  mouse wheel scrolls whatever it's over. The Dress tools are laid out the same way, their pieces on top, each with a
+  dropdown (a closure's part, a street kind).</li>
+<li>Rows of tabs (the window's tabs, the mode selector, Closures' parts, Street's kinds) scroll sideways when they don't fit.</li>
+<li>Packs found in the project show as a small <strong>+n packs</strong> button in the mode bar instead of a banner.</li>
+<li>Closures go wherever you point or draw them (any road edge, or a line anywhere), and the road beyond meets the road's end
+  flush.</li>
+</ul>
+<h3 id="fixed_2">Fixed <a class="anchor" href="#fixed_2" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>A sky dome or skybox object round the scene (250 m or more every way) no longer turns every ghost red.</li>
+<li>Stay on this floor sees ground and road pieces without colliders.</li>
+<li>Random order and the pieces' own scale work in Row and Spline.</li>
+<li>A short, wide road stub has its real end as its end (closures and Street); Street dresses a single road tile.</li>
+<li>Cones and barriers stand centred on the road's lanes, level with the road.</li>
+</ul>
+<h2 id="050---2026-09-26">[0.5.0] - 2026-09-26 <a class="anchor" href="#050---2026-09-26" aria-label="Link to this section">#</a></h2>
+<p>Stage 4: the Dress tab — Street, Closures, Signs. The first early-access upload.</p>
+<h3 id="added_3">Added <a class="anchor" href="#added_3" aria-label="Link to this section">#</a></h3>
+<ul>
+<li><strong>Dress &gt; Street:</strong> your own kinds of street furniture (the rule set ships Street lights, Bins, Benches, Hydrants and Bus
+  stops, empty), each with its pieces, distance from the road edge, density and alternating sides. Select road tiles and
+  dress the selection, or drag over roads: ghosts first, fronts to the road, clear of corners, road ends and doorways. Each
+  piece becomes a child of its road tile; dressing again replaces what the dresser placed; Clear takes it away.</li>
+<li><strong>Dress &gt; Closures:</strong> barriers, cones, a sign, a wall and the road carrying on, each part with its pieces, sliders and
+  quarter turns, across one road tile. A closure is selected once built, so every change builds it again in place.</li>
+<li><strong>Dress &gt; Signs:</strong> your text on a sign board (or a plain post-and-board sign): text, font (yours, one that came with the
+  pack, or Unity's built-in one — none shipped), colour, size, where it sits, both sides and a backing board. A placed
+  sign is edited by selecting it. Text is drawn with the kit's own shader (URP, HDRP and Built-in passes), hidden behind
+  what stands in front of it.</li>
+<li><strong>Unity's own tools</strong> with the window open: Q, W, E, T, Y, a tool in Unity's toolbar, or Esc with nothing to cancel hands
+  the Scene view back to Unity until a piece or a mode is picked again.</li>
+<li><strong>Spline:</strong> Z lays it, X closes the loop (or click the last point again, double-click, right-click; Lay it / Loop / Clear
+  in the Scene overlay).</li>
+<li>Runtime: <code>WorldBuilderMark</code>, <code>WorldBuilderClosure</code>, <code>SignText</code> and the Sign Text shader.</li>
+</ul>
+<h3 id="changed_3">Changed <a class="anchor" href="#changed_3" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>Road pieces file in a Roads folder inside their floor type (<code>World/Ground/Asphalt/Roads</code>); closures in a Closures folder
+  inside it. Tidy scene folders leaves a closure's parts inside the closure.</li>
+<li>Esc with nothing to cancel hands the Scene view to Unity's tools (it used to go back to Stamp).</li>
+</ul>
+<h2 id="040---2026-09-26">[0.4.0] - 2026-09-26 <a class="anchor" href="#040---2026-09-26" aria-label="Link to this section">#</a></h2>
+<p>Stage 3: Row, Spline, Fill, Fence.</p>
+<h3 id="added_4">Added <a class="anchor" href="#added_4" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>Place &gt; Row: drag to lay pieces in a straight line — end to end with a gap, or one every so many metres — fronts
+  facing one side (front edges on the line) or along it; several pieces in turn or at random; a cap for each end; Count;
+  spread to fit; follow the ground; stay on this floor; pieces really standing in something show red (ground, roads and
+  sidewalks never count) and are left out unless Place over red — one switch shared with Stamp — is on. The row starts
+  on the first piece's ghost exactly where it stood when pressed (Lego-snapped) — pressing never moves or turns it; the
+  drag sets its direction and length, and every piece keeps the facing the ghost showed. R turns the fronts (left, right,
+  along). One Undo per row.</li>
+<li>Place &gt; Spline: click points for a curve (or straight lines), the pieces laid along it and turned to it. Esc lays it,
+  Enter closes the loop, Backspace clears. A laid spline stays editable — drag, add and remove points, change its
+  settings or pieces — and lays itself again incrementally (only the pieces that move change). Dragging a point keeps it on
+  the ground right under the mouse. Runtime:
+  <code>WorldBuilderSpline</code> (data only).</li>
+<li>Place &gt; Fill: the brush over a rectangle. Pick pieces (weights and kinds, as on the brush) and drag an area: ground and
+  road pieces tile it (lined up with snapped tiles, never over tiled ground or what stands there), the rest is spread
+  over it to a density with a random turn, never overlapping. Small pieces go into the brush's scatter group.</li>
+<li>Place &gt; Fence: drag a rectangle or fence the selection: panels all the way round, posts or a corner piece on the
+  corners (and between panels if asked), an opening with the gate or a gap on a side or toward the road. Fixed (on by
+  default) knows the panel length and only makes whole-panel fences; each side runs corner to corner, panels centred on
+  the line, so the sides meet on the corners. A clicked gate or post goes to its own slot.</li>
+<li>Palette right-click &gt; Scale: a piece's own scale (50–200 %, or custom) on top of its kit's; its placeable copy is remade,
+  so copies already placed change with it; kept through re-scans.</li>
+<li>Single / Multiple picking for Brush, Row, Spline, Fill and Fence: one piece at a time, or several (switching clears
+  the picks; weights only show in Multiple). Caps, posts, gates and corners are set from the palette's right-click menu
+  (Use as …).</li>
+<li>Every labelled control shows its description when hovered anywhere over it (the box, button or slider too, not only
+  its label).</li>
+<li>Shortcuts: Row, Spline, Fill and Fence modes; R turns the fronts; Esc cancels (then back to Stamp; Spline: lays it);
+  Enter and Backspace for splines. The World Builder's keys work while the mouse is over the Scene view, even after
+  clicking the palette. The cheat sheet lists the new mouse controls.</li>
+</ul>
+<h3 id="changed_4">Changed <a class="anchor" href="#changed_4" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>Tidy scene folders leaves a spline's pieces inside the spline.</li>
+</ul>
+<h3 id="removed">Removed <a class="anchor" href="#removed" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>Fill types from the rule set (Fill fills with the pieces you pick instead).</li>
+</ul>
+<h2 id="030---2026-09-26">[0.3.0] - 2026-09-26 <a class="anchor" href="#030---2026-09-26" aria-label="Link to this section">#</a></h2>
+<p>Stage 2: brush, combine, randomize, terrain.</p>
+<h3 id="added_5">Added <a class="anchor" href="#added_5" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>Place &gt; Brush: pieces picked in the palette with weights and kinds; drag to paint to a density with random turn and
+  scale; Shift-drag erases; [ and ] resize; only on the ground; tilt to slope. One Undo per stroke.</li>
+<li>Brush: Stay on this floor (a switch, or hold Ctrl): a stroke only paints on the floor type it starts on, never spilling
+  onto roads or pavement.</li>
+<li>Floor types grouped by colour: ground pieces (the colour of their top, read from the texture at their own UVs) and
+  terrain paint layers join the floor type of the nearest colour when no word in their name decides — or a new one named
+  after their colour. Settings &gt; Floors &amp; Terrain lists them: rename, recolour, delete, move a piece or layer to another
+  floor type or take it out, add, sort again. The shipped floor types have colours.</li>
+<li>Scatter copies of small pieces (no colliders, no shadows, small-props layer — added only after asking), in named
+  scatter groups.</li>
+<li>Combine Scatter per group: one mesh per chunk and material, originals kept switched off (EditorOnly); un-combine;
+  incremental (unchanged chunks keep their meshes); chunk meshes saved in the data folder.</li>
+<li>Runtime: <code>LayerCullDistance</code> (per-layer camera culling for scatter), <code>ScatterChunk</code>.</li>
+<li>Fix &gt; Randomize: turn, tilt, scale and palette colour within ranges, from a seed. Palette colours are shared material
+  variants of the kit's materials; Clear colours.</li>
+<li>Settings &gt; Floors &amp; Terrain: terrain awareness (follow height, slope for chosen categories, floor type from the dominant
+  paint layer), flatten under buildings, flatten under the selection.</li>
+<li>Shortcuts: Brush Mode, Randomize Mode, brush resize and back to Stamp.</li>
+<li>When a stroke paints nothing because the ground has no floor type, the Brush panel says so and fixes it in one click.
+  Density shows as a count in the circle, editable either way.</li>
+<li>Any piece can be put in a floor type (not only ground): right-click it in the palette or on the review screen, or
+  search and add it (or drag prefabs and Terrain Layers onto a floor type) in Settings &gt; Floors &amp; Terrain.</li>
+<li>Scene folders: pieces with a floor type under Ground by floor type (<code>World/Ground/Grass</code>); copies of a piece in a
+  folder named after it; copies that touch each other (a field of tiles, a run of fence) in a numbered folder inside
+  that (<code>Grass_Tile/Grass_Tile (1)</code>), merged when a new piece joins two. Tidy scene folders files an existing scene the
+  same way (one Undo step).</li>
+<li>Palette: right-click a piece &gt; Category moves it to another category (a hand edit, kept through re-scans).</li>
+<li>The mode bar scrolls when its modes don't fit the window (mouse wheel or its arrows); the chosen mode stays in view.</li>
+</ul>
+<h3 id="removed_1">Removed <a class="anchor" href="#removed_1" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>Ground-type rules ("category X only on floor type Y", shipped with trees only on grass): Stamp and Brush never refuse
+  a piece because of the floor under it. Stay on this floor replaces them for keeping the brush where it belongs.</li>
+</ul>
+<h3 id="fixed_3">Fixed <a class="anchor" href="#fixed_3" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>The first scatter copy of a kit failed when its folder didn't exist yet (caught by the new tests).</li>
+</ul>
+<h2 id="020---2026-09-26">[0.2.0] - 2026-09-26 <a class="anchor" href="#020---2026-09-26" aria-label="Link to this section">#</a></h2>
+<p>Stage 1: the World Builder window.</p>
+<h3 id="added_6">Added <a class="anchor" href="#added_6" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>The World Builder window (<code>Tools &gt; All In One World Builder &gt; World Builder</code>, Alt+Shift+W): tabs Place, Dress, Fix,
+  Check, Settings, Advanced; a mode selector per tab; help per mode; an overflow menu; packs in the project that aren't
+  kits yet offered at the top.</li>
+<li>A Scene view overlay with the active mode's essentials and a one-line hint.</li>
+<li>Place &gt; palette: every piece of every visible kit, favourites first, recent pieces, search, kit and category filters;
+  click to make active, drag into the scene, right-click to favourite.</li>
+<li>Place &gt; Stamp: a ghost preview (green fits, red overlaps or breaks a ground rule) with a front arrow; click to place,
+  Shift-click over an overlap, R / Shift+R to turn, Esc to put down, Alt-click eyedropper. One Undo step per piece.</li>
+<li>Lego snapping: flush to neighbours within the snap distance, else the category's grid (box edges on grid lines,
+  whatever the pivot); on drop and after moving (kit pieces only).</li>
+<li>Stamp: Place over red (click places even where the ghost is red; O toggles it; Shift-click places over red once), hold
+  Ctrl (Cmd) to place freely, a snap distance slider; sideways snapping only counts pieces really beside it (the tile underneath no longer pulls a
+  piece to its edges).</li>
+<li>Grid control while placing: the grid in use shown in the Stamp panel and overlay; ÷2 / ×2 (or [ and ]), type a value,
+  Auto, and Keep (make it the category's grid, or the kit's cell for tiles, for good); grid lines under the ghost.</li>
+<li>Auto-parent: placed and dropped kit pieces file under their category's scene folder; never re-parent list.</li>
+<li>Ground-type rules checked while placing (the shipped example: trees only on grass).</li>
+<li>Fix &gt; Ground (snap to ground, align to slope), Floating (find floating / sunken objects, fix one or all), Select
+  (select similar by piece, kit, category or tag, in the scene or in view).</li>
+<li>Settings &gt; Kits, Styles, Rules (with Reset to defaults), Palettes, Folders (with ask-first layer and tag creation),
+  Presets, Hotkeys (rebind, reset, cheat sheet).</li>
+<li>Every action a Unity shortcut; the Stamp keys only while stamping.</li>
+<li>Extensibility: <code>WorldBuilderMode</code> for your own modes and tabs; <code>WorldBuilderEvents</code> (Placed, Changed, Removed).</li>
+<li>Tests for snapping, ground tools, floating scan, select similar, auto-parent, ground rules, modes and shortcuts.</li>
+</ul>
+<h2 id="010---2026-09-26">[0.1.0] - 2026-09-26 <a class="anchor" href="#010---2026-09-26" aria-label="Link to this section">#</a></h2>
+<p>Stage 0: the foundation.</p>
+<h3 id="added_7">Added <a class="anchor" href="#added_7" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>Data assets: Kit, Style, RuleSet (every placement rule as data), Character Profile, Palette; project settings
+  (layers, tags, surfaces, scene folders, pack detection) stored in <code>ProjectSettings/</code>.</li>
+<li>A default RuleSet based on common city-building practice, a standard 1.8 m Character Profile and two palettes,
+  made in your data folder the first time they're needed.</li>
+<li>Pack scanner: finds every prefab and model in a pack (models already wrapped by the pack's prefabs are not counted
+  twice), measures footprint, height, triangles (LOD 0), materials and pivot, and flags problems (empty material
+  slots, shaders for another render pipeline, scaled roots, animated characters, pieces with no mesh).</li>
+<li>Automatic sorting into categories from the words in names and folders, then shape; corner pieces, surfaces and
+  window material slots guessed too. All keyword lists are editable data.</li>
+<li>Add Pack wizard (<code>Tools &gt; All In One World Builder &gt; Add Pack...</code>): packs found in the project are offered;
+  choose a folder in the window's own folder browser or drag one in; or import a <code>.unitypackage</code> through Unity's
+  own import window; or add a <code>.zip</code> or folder from disk (free kits): copied into <code>Assets/Imported Packs/</code> keeping one model
+  format (FBX first) and leaving out previews, links and executables; a folder of several packs or zips adds each.
+  Then the review screen: thumbnail grid with category dropdowns, filters, multi-select, a
+  visual front-side picker in the Scene view, kit grid cell and scale (with a hint when a pack looks built at a
+  different scale), window slot, surface, snap points, "looks wrong" flag and notes. One click makes the kit.</li>
+<li>Placeable copies: prefab variants of each piece in your data folder with a collider, static flags and a Surface
+  Tag as the category's rules say. The pack's own files are never changed.</li>
+<li>Re-scan keeps every hand annotation; unchanged files are not measured again. Kits can be renamed, merged,
+  hidden and removed.</li>
+<li>Presets (<code>Tools &gt; All In One World Builder &gt; Presets...</code>): rule sets, character profiles, palettes, styles, kit
+  annotations and settings as one plain JSON file; "this kit's annotations only"; import merges or replaces, with
+  a preview first.</li>
+<li>Runtime: <code>SurfaceTag</code> component and <code>ISurfaceSource</code> interface.</li>
+<li>EditMode tests for the scanner, categoriser, measurer, kit guesses and presets.</li>
+</ul>
+<div class="doc-pager"><a class="pager prev" href="shortcuts.html"><span class="label">Previous</span>Keyboard shortcuts</a><span></span></div>
+<p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Changelog" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#080---2026-10-10">[0.8.0] - 2026-10-10</a></li><li class="toc-3"><a href="#added">Added</a></li><li class="toc-3"><a href="#changed">Changed</a></li><li class="toc-3"><a href="#fixed">Fixed</a></li><li class="toc-2"><a href="#070---2026-09-30">[0.7.0] - 2026-09-30</a></li><li class="toc-3"><a href="#added_1">Added</a></li><li class="toc-3"><a href="#changed_1">Changed</a></li><li class="toc-3"><a href="#fixed_1">Fixed</a></li><li class="toc-2"><a href="#060---2026-09-29">[0.6.0] - 2026-09-29</a></li><li class="toc-3"><a href="#added_2">Added</a></li><li class="toc-3"><a href="#changed_2">Changed</a></li><li class="toc-3"><a href="#fixed_2">Fixed</a></li><li class="toc-2"><a href="#050---2026-09-26">[0.5.0] - 2026-09-26</a></li><li class="toc-3"><a href="#added_3">Added</a></li><li class="toc-3"><a href="#changed_3">Changed</a></li><li class="toc-2"><a href="#040---2026-09-26">[0.4.0] - 2026-09-26</a></li><li class="toc-3"><a href="#added_4">Added</a></li><li class="toc-3"><a href="#changed_4">Changed</a></li><li class="toc-3"><a href="#removed">Removed</a></li><li class="toc-2"><a href="#030---2026-09-26">[0.3.0] - 2026-09-26</a></li><li class="toc-3"><a href="#added_5">Added</a></li><li class="toc-3"><a href="#removed_1">Removed</a></li><li class="toc-3"><a href="#fixed_3">Fixed</a></li><li class="toc-2"><a href="#020---2026-09-26">[0.2.0] - 2026-09-26</a></li><li class="toc-3"><a href="#added_6">Added</a></li><li class="toc-2"><a href="#010---2026-09-26">[0.1.0] - 2026-09-26</a></li><li class="toc-3"><a href="#added_7">Added</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/marklromano/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

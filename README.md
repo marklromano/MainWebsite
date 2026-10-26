@@ -1,12 +1,13 @@
 # Romano Assets — website
 
-The Romano Assets website: plain HTML and CSS, no framework, no JavaScript, no web fonts, no trackers, cookies or
-analytics. Published free with **GitHub Pages** at **https://marklromano.github.io**.
+The Romano Assets website: plain HTML and CSS, no framework, no web fonts, no trackers, cookies or analytics. The
+only script is the docs search (`assets/docs.js`), which is ours, runs offline and sends nothing anywhere. Published free with **GitHub Pages** at **https://marklromano.github.io**.
 
 ```
 index.html                    home: the products, standards, help, about
 prefab-builder/index.html     the All In One Prefab Builder Kit's page
-prefab-builder/docs/          its documentation (made from the kit's Documentation/*.md)
+prefab-builder/docs/          its documentation (made from what ships in the kit, see below)
+docs/index.html               every kit's documentation in one place
 support/index.html            how to get help and report a bug
 404.html                      "page not found"
 styles.css                    all the looks (colours at the top)
@@ -37,15 +38,24 @@ the pages say "soon"; paste the link in and rebuild, and every page links to it.
 
 ## Update the docs
 
-The docs pages are made from the Prefab Builder's own offline documentation, so they always match what ships. After
-changing `Documentation/*.md` in the kit:
+Each kit's docs are made from what ships in its package, so they always match the product:
+
+- `Documentation/*.md`: the pages. `Documentation/docs.json`, if the kit has one, sets their order and sidebar groups.
+- `Documentation/Images/`: pictures the pages use (`![caption](Images/name.png)` in the .md).
+- `CHANGELOG.md`: the Changelog page.
+- The `[Shortcut]` attributes and the `MouseControls` list in the kit's editor code: the Keyboard shortcuts page.
+
+Every docs page gets the sidebar, search, "On this page" links, previous/next and a "tell us" link to the bug tracker.
+After changing the kit's docs:
 
 ```
 pip install markdown          (once)
-python tools/build.py --docs "C:\AllInOneWorldBuilderKit\Assets\AllInOnePrefabBuilderKit\Documentation"
+python tools/build.py --docs prefab-builder="C:\AllInOneWorldBuilderKit\Assets\AllInOnePrefabBuilderKit"
 ```
 
-A new docs page also needs a line in the `DOCS` list in `tools/build.py`.
+**A new kit:** add an entry to `PRODUCTS` at the top of `tools/build.py` (name, version, summary, quick start), give the
+kit a `Documentation/docs.json`, and build with `--docs <its-slug>=<its product folder>`. It gets `<slug>/docs/` and a
+card on the docs hub.
 
 ## Images
 
@@ -67,6 +77,6 @@ add the DNS records GitHub shows at your registrar, and tick **Enforce HTTPS** o
 
 ## Keep it fast and private
 
-- No `<script>` tags, analytics snippets, embedded videos or social widgets: each loads things from other companies
-  and can track visitors. Link to a video instead of embedding it.
+- No scripts from other sites, analytics snippets, embedded videos or social widgets: each loads things from other
+  companies and can track visitors. Link to a video instead of embedding it.
 - Keep images small (see above).
