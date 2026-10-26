@@ -43,8 +43,8 @@
     <kbd class="docs-search-key" aria-hidden="true">/</kbd>
     <div class="docs-results" id="docs-results" role="listbox" hidden></div>
   </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html" aria-current="page">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html" aria-current="page">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a></div></div></details>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html" aria-current="page">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html" aria-current="page">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
   </nav>
 </aside>
 <article class="prose" id="doc">
@@ -57,17 +57,17 @@
 <li><strong>Whole scene</strong> checks every placed piece in the open scenes (or the prefab being edited); <strong>Selection</strong> only what clips
   into the selected objects.</li>
 <li><strong>Tolerance (cm)</strong>: overlaps thinner than this are fine. Pieces snapped flush only touch, so they never count.</li>
-<li>Left out: <strong>floors</strong> (what things stand on — <strong>Fix &gt; Floating</strong> finds what's sunk into the ground), <strong>scatter</strong>, and the
+<li>Left out: <strong>floors</strong> (what things stand on, <strong>Fix &gt; Floating</strong> finds what's sunk into the ground), <strong>scatter</strong>, and the
   pieces of one <strong>fence, closure or spline</strong> (they meet by design). <strong>Count trees and plants</strong> adds trees and plants, whose
   crowns often meet.</li>
 <li>Where both pieces have colliders, their <strong>real shapes</strong> decide (an L-shaped building's box overlaps what stands in its
-  corner, its walls don't); otherwise their boxes do — the list says <em>(by box)</em>.</li>
+  corner, its walls don't); otherwise their boxes do, the list says <em>(by box)</em>.</li>
 <li><strong>Check</strong> lists them deepest first and outlines each overlap in <strong>red</strong> in the Scene view. <strong>Click a line</strong> to select both
-  and frame them (yellow). <strong>Push apart</strong> moves the smaller one out of the other the shortest way — sideways or up, never
+  and frame them (yellow). <strong>Push apart</strong> moves the smaller one out of the other the shortest way, sideways or up, never
   down; <strong>Push all apart</strong> does every one and checks again. One Undo step each. <strong>Select all</strong> selects every piece listed.</li>
 </ul>
 <h2 id="validate">Validate <a class="anchor" href="#validate" aria-label="Link to this section">#</a></h2>
-<p>Checks the scene (or the selection, measured against everything round it) against the <strong>rule set's rules</strong> — set in
+<p>Checks the scene (or the selection, measured against everything round it) against the <strong>rule set's rules</strong>, set in
 <strong>Settings &gt; Rules</strong>, so nothing here assumes a game:</p>
 <div class="table-wrap"><table>
 <thead>
@@ -83,7 +83,7 @@
 </tr>
 <tr>
 <td><strong>Setback from the road</strong></td>
-<td>A piece nearer the road than its category's smallest setback — or, with a road within 50 m, further than its largest.</td>
+<td>A piece nearer the road than its category's smallest setback, or, with a road within 50 m, further than its largest.</td>
 </tr>
 <tr>
 <td><strong>Triangle budget</strong></td>
@@ -111,34 +111,34 @@
 </tr>
 </tbody>
 </table></div>
-<p>The findings are listed by rule (open one to see them; <strong>Select these</strong> selects them all) and marked in the Scene view —
+<p>The findings are listed by rule (open one to see them; <strong>Select these</strong> selects them all) and marked in the Scene view,
 amber for Warn, red for Block. Click a line or a marker to select and frame it; its message shows over it.</p>
 <h2 id="play">Play <a class="anchor" href="#play" aria-label="Link to this section">#</a></h2>
-<p>Click a spot in the Scene view and <strong>Play starts there</strong>: the player — the first object with the <strong>Player tag</strong> (change
-the tag in the panel) — is put on the spot standing on it, facing the way the Scene view looks. With no player, the
+<p>Click a spot in the Scene view and <strong>Play starts there</strong>: the player, the first object with the <strong>Player tag</strong> (change
+the tag in the panel), is put on the spot standing on it, facing the way the Scene view looks. With no player, the
 <strong>Main Camera</strong> goes there at eye height (from the Character Profile).</p>
 <ul>
 <li><strong>Start Play</strong> (on): off, the player is only put there.</li>
 <li><strong>Put back after playing</strong> (on): when Play ends, the player (or camera) goes back where it was.</li>
 <li><strong>My game places the player</strong>: the kit moves nothing; your own spawn code reads the spot from
-  <code>AllInOneWorldBuilder.PlayFromHere</code> — <code>HasSpot</code>, <code>Position</code>, <code>Rotation</code> — while playing in the Editor (it's never set in
+  <code>AllInOneWorldBuilder.PlayFromHere</code>: <code>HasSpot</code>, <code>Position</code>, <code>Rotation</code>, while playing in the Editor (it's never set in
   a build). See <a href="extending.html">Extending</a>.</li>
 <li>Not in Prefab Mode: Play runs the scene.</li>
 </ul>
 <h2 id="measure">Measure <a class="anchor" href="#measure" aria-label="Link to this section">#</a></h2>
-<p>Click points in the Scene view — two, or as many as you like along a path: every click adds a point, and each leg's
+<p>Click points in the Scene view, two, or as many as you like along a path: every click adds a point, and each leg's
 length shows on its line (a dotted line shows the next leg to the mouse). The panel (and the Scene overlay) adds them up and
-says how long it takes to <strong>walk, run or drive</strong> — at the Character Profile's speeds (Settings &gt; Rules) — and, when the
+says how long it takes to <strong>walk, run or drive</strong>, at the Character Profile's speeds (Settings &gt; Rules), and, when the
 points aren't level, how far it is <strong>along the ground</strong> and how far <strong>up or down</strong>. <strong>Backspace</strong> takes the last point
 off; <strong>Esc</strong> (or <strong>Clear</strong>) starts over. Points land on anything under the mouse, models without colliders too.</p>
 <h2 id="performance">Performance <a class="anchor" href="#performance" aria-label="Link to this section">#</a></h2>
-<p>What the <strong>whole scene</strong> — or only the <strong>selection</strong> — costs to draw, against the rule set's budgets (Settings &gt; Rules &gt;
+<p>What the <strong>whole scene</strong>, or only the <strong>selection</strong>, costs to draw, against the rule set's budgets (Settings &gt; Rules &gt;
 Performance):</p>
 <ul>
 <li><strong>Objects</strong> and <strong>Triangles</strong> against their budgets: green, amber past three quarters, red over. A LOD group counts its
   most detailed level only.</li>
 <li><strong>Materials</strong> (fewer means fewer draw calls) and <strong>Shadow casters</strong> (each is drawn again for the shadows).</li>
-<li><strong>Heaviest</strong>: the meshes that cost the most triangles, with how many copies — click one to select them (Fix &gt; Replace
+<li><strong>Heaviest</strong>: the meshes that cost the most triangles, with how many copies, click one to select them (Fix &gt; Replace
   can swap them for something lighter).</li>
 </ul>
 <p>The counts update as the scene or the selection changes (and <strong>Count again</strong> counts now); the Scene overlay shows the two

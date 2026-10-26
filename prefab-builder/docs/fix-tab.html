@@ -43,8 +43,8 @@
     <kbd class="docs-search-key" aria-hidden="true">/</kbd>
     <div class="docs-results" id="docs-results" role="listbox" hidden></div>
   </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html" aria-current="page">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html" aria-current="page">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a></div></div></details>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html" aria-current="page">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html" aria-current="page">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
   </nav>
 </aside>
 <article class="prose" id="doc">
@@ -70,7 +70,7 @@
 </ol>
 <p>Shortcut: <strong>Alt+Shift+F</strong> opens this mode and scans.</p>
 <h2 id="doubles">Doubles <a class="anchor" href="#doubles" aria-label="Link to this section">#</a></h2>
-<p>Finds copies of the same piece <strong>stacked in the same spot</strong> — the same prefab, place, turn and size (a double click, a paste
+<p>Finds copies of the same piece <strong>stacked in the same spot</strong>, the same prefab, place, turn and size (a double click, a paste
 twice). They look like one piece, but draw twice and flicker.</p>
 <ol>
 <li>Pick <strong>Whole scene</strong> or <strong>Selection</strong> and click <strong>Scan</strong>: it says how many extra copies there are, and where.</li>
@@ -102,7 +102,7 @@ twice). They look like one piece, but draw twice and flicker.</p>
 </tr>
 <tr>
 <td>Colour</td>
-<td>Tint each part with a random colour of the active palette (Settings &gt; Palettes) for its role — the walls a wall colour, the trim a trim colour. <strong>Any colour</strong>, or untick it and tick the colours to use (a part with none of its role ticked keeps its own).</td>
+<td>Tint each part with a random colour of the active palette (Settings &gt; Palettes) for its role, the walls a wall colour, the trim a trim colour. <strong>Any colour</strong>, or untick it and tick the colours to use (a part with none of its role ticked keeps its own).</td>
 </tr>
 <tr>
 <td>Seed</td>
@@ -110,10 +110,10 @@ twice). They look like one piece, but draw twice and flicker.</p>
 </tr>
 </tbody>
 </table></div>
-<p>Colours are <strong>shared material variants</strong> of the kit's own materials — one per material and colour, saved in your data
-folder (<code>Palette Variants/&lt;palette&gt;/</code>) — never unique materials per object. The colour goes on <code>_BaseColor</code> (URP, HDRP)
+<p>Colours are <strong>shared material variants</strong> of the kit's own materials, one per material and colour, saved in your data
+folder (<code>Palette Variants/&lt;palette&gt;/</code>), never unique materials per object. The colour goes on <code>_BaseColor</code> (URP, HDRP)
 or <code>_Color</code> (Built-in). Which part is which is told by its material's name (Brick, Plaster: walls; Frame, Trim: trim; Awning,
-Roof, Door: accents; Grass, Asphalt: ground) — or, when the name says nothing, by how much of the piece it covers (the most:
+Roof, Door: accents; Grass, Asphalt: ground), or, when the name says nothing, by how much of the piece it covers (the most:
 the walls; small details: accents; the rest: trim). Glass and lights, and a piece's window slot, are left alone. <strong>Clear colours</strong> puts the selection's own materials back.
 One Undo step. Shortcut: <strong>Alt+Shift+R</strong> opens this mode.</p>
 <h2 id="select">Select <a class="anchor" href="#select" aria-label="Link to this section">#</a></h2>
@@ -151,7 +151,7 @@ One Undo step. Shortcut: <strong>Alt+Shift+R</strong> opens this mode.</p>
 <ol>
 <li><strong>Pick the new piece</strong> in the palette (it shows under <em>Replace with</em>).</li>
 <li><strong>Select what to replace:</strong> click it in the Scene view (Shift or Ctrl adds more).</li>
-<li><strong>Replace the selection:</strong> each one is swapped for the new piece, where it was — its place and turn, its own scale (a
+<li><strong>Replace the selection:</strong> each one is swapped for the new piece, where it was, its place and turn, its own scale (a
    copy scaled by hand stays that much bigger or smaller) and its folder (a copy filed in its category's folder goes in the
    new piece's folder instead). The new piece's bottom middle goes where the old one's was, so pieces with different
    pivots neither float nor sink.</li>

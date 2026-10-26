@@ -236,16 +236,25 @@
 <section class="section section-band" aria-labelledby="specs-title">
   <div class="wrap spec-grid">
     <div class="notes">
-      <p class="label">Technical details</p>
-      <h2 id="specs-title">Built for production</h2>
+      <p class="label">Compatibility</p>
+      <h2 id="specs-title">What it runs on, as tested</h2>
+      <table class="spec-table compat">
+        <tbody>
+          <tr><th scope="row">Unity 6000.3</th><td class="ok">Tested</td><td>The minimum version</td></tr>
+          <tr><th scope="row">Unity 6000.6</th><td class="ok">Tested</td><td>The newest version tested</td></tr>
+          <tr><th scope="row">Built-in Render Pipeline</th><td class="ok">Tested</td><td>The sample kits and demo scenes included</td></tr>
+          <tr><th scope="row">URP</th><td class="ok">Tested</td><td>The sample kits and demo scenes included</td></tr>
+          <tr><th scope="row">HDRP</th><td class="no">Not tested</td><td>Not supported in 0.8.0</td></tr>
+          <tr><th scope="row">Editor</th><td class="ok">Tested</td><td>Windows. An editor tool: your game's build platforms are unaffected</td></tr>
+          <tr><th scope="row">Input System</th><td class="ok">Either</td><td>The kit reads no game input, so the old Input Manager and the Input System package both work</td></tr>
+          <tr><th scope="row">Domain Reload off</th><td class="ok">Tested</td><td>Faster Enter Play Mode works</td></tr>
+        </tbody>
+      </table>
       <table class="spec-table">
         <tbody>
-          <tr><th scope="row">Unity</th><td>6000.3 or newer (tested on 6000.3 and 6000.6)</td></tr>
-          <tr><th scope="row">Render pipelines</th><td>Built-in and URP</td></tr>
-          <tr><th scope="row">Dependencies</th><td>None</td></tr>
+          <tr><th scope="row">Dependencies</th><td>None: Unity's built-in modules only</td></tr>
           <tr><th scope="row">Source</th><td>Full C#, editor-only, with a few tiny runtime helpers</td></tr>
           <tr><th scope="row">Undo</th><td>One step per action</td></tr>
-          <tr><th scope="row">Domain Reload off</th><td>Supported</td></tr>
           <tr><th scope="row">Documentation</th><td>Offline in the package, and <a href="docs/index.html">online here</a></td></tr>
           <tr><th scope="row">Menu</th><td><code>Tools &gt; All In One Prefab Builder</code></td></tr>
         </tbody>
@@ -281,6 +290,16 @@
         <a class="btn btn-ghost" href="docs/index.html">Read the docs</a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section section-band" aria-labelledby="more-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">More from Romano Assets</p>
+      <h2 id="more-title">Other kits, built to the same standard</h2>
+    </div>
+    <div class="products"><a class="product product-link c-save" href="../save-kit/index.html"><div class="product-top"><span class="pill pill-dev">In development</span></div><h3>All In One Save Kit</h3><p>Save and restore player progress, world objects and settings, with slots, autosaves, a finished save menu, backups and automatic recovery from damaged saves.</p></a><article class="product product-planned c-interact"><div class="product-top"><span class="pill pill-dev">In development</span></div><h3>All In One Interaction Kit</h3><p>Doors, pickups, switches and anything the player can press, open or carry.</p></article><article class="product product-planned c-settings"><div class="product-top"><span class="pill pill-dev">In development</span></div><h3>All In One Game Settings &amp; Menu Kit</h3><p>Title screen, menus, settings, pause and loading screens, ready to drop in.</p></article><article class="product product-planned c-runtime"><div class="product-top"><span class="pill pill-dev">In development</span></div><h3>All In One Runtime Building Kit</h3><p>Let players build bases and place furniture in your game.</p></article></div>
   </div>
 </section>
 

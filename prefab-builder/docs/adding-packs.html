@@ -43,8 +43,8 @@
     <kbd class="docs-search-key" aria-hidden="true">/</kbd>
     <div class="docs-results" id="docs-results" role="listbox" hidden></div>
   </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html" aria-current="page">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html" aria-current="page">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a></div></div></details>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html" aria-current="page">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html" aria-current="page">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
   </nav>
 </aside>
 <article class="prose" id="doc">
@@ -58,9 +58,9 @@ annotated (front side, corner piece, surface…). The Add Pack wizard makes kits
 <p><strong>Found in your project.</strong> Folders that look like packs (at least 5 prefabs or models, not a kit yet) are listed.
 Click <strong>Scan</strong> to review one, or <strong>Not a pack</strong> to never be offered it again. Publisher folders holding several packs
 (<code>Assets/Publisher/PackA</code>, <code>.../PackB</code>) are offered as separate packs.</p>
-<p><strong>Add from disk (.zip or folder).</strong> For packs that aren't a <code>.unitypackage</code> — most free kits come as a <code>.zip</code>. Click
+<p><strong>Add from disk (.zip or folder).</strong> For packs that aren't a <code>.unitypackage</code>, most free kits come as a <code>.zip</code>. Click
 <strong>Choose a pack folder, or the folder your .zip files are in</strong> and pick either a pack's folder or the folder holding
-its <code>.zip</code> (your Downloads folder, for example): every pack found there — folders and <code>.zip</code> files alike — is listed
+its <code>.zip</code> (your Downloads folder, for example): every pack found there, folders and <code>.zip</code> files alike, is listed
 with what will be copied. Or drag <code>.zip</code> files and folders from your file explorer onto the wizard. Untick any you
 don't want and click <strong>Add</strong>. Packs are copied into
 <code>Assets/Imported Packs/</code> (the <code>packsFolder</code> setting), then scanned. Only what a kit needs is copied:</p>
@@ -94,11 +94,11 @@ folders it added are scanned automatically.</p>
 </ul>
 <p>Large packs are fine: pieces are loaded one at a time, and a re-scan only measures files that changed.</p>
 <h2 id="3-the-review-screen">3. The review screen <a class="anchor" href="#3-the-review-screen" aria-label="Link to this section">#</a></h2>
-<p><strong>Pack check</strong> (at the top, when there's anything to say): what the scan found across the whole pack, counted —
+<p><strong>Pack check</strong> (at the top, when there's anything to say): what the scan found across the whole pack, counted,
 materials made for another render pipeline (they look pink until converted), broken shaders, empty material slots, pieces
 with no mesh, scaled roots, odd pivots, animated characters, categories guessed from shape only. <strong>Show them</strong> shows
 just those pieces; in a URP project, <strong>Render Pipeline Converter…</strong> opens Unity's own converter (it changes the pack's
-materials — the kit never does).</p>
+materials, the kit never does).</p>
 <p><strong>Kit name</strong> and <strong>Style.</strong> A kit belongs to a style (a look, such as "low poly town"); a new style is made for the
 first kit. The rules can warn about or block mixing styles in one area.</p>
 <p><strong>Kit settings</strong> (the fold-out at the top):</p>
@@ -120,7 +120,7 @@ first kit. The rules can warn about or block mixing styles in one area.</p>
 </tr>
 <tr>
 <td>Main pack</td>
-<td>Pick the pack this one should match in size — a kit you already made, any pack in the project (even one that isn't a kit yet: a sample of it is measured), or your character. The scale is set straight away, worked out by comparing the first thing both packs have — the road grid (the smallest common tile side, so a pack with 10 m and 15 m roads is on a 10 m grid), else the typical height of street lights, fences, buildings, then ground tiles, trees, vehicles — and the comparison is shown.</td>
+<td>Pick the pack this one should match in size, a kit you already made, any pack in the project (even one that isn't a kit yet: a sample of it is measured), or your character. The scale is set straight away, worked out by comparing the first thing both packs have, the road grid (the smallest common tile side, so a pack with 10 m and 15 m roads is on a 10 m grid), else the typical height of street lights, fences, buildings, then ground tiles, trees, vehicles, and the comparison is shown.</td>
 </tr>
 <tr>
 <td>Front side</td>
@@ -150,13 +150,13 @@ nothing matched; <strong>C</strong> a corner piece; <strong>*</strong> a favouri
 <p><strong>The details panel</strong> under the grid edits the selection:</p>
 <ul>
 <li><strong>Category</strong>, <strong>Front side</strong> (+Z, +X, -Z, -X, or <strong>Pick in Scene</strong>: the piece is shown in the Scene view with an
-  arrow on each side — click the one on its street side; nothing is added to your scene), <strong>Corner piece</strong>,
+  arrow on each side, click the one on its street side; nothing is added to your scene), <strong>Corner piece</strong>,
   <strong>Surface</strong> (ground pieces).</li>
 <li><strong>Window slot</strong>, <strong>In the kit</strong>, <strong>Looks wrong</strong> (a flag to come back to), <strong>Favourite</strong>, <strong>Notes</strong>.</li>
 <li><strong>Snap points.</strong> None means the edges of the footprint, which is right for most pieces. Add custom points (position
   in the piece's own frame and the side they face) for pieces that join elsewhere.</li>
 </ul>
-<p>With several pieces selected, the same panel edits all of them: a field shows "—" where they differ, and whatever
+<p>With several pieces selected, the same panel edits all of them: a field shows a dash where they differ, and whatever
 you set applies to every selected piece (category, front, corner, surface, window slot, in the kit, looks wrong,
 favourite, notes). Snap points and <strong>Pick in Scene</strong> are for one piece at a time.</p>
 <p>Click <strong>Create Kit</strong> (or <strong>Update Kit</strong>). The kit is saved in your data folder under <code>Kits/</code>.</p>
@@ -171,17 +171,17 @@ rules say:</p>
 </ul>
 <p>With a kit scale other than 1, the copy is a scale-1 object holding the scaled original, so its collider is never
 scaled. The pack's own files are never changed. Copies are only rebuilt when something they're made from changes, so
-their GUIDs — and everything you placed from them — stay put.</p>
+their GUIDs, and everything you placed from them, stay put.</p>
 <h2 id="re-scanning-and-managing-kits">Re-scanning and managing kits <a class="anchor" href="#re-scanning-and-managing-kits" aria-label="Link to this section">#</a></h2>
 <p>In the Prefab Builder window, <strong>Settings &gt; Kits</strong> (or the Inspector of a kit asset):</p>
 <ul>
-<li><strong>Re-scan and review</strong> — scans the pack folders again (for a pack update, or new pieces). Everything you set by
+<li><strong>Re-scan and review</strong>: scans the pack folders again (for a pack update, or new pieces). Everything you set by
   hand is kept; guesses are refreshed; pieces whose files are gone are dropped.</li>
-<li><strong>Rename</strong> — the kit and its copies' folder (the copies keep their links).</li>
-<li><strong>Hidden</strong> — keep the kit but hide it from the palette.</li>
-<li><strong>Merge another kit into this one</strong> — its pieces and folders move here; the other kit is deleted.</li>
-<li><strong>Export its annotations</strong> — a preset file with only this kit (see <a href="presets.html">Presets</a>).</li>
-<li><strong>Remove kit</strong> — deletes the kit, and optionally its placeable copies. The pack is never touched.</li>
+<li><strong>Rename</strong>: the kit and its copies' folder (the copies keep their links).</li>
+<li><strong>Hidden</strong>: keep the kit but hide it from the palette.</li>
+<li><strong>Merge another kit into this one</strong>: its pieces and folders move here; the other kit is deleted.</li>
+<li><strong>Export its annotations</strong>: a preset file with only this kit (see <a href="presets.html">Presets</a>).</li>
+<li><strong>Remove kit</strong>: deletes the kit, and optionally its placeable copies. The pack is never touched.</li>
 </ul>
 <div class="doc-pager"><a class="pager prev" href="window.html"><span class="label">Previous</span>The Prefab Builder window</a><a class="pager next" href="move-tab.html"><span class="label">Next</span>Move</a></div>
 <p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Adding+Packs" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
