@@ -58,6 +58,8 @@ PRODUCTS = [
                    "settle with physics and check your scene, all from one window.",
         "requirements": ["Unity 6000.3+", "Built-in & URP", "No dependencies", "Full C# source"],
         "menu": "Tools > All In One Prefab Builder",
+        # Where the kit's "copy support info" button is, for the generated Support page (if the kit has no Support.md)
+        "support_info": "In the Prefab Builder window, click **\u22ee > Copy support info**",
         "quick_start": [
             "Import the package from the Asset Store. Everything lands in <code>Assets/AllInOnePrefabBuilderKit/</code>.",
             "Open <strong>Tools &gt; All In One Prefab Builder &gt; Prefab Builder</strong> (<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>W</kbd>) "
@@ -144,12 +146,16 @@ PRODUCTS = [
     },
 ]
 
-# Kits without docs yet, for the docs hub
+# Kits without docs yet, for the docs hub and "More from Romano Assets": (name, accent, status, one line)
 COMING = [
-    ("All In One Save Kit", "c-save", "In development"),
-    ("Interaction Kit", "c-interact", "In development"),
-    ("Settings & Menu Kit", "c-settings", "Planned"),
-    ("All In One Runtime Building Kit", "c-runtime", "In development"),
+    ("All In One Save Kit", "c-save", "In development",
+     "Save and restore progress, world objects and settings, without code."),
+    ("All In One Interaction Kit", "c-interact", "In development",
+     "Doors, pickups, switches and anything the player can press, open or carry."),
+    ("All In One Game Settings & Menu Kit", "c-settings", "In development",
+     "Title screen, menus, settings, pause and loading screens, ready to drop in."),
+    ("All In One Runtime Building Kit", "c-runtime", "In development",
+     "Let players build bases and place furniture in your game."),
 ]
 
 NAV = [
@@ -264,14 +270,44 @@ def page(root, active, title, description, body, path, scripts=""):
 """
 
 
-def fill(text, root):
-    """Replaces {{name}} placeholders in a page fragment."""
+def fill(text, root, slug=""):
+    """Replaces {{name}} placeholders in a page fragment. slug: the kit the page is about, left out of {{more_from}}."""
     values = {
+        "more_from": more_from(root, slug),
         "root": root, "store": STORE_URL, "publisher": PUBLISHER_URL, "email": EMAIL,
         "version": PREFAB_VERSION, "external": ICON_EXTERNAL,
         "discord_tile": discord_tile(), "issues_tile": issues_tile(root), "discord_button": discord_button(),
     }
     return re.sub(r"\{\{(\w+)\}\}", lambda m: values[m.group(1)], text)
+
+
+def more_from(root, slug):
+    """The other kits, as cards linking to their pages (Shipping Standard: cross-link every product)."""
+    cards, named = [], set()
+    for p in PRODUCTS:
+        named.add(p["name"])
+        if p["slug"] == slug:
+            continue
+        pill = '<span class="pill pill-live">On the Asset Store</span>' if p["status"] == "live" else \
+            f'<span class="pill pill-dev">{html.escape(p["status"].capitalize())}</span>'
+        cards.append(f'<a class="product product-link {p["accent"]}" href="{root}{p["slug"]}/index.html">'
+                     f'<div class="product-top">{pill}</div><h3>{html.escape(p["name"])}</h3>'
+                     f'<p>{html.escape(p["summary"])}</p></a>')
+    for name, accent, status, line in COMING:
+        if name in named:
+            continue
+        cards.append(f'<article class="product product-planned {accent}"><div class="product-top">'
+                     f'<span class="pill{" pill-dev" if status == "In development" else ""}">{status}</span></div>'
+                     f'<h3>{html.escape(name)}</h3><p>{html.escape(line)}</p></article>')
+    return f"""<section class="section section-band" aria-labelledby="more-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">More from Romano Assets</p>
+      <h2 id="more-title">Other kits, built to the same standard</h2>
+    </div>
+    <div class="products">{"".join(cards)}</div>
+  </div>
+</section>"""
 
 
 def discord_tile():
@@ -323,12 +359,14 @@ HAND_PAGES = [
 
 def build_pages():
     for fragment, out, root, active, title, description in HAND_PAGES:
-        body = fill((PAGES / fragment).read_text(encoding="utf-8"), root)
+        body = fill((PAGES / fragment).read_text(encoding="utf-8"), root, out.split("/")[0] if "/" in out else "")
         write(out, page(root, active, title, description, body, out))
     build_docs_hub()
 
 
 def write(out, text):
+    if "\u2014" in text or "&mdash;" in text:
+        print(f"WARNING: {out} has an em dash; Mark's rule is none on the site. Reword it (a colon or a comma).")
     target = SITE / out
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(text, encoding="utf-8")
@@ -363,7 +401,7 @@ def build_docs_hub():
         f'<article class="product product-planned {accent}"><div class="product-top"><h3>{html.escape(name)}</h3>'
         f'<span class="pill{" pill-dev" if status == "In development" else ""}">{status}</span></div>'
         f'<p>Its documentation goes up here the day it launches.</p></article>'
-        for name, accent, status in COMING)
+        for name, accent, status, _ in COMING)
     body = f"""<section class="product-hero blueprint">
   <div class="wrap hero-copy">
     <p class="label label-accent">Documentation</p>
@@ -427,6 +465,29 @@ def index_descriptions(index_md):
 CALLOUT = re.compile(r'<blockquote>\s*<p>\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*', re.I)
 
 
+# Mark's writing rule (2026-10-26): no em dashes anywhere on the site. Docs written before the rule still have them,
+# so they're rewritten here: a term and its explanation get a colon, an aside or a joined clause gets a comma.
+TERM = re.compile(r"^(\s*(?:[-*+]|\d+\.|>)?\s*(?:\*\*[^*]+\*\*|`[^`]+`)(?:\s*\([^)]*\))?\s*)\u2014\s*")
+
+
+def undash(md_text):
+    md_text = md_text.replace('shows "\u2014" where', "shows a dash where")  # Unity's mixed-value mark, not prose
+    out, fenced = [], False
+    for line in md_text.split("\n"):
+        if line.lstrip().startswith("```"):
+            fenced = not fenced
+        if fenced or "\u2014" not in line:
+            out.append(line)
+            continue
+        if line.startswith("#"):
+            line = re.sub(r"\s*\u2014\s*", ": ", line, count=1)
+        line = TERM.sub(lambda m: m.group(1).rstrip() + ": ", line, count=1)
+        line = re.sub(r"^(\s*(?:[-*+]|\d+\.)?\s*)\u2014\s*", r"\1", line)   # a dash opening a line
+        line = re.sub(r"([,;:.!?])?\s*\u2014\s*", lambda m: (m.group(1) or ",") + " ", line)
+        out.append(line.rstrip() if line.rstrip().endswith(",") else line)
+    return "\n".join(out)
+
+
 def convert(md_text, doc_out, folder=""):
     """Markdown to HTML; returns (html, [(level, id, title)]). folder: the page's subfolder of Documentation, if any."""
     import markdown  # only needed for the docs
@@ -437,6 +498,7 @@ def convert(md_text, doc_out, folder=""):
         key = posixpath.normpath(posixpath.join(folder, target)) if folder else target
         return f"]({doc_out.get(key, target)}{anchor})"
 
+    md_text = undash(md_text)
     # Links between the .md files become links between the .html pages; Images/ moves to img/
     md_text = re.sub(r"\]\((?!https?:)((?:\.\./|[A-Za-z]+/)?[A-Za-z]+\.md)(#[^)]*)?\)", relink, md_text)
     md_text = re.sub(r"\]\((?:\./)?Images/", "](img/" + (folder + "/" if folder else ""), md_text)
@@ -637,6 +699,8 @@ def build_docs(product, kit_root):
         cl = re.sub(r"^# .*\n", "# Changelog\n", cl, count=1)
         extras.append(("changelog.html", "Changelog", cl, "What changed in each version"))
         doc_out.setdefault("Changelog.md", "changelog.html")  # a kit's own copy of the changelog
+    if "support.html" not in doc_out.values():
+        extras.append(("support.html", "Support", support_markdown(product), "Where to get help and how to report a bug"))
     last_group = pages[-1][0] if pages else "Reference"
 
     groups = []
@@ -715,6 +779,32 @@ def build_docs(product, kit_root):
     write(f"{slug}/docs/search-index.js", index_js)
 
 
+def support_markdown(product):
+    """A docs Support page for a kit that doesn't ship one: every channel as plain text, and what to send."""
+    lines = ["# Support", "",
+             f"Stuck, or found a bug in the {product['name']}? Every message is read by the developer who wrote it.", "",
+             "## Where to ask", ""]
+    if DISCORD_URL:
+        lines.append(f"- **Discord** (questions, ideas, show and tell): <{DISCORD_URL}>")
+    if ISSUES_URL:
+        lines.append(f"- **Bug tracker** (report a bug and follow it until it's fixed): <{ISSUES_URL.removesuffix('/issues')}>")
+    lines += [f"- **Email**: <{EMAIL}>", f"- **Website and documentation**: <{SITE_URL}>", "",
+              "## Reporting a bug", "", "Send these and it can be fixed fast:", ""]
+    if product.get("support_info"):
+        lines.append(f"1. **The support info.** {product['support_info']}: it puts the kit's version, Unity's version "
+                     "and your render pipeline on the clipboard. Nothing is sent anywhere.")
+    else:
+        lines.append("1. **The versions:** the kit's version, Unity's version and your render pipeline.")
+    lines += ["2. **What you did**, step by step, and what you expected to happen.",
+              "3. **What happened instead**, with a screenshot if it shows.",
+              "4. **Any red errors** from the Console (click one, then copy its full text).", ""]
+    if product.get("store"):
+        lines += ["## Reviews", "",
+                  f"If the {product['short']} saves you time, a short review on the [Asset Store]({product['store']}) "
+                  "helps a lot. Thank you!", ""]
+    return "\n".join(lines)
+
+
 def docs_home(product, groups, rendered):
     steps = "".join(f"<li>{s}</li>" for s in product["quick_start"])
     reqs = "".join(f"<li>{html.escape(r)}</li>" for r in product["requirements"])
@@ -752,8 +842,9 @@ def docs_home(product, groups, rendered):
 <div class="doc-cards">
   <a class="doc-card" href="troubleshooting.html"><strong>Troubleshooting</strong><span>Answers to the most common problems.</span></a>
   {f'<a class="doc-card" href="{DISCORD_URL}" rel="noopener"><strong>Discord</strong><span>Ask other users and the developer.</span></a>' if DISCORD_URL else ''}
-  <a class="doc-card" href="../../support/index.html"><strong>Support</strong><span>Report a bug or email the developer.</span></a>
-</div>""", toc
+  <a class="doc-card" href="support.html"><strong>Support</strong><span>Report a bug or email the developer.</span></a>
+</div>
+{f'<p class="muted">If the {html.escape(product["short"])} saves you time, a short review on the <a href="{product["store"]}" rel="noopener">Asset Store</a> helps a lot. Thank you!</p>' if product["store"] else ""}""", toc
 
 
 if __name__ == "__main__":

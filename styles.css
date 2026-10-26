@@ -1,4 +1,4 @@
-/* Romano Assets — one stylesheet for every page.
+/* Romano Assets: one stylesheet for every page.
    Look: a dark blueprint workshop. Deep navy, a faint 40 px grid like the kit's own snapping grid, electric blue for
    actions, warm amber for the one thing that matters on each screen. Colours match the Asset Store images.
    Change colours here and every page follows. */
@@ -284,6 +284,13 @@ body::before {
 .product-flag .flag-copy { display: grid; gap: 1rem; align-content: start; justify-items: start; min-width: 0; }
 .product-flag h3 { font-size: var(--step-2); }
 .product-planned { background: transparent; border-style: dashed; }
+a.product-link { color: var(--text); text-decoration: none; transition: border-color 0.15s, background 0.15s; }
+a.product-link:hover { border-color: var(--accent); background: var(--surface-2); color: var(--text); }
+.product h3 { overflow-wrap: anywhere; }
+.spec-table.compat th { width: 32%; }
+.compat td.ok, .compat td.no { padding-right: 1rem; white-space: nowrap; }
+.compat td.ok { color: var(--c-save); font-weight: 600; }
+.compat td.no { color: var(--muted); }
 .c-prefab { --accent: var(--c-prefab); }
 .c-save { --accent: var(--c-save); }
 .c-interact { --accent: var(--c-interact); }

@@ -1,4 +1,4 @@
-# Romano Assets — website
+# Romano Assets website
 
 The Romano Assets website: plain HTML and CSS, no framework, no web fonts, no trackers, cookies or analytics. The
 only script is the docs search (`assets/docs.js`), which is ours, runs offline and sends nothing anywhere. Published free with **GitHub Pages** at **https://marklromano.github.io**.
