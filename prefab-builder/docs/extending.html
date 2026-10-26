@@ -28,21 +28,32 @@
     </a>
     <nav aria-label="Main">
       <ul class="nav">
-        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../prefab-builder/docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
       </ul>
     </nav>
   </div>
 </header>
 <main id="main">
-<div class="wrap docs-layout">
-<nav class="docs-nav" aria-label="Documentation"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class="label">Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class="label">The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class="label">Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html" aria-current="page">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a></div></div><details><summary>All documentation pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class="label">Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class="label">The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class="label">Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html" aria-current="page">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a></div></div></details></nav>
-<article class="prose">
-<div class="doc-meta"><span class="label">All In One Prefab Builder Kit &middot; v0.8.0</span></div>
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Prefab Builder docs</a><span class="pill">v0.8.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html" aria-current="page">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html" aria-current="page">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Prefab Builder</a><span>/</span><span>Reference</span></nav>
 <h1 id="extending">Extending</h1>
 <p>All code is in the <code>AllInOneWorldBuilder</code> (runtime) and <code>AllInOneWorldBuilder.Editor</code> (editor) namespaces, in the
 assemblies <code>AllInOneWorldBuilder.Runtime</code> and <code>AllInOneWorldBuilder.Editor</code>. Both are auto-referenced, so your own
 scripts can use them directly.</p>
-<h2 id="surfaces">Surfaces</h2>
+<h2 id="surfaces">Surfaces <a class="anchor" href="#surfaces" aria-label="Link to this section">#</a></h2>
 <p><code>SurfaceTag</code> (runtime) carries a surface name on an object; the Prefab Builder adds it to placeable copies of ground
 and road pieces. Read it from your game — the kit plays no sounds and assumes no footstep system:</p>
 <pre><code class="language-csharp">using AllInOneWorldBuilder;
@@ -55,7 +66,7 @@ if (Physics.Raycast(foot.position, Vector3.down, out var hit, 0.5f) &amp;&amp;
 </code></pre>
 <p>Implement <code>ISurfaceSource</code> on your own components to supply surface names another way; <code>SurfaceTag.TryGetSurface</code>
 finds any <code>ISurfaceSource</code> on the object or above it.</p>
-<h2 id="runtime-components">Runtime components</h2>
+<h2 id="runtime-components">Runtime components <a class="anchor" href="#runtime-components" aria-label="Link to this section">#</a></h2>
 <ul>
 <li><code>SurfaceTag</code> / <code>ISurfaceSource</code> — above.</li>
 <li><code>LayerCullDistance</code> — on a camera: stops it drawing one layer (the small-props layer scatter is on) past a distance.
@@ -76,7 +87,7 @@ finds any <code>ISurfaceSource</code> on the object or above it.</p>
 <li>The <em>Sign Text</em> shader (<code>All In One Prefab Builder/Sign Text</code>) — unlit text that's hidden behind what stands in front of
   it, in every render pipeline.</li>
 </ul>
-<h2 id="data-from-code">Data from code</h2>
+<h2 id="data-from-code">Data from code <a class="anchor" href="#data-from-code" aria-label="Link to this section">#</a></h2>
 <ul>
 <li><code>DataStore.ActiveRuleSet</code>, <code>DataStore.ActivePalette</code>, <code>DataStore.Kits()</code> — the current data.</li>
 <li><code>Kit.Pieces</code> — each <code>KitPiece</code> has its category, front side, measurements and <code>LoadPrefab()</code>.</li>
@@ -89,7 +100,7 @@ finds any <code>ISurfaceSource</code> on the object or above it.</p>
   <code>WorldBuilderSpline</code> again
   (plans are lists of <code>LinePlan</code>: piece, pivot, rotation, box).</li>
 </ul>
-<h2 id="your-own-modes-and-tabs">Your own modes and tabs</h2>
+<h2 id="your-own-modes-and-tabs">Your own modes and tabs <a class="anchor" href="#your-own-modes-and-tabs" aria-label="Link to this section">#</a></h2>
 <p>Subclass <code>WorldBuilderMode</code> (public parameterless constructor) in any editor assembly: the window finds it. Its <code>Tab</code>
 decides where it appears — one of <code>WorldBuilderTabs</code> (Move, Place, Physics, Dress, Fix, Check, Settings), or a name of your
 own, which becomes an extra tab after Settings.</p>
@@ -119,7 +130,7 @@ public class SpawnPointsMode : WorldBuilderMode
 quick controls in the overlay — its name and hint are shown for you), <code>Order</code> (position in the mode selector), <code>ScrollPanel</code>
 and <code>TakesSceneClicks</code> (true if the mode takes Scene view clicks: Unity's transform tool is set aside while it's active,
 and picking a Unity tool hands the Scene view back) as needed.</p>
-<h2 id="events">Events</h2>
+<h2 id="events">Events <a class="anchor" href="#events" aria-label="Link to this section">#</a></h2>
 <p><code>WorldBuilderEvents</code> (editor) tells you when the tools change the scene:</p>
 <ul>
 <li><code>Placed(GameObject placed, KitPiece piece)</code> — a piece was placed (piece is null for a prefab that isn't in a kit).</li>
@@ -140,8 +151,10 @@ static void OnPlaced(GameObject placed, KitPiece piece)
 </code></pre>
 <p>Closure types and street furniture are data in the rule set (Settings &gt; Rules). Validators and the play-from-here hook
 arrive with their tools in later versions.</p>
-<div class="doc-foot"><a href="presets.html">&larr; Presets</a><a href="troubleshooting.html">Troubleshooting &rarr;</a></div>
+<div class="doc-pager"><a class="pager prev" href="presets.html"><span class="label">Previous</span>Presets</a><a class="pager next" href="troubleshooting.html"><span class="label">Next</span>Troubleshooting</a></div>
+<p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Extending" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
 </article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#surfaces">Surfaces</a></li><li class="toc-2"><a href="#runtime-components">Runtime components</a></li><li class="toc-2"><a href="#data-from-code">Data from code</a></li><li class="toc-2"><a href="#your-own-modes-and-tabs">Your own modes and tabs</a></li><li class="toc-2"><a href="#events">Events</a></li></ul></nav>
 </div>
 </main>
 <footer class="site-footer">
@@ -162,7 +175,7 @@ arrive with their tools in later versions.</p>
       <div>
         <h4>Learn</h4>
         <ul>
-          <li><a href="../../prefab-builder/docs/index.html">Documentation</a></li>
+          <li><a href="../../docs/index.html">Documentation</a></li>
           <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
           <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
         </ul>
@@ -183,5 +196,7 @@ arrive with their tools in later versions.</p>
     </div>
   </div>
 </footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
 </body>
 </html>
