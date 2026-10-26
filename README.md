@@ -1,8 +1,7 @@
 # Romano Assets — website
 
 The Romano Assets website: plain HTML and CSS, no framework, no JavaScript, no web fonts, no trackers, cookies or
-analytics. Published free with **GitHub Pages** at **https://marklromano.github.io** once this repository is named
-`marklromano.github.io` (see below).
+analytics. Published free with **GitHub Pages** at **https://marklromano.github.io**.
 
 ```
 index.html                    home: the products, standards, help, about
@@ -58,11 +57,9 @@ images here are renders of the kit's sample scenes (Showcase City, Try It) made 
 
 GitHub Pages serves the `main` branch: push to `main` and the site updates within a minute or two.
 
-**The address.** After the username change from xMark42 to marklromano, GitHub no longer serves xmark42.github.io,
-and a repository called `xMark42.github.io` under the new account is only served at
-`marklromano.github.io/xMark42.github.io/`. Rename the repository to **`marklromano.github.io`** (Settings > General >
-Repository name) and the site is at **https://marklromano.github.io**. Then check Settings > Pages: Source **Deploy
-from a branch**, branch **main**, folder **/ (root)**.
+**The address.** GitHub serves https://marklromano.github.io from the repository named exactly
+`marklromano.github.io` (renamed from xMark42.github.io after the username change). In Settings > Pages: Source
+**Deploy from a branch**, branch **main**, folder **/ (root)**.
 
 **Your own domain (optional).** Buy a domain (e.g. `romanoassets.com`), enter it in Settings > Pages > Custom domain,
 add the DNS records GitHub shows at your registrar, and tick **Enforce HTTPS** once it's offered. Then change
