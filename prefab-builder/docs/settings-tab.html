@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Settings Tab | Romano Assets</title>
+<meta name="description" content="Settings Tab: documentation for the All In One Prefab Builder Kit for Unity.">
+<link rel="canonical" href="https://marklromano.github.io/prefab-builder/docs/settings-tab.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Settings Tab">
+<meta property="og:description" content="Settings Tab: documentation for the All In One Prefab Builder Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/prefab-builder/docs/settings-tab.html">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../prefab-builder/docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-layout">
+<nav class="docs-nav" aria-label="Documentation"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class="label">Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class="label">The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html" aria-current="page">Settings</a></div><div class="docs-group"><p class="label">Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a></div></div><details><summary>All documentation pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class="label">Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class="label">The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html" aria-current="page">Settings</a></div><div class="docs-group"><p class="label">Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a></div></div></details></nav>
+<article class="prose">
+<div class="doc-meta"><span class="label">All In One Prefab Builder Kit &middot; v0.8.0</span></div>
+<h1 id="settings-tab">Settings Tab</h1>
+<p>Everything you need is reachable here — no hunting through Project folders.</p>
+<h2 id="kits">Kits</h2>
+<p>Every kit, with its piece count and style.</p>
+<ul>
+<li><strong>Add Pack...</strong> opens the Add Pack wizard.</li>
+<li><strong>Review...</strong> re-scans a kit's pack folders and opens the review screen (after a pack update, or to annotate
+  pieces). Everything set by hand is kept.</li>
+<li>Click a kit's name to open its settings: rename it, change its style, and edit its <strong>settings</strong> (grid cell, scale,
+  front side, placeable copies). After a change, <strong>Update the kit</strong> re-guesses what wasn't set by
+  hand and rebuilds the placeable copies that changed.</li>
+<li><strong>⋮</strong>: hide it from the palette (or show it again), merge another kit into it, export its annotations, remove it
+  (optionally with its placeable copies). The pack itself is never touched.</li>
+</ul>
+<h2 id="styles">Styles</h2>
+<p>Pick a style to rename it, set its colour and description, or delete it (its kits are left without a style). <strong>New</strong>
+makes one. The kits using it are listed.</p>
+<h2 id="rules">Rules</h2>
+<ul>
+<li><strong>Active rule set:</strong> the rules every tool follows. <strong>⋮</strong>: a new rule set with the defaults, duplicate this one, <strong>reset
+  it to the shipped defaults</strong>, or delete it.</li>
+<li><strong>Character profile:</strong> the character the world is built for (height, radius, step, slope, speeds), edited in place.
+  <strong>New</strong> makes one.</li>
+<li><strong>Rules:</strong> every rule of the active rule set, edited in place (see <a href="rules-and-data.html">Rules, Profiles, Palettes and Styles</a>).
+  Changes are saved at once.</li>
+</ul>
+<p>Tip: rule sets are data, so a newer Prefab Builder's improved default keywords don't reach an existing rule set on their
+own. Duplicate it to keep your changes, then <strong>Reset to defaults</strong> to pick them up.</p>
+<h2 id="palettes">Palettes</h2>
+<p>The active palette and its colours (name, colour, role), edited in place. <strong>⋮</strong>: new, duplicate, delete.</p>
+<h2 id="folders">Folders</h2>
+<p>The project settings: data folder, packs folder, the layer for small props and the tags for facade and enterable
+buildings, the default floor types and the floor colour tolerance, scene folders (root and one per category, floor type
+folders, piece folders, touching folders), never re-parent, pack detection. (Floor types themselves are in Floors &amp; Terrain.)
+<strong>Tidy scene folders</strong> files every placed kit piece in the open scene again.</p>
+<p>If a named layer or tag isn't in the project, an <strong>Add</strong> button offers to create it — after asking. Nothing is created
+silently.</p>
+<h2 id="floors--terrain">Floors &amp; Terrain</h2>
+<h3 id="floor-types">Floor types</h3>
+<p>Floor types are the kinds of ground — Grass, Asphalt, Concrete… — and the names Surface Tags carry. Every ground piece of
+your kits, and every Unity Terrain paint layer, is in one:</p>
+<ul>
+<li><strong>Sorted automatically:</strong> by a word in its name first ("road", "sidewalk", "grass"); otherwise by its <strong>colour</strong> — the
+  colour of its top, read from its texture at its own UVs (so kits sharing one palette texture sort correctly, and green
+  tiles named only by number land in Grass). It joins the floor type of the nearest colour, or — if none is close (the
+  <em>floor colour tolerance</em> in Settings &gt; Folders) — a new floor type named after its colour ("Green", "Dark grey").</li>
+<li><strong>Each floor type:</strong> a colour swatch (change it), its name (rename it: every piece, terrain layer and Surface Tag
+  follows), how many pieces and terrain layers are in it, <strong>▸</strong> to open it, <strong>x</strong> to delete it (what was in it is left with
+  no floor type).</li>
+<li><strong>Opened:</strong> every piece and terrain layer in it, each with a popup to <strong>move it</strong> to another floor type — or take it out
+  (<em>no floor type</em>); right-click a row for the same. Moves are kept as hand edits: sorting again never undoes them.
+  Placeable copies are updated at once.</li>
+<li><strong>Add pieces to a floor type:</strong> type in the search box under an opened floor type and click <strong>Add</strong> — any piece, not
+  only ground (a rug, a wooden deck, a bridge). Or drag prefabs from your kits, or Terrain Layers, onto a floor type's
+  row. In the palette: right-click a piece &gt; Floor type.</li>
+<li><strong>Add floor type:</strong> a name and a colour.</li>
+<li><strong>Sort floors again:</strong> measures the colour of ground pieces that don't have one yet (kits made before this version) and
+  re-sorts everything not set by hand.</li>
+</ul>
+<p>The brush's <strong>Stay on this floor</strong> (or Ctrl) keeps a stroke on one floor type.</p>
+<h3 id="terrain">Terrain</h3>
+<p><strong>Terrain awareness</strong> — a switch that affects every tool:</p>
+<ul>
+<li><strong>On:</strong> pieces follow Unity Terrain's height; pieces of the categories chosen under <strong>Follow the slope</strong> (nature, props,
+  vehicles by default) also tilt to its slope; the floor type under a piece is the one of the terrain's <strong>dominant paint
+  layer</strong> there (sorted like ground pieces: its name, else its texture's colour); the brush counts terrain as ground.</li>
+<li><strong>Flatten under buildings:</strong> placing a building on terrain flattens the terrain under its footprint to its base,
+  blending back into the slope over the <strong>blend margin</strong>. <strong>Flatten the terrain under the selection</strong> does it for
+  objects already placed. One Undo step each.</li>
+<li><strong>Off:</strong> a terrain is just a surface, like any other collider (the tiled-ground behaviour).</li>
+</ul>
+<h2 id="presets">Presets</h2>
+<p><strong>Export...</strong> and <strong>Import...</strong> open the Presets window (see <a href="presets.html">Presets</a>).</p>
+<h2 id="hotkeys">Hotkeys</h2>
+<p>Every Prefab Builder shortcut and its keys.</p>
+<ul>
+<li><strong>Change</strong>, then press the new keys (Esc cancels). <strong>Reset</strong> puts the default back.</li>
+<li>They are Unity shortcuts: they also appear in <strong>Edit &gt; Shortcuts</strong>. Unity's own <em>Default</em> profile can't be changed, so
+  the first change asks to make a <strong>Prefab Builder</strong> shortcut profile (the defaults plus your changes) and switch to it.</li>
+<li><strong>Reset all</strong> puts every Prefab Builder shortcut you changed back to its default keys (after asking; Unity's own
+  shortcuts are left as they are).</li>
+<li><strong>Save cheat sheet...</strong> writes every shortcut and mouse control to a text file to print.</li>
+</ul>
+<p>The keymap, with the mouse over the Scene view or the Prefab Builder window while it is open: <strong>Shift+1</strong> to <strong>7</strong> pick the tabs in order
+(Move, Place, Physics, Dress, Fix, Check, Settings); <strong>1</strong> to <strong>9</strong> pick the tools of the tab that's open, in their order; and
+every tool has a key of its own that goes straight to it from any tab. The keys are written on the buttons themselves
+(greyed, before their names: "⇧2 Place", "1 Stamp"), and all of a tool's keys are in its tooltip. The numbers go by place:
+drag a tab or tool to another place on its bar and its number follows (the Prefab Builder's <strong>⋮</strong> menu puts everything back
+in order). Set a key for any tool —
+one key, or one with Shift, Alt or Ctrl. None of them works while you fly the camera (right mouse), so W, A, S, D still fly.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open Prefab Builder</td>
+<td>Alt+Shift+W</td>
+</tr>
+<tr>
+<td>Tabs: Move / Place / Physics / Dress / Fix / Check / Settings</td>
+<td>Shift+1 … 7</td>
+</tr>
+<tr>
+<td>Tools: the 1st … 9th tool of the tab that's open</td>
+<td>1 … 9</td>
+</tr>
+<tr>
+<td>Tools: Move / Select / Stamp / Brush / Arrange, from any tab</td>
+<td>M / S / P / B / A</td>
+</tr>
+<tr>
+<td>Tools: every other tool, from any tab</td>
+<td>(none: set one)</td>
+</tr>
+<tr>
+<td>Move: Turn / Turn Back</td>
+<td>R / Shift+R (only in the Move tab)</td>
+</tr>
+<tr>
+<td>Move: Tilt / Tilt Back</td>
+<td>T / Shift+T (only in the Move tab: the selection's front down or up)</td>
+</tr>
+<tr>
+<td>Toggle Snapping</td>
+<td>Alt+Shift+L</td>
+</tr>
+<tr>
+<td>Snap Selection</td>
+<td>Alt+Shift+G</td>
+</tr>
+<tr>
+<td>Snap Selection To Ground</td>
+<td>Alt+Shift+D</td>
+</tr>
+<tr>
+<td>Select Similar</td>
+<td>Alt+Shift+S</td>
+</tr>
+<tr>
+<td>Find Floating And Sunken</td>
+<td>Alt+Shift+F</td>
+</tr>
+<tr>
+<td>Stamp: Turn / Turn Back / Put Down</td>
+<td>R / Shift+R / Esc (only while stamping)</td>
+</tr>
+<tr>
+<td>Stamp: Tilt / Tilt Back</td>
+<td>T / Shift+T (only while stamping; hold T to tilt freely)</td>
+</tr>
+<tr>
+<td>Cutaway: Top Cut / Side Cut</td>
+<td>C / Shift+C (window open, mouse over the Scene view or the window; Move &gt; Show / Hide)</td>
+</tr>
+<tr>
+<td>Straighten (turn and tilt back to none, on the grid)</td>
+<td>G (while placing: Stamp, Row, Signs, Decals, the Physics stamp)</td>
+</tr>
+<tr>
+<td>Stamp: Grid Smaller / Grid Bigger</td>
+<td>[ / ] (only while stamping)</td>
+</tr>
+<tr>
+<td>Brush: Smaller / Bigger / Unity Tools</td>
+<td>[ / ] / Esc (only while brushing)</td>
+</tr>
+<tr>
+<td>Stamp: Toggle Place Over Red</td>
+<td>O (only while stamping)</td>
+</tr>
+<tr>
+<td>Physics: Place / Scatter / Arrange</td>
+<td>Space drops (its Stamp turns with R / Shift+R, tilts with T / Shift+T) / Space / Space, then draw — U untangles</td>
+</tr>
+<tr>
+<td>Re-roll / Select what was just placed</td>
+<td>N / Shift+N (after a Fill, Brush stroke, Row, Spline or Physics drop)</td>
+</tr>
+<tr>
+<td>Quick pick (search for a piece at the mouse)</td>
+<td>Alt+Shift+Q</td>
+</tr>
+<tr>
+<td>Row, Spline, Fence: Turn Fronts</td>
+<td>R (only in those modes): Spline and Fence, the fronts left, right, along; Row, the pieces a Turn step (held: any angle); in Closures it turns the road laid beyond</td>
+</tr>
+<tr>
+<td>Row, Fill, Fence, Dress modes: Cancel</td>
+<td>Esc (only in those modes; with nothing to cancel, Unity's own tools)</td>
+</tr>
+<tr>
+<td>Spline: Lay It / Close Loop / Clear</td>
+<td>Z / X / Backspace (only in Spline)</td>
+</tr>
+<tr>
+<td>Unity's own tools (select, move, scale)</td>
+<td>Q, W, E, Y or Unity's toolbar (T too, where it doesn't tilt); Esc with nothing to cancel — a click in the Prefab Builder window goes back to its tool</td>
+</tr>
+<tr>
+<td>Stamp: place where the ghost is red</td>
+<td>Shift-click</td>
+</tr>
+<tr>
+<td>Stamp: place freely (no snapping)</td>
+<td>hold Ctrl (Cmd)</td>
+</tr>
+</tbody>
+</table></div>
+<div class="doc-foot"><a href="check-tab.html">&larr; Check</a><a href="rules-and-data.html">Rules, profiles, palettes, styles &rarr;</a></div>
+</article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../prefab-builder/docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><span>Discord (soon)</span></li>
+          <li><span>Bug tracker (soon)</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,132 +1,262 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="dark">
-  <title>Romano Assets</title>
-  <meta name="description" content="Romano Assets — a solo indie developer making games in Unity, and the editor tools born from making them.">
-  <meta property="og:title" content="Romano Assets">
-  <meta property="og:description" content="Solo indie games and Unity editor tools: Pawnheads and the All In One World Builder Kit.">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Romano Assets</title>
+<meta name="description" content="Unity editor tools by Romano Assets. Home of the All In One Prefab Builder Kit: turn any pack of prefabs into a world-building kit.">
+<link rel="canonical" href="https://marklromano.github.io/">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Romano Assets">
+<meta property="og:description" content="Unity editor tools by Romano Assets. Home of the All In One Prefab Builder Kit: turn any pack of prefabs into a world-building kit.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="wrap header-row">
-      <a class="brand" href="#top" aria-label="Romano Assets, back to top">
-        <span class="brand-mark" aria-hidden="true">R</span>
-        <span>Romano Assets</span>
-      </a>
-      <nav aria-label="Sections">
-        <ul class="nav">
-          <li><a href="#pawnheads">Pawnheads</a></li>
-          <li><a href="#world-builder">World Builder Kit</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html" aria-label="Romano Assets home">
+      <img src="assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="index.html#products">Products</a></li><li><a href="prefab-builder/index.html">Prefab Builder</a></li><li><a href="prefab-builder/docs/index.html">Docs</a></li><li><a href="support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<!-- HERO -->
+<section class="hero blueprint">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="label label-accent">Unity editor tools</p>
+      <h1>Build your world, <em>not the busywork.</em></h1>
+      <p class="lead">
+        Romano Assets makes Unity tools that turn slow, fiddly editor jobs into one drag. Each one is built while
+        making a real game, then polished, documented and supported for everyone else.
+      </p>
+      <div class="btn-row">
+        <a class="btn" href="prefab-builder/index.html">See the Prefab Builder Kit</a>
+        <a class="btn btn-ghost" href="#products">All products</a>
+      </div>
+      <ul class="specs" aria-label="Every tool">
+        <li>Full C# source</li>
+        <li>No package dependencies</li>
+        <li>Offline docs</li>
+      </ul>
     </div>
-  </header>
-
-  <main id="main">
-    <!-- INTRO -->
-    <section class="intro" id="top">
-      <div class="wrap">
-        <p class="eyebrow">Solo indie developer · Unity</p>
-        <h1>I make games, and the tools I wish I'd had while making them.</h1>
-        <p class="lead">
-          Romano Assets is one person building games in Unity. Every time a job in the editor gets slow or
-          fiddly, I build a tool for it. The ones that earn their keep on my own game get polished up and
-          shared, so other developers can skip the busywork too.
-        </p>
-        <div class="cta-row">
-          <a class="button" href="#pawnheads">See the game</a>
-          <a class="button button-ghost" href="#world-builder">See the tool</a>
-        </div>
+    <figure class="shot">
+      <div class="dim" aria-hidden="true">10 m grid &middot; snapped</div>
+      <div class="shot-frame">
+        <img src="assets/img/showcase-hero.jpg" width="1600" height="900"
+             alt="A small city of roads, towers, apartment blocks, houses and a fenced park, built with the Prefab Builder Kit">
       </div>
-    </section>
+      <figcaption>Showcase City, one of the sample scenes that comes with the Prefab Builder Kit.</figcaption>
+    </figure>
+  </div>
+</section>
 
-    <!-- PAWNHEADS -->
-    <section class="project" id="pawnheads" aria-labelledby="pawnheads-title">
-      <div class="wrap">
-        <div class="project-head">
-          <p class="eyebrow eyebrow-gold">The game</p>
-          <h2 id="pawnheads-title">Pawnheads</h2>
-          <ul class="tags" aria-label="Facts">
-            <li>Co-op, 1–4 players</li>
-            <li>Physics</li>
-            <li>Unity 6</li>
-            <li class="tag-status">In development</li>
-          </ul>
-        </div>
-        <p class="lead">
-          A co-op physics game about running a tiny pawn shop. Bid on storage units at auction, dig through the
-          junk by hand, haul it home in a beat-up van, and sell it across the counter, while keeping the weird
-          stuff for yourself. Everything is a real object you can pick up, stack, throw, or drop on a friend.
-        </p>
-        <div class="gallery">
-          <figure>
-            <img src="assets/pawnheads-1.svg" alt="Pawnheads screenshot placeholder: the storage auction" width="1600" height="900" loading="lazy" decoding="async">
-            <figcaption>The storage auction</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/pawnheads-2.svg" alt="Pawnheads screenshot placeholder: digging through a unit" width="1600" height="900" loading="lazy" decoding="async">
-            <figcaption>Digging through a unit</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/pawnheads-3.svg" alt="Pawnheads screenshot placeholder: the pawn shop" width="1600" height="900" loading="lazy" decoding="async">
-            <figcaption>The pawn shop</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
+<!-- PRODUCTS -->
+<section class="section" id="products" aria-labelledby="products-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Products</p>
+      <h2 id="products-title">One toolkit, growing kit by kit</h2>
+      <p>Each kit does one job completely and works on its own. They share a look, a support channel and the same standards.</p>
+    </div>
 
-    <!-- WORLD BUILDER KIT -->
-    <section class="project project-alt" id="world-builder" aria-labelledby="kit-title">
-      <div class="wrap split">
-        <div>
-          <p class="eyebrow eyebrow-teal">The tool</p>
-          <h2 id="kit-title">All In One World Builder Kit</h2>
-          <ul class="tags" aria-label="Facts">
-            <li>Unity editor tool</li>
-            <li class="tag-status tag-status-teal">Coming to the Asset Store</li>
+    <div class="products">
+      <!-- Flagship: on the Asset Store now -->
+      <article class="product product-flag c-prefab">
+        <div class="flag-copy">
+          <div class="product-top">
+            <span class="product-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>
+            </span>
+            <span class="pill pill-live">On the Asset Store</span>
+          </div>
+          <h3>All In One Prefab Builder Kit</h3>
+          <p>Turn any pack of prefabs into a world-building kit. Add a pack, check one review screen, and build with snapping, roads, brushes, fences, street dressing and physics, all from one window.</p>
+          <ul class="ticks">
+            <li><strong>Any pack becomes a kit.</strong> Pieces are measured and sorted for you. The pack's own files are never changed.</li>
+            <li><strong>Snap like building blocks.</strong> Pieces sit flush against their neighbours, or on the grid.</li>
+            <li><strong>One drag, not a hundred clicks.</strong> Roads, rows, splines, fills, fences and street furniture.</li>
           </ul>
-          <p class="lead">
-            Snap-together world building in one window. Pieces from the asset packs you already own click into
-            place like building blocks. Paint grass and litter, lay a street in one drag, fill empty lots and
-            fence them in, all without leaving a single editor window.
-          </p>
-          <ul class="features">
-            <li><strong>Lego snapping.</strong> Pieces sit flush against their neighbours, and on the grid when alone.</li>
-            <li><strong>Your packs, one palette.</strong> Add a pack and every prefab shows up, measured and sorted.</li>
-            <li><strong>Brush, row, fill, fence.</strong> The repetitive jobs become one drag each.</li>
-            <li><strong>Built for non-programmers.</strong> Everything lives in the window; no digging through folders.</li>
-          </ul>
+          <div class="btn-row">
+            <a class="btn" href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">View on the Asset Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg></a>
+            <a class="btn btn-ghost" href="prefab-builder/index.html">Features</a>
+          </div>
         </div>
-        <figure class="hero-shot">
-          <img src="assets/world-builder.svg" alt="All In One World Builder Kit placeholder image" width="1600" height="1000" loading="lazy" decoding="async">
+        <figure class="shot">
+          <div class="shot-frame">
+            <img src="assets/img/showcase-park.jpg" width="1200" height="675" loading="lazy" decoding="async"
+                 alt="A fenced park with rows of trees next to apartment blocks and houses, all placed with the kit">
+          </div>
         </figure>
-      </div>
-    </section>
+      </article>
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <div class="wrap">
-        <h2 id="contact-title">Say hello</h2>
-        <p class="lead">Questions about the kit, bug reports, or just want to talk games? Email me.</p>
-        <p><a class="button email" href="mailto:marklromano@outlook.com">marklromano@outlook.com</a></p>
-      </div>
-    </section>
-  </main>
+      <article class="product c-save">
+        <div class="product-top">
+          <span class="product-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M5 4h11l3 3v13H5z"/><path d="M8 4v5h7V4M8 20v-6h8v6"/></svg>
+          </span>
+          <span class="pill pill-dev">In development</span>
+        </div>
+        <h3>All In One Save Kit</h3>
+        <p>Save and load your game: player progress, the state of the world, and save slots.</p>
+      </article>
 
-  <footer class="site-footer">
-    <div class="wrap footer-row">
-      <p>© 2026 Romano Assets</p>
+      <article class="product c-interact">
+        <div class="product-top">
+          <span class="product-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9l10 4-4.2 1.6L13.2 19z"/><path d="M5 5l1.6 1.6M9.5 3v2.2M3 9.5h2.2"/></svg>
+          </span>
+          <span class="pill pill-dev">In development</span>
+        </div>
+        <h3>Interaction Kit</h3>
+        <p>Make objects the player can use: doors, pickups, switches, and anything you can press, open or carry.</p>
+      </article>
+
+      <article class="product product-planned c-settings">
+        <div class="product-top">
+          <span class="product-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+          </span>
+          <span class="pill">Planned</span>
+        </div>
+        <h3>Settings &amp; Menu Kit</h3>
+        <p>Main menu, pause menu and settings screens for graphics, audio and controls, ready to drop in.</p>
+      </article>
+
+      <article class="product product-planned c-runtime">
+        <div class="product-top">
+          <span class="product-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/><rect x="8" y="3" width="8" height="8" rx="1"/></svg>
+          </span>
+          <span class="pill">Planned</span>
+        </div>
+        <h3>Runtime Building Kit</h3>
+        <p>Let players build in your game, piece by piece, with snapping that feels right.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- STANDARDS -->
+<section class="section section-band" aria-labelledby="standards-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">How every kit is built</p>
+      <h2 id="standards-title">Tools you can trust in a real project</h2>
+    </div>
+    <ul class="standards">
+      <li><h3>Full C# source</h3><p>Read it, step through it, change it. Nothing is hidden in a DLL.</p></li>
+      <li><h3>No package dependencies</h3><p>Built on Unity's own modules only. Import it and it works; nothing else is installed.</p></li>
+      <li><h3>Your files stay yours</h3><p>Your art packs are never modified, and your own data lives in its own folder, safe across updates.</p></li>
+      <li><h3>Help inside the editor</h3><p>Tooltips on every control, a first-run tour, and offline documentation that ships with the kit.</p></li>
+      <li><h3>Undo that works</h3><p>Every action is one Undo step. Try things freely.</p></li>
+      <li><h3>Built-in and URP</h3><p>Tested on both render pipelines, on current Unity 6 versions, with Domain Reload on or off.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- HELP -->
+<section class="section" aria-labelledby="help-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Help</p>
+      <h2 id="help-title">Stuck? There's a person behind every kit.</h2>
+    </div>
+    <div class="tiles">
+      <a class="tile" href="prefab-builder/docs/index.html">
+        <span class="label">Learn</span>
+        <h3>Documentation</h3>
+        <p>A five-minute quick start and a page for every tab and tool.</p>
+      </a>
+      <a class="tile" href="support/index.html">
+        <span class="label">Contact</span>
+        <h3>Email support</h3>
+        <p class="addr">marklromano@outlook.com</p>
+      </a>
+      <div class="tile tile-soon"><span class="label">Community <span class="pill">Soon</span></span><h3>Discord</h3><p>A server for questions, show and tell, and update news is being set up.</p></div>
+      <div class="tile tile-soon"><span class="label">Bugs <span class="pill">Soon</span></span><h3>Public bug tracker</h3><p>A GitHub issue tracker is on the way. Until then, email bug reports.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section section-band" id="about" aria-labelledby="about-title">
+  <div class="wrap about">
+    <div class="section-head">
+      <p class="label">About</p>
+      <h2 id="about-title">Made by a developer, for developers</h2>
+    </div>
+    <div class="about-copy">
+      <p>
+        Romano Assets is <strong>Mark Romano</strong>, a solo developer making games in Unity. Whenever a job in the
+        editor gets slow or repetitive, I build a tool for it. The tools that prove themselves on my own game,
+        <strong>Pawnheads</strong> (a co-op physics game about running a tiny pawn shop), get polished, documented and
+        published here.
+      </p>
+      <p>
+        That means every kit has already been used in a real project before you see it, and the person who wrote it
+        reads every bug report.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-ghost" href="https://assetstore.unity.com/publishers/160196" rel="noopener">Romano Assets on the Asset Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="prefab-builder/docs/index.html">Documentation</a></li>
+          <li><a href="prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><span>Discord (soon)</span></li>
+          <li><span>Bug tracker (soon)</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
       <p>No trackers, no cookies, no analytics.</p>
     </div>
-  </footer>
+  </div>
+</footer>
 </body>
 </html>

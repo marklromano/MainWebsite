@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Physics Tab | Romano Assets</title>
+<meta name="description" content="Physics Tab: documentation for the All In One Prefab Builder Kit for Unity.">
+<link rel="canonical" href="https://marklromano.github.io/prefab-builder/docs/physics-tab.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Physics Tab">
+<meta property="og:description" content="Physics Tab: documentation for the All In One Prefab Builder Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/prefab-builder/docs/physics-tab.html">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../prefab-builder/docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-layout">
+<nav class="docs-nav" aria-label="Documentation"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class="label">Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class="label">The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html" aria-current="page">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class="label">Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a></div></div><details><summary>All documentation pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class="label">Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class="label">The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html" aria-current="page">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class="label">Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a></div></div></details></nav>
+<article class="prose">
+<div class="doc-meta"><span class="label">All In One Prefab Builder Kit &middot; v0.8.0</span></div>
+<h1 id="physics-tab">Physics Tab</h1>
+<p>Real physics for building — drop, throw and settle pieces so they land the way things really do (<strong>Shift+3</strong> over the Scene view picks
+it). The fall always happens in a <strong>hidden copy</strong> of the area round it: nothing else in your scene moves (not even objects
+with a Rigidbody of their own), and once settled the pieces are ordinary placed pieces, with nothing physical left on them.
+They land on <strong>whatever is there</strong> — the ground, a terrain, roofs, tables, shelves, walls — by their colliders, or by their
+meshes when they have none. Scatter such as grass is fallen through. <strong>You see them fall</strong>: each stops exactly where it
+rests (a long fall is sped up to a few seconds); Undo, saving or another drop just ends the show. <strong>Space</strong> is the main
+action in every tool.</p>
+<h2 id="place">Place</h2>
+<p>Drop pieces and let them settle — crates in a heap, rubble, rocks down a slope, books on a shelf, litter on a table.</p>
+<ul>
+<li><strong>What drops:</strong> the pieces picked in the palette (Single or Multiple, with weights as in the Brush) — or tick <strong>Copies of
+  the selection</strong> to drop copies of the selected objects (picked at random; prefab copies stay linked to their prefab).</li>
+<li><strong>Drop:</strong></li>
+<li><strong>Stamp</strong> — one piece, as the Place tab's Stamp places it: its ghost shows under the mouse (at Height, where it starts
+    to fall), <strong>R</strong> and <strong>Shift+R</strong> turn it, <strong>T</strong> and <strong>Shift+T</strong> tilt it (hold R or T and move the mouse to do it freely), and a click (or Space) drops it there to settle — tipping onto a slope, against a
+    wall, into a corner. The pick list is single while it's chosen; with Copies of the selection, it stamps copies of the
+    first selected object.</li>
+<li><strong>Circle</strong> — <strong>Count</strong> pieces over the <strong>Radius</strong> under the mouse, from <strong>Height</strong> above the ground: click, or <strong>Space</strong>.</li>
+<li><strong>Throw</strong> — thrown from its <strong>start</strong> at the spot clicked (or Space). The start is a point with a move handle — set a few
+    metres back toward you the first time you aim; drag it anywhere (<strong>Put the start back</strong> sets it again). <strong>Arc</strong> 0 throws them straight at it, fast;
+    higher lobs them up and over. They fly, land and roll; the path the first one flies shows while you aim.
+    More than one are thrown one behind the other along that path.</li>
+<li><strong>Box</strong>, <strong>Line</strong>, <strong>Ring</strong> — drag on the ground: a box they're spread over, a line they're laid along, or a ring (from
+    its middle out) they're laid round. <strong>Space</strong> drops the last one again.</li>
+<li><strong>Tumble</strong> (on) starts each one turned any way, so they land every which way. Off: upright, turned at random round their
+  up axis. <strong>Random scale</strong> sizes each between two values.</li>
+<li>A drop over something tall starts above it; a piece with nothing under it at all is taken away again (you're told).</li>
+<li>One Undo step per drop. <strong>N</strong> drops the last ones again with a new mix; <strong>Shift+N</strong> selects them.</li>
+</ul>
+<h2 id="scatter">Scatter</h2>
+<p>Mess the selection up — believably. Select objects (each placed piece moves on its own; a selected folder stands for the
+pieces in it), pick how, and press <strong>Space</strong> (or the button):</p>
+<ul>
+<li><strong>Spread</strong> — each piece is tossed to a random spot on the ground within the <strong>Radius</strong> round the selection's middle.</li>
+<li><strong>Explode</strong> — blown outward from the selection's middle (Space), or <strong>from where you click</strong>; <strong>Strength</strong> sets how hard
+  (the nearest fly furthest).</li>
+<li><strong>Heap</strong> — everything tossed to the middle, landing one after another into a pile (<strong>Pile size</strong>: smaller makes it taller).</li>
+<li><strong>Nudge</strong> — each piece hops a little way (<strong>Nudge</strong>, at most) from where it is: variety without changing the layout.</li>
+</ul>
+<p>Each piece flies its own arc and tumbles as it goes (only turns round, with Keep upright); they land, roll and settle with
+real physics, never inside anything. The button is in the Scene overlay too. One Undo step each time.</p>
+<h2 id="arrange">Arrange</h2>
+<p>Tidy the selection up. Select objects (each placed piece moves on its own; a selected folder stands for the pieces in it)
+and pick a shape. Then press <strong>Space</strong> (or the button) and <strong>draw where they go</strong> in the Scene view — until then, clicks
+select as usual:</p>
+<ul>
+<li><strong>Line</strong> — drag a line: they're spread evenly from one end to the other.</li>
+<li><strong>Arc</strong> — drag from one end of the curve to the other; <strong>Bend</strong> is how much of a circle it is (180: a half circle). It
+  bends to the left of the way you drag.</li>
+<li><strong>Circle</strong> — drag from its middle out, or click its middle (the <strong>Radius</strong>; 0 makes it just big enough).</li>
+<li><strong>Grid</strong> — drag the rectangle they fill (as many <strong>Columns</strong> as its shape suits, or the number set), or click its middle
+  (as far apart as the biggest plus the <strong>Gap</strong>).</li>
+<li><strong>Level</strong> — click a spot: every bottom goes to its height.</li>
+</ul>
+<p>Pressing <strong>Space</strong> again instead of drawing uses the selection's own shape: a line or arc between the two furthest apart,
+a circle or grid round the middle, level at the <strong>lowest</strong>, average or <strong>highest</strong>. <strong>Esc</strong> stops drawing.</p>
+<p>Line, Arc and Circle can turn each piece as it goes (<strong>Turn them</strong>: keep, along the line, in to the middle, out; a piece's
+front is its blue Z arrow). Each lands on what's under its new spot; with <strong>Settle after arranging</strong>, physics settles them
+afterwards. Where they'll go shows as you draw. <strong>Shift</strong>- or <strong>Ctrl</strong>-click still select while drawing. One Undo step each
+time.</p>
+<h3 id="settle">Settle</h3>
+<p>Under the shapes, for the selection as it stands (each placed piece on its own; a selected folder stands for the pieces in
+it):</p>
+<ul>
+<li><strong>Drop</strong> lets them fall from where they are and settle on what's under them — tidy props that float a little, or tip a
+  pile over.</li>
+<li><strong>Untangle</strong> (<strong>U</strong>) pushes pieces that are inside each other apart and lifts ones sunk into the ground or a floor back on
+  top — gently, with gravity off, so nothing flies. With <strong>Settle after untangling</strong> (on) they drop afterwards.</li>
+<li>One Undo step each. Both are in the Scene overlay too.</li>
+</ul>
+<h2 id="physics-settings">Physics settings</h2>
+<p>Shared by every Physics tool (the <strong>Physics</strong> foldout):</p>
+<ul>
+<li><strong>Bounce</strong> — how much things bounce when they land (0: not at all, 1: as high as they fell).</li>
+<li><strong>Friction</strong> — how much they grip (0: they slide like on ice, 1: they stop where they land) — what they land on gets the
+  same, so the setting decides.</li>
+<li><strong>Keep upright</strong> — they stand up first (one that fell over stands again, facing the way it did) and never tip over, only
+  turn round their up axis: furniture, trees, crates that should stand. In Place, Tumble then only turns them round.</li>
+<li><strong>Time to settle</strong> — the longest they're given to come to rest, up to a minute (they stop sooner once they're still).
+  You see up to ten seconds of it; a longer fall plays faster.</li>
+</ul>
+<div class="doc-foot"><a href="place-tab.html">&larr; Place</a><a href="dress-tab.html">Dress &rarr;</a></div>
+</article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../prefab-builder/docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><span>Discord (soon)</span></li>
+          <li><span>Bug tracker (soon)</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

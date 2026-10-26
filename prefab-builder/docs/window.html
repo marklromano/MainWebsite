@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>The Prefab Builder Window | Romano Assets</title>
+<meta name="description" content="The Prefab Builder Window: documentation for the All In One Prefab Builder Kit for Unity.">
+<link rel="canonical" href="https://marklromano.github.io/prefab-builder/docs/window.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="The Prefab Builder Window">
+<meta property="og:description" content="The Prefab Builder Window: documentation for the All In One Prefab Builder Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/prefab-builder/docs/window.html">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../prefab-builder/docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-layout">
+<nav class="docs-nav" aria-label="Documentation"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class="label">Start here</p><a href="getting-started.html">Getting started</a><a href="window.html" aria-current="page">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class="label">The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class="label">Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a></div></div><details><summary>All documentation pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class="label">Start here</p><a href="getting-started.html">Getting started</a><a href="window.html" aria-current="page">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class="label">The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class="label">Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a></div></div></details></nav>
+<article class="prose">
+<div class="doc-meta"><span class="label">All In One Prefab Builder Kit &middot; v0.8.0</span></div>
+<h1 id="the-prefab-builder-window">The Prefab Builder Window</h1>
+<p>Open it with <strong>Tools &gt; All In One Prefab Builder &gt; Prefab Builder</strong> (or <strong>Alt+Shift+W</strong>).</p>
+<h2 id="layout">Layout</h2>
+<ul>
+<li><strong>Tabs:</strong> Move, Place, Physics, Dress, Fix, Check and Settings. One tab is visible at a time. When the window is too narrow for
+  them, the tabs scroll sideways — the mouse wheel over them, or the arrows at their ends — as the mode selector and every
+  row of tabs in a tool do.</li>
+<li><strong>Mode selector:</strong> under the tabs. Each tab has a few modes; only the chosen mode's panel is shown. Each mode button has
+  its number before its name ("1 Stamp": press 1 over the Scene view or the window); they share the row evenly, as the tabs do;
+  <strong>drag</strong> a tab or a tool along its bar to put it in another place — the number keys follow your order; when they don't fit, the row scrolls (mouse wheel, or its arrows).</li>
+<li><strong>?</strong> shows a line of help for the current mode; click it (or its ✕) to put it away until you press ? again. <strong>⋮</strong> holds
+  the rare actions: Add Pack, Presets, snap the selection, tidy scene
+  folders, leave out duplicate pieces, make thumbnails again, show the tour again, Copy support info,
+  About.</li>
+<li><strong>New packs:</strong> folders in the project that look like packs and aren't kits yet are listed in <strong>Add Pack</strong> (⋮ &gt; Add Pack).
+  Nothing is ever scanned or imported without a click.</li>
+</ul>
+<p>Tabs whose tools aren't in this version yet say what's coming.</p>
+<p><strong>What's new:</strong> after an update, a small card at the top of the window lists what the new version adds (from the
+CHANGELOG) — once; <strong>Got it</strong> hides it until the next version.</p>
+<h2 id="the-scene-overlay">The Scene overlay</h2>
+<p>The <strong>Prefab Builder</strong> overlay in the Scene view is kept small: the mode and its tab, the mode's <strong>most used settings</strong> — the
+very same settings as in its panel (change one in either and the other shows it at once) — and one grey line saying what
+the next click does:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>In the overlay</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stamp</td>
+<td>Snap to pieces, Place over red</td>
+</tr>
+<tr>
+<td>Brush</td>
+<td>Radius, Density, Stay on this floor, Place over red</td>
+</tr>
+<tr>
+<td>Row</td>
+<td>Spacing, Place over red, Snap to pieces</td>
+</tr>
+<tr>
+<td>Spline</td>
+<td>Fronts face, Spacing, Curved, Place over red, Snap to pieces; Lay it / Loop / Clear while drawing</td>
+</tr>
+<tr>
+<td>Fill</td>
+<td>Area / Selection / Inverse (with Margin, Outside / Inside, Round it, and the Fill buttons), Density, Stay on this floor, Place over red</td>
+</tr>
+<tr>
+<td>Fence</td>
+<td>Opening, Fixed, Fronts in, Place over red, Fence the selection and its margin, Snap to pieces</td>
+</tr>
+<tr>
+<td>Street</td>
+<td>Place over red, Dress the selection, Clear, New mix</td>
+</tr>
+<tr>
+<td>Closures</td>
+<td>Which parts are built (Barriers, Cones, Sign, Wall, Road), Turn round</td>
+</tr>
+<tr>
+<td>Signs</td>
+<td>The text (the selected sign's, else the next one's), Snap to pieces</td>
+</tr>
+<tr>
+<td>Erase</td>
+<td>Radius, Category, Leave floors</td>
+</tr>
+<tr>
+<td>Replace (Fix)</td>
+<td>Replace the selection, Replace all</td>
+</tr>
+</tbody>
+</table></div>
+<p>Every tool that places things on a grid — Stamp, Brush, Row, Spline, Fill, Fence and Signs — shows the <strong>Grid</strong> row
+(on / off, its size, ÷2 ×2, Auto, and Keep once it's set by hand), with <strong>Turn</strong> under it (how far a press of R
+turns, and T tilts), in the same place: the last lines, over the hint. The
+grid is the same for all of them, so it isn't in their panels.
+After a Fill, a Brush stroke, a Row or a Spline, every Place tool also shows <strong>Re-roll (N)</strong> and <strong>Select (Shift+N)</strong>
+(see <a href="place-tab.html#re-roll-and-select-what-was-just-placed">Re-roll</a>).
+Every mode shows the <strong>Cutaway</strong> line too: <strong>Top</strong> and <strong>Side</strong> slice away the roof or the near walls, to see and build inside
+(see <a href="move-tab.html#the-cutaway">the cutaway</a>).
+ Move it, collapse it or hide it like any Scene view overlay (the overlay menu, or the <strong>`</strong> key in the Scene view).
+With the window closed it offers a button to open it.</p>
+<h2 id="messages">Messages</h2>
+<p>What the Prefab Builder tells you — "Row of 12", "3 piece(s) filed", "Pick the pieces first" — shows as a <strong>box across the
+top of the Scene view</strong>, in bold under a small <em>Prefab Builder</em> title (blue; amber with <em>Heads up</em> when there's something
+to fix), and fades after a few seconds (longer messages stay longer). A new message replaces the last. It never takes a
+click: you can keep working under it.</p>
+<h2 id="unitys-own-tools">Unity's own tools</h2>
+<p>While a mode that places things is active, the Prefab Builder takes the Scene view's clicks and Unity's transform tool is
+set aside. To select, move, rotate or scale things as usual — with the window still open — <strong>press Q, W, E or Y, or
+click a tool in Unity's toolbar</strong>, or press <strong>Esc</strong> when there's nothing to cancel. The Prefab Builder then leaves the Scene
+view alone (the overlay says <em>Unity tools</em>). <strong>Click anywhere in the Prefab Builder window</strong> — or <strong>Back to …</strong> in the
+overlay — and the tool you were on is back, as it was; picking a piece, a mode or a tab does it too. (R and T stay the
+Prefab Builder's keys for turning and tilting what you're placing or changing; T is Unity's Rect tool elsewhere.)</p>
+<h2 id="what-the-tools-aim-at">What the tools aim at</h2>
+<p>Every tool lands on whatever is under the mouse: anything with a collider, and models without one too — a pack's models placed
+straight in (as in Demo City), roofs, roads, tables — by their meshes. (The Prefab Builder keeps hidden stand-ins of those
+meshes to aim at; nothing is added to the models themselves.) Scatter such as grass is aimed through.</p>
+<h2 id="tabs-in-this-version">Tabs in this version</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Tab</th>
+<th>Modes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move</td>
+<td><a href="move-tab.html">Move, Rotate, Scale, Select, Show / Hide</a></td>
+</tr>
+<tr>
+<td>Place</td>
+<td><a href="place-tab.html">Stamp, Erase, Brush, Fill, Row, Spline, Roads</a></td>
+</tr>
+<tr>
+<td>Physics</td>
+<td><a href="physics-tab.html">Place, Scatter, Arrange</a></td>
+</tr>
+<tr>
+<td>Dress</td>
+<td><a href="dress-tab.html">Street, Closures, Signs, Decals, Cables, Fence, Vary</a></td>
+</tr>
+<tr>
+<td>Fix</td>
+<td><a href="fix-tab.html">Ground, Floating, Doubles, Select, Replace, Randomize</a></td>
+</tr>
+<tr>
+<td>Settings</td>
+<td><a href="settings-tab.html">Kits, Styles, Rules, Palettes, Folders, Floors &amp; Terrain, Presets, Hotkeys</a></td>
+</tr>
+<tr>
+<td>Check</td>
+<td><a href="check-tab.html">Clipping, Validate, Play, Measure, Performance</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="undo">Undo</h2>
+<p>Every action is one Undo step: a placed piece (with the folders made for it), a snap, a drop to the ground, a Fix all.</p>
+<div class="doc-foot"><a href="getting-started.html">&larr; Getting started</a><a href="adding-packs.html">Adding packs &rarr;</a></div>
+</article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../prefab-builder/docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><span>Discord (soon)</span></li>
+          <li><span>Bug tracker (soon)</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

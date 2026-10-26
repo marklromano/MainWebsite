@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Adding Packs | Romano Assets</title>
+<meta name="description" content="Adding Packs: documentation for the All In One Prefab Builder Kit for Unity.">
+<link rel="canonical" href="https://marklromano.github.io/prefab-builder/docs/adding-packs.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Adding Packs">
+<meta property="og:description" content="Adding Packs: documentation for the All In One Prefab Builder Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/prefab-builder/docs/adding-packs.html">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../prefab-builder/docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-layout">
+<nav class="docs-nav" aria-label="Documentation"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class="label">Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html" aria-current="page">Adding packs</a></div><div class="docs-group"><p class="label">The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class="label">Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a></div></div><details><summary>All documentation pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class="label">Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html" aria-current="page">Adding packs</a></div><div class="docs-group"><p class="label">The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class="label">Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a></div></div></details></nav>
+<article class="prose">
+<div class="doc-meta"><span class="label">All In One Prefab Builder Kit &middot; v0.8.0</span></div>
+<h1 id="adding-packs">Adding Packs</h1>
+<p>A <strong>kit</strong> is a pack turned into placeable pieces: every prefab or model measured, sorted into a category and
+annotated (front side, corner piece, surface…). The Add Pack wizard makes kits. Open it with
+<strong>Tools &gt; All In One Prefab Builder &gt; Add Pack...</strong></p>
+<h2 id="1-choose-the-pack">1. Choose the pack</h2>
+<p>The first page offers four ways in. None of them changes anything until you click.</p>
+<p><strong>Found in your project.</strong> Folders that look like packs (at least 5 prefabs or models, not a kit yet) are listed.
+Click <strong>Scan</strong> to review one, or <strong>Not a pack</strong> to never be offered it again. Publisher folders holding several packs
+(<code>Assets/Publisher/PackA</code>, <code>.../PackB</code>) are offered as separate packs.</p>
+<p><strong>Add from disk (.zip or folder).</strong> For packs that aren't a <code>.unitypackage</code> — most free kits come as a <code>.zip</code>. Click
+<strong>Choose a pack folder, or the folder your .zip files are in</strong> and pick either a pack's folder or the folder holding
+its <code>.zip</code> (your Downloads folder, for example): every pack found there — folders and <code>.zip</code> files alike — is listed
+with what will be copied. Or drag <code>.zip</code> files and folders from your file explorer onto the wizard. Untick any you
+don't want and click <strong>Add</strong>. Packs are copied into
+<code>Assets/Imported Packs/</code> (the <code>packsFolder</code> setting), then scanned. Only what a kit needs is copied:</p>
+<ul>
+<li>where a pack ships each model in several formats (FBX, OBJ, GLB…), one is kept: FBX first, then OBJ (with its
+  <code>.mtl</code>), then the others; folders of the formats not kept are left out, textures included;</li>
+<li>preview images, web links, pages, executables, code and archives are left out;</li>
+<li>a folder holding several packs side by side, or several <code>.zip</code> files, gives one pack each (a <code>.zip</code> next to the folder
+  it was unzipped to counts once).</li>
+</ul>
+<p>Nothing on disk is changed. Adding a pack that's already in the project updates its files in place, so kits made from
+it keep their links. glTF (<code>.glb</code>) models need a glTF importer package in your project.</p>
+<p><strong>Choose a folder.</strong> Browse the project's folders right in the window (each shows how many prefabs and models it
+holds) and click one, or drag a folder from the Project window onto the wizard. Choose several folders to make one kit
+of them. Then click <strong>Scan</strong>.</p>
+<p><strong>Import a .unitypackage.</strong> Choose a package file (or drag one onto the window) and click <strong>Import with Unity's
+importer</strong>. Unity's own import window opens, where you see every file and confirm. When the import finishes, the
+folders it added are scanned automatically.</p>
+<h2 id="2-what-the-scanner-does">2. What the scanner does</h2>
+<ul>
+<li>Finds every <strong>prefab</strong> in the folder, and every <strong>model</strong> (FBX, OBJ, …) that none of those prefabs already uses. A
+  pack that ships only models works; a pack that ships prefabs of its models isn't counted twice.</li>
+<li><strong>Measures</strong> each piece without placing it: visible box (footprint and height), triangles (LOD 0 only), materials,
+  and where its pivot is (bottom centre, centre, a corner, or elsewhere).</li>
+<li><strong>Flags problems</strong>: an empty material slot, a shader for a different render pipeline (it would look pink), a
+  scaled root, an animated character, a piece with nothing visible. Pieces with nothing visible and animated
+  characters start <strong>left out</strong> of the kit.</li>
+<li><strong>Guesses</strong> each piece's category from the words in its name, then its folders, then its shape; whether it is a
+  <strong>corner</strong> piece; the <strong>surface</strong> of ground pieces; and which material slot is the <strong>windows</strong>. The words it looks
+  for are data in the RuleSet (categories) and project settings (surfaces), so you can teach it a pack's naming.</li>
+</ul>
+<p>Large packs are fine: pieces are loaded one at a time, and a re-scan only measures files that changed.</p>
+<h2 id="3-the-review-screen">3. The review screen</h2>
+<p><strong>Pack check</strong> (at the top, when there's anything to say): what the scan found across the whole pack, counted —
+materials made for another render pipeline (they look pink until converted), broken shaders, empty material slots, pieces
+with no mesh, scaled roots, odd pivots, animated characters, categories guessed from shape only. <strong>Show them</strong> shows
+just those pieces; in a URP project, <strong>Render Pipeline Converter…</strong> opens Unity's own converter (it changes the pack's
+materials — the kit never does).</p>
+<p><strong>Kit name</strong> and <strong>Style.</strong> A kit belongs to a style (a look, such as "low poly town"); a new style is made for the
+first kit. The rules can warn about or block mixing styles in one area.</p>
+<p><strong>Kit settings</strong> (the fold-out at the top):</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it's for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid cell (m)</td>
+<td>The size of the kit's road and ground tiles. Guessed from the most common tile size; <strong>Use</strong> applies the guess. Footprints are counted in these cells.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Scale of the placeable copies. If the kit's road tiles or buildings are hardly bigger than your character, a note suggests a scale (many free kits are built at 1 unit per tile). A new kit takes the scale of the other kits in its style.</td>
+</tr>
+<tr>
+<td>Main pack</td>
+<td>Pick the pack this one should match in size — a kit you already made, any pack in the project (even one that isn't a kit yet: a sample of it is measured), or your character. The scale is set straight away, worked out by comparing the first thing both packs have — the road grid (the smallest common tile side, so a pack with 10 m and 15 m roads is on a 10 m grid), else the typical height of street lights, fences, buildings, then ground tiles, trees, vehicles — and the comparison is shown.</td>
+</tr>
+<tr>
+<td>Front side</td>
+<td>The front of every piece you don't set one by one.</td>
+</tr>
+<tr>
+<td>Window material</td>
+<td>The material slot that is the windows (used by facade tools later). Pieces can override it.</td>
+</tr>
+<tr>
+<td>Make placeable copies</td>
+<td>See below. On by default.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The grid</strong> shows every piece with its thumbnail, name and a <strong>category dropdown</strong>. Badges on the thumbnail:
+<strong>!</strong> a problem (hover to read it) or flagged as looking wrong; <strong>?</strong> the category is only a guess from its shape, or
+nothing matched; <strong>C</strong> a corner piece; <strong>*</strong> a favourite. Left-out pieces are faded.</p>
+<ul>
+<li>Search by name, filter by category, <strong>Needs a look</strong> (only pieces with a badge or an odd pivot), <strong>Show left out</strong>,
+  and the thumbnail size slider.</li>
+<li>Click to select; tick the box on a thumbnail (or Ctrl/Cmd-click) to add it; Shift-click for a range; <strong>All</strong> selects
+  every piece shown, <strong>None</strong> clears. Changing the category dropdown of a selected piece changes every selected piece.</li>
+<li>Fixing many at once: filter <strong>Needs a look</strong> (or a category, or search), click <strong>All</strong>, and set the fields once.</li>
+<li>Right-click for include / leave out, category, front, corner, looks wrong, and <strong>Pick the front in the Scene view</strong>.</li>
+</ul>
+<p><strong>The details panel</strong> under the grid edits the selection:</p>
+<ul>
+<li><strong>Category</strong>, <strong>Front side</strong> (+Z, +X, -Z, -X, or <strong>Pick in Scene</strong>: the piece is shown in the Scene view with an
+  arrow on each side — click the one on its street side; nothing is added to your scene), <strong>Corner piece</strong>,
+  <strong>Surface</strong> (ground pieces).</li>
+<li><strong>Window slot</strong>, <strong>In the kit</strong>, <strong>Looks wrong</strong> (a flag to come back to), <strong>Favourite</strong>, <strong>Notes</strong>.</li>
+<li><strong>Snap points.</strong> None means the edges of the footprint, which is right for most pieces. Add custom points (position
+  in the piece's own frame and the side they face) for pieces that join elsewhere.</li>
+</ul>
+<p>With several pieces selected, the same panel edits all of them: a field shows "—" where they differ, and whatever
+you set applies to every selected piece (category, front, corner, surface, window slot, in the kit, looks wrong,
+favourite, notes). Snap points and <strong>Pick in Scene</strong> are for one piece at a time.</p>
+<p>Click <strong>Create Kit</strong> (or <strong>Update Kit</strong>). The kit is saved in your data folder under <code>Kits/</code>.</p>
+<h2 id="placeable-copies">Placeable copies</h2>
+<p>With <strong>Make placeable copies</strong> on, each piece gets a copy in <code>Kits/&lt;Kit name&gt; Prefabs/</code>: a <strong>prefab variant</strong> of the
+pack's prefab or model (so a pack update still flows through) with what a world piece needs, as its category's
+rules say:</p>
+<ul>
+<li>a <strong>box collider</strong> fitted to it if it has no collider,</li>
+<li><strong>static</strong> flags (batching, occlusion, reflection probes) on categories that don't move,</li>
+<li>a <strong>Surface Tag</strong> carrying its surface on ground and road pieces.</li>
+</ul>
+<p>With a kit scale other than 1, the copy is a scale-1 object holding the scaled original, so its collider is never
+scaled. The pack's own files are never changed. Copies are only rebuilt when something they're made from changes, so
+their GUIDs — and everything you placed from them — stay put.</p>
+<h2 id="re-scanning-and-managing-kits">Re-scanning and managing kits</h2>
+<p>In the Prefab Builder window, <strong>Settings &gt; Kits</strong> (or the Inspector of a kit asset):</p>
+<ul>
+<li><strong>Re-scan and review</strong> — scans the pack folders again (for a pack update, or new pieces). Everything you set by
+  hand is kept; guesses are refreshed; pieces whose files are gone are dropped.</li>
+<li><strong>Rename</strong> — the kit and its copies' folder (the copies keep their links).</li>
+<li><strong>Hidden</strong> — keep the kit but hide it from the palette.</li>
+<li><strong>Merge another kit into this one</strong> — its pieces and folders move here; the other kit is deleted.</li>
+<li><strong>Export its annotations</strong> — a preset file with only this kit (see <a href="presets.html">Presets</a>).</li>
+<li><strong>Remove kit</strong> — deletes the kit, and optionally its placeable copies. The pack is never touched.</li>
+</ul>
+<div class="doc-foot"><a href="window.html">&larr; The Prefab Builder window</a><a href="move-tab.html">Move &rarr;</a></div>
+</article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../prefab-builder/docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><span>Discord (soon)</span></li>
+          <li><span>Bug tracker (soon)</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
