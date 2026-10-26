@@ -1,5 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2b544"/><stop offset="1" stop-color="#4fd1c5"/></linearGradient></defs>
-  <rect width="64" height="64" rx="14" fill="url(#g)"/>
-  <text x="32" y="45" text-anchor="middle" font-family="system-ui, Segoe UI, Arial, sans-serif" font-size="38" font-weight="800" fill="#111">R</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Romano Assets">
+  <!-- An isometric building block: the top face lit in the brand blue -->
+  <polygon points="32,6 56,19 32,32 8,19" fill="#3D8BFF"/>
+  <polygon points="8,19 32,32 32,58 8,45" fill="#1C3A66"/>
+  <polygon points="56,19 32,32 32,58 56,45" fill="#2A5A9E"/>
+  <polygon points="32,12 45,19 32,26 19,19" fill="#FFB547"/>
 </svg>

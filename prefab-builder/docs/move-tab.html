@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Move Tab | Romano Assets</title>
+<meta name="description" content="Move Tab: documentation for the All In One Prefab Builder Kit for Unity.">
+<link rel="canonical" href="https://marklromano.github.io/prefab-builder/docs/move-tab.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Move Tab">
+<meta property="og:description" content="Move Tab: documentation for the All In One Prefab Builder Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/prefab-builder/docs/move-tab.html">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../prefab-builder/docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-layout">
+<nav class="docs-nav" aria-label="Documentation"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class="label">Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class="label">The tabs</p><a href="move-tab.html" aria-current="page">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class="label">Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a></div></div><details><summary>All documentation pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class="label">Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class="label">The tabs</p><a href="move-tab.html" aria-current="page">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class="label">Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a></div></div></details></nav>
+<article class="prose">
+<div class="doc-meta"><span class="label">All In One Prefab Builder Kit &middot; v0.8.0</span></div>
+<h1 id="move-tab">Move Tab</h1>
+<p>Move, rotate and scale what's already placed — with the kit's snapping instead of Unity's handles. The Move tab comes
+first (<strong>Shift+1</strong> over the Scene view picks it; <strong>M</strong> goes straight to Move and <strong>S</strong> to Select). Select objects the usual way (click, Shift-click, drag a box); the handles work on the
+top objects of the selection (a child moves with its parent). In Prefab Mode they work inside the prefab.</p>
+<ul>
+<li><strong>1</strong> to <strong>5</strong> switch between <strong>Move</strong>, <strong>Rotate</strong>, <strong>Scale</strong>, <strong>Select</strong> and <strong>Show / Hide</strong> while the mouse is over the Scene view — only in
+  this tab, so they never get in the way elsewhere (change them in Settings &gt; Hotkeys).</li>
+<li><strong>Snap to pieces</strong> and the <strong>Grid</strong> row are the same switches as the Place tools': what you set here is set there too.</li>
+<li>Hold <strong>Ctrl</strong> (Cmd) while dragging to move, turn or scale freely.</li>
+<li><strong>W</strong>, <strong>E</strong>, <strong>Y</strong> or Unity's toolbar hand the Scene view back to Unity's own tools until you click in the Prefab Builder
+  window (or pick a mode) again. (<strong>T</strong> tilts here.)</li>
+<li>One Undo step per drag (or per press of R, or per button).</li>
+</ul>
+<h2 id="the-anchor">The anchor</h2>
+<p>Every tool works from the <strong>anchor</strong> (the large yellow dot). Choose it with the two buttons in the panel (and the Scene
+overlay):</p>
+<ul>
+<li><strong>Pivot</strong>: the (first) object's own pivot. No dots.</li>
+<li><strong>Point</strong> (to begin with, the bottom middle): dots show on the selection's box — its corners, the middles of its edges
+  and faces, and its centre; they grow under the mouse. <strong>Click a dot</strong> to make it the anchor; Move's arrows, Rotate's
+  rings and Scale's square then sit there.</li>
+</ul>
+<p>From a point:</p>
+<ul>
+<li><strong>Move</strong> puts the anchor on the grid (with the grid on): pick a corner to line corners up. Along an axis where the
+  anchor is a middle, the box's edge goes on the grid instead — so a road tile moved by its bottom middle still fills
+  whole cells.</li>
+<li><strong>Rotate</strong> turns round it: a corner swings the selection like a door, and the corner stays put; the bottom middle turns
+  it where it stands.</li>
+<li><strong>Scale</strong> grows and shrinks round it: from the bottom middle it keeps standing where it stands; from a corner, a side or
+  the centre instead.</li>
+</ul>
+<h2 id="move">Move</h2>
+<p><strong>Drag the selected object itself</strong> to slide it over the scene onto whatever is under the mouse — the ground, a roof, a
+table, a shelf (models without colliders too). Or drag an arrow to move the selection along X, Y or Z, or a coloured square
+to move it along two axes at once.</p>
+<ul>
+<li>
+<p><strong>Land on what's under it</strong> (on by default): moved along X or Z, what stands on something keeps standing on what's below
+  it as it goes — up onto a step, down off a table. A sign on a wall or a hanging lamp keeps its height, and the <strong>Y</strong>
+  arrow always lifts freely.</p>
+</li>
+<li>
+<p>With <strong>Snap to pieces</strong> on, the selection snaps flush against the pieces beside it (or on top of them) and lines up with
+  them, as a stamped piece does.</p>
+</li>
+<li>With the <strong>grid</strong> on, the anchor lands on the grid (along a middle: the box's edge) and its height on the height step.</li>
+<li>It snaps <strong>only on the axes you drag along</strong>: moving along X never shifts it along Z.</li>
+<li><strong>Move by</strong>: type an exact amount (x, y, z in metres) and press it.</li>
+<li><strong>Put on the ground</strong>: each selected object dropped straight down onto what's under it.</li>
+</ul>
+<h2 id="rotate">Rotate</h2>
+<p>Drag a ring to turn the selection through the anchor, in steps of <strong>Turn step</strong> (the rule set's rotation step unless set
+here): the <strong>green</strong> ring turns it round the up axis, the <strong>red</strong> one round X and the <strong>blue</strong> one round Z (tipping it
+over). <strong>R</strong> and <strong>Shift+R</strong> — or <strong>Turn right</strong> / <strong>Turn left</strong> — turn it round the up axis a step at a time. <strong>T</strong> and
+<strong>Shift+T</strong> tilt each selected object a <strong>Turn step</strong> — its front down, or up — on its own foot, lifted so nothing sinks into the
+ground.</p>
+<ul>
+<li><strong>Turn each at random</strong>: every selected object turned round its own middle by a random number of steps — variety for a
+  row of houses or crates in one click.</li>
+<li><strong>Straighten</strong>: every selected object's turn rounded to the step on every axis — pieces knocked a few degrees out are
+  straight again.</li>
+</ul>
+<h2 id="scale">Scale</h2>
+<p>A box shows round the selection.</p>
+<ul>
+<li><strong>Drag a face</strong> to stretch the selection that way; with the grid on, the face lands on the grid (the top on the height
+  step). Hold <strong>Alt</strong> to stretch both sides at once. Objects turned by quarter turns stretch exactly along their own sides.</li>
+<li><strong>Drag a corner</strong> (the pink balls) or <strong>the square at the anchor</strong> to scale evenly, in steps of <strong>Scale step</strong> (0.1: 10 % at
+  a time), round the anchor — a corner that is itself the anchor scales round the opposite corner. <strong>Click a corner</strong> without
+  dragging to make it the anchor.</li>
+<li><strong>Reset scale</strong>: each selected object back at the scale it has in its prefab.</li>
+</ul>
+<h2 id="select">Select</h2>
+<p>Select placed pieces by a shape you draw in the Scene view — handy before moving, scattering or arranging them:</p>
+<ul>
+<li><strong>Box</strong> — drag its base on the ground, then move the mouse up for its height and click: everything whose middle is
+  inside it (a low box picks the ground floor only). Click straight away, or double-click, and it stays flat: everything
+  standing in it, at any height.</li>
+<li><strong>Sphere</strong> — drag from the middle out: everything whose middle is inside the ball.</li>
+<li><strong>Circle</strong> — drag a circle on the ground from its middle out: everything standing in it, at any height.</li>
+<li><strong>On screen</strong> — press <strong>Space</strong> (or the button): everything the Scene view shows.</li>
+</ul>
+<p><strong>New</strong>, <strong>Add</strong>, <strong>Subtract</strong> or <strong>Intersect</strong> says how what's found goes with what's selected — or hold <strong>Shift</strong> (add),
+<strong>Ctrl</strong> (take out) or both (keep only where they meet) as you draw. A click picks the piece under the mouse the same way.
+<strong>Space</strong> draws the last shape again (after changing the filters). What a shape will pick is outlined as you draw.</p>
+<p><strong>Only</strong> narrows what's picked: <strong>Like the selection</strong> (pieces of the kinds selected now — the same prefab, or the same
+name; <strong>Any</strong> clears it), <strong>Size</strong> (the longest side, from–to), <strong>Height</strong> (where the bottom stands, from–to). Kit floors
+— ground and road pieces — are left out unless <strong>Floors too</strong> is on; scatter on the small-props layer never counts.</p>
+<h2 id="show--hide">Show / Hide</h2>
+<h3 id="the-cutaway">The cutaway</h3>
+<p>To see and build inside, slice the top or the side away. The Scene view stops drawing everything past the cut — through
+the middle of a building, even one made as a single mesh. The switches are at the top of this panel and on the
+<strong>Cutaway</strong> line of the Scene overlay, in every tool, so you can turn them on while placing:</p>
+<ul>
+<li><strong>Top</strong> (<strong>C</strong>) slices away everything above a height: roofs, ceilings and the floors above. A blue sheet shows where
+  the cut is; drag its <strong>blue arrow</strong> up or down to put it anywhere (or type the height in this panel). The first time,
+  it starts a storey above the middle of the Scene view. It slices while the camera is above it.</li>
+<li><strong>Side</strong> (<strong>Shift+C</strong>) slices away everything between the camera and an upright plane: the walls in front of a room.
+  Drag its <strong>orange arrow</strong> to move it; <strong>Face this view</strong> stands it through the middle of the Scene view, facing the
+  camera. Orbit round to the other side and it cuts that side instead.</li>
+<li>One cut at a time: turning one on turns the other off.</li>
+<li>Every tool aims straight through what's cut, onto what's still drawn, so you place furniture on the floor inside a
+  building with its roof cut away, or against the far wall of a room. A hollow building needs a mesh collider or no
+  collider for its floor to be found; one box collider round the outside of it leaves only the ground under it to aim at.</li>
+<li>Only the Scene view's picture changes: the scene, its materials and the game are untouched, and it's off again when
+  Unity restarts. What's cut still casts its shadow inside — turn the Scene view's lighting off (its toolbar) to see in
+  brightly. A click to select in Unity's own way may still pick what's cut.</li>
+</ul>
+<h3 id="categories">Categories</h3>
+<p>Hide or lock every placed piece of a category while you work — all the roads, the buildings, the props:</p>
+<ul>
+<li><strong>Hide</strong> takes them out of the Scene view, and every tool aims straight through them: hide the roofs and place
+  furniture inside, hide the props and fix the road under them. <strong>Lock</strong> leaves them showing but they can't be clicked or
+  selected — still there to place on.</li>
+<li><strong>Only</strong> shows just that category and hides the rest. <strong>Show all</strong> and <strong>Unlock all</strong> bring everything back.</li>
+<li>A category's switch marked <strong>*</strong> is on for some of its pieces only; a click sets it for all of them.</li>
+<li>Scatter on the small-props layer has a group of its own, and so does what isn't from a kit.</li>
+</ul>
+<p>Only the Scene view changes: this is Unity's own scene visibility (the eye and hand in the Hierarchy), so the scene
+itself, its saved file and the game are untouched. The Scene view's visibility switch (the eye in its toolbar) has to be
+on for hidden things to disappear.</p>
+<div class="doc-foot"><a href="adding-packs.html">&larr; Adding packs</a><a href="place-tab.html">Place &rarr;</a></div>
+</article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../prefab-builder/docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><span>Discord (soon)</span></li>
+          <li><a href="https://github.com/marklromano/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Extending | Romano Assets</title>
+<meta name="description" content="Extending: documentation for the All In One Prefab Builder Kit for Unity.">
+<link rel="canonical" href="https://marklromano.github.io/prefab-builder/docs/extending.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Extending">
+<meta property="og:description" content="Extending: documentation for the All In One Prefab Builder Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/prefab-builder/docs/extending.html">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../prefab-builder/docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-layout">
+<nav class="docs-nav" aria-label="Documentation"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class="label">Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class="label">The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class="label">Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html" aria-current="page">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a></div></div><details><summary>All documentation pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class="label">Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class="label">The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class="label">Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html" aria-current="page">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a></div></div></details></nav>
+<article class="prose">
+<div class="doc-meta"><span class="label">All In One Prefab Builder Kit &middot; v0.8.0</span></div>
+<h1 id="extending">Extending</h1>
+<p>All code is in the <code>AllInOneWorldBuilder</code> (runtime) and <code>AllInOneWorldBuilder.Editor</code> (editor) namespaces, in the
+assemblies <code>AllInOneWorldBuilder.Runtime</code> and <code>AllInOneWorldBuilder.Editor</code>. Both are auto-referenced, so your own
+scripts can use them directly.</p>
+<h2 id="surfaces">Surfaces</h2>
+<p><code>SurfaceTag</code> (runtime) carries a surface name on an object; the Prefab Builder adds it to placeable copies of ground
+and road pieces. Read it from your game — the kit plays no sounds and assumes no footstep system:</p>
+<pre><code class="language-csharp">using AllInOneWorldBuilder;
+
+if (Physics.Raycast(foot.position, Vector3.down, out var hit, 0.5f) &amp;&amp;
+    SurfaceTag.TryGetSurface(hit, out var surface))
+{
+    PlayFootstep(surface); // &quot;Grass&quot;, &quot;Asphalt&quot;, ... as named in the Settings
+}
+</code></pre>
+<p>Implement <code>ISurfaceSource</code> on your own components to supply surface names another way; <code>SurfaceTag.TryGetSurface</code>
+finds any <code>ISurfaceSource</code> on the object or above it.</p>
+<h2 id="runtime-components">Runtime components</h2>
+<ul>
+<li><code>SurfaceTag</code> / <code>ISurfaceSource</code> — above.</li>
+<li><code>LayerCullDistance</code> — on a camera: stops it drawing one layer (the small-props layer scatter is on) past a distance.
+  Uses Unity's per-layer cull distances; works in every render pipeline.</li>
+<li><code>ScatterChunk</code> — marks a chunk of combined scatter (its group, cell, piece count). Plain data.</li>
+<li><code>WorldBuilderSpline</code> — on a spline laid by the Spline mode: its points and layout settings, so it can be edited and
+  laid again. Plain data; its pieces are its children.</li>
+<li><code>WorldBuilderMark</code> — on what a tool made (street furniture, a closure): which tool and what for, so running the tool
+  again replaces it. Plain data; remove it and the object is simply yours.</li>
+<li><code>SignText</code> — text on a sign board: text, font (none shipped — Unity's built-in one otherwise), colour, fit, both sides.
+  Plain data; the Prefab Builder lays a child text object from it.</li>
+<li><code>WorldBuilderFence</code> — on a fence built by Dress &gt; Fence: the objects it goes round, its margin and rectangle, so changing
+  Margin builds it again. Data only.</li>
+<li><code>WorldBuilderClosure</code> — on a closure built by Dress &gt; Closures: its line and set-up, so it can be changed and built
+  again. Plain data.</li>
+<li><code>PlayFromHere</code> — where Check &gt; Play started Play (<code>HasSpot</code>, <code>Position</code>, <code>Rotation</code>), for a game that places its own player:
+  read it in your spawn code. Editor only: set just before Play starts, cleared when it ends, never set in a build.</li>
+<li>The <em>Sign Text</em> shader (<code>All In One Prefab Builder/Sign Text</code>) — unlit text that's hidden behind what stands in front of
+  it, in every render pipeline.</li>
+</ul>
+<h2 id="data-from-code">Data from code</h2>
+<ul>
+<li><code>DataStore.ActiveRuleSet</code>, <code>DataStore.ActivePalette</code>, <code>DataStore.Kits()</code> — the current data.</li>
+<li><code>Kit.Pieces</code> — each <code>KitPiece</code> has its category, front side, measurements and <code>LoadPrefab()</code>.</li>
+<li><code>KitService</code> — create, re-scan, rename, merge, hide and remove kits; <code>KitService.KitsChanged</code> fires after each.</li>
+<li><code>PresetService</code> — export and import presets from code (<code>Export</code>, <code>ToJson</code>, <code>FromJson</code>, <code>Plan</code>, <code>Apply</code>).</li>
+<li><code>RoadGrid</code>, <code>StreetDresser</code>, <code>ClosureBuilder</code>, <code>SignBuilder</code> — the Dress tab's: a road's cells and edges, street furniture
+  planned and placed along them, a closure planned and built at a road end, text laid on a sign board.</li>
+<li><code>LineLayout</code>, <code>FencePlanner</code>, <code>FillPlanner</code>, <code>SplineBuilder</code> — the planning behind Row, Spline, Fence and Fill: plan a
+  line of pieces along a <code>LinePath</code>, a fence round a rectangle, a fill's tiles and spread pieces, or lay a
+  <code>WorldBuilderSpline</code> again
+  (plans are lists of <code>LinePlan</code>: piece, pivot, rotation, box).</li>
+</ul>
+<h2 id="your-own-modes-and-tabs">Your own modes and tabs</h2>
+<p>Subclass <code>WorldBuilderMode</code> (public parameterless constructor) in any editor assembly: the window finds it. Its <code>Tab</code>
+decides where it appears — one of <code>WorldBuilderTabs</code> (Move, Place, Physics, Dress, Fix, Check, Settings), or a name of your
+own, which becomes an extra tab after Settings.</p>
+<pre><code class="language-csharp">using AllInOneWorldBuilder.Editor;
+using UnityEditor;
+using UnityEngine;
+
+public class SpawnPointsMode : WorldBuilderMode
+{
+    public override string Tab =&gt; &quot;My Game&quot;;
+    public override GUIContent Label =&gt; new GUIContent(&quot;Spawns&quot;, &quot;Place and check spawn points.&quot;);
+    public override string Hint =&gt; &quot;Click to add a spawn point.&quot;;
+    public override string Help =&gt; &quot;Adds spawn points for my game.&quot;;
+
+    public override void OnPanelGUI(WorldBuilderWindow window)
+    {
+        EditorGUILayout.LabelField(&quot;Spawn tools go here.&quot;);
+    }
+
+    public override void OnSceneGUI(SceneView view)
+    {
+        // Scene view events while this mode is active.
+    }
+}
+</code></pre>
+<p>Override <code>OnActivate</code> / <code>OnDeactivate</code>, <code>OnBeforeSceneGUI</code> (drawing before the camera renders), <code>OnOverlayGUI</code> (a few
+quick controls in the overlay — its name and hint are shown for you), <code>Order</code> (position in the mode selector), <code>ScrollPanel</code>
+and <code>TakesSceneClicks</code> (true if the mode takes Scene view clicks: Unity's transform tool is set aside while it's active,
+and picking a Unity tool hands the Scene view back) as needed.</p>
+<h2 id="events">Events</h2>
+<p><code>WorldBuilderEvents</code> (editor) tells you when the tools change the scene:</p>
+<ul>
+<li><code>Placed(GameObject placed, KitPiece piece)</code> — a piece was placed (piece is null for a prefab that isn't in a kit).</li>
+<li><code>Changed(GameObject target, string what)</code> — snapped, dropped to the ground…</li>
+<li><code>Removed(GameObject target)</code> — raised before a tool removes an object.</li>
+</ul>
+<pre><code class="language-csharp">[InitializeOnLoadMethod]
+static void Hook()
+{
+    WorldBuilderEvents.Placed -= OnPlaced;
+    WorldBuilderEvents.Placed += OnPlaced;
+}
+
+static void OnPlaced(GameObject placed, KitPiece piece)
+{
+    if (piece != null &amp;&amp; piece.category == BuiltInCategories.Building) { /* add your own components */ }
+}
+</code></pre>
+<p>Closure types and street furniture are data in the rule set (Settings &gt; Rules). Validators and the play-from-here hook
+arrive with their tools in later versions.</p>
+<div class="doc-foot"><a href="presets.html">&larr; Presets</a><a href="troubleshooting.html">Troubleshooting &rarr;</a></div>
+</article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../prefab-builder/docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><span>Discord (soon)</span></li>
+          <li><a href="https://github.com/marklromano/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
