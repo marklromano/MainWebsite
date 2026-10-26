@@ -59,9 +59,11 @@ card on the docs hub.
 
 ## Images
 
-Keep each image under ~300 KB: JPG at 1200 × 675 (1600 × 900 for the big one at the top of the home page). The
-images here are renders of the kit's sample scenes (Showcase City, Try It) made from Kenney's CC0 City Kits.
-`assets/img/og-image.jpg` (1200 × 630) is the picture shown when someone shares a link to the site.
+Each kit's pictures come from Mark's `Pictures\<Kit>Pictures` folder (for the Prefab Builder,
+`PrefabBuilderPictures`: the 12 store gallery images and the cover). They live in `assets/img/<kit>/` as JPG: the full
+1920 × 1080 picture, plus a 960 × 540 `-sm` copy for the gallery grid (keep each under ~300 KB). The docs pages show
+some of them (`page_images` in `tools/build.py`). `assets/img/og-image.jpg` (1200 × 630, cut from the cover) is the
+picture shown when someone shares a link to the site.
 
 ## Publish
 

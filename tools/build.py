@@ -92,10 +92,12 @@ PRODUCTS = [
         },
         # Pictures the site adds under a page's opening paragraph: output .html -> (assets/img file, caption)
         "page_images": {
-            "getting-started.html": ("showcase-hero.jpg", "Showcase City, one of the demo scenes built from the sample kits."),
-            "place-tab.html": ("try-roads.jpg", "Roads drawn with Place > Roads in the Try It sample scene."),
-            "dress-tab.html": ("showcase-park.jpg", "A park fenced with Dress > Fence, and street lights along every road."),
-            "physics-tab.html": ("try-physics.jpg", "Containers dropped and settled with the Physics tab in the Try It scene."),
+            "getting-started.html": ("prefab-builder/included-kits.jpg", "The sample kits and Showcase City, one of the three demo scenes that come with the kit."),
+            "adding-packs.html": ("prefab-builder/assets-ready-to-build.jpg", "The review screen: every piece of the pack measured and sorted, ready to become a kit."),
+            "place-tab.html": ("prefab-builder/place-snap.jpg", "Stamp: a house snapping flush against its neighbour, with the palette on the right."),
+            "dress-tab.html": ("prefab-builder/fence-one-drag.jpg", "Dress > Fence: a fence dragged round a group of trees, its corners placed for you."),
+            "physics-tab.html": ("prefab-builder/physics-before-after.jpg", "Physics: containers before and after they are dropped and settled."),
+            "check-tab.html": ("prefab-builder/scene-costs.jpg", "Check > Performance: what the scene costs to draw, and its heaviest meshes."),
         },
     },
     {
@@ -683,7 +685,7 @@ def build_docs(product, kit_root):
             if out in product.get("page_images", {}):
                 img, cap = product["page_images"][out]
                 fig = (f'<figure class="doc-figure"><img src="../../assets/img/{img}" alt="{html.escape(cap)}" '
-                       f'width="1200" height="675" loading="lazy"><figcaption>{html.escape(cap)}</figcaption></figure>')
+                       f'width="1920" height="1080" loading="lazy"><figcaption>{html.escape(cap)}</figcaption></figure>')
                 body_html = re.sub(r"(</h1>\s*<p>.*?</p>)", lambda m_: m_.group(1) + fig, body_html, count=1, flags=re.S)
             search += sections(body_html, h1, out)
         crumbs = (f'<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span>'
