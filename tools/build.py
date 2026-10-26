@@ -103,7 +103,7 @@ COMING = [
     ("All In One Save Kit", "c-save", "In development"),
     ("Interaction Kit", "c-interact", "In development"),
     ("Settings & Menu Kit", "c-settings", "Planned"),
-    ("Runtime Building Kit", "c-runtime", "Planned"),
+    ("All In One Runtime Building Kit", "c-runtime", "In development"),
 ]
 
 NAV = [
