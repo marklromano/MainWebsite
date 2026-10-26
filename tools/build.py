@@ -23,7 +23,7 @@ STORE_URL = "https://assetstore.unity.com/packages/tools/level-design/all-in-one
 PUBLISHER_URL = "https://assetstore.unity.com/publishers/160196"
 EMAIL = "marklromano@outlook.com"
 # Empty until they exist: the pages then show "coming soon" instead of a link.
-DISCORD_URL = ""
+DISCORD_URL = "https://discord.gg/AmpBDxRAKu"
 ISSUES_URL = "https://github.com/marklromano/RomanoAssetSupport/issues"
 PREFAB_VERSION = "0.8.0"
 YEAR = "2026"
