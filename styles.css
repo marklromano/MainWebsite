@@ -598,3 +598,8 @@ a.tile:hover { border-color: var(--blue); background: var(--surface-2); color: v
 /* ---------- 404 ---------- */
 
 .not-found { padding-block: 6rem; display: grid; gap: 1.25rem; justify-items: start; }
+
+/* Key art is 3:2, and gallery pictures open full size */
+.shot-cover .shot-frame img { aspect-ratio: 3 / 2; }
+a.shot-frame { display: block; transition: border-color 0.15s; }
+a.shot-frame:hover { border-color: var(--blue); }
