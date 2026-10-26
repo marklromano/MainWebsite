@@ -20,6 +20,7 @@ import argparse
 import html
 import json
 import pathlib
+import posixpath
 import re
 import shutil
 
@@ -36,6 +37,7 @@ EMAIL = "marklromano@outlook.com"
 DISCORD_URL = "https://discord.gg/AmpBDxRAKu"
 ISSUES_URL = "https://github.com/marklromano/RomanoAssetSupport/issues"
 PREFAB_VERSION = "0.8.0"
+SAVE_VERSION = "1.0.0"
 YEAR = "2026"
 
 ICON_EXTERNAL = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" '
@@ -96,6 +98,48 @@ PRODUCTS = [
             "physics-tab.html": ("try-physics.jpg", "Containers dropped and settled with the Physics tab in the Try It scene."),
         },
     },
+    {
+        # In development: its page is up, its docs build with --docs save-kit=<folder> but are published (and listed
+        # on the docs hub) only once "status" is "live" and "store" is set, on launch day.
+        "slug": "save-kit",
+        "name": "All In One Save Kit",
+        "short": "Save Kit",
+        "accent": "c-save",
+        "status": "in development",
+        "version": SAVE_VERSION,
+        "store": "",
+        "summary": "Save and restore player progress, world objects and settings, with slots, autosaves, a finished save "
+                   "menu, backups and automatic recovery from damaged saves.",
+        "requirements": ["Unity 2022.3+", "Built-in, URP & HDRP", "No code needed", "Full C# source"],
+        "menu": "Tools > All In One Save Kit",
+        "quick_start": [
+            "Import the package from the Asset Store. Everything lands in <code>Assets/AllInOneSaveKit/</code>, and the Start window opens.",
+            "In the Start window, click <strong>Fix</strong> on any item of the setup check that isn't ticked.",
+            "Click <strong>Make objects remember</strong>, pick the objects that should keep their state, and tick what each one keeps.",
+            "Press Play, then <kbd>F5</kbd> to save and <kbd>F9</kbd> to load. A note in the Game view says what was saved and what came back.",
+        ],
+        "pages": [
+            ("Start here", "QuickStart.md", "getting-started.html", "Quick start"),
+            ("Start here", "Walkthroughs.md", "walkthroughs.html", "Walkthroughs"),
+            ("Walkthroughs", "Walkthroughs/FirstSave.md", "walkthrough-first-save.html", "Your first save"),
+            ("Walkthroughs", "Walkthroughs/WorldObjects.md", "walkthrough-world-objects.html", "World objects"),
+            ("Walkthroughs", "Walkthroughs/SaveMenu.md", "walkthrough-save-menu.html", "The save menu"),
+            ("Walkthroughs", "Walkthroughs/BackupsAndRecovery.md", "walkthrough-backups.html", "Backups and recovery"),
+            ("Walkthroughs", "Walkthroughs/GameUpdates.md", "walkthrough-game-updates.html", "Game updates"),
+            ("Learn", "Guide.md", "guide.html", "Guide"),
+            ("Learn", "GameUpdates.md", "game-updates.html", "Game updates and migrations"),
+            ("Learn", "Coop.md", "coop.html", "Co-op"),
+            ("Learn", "SteamCloud.md", "steam-cloud.html", "Steam Cloud"),
+            ("Reference", "Reference.md", "reference.html", "Reference"),
+            ("Reference", "ApiReference.md", "api.html", "API reference"),
+            ("Reference", "LimitsAndFAQ.md", "limits-and-faq.html", "Limits and FAQ"),
+            ("Reference", "Troubleshooting.md", "troubleshooting.html", "Troubleshooting"),
+            ("Reference", "KnownIssues.md", "known-issues.html", "Known issues"),
+            ("Reference", "Support.md", "support.html", "Support"),
+        ],
+        "shortcut_groups": {},
+        "page_images": {},
+    },
 ]
 
 # Kits without docs yet, for the docs hub
@@ -152,6 +196,7 @@ def footer(root):
         <h4>Products</h4>
         <ul>
           <li><a href="{root}prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="{root}save-kit/index.html">Save Kit</a></li>
           <li><a href="{root}index.html#products">Coming next</a></li>
           <li><a href="{PUBLISHER_URL}" rel="noopener">Publisher page</a></li>
         </ul>
@@ -222,7 +267,7 @@ def fill(text, root):
     values = {
         "root": root, "store": STORE_URL, "publisher": PUBLISHER_URL, "email": EMAIL,
         "version": PREFAB_VERSION, "external": ICON_EXTERNAL,
-        "discord_tile": discord_tile(), "issues_tile": issues_tile(root),
+        "discord_tile": discord_tile(), "issues_tile": issues_tile(root), "discord_button": discord_button(),
     }
     return re.sub(r"\{\{(\w+)\}\}", lambda m: values[m.group(1)], text)
 
@@ -233,6 +278,12 @@ def discord_tile():
                 '<h3>Discord</h3><p>Ask questions, share what you build, hear about updates first.</p></a>')
     return ('<div class="tile tile-soon"><span class="label">Community <span class="pill">Soon</span></span>'
             '<h3>Discord</h3><p>A server for questions, show and tell, and update news is being set up.</p></div>')
+
+
+def discord_button():
+    if DISCORD_URL:
+        return f'<a class="btn" href="{DISCORD_URL}" rel="noopener">Join the Discord {ICON_EXTERNAL}</a>'
+    return f'<a class="btn" href="mailto:{EMAIL}">Email us</a>'
 
 
 def issues_tile(root):
@@ -255,6 +306,10 @@ HAND_PAGES = [
      "All In One Prefab Builder Kit",
      "Turn any pack of prefabs into a world-building kit: snap, draw roads, scatter, fence, dress streets, settle with "
      "physics and check your scene, all from one Unity window."),
+    ("save-kit.html", "save-kit/index.html", "../", "save",
+     "All In One Save Kit",
+     "Save and restore player progress, world objects and settings in Unity: no code needed, slots, autosaves, a "
+     "finished save menu, backups and automatic recovery from damaged saves. In development."),
     ("support.html", "support/index.html", "../", "support",
      "Support",
      "Get help with Romano Assets tools: documentation, bug reports, Discord and email."),
@@ -282,6 +337,8 @@ def build_docs_hub():
     """docs/index.html: every kit's documentation in one place."""
     cards = []
     for p in PRODUCTS:
+        if p["status"] != "live":
+            continue
         d = f"../{p['slug']}/docs/"
         cards.append(f"""<article class="product product-flag {p['accent']}">
   <div class="flag-copy">
@@ -368,18 +425,19 @@ def index_descriptions(index_md):
 CALLOUT = re.compile(r'<blockquote>\s*<p>\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*', re.I)
 
 
-def convert(md_text, doc_out):
-    """Markdown to HTML; returns (html, [(level, id, title)])."""
+def convert(md_text, doc_out, folder=""):
+    """Markdown to HTML; returns (html, [(level, id, title)]). folder: the page's subfolder of Documentation, if any."""
     import markdown  # only needed for the docs
     from markdown.extensions.toc import TocExtension
 
     def relink(match):
         target, anchor = match.group(1), match.group(2) or ""
-        return f"]({doc_out.get(target, target)}{anchor})"
+        key = posixpath.normpath(posixpath.join(folder, target)) if folder else target
+        return f"]({doc_out.get(key, target)}{anchor})"
 
     # Links between the .md files become links between the .html pages; Images/ moves to img/
-    md_text = re.sub(r"\]\((?!https?:)([A-Za-z]+\.md)(#[^)]*)?\)", relink, md_text)
-    md_text = re.sub(r"\]\((?:\./)?Images/", "](img/", md_text)
+    md_text = re.sub(r"\]\((?!https?:)((?:\.\./|[A-Za-z]+/)?[A-Za-z]+\.md)(#[^)]*)?\)", relink, md_text)
+    md_text = re.sub(r"\]\((?:\./)?Images/", "](img/" + (folder + "/" if folder else ""), md_text)
     md = markdown.Markdown(extensions=["tables", "fenced_code", "sane_lists",
                                        TocExtension(slugify=slugify, toc_depth="2-3")])
     out = md.convert(md_text)
@@ -576,6 +634,7 @@ def build_docs(product, kit_root):
         cl = (kit_root / "CHANGELOG.md").read_text(encoding="utf-8")
         cl = re.sub(r"^# .*\n", "# Changelog\n", cl, count=1)
         extras.append(("changelog.html", "Changelog", cl, "What changed in each version"))
+        doc_out.setdefault("Changelog.md", "changelog.html")  # a kit's own copy of the changelog
     last_group = pages[-1][0] if pages else "Reference"
 
     groups = []
@@ -598,12 +657,17 @@ def build_docs(product, kit_root):
     # Pictures from the kit's Documentation/Images
     if (docs_dir / "Images").exists():
         shutil.copytree(docs_dir / "Images", out_dir / "img", dirs_exist_ok=True)
+    for folder in sorted({posixpath.dirname(src) for _, src, _, _ in pages} - {""}):
+        if (docs_dir / folder / "Images").exists():
+            shutil.copytree(docs_dir / folder / "Images", out_dir / "img" / folder, dirs_exist_ok=True)
 
     search = []
     rendered = {}
+    folders = {}
     for _, src, out, title in pages:
         text = (docs_dir / src).read_text(encoding="utf-8")
         rendered[out] = (title, text, descriptions.get(src, ""))
+        folders[out] = posixpath.dirname(src)
     for out, title, text, desc in extras:
         rendered[out] = (title, text, desc)
 
@@ -613,7 +677,7 @@ def build_docs(product, kit_root):
             h1 = f"{product['short']} documentation"
         else:
             title, text, _ = rendered[out]
-            body_html, toc = convert(text, doc_out)
+            body_html, toc = convert(text, doc_out, folders.get(out, ""))
             m = re.search(r"<h1[^>]*>(.*?)</h1>", body_html)
             h1 = plain(m.group(1)) if m else title
             if out in product.get("page_images", {}):
@@ -675,7 +739,7 @@ def docs_home(product, groups, rendered):
 <ul class="specs">{reqs}<li>Version {product['version']}</li></ul>
 <div class="btn-row">
   <a class="btn" href="getting-started.html">Get started</a>
-  <a class="btn btn-ghost" href="{product['store']}" rel="noopener">Asset Store {ICON_EXTERNAL}</a>
+  {f'<a class="btn btn-ghost" href="{product["store"]}" rel="noopener">Asset Store {ICON_EXTERNAL}</a>' if product["store"] else ""}
 </div>
 <div class="callout" id="quick-start">
   <p class="label label-accent">Quick start: five minutes</p>
