@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Screens | Romano Assets</title>
+<meta name="description" content="Screens: documentation for the All In One Game Settings &amp; Menu Kit for Unity.">
+<link rel="canonical" href="https://marklromano.github.io/settings-menu-kit/docs/screens.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Screens">
+<meta property="og:description" content="Screens: documentation for the All In One Game Settings &amp; Menu Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/settings-menu-kit/docs/screens.html">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Settings &amp; Menu Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a></div><div class="docs-group"><p class=label>Features</p><a href="screens.html" aria-current="page">Screens</a><a href="settings-catalog.html">Settings catalog</a><a href="display-safety.html">Display safety</a><a href="audio.html">Audio</a><a href="graphics.html">Graphics</a><a href="controls-and-rebinding.html">Controls and rebinding</a><a href="themes.html">Themes</a><a href="accessibility.html">Accessibility</a><a href="languages.html">Languages</a><a href="pause-and-multiplayer.html">Pause and multiplayer</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending and API</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings-reference.html">Settings reference</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a></div><div class="docs-group"><p class=label>Features</p><a href="screens.html" aria-current="page">Screens</a><a href="settings-catalog.html">Settings catalog</a><a href="display-safety.html">Display safety</a><a href="audio.html">Audio</a><a href="graphics.html">Graphics</a><a href="controls-and-rebinding.html">Controls and rebinding</a><a href="themes.html">Themes</a><a href="accessibility.html">Accessibility</a><a href="languages.html">Languages</a><a href="pause-and-multiplayer.html">Pause and multiplayer</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending and API</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings-reference.html">Settings reference</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Settings &amp; Menu Kit</a><span>/</span><span>Features</span></nav>
+<h1 id="screens">Screens</h1>
+<p>The front end is one prefab (<code>Content/Prefabs/FrontEnd.prefab</code>) with every screen. One instance survives scene loads, and there is always exactly one EventSystem. Turn screens you don't need off in the kit window (<strong>Setup</strong> tab &gt; <strong>Screens</strong>): they are removed when the game starts, and the buttons leading to them hide.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Screen</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title</td>
+<td>Your game's name and "Press any key".</td>
+</tr>
+<tr>
+<td>Main menu</td>
+<td>Continue (only when a save exists), New Game, Load Game, Settings, Credits, Quit.</td>
+</tr>
+<tr>
+<td>Settings</td>
+<td>Tabs of settings, help text for the focused setting, Apply, Cancel, Reset Category, Reset All. Leaving with unapplied changes asks Apply / Discard / Keep editing.</td>
+</tr>
+<tr>
+<td>Credits</td>
+<td>Scrolls a text file you provide (simple <code>#</code> headings).</td>
+</tr>
+<tr>
+<td>Pause</td>
+<td>Resume, Settings, Main Menu (asks first), Quit (asks first).</td>
+</tr>
+<tr>
+<td>Loading</td>
+<td>Progress bar, rotating tips from a text file, optional "Press any key to continue".</td>
+</tr>
+<tr>
+<td>Confirm dialog</td>
+<td>Yes / No questions (quit, back to main menu, unsaved changes, key conflicts).</td>
+</tr>
+<tr>
+<td>Display change</td>
+<td>"Keep these display settings?" with a 15-second countdown.</td>
+</tr>
+<tr>
+<td>Controller disconnected</td>
+<td>Shown when the last gamepad disconnects during play (optional).</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="doc-figure"><img src="img/pause-tactical.png" alt="Pause menu, Tactical theme" loading="lazy"><figcaption>Pause menu, Tactical theme</figcaption></figure>
+<h2 id="scene-modes">Scene modes <a class="anchor" href="#scene-modes" aria-label="Link to this section">#</a></h2>
+<p>Put a <strong>Menu Scene Mode</strong> component in each scene:</p>
+<ul>
+<li><strong>Front End</strong> (menu scenes): the menu shows on load, optionally with the title screen.</li>
+<li><strong>Gameplay</strong> (levels): the menu is hidden; Esc / Start pauses.</li>
+<li><strong>Hidden</strong>: the menu stays out of the way (cutscenes, loading levels).</li>
+</ul>
+<h2 id="navigation">Navigation <a class="anchor" href="#navigation" aria-label="Link to this section">#</a></h2>
+<p>Keyboard, mouse and gamepad work everywhere. Focus is always visible and comes back to the button you left when you go back. Back is Esc or the gamepad's east button.</p>
+<h2 id="text">Text <a class="anchor" href="#text" aria-label="Link to this section">#</a></h2>
+<p>Every text can be translated (<a href="languages.html">Languages</a>). Texts shrink to fit long translations instead of being cut off; the game title may take two lines.</p>
+<div class="doc-pager"><a class="pager prev" href="samples.html"><span class="label">Previous</span>Samples</a><a class="pager next" href="settings-catalog.html"><span class="label">Next</span>Settings catalog</a></div>
+<p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Screens" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#scene-modes">Scene modes</a></li><li class="toc-2"><a href="#navigation">Navigation</a></li><li class="toc-2"><a href="#text">Text</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/marklromano/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

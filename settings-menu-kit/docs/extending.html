@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Extending and API | Romano Assets</title>
+<meta name="description" content="Extending and API: documentation for the All In One Game Settings &amp; Menu Kit for Unity.">
+<link rel="canonical" href="https://marklromano.github.io/settings-menu-kit/docs/extending.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Extending and API">
+<meta property="og:description" content="Extending and API: documentation for the All In One Game Settings &amp; Menu Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/settings-menu-kit/docs/extending.html">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Settings &amp; Menu Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a></div><div class="docs-group"><p class=label>Features</p><a href="screens.html">Screens</a><a href="settings-catalog.html">Settings catalog</a><a href="display-safety.html">Display safety</a><a href="audio.html">Audio</a><a href="graphics.html">Graphics</a><a href="controls-and-rebinding.html">Controls and rebinding</a><a href="themes.html">Themes</a><a href="accessibility.html">Accessibility</a><a href="languages.html">Languages</a><a href="pause-and-multiplayer.html">Pause and multiplayer</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html" aria-current="page">Extending and API</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings-reference.html">Settings reference</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a></div><div class="docs-group"><p class=label>Features</p><a href="screens.html">Screens</a><a href="settings-catalog.html">Settings catalog</a><a href="display-safety.html">Display safety</a><a href="audio.html">Audio</a><a href="graphics.html">Graphics</a><a href="controls-and-rebinding.html">Controls and rebinding</a><a href="themes.html">Themes</a><a href="accessibility.html">Accessibility</a><a href="languages.html">Languages</a><a href="pause-and-multiplayer.html">Pause and multiplayer</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html" aria-current="page">Extending and API</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings-reference.html">Settings reference</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Settings &amp; Menu Kit</a><span>/</span><span>For programmers</span></nav>
+<h1 id="extending-and-api">Extending and API</h1>
+<p>Everything is in the <code>RomanoAssets.SettingsMenu</code> namespaces. The kit's public API won't break in 1.x updates (an automated test checks every public type, member, serialized field, script GUID, menu item and setting id against the released version).</p>
+<h2 id="read-a-setting">Read a setting <a class="anchor" href="#read-a-setting" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">using RomanoAssets.SettingsMenu;
+
+var settings = SettingsRuntime.Current;              // created by the front end or a Settings Bootstrap
+float shake = settings.GetFloat(&quot;gameplay.camera-shake&quot;, 1f);
+bool hints = settings.GetBool(&quot;gameplay.hints&quot;);
+string difficulty = settings.GetValue(&quot;gameplay.difficulty&quot;);
+</code></pre>
+<p>Ids are listed in the <a href="settings-reference.html">Settings reference</a>.</p>
+<h2 id="react-when-settings-change">React when settings change <a class="anchor" href="#react-when-settings-change" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">// Connect tier: called now and after every Apply that changes it.
+SettingsRuntime.Current.Connect(&quot;gameplay.field-of-view&quot;, v =&gt; cam.fieldOfView = float.Parse(v, System.Globalization.CultureInfo.InvariantCulture));
+
+// Any tier: an event per applied setting.
+SettingsRuntime.Current.ValueApplied += d =&gt; Debug.Log($&quot;{d.Id} is now {SettingsRuntime.Current.GetValue(d.Id)}&quot;);
+</code></pre>
+<p>No code: add a <strong>Setting Event Binder</strong> component (UnityEvents for float, int, bool and string values).</p>
+<h2 id="a-connector-component">A connector component <a class="anchor" href="#a-connector-component" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">public sealed class LightIntensityTarget : SettingConnector
+{
+    [SerializeField] Light target;
+    protected override void OnValue(string value) =&gt;
+        target.intensity = float.Parse(value, System.Globalization.CultureInfo.InvariantCulture);
+}
+</code></pre>
+<h2 id="your-own-auto-setting">Your own Auto setting <a class="anchor" href="#your-own-auto-setting" aria-label="Link to this section">#</a></h2>
+<p>Derive a definition (for example from <code>FloatSettingDefinition</code>) and an applier, and register the applier once:</p>
+<pre><code class="language-csharp">public sealed class GammaApplier : SettingApplier
+{
+    public override bool Handles(SettingDefinition d) =&gt; d is GammaSettingDefinition;
+    public override void Apply(SettingsController c, IReadOnlyList&lt;SettingDefinition&gt; changed)
+    {
+        foreach (var d in changed) MyPostStack.SetGamma(c.GetFloat(d.Id, 1f));
+    }
+}
+
+[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
+static void Register() =&gt; SettingsAppliers.Register(() =&gt; new GammaApplier());
+</code></pre>
+<h2 id="change-settings-from-code">Change settings from code <a class="anchor" href="#change-settings-from-code" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">var c = SettingsRuntime.Current;
+c.SetPendingFloat(&quot;audio.music-volume&quot;, 0.5f);
+c.Apply();                 // or c.Cancel()
+</code></pre>
+<h2 id="the-menu">The menu <a class="anchor" href="#the-menu" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">var menu = MenuRoot.Instance;
+menu.SetHasSave(true);                 // shows Continue
+menu.EnterGameplay();                  // hide menus; Esc / Start pauses
+menu.ShowFrontEnd();                   // back to the main menu
+menu.Pause(); menu.Resume();
+menu.SetTheme(myTheme);
+menu.LoadScene(&quot;Level1&quot;, MenuMode.Gameplay);   // with the loading screen
+</code></pre>
+<h2 id="accessibility-subtitles-languages">Accessibility, subtitles, languages <a class="anchor" href="#accessibility-subtitles-languages" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">SubtitleDisplay.Show(&quot;Over here!&quot;, 3f, &quot;Mara&quot;);
+float shake = AccessibilityState.CameraShakeScale;   // 0 with Reduce Motion
+bool reduced = AccessibilityState.ReducedMotion;
+string label = MenuLocalization.Get(&quot;mygame.hud.ammo&quot;, &quot;Ammo&quot;);
+</code></pre>
+<h2 id="optional-integrations">Optional integrations <a class="anchor" href="#optional-integrations" aria-label="Link to this section">#</a></h2>
+<p>URP, the Input System, Post Processing v2, Cinemachine and Unity's Localization package are detected with assembly <code>versionDefines</code>: their code compiles only when the package is installed, and nothing is required.</p>
+<div class="doc-pager"><a class="pager prev" href="pause-and-multiplayer.html"><span class="label">Previous</span>Pause and multiplayer</a><a class="pager next" href="upgrading.html"><span class="label">Next</span>Upgrading</a></div>
+<p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Extending+and+API" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#read-a-setting">Read a setting</a></li><li class="toc-2"><a href="#react-when-settings-change">React when settings change</a></li><li class="toc-2"><a href="#a-connector-component">A connector component</a></li><li class="toc-2"><a href="#your-own-auto-setting">Your own Auto setting</a></li><li class="toc-2"><a href="#change-settings-from-code">Change settings from code</a></li><li class="toc-2"><a href="#the-menu">The menu</a></li><li class="toc-2"><a href="#accessibility-subtitles-languages">Accessibility, subtitles, languages</a></li><li class="toc-2"><a href="#optional-integrations">Optional integrations</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/marklromano/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

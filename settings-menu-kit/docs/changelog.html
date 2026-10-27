@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Changelog | Romano Assets</title>
+<meta name="description" content="Changelog: documentation for the All In One Game Settings &amp; Menu Kit for Unity.">
+<link rel="canonical" href="https://marklromano.github.io/settings-menu-kit/docs/changelog.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Changelog">
+<meta property="og:description" content="Changelog: documentation for the All In One Game Settings &amp; Menu Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/settings-menu-kit/docs/changelog.html">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Settings &amp; Menu Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a></div><div class="docs-group"><p class=label>Features</p><a href="screens.html">Screens</a><a href="settings-catalog.html">Settings catalog</a><a href="display-safety.html">Display safety</a><a href="audio.html">Audio</a><a href="graphics.html">Graphics</a><a href="controls-and-rebinding.html">Controls and rebinding</a><a href="themes.html">Themes</a><a href="accessibility.html">Accessibility</a><a href="languages.html">Languages</a><a href="pause-and-multiplayer.html">Pause and multiplayer</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending and API</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings-reference.html">Settings reference</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html" aria-current="page">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a></div><div class="docs-group"><p class=label>Features</p><a href="screens.html">Screens</a><a href="settings-catalog.html">Settings catalog</a><a href="display-safety.html">Display safety</a><a href="audio.html">Audio</a><a href="graphics.html">Graphics</a><a href="controls-and-rebinding.html">Controls and rebinding</a><a href="themes.html">Themes</a><a href="accessibility.html">Accessibility</a><a href="languages.html">Languages</a><a href="pause-and-multiplayer.html">Pause and multiplayer</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending and API</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings-reference.html">Settings reference</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html" aria-current="page">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Settings &amp; Menu Kit</a><span>/</span><span>Reference</span></nav>
+<h1 id="changelog">Changelog</h1>
+<p>All notable changes to the All In One Game Settings &amp; Menu Kit are listed here, newest first.
+The format follows <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>, and the kit uses semantic versioning.</p>
+<h2 id="100---not-released-yet-release-candidate">[1.0.0] - not released yet (release candidate) <a class="anchor" href="#100---not-released-yet-release-candidate" aria-label="Link to this section">#</a></h2>
+<p>The first release.</p>
+<h3 id="added">Added <a class="anchor" href="#added" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>Front end in one prefab (<code>FrontEnd</code>): title screen, main menu, settings, credits, pause menu, loading screen, confirmation dialog, display-change countdown and controller-disconnected prompt. One instance survives scene loads, and there is always exactly one EventSystem.</li>
+<li>Settings with Apply / Cancel / Reset category / Reset all, an "Unsaved changes" prompt, and a crash-safe settings file (backup and corrupt-file recovery).</li>
+<li>Audio: master volume (works without a mixer) plus music, sound effects, voice and interface volumes through an optional starter Audio Mixer.</li>
+<li>Display: resolution, refresh rate and window mode, with a 15-second confirmation that reverts automatically. First launch keeps the game's own display mode.</li>
+<li>Pause modes: Freeze (time and audio, restored exactly), Overlay only (input lock event) and Custom (events only).</li>
+<li>Keyboard, mouse and gamepad navigation everywhere, with focus restored when going back.</li>
+<li>"Clean" theme: colors, Inter font, sizes, 9-sliced sprites, focus highlight, transitions and UI sounds.</li>
+<li>Editor window with a setup wizard, screen on/off switches, the settings list and validators with one-click fixes.</li>
+<li>Graphics settings for every render pipeline: quality preset, texture quality, anisotropic filtering, shadow distance and level of detail (each "Preset" or an override), plus MSAA and shadows for the Built-in pipeline.</li>
+<li>URP settings: render scale, upscaling filter, MSAA, HDR, shadow resolution, post anti-aliasing, brightness, and bloom, motion blur, depth of field, film grain, vignette and chromatic aberration on/off. Your URP assets and volumes are never modified.</li>
+<li>Display: monitor selection (Windows, shown with two or more monitors), VSync and a frame-rate limit.</li>
+<li>Camera field of view and camera shake; mouse and controller sensitivity, invert X/Y, vibration and vibration strength.</li>
+<li>Key rebinding (Input System): keyboard/mouse and controller tabs, WASD-style parts, conflict detection with Swap / Cancel, protected menu controls, reset one or all, saved with your settings.</li>
+<li>Controller prompts that follow the device in use (keyboard, Xbox, PlayStation, Switch, generic).</li>
+<li>Custom settings (toggle, slider, whole number, choice) with UnityEvents, created in the editor window; a "Needs connection" list; a searchable catalog of every setting with tier badges.</li>
+<li>Works without the Input System package (old Input Manager); rebinding and prompts turn on when the package is installed.</li>
+<li>Three themes: Clean, Tactical (angular, for shooters and action games) and Storybook (warm and round, for fantasy and cozy games), each with a high-contrast version; switch them in the editor window with a live preview.</li>
+<li>Accessibility: menu size, text size, high contrast, reduce motion, focus outline thickness, hold-or-toggle actions, subtitles (on/off, size, background) with a ready-made subtitle display.</li>
+<li>Languages: every menu text can be translated with string tables; a language picker; a pseudo-language for testing long translations; optional bridge to Unity's Localization package (reads its string tables and follows its selected locale).</li>
+<li>Menus fit every screen shape (4:3 to 32:9) and menu size, respect phone/console safe areas, and shrink long texts instead of cutting them off.</li>
+<li>Tested on Unity 6000.0, 6000.3 and 6000.6, with URP, HDRP and the Built-in pipeline, and without the Input System.</li>
+<li>Editor window with Home (Quick Start with one-click steps and a guided tour), Setup, Theme, Settings, Check and About (support links with Copy buttons and Copy system info) tabs; an optional one-time welcome window.</li>
+<li>Four sample scenes: Try It, a 2D puzzle (Clean), a first-person scene (Tactical) and a cozy adventure (Storybook).</li>
+<li>Full offline manual (Documentation folder) with a generated settings reference.</li>
+</ul>
+<h3 id="upgrade-notes">Upgrade notes <a class="anchor" href="#upgrade-notes" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>First release: nothing to do.</li>
+</ul>
+<div class="doc-pager"><a class="pager prev" href="support.html"><span class="label">Previous</span>Support</a><span></span></div>
+<p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Changelog" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#100---not-released-yet-release-candidate">[1.0.0] - not released yet (release candidate)</a></li><li class="toc-3"><a href="#added">Added</a></li><li class="toc-3"><a href="#upgrade-notes">Upgrade notes</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/marklromano/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

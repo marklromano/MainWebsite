@@ -23,6 +23,7 @@ import pathlib
 import posixpath
 import re
 import shutil
+import urllib.parse
 
 SITE = pathlib.Path(__file__).resolve().parent.parent
 PAGES = pathlib.Path(__file__).resolve().parent / "pages"
@@ -717,7 +718,8 @@ def toc_html(toc):
 def report_link(title):
     if not ISSUES_URL:
         return f'<a href="mailto:{EMAIL}?subject=Docs:%20{html.escape(title)}">Something unclear? Tell us</a>'
-    q = re.sub(r"\s+", "+", f"Docs: {title}")
+    # Encoded, so an "&" in a title ("Settings & Menu Kit") stays part of it
+    q = urllib.parse.quote_plus(f"Docs: {title}", safe=":")
     return f'<a href="{ISSUES_URL}/new?title={html.escape(q)}" rel="noopener">Something unclear or wrong? Tell us</a>'
 
 
@@ -769,12 +771,13 @@ def build_docs(product, kit_root):
 
     order = [(o, t, g) for g, items in groups for o, t in items]
 
-    # Pictures from the kit's Documentation/Images
+    # Pictures from the kit's Documentation/Images (without Unity's .meta files)
+    no_meta = shutil.ignore_patterns("*.meta")
     if (docs_dir / "Images").exists():
-        shutil.copytree(docs_dir / "Images", out_dir / "img", dirs_exist_ok=True)
+        shutil.copytree(docs_dir / "Images", out_dir / "img", dirs_exist_ok=True, ignore=no_meta)
     for folder in sorted({posixpath.dirname(src) for _, src, _, _ in pages} - {""}):
         if (docs_dir / folder / "Images").exists():
-            shutil.copytree(docs_dir / folder / "Images", out_dir / "img" / folder, dirs_exist_ok=True)
+            shutil.copytree(docs_dir / folder / "Images", out_dir / "img" / folder, dirs_exist_ok=True, ignore=no_meta)
 
     search = []
     rendered = {}
