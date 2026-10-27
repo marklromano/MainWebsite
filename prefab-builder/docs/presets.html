@@ -36,19 +36,19 @@
 <main id="main">
 <div class="wrap docs-shell">
 <aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">Prefab Builder docs</a><span class="pill">v0.8.0</span></div>
+  <div class="docs-product"><a href="index.html">Prefab Builder docs</a><span class="pill">v1.0.0</span></div>
   <div class="docs-search" hidden>
     <label class="sr-only" for="docs-q">Search the documentation</label>
     <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
     <kbd class="docs-search-key" aria-hidden="true">/</kbd>
     <div class="docs-results" id="docs-results" role="listbox" hidden></div>
   </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html" aria-current="page">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html" aria-current="page">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html" aria-current="page">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html" aria-current="page">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
   </nav>
 </aside>
 <article class="prose" id="doc">
-<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Prefab Builder</a><span>/</span><span>Reference</span></nav>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Prefab Builder</a><span>/</span><span>Your project&#x27;s rules</span></nav>
 <h1 id="presets">Presets</h1>
 <p>A preset is one plain JSON file holding any of: rule sets, character profiles, palettes, styles, kit annotations and
 project settings. Use presets to share a setup between projects or teammates, or to back it up. Assets refer to each
@@ -58,7 +58,7 @@ other by name inside the file, and every part is optional.</p>
 <ul>
 <li><strong>What: Everything ticked below</strong>: tick rule sets, character profiles, palettes, styles, kit annotations and
   settings. The active rule set and palette are remembered.</li>
-<li><strong>What: Only the kit …</strong>: only that kit's settings and annotations. (Also on the Add Pack wizard's last page and in
+<li><strong>What: Only the kit …</strong>, only that kit's settings and annotations. (Also on the Add Pack wizard's last page and in
   a kit's actions.)</li>
 </ul>
 <p>Kit annotations are the kit's settings and each piece's measurements and annotations. The pack's files are not in
@@ -79,7 +79,7 @@ none are, its line says so and is skipped.</p>
 <h2 id="the-file">The file <a class="anchor" href="#the-file" aria-label="Link to this section">#</a></h2>
 <p><code>&lt;name&gt;.wbpreset.json</code>, readable and editable in any text editor. <code>format</code> and <code>formatVersion</code> identify it; a file
 from a newer version of the Prefab Builder is refused with a message rather than half-imported.</p>
-<div class="doc-pager"><a class="pager prev" href="rules-and-data.html"><span class="label">Previous</span>Rules, profiles, palettes, styles</a><a class="pager next" href="extending.html"><span class="label">Next</span>Extending (C#)</a></div>
+<div class="doc-pager"><a class="pager prev" href="rules-and-data.html"><span class="label">Previous</span>Rules, profiles, palettes and styles</a><a class="pager next" href="extending.html"><span class="label">Next</span>Extending with code</a></div>
 <p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Presets" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
 </article>
 <nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#export">Export</a></li><li class="toc-2"><a href="#import">Import</a></li><li class="toc-2"><a href="#the-file">The file</a></li></ul></nav>

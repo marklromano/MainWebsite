@@ -36,15 +36,15 @@
 <main id="main">
 <div class="wrap docs-shell">
 <aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">Prefab Builder docs</a><span class="pill">v0.8.0</span></div>
+  <div class="docs-product"><a href="index.html">Prefab Builder docs</a><span class="pill">v1.0.0</span></div>
   <div class="docs-search" hidden>
     <label class="sr-only" for="docs-q">Search the documentation</label>
     <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
     <kbd class="docs-search-key" aria-hidden="true">/</kbd>
     <div class="docs-results" id="docs-results" role="listbox" hidden></div>
   </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html" aria-current="page">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html" aria-current="page">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html" aria-current="page">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html" aria-current="page">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
   </nav>
 </aside>
 <article class="prose" id="doc">
@@ -54,8 +54,10 @@
 <p>Import the package. Everything lands in one folder, <code>Assets/AllInOnePrefabBuilderKit/</code>. There is nothing else to set
 up: no packages to install, no registration, no project settings changed.</p>
 <ul>
-<li>Unity 6000.3 or newer (tested on 6000.3 and 6000.6).</li>
-<li>Built-in Render Pipeline or URP. (HDRP isn't tested yet; the sign text shader has an HDRP pass, but it's untried.)</li>
+<li>Unity 6000.0 LTS or newer (tested on 6000.0, 6000.3 and 6000.6).</li>
+<li>Built-in Render Pipeline, URP or HDRP. The sample models take the project's pipeline's own materials when they import.
+  In HDRP, the sample scenes have no sky of their own: add a Volume with a sky (HDRP's Wizard sets up a default one) or
+  shaded sides look very dark.</li>
 <li>Works with <strong>Enter Play Mode Options</strong> (domain reload off).</li>
 </ul>
 <h2 id="where-your-data-lives">Where your data lives <a class="anchor" href="#where-your-data-lives" aria-label="Link to this section">#</a></h2>
@@ -98,23 +100,36 @@ makes them again).</p>
 <ul>
 <li><strong>Default Rule Set</strong>: placement rules based on common city-building practice.</li>
 <li><strong>Standard Human</strong>: a Character Profile for a 1.8 m adult.</li>
-<li><strong>Warm Town</strong> and <strong>Clean Suburb</strong>, two palettes.</li>
+<li><strong>Warm Town</strong> and <strong>Clean Suburb</strong>: two palettes.</li>
 </ul>
 <p>All of them are yours to change; see <a href="rules-and-data.html">Rules, Profiles, Palettes and Styles</a>.</p>
+<h2 id="home">Home <a class="anchor" href="#home" aria-label="Link to this section">#</a></h2>
+<p>The first time you open the Prefab Builder (with no kits yet) it shows <strong>Home</strong>; <strong>⌂</strong> (top right) comes back to it, and a
+tab or tool takes you to the tools:</p>
+<ul>
+<li><strong>Try the sample city</strong>: makes the sample kits if they aren't made yet (about half a minute) and opens <em>Try It</em>, a
+  half-built city to try every tool on (you're asked first if the open scene has unsaved changes).</li>
+<li><strong>Turn my pack into a kit</strong>: Add Pack.</li>
+<li><strong>Take the tour</strong>: the tour below, from its first step.</li>
+<li><strong>Jobs</strong>: Lay roads, Build a street of buildings, Plant trees and grass, Dress a street, Fence a yard, Close a road for
+  works, Pile up clutter or rubble, Check the scene: each opens the tool that does it, the palette on the pieces it needs
+  (when your kits have them), and says how to do it. A job's tooltip says the same.</li>
+<li><strong>Help</strong>: Get help, report a bug.</li>
+</ul>
 <h2 id="the-first-run-tour">The first-run tour <a class="anchor" href="#the-first-run-tour" aria-label="Link to this section">#</a></h2>
 <p>The first time you open the Prefab Builder (with no kits yet), a small card at the top of the Place tab takes you through it,
 one step at a time with <strong>Back</strong> and <strong>Next</strong>: add a pack, pick a piece, place it, snapping and the grid, the other ways to
-place, Dress and Fix, and where help is. The first three show a tick once you've done them. <strong>Skip</strong> hides it; <strong>⋮ &gt; Show
-the tour again</strong> starts it over.</p>
+place, Roads, Physics, Dress and Fix, Check, and where help is. The first three show a tick once you've done them, and the
+tour moves on by itself. <strong>Skip</strong> hides it; <strong>Take the tour</strong> on Home (or <strong>⋮ &gt; Show the tour again</strong>) starts it over.</p>
 <h2 id="the-sample-kits">The sample kits <a class="anchor" href="#the-sample-kits" aria-label="Link to this section">#</a></h2>
 <p>The Prefab Builder comes with sample models to try everything on before you add a pack of your own, all Kenney's and CC0
 (free for any use): the <strong>City Kits</strong> (Commercial, Industrial, Roads, Suburban) in <code>Samples/Kenney City Kit</code>, and <strong>Modular
-Buildings</strong> in <code>Samples/Kenney Modular Buildings</code>. Click <strong>Try the sample kits</strong> in the empty palette, <strong>Use the sample
-kits</strong> in the tour, or <strong>⋮ &gt; Add the sample kits</strong>, and they become two kits:</p>
+Buildings</strong> in <code>Samples/Kenney Modular Buildings</code>. Click <strong>Try the sample kits</strong> (in the tour's first step, the empty
+palette, or the <strong>⋮</strong> menu) and they become two kits:</p>
 <ul>
-<li><em>Kenney City (sample)</em>, roads, shops, houses, factories, trees, fences, street lights, cones and barriers, sorted into
+<li><em>Kenney City (sample)</em>: roads, shops, houses, factories, trees, fences, street lights, cones and barriers, sorted into
   categories, at one scale (×10: 10 m road tiles) on a 10 m grid;</li>
-<li><em>Kenney Modular Buildings (sample)</em>, blocks with windows, doors, balconies and awnings, corners and flat roofs, at ×5 (a
+<li><em>Kenney Modular Buildings (sample)</em>: blocks with windows, doors, balconies and awnings, corners and flat roofs, at ×5 (a
   block 5 m wide and a storey tall): they snap together block by block with Stamp, into buildings of any shape.</li>
 </ul>
 <p>They're kits like any other: review them, change them, or remove them.</p>
@@ -125,16 +140,16 @@ lights along every road. <code>Samples/Showcase/Try It.unity</code> is half buil
 empty block to stamp, brush and fill in, trees to fence (Fence), containers to drop, settle and untangle (Physics).
 Each has a <strong>Camera spots</strong> object: select one of its children and use <strong>GameObject &gt; Align View to Selected</strong> to look
 where it looks. Both draw in the Built-in render pipeline and URP (their ground takes the pipeline's own terrain material).</p>
-<p><code>Samples/Demo/Demo City.unity</code> is a small town built from the sample models: a # of roads with zebra crossings, a fenced
+<p><code>Samples/Demo/Demo City.unity</code> is a small town built from the sample models: a grid of roads with zebra crossings, a fenced
 park with paths and trees, shops facing it, houses along the side streets, towers and industry in the corners, street
-lights along every road, a road closure and woodland all round, on a grass terrain. Open it, add the sample kit, and try
+lights along every road, a road closure and woodland all round, on a grass terrain. Open it, add the sample kits, and try
 the tools on it: Replace a shop, Erase some trees, Brush more, dress a street, close another road. It works in the
 Built-in render pipeline and URP.</p>
 <p>Don't need it? The <code>Samples</code> folder can be left out when importing the package (or deleted): nothing else uses it.</p>
 <div class="doc-pager"><a class="pager prev" href="index.html"><span class="label">Previous</span>Overview</a><a class="pager next" href="window.html"><span class="label">Next</span>The Prefab Builder window</a></div>
 <p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Getting+Started" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
 </article>
-<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#installing">Installing</a></li><li class="toc-2"><a href="#where-your-data-lives">Where your data lives</a></li><li class="toc-2"><a href="#the-menu">The menu</a></li><li class="toc-2"><a href="#first-use">First use</a></li><li class="toc-2"><a href="#the-first-run-tour">The first-run tour</a></li><li class="toc-2"><a href="#the-sample-kits">The sample kits</a></li><li class="toc-3"><a href="#the-demo-scenes">The demo scenes</a></li></ul></nav>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#installing">Installing</a></li><li class="toc-2"><a href="#where-your-data-lives">Where your data lives</a></li><li class="toc-2"><a href="#the-menu">The menu</a></li><li class="toc-2"><a href="#first-use">First use</a></li><li class="toc-2"><a href="#home">Home</a></li><li class="toc-2"><a href="#the-first-run-tour">The first-run tour</a></li><li class="toc-2"><a href="#the-sample-kits">The sample kits</a></li><li class="toc-3"><a href="#the-demo-scenes">The demo scenes</a></li></ul></nav>
 </div>
 </main>
 <footer class="site-footer">

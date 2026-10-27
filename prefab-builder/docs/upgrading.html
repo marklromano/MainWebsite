@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Upgrading | Romano Assets</title>
+<meta name="description" content="Upgrading: documentation for the All In One Prefab Builder Kit for Unity.">
+<link rel="canonical" href="https://marklromano.github.io/prefab-builder/docs/upgrading.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Upgrading">
+<meta property="og:description" content="Upgrading: documentation for the All In One Prefab Builder Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/prefab-builder/docs/upgrading.html">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Prefab Builder docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html" aria-current="page">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html" aria-current="page">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Prefab Builder</a><span>/</span><span>Start here</span></nav>
+<h1 id="upgrading">Upgrading</h1>
+<p>How to update the Prefab Builder, and what changes for you in each version. The full list of changes is in
+<code>CHANGELOG.md</code>, in the product folder.</p>
+<h2 id="how-to-update">How to update <a class="anchor" href="#how-to-update" aria-label="Link to this section">#</a></h2>
+<ol>
+<li>Save your scene.</li>
+<li>Delete the old product folder: <code>Assets/AllInOnePrefabBuilderKit</code> (before 0.8 it was called <code>Assets/AllInOneWorldBuilderKit</code>).
+   A package update only adds and replaces files; it never deletes them, so files an older version had and a newer one
+   doesn't would stay behind, and old scripts among them can stop the project compiling.</li>
+<li>Import the new package from the Package Manager (My Assets).</li>
+</ol>
+<p>Your own work isn't in the product folder, so deleting it loses nothing: your kits, rule sets, palettes and placeable
+copies are in your data folder (<code>Assets/AllInOnePrefabBuilderData</code>, or the folder you chose), the project's settings in
+<code>ProjectSettings/AllInOneWorldBuilderSettings.asset</code>, and your hotkeys and tool presets in Unity's own preferences. Pieces
+you placed are ordinary objects in your scenes.</p>
+<h2 id="100">1.0.0 <a class="anchor" href="#100" aria-label="Link to this section">#</a></h2>
+<p>A free update for everyone who owns 0.8. <strong>Nothing to do:</strong> kits, rule sets, palettes, hotkeys and scenes made with 0.8
+all carry over, and every menu item, hotkey and public C# type and member of 0.8 is still there (a test checks this).</p>
+<ul>
+<li><strong>Unity 6000.0 LTS or newer</strong> (0.8 needed 6000.3).</li>
+<li><strong>Home (⌂)</strong> opens the first time for someone with no kits yet. You can open it any time from the ⌂ button.</li>
+<li>Some tools and options have <strong>clearer names</strong>: Fix &gt; Similar and Physics &gt; Drop (they shared names with other tools),
+  Allow overlaps (was Place over red), Same floor type only (Stay on this floor), Ground pieces sit on top (Floors on top
+  of the ground), Whole panels only (Fixed), Panels face in (Fronts in), Around the selection (Inverse), Facing (Turn
+  them). They do what they did; your settings for them are kept.</li>
+<li><strong>Settings</strong> show in plain words with units; the rarely changed ones are under <strong>Advanced</strong>.</li>
+<li><strong>Tool picks are kept per project</strong> now. Picks you made in 0.8 (brush pieces, slots, recent decals) start empty once in
+  each project; pick them again.</li>
+<li><strong>Sign text</strong> finds the board more reliably. Signs placed with 0.8 keep their text where it is until you change them.</li>
+</ul>
+<h2 id="080">0.8.0 <a class="anchor" href="#080" aria-label="Link to this section">#</a></h2>
+<ul>
+<li>The product folder was renamed to <code>AllInOnePrefabBuilderKit</code>, and the data folder to <code>AllInOnePrefabBuilderData</code> (an old
+  data folder is renamed for you the first time the kit loads, so your kits keep working).</li>
+<li>Needed Unity 6000.3 or newer.</li>
+</ul>
+<div class="doc-pager"><a class="pager prev" href="adding-packs.html"><span class="label">Previous</span>Adding packs</a><a class="pager next" href="move-tab.html"><span class="label">Next</span>Move</a></div>
+<p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Upgrading" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#how-to-update">How to update</a></li><li class="toc-2"><a href="#100">1.0.0</a></li><li class="toc-2"><a href="#080">0.8.0</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/marklromano/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

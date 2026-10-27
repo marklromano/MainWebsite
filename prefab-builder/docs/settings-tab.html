@@ -36,21 +36,21 @@
 <main id="main">
 <div class="wrap docs-shell">
 <aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">Prefab Builder docs</a><span class="pill">v0.8.0</span></div>
+  <div class="docs-product"><a href="index.html">Prefab Builder docs</a><span class="pill">v1.0.0</span></div>
   <div class="docs-search" hidden>
     <label class="sr-only" for="docs-q">Search the documentation</label>
     <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
     <kbd class="docs-search-key" aria-hidden="true">/</kbd>
     <div class="docs-results" id="docs-results" role="listbox" hidden></div>
   </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html" aria-current="page">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html" aria-current="page">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html" aria-current="page">Settings</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html" aria-current="page">Settings</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
   </nav>
 </aside>
 <article class="prose" id="doc">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Prefab Builder</a><span>/</span><span>The tabs</span></nav>
 <h1 id="settings-tab">Settings Tab</h1>
-<p>Everything you need is reachable here, no hunting through Project folders.</p>
+<p>Everything you need is reachable here: no hunting through Project folders.</p>
 <h2 id="kits">Kits <a class="anchor" href="#kits" aria-label="Link to this section">#</a></h2>
 <p>Every kit, with its piece count and style.</p>
 <ul>
@@ -72,29 +72,33 @@ makes one. The kits using it are listed.</p>
   it to the shipped defaults</strong>, or delete it.</li>
 <li><strong>Character profile:</strong> the character the world is built for (height, radius, step, slope, speeds), edited in place.
   <strong>New</strong> makes one.</li>
-<li><strong>Rules:</strong> every rule of the active rule set, edited in place (see <a href="rules-and-data.html">Rules, Profiles, Palettes and Styles</a>).
-  Changes are saved at once.</li>
+<li><strong>Rules:</strong> every rule of the active rule set, in plain words with their units, edited in place (see
+  <a href="rules-and-data.html">Rules, Profiles, Palettes and Styles</a>). The everyday ones show first: snapping, corners, mixing styles,
+  doorways and aisles, performance budgets; the rule set's lists (categories, street furniture and closure kinds), empty
+  ground cells and scatter are under <strong>Advanced</strong>. Changes are saved at once.</li>
 </ul>
 <p>Tip: rule sets are data, so a newer Prefab Builder's improved default keywords don't reach an existing rule set on their
 own. Duplicate it to keep your changes, then <strong>Reset to defaults</strong> to pick them up.</p>
 <h2 id="palettes">Palettes <a class="anchor" href="#palettes" aria-label="Link to this section">#</a></h2>
 <p>The active palette and its colours (name, colour, role), edited in place. <strong>⋮</strong>: new, duplicate, delete.</p>
 <h2 id="folders">Folders <a class="anchor" href="#folders" aria-label="Link to this section">#</a></h2>
-<p>The project settings: data folder, packs folder, the layer for small props and the tags for facade and enterable
-buildings, the default floor types and the floor colour tolerance, scene folders (root and one per category, floor type
-folders, piece folders, touching folders), never re-parent, pack detection. (Floor types themselves are in Floors &amp; Terrain.)
-<strong>Tidy scene folders</strong> files every placed kit piece in the open scene again.</p>
-<p>If a named layer or tag isn't in the project, an <strong>Add</strong> button offers to create it, after asking. Nothing is created
-silently.</p>
+<p>The project settings: the data folder, the floor types used when unsure, the scene folder placed pieces go in and whether
+ground is filed by floor type, where packs from disk are copied, and pack detection. Under <strong>Advanced</strong>: the layer for small
+props and the tags for facade and enterable buildings, the floor colour difference, a folder per category, piece and
+touching folders, the scatter folders, never re-file, folders that aren't packs and the smallest pack. (Floor types
+themselves are in Floors &amp; Terrain.) <strong>Tidy scene folders</strong> files every placed kit piece in the open scene again.</p>
+<p>The layer and tags are optional: only a game that culls small props or tells facades from enterable buildings needs them.
+If one isn't in the project, Advanced says so quietly, with an <strong>Add...</strong> button that creates it after asking. Nothing is
+created silently.</p>
 <h2 id="floors--terrain">Floors &amp; Terrain <a class="anchor" href="#floors--terrain" aria-label="Link to this section">#</a></h2>
 <h3 id="floor-types">Floor types <a class="anchor" href="#floor-types" aria-label="Link to this section">#</a></h3>
-<p>Floor types are the kinds of ground, Grass, Asphalt, Concrete…, and the names Surface Tags carry. Every ground piece of
+<p>Floor types are the kinds of ground (Grass, Asphalt, Concrete…) and the names Surface Tags carry. Every ground piece of
 your kits, and every Unity Terrain paint layer, is in one:</p>
 <ul>
 <li><strong>Sorted automatically:</strong> by a word in its name first ("road", "sidewalk", "grass"); otherwise by its <strong>colour</strong>, the
   colour of its top, read from its texture at its own UVs (so kits sharing one palette texture sort correctly, and green
-  tiles named only by number land in Grass). It joins the floor type of the nearest colour, or, if none is close (the
-  <em>floor colour tolerance</em> in Settings &gt; Folders), a new floor type named after its colour ("Green", "Dark grey").</li>
+  tiles named only by number land in Grass). It joins the floor type of the nearest colour, or: if none is close (the
+  <em>floor colour tolerance</em> in Settings &gt; Folders): a new floor type named after its colour ("Green", "Dark grey").</li>
 <li><strong>Each floor type:</strong> a colour swatch (change it), its name (rename it: every piece, terrain layer and Surface Tag
   follows), how many pieces and terrain layers are in it, <strong>▸</strong> to open it, <strong>x</strong> to delete it (what was in it is left with
   no floor type).</li>
@@ -108,7 +112,7 @@ your kits, and every Unity Terrain paint layer, is in one:</p>
 <li><strong>Sort floors again:</strong> measures the colour of ground pieces that don't have one yet (kits made before this version) and
   re-sorts everything not set by hand.</li>
 </ul>
-<p>The brush's <strong>Stay on this floor</strong> (or Ctrl) keeps a stroke on one floor type.</p>
+<p>The brush's <strong>Same floor type only</strong> (or Ctrl) keeps a stroke on one floor type.</p>
 <h3 id="terrain">Terrain <a class="anchor" href="#terrain" aria-label="Link to this section">#</a></h3>
 <p><strong>Terrain awareness</strong>: a switch that affects every tool:</p>
 <ul>
@@ -137,7 +141,7 @@ your kits, and every Unity Terrain paint layer, is in one:</p>
 every tool has a key of its own that goes straight to it from any tab. The keys are written on the buttons themselves
 (greyed, before their names: "⇧2 Place", "1 Stamp"), and all of a tool's keys are in its tooltip. The numbers go by place:
 drag a tab or tool to another place on its bar and its number follows (the Prefab Builder's <strong>⋮</strong> menu puts everything back
-in order). Set a key for any tool,
+in order). Set a key for any tool:
 one key, or one with Shift, Alt or Ctrl. None of them works while you fly the camera (right mouse), so W, A, S, D still fly.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -224,7 +228,7 @@ one key, or one with Shift, Alt or Ctrl. None of them works while you fly the ca
 <td>O (only while stamping)</td>
 </tr>
 <tr>
-<td>Physics: Place / Scatter / Arrange</td>
+<td>Physics: Drop / Scatter / Arrange</td>
 <td>Space drops (its Stamp turns with R / Shift+R, tilts with T / Shift+T) / Space / Space, then draw, U untangles</td>
 </tr>
 <tr>
@@ -261,7 +265,7 @@ one key, or one with Shift, Alt or Ctrl. None of them works while you fly the ca
 </tr>
 </tbody>
 </table></div>
-<div class="doc-pager"><a class="pager prev" href="check-tab.html"><span class="label">Previous</span>Check</a><a class="pager next" href="rules-and-data.html"><span class="label">Next</span>Rules, profiles, palettes, styles</a></div>
+<div class="doc-pager"><a class="pager prev" href="check-tab.html"><span class="label">Previous</span>Check</a><a class="pager next" href="rules-and-data.html"><span class="label">Next</span>Rules, profiles, palettes and styles</a></div>
 <p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Settings+Tab" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
 </article>
 <nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#kits">Kits</a></li><li class="toc-2"><a href="#styles">Styles</a></li><li class="toc-2"><a href="#rules">Rules</a></li><li class="toc-2"><a href="#palettes">Palettes</a></li><li class="toc-2"><a href="#folders">Folders</a></li><li class="toc-2"><a href="#floors--terrain">Floors &amp; Terrain</a></li><li class="toc-3"><a href="#floor-types">Floor types</a></li><li class="toc-3"><a href="#terrain">Terrain</a></li><li class="toc-2"><a href="#presets">Presets</a></li><li class="toc-2"><a href="#hotkeys">Hotkeys</a></li></ul></nav>

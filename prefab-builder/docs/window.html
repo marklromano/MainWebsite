@@ -36,15 +36,15 @@
 <main id="main">
 <div class="wrap docs-shell">
 <aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">Prefab Builder docs</a><span class="pill">v0.8.0</span></div>
+  <div class="docs-product"><a href="index.html">Prefab Builder docs</a><span class="pill">v1.0.0</span></div>
   <div class="docs-search" hidden>
     <label class="sr-only" for="docs-q">Search the documentation</label>
     <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
     <kbd class="docs-search-key" aria-hidden="true">/</kbd>
     <div class="docs-results" id="docs-results" role="listbox" hidden></div>
   </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html" aria-current="page">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html" aria-current="page">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="window.html" aria-current="page">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="window.html" aria-current="page">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
   </nav>
 </aside>
 <article class="prose" id="doc">
@@ -54,14 +54,16 @@
 <h2 id="layout">Layout <a class="anchor" href="#layout" aria-label="Link to this section">#</a></h2>
 <ul>
 <li><strong>Tabs:</strong> Move, Place, Physics, Dress, Fix, Check and Settings. One tab is visible at a time. When the window is too narrow for
-  them, the tabs scroll sideways, the mouse wheel over them, or the arrows at their ends, as the mode selector and every
+  them, the tabs scroll sideways (the mouse wheel over them, or the arrows at their ends) as the mode selector and every
   row of tabs in a tool do.</li>
 <li><strong>Mode selector:</strong> under the tabs. Each tab has a few modes; only the chosen mode's panel is shown. Each mode button has
   its number before its name ("1 Stamp": press 1 over the Scene view or the window); they share the row evenly, as the tabs do;
   <strong>drag</strong> a tab or a tool along its bar to put it in another place, the number keys follow your order; when they don't fit, the row scrolls (mouse wheel, or its arrows).</li>
+<li><strong>⌂</strong> is Home: try the sample city, turn a pack into a kit, the tour, and jobs that open the right tool (see
+  <a href="getting-started.html#home">Getting Started</a>).</li>
 <li><strong>?</strong> shows a line of help for the current mode; click it (or its ✕) to put it away until you press ? again. <strong>⋮</strong> holds
   the rare actions: Add Pack, Presets, snap the selection, tidy scene
-  folders, leave out duplicate pieces, make thumbnails again, show the tour again, Copy support info,
+  folders, leave out duplicate pieces, make thumbnails again, show the tour again, Get help, report a bug, Copy support info,
   About.</li>
 <li><strong>New packs:</strong> folders in the project that look like packs and aren't kits yet are listed in <strong>Add Pack</strong> (⋮ &gt; Add Pack).
   Nothing is ever scanned or imported without a click.</li>
@@ -69,10 +71,13 @@
 <p>Tabs whose tools aren't in this version yet say what's coming.</p>
 <p><strong>What's new:</strong> after an update, a small card at the top of the window lists what the new version adds (from the
 CHANGELOG), once; <strong>Got it</strong> hides it until the next version.</p>
+<h2 id="the-status-line">The status line <a class="anchor" href="#the-status-line" aria-label="Link to this section">#</a></h2>
+<p>A line at the foot of the Scene view says what a click does in the tool that's open, and its keys ("Click to place it.
+R turns it…"). While Unity's own tools are in use it says how to go back. <strong>⋮ &gt; Show what a click does in the Scene view</strong>
+switches it off; the overlay then shows the same line under its settings.</p>
 <h2 id="the-scene-overlay">The Scene overlay <a class="anchor" href="#the-scene-overlay" aria-label="Link to this section">#</a></h2>
 <p>The <strong>Prefab Builder</strong> overlay in the Scene view is kept small: the mode and its tab, the mode's <strong>most used settings</strong>, the
-very same settings as in its panel (change one in either and the other shows it at once), and one grey line saying what
-the next click does:</p>
+very same settings as in its panel (change one in either and the other shows it at once):</p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -83,31 +88,31 @@ the next click does:</p>
 <tbody>
 <tr>
 <td>Stamp</td>
-<td>Snap to pieces, Place over red</td>
+<td>Snap to pieces, Allow overlaps</td>
 </tr>
 <tr>
 <td>Brush</td>
-<td>Radius, Density, Stay on this floor, Place over red</td>
+<td>Radius, Density, Same floor type only, Allow overlaps</td>
 </tr>
 <tr>
 <td>Row</td>
-<td>Spacing, Place over red, Snap to pieces</td>
+<td>Spacing, Allow overlaps, Snap to pieces</td>
 </tr>
 <tr>
 <td>Spline</td>
-<td>Fronts face, Spacing, Curved, Place over red, Snap to pieces; Lay it / Loop / Clear while drawing</td>
+<td>Fronts face, Spacing, Curved, Allow overlaps, Snap to pieces; Lay it / Loop / Clear while drawing</td>
 </tr>
 <tr>
 <td>Fill</td>
-<td>Area / Selection / Inverse (with Margin, Outside / Inside, Round it, and the Fill buttons), Density, Stay on this floor, Place over red</td>
+<td>Area / Selection / Inverse (with Margin, Outside / Inside, Round it, and the Fill buttons), Density, Same floor type only, Allow overlaps</td>
 </tr>
 <tr>
 <td>Fence</td>
-<td>Opening, Fixed, Fronts in, Place over red, Fence the selection and its margin, Snap to pieces</td>
+<td>Opening, Fixed, Fronts in, Allow overlaps, Fence the selection and its margin, Snap to pieces</td>
 </tr>
 <tr>
 <td>Street</td>
-<td>Place over red, Dress the selection, Clear, New mix</td>
+<td>Allow overlaps, Dress the selection, Clear, New mix</td>
 </tr>
 <tr>
 <td>Closures</td>
@@ -127,7 +132,7 @@ the next click does:</p>
 </tr>
 </tbody>
 </table></div>
-<p>Every tool that places things on a grid, Stamp, Brush, Row, Spline, Fill, Fence and Signs, shows the <strong>Grid</strong> row
+<p>Every tool that places things on a grid (Stamp, Brush, Row, Spline, Fill, Fence and Signs) shows the <strong>Grid</strong> row
 (on / off, its size, ÷2 ×2, Auto, and Keep once it's set by hand), with <strong>Turn</strong> under it (how far a press of R
 turns, and T tilts), in the same place: the last lines, over the hint. The
 grid is the same for all of them, so it isn't in their panels.
@@ -172,7 +177,7 @@ meshes to aim at; nothing is added to the models themselves.) Scatter such as gr
 </tr>
 <tr>
 <td>Physics</td>
-<td><a href="physics-tab.html">Place, Scatter, Arrange</a></td>
+<td><a href="physics-tab.html">Drop, Scatter, Arrange</a></td>
 </tr>
 <tr>
 <td>Dress</td>
@@ -180,7 +185,7 @@ meshes to aim at; nothing is added to the models themselves.) Scatter such as gr
 </tr>
 <tr>
 <td>Fix</td>
-<td><a href="fix-tab.html">Ground, Floating, Doubles, Select, Replace, Randomize</a></td>
+<td><a href="fix-tab.html">Ground, Floating, Doubles, Similar, Replace, Randomize</a></td>
 </tr>
 <tr>
 <td>Settings</td>
@@ -197,7 +202,7 @@ meshes to aim at; nothing is added to the models themselves.) Scatter such as gr
 <div class="doc-pager"><a class="pager prev" href="getting-started.html"><span class="label">Previous</span>Getting started</a><a class="pager next" href="adding-packs.html"><span class="label">Next</span>Adding packs</a></div>
 <p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+The+Prefab+Builder+Window" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
 </article>
-<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#layout">Layout</a></li><li class="toc-2"><a href="#the-scene-overlay">The Scene overlay</a></li><li class="toc-2"><a href="#messages">Messages</a></li><li class="toc-2"><a href="#unitys-own-tools">Unity&#x27;s own tools</a></li><li class="toc-2"><a href="#what-the-tools-aim-at">What the tools aim at</a></li><li class="toc-2"><a href="#tabs-in-this-version">Tabs in this version</a></li><li class="toc-2"><a href="#undo">Undo</a></li></ul></nav>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#layout">Layout</a></li><li class="toc-2"><a href="#the-status-line">The status line</a></li><li class="toc-2"><a href="#the-scene-overlay">The Scene overlay</a></li><li class="toc-2"><a href="#messages">Messages</a></li><li class="toc-2"><a href="#unitys-own-tools">Unity&#x27;s own tools</a></li><li class="toc-2"><a href="#what-the-tools-aim-at">What the tools aim at</a></li><li class="toc-2"><a href="#tabs-in-this-version">Tabs in this version</a></li><li class="toc-2"><a href="#undo">Undo</a></li></ul></nav>
 </div>
 </main>
 <footer class="site-footer">

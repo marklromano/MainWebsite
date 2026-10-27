@@ -36,19 +36,19 @@
 <main id="main">
 <div class="wrap docs-shell">
 <aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">Prefab Builder docs</a><span class="pill">v0.8.0</span></div>
+  <div class="docs-product"><a href="index.html">Prefab Builder docs</a><span class="pill">v1.0.0</span></div>
   <div class="docs-search" hidden>
     <label class="sr-only" for="docs-q">Search the documentation</label>
     <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
     <kbd class="docs-search-key" aria-hidden="true">/</kbd>
     <div class="docs-results" id="docs-results" role="listbox" hidden></div>
   </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html" aria-current="page">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html" aria-current="page">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html" aria-current="page">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html" aria-current="page">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
   </nav>
 </aside>
 <article class="prose" id="doc">
-<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Prefab Builder</a><span>/</span><span>Reference</span></nav>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Prefab Builder</a><span>/</span><span>Your project&#x27;s rules</span></nav>
 <h1 id="rules-profiles-palettes-and-styles">Rules, Profiles, Palettes and Styles</h1>
 <p>Everything the Prefab Builder decides is data you can change. Nothing assumes a particular game.</p>
 <h2 id="ruleset">RuleSet <a class="anchor" href="#ruleset" aria-label="Link to this section">#</a></h2>
@@ -87,12 +87,12 @@ city-building practice.</p>
 <td>Off / Warn / Block for kits of different styles within a radius.</td>
 </tr>
 <tr>
-<td>Bare cells</td>
-<td>Bare cells touching buildings, longest bare run along a road.</td>
+<td>Empty ground cells</td>
+<td>An empty cell next to a building, the most empty cells in a row by a road.</td>
 </tr>
 <tr>
 <td>Scale rules</td>
-<td>Door headroom and side clearance, aisle clearance, curb height as a share of the step height, all applied to the Character Profile.</td>
+<td>Door headroom and side clearance, aisle clearance, curb height as a share of the step height: all applied to the Character Profile.</td>
 </tr>
 <tr>
 <td>Scatter</td>
@@ -100,7 +100,7 @@ city-building practice.</p>
 </tr>
 <tr>
 <td>Performance</td>
-<td>Readout radius, object and triangle budgets near the camera, props per cell, scatter triangle limit.</td>
+<td>Most objects and triangles (Check &gt; Performance compares against them), props per cell, scatter triangle limit.</td>
 </tr>
 </tbody>
 </table></div>
@@ -110,8 +110,8 @@ city-building practice.</p>
 <li><strong>Grid</strong>: the grid a piece snaps to when alone; 0 = the kit's grid cell (road and ground tiles).</li>
 <li><strong>Setback</strong> min / max from the road edge, <strong>minimum spacing</strong>, <strong>triangle budget</strong>.</li>
 <li><strong>Ground-like</strong>: its pieces get a Surface Tag and other pieces stand on them.</li>
-<li><strong>Mark static</strong>, <strong>Add collider if missing</strong>, used when making placeable copies.</li>
-<li><strong>Name keywords</strong>, <strong>folder keywords</strong>, <strong>exclude keywords</strong>, how the scanner recognises it. Keywords are comma
+<li><strong>Mark static</strong>, <strong>Add collider if missing</strong>: used when making placeable copies.</li>
+<li><strong>Name keywords</strong>, <strong>folder keywords</strong>, <strong>exclude keywords</strong>: how the scanner recognises it. Keywords are comma
   separated. A word matches its plural, and keywords of 4+ letters also match longer words starting with them
   ("lamp" → "lamppost"); 5+ letters also match words ending with them ("light" → "streetlight"). "street" never
   matches "tree". Exclude keywords rule a category out ("signal" for signs).</li>
@@ -125,7 +125,7 @@ Add your own with any id ("market" with the keywords "stall, stand").</p>
 headroom), and travel-time estimates use its speeds. A RuleSet points to one profile.</p>
 <h2 id="palettes">Palettes <a class="anchor" href="#palettes" aria-label="Link to this section">#</a></h2>
 <p>Named colours (tints and accents), each with a role: wall, trim, accent, ground. Recolouring applies them through
-<strong>material variants</strong> of a kit's shared materials, one per colour, shared by every piece using it, never through
+<strong>material variants</strong> of a kit's shared materials (one per colour, shared by every piece using it) never through
 unique materials per object. Two palettes are made on first use: <strong>Warm Town</strong> and <strong>Clean Suburb</strong>.</p>
 <h2 id="styles">Styles <a class="anchor" href="#styles" aria-label="Link to this section">#</a></h2>
 <p>A style is a look that kits belong to. It has a description and a colour (for lists and markers). The RuleSet's
@@ -158,11 +158,11 @@ unique materials per object. Two palettes are made on first use: <strong>Warm To
 </tr>
 <tr>
 <td>Floor types (surfaces)</td>
-<td>Asphalt, Concrete, Grass, Gravel, Dirt, Sand, Wood, Metal, Ceramic, Stone, Water, each with a colour and the words that suggest it (edited in Settings &gt; Floors &amp; Terrain)</td>
+<td>Asphalt, Concrete, Grass, Gravel, Dirt, Sand, Wood, Metal, Ceramic, Stone, Water: each with a colour and the words that suggest it (edited in Settings &gt; Floors &amp; Terrain)</td>
 </tr>
 <tr>
 <td>Floor colour tolerance</td>
-<td>22, how different a ground piece's colour may be and still join a floor type</td>
+<td>22: how different a ground piece's colour may be and still join a floor type</td>
 </tr>
 <tr>
 <td>Default ground / road surface</td>

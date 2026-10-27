@@ -36,26 +36,26 @@
 <main id="main">
 <div class="wrap docs-shell">
 <aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">Prefab Builder docs</a><span class="pill">v0.8.0</span></div>
+  <div class="docs-product"><a href="index.html">Prefab Builder docs</a><span class="pill">v1.0.0</span></div>
   <div class="docs-search" hidden>
     <label class="sr-only" for="docs-q">Search the documentation</label>
     <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
     <kbd class="docs-search-key" aria-hidden="true">/</kbd>
     <div class="docs-results" id="docs-results" role="listbox" hidden></div>
   </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html" aria-current="page">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html" aria-current="page">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Reference</p><a href="rules-and-data.html">Rules, profiles, palettes, styles</a><a href="presets.html">Presets</a><a href="extending.html">Extending (C#)</a><a href="troubleshooting.html">Troubleshooting</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html" aria-current="page">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="window.html">The Prefab Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="move-tab.html" aria-current="page">Move</a><a href="place-tab.html">Place</a><a href="physics-tab.html">Physics</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Fix</a><a href="check-tab.html">Check</a><a href="settings-tab.html">Settings</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
   </nav>
 </aside>
 <article class="prose" id="doc">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Prefab Builder</a><span>/</span><span>The tabs</span></nav>
 <h1 id="move-tab">Move Tab</h1>
-<p>Move, rotate and scale what's already placed, with the kit's snapping instead of Unity's handles. The Move tab comes
-first (<strong>Shift+1</strong> over the Scene view picks it; <strong>M</strong> goes straight to Move and <strong>S</strong> to Select). Select objects the usual way (click, Shift-click, drag a box); the handles work on the
+<p>Move, rotate and scale what's already placed: with the kit's snapping instead of Unity's handles. The Move tab comes
+first (<strong>Shift+1</strong> over the Scene view picks it, as long as it's the first tab; <strong>M</strong> goes straight to Move and <strong>S</strong> to Select). Select objects the usual way (click, Shift-click, drag a box); the handles work on the
 top objects of the selection (a child moves with its parent). In Prefab Mode they work inside the prefab.</p>
 <ul>
-<li><strong>1</strong> to <strong>5</strong> switch between <strong>Move</strong>, <strong>Rotate</strong>, <strong>Scale</strong>, <strong>Select</strong> and <strong>Show / Hide</strong> while the mouse is over the Scene view, only in
-  this tab, so they never get in the way elsewhere (change them in Settings &gt; Hotkeys).</li>
+<li>The number keys switch between <strong>Move</strong>, <strong>Rotate</strong>, <strong>Scale</strong>, <strong>Select</strong> and <strong>Show / Hide</strong> (each tool shows its number before its
+  name; drag a tool to reorder them and the numbers follow) while the mouse is over the Scene view, only in this tab, so they never get in the way elsewhere (change them in Settings &gt; Hotkeys).</li>
 <li><strong>Snap to pieces</strong> and the <strong>Grid</strong> row are the same switches as the Place tools': what you set here is set there too.</li>
 <li>Hold <strong>Ctrl</strong> (Cmd) while dragging to move, turn or scale freely.</li>
 <li><strong>W</strong>, <strong>E</strong>, <strong>Y</strong> or Unity's toolbar hand the Scene view back to Unity's own tools until you click in the Prefab Builder
@@ -82,13 +82,13 @@ overlay):</p>
   the centre instead.</li>
 </ul>
 <h2 id="move">Move <a class="anchor" href="#move" aria-label="Link to this section">#</a></h2>
-<p><strong>Drag the selected object itself</strong> to slide it over the scene onto whatever is under the mouse, the ground, a roof, a
+<p><strong>Drag the selected object itself</strong> to slide it over the scene onto whatever is under the mouse: the ground, a roof, a
 table, a shelf (models without colliders too). Or drag an arrow to move the selection along X, Y or Z, or a coloured square
 to move it along two axes at once.</p>
 <ul>
 <li>
 <p><strong>Land on what's under it</strong> (on by default): moved along X or Z, what stands on something keeps standing on what's below
-  it as it goes, up onto a step, down off a table. A sign on a wall or a hanging lamp keeps its height, and the <strong>Y</strong>
+  it as it goes: up onto a step, down off a table. A sign on a wall or a hanging lamp keeps its height, and the <strong>Y</strong>
   arrow always lifts freely.</p>
 </li>
 <li>
@@ -104,7 +104,7 @@ to move it along two axes at once.</p>
 <p>Drag a ring to turn the selection through the anchor, in steps of <strong>Turn step</strong> (the rule set's rotation step unless set
 here): the <strong>green</strong> ring turns it round the up axis, the <strong>red</strong> one round X and the <strong>blue</strong> one round Z (tipping it
 over). <strong>R</strong> and <strong>Shift+R</strong>, or <strong>Turn right</strong> / <strong>Turn left</strong>, turn it round the up axis a step at a time. <strong>T</strong> and
-<strong>Shift+T</strong> tilt each selected object a <strong>Turn step</strong>, its front down, or up, on its own foot, lifted so nothing sinks into the
+<strong>Shift+T</strong> tilt each selected object a <strong>Turn step</strong> (its front down, or up) on its own foot, lifted so nothing sinks into the
 ground.</p>
 <ul>
 <li><strong>Turn each at random</strong>: every selected object turned round its own middle by a random number of steps, variety for a
@@ -136,11 +136,11 @@ ground.</p>
 <strong>Ctrl</strong> (take out) or both (keep only where they meet) as you draw. A click picks the piece under the mouse the same way.
 <strong>Space</strong> draws the last shape again (after changing the filters). What a shape will pick is outlined as you draw.</p>
 <p><strong>Only</strong> narrows what's picked: <strong>Like the selection</strong> (pieces of the kinds selected now, the same prefab, or the same
-name; <strong>Any</strong> clears it), <strong>Size</strong> (the longest side, from–to), <strong>Height</strong> (where the bottom stands, from–to). Kit floors
-ground and road pieces, are left out unless <strong>Floors too</strong> is on; scatter on the small-props layer never counts.</p>
+name; <strong>Any</strong> clears it), <strong>Size</strong> (the longest side, from and to), <strong>Height</strong> (where the bottom stands, from and to). Kit floors (ground
+and road pieces) are left out unless <strong>Floors too</strong> is on; scatter on the small-props layer never counts.</p>
 <h2 id="show--hide">Show / Hide <a class="anchor" href="#show--hide" aria-label="Link to this section">#</a></h2>
 <h3 id="the-cutaway">The cutaway <a class="anchor" href="#the-cutaway" aria-label="Link to this section">#</a></h3>
-<p>To see and build inside, slice the top or the side away. The Scene view stops drawing everything past the cut, through
+<p>To see and build inside, slice the top or the side away. The Scene view stops drawing everything past the cut: through
 the middle of a building, even one made as a single mesh. The switches are at the top of this panel and on the
 <strong>Cutaway</strong> line of the Scene overlay, in every tool, so you can turn them on while placing:</p>
 <ul>
@@ -155,7 +155,7 @@ the middle of a building, even one made as a single mesh. The switches are at th
   building with its roof cut away, or against the far wall of a room. A hollow building needs a mesh collider or no
   collider for its floor to be found; one box collider round the outside of it leaves only the ground under it to aim at.</li>
 <li>Only the Scene view's picture changes: the scene, its materials and the game are untouched, and it's off again when
-  Unity restarts. What's cut still casts its shadow inside, turn the Scene view's lighting off (its toolbar) to see in
+  Unity restarts. What's cut still casts its shadow inside: turn the Scene view's lighting off (its toolbar) to see in
   brightly. A click to select in Unity's own way may still pick what's cut.</li>
 </ul>
 <h3 id="categories">Categories <a class="anchor" href="#categories" aria-label="Link to this section">#</a></h3>
@@ -163,7 +163,7 @@ the middle of a building, even one made as a single mesh. The switches are at th
 <ul>
 <li><strong>Hide</strong> takes them out of the Scene view, and every tool aims straight through them: hide the roofs and place
   furniture inside, hide the props and fix the road under them. <strong>Lock</strong> leaves them showing but they can't be clicked or
-  selected, still there to place on.</li>
+  selected: still there to place on.</li>
 <li><strong>Only</strong> shows just that category and hides the rest. <strong>Show all</strong> and <strong>Unlock all</strong> bring everything back.</li>
 <li>A category's switch marked <strong>*</strong> is on for some of its pieces only; a click sets it for all of them.</li>
 <li>Scatter on the small-props layer has a group of its own, and so does what isn't from a kit.</li>
@@ -171,7 +171,7 @@ the middle of a building, even one made as a single mesh. The switches are at th
 <p>Only the Scene view changes: this is Unity's own scene visibility (the eye and hand in the Hierarchy), so the scene
 itself, its saved file and the game are untouched. The Scene view's visibility switch (the eye in its toolbar) has to be
 on for hidden things to disappear.</p>
-<div class="doc-pager"><a class="pager prev" href="adding-packs.html"><span class="label">Previous</span>Adding packs</a><a class="pager next" href="place-tab.html"><span class="label">Next</span>Place</a></div>
+<div class="doc-pager"><a class="pager prev" href="upgrading.html"><span class="label">Previous</span>Upgrading</a><a class="pager next" href="place-tab.html"><span class="label">Next</span>Place</a></div>
 <p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Move+Tab" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
 </article>
 <nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#the-anchor">The anchor</a></li><li class="toc-2"><a href="#move">Move</a></li><li class="toc-2"><a href="#rotate">Rotate</a></li><li class="toc-2"><a href="#scale">Scale</a></li><li class="toc-2"><a href="#select">Select</a></li><li class="toc-2"><a href="#show--hide">Show / Hide</a></li><li class="toc-3"><a href="#the-cutaway">The cutaway</a></li><li class="toc-3"><a href="#categories">Categories</a></li></ul></nav>

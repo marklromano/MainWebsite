@@ -36,7 +36,7 @@ EMAIL = "marklromano@outlook.com"
 # Empty until they exist: the pages then show "soon" instead of a link.
 DISCORD_URL = "https://discord.gg/AmpBDxRAKu"
 ISSUES_URL = "https://github.com/marklromano/RomanoAssetSupport/issues"
-PREFAB_VERSION = "0.8.0"
+PREFAB_VERSION = "1.0.0"
 SAVE_VERSION = "1.0.0"
 YEAR = "2026"
 
@@ -56,7 +56,7 @@ PRODUCTS = [
         "store": STORE_URL,
         "summary": "Turn any pack of prefabs into a world-building kit: snap, draw roads, scatter, fence, dress streets, "
                    "settle with physics and check your scene, all from one window.",
-        "requirements": ["Unity 6000.3+", "Built-in & URP", "No dependencies", "Full C# source"],
+        "requirements": ["Unity 6000.0 LTS+", "Built-in, URP & HDRP", "No dependencies", "Full C# source"],
         "menu": "Tools > All In One Prefab Builder",
         # Where the kit's "copy support info" button is, for the generated Support page (if the kit has no Support.md)
         "support_info": "In the Prefab Builder window, click **\u22ee > Copy support info**",
@@ -94,12 +94,12 @@ PRODUCTS = [
         },
         # Pictures the site adds under a page's opening paragraph: output .html -> (assets/img file, caption)
         "page_images": {
-            "getting-started.html": ("prefab-builder/included-kits.jpg", "The sample kits and Showcase City, one of the three demo scenes that come with the kit."),
-            "adding-packs.html": ("prefab-builder/assets-ready-to-build.jpg", "The review screen: every piece of the pack measured and sorted, ready to become a kit."),
-            "place-tab.html": ("prefab-builder/place-snap.jpg", "Stamp: a house snapping flush against its neighbour, with the palette on the right."),
-            "dress-tab.html": ("prefab-builder/fence-one-drag.jpg", "Dress > Fence: a fence dragged round a group of trees, its corners placed for you."),
-            "physics-tab.html": ("prefab-builder/physics-before-after.jpg", "Physics: containers before and after they are dropped and settled."),
-            "check-tab.html": ("prefab-builder/scene-costs.jpg", "Check > Performance: what the scene costs to draw, and its heaviest meshes."),
+            "getting-started.html": ("prefab-builder/12-included.jpg", "Everything that comes with the kit: sample kits, demo scenes, docs and support."),
+            "adding-packs.html": ("prefab-builder/02-three-steps.jpg", "Add a pack, check one review screen, build: your first street in minutes."),
+            "place-tab.html": ("prefab-builder/06-stamp.jpg", "Stamp: click to place, and the piece snaps flush against its neighbour."),
+            "dress-tab.html": ("prefab-builder/04-street.jpg", "Dress > Street: street lights and bins along a road, doorways kept clear."),
+            "physics-tab.html": ("prefab-builder/07-physics.jpg", "Physics: pieces inside each other, untangled and settled."),
+            "check-tab.html": ("prefab-builder/11-check.jpg", "Check > Performance: what the scene costs to draw, and its heaviest meshes."),
         },
     },
     {
