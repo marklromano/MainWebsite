@@ -56,11 +56,11 @@ the same authority for every player.</p>
 <h2 id="costs-and-sandbox">Costs and sandbox <a class="anchor" href="#costs-and-sandbox" aria-label="Link to this section">#</a></h2>
 <ol>
 <li>Create <strong>Resource Types</strong> (Project window: Create &gt; All In One Runtime Building Kit &gt; Resource Type), e.g. Wood and
-   Stone.</li>
+    Stone.</li>
 <li>Give each piece a <strong>Cost</strong> in its Inspector (Cost and Upgrade).</li>
 <li>Tell the <strong>Build World</strong> where resources come from: its <strong>Resource Provider</strong> is any component that implements
-   <code>IResourceProvider</code>. <strong>Simple Resource Inventory</strong> is a ready-made one (amounts per player, everyone starts with its
-   Starting Amounts). For your own inventory, implement the three methods:</li>
+    <code>IResourceProvider</code>. <strong>Simple Resource Inventory</strong> is a ready-made one (amounts per player, everyone starts with its
+    Starting Amounts). For your own inventory, implement the three methods:</li>
 </ol>
 <pre><code class="language-csharp">public sealed class MyInventory : MonoBehaviour, IResourceProvider
 {

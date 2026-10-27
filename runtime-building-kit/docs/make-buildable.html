@@ -55,32 +55,40 @@ that holds everything the kit needs to build it. The model itself is never modif
 <h2 id="steps">Steps <a class="anchor" href="#steps" aria-label="Link to this section">#</a></h2>
 <ol>
 <li><strong>Model</strong>: drag a prefab or model from the Project window. The kit measures its mesh renderers (LOD 0 only) and
-   shows the size in metres.
-   - <strong>Size check:</strong> if the size is unusual for the preset (a 4.7 m chair, a 13 m wall), a warning says so and offers
-     <strong>Use Scale × 0.1</strong> (or whatever factor fits). That sets the piece's <strong>Scale</strong>; your model is not changed. You can
-     also fix the model's own import Scale Factor and drop it in again.
-   - <strong>Collider:</strong> if the model has no colliders, choose <strong>Box</strong> (one box around the footprint) or <strong>Mesh</strong> (follows
-     the model, so windows and doorways stay open). Placement checks always use the footprint box. <strong>Mesh</strong> needs
-     <strong>Read/Write</strong> on in the model's import settings, because the collider is made in the game: the window warns and
-     turns it on with one click (the model file isn't changed). Without it, a build uses boxes instead.</li>
-<li><strong>Preset</strong>: decides the sockets (snap points) and the placement settings.
-   - <strong>Foundation:</strong> 4 side sockets (join other foundations) and 4 top-edge sockets (hold walls).
-   - <strong>Wall:</strong> bottom, top and 2 side sockets. It faces along its thinnest side.
-   - <strong>Floor:</strong> side sockets, bottom-edge sockets that rest on walls, top-edge sockets for walls above.
-   - <strong>Furniture:</strong> no sockets; stands on floors and on top of tables and shelves, tilted to match them, and must be
-     fully supported.
-   - <strong>Wall Mounted:</strong> no sockets; hangs on walls with its back against them (pictures, wall shelves, lamps), and must be
-     fully supported. Suggested for thin, small, upright models.</li>
+    shows the size in metres.<ul>
+<li><strong>Size check:</strong> if the size is unusual for the preset (a 4.7 m chair, a 13 m wall), a warning says so and offers
+  <strong>Use Scale × 0.1</strong> (or whatever factor fits). That sets the piece's <strong>Scale</strong>; your model is not changed. You can
+  also fix the model's own import Scale Factor and drop it in again.</li>
+<li><strong>Collider:</strong> if the model has no colliders, choose <strong>Box</strong> (one box around the footprint) or <strong>Mesh</strong> (follows
+  the model, so windows and doorways stay open). Placement checks always use the footprint box. <strong>Mesh</strong> needs
+  <strong>Read/Write</strong> on in the model's import settings, because the collider is made in the game: the window warns and
+  turns it on with one click (the model file isn't changed). Without it, a build uses boxes instead.</li>
+</ul>
+</li>
+<li>
+<p><strong>Preset</strong>: decides the sockets (snap points) and the placement settings.</p>
+<ul>
+<li><strong>Foundation:</strong> 4 side sockets (join other foundations) and 4 top-edge sockets (hold walls).</li>
+<li><strong>Wall:</strong> bottom, top and 2 side sockets. It faces along its thinnest side.</li>
+<li><strong>Floor:</strong> side sockets, bottom-edge sockets that rest on walls, top-edge sockets for walls above.</li>
+<li><strong>Furniture:</strong> no sockets; stands on floors and on top of tables and shelves, tilted to match them, and must be
+  fully supported.</li>
+<li><strong>Wall Mounted:</strong> no sockets; hangs on walls with its back against them (pictures, wall shelves, lamps), and must be
+  fully supported. Suggested for thin, small, upright models.</li>
+</ul>
+<p>The suggestion comes from the model's shape at its placed size.</p>
+</li>
+<li>
+<p><strong>Name and Category</strong>: the name (tidied from the file name, e.g. "floorFull" becomes "Floor Full") appears in
+    reasons such as "Overlaps Wall_03".</p>
+</li>
+<li><strong>Save to</strong>: your data folder by default (<code>Assets/AllInOneRuntimeBuildingKitData/Pieces</code>). An existing file is never
+    overwritten: a numbered name is used instead. If a piece for the same model already exists, you're asked first.</li>
+<li><strong>Show in Scene</strong> (optional): shows the model in the Scene view with its footprint box and sockets. Drag the box
+    handles; click a socket sphere to select it, <strong>W</strong> moves it, <strong>E</strong> rotates it. The blue arrow points out of the
+    piece, the green line is the socket's up.</li>
+<li><strong>Create Piece</strong>, then <strong>Test in Play Mode</strong>.</li>
 </ol>
-<p>The suggestion comes from the model's shape at its placed size.
-3. <strong>Name and Category</strong>: the name (tidied from the file name, e.g. "floorFull" becomes "Floor Full") appears in
-   reasons such as "Overlaps Wall_03".
-4. <strong>Save to</strong>: your data folder by default (<code>Assets/AllInOneRuntimeBuildingKitData/Pieces</code>). An existing file is never
-   overwritten: a numbered name is used instead. If a piece for the same model already exists, you're asked first.
-5. <strong>Show in Scene</strong> (optional): shows the model in the Scene view with its footprint box and sockets. Drag the box
-   handles; click a socket sphere to select it, <strong>W</strong> moves it, <strong>E</strong> rotates it. The blue arrow points out of the
-   piece, the green line is the socket's up.
-6. <strong>Create Piece</strong>, then <strong>Test in Play Mode</strong>.</p>
 <h2 id="the-piece-definition">The Piece Definition <a class="anchor" href="#the-piece-definition" aria-label="Link to this section">#</a></h2>
 <p>Select it to edit it in the Inspector: Identity (name, category, icon, ID), Source (the model and its Scale), Footprint, Placement
 (modes, grid cell and rotation step, goes on, align to surface, needs support, max slope, max distance), Sockets (each

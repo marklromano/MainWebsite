@@ -56,42 +56,45 @@ comes first: it makes your first piece.</p>
 <p>You have a level and a player that walks around. You want the player to build with your pieces.</p>
 <ol>
 <li><strong>Make your pieces.</strong> For each model: kit window &gt; <strong>Make Buildable</strong> &gt; drop it in &gt; check the preset &gt; <strong>Create
-   Piece</strong>. Make one foundation, one wall and one floor to start.</li>
+    Piece</strong>. Make one foundation, one wall and one floor to start.</li>
 <li><strong>A catalog.</strong> In your data folder: <strong>Create &gt; All In One Runtime Building Kit &gt; Piece Catalog</strong>, and drag your pieces
-   into it. The catalog is the list of pieces this world allows; saves and multiplayer name pieces through it.</li>
+    into it. The catalog is the list of pieces this world allows; saves and multiplayer name pieces through it.</li>
 <li><strong>The world.</strong> In your scene: <strong>GameObject &gt; Create Empty</strong>, name it "Build World", <strong>Add Component &gt; All In One
-   Runtime Building Kit &gt; Build World</strong>, and drag your catalog into <strong>Catalog</strong>.</li>
+    Runtime Building Kit &gt; Build World</strong>, and drag your catalog into <strong>Catalog</strong>.</li>
 <li><strong>The Builder.</strong> On your player: <strong>Add Component &gt; All In One Runtime Building Kit &gt; Builder</strong>. Set <strong>Aim Origin</strong> to
-   your camera and drag your pieces into <strong>Hotbar</strong>. (The preview materials are filled in for you when left empty.)</li>
+    your camera and drag your pieces into <strong>Hotbar</strong>. (The preview materials are filled in for you when left empty.)</li>
 <li>
-<p><strong>Input.</strong> Either:
-   - <strong>No code:</strong> add <strong>Sample Input Source</strong> and <strong>Sample Build Input</strong> (in <code>Samples/Scripts</code>) to your player. They use
-     the Input System when it's active and the old Input Manager otherwise: number keys, left click, R, X, G, U, Z, Y.
-   - <strong>Your own input:</strong> call the Builder from your input code:</p>
-<p><code>csharp
- if (Input.GetKeyDown(KeyCode.Alpha1)) builder.SelectSlot(0);
- if (Input.GetKeyDown(KeyCode.R)) builder.Rotate(1);
- if (Input.GetMouseButtonDown(0)) builder.Confirm();
- if (Input.GetMouseButtonDown(1)) builder.Cancel();</code>
-6. <strong>Press Play.</strong> Aim at the ground: the foundation preview follows your aim, green where it fits, red with a reason
-   where it doesn't. Place a foundation, then a wall on its edge.
-7. <strong>Costs (optional).</strong> <strong>Create &gt; All In One Runtime Building Kit &gt; Resource Type</strong> for each resource (Wood,
-   Stone). On the Build World: <strong>Add Component &gt; Simple Resource Inventory</strong>, add starting amounts, and drag it into the
-   Build World's <strong>Resource Provider</strong>. Give each Piece Definition a <strong>Cost</strong>. Your own inventory can take over later
-   (see <a href="extending.html">Extending</a>).
-8. <strong>Saving (optional).</strong> From your save menu: <code>world.Save("slot1")</code> and <code>world.Load("slot1")</code>.</p>
+<p><strong>Input.</strong> With no code: add <strong>Sample Input Source</strong> and <strong>Sample Build Input</strong> (in <code>Samples/Scripts</code>) to your
+    player. They use the Input System when it's active and the old Input Manager otherwise: number keys, left click, R,
+    X, G, U, Z, Y. Or call the Builder from your own input code:</p>
+<pre><code>if (Input.GetKeyDown(KeyCode.Alpha1)) builder.SelectSlot(0);
+if (Input.GetKeyDown(KeyCode.R)) builder.Rotate(1);
+if (Input.GetMouseButtonDown(0)) builder.Confirm();
+if (Input.GetMouseButtonDown(1)) builder.Cancel();
+</code></pre>
 </li>
+<li>
+<p><strong>Press Play.</strong> Aim at the ground: the foundation preview follows your aim, green where it fits, red with a reason
+    where it doesn't. Place a foundation, then a wall on its edge.</p>
+</li>
+<li><strong>Costs (optional).</strong> <strong>Create &gt; All In One Runtime Building Kit &gt; Resource Type</strong> for each resource (Wood,
+    Stone). On the Build World: <strong>Add Component &gt; Simple Resource Inventory</strong>, add starting amounts, and drag it into the
+    Build World's <strong>Resource Provider</strong>. Give each Piece Definition a <strong>Cost</strong>. Your own inventory can take over later
+    (see <a href="extending.html">Extending</a>).</li>
+<li><strong>Saving (optional).</strong> From your save menu: <code>world.Save("slot1")</code> and <code>world.Load("slot1")</code>.</li>
 </ol>
 <p>Check the <a href="samples.html">Base Building sample</a>: it is exactly this, with a HUD.</p>
 <h2 id="2-furniture-in-a-room">2. Furniture in a room <a class="anchor" href="#2-furniture-in-a-room" aria-label="Link to this section">#</a></h2>
 <p>Your rooms are level geometry (or built pieces); players decorate them.</p>
 <ol>
-<li><strong>Make Buildable</strong> each piece of furniture. The kit suggests the preset from the shape:
-   - <strong>Furniture</strong> for tables, chairs, beds, plants: they stand on floors and on top of tables and shelves.
-   - <strong>Wall Mounted</strong> for pictures, wall lamps and shelves: they go flat against walls.
-   - For a ceiling lamp, choose Furniture, then in the Piece Definition set <strong>Goes On</strong> to <strong>Ceiling</strong>.</li>
+<li><strong>Make Buildable</strong> each piece of furniture. The kit suggests the preset from the shape:<ul>
+<li><strong>Furniture</strong> for tables, chairs, beds, plants: they stand on floors and on top of tables and shelves.</li>
+<li><strong>Wall Mounted</strong> for pictures, wall lamps and shelves: they go flat against walls.</li>
+<li>For a ceiling lamp, choose Furniture, then in the Piece Definition set <strong>Goes On</strong> to <strong>Ceiling</strong>.</li>
+</ul>
+</li>
 <li>Keep <strong>Needs Support</strong> on (the default) so nothing hangs off the edge of a table: the reason says "Hangs over the edge
-   of Table_01".</li>
+    of Table_01".</li>
 <li>Add the pieces to the Builder's <strong>Hotbar</strong> (or a second Builder for an "interior mode").</li>
 <li>Press Play: books go on the table, pictures on the walls; <strong>T</strong> turns a placed piece where it stands, <strong>G</strong> moves it.</li>
 </ol>
@@ -101,20 +104,20 @@ comes first: it makes your first piece.</p>
 <ol>
 <li>On the Builder, turn <strong>Update Automatically</strong> off.</li>
 <li>Set <strong>Reach From</strong> to the character, so reach is measured from the character rather than from a camera far above.
-   (Left empty, it is measured from the camera; set <strong>Max Distance</strong> to 0 on a piece to turn the check off.)</li>
-<li>Each frame, aim from the mouse pointer:</li>
+    (Left empty, it is measured from the camera; set <strong>Max Distance</strong> to 0 on a piece to turn the check off.)</li>
+<li>Each frame, aim from the mouse pointer:<pre><code>Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+builder.Refresh(ray);
+if (Input.GetMouseButtonDown(0)) builder.Confirm(ray);
+</code></pre>
+</li>
 </ol>
-<p><code>csharp
-   Ray ray = camera.ScreenPointToRay(Input.mousePosition);
-   builder.Refresh(ray);
-   if (Input.GetMouseButtonDown(0)) builder.Confirm(ray);</code></p>
 <p>The <strong>Top Down</strong> sample does this, with both input systems.</p>
 <h2 id="4-building-together-multiplayer">4. Building together (multiplayer) <a class="anchor" href="#4-building-together-multiplayer" aria-label="Link to this section">#</a></h2>
 <p>With Netcode for GameObjects 2.x installed:</p>
 <ol>
 <li>On the Build World: add <strong>Network Object</strong> and <strong>Netcode Build Authority</strong>.</li>
 <li>Put your player prefab (with its Builder) in the Network Manager's <strong>Player Prefab</strong>, and enable the Builder only for
-   the owner.</li>
+    the owner.</li>
 <li>Host and join. The host checks every request with the same rules and costs, and everyone sees the same world.</li>
 </ol>
 <p>The whole story, including permissions and late joiners, is in <a href="multiplayer.html">Multiplayer</a>; the

@@ -63,6 +63,9 @@ or at an open edge to snap. If a tip says "aim closer to the open edge", a match
 <p><strong>My piece floats or sinks.</strong> Its footprint doesn't match the model. Press <strong>Measure from Prefab</strong>, or adjust the box
 with <strong>Edit in Scene</strong>.</p>
 <p><strong>The wall faces the wrong way.</strong> Press <strong>R</strong> to turn it. Walls face along their thinnest side.</p>
+<p><strong>In a build, doorways and windows are closed.</strong> The piece uses a <strong>Mesh</strong> collider and its
+model's <strong>Read/Write</strong> is off, so the build can't make the collider and uses boxes instead (the Console says so once).
+Open the kit window's <strong>Pieces</strong> tab and click <strong>Turn on Read/Write</strong>, or tick it in the model's import settings.</p>
 <p><strong>It never snaps.</strong> The piece needs sockets whose types fit the target's (check the Pieces tab for "no socket type"),
 and the aim must pass within the Builder's Snap Radius of an open socket. Add Build Diagnostics and turn on Gizmos to
 see the sockets.</p>

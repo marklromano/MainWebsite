@@ -59,18 +59,18 @@ else works as before; the kit never installs packages itself.</p>
 <ol>
 <li>Install Netcode for GameObjects 2.x. Open <code>Samples/Multiplayer/RBK_Multiplayer</code>.</li>
 <li><strong>Play</strong>, then <strong>Host</strong>. In a second player (a build, or Multiplayer Play Mode), <strong>Join</strong> with the host's address.
-   Tick <strong>Owner only</strong> before hosting to let players change only their own pieces (the host may change everything).</li>
+    Tick <strong>Owner only</strong> before hosting to let players change only their own pieces (the host may change everything).</li>
 <li>Build as in the single-player sample: costs come from each player's own amounts, refusals say why, Z undoes only your
-   own actions. Players who join later see everything built so far.</li>
+    own actions. Players who join later see everything built so far.</li>
 </ol>
 <p>Command line (for quick tests with two builds): <code>-rbk-host</code>, <code>-rbk-join 192.168.1.20</code>, <code>-rbk-port 7777</code>,
 <code>-rbk-owner-only</code>.</p>
 <h2 id="your-own-game">Your own game <a class="anchor" href="#your-own-game" aria-label="Link to this section">#</a></h2>
 <ol>
 <li>On the <strong>Build World</strong>'s object add a <strong>NetworkObject</strong> and <strong>Netcode Build Authority</strong> (the world must be in the
-   scene, so the NetworkObject is an in-scene one).</li>
+    scene, so the NetworkObject is an in-scene one).</li>
 <li>Give the <strong>Network Manager</strong> a player prefab with your <strong>Builder</strong> on it. Only the owner's Builder should be enabled
-   (the sample's <code>SampleNetworkPlayer</code> shows how), and its <strong>Requester Id</strong> must be the owner's client ID.</li>
+    (the sample's <code>SampleNetworkPlayer</code> shows how), and its <strong>Requester Id</strong> must be the owner's client ID.</li>
 <li>Host and clients need the same <strong>Piece Catalog</strong>.</li>
 </ol>
 <p>That's all: while a session runs, the world's authority is a <code>NetworkedBuildAuthority</code>. When it ends, the world goes back
