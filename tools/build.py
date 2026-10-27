@@ -38,6 +38,7 @@ DISCORD_URL = "https://discord.gg/AmpBDxRAKu"
 ISSUES_URL = "https://github.com/marklromano/RomanoAssetSupport/issues"
 PREFAB_VERSION = "0.8.0"
 SAVE_VERSION = "1.0.0"
+RUNTIME_BUILDING_VERSION = "1.0.0"
 YEAR = "2026"
 
 ICON_EXTERNAL = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" '
@@ -144,6 +145,52 @@ PRODUCTS = [
         "shortcut_groups": {},
         "page_images": {},
     },
+    {
+        # In development, like the Save Kit: page up, docs built locally, published on launch day.
+        # Its Documentation/docs.json sets the sidebar groups, order and titles; this list only keeps the addresses.
+        "slug": "runtime-building-kit",
+        "name": "All In One Runtime Building Kit",
+        "short": "Runtime Building Kit",
+        "accent": "c-runtime",
+        "status": "in development",
+        "version": RUNTIME_BUILDING_VERSION,
+        "store": "",
+        "summary": "Let players build bases and place furniture at runtime: turn your own models into build pieces in about "
+                   "ten minutes without code, snap them together through sockets, and see a plain reason whenever a "
+                   "spot is refused.",
+        "requirements": ["Unity 6000.0+", "Built-in, URP & HDRP", "No dependencies", "Full C# source"],
+        "menu": "Tools > All In One Runtime Building Kit",
+        "support_info": "In the kit window, open the **Help** tab and click **Copy support info**",
+        # Its Quick Start takes about ten minutes, not the five the docs home says by default
+        "quick_start_time": "about ten minutes",
+        "quick_start": [
+            "Import the package. Everything lands in <code>Assets/AllInOneRuntimeBuildingKit/</code>; your own pieces "
+            "go to <code>Assets/AllInOneRuntimeBuildingKitData/</code>.",
+            "Open <strong>Tools &gt; All In One Runtime Building Kit &gt; Open</strong>, click <strong>Open Sample Scene</strong> "
+            "and press Play: <kbd>1</kbd>/<kbd>2</kbd> pick a piece, left click places, <kbd>R</kbd> turns it.",
+            "Open <strong>Make Buildable</strong>, drop in your own model, check the measured size, pick a preset and "
+            "click <strong>Create Piece</strong>.",
+            "Click <strong>Test in Play Mode</strong>: a test scene opens with your piece ready to place. Then check "
+            "<strong>Pieces</strong> and fix anything listed with one click.",
+        ],
+        "pages": [
+            ("Start here", "QuickStart.md", "getting-started.html", "Quick start"),
+            ("Start here", "Samples.md", "samples.html", "Samples"),
+            ("Start here", "Walkthroughs.md", "walkthroughs.html", "Walkthroughs"),
+            ("Start here", "Upgrading.md", "upgrading.html", "Upgrading"),
+            ("Using the kit", "KitWindow.md", "kit-window.html", "The kit window"),
+            ("Using the kit", "MakeBuildable.md", "make-buildable.html", "Make Buildable"),
+            ("Using the kit", "PlacementAndSockets.md", "placement-and-sockets.html", "Placement and sockets"),
+            ("Using the kit", "Gameplay.md", "gameplay.html", "Costs, tools, undo, saving"),
+            ("Using the kit", "Multiplayer.md", "multiplayer.html", "Multiplayer"),
+            ("Reference", "Extending.md", "extending.html", "Extending (API)"),
+            ("Reference", "TroubleshootingFAQ.md", "troubleshooting.html", "Troubleshooting and FAQ"),
+            ("Reference", "KnownIssues.md", "known-issues.html", "Known issues"),
+            ("Reference", "Support.md", "support.html", "Support"),
+        ],
+        "shortcut_groups": {},
+        "page_images": {},
+    },
 ]
 
 # Kits without docs yet, for the docs hub and "More from Romano Assets": (name, accent, status, one line)
@@ -205,6 +252,7 @@ def footer(root):
         <ul>
           <li><a href="{root}prefab-builder/index.html">Prefab Builder Kit</a></li>
           <li><a href="{root}save-kit/index.html">Save Kit</a></li>
+          <li><a href="{root}runtime-building-kit/index.html">Runtime Building Kit</a></li>
           <li><a href="{root}index.html#products">Coming next</a></li>
           <li><a href="{PUBLISHER_URL}" rel="noopener">Publisher page</a></li>
         </ul>
@@ -348,6 +396,10 @@ HAND_PAGES = [
      "All In One Save Kit",
      "Save and restore player progress, world objects and settings in Unity: no code needed, slots, autosaves, a "
      "finished save menu, backups and automatic recovery from damaged saves. In development."),
+    ("runtime-building-kit.html", "runtime-building-kit/index.html", "../", "runtime",
+     "All In One Runtime Building Kit",
+     "Let players build bases and place furniture at runtime in Unity: your own models become build pieces in about ten "
+     "minutes without code, snap through sockets, and every refused spot says why. In development."),
     ("support.html", "support/index.html", "../", "support",
      "Support",
      "Get help with Romano Assets tools: documentation, bug reports, Discord and email."),
@@ -457,9 +509,14 @@ def load_pages(product, docs_dir):
 
 
 def index_descriptions(index_md):
-    """The 'What it covers' column of Documentation/Index.md, by linked file."""
-    return {m.group(1): m.group(2).strip()
-            for m in re.finditer(r"^\|\s*\[[^\]]+\]\(([^)#]+\.md)\)\s*\|\s*(.+?)\s*\|\s*$", index_md, re.M)}
+    """What each page covers, from Documentation/Index.md, by linked file: a table row "| [Page](Page.md) | text |",
+    or a list item "- [Page](Page.md): text" (its wrapped lines included)."""
+    found = {m.group(1): m.group(2).strip()
+             for m in re.finditer(r"^\|\s*\[[^\]]+\]\(([^)#]+\.md)\)\s*\|\s*(.+?)\s*\|\s*$", index_md, re.M)}
+    for m in re.finditer(r"^[-*]\s+\[[^\]]+\]\(([^)#]+\.md)\):\s*(.+(?:\n[ \t]+\S.*)*)", index_md, re.M):
+        text = re.sub(r"\s+", " ", m.group(2)).strip()
+        found.setdefault(m.group(1), text[:1].upper() + text[1:])
+    return found
 
 
 CALLOUT = re.compile(r'<blockquote>\s*<p>\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*', re.I)
@@ -817,8 +874,9 @@ def docs_home(product, groups, rendered):
         for out, title in items:
             desc = rendered[out][2]
             if not desc:
-                m = re.search(r"^(?!#|\||-|\s)(.+)$", rendered[out][1], re.M)
-                desc = m.group(1) if m else ""
+                # The first paragraph, with its wrapped lines
+                m = re.search(r"^(?!#|\||-|\s|```)(.+(?:\n(?!#|\||-|\s|```).+)*)", rendered[out][1], re.M)
+                desc = re.sub(r"\s+", " ", m.group(1)) if m else ""
                 desc = re.sub(r"[*`]", "", desc)
                 desc = desc[:150].rsplit(" ", 1)[0] + "..." if len(desc) > 150 else desc
             desc = html.escape(re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", desc))
@@ -834,7 +892,7 @@ def docs_home(product, groups, rendered):
   {f'<a class="btn btn-ghost" href="{product["store"]}" rel="noopener">Asset Store {ICON_EXTERNAL}</a>' if product["store"] else ""}
 </div>
 <div class="callout" id="quick-start">
-  <p class="label label-accent">Quick start: five minutes</p>
+  <p class="label label-accent">Quick start: {product.get("quick_start_time", "five minutes")}</p>
   <ol>{steps}</ol>
 </div>
 {"".join(sections_html)}

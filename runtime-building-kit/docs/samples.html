@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Samples | Romano Assets</title>
+<meta name="description" content="Samples: documentation for the All In One Runtime Building Kit for Unity.">
+<link rel="canonical" href="https://marklromano.github.io/runtime-building-kit/docs/samples.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Samples">
+<meta property="og:description" content="Samples: documentation for the All In One Runtime Building Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/runtime-building-kit/docs/samples.html">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Runtime Building Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html" aria-current="page">Samples</a><a href="walkthroughs.html">Walkthroughs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="kit-window.html">The kit window</a><a href="make-buildable.html">Make Buildable</a><a href="placement-and-sockets.html">Placement and sockets</a><a href="gameplay.html">Costs, tools, undo, saving</a><a href="multiplayer.html">Multiplayer</a></div><div class="docs-group"><p class=label>Reference</p><a href="extending.html">Extending (API)</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html" aria-current="page">Samples</a><a href="walkthroughs.html">Walkthroughs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="kit-window.html">The kit window</a><a href="make-buildable.html">Make Buildable</a><a href="placement-and-sockets.html">Placement and sockets</a><a href="gameplay.html">Costs, tools, undo, saving</a><a href="multiplayer.html">Multiplayer</a></div><div class="docs-group"><p class=label>Reference</p><a href="extending.html">Extending (API)</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Runtime Building Kit</a><span>/</span><span>Start here</span></nav>
+<h1 id="samples">Samples</h1>
+<p>Every sample opens with no errors or warnings and needs no extra packages (the Input System is used when it's active;
+the Multiplayer sample needs Netcode for GameObjects). Each scene shows its keys on screen, and each folder has a short
+README.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Scene</th>
+<th>Shows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Samples/BaseBuilding/RBK_BaseBuilding</code></td>
+<td>A cottage to extend: foundations, walls, doorway, window wall, floors, gable roof, stairs. Wood and Stone costs, wall upgrade (wood to stone), support rule, remove / move / turn, undo / redo, sandbox, save (F5) and load (F9). First person.</td>
+</tr>
+<tr>
+<td><code>Samples/Interior/RBK_Interior</code></td>
+<td>A furnished room: tables, chairs, a bookcase, rugs, books and plants that need support, pictures and lamps on walls, a ceiling lamp, turning pieces in place. First person.</td>
+</tr>
+<tr>
+<td><code>Samples/Controllers/RBK_ThirdPerson</code></td>
+<td>The base-building pieces with an orbiting third-person camera; reach measured from the character.</td>
+</tr>
+<tr>
+<td><code>Samples/Controllers/RBK_TopDown</code></td>
+<td>The same with a top-down camera: the mouse pointer aims through <code>builder.Refresh(ray)</code> / <code>builder.Confirm(ray)</code>.</td>
+</tr>
+<tr>
+<td><code>Samples/Scenes/RBK_FirstSlice</code></td>
+<td>The smallest set-up: a foundation, a wall and a crate. The Home tab's <strong>Open Sample Scene</strong> opens it.</td>
+</tr>
+<tr>
+<td><code>Samples/Multiplayer/RBK_Multiplayer</code></td>
+<td>Host and join; host-authoritative building (see <a href="multiplayer.html">Multiplayer</a>).</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="keys">Keys <a class="anchor" href="#keys" aria-label="Link to this section">#</a></h2>
+<p>WASD move, mouse look, number keys pick a piece. Left click places, right click or Q cancels, R or the mouse wheel
+turns the preview, PgUp / PgDn change height. X removes, G moves, U upgrades, T turns a placed piece, Z / Y undo and
+redo, B toggles sandbox, Esc frees the mouse. A gamepad works too (A jump, X place, B cancel, Y turn, LB / RB change
+piece; sticks need the Input System package).</p>
+<h2 id="build-menu">Build menu <a class="anchor" href="#build-menu" aria-label="Link to this section">#</a></h2>
+<p><strong>Tab</strong> (gamepad <strong>View</strong>) opens every piece the world allows, one page per category (Foundations, Walls, Floors &amp;
+Roofs, Furniture, Decor, Lighting in the samples). Left / right change page, up / down pick a piece, <strong>Enter</strong> (gamepad
+<strong>A</strong>) chooses it, <strong>Tab</strong> or <strong>Esc</strong> (gamepad <strong>B</strong>) closes; the mouse works too. Categories come from each Piece
+Definition's <strong>Category</strong>, so your own pieces sort themselves.</p>
+<p><strong>Changing the keys:</strong> with the Input System package, the menu's last page, <strong>Keys</strong>, lists the controls. Choose one and
+press the new key or button (Esc cancels); <strong>Reset every key</strong> goes back to the defaults. Changes are saved between
+sessions. This uses the Input System's own interactive rebinding (<code>PerformInteractiveRebinding</code>); the Input System
+package also has a "Rebinding UI" sample (Package Manager &gt; Input System &gt; Samples) if you want ready-made UI for your
+own menus. With the old Input Manager, keys are set in <strong>Project Settings &gt; Input Manager</strong>.</p>
+<h2 id="how-the-samples-are-put-together">How the samples are put together <a class="anchor" href="#how-the-samples-are-put-together" aria-label="Link to this section">#</a></h2>
+<ul>
+<li>One <strong>Build World</strong> per scene (registry, rules, costs through a <strong>Simple Resource Inventory</strong>) and one player with a
+  <strong>Builder</strong>. The sample scripts in <code>Samples/Scripts</code> only turn input into Builder calls and draw the HUD:
+  <code>SampleBuildInput</code>, <code>SampleHud</code>, <code>SampleBuildMenu</code>, and the three small controllers. Replace them with your own.</li>
+<li><strong>Sample Starting Build</strong> loads a saved build (a JSON file next to the scene) when you press Play, so the scenes start
+  with something to look at. It is an ordinary save: <code>world.LoadSave(data)</code>.</li>
+<li>The pieces (<code>Samples/Showcase</code>) were made with <strong>Make Buildable</strong> presets: Foundation, Wall, Floor (the roof is a
+  floor preset without top sockets), Furniture and Wall Mounted.</li>
+</ul>
+<h2 id="sample-art-and-render-pipelines">Sample art and render pipelines <a class="anchor" href="#sample-art-and-render-pipelines" aria-label="Link to this section">#</a></h2>
+<p>The models are from Kenney's <strong>Furniture Kit</strong> (CC0, <code>Samples/Art/Kenney</code>, licence file included) plus a few of our
+own (foundation slab, gable roof, picture). A small <strong>Sample Look</strong> component gives them flat colours with the current
+pipeline's default lit material, so the same scenes look the same in the Built-in Render Pipeline, URP and HDRP. It is
+only for the samples: your own pieces use your own materials.</p>
+<div class="doc-pager"><a class="pager prev" href="getting-started.html"><span class="label">Previous</span>Quick start</a><a class="pager next" href="walkthroughs.html"><span class="label">Next</span>Walkthroughs</a></div>
+<p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Samples" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#keys">Keys</a></li><li class="toc-2"><a href="#build-menu">Build menu</a></li><li class="toc-2"><a href="#how-the-samples-are-put-together">How the samples are put together</a></li><li class="toc-2"><a href="#sample-art-and-render-pipelines">Sample art and render pipelines</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/marklromano/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

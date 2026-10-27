@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Gameplay: Costs, Tools, Undo, Structure and Saving | Romano Assets</title>
+<meta name="description" content="Gameplay: Costs, Tools, Undo, Structure and Saving: documentation for the All In One Runtime Building Kit for Unity.">
+<link rel="canonical" href="https://marklromano.github.io/runtime-building-kit/docs/gameplay.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Gameplay: Costs, Tools, Undo, Structure and Saving">
+<meta property="og:description" content="Gameplay: Costs, Tools, Undo, Structure and Saving: documentation for the All In One Runtime Building Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/runtime-building-kit/docs/gameplay.html">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Runtime Building Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a><a href="walkthroughs.html">Walkthroughs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="kit-window.html">The kit window</a><a href="make-buildable.html">Make Buildable</a><a href="placement-and-sockets.html">Placement and sockets</a><a href="gameplay.html" aria-current="page">Costs, tools, undo, saving</a><a href="multiplayer.html">Multiplayer</a></div><div class="docs-group"><p class=label>Reference</p><a href="extending.html">Extending (API)</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a><a href="walkthroughs.html">Walkthroughs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="kit-window.html">The kit window</a><a href="make-buildable.html">Make Buildable</a><a href="placement-and-sockets.html">Placement and sockets</a><a href="gameplay.html" aria-current="page">Costs, tools, undo, saving</a><a href="multiplayer.html">Multiplayer</a></div><div class="docs-group"><p class=label>Reference</p><a href="extending.html">Extending (API)</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Runtime Building Kit</a><span>/</span><span>Using the kit</span></nav>
+<h1 id="gameplay-costs-tools-undo-structure-and-saving">Gameplay: Costs, Tools, Undo, Structure and Saving</h1>
+<p>Everything here goes through <strong>build requests</strong> checked by the world's authority (the <code>LocalBuildAuthority</code> in single
+player). The preview only reads; the authority alone charges, refunds and changes the world. A multiplayer host runs
+the same authority for every player.</p>
+<h2 id="costs-and-sandbox">Costs and sandbox <a class="anchor" href="#costs-and-sandbox" aria-label="Link to this section">#</a></h2>
+<ol>
+<li>Create <strong>Resource Types</strong> (Project window: Create &gt; All In One Runtime Building Kit &gt; Resource Type), e.g. Wood and
+   Stone.</li>
+<li>Give each piece a <strong>Cost</strong> in its Inspector (Cost and Upgrade).</li>
+<li>Tell the <strong>Build World</strong> where resources come from: its <strong>Resource Provider</strong> is any component that implements
+   <code>IResourceProvider</code>. <strong>Simple Resource Inventory</strong> is a ready-made one (amounts per player, everyone starts with its
+   Starting Amounts). For your own inventory, implement the three methods:</li>
+</ol>
+<pre><code class="language-csharp">public sealed class MyInventory : MonoBehaviour, IResourceProvider
+{
+    public int GetAmount(uint playerId, ResourceType resource) { /* how many the player has */ }
+    public bool TrySpend(uint playerId, IReadOnlyList&lt;ResourceAmount&gt; amounts) { /* all or nothing */ }
+    public void Give(uint playerId, IReadOnlyList&lt;ResourceAmount&gt; amounts) { /* refunds */ }
+}
+</code></pre>
+<p>The preview says what is missing: <strong>Needs 4 Wood (you have 2)</strong>. <strong>Sandbox</strong> on the Build World (B in the sample) makes
+building free and removing refund nothing. <strong>Refund %</strong> sets how much of a piece's cost comes back when it is removed
+(rounded down per resource). <code>playerId</code> is 0 in single player and the client ID in multiplayer.</p>
+<h2 id="tools">Tools <a class="anchor" href="#tools" aria-label="Link to this section">#</a></h2>
+<p>The <strong>Builder</strong> has four tools (<code>Builder.SetTool</code>). Confirm does what the tool says:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Confirm</th>
+<th>Shows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Place</td>
+<td>places the selected piece</td>
+<td>the preview, green or red with the reason</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>removes the aimed piece, with the refund</td>
+<td>the aimed piece highlighted; "Holds up Floor_01" when it can't go</td>
+</tr>
+<tr>
+<td>Move</td>
+<td>picks the aimed piece up; the next Confirm puts it down where the preview shows (R turns it); Cancel drops it back</td>
+<td>the piece where it would go</td>
+</tr>
+<tr>
+<td>Upgrade</td>
+<td>swaps the aimed piece for its <strong>Upgrades To</strong> tier in place</td>
+<td>the next tier over the piece</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Upgrade</strong> keeps the piece's ID and socket links (so a wall stays on its edge), charges the next tier's cost and
+  gives back the old tier's Refund %.</li>
+<li><strong>Moving</strong> is free. It relinks sockets at the new spot; a wall can go back on its own edge, facing the other way.</li>
+<li><code>Builder.RotatePlaced(piece, steps)</code> / <code>RotateAimed(steps)</code> turns a piece where it stands (T in the sample), for
+  pieces that stand on things and can be placed freely or on the grid.</li>
+<li>Events: <code>applied</code> (every change this player asked for), <code>toolChanged</code>, plus <code>placed</code> and <code>rejected</code>.</li>
+</ul>
+<h2 id="undo-and-redo">Undo and redo <a class="anchor" href="#undo-and-redo" aria-label="Link to this section">#</a></h2>
+<p><code>Builder.Undo()</code> and <code>Builder.Redo()</code> (Z and Y in the sample) undo the player's own actions: placing, removing,
+moving and upgrading, up to the Build World's <strong>Undo Depth</strong> (32). Undo gives back exactly what the action cost and takes
+back exactly what it refunded, so it never makes or loses resources. Each player has their own history, kept by the
+authority. Undo is refused, with a reason, when:</p>
+<ul>
+<li>the piece has changed since (someone else moved, upgraded or removed it): "Can't undo: Wall_03 has changed since";</li>
+<li>taking a piece away would leave other pieces unsupported: "Holds up Floor_01";</li>
+<li>something now stands where a piece would come back: "Overlaps Crate_02";</li>
+<li>the player can't pay back a refund: "Needs 2 Wood (you have 0)".</li>
+</ul>
+<h2 id="structure">Structure <a class="anchor" href="#structure" aria-label="Link to this section">#</a></h2>
+<p>A piece is <strong>held up</strong> when it stands on the ground or level geometry, or is joined by a socket to a piece that is held
+up, or rests on one (a crate on a foundation, a picture on a wall). The Build World's <strong>Structural Mode</strong> decides what
+happens when removing a piece would leave others unsupported:</p>
+<ul>
+<li><strong>Refuse Removal</strong> (default): refused with "Holds up Wall_01 and 3 more".</li>
+<li><strong>Remove Unsupported</strong>: those pieces are removed too, each with its refund.</li>
+<li><strong>Off</strong>: no check.</li>
+</ul>
+<p>Moving a piece that holds others up is refused in both checked modes. There is no physics collapse: pieces never fall,
+they are simply removed or protected.</p>
+<h2 id="build-zones">Build zones <a class="anchor" href="#build-zones" aria-label="Link to this section">#</a></h2>
+<p><strong>Add Component &gt; All In One Runtime Building Kit &gt; Build Zone</strong> on any object marks an area (a box or a sphere; move,
+turn and scale the object to fit it). The Scene view shows it red or green.</p>
+<ul>
+<li><strong>Forbid</strong>: no building inside: spawn points, roads, quest areas. A piece touching the zone is refused.</li>
+<li><strong>Only Allow</strong>: building only inside: a plot, a base area. The whole piece must be inside one of them.</li>
+<li><strong>Reason</strong>: what players see ("Keep the path clear"). Empty: "Building isn't allowed here" / "Build inside the build
+  area".</li>
+<li><strong>Pieces</strong> and <strong>Categories</strong>: apply the zone to these only (for example: no furniture outside, foundations anywhere).
+  Empty: every piece.</li>
+</ul>
+<p>The preview shows the zone's reason before the player clicks, and the authority refuses requests that break it. Zones
+belong to the Build World in their scene (or the one you set). In code: <code>world.Zones</code>, and
+<code>world.ActiveZones</code> for what the rules use. The Base Building sample keeps its path clear with one.</p>
+<h2 id="saving-and-loading">Saving and loading <a class="anchor" href="#saving-and-loading" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">world.Save(&quot;slot1&quot;);                          // JSON file in Application.persistentDataPath/RuntimeBuildingKit
+BuildLoadReport report = world.Load(&quot;slot1&quot;);
+Debug.Log(report.Summary);                    // &quot;Loaded 41 pieces. Skipped 3 whose pieces are missing ...&quot;
+</code></pre>
+<ul>
+<li>Saves store each piece by its <strong>piece ID</strong> (never names or paths), with its pose, socket links and support, in a
+  versioned format (<code>BuildSaveData.Format</code>). A save from a newer version of the kit is refused and the world is left as
+  it was.</li>
+<li>Pieces whose definition the world no longer knows are skipped; the report and one Console warning name them.</li>
+<li>Loading replaces everything placed and clears undo history. Only the authority (the host) should load.</li>
+<li>To save somewhere else (cloud, database, your own save system), implement <code>ISaveBackend</code> (Write, TryRead, Exists,
+  Delete) and pass it: <code>world.Save("slot1", myBackend)</code>. <code>world.CaptureSave()</code> / <code>world.LoadSave(data)</code> work with the
+  data directly.</li>
+<li>Resource amounts belong to your inventory and are saved by it (Simple Resource Inventory doesn't save).</li>
+</ul>
+<div class="doc-pager"><a class="pager prev" href="placement-and-sockets.html"><span class="label">Previous</span>Placement and sockets</a><a class="pager next" href="multiplayer.html"><span class="label">Next</span>Multiplayer</a></div>
+<p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Gameplay:+Costs,+Tools,+Undo,+Structure+and+Saving" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#costs-and-sandbox">Costs and sandbox</a></li><li class="toc-2"><a href="#tools">Tools</a></li><li class="toc-2"><a href="#undo-and-redo">Undo and redo</a></li><li class="toc-2"><a href="#structure">Structure</a></li><li class="toc-2"><a href="#build-zones">Build zones</a></li><li class="toc-2"><a href="#saving-and-loading">Saving and loading</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/marklromano/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

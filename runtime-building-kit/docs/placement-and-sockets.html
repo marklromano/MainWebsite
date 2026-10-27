@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Placement and Sockets | Romano Assets</title>
+<meta name="description" content="Placement and Sockets: documentation for the All In One Runtime Building Kit for Unity.">
+<link rel="canonical" href="https://marklromano.github.io/runtime-building-kit/docs/placement-and-sockets.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Placement and Sockets">
+<meta property="og:description" content="Placement and Sockets: documentation for the All In One Runtime Building Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/runtime-building-kit/docs/placement-and-sockets.html">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Runtime Building Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a><a href="walkthroughs.html">Walkthroughs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="kit-window.html">The kit window</a><a href="make-buildable.html">Make Buildable</a><a href="placement-and-sockets.html" aria-current="page">Placement and sockets</a><a href="gameplay.html">Costs, tools, undo, saving</a><a href="multiplayer.html">Multiplayer</a></div><div class="docs-group"><p class=label>Reference</p><a href="extending.html">Extending (API)</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a><a href="walkthroughs.html">Walkthroughs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="kit-window.html">The kit window</a><a href="make-buildable.html">Make Buildable</a><a href="placement-and-sockets.html" aria-current="page">Placement and sockets</a><a href="gameplay.html">Costs, tools, undo, saving</a><a href="multiplayer.html">Multiplayer</a></div><div class="docs-group"><p class=label>Reference</p><a href="extending.html">Extending (API)</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Runtime Building Kit</a><span>/</span><span>Using the kit</span></nav>
+<h1 id="placement-and-sockets">Placement and Sockets</h1>
+<h2 id="in-a-scene">In a scene <a class="anchor" href="#in-a-scene" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Build World</strong> (one per scene): the pieces it can build (a Piece Catalog, plus extra pieces), what blocks placement
+  (Overlap Mask), the overlap tolerance, the support tolerance (largest gap under a corner that still counts as resting
+  on something, 0.1 m) and the build grid (Grid Cell Size; the grid follows the Build World's position and rotation).
+  It keeps the list of placed pieces.</li>
+<li><strong>Builder</strong> (on the player): aims from <strong>Aim Origin</strong> (usually the camera), shows the preview and checks the placement
+  every frame. It never reads input itself: call its commands from your input code.</li>
+<li><strong>Build Diagnostics</strong> (optional): draws the footprint, open sockets and overlaps as gizmos, and can show the current
+  reasons on screen.</li>
+</ul>
+<h2 id="builder-commands-and-events">Builder commands and events <a class="anchor" href="#builder-commands-and-events" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SelectSlot(i)</code> / <code>SelectPiece(def)</code></td>
+<td>Choose a piece (slot 0 is key 1 in the sample)</td>
+</tr>
+<tr>
+<td><code>Rotate(steps)</code></td>
+<td>Turn by the rotation step (45° by default)</td>
+</tr>
+<tr>
+<td><code>AdjustHeight(steps)</code> / <code>ResetHeight()</code></td>
+<td>Raise or lower free placement</td>
+</tr>
+<tr>
+<td><code>Confirm()</code></td>
+<td>Try to place where the preview is (with Update Automatically off, at the spot of the last <code>Refresh</code>)</td>
+</tr>
+<tr>
+<td><code>Confirm(ray)</code></td>
+<td>Aim along a ray and try to place there, e.g. a mouse-pick ray from a top-down camera</td>
+</tr>
+<tr>
+<td><code>Cancel()</code></td>
+<td>Stop building (with a piece picked up: drop it back)</td>
+</tr>
+<tr>
+<td><code>SetTool(tool)</code></td>
+<td>Place, Remove, Move or Upgrade (see <a href="gameplay.html">Gameplay</a>)</td>
+</tr>
+<tr>
+<td><code>Undo()</code> / <code>Redo()</code></td>
+<td>Undo or redo this player's last action</td>
+</tr>
+<tr>
+<td><code>RotatePlaced(piece, steps)</code></td>
+<td>Turn a placed piece where it stands</td>
+</tr>
+</tbody>
+</table></div>
+<p>Events (UnityEvents, so they can be wired in the Inspector): <code>selectionChanged</code>, <code>previewChanged</code> (validity or reasons
+changed), <code>placed</code> (the new piece), <code>rejected</code> (the reasons). <code>Builder.Hint</code> holds a short tip when one helps, e.g.
+"Tip: aim closer to the open edge to snap" when a matching socket is just behind the surface you aim at.</p>
+<p>When there is nowhere to place (nothing under the aim, no socket in reach) the preview is hidden and only the reason
+shows.</p>
+<h2 id="how-a-spot-is-chosen">How a spot is chosen <a class="anchor" href="#how-a-spot-is-chosen" aria-label="Link to this section">#</a></h2>
+<p>A piece tries these in order, using the ones its <strong>Allowed Modes</strong> include:</p>
+<ol>
+<li><strong>Socket:</strong> the nearest open socket on a placed piece that the aim passes within 0.75 m of (Snap Radius), and that
+   one of the selected piece's sockets can join. When several orientations fit, the rotation you chose picks one.</li>
+<li><strong>Grid:</strong> the piece rests on the surface you aim at, lined up on the build grid: its edges land on grid lines (a
+   4 m foundation on a 1 m grid covers whole cells) and it turns in <strong>Rotation Step</strong> steps (90° by default). The cell
+   size is the piece's <strong>Grid Cell</strong>, or the Build World's when that is 0. Foundations and floors use Socket + Grid, so
+   ones placed apart still line up. The grid is only for pieces that stand on things.</li>
+<li><strong>Free:</strong> the piece goes on the surface you aim at, turned by your rotation and raised by the height offset.</li>
+</ol>
+<p>Sockets are points on a piece: their forward points out of the piece, their up is the reference for orientation. Two
+sockets join when their <strong>Socket Types</strong> are compatible (either one listing the other is enough). A type's <strong>Roll
+Step</strong> allows extra orientations around the joint (180 means a wall can face out or in).</p>
+<h3 id="flush-or-centred">Flush or centred <a class="anchor" href="#flush-or-centred" aria-label="Link to this section">#</a></h3>
+<p>Each socket has a <strong>Join</strong> setting for pieces that join it:</p>
+<ul>
+<li><strong>Flush Outward:</strong> the joining piece moves inward until its outer face lines up with the outer face of the piece it
+  joins. The presets make the top edges of foundations and floors flush, so a wall stands on the edge without hanging
+  half over it, and a floor's bottom edges flush, so a floor resting on walls lines up with the foundation below.
+  Walls standing flush on two edges of the same piece may meet at the corner.</li>
+<li><strong>Centred:</strong> the joining piece is centred on the socket (the sides of foundations and floors, and wall sockets).</li>
+</ul>
+<h2 id="furniture-floors-tables-shelves-walls-and-ceilings">Furniture: floors, tables, shelves, walls and ceilings <a class="anchor" href="#furniture-floors-tables-shelves-walls-and-ceilings" aria-label="Link to this section">#</a></h2>
+<p>Pieces without sockets (the <strong>Furniture</strong> and <strong>Wall Mounted</strong> presets) are placed freely. <strong>Goes On</strong> decides which kind
+of surface and which side of the footprint touches it:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Goes On</th>
+<th>Touches with</th>
+<th>Faces</th>
+<th>Use for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Floor</td>
+<td>the bottom</td>
+<td>your rotation</td>
+<td>tables, chairs, vases on tables, books on shelves</td>
+</tr>
+<tr>
+<td>Wall</td>
+<td>the back (local -Z)</td>
+<td>away from the wall (your rotation is ignored)</td>
+<td>pictures, wall shelves, lamps, signs</td>
+</tr>
+<tr>
+<td>Ceiling</td>
+<td>the top</td>
+<td>your rotation</td>
+<td>ceiling lamps, hanging plants</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Needs Support</strong> (on for both presets) checks that something is right under each corner of the side that touches,
+taken 10% in from the edges, so a slight overhang is fine but a vase hanging over a table's edge or a picture off the
+end of a wall is refused. A placed piece you build on still counts as an obstacle: in a bookcase, the shelf above blocks
+a vase that is too tall for the gap. For shelves inside a model, use the <strong>Mesh</strong> collider option (or the model's own
+colliders) so the aim can reach each shelf.</p>
+<h2 id="rules-and-reasons">Rules and reasons <a class="anchor" href="#rules-and-reasons" aria-label="Link to this section">#</a></h2>
+<p>Every placement is checked by rules, and each broken rule gives a reason:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distance from the player</td>
+<td>Too far (12.4 m, max 8 m)</td>
+</tr>
+<tr>
+<td>Surface slope (grid and free placement)</td>
+<td>Slope 38° (max 30°); Can't build on a wall or other upright surface</td>
+</tr>
+<tr>
+<td>Wall and ceiling pieces: the right kind of surface</td>
+<td>Hangs on walls only, this is a floor; This wall leans too much (35°, max 30°)</td>
+</tr>
+<tr>
+<td>Needs Support</td>
+<td>Hangs over the edge of Table_01</td>
+</tr>
+<tr>
+<td>Cost (when the Build World has a Resource Provider and isn't in sandbox)</td>
+<td>Needs 4 Wood (you have 2)</td>
+</tr>
+<tr>
+<td>Overlap with other colliders (ignoring the preview, the piece snapped to, and level geometry under a free piece)</td>
+<td>Overlaps Wall_03</td>
+</tr>
+<tr>
+<td>Socket-only piece with no socket in reach</td>
+<td>Needs a matching socket: aim at an open edge</td>
+</tr>
+<tr>
+<td>Piece not in this world's catalog</td>
+<td>This piece is not in this world's catalog (add it to the Build World)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Add your own rules to <code>BuildWorld.Validator.Rules</code> (implement <code>IPlacementRule</code>).</p>
+<h2 id="performance">Performance <a class="anchor" href="#performance" aria-label="Link to this section">#</a></h2>
+<p>The preview runs every frame without allocating memory once a reason text has been shown (texts are reused), and the
+socket search skips placed pieces far from your aim. With 900 placed foundations the preview takes about 0.25 ms per
+frame in the Editor (Windows desktop).</p>
+<h2 id="requests">Requests <a class="anchor" href="#requests" aria-label="Link to this section">#</a></h2>
+<p><code>Confirm()</code> sends a <strong>Build Request</strong> (piece ID, pose, socket link, a unique request ID) to the world's authority. The
+authority checks everything again before placing: it never trusts the preview. A request ID is applied at most once.
+In single player this is the <code>LocalBuildAuthority</code>; a multiplayer host uses the same request.</p>
+<div class="doc-pager"><a class="pager prev" href="make-buildable.html"><span class="label">Previous</span>Make Buildable</a><a class="pager next" href="gameplay.html"><span class="label">Next</span>Costs, tools, undo, saving</a></div>
+<p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Placement+and+Sockets" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#in-a-scene">In a scene</a></li><li class="toc-2"><a href="#builder-commands-and-events">Builder commands and events</a></li><li class="toc-2"><a href="#how-a-spot-is-chosen">How a spot is chosen</a></li><li class="toc-3"><a href="#flush-or-centred">Flush or centred</a></li><li class="toc-2"><a href="#furniture-floors-tables-shelves-walls-and-ceilings">Furniture: floors, tables, shelves, walls and ceilings</a></li><li class="toc-2"><a href="#rules-and-reasons">Rules and reasons</a></li><li class="toc-2"><a href="#performance">Performance</a></li><li class="toc-2"><a href="#requests">Requests</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/marklromano/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>
