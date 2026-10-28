@@ -149,6 +149,7 @@ turn and scale the object to fit it). The Scene view shows it red or green.</p>
 <p>The preview shows the zone's reason before the player clicks, and the authority refuses requests that break it. Zones
 belong to the Build World in their scene (or the one you set). In code: <code>world.Zones</code>, and
 <code>world.ActiveZones</code> for what the rules use. The Base Building sample keeps its path clear with one.</p>
+<figure class="doc-figure"><img src="img/build-zone.png" alt="A foundation refused on the path: the zone's own reason shows" loading="lazy"><figcaption>A foundation refused on the path: the zone's own reason shows</figcaption></figure>
 <h2 id="saving-and-loading">Saving and loading <a class="anchor" href="#saving-and-loading" aria-label="Link to this section">#</a></h2>
 <pre><code class="language-csharp">world.Save(&quot;slot1&quot;);                          // JSON file in Application.persistentDataPath/RuntimeBuildingKit
 BuildLoadReport report = world.Load(&quot;slot1&quot;);

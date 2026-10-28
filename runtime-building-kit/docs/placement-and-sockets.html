@@ -136,6 +136,7 @@ Step</strong> allows extra orientations around the joint (180 means a wall can f
   Walls standing flush on two edges of the same piece may meet at the corner.</li>
 <li><strong>Centred:</strong> the joining piece is centred on the socket (the sides of foundations and floors, and wall sockets).</li>
 </ul>
+<figure class="doc-figure"><img src="img/snap-foundation.png" alt="A foundation snapping beside a placed one" loading="lazy"><figcaption>A foundation snapping beside a placed one</figcaption></figure>
 <h2 id="furniture-floors-tables-shelves-walls-and-ceilings">Furniture: floors, tables, shelves, walls and ceilings <a class="anchor" href="#furniture-floors-tables-shelves-walls-and-ceilings" aria-label="Link to this section">#</a></h2>
 <p>Pieces without sockets (the <strong>Furniture</strong> and <strong>Wall Mounted</strong> presets) are placed freely. <strong>Goes On</strong> decides which kind
 of surface and which side of the footprint touches it:</p>
@@ -174,6 +175,8 @@ taken 10% in from the edges, so a slight overhang is fine but a vase hanging ove
 end of a wall is refused. A placed piece you build on still counts as an obstacle: in a bookcase, the shelf above blocks
 a vase that is too tall for the gap. For shelves inside a model, use the <strong>Mesh</strong> collider option (or the model's own
 colliders) so the aim can reach each shelf.</p>
+<figure class="doc-figure"><img src="img/furniture-on-table.png" alt="Books on a table (Goes On: Floor)" loading="lazy"><figcaption>Books on a table (Goes On: Floor)</figcaption></figure>
+<figure class="doc-figure"><img src="img/furniture-on-wall.png" alt="A picture on a wall (Goes On: Wall)" loading="lazy"><figcaption>A picture on a wall (Goes On: Wall)</figcaption></figure>
 <h2 id="rules-and-reasons">Rules and reasons <a class="anchor" href="#rules-and-reasons" aria-label="Link to this section">#</a></h2>
 <p>Every placement is checked by rules, and each broken rule gives a reason:</p>
 <div class="table-wrap"><table>
@@ -219,10 +222,56 @@ colliders) so the aim can reach each shelf.</p>
 </tbody>
 </table></div>
 <p>Add your own rules to <code>BuildWorld.Validator.Rules</code> (implement <code>IPlacementRule</code>).</p>
+<figure class="doc-figure"><img src="img/reason-refused.png" alt="A refused spot: the preview turns red and says why" loading="lazy"><figcaption>A refused spot: the preview turns red and says why</figcaption></figure>
 <h2 id="performance">Performance <a class="anchor" href="#performance" aria-label="Link to this section">#</a></h2>
 <p>The preview runs every frame without allocating memory once a reason text has been shown (texts are reused), and the
-socket search skips placed pieces far from your aim. With 900 placed foundations the preview takes about 0.25 ms per
-frame in the Editor (Windows desktop).</p>
+socket search skips placed pieces far from your aim.</p>
+<p>Measured with 900 placed foundations (a 30 by 30 field, 7200 open sockets), time per preview refresh:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Aim</th>
+<th>Time</th>
+<th>Memory per refresh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wall snapping to a foundation's edge</td>
+<td>0.24 ms</td>
+<td>0 bytes</td>
+</tr>
+<tr>
+<td>Foundation on the grid</td>
+<td>0.24 ms</td>
+<td>0 bytes</td>
+</tr>
+<tr>
+<td>Small piece overlapping a rock (refused)</td>
+<td>0.009 ms</td>
+<td>0 bytes</td>
+</tr>
+<tr>
+<td>Small piece too far away (refused)</td>
+<td>0.007 ms</td>
+<td>0 bytes</td>
+</tr>
+<tr>
+<td>Small piece over a foundation's edge (refused)</td>
+<td>0.006 ms</td>
+<td>0 bytes</td>
+</tr>
+</tbody>
+</table></div>
+<p>Snapping and grid cases cost the most because they search the sockets of nearby pieces; a refusal stops at the first
+rule that fails.</p>
+<p>Machine: AMD Ryzen 7 5700X3D, 32 GB, Radeon RX 9060 XT, Windows 11, Unity 6000.3.24f1, in the Editor (a player build is
+faster). The times come from the kit's performance tests (<code>PreviewPerformanceTests</code>); "0 bytes" is checked by the Unity
+Test Framework's GC allocation constraint, which counts allocations with the Profiler's recorder, and by the Benchmark
+sample.</p>
+<p><strong>Check it on your machine:</strong> open the <strong>Benchmark</strong> sample scene (<code>Samples/Benchmark/RBK_Benchmark.unity</code>) and press
+Play, or add it to a player build. It places 900 foundations, times each kind of aim and shows the results, your
+processor and Unity version on screen and in the Console.</p>
 <h2 id="requests">Requests <a class="anchor" href="#requests" aria-label="Link to this section">#</a></h2>
 <p><code>Confirm()</code> sends a <strong>Build Request</strong> (piece ID, pose, socket link, a unique request ID) to the world's authority. The
 authority checks everything again before placing: it never trusts the preview. A request ID is applied at most once.

@@ -85,8 +85,15 @@ README.</p>
 <td><code>Samples/Multiplayer/RBK_Multiplayer</code></td>
 <td>Host and join; host-authoritative building (see <a href="multiplayer.html">Multiplayer</a>).</td>
 </tr>
+<tr>
+<td><code>Samples/Benchmark/RBK_Benchmark</code></td>
+<td>Places 900 foundations and times the placement preview on your machine (see <a href="placement-and-sockets.html#performance">Performance</a>). No player.</td>
+</tr>
 </tbody>
 </table></div>
+<figure class="doc-figure"><img src="img/quickstart-sample.png" alt="The Base Building sample: a wall snapping onto a foundation's edge" loading="lazy"><figcaption>The Base Building sample: a wall snapping onto a foundation's edge</figcaption></figure>
+<figure class="doc-figure"><img src="img/sample-third-person.png" alt="The Third Person sample" loading="lazy"><figcaption>The Third Person sample</figcaption></figure>
+<figure class="doc-figure"><img src="img/sample-top-down.png" alt="The Top Down sample: the mouse pointer aims" loading="lazy"><figcaption>The Top Down sample: the mouse pointer aims</figcaption></figure>
 <h2 id="keys">Keys <a class="anchor" href="#keys" aria-label="Link to this section">#</a></h2>
 <p>WASD move, mouse look, number keys pick a piece. Left click places, right click or Q cancels, R or the mouse wheel
 turns the preview, PgUp / PgDn change height. X removes, G moves, U upgrades, T turns a placed piece, Z / Y undo and
@@ -102,6 +109,7 @@ press the new key or button (Esc cancels); <strong>Reset every key</strong> goes
 sessions. This uses the Input System's own interactive rebinding (<code>PerformInteractiveRebinding</code>); the Input System
 package also has a "Rebinding UI" sample (Package Manager &gt; Input System &gt; Samples) if you want ready-made UI for your
 own menus. With the old Input Manager, keys are set in <strong>Project Settings &gt; Input Manager</strong>.</p>
+<figure class="doc-figure"><img src="img/build-menu.png" alt="The build menu: one page per category" loading="lazy"><figcaption>The build menu: one page per category</figcaption></figure>
 <h2 id="how-the-samples-are-put-together">How the samples are put together <a class="anchor" href="#how-the-samples-are-put-together" aria-label="Link to this section">#</a></h2>
 <ul>
 <li>One <strong>Build World</strong> per scene (registry, rules, costs through a <strong>Simple Resource Inventory</strong>) and one player with a
