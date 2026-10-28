@@ -157,7 +157,8 @@ PRODUCTS = [
         "store": "",
         "summary": "Let players build bases and place furniture at runtime: turn your own models into build pieces in about "
                    "ten minutes without code, snap them together through sockets, and see a plain reason whenever a "
-                   "spot is refused.",
+                   "spot is refused. Four ready-made themes, and every part of the HUD, preview, words and sounds can be "
+                   "changed or switched off.",
         "requirements": ["Unity 6000.0+", "Built-in, URP & HDRP", "No dependencies", "Full C# source"],
         "menu": "Tools > All In One Runtime Building Kit",
         "support_info": "In the kit window, open the **Help** tab and click **Copy support info**",
@@ -179,6 +180,7 @@ PRODUCTS = [
             ("Start here", "Walkthroughs.md", "walkthroughs.html", "Walkthroughs"),
             ("Start here", "Upgrading.md", "upgrading.html", "Upgrading"),
             ("Using the kit", "KitWindow.md", "kit-window.html", "The kit window"),
+            ("Using the kit", "MakeItYours.md", "make-it-yours.html", "Make it yours"),
             ("Using the kit", "MakeBuildable.md", "make-buildable.html", "Make Buildable"),
             ("Using the kit", "PlacementAndSockets.md", "placement-and-sockets.html", "Placement and sockets"),
             ("Using the kit", "Gameplay.md", "gameplay.html", "Costs, tools, undo, saving"),

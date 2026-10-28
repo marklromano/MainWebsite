@@ -43,8 +43,8 @@
     <kbd class="docs-search-key" aria-hidden="true">/</kbd>
     <div class="docs-results" id="docs-results" role="listbox" hidden></div>
   </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a><a href="walkthroughs.html">Walkthroughs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="kit-window.html">The kit window</a><a href="make-buildable.html">Make Buildable</a><a href="placement-and-sockets.html">Placement and sockets</a><a href="gameplay.html">Costs, tools, undo, saving</a><a href="multiplayer.html">Multiplayer</a></div><div class="docs-group"><p class=label>Reference</p><a href="extending.html">Extending (API)</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html" aria-current="page">Changelog</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a><a href="walkthroughs.html">Walkthroughs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="kit-window.html">The kit window</a><a href="make-buildable.html">Make Buildable</a><a href="placement-and-sockets.html">Placement and sockets</a><a href="gameplay.html">Costs, tools, undo, saving</a><a href="multiplayer.html">Multiplayer</a></div><div class="docs-group"><p class=label>Reference</p><a href="extending.html">Extending (API)</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html" aria-current="page">Changelog</a></div></div></details>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a><a href="walkthroughs.html">Walkthroughs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="kit-window.html">The kit window</a><a href="make-it-yours.html">Make it yours</a><a href="make-buildable.html">Make Buildable</a><a href="placement-and-sockets.html">Placement and sockets</a><a href="gameplay.html">Costs, tools, undo, saving</a><a href="multiplayer.html">Multiplayer</a></div><div class="docs-group"><p class=label>Reference</p><a href="extending.html">Extending (API)</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html" aria-current="page">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a><a href="walkthroughs.html">Walkthroughs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="kit-window.html">The kit window</a><a href="make-it-yours.html">Make it yours</a><a href="make-buildable.html">Make Buildable</a><a href="placement-and-sockets.html">Placement and sockets</a><a href="gameplay.html">Costs, tools, undo, saving</a><a href="multiplayer.html">Multiplayer</a></div><div class="docs-group"><p class=label>Reference</p><a href="extending.html">Extending (API)</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html" aria-current="page">Changelog</a></div></div></details>
   </nav>
 </aside>
 <article class="prose" id="doc">
@@ -69,6 +69,18 @@
   memory allocated per frame; about 0.24 ms per refresh with 900 placed pieces (AMD Ryzen 7 5700X3D, in the Editor).</li>
 <li><strong>Build Zones:</strong> boxes or spheres where building is forbidden or the only place allowed, each with its own reason and
   optional piece and category filters.</li>
+</ul>
+<h3 id="make-it-yours">Make it yours <a class="anchor" href="#make-it-yours" aria-label="Link to this section">#</a></h3>
+<ul>
+<li><strong>Themes:</strong> one Build Theme sets how building looks, sounds and reads: preview colours and pulse, tool highlights,
+  crosshair (plus, dot, circle, brackets, your texture or none), fonts, colours and sizes of every line, hotbar, build
+  menu, sounds, place and remove effects, and Build Zones shown in play. Every part can be switched off. Four ready-made
+  themes (Classic, Blueprint, Warm, Minimal), New Theme From Preset, and changes that show at once, in the Game view too.</li>
+<li><strong>Per-piece look:</strong> a piece can have its own preview colours, sounds and effects on top of the theme.</li>
+<li><strong>Your words:</strong> every word players read comes from a Text Table, ready to translate, with a hook for your localisation.</li>
+<li><strong>Your UI:</strong> a ready-made Build HUD, or your own through <code>IBuildHudView</code>, the Build Presentation's events and
+  <code>IBuildMenu</code>.</li>
+<li><strong>Sounds with no audio files:</strong> short built-in sounds made by the kit; use your own clips any time.</li>
 </ul>
 <h3 id="gameplay">Gameplay <a class="anchor" href="#gameplay" aria-label="Link to this section">#</a></h3>
 <ul>
@@ -119,7 +131,7 @@
 <div class="doc-pager"><a class="pager prev" href="support.html"><span class="label">Previous</span>Support</a><span></span></div>
 <p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Changelog" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
 </article>
-<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#100---unreleased">[1.0.0] - Unreleased</a></li><li class="toc-3"><a href="#building">Building</a></li><li class="toc-3"><a href="#gameplay">Gameplay</a></li><li class="toc-3"><a href="#multiplayer">Multiplayer</a></li><li class="toc-3"><a href="#editor">Editor</a></li><li class="toc-3"><a href="#samples">Samples</a></li><li class="toc-3"><a href="#compatibility">Compatibility</a></li></ul></nav>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#100---unreleased">[1.0.0] - Unreleased</a></li><li class="toc-3"><a href="#building">Building</a></li><li class="toc-3"><a href="#make-it-yours">Make it yours</a></li><li class="toc-3"><a href="#gameplay">Gameplay</a></li><li class="toc-3"><a href="#multiplayer">Multiplayer</a></li><li class="toc-3"><a href="#editor">Editor</a></li><li class="toc-3"><a href="#samples">Samples</a></li><li class="toc-3"><a href="#compatibility">Compatibility</a></li></ul></nav>
 </div>
 </main>
 <footer class="site-footer">
