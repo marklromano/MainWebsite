@@ -779,10 +779,10 @@ def build_docs(product, kit_root):
 
     # Pictures from the kit's Documentation/Images
     if (docs_dir / "Images").exists():
-        shutil.copytree(docs_dir / "Images", out_dir / "img", dirs_exist_ok=True)
+        shutil.copytree(docs_dir / "Images", out_dir / "img", dirs_exist_ok=True, ignore=shutil.ignore_patterns("*.meta"))
     for folder in sorted({posixpath.dirname(src) for _, src, _, _ in pages} - {""}):
         if (docs_dir / folder / "Images").exists():
-            shutil.copytree(docs_dir / folder / "Images", out_dir / "img" / folder, dirs_exist_ok=True)
+            shutil.copytree(docs_dir / folder / "Images", out_dir / "img" / folder, dirs_exist_ok=True, ignore=shutil.ignore_patterns("*.meta"))
 
     search = []
     rendered = {}
