@@ -76,11 +76,51 @@
 </tr>
 <tr>
 <td><code>Rotate(steps)</code></td>
-<td>Turn by the rotation step (45° by default)</td>
+<td>Turn by the rotation step (45° by default; the piece's own step if it has one)</td>
+</tr>
+<tr>
+<td><code>RotateFine(steps)</code> / <code>RotateBy(amount)</code></td>
+<td>Turn in fine steps (5°), or freely by any amount (mouse movement × Free Rotation Speed)</td>
+</tr>
+<tr>
+<td><code>SnapRotation</code></td>
+<td>Off: every turn is a fine step (a setting players can switch)</td>
+</tr>
+<tr>
+<td><code>ResetRotation()</code></td>
+<td>Back to no turn, tilt or nudge</td>
+</tr>
+<tr>
+<td><code>Tilt(pitchSteps, rollSteps)</code></td>
+<td>Tilt forward/back and sideways, for pieces that allow it</td>
 </tr>
 <tr>
 <td><code>AdjustHeight(steps)</code> / <code>ResetHeight()</code></td>
 <td>Raise or lower free placement</td>
+</tr>
+<tr>
+<td><code>Nudge(right, away)</code> / <code>ResetNudge()</code></td>
+<td>Move the preview across the surface in Nudge Step steps (up to Max Nudge)</td>
+</tr>
+<tr>
+<td><code>PlaceOffGrid</code></td>
+<td>While true, grid pieces are placed freely (hold a key for it)</td>
+</tr>
+<tr>
+<td><code>PickPiece()</code></td>
+<td>Eyedropper: take the type, turn and look of the placed piece under the aim</td>
+</tr>
+<tr>
+<td><code>SelectVariant(i)</code> / <code>NextVariant()</code></td>
+<td>Choose the look new pieces get (and the Paint tool gives)</td>
+</tr>
+<tr>
+<td><code>Shape</code>, <code>CycleShape()</code>, <code>BeginShape()</code></td>
+<td>One piece, a row or an area (see below)</td>
+</tr>
+<tr>
+<td><code>StartStamp(blueprint)</code> / <code>StopStamp()</code></td>
+<td>Stamp a blueprint (see below)</td>
 </tr>
 <tr>
 <td><code>Confirm()</code></td>
@@ -96,7 +136,7 @@
 </tr>
 <tr>
 <td><code>SetTool(tool)</code></td>
-<td>Place, Remove, Move or Upgrade (see <a href="gameplay.html">Gameplay</a>)</td>
+<td>Place, Remove, Move, Upgrade, Paint or Copy (see <a href="gameplay.html">Gameplay</a>)</td>
 </tr>
 <tr>
 <td><code>Undo()</code> / <code>Redo()</code></td>
@@ -137,6 +177,33 @@ Step</strong> allows extra orientations around the joint (180 means a wall can f
 <li><strong>Centred:</strong> the joining piece is centred on the socket (the sides of foundations and floors, and wall sockets).</li>
 </ul>
 <figure class="doc-figure"><img src="img/snap-foundation.png" alt="A foundation snapping beside a placed one" loading="lazy"><figcaption>A foundation snapping beside a placed one</figcaption></figure>
+<h2 id="turning">Turning <a class="anchor" href="#turning" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Steps:</strong> <code>Rotate</code> turns by the Builder's <strong>Rotation Step</strong> (45° by default). A piece can have its <strong>Own Rotation
+  Step</strong> (Piece Definition &gt; Turning); 0 means it turns freely (fine steps and free turning only).</li>
+<li><strong>Fine and free:</strong> <code>RotateFine</code> turns in <strong>Fine Rotation Step</strong> degrees (5°; Shift + wheel in the samples). <code>RotateBy</code>
+  turns by any amount (hold Alt and move the mouse in the samples, or the right stick with the left trigger held).
+  <strong>Snap Rotation</strong> off makes every turn a fine step: a setting players can switch (F in the samples).</li>
+<li><strong>Each piece keeps its own turn</strong> (Remember Rotation Per Piece): turning a table doesn't make the next picture hang
+  crooked.</li>
+<li><strong>Random turn:</strong> decor with <strong>Random Turn</strong> starts each placement turned by a random angle up to that many degrees.</li>
+<li><strong>On walls,</strong> turning spins a piece around the wall (a picture from landscape to portrait), unless <strong>Turns On Walls</strong>
+  is off.</li>
+<li><strong>Tilt:</strong> pieces with <strong>Allow Tilt</strong> can be tilted forward/back and sideways up to <strong>Max Tilt</strong> (I/K and U/O in the
+  samples). <strong>Align To Surface</strong> tilts a piece to match a sloping surface instead.</li>
+<li>Grid pieces keep the grid's rotation step (the grid decides), whatever the Builder's settings.</li>
+</ul>
+<h2 id="adjusting-the-spot">Adjusting the spot <a class="anchor" href="#adjusting-the-spot" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Height:</strong> <code>AdjustHeight</code> raises or lowers free placement (PgUp / PgDn).</li>
+<li><strong>Nudge:</strong> <code>Nudge</code> moves the preview across the surface in <strong>Nudge Step</strong> steps, relative to where the player looks,
+  up to <strong>Max Nudge</strong> (the arrow keys in the samples).</li>
+<li><strong>Position Step:</strong> free placement can line positions up to a step (for example 0.1 m) on the grid's axes, so furniture
+  sits neatly. 0 turns it off.</li>
+<li><strong>Off the grid:</strong> while <code>PlaceOffGrid</code> is true (hold Ctrl in the samples), grid pieces are placed freely. The Build
+  World's <strong>Grid Enabled</strong> switches the grid off for everyone (N in the samples), and <strong>Allow Off Grid</strong> off keeps grid
+  pieces always on the grid. A multiplayer host sends these to its players.</li>
+</ul>
 <h2 id="furniture-floors-tables-shelves-walls-and-ceilings">Furniture: floors, tables, shelves, walls and ceilings <a class="anchor" href="#furniture-floors-tables-shelves-walls-and-ceilings" aria-label="Link to this section">#</a></h2>
 <p>Pieces without sockets (the <strong>Furniture</strong> and <strong>Wall Mounted</strong> presets) are placed freely. <strong>Goes On</strong> decides which kind
 of surface and which side of the footprint touches it:</p>
@@ -170,6 +237,11 @@ of surface and which side of the footprint touches it:</p>
 </tr>
 </tbody>
 </table></div>
+<p><strong>Also Goes On</strong> lets one piece use several kinds of surface: a lamp that stands on tables and hangs on walls, a shelf for
+floors and walls (or <strong>Everything</strong>: any surface). The piece goes on whichever kind it is aimed at (within 45° of flat is
+a floor, of upright a wall, of facing down a ceiling); on another kind it gets the usual reason. <strong>Only On Categories</strong>
+and <strong>Only On Tag</strong> limit free placement to certain things ("Goes on Tables only"): placed pieces of those categories,
+or objects with that Unity tag.</p>
 <p><strong>Needs Support</strong> (on for both presets) checks that something is right under each corner of the side that touches,
 taken 10% in from the edges, so a slight overhang is fine but a vase hanging over a table's edge or a picture off the
 end of a wall is refused. A placed piece you build on still counts as an obstacle: in a bookcase, the shelf above blocks
@@ -219,10 +291,57 @@ colliders) so the aim can reach each shelf.</p>
 <td>Piece not in this world's catalog</td>
 <td>This piece is not in this world's catalog (add it to the Build World)</td>
 </tr>
+<tr>
+<td>Only On Categories / Only On Tag</td>
+<td>Goes on Tables only</td>
+</tr>
+<tr>
+<td>Build limits (piece, player, category)</td>
+<td>Bed: only 2 per player; Furniture: only 20 in this world; Only 200 pieces per player</td>
+</tr>
+<tr>
+<td>A stamped piece with nothing holding it</td>
+<td>Nothing would hold it up here</td>
+</tr>
 </tbody>
 </table></div>
 <p>Add your own rules to <code>BuildWorld.Validator.Rules</code> (implement <code>IPlacementRule</code>).</p>
 <figure class="doc-figure"><img src="img/reason-refused.png" alt="A refused spot: the preview turns red and says why" loading="lazy"><figcaption>A refused spot: the preview turns red and says why</figcaption></figure>
+<h2 id="rows-and-areas">Rows and areas <a class="anchor" href="#rows-and-areas" aria-label="Link to this section">#</a></h2>
+<p>Pieces with <strong>Allow Rows</strong> (walls, fences) or <strong>Allow Areas</strong> (foundations, floors) can be placed many at once. Set the
+Builder's <strong>Shape</strong> to Line or Area (C in the samples), start at the preview with <code>BeginShape()</code> (press), aim to stretch
+it, then <code>Confirm()</code> (release). The preview shows every piece, each checked as if placed alone, with how many fit and
+what they cost together; pieces that don't fit (or that the player can't pay for, or that would pass a limit) stay red
+and are left out. Every piece is a separate request, so the authority (a multiplayer host too) checks and charges each
+one, and they share a group: <strong>one undo takes the whole row or area back</strong>. <strong>Max Batch</strong> caps the size (64).</p>
+<figure class="doc-figure"><img src="img/area-drag.png" alt="An area of nine foundations dragged out in the Base Building sample, with the running cost" loading="lazy"><figcaption>An area of nine foundations dragged out in the Base Building sample, with the running cost</figcaption></figure>
+<h2 id="blueprints">Blueprints <a class="anchor" href="#blueprints" aria-label="Link to this section">#</a></h2>
+<p>A blueprint is a group of pieces to build again in one go: a hut, a room, a wall section.</p>
+<ul>
+<li><strong>Copy:</strong> the Copy tool (H in the samples) copies the aimed piece and everything joined to it (by sockets, or standing
+  on or under it), then starts stamping it. In code: <code>BuildBlueprint.Capture(piece, world.Registry)</code>.</li>
+<li><strong>Stamp:</strong> <code>StartStamp(blueprint)</code> previews every piece around the aim; Rotate turns it. Confirm builds it: each piece
+  is checked at its exact spot (joined to the sockets it sits on, and something must hold it up), charged, and one undo
+  takes the whole stamp back. Pieces are built from the ground up, whatever order a blueprint lists them in. Cancel stops
+  stamping.</li>
+<li><strong>Keep them:</strong> your own as <strong>Blueprint</strong> assets (Assets &gt; Create &gt; All In One Runtime Building Kit &gt; Blueprint, or the
+  Builder's context menu <strong>Save Copied Blueprint As Asset</strong> in Play Mode, which saves into
+  <code>Assets/AllInOneRuntimeBuildingKitData/Blueprints</code>); players' as JSON files with <code>Builder.SaveBlueprint(name)</code> and
+  <code>BlueprintLibrary</code> (<code>Names</code>, <code>Load</code>, <code>Delete</code>).</li>
+</ul>
+<p>The Base Building sample stamps its cottage with J.</p>
+<figure class="doc-figure"><img src="img/blueprint-stamp.png" alt="The cottage blueprint previewed beside the cottage, every piece checked" loading="lazy"><figcaption>The cottage blueprint previewed beside the cottage, every piece checked</figcaption></figure>
+<h2 id="looks-and-the-paint-tool">Looks and the Paint tool <a class="anchor" href="#looks-and-the-paint-tool" aria-label="Link to this section">#</a></h2>
+<p>A Piece Definition's <strong>Looks</strong> are colours (tints of the piece's own materials) or materials (swapped for all of them).
+Look 0 is always the model as it is. Players choose one while placing (<code>NextVariant</code>, V in the samples) and change placed
+pieces with the <strong>Paint</strong> tool (P). Looks are saved, undone like everything else and sent to every player. The preview
+takes the chosen look's colour (the theme's <strong>Use Look Colour</strong>).</p>
+<h2 id="build-limits">Build limits <a class="anchor" href="#build-limits" aria-label="Link to this section">#</a></h2>
+<ul>
+<li>Per piece: <strong>Max In World</strong> and <strong>Max Per Player</strong> on the Piece Definition ("Bed: only 2 per player").</li>
+<li>Per category and per player on the Build World: <strong>Category Limits</strong> and <strong>Max Pieces Per Player</strong>.</li>
+</ul>
+<p>The preview shows the reason before the click; the authority refuses too. Moving a piece doesn't count it twice.</p>
 <h2 id="performance">Performance <a class="anchor" href="#performance" aria-label="Link to this section">#</a></h2>
 <p>The preview runs every frame without allocating memory once a reason text has been shown (texts are reused), and the
 socket search skips placed pieces far from your aim.</p>
@@ -279,7 +398,7 @@ In single player this is the <code>LocalBuildAuthority</code>; a multiplayer hos
 <div class="doc-pager"><a class="pager prev" href="make-buildable.html"><span class="label">Previous</span>Make Buildable</a><a class="pager next" href="gameplay.html"><span class="label">Next</span>Costs, tools, undo, saving</a></div>
 <p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Placement+and+Sockets" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
 </article>
-<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#in-a-scene">In a scene</a></li><li class="toc-2"><a href="#builder-commands-and-events">Builder commands and events</a></li><li class="toc-2"><a href="#how-a-spot-is-chosen">How a spot is chosen</a></li><li class="toc-3"><a href="#flush-or-centred">Flush or centred</a></li><li class="toc-2"><a href="#furniture-floors-tables-shelves-walls-and-ceilings">Furniture: floors, tables, shelves, walls and ceilings</a></li><li class="toc-2"><a href="#rules-and-reasons">Rules and reasons</a></li><li class="toc-2"><a href="#performance">Performance</a></li><li class="toc-2"><a href="#requests">Requests</a></li></ul></nav>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#in-a-scene">In a scene</a></li><li class="toc-2"><a href="#builder-commands-and-events">Builder commands and events</a></li><li class="toc-2"><a href="#how-a-spot-is-chosen">How a spot is chosen</a></li><li class="toc-3"><a href="#flush-or-centred">Flush or centred</a></li><li class="toc-2"><a href="#turning">Turning</a></li><li class="toc-2"><a href="#adjusting-the-spot">Adjusting the spot</a></li><li class="toc-2"><a href="#furniture-floors-tables-shelves-walls-and-ceilings">Furniture: floors, tables, shelves, walls and ceilings</a></li><li class="toc-2"><a href="#rules-and-reasons">Rules and reasons</a></li><li class="toc-2"><a href="#rows-and-areas">Rows and areas</a></li><li class="toc-2"><a href="#blueprints">Blueprints</a></li><li class="toc-2"><a href="#looks-and-the-paint-tool">Looks and the Paint tool</a></li><li class="toc-2"><a href="#build-limits">Build limits</a></li><li class="toc-2"><a href="#performance">Performance</a></li><li class="toc-2"><a href="#requests">Requests</a></li></ul></nav>
 </div>
 </main>
 <footer class="site-footer">

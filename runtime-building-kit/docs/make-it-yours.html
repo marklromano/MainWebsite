@@ -120,7 +120,7 @@ so you see each change to the theme at once. Turn it off with <strong>Preview In
 </tr>
 <tr>
 <td><strong>Tool highlights</strong></td>
-<td>Remove, Move and Upgrade colours</td>
+<td>Remove, Move, Upgrade, Paint and Copy colours; <strong>Use Look Colour</strong> tints the preview with the chosen look</td>
 <td><strong>Show Tool Highlight</strong> off</td>
 </tr>
 <tr>
@@ -150,7 +150,7 @@ so you see each change to the theme at once. Turn it off with <strong>Preview In
 </tr>
 <tr>
 <td><strong>Sounds</strong></td>
-<td>Place, refuse, remove, move, upgrade, undo, select: your clip or a built-in sound, volume, pitch; overall volume</td>
+<td>Place, refuse, remove, move, upgrade, undo, select, paint: your clip or a built-in sound, volume, pitch; overall volume</td>
 <td><strong>Enabled</strong> off (all), or each sound's <strong>Enabled</strong></td>
 </tr>
 <tr>
@@ -164,6 +164,11 @@ so you see each change to the theme at once. Turn it off with <strong>Preview In
 <td>Display <strong>Never</strong> (or <strong>While Building</strong>, <strong>Always</strong>)</td>
 </tr>
 <tr>
+<td><strong>Status line</strong></td>
+<td>Colour and size of the line that says what else the next click does (a row and its cost, a blueprint, the chosen look, off grid)</td>
+<td><strong>Show Status</strong></td>
+</tr>
+<tr>
 <td><strong>Text</strong></td>
 <td>Every word (see below)</td>
 <td></td>
@@ -172,6 +177,10 @@ so you see each change to the theme at once. Turn it off with <strong>Preview In
 </table></div>
 <p>Sounds need no audio files: the built-in sounds (click, pop, thud, chime, buzz, whoosh) are made by the kit when first
 played. Put your own clips in their place whenever you like.</p>
+<h2 id="looks-your-players-choose">Looks your players choose <a class="anchor" href="#looks-your-players-choose" aria-label="Link to this section">#</a></h2>
+<p>Besides the theme (how building looks for everyone), each Piece Definition can have <strong>Looks</strong>: colours or materials
+players pick while placing and change later with the Paint tool (see
+<a href="placement-and-sockets.html#looks-and-the-paint-tool">Placement and Sockets</a>).</p>
 <h2 id="one-pieces-own-look">One piece's own look <a class="anchor" href="#one-pieces-own-look" aria-label="Link to this section">#</a></h2>
 <p>Some pieces deserve their own touch: a stone wall that thuds harder, a lamp that chimes, a door preview in gold. On a
 <strong>Piece Definition</strong>, open <strong>Look and Sound &gt; This Piece's Own Look</strong> and tick what to override: preview colours, place
@@ -195,9 +204,9 @@ BuildText.NotifyChanged();
 <p>The Build Presentation works out everything the HUD shows, already in your words, and hands it to any UI:</p>
 <ul>
 <li><strong>No code:</strong> its events (<strong>Reason Changed</strong>, <strong>Tip Changed</strong>, <strong>Action Changed</strong>, <strong>Message Shown</strong>, <strong>Resources
-    Changed</strong>, <strong>Theme Changed</strong>) take strings. Drag your TextMeshPro or UI Text in and pick its <code>text</code>.</li>
+    Changed</strong>, <strong>Status Changed</strong>, <strong>Theme Changed</strong>) take strings. Drag your TextMeshPro or UI Text in and pick its <code>text</code>.</li>
 <li><strong>Code:</strong> implement <code>IBuildHudView</code> on a component next to the Build Presentation (or call <code>AddView</code>). It gets
-    <code>SetTheme</code>, <code>SetReason(reason, tip)</code>, <code>SetAction</code>, <code>ShowMessage(message, isError)</code> and <code>SetResources</code>.</li>
+    <code>SetTheme</code>, <code>SetReason(reason, tip)</code>, <code>SetAction</code>, <code>ShowMessage(message, isError)</code>, <code>SetResources</code> and <code>SetStatus</code>.</li>
 <li><strong>Your own build menu:</strong> implement <code>IBuildMenu</code> (<code>IsOpen</code>, <code>Open</code>, <code>Close</code>), fill it with <code>BuildMenuPages.Fill</code>
     (the catalog by category) and pick a piece with <code>builder.SelectPiece(piece)</code>. The theme's <strong>Menu</strong> colours are there
     for it too.</li>
@@ -214,7 +223,7 @@ builder.ShowPreview = false;                   // no preview, still checked
 <div class="doc-pager"><a class="pager prev" href="kit-window.html"><span class="label">Previous</span>The kit window</a><a class="pager next" href="make-buildable.html"><span class="label">Next</span>Make Buildable</a></div>
 <p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Make+It+Yours" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
 </article>
-<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#in-a-minute">In a minute</a></li><li class="toc-2"><a href="#the-built-in-themes">The built-in themes</a></li><li class="toc-2"><a href="#your-own-theme">Your own theme</a></li><li class="toc-2"><a href="#every-setting">Every setting</a></li><li class="toc-2"><a href="#one-pieces-own-look">One piece&#x27;s own look</a></li><li class="toc-2"><a href="#your-own-words-and-other-languages">Your own words, and other languages</a></li><li class="toc-2"><a href="#bring-your-own-ui">Bring your own UI</a></li><li class="toc-2"><a href="#in-code">In code</a></li></ul></nav>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#in-a-minute">In a minute</a></li><li class="toc-2"><a href="#the-built-in-themes">The built-in themes</a></li><li class="toc-2"><a href="#your-own-theme">Your own theme</a></li><li class="toc-2"><a href="#every-setting">Every setting</a></li><li class="toc-2"><a href="#looks-your-players-choose">Looks your players choose</a></li><li class="toc-2"><a href="#one-pieces-own-look">One piece&#x27;s own look</a></li><li class="toc-2"><a href="#your-own-words-and-other-languages">Your own words, and other languages</a></li><li class="toc-2"><a href="#bring-your-own-ui">Bring your own UI</a></li><li class="toc-2"><a href="#in-code">In code</a></li></ul></nav>
 </div>
 </main>
 <footer class="site-footer">

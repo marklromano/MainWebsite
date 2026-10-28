@@ -91,7 +91,13 @@ to single-player building (and a client's copy of the pieces is cleared, unless 
   their links and support, in small messages. Changes your own code makes on the host (loading a save, spawning pieces)
   go out too, at the end of the frame.</li>
 <li><strong>Sends the whole world to late joiners</strong> before anything else, in chunks.</li>
-<li><strong>Keeps each player's undo history</strong>: Z undoes only your own actions, on the host.</li>
+<li><strong>Keeps each player's undo history</strong>: Z undoes only your own actions, on the host. A row, an area or a stamped
+  blueprint is one entry.</li>
+<li><strong>Checks rows, areas and blueprints piece by piece</strong>: each is its own request, checked and charged like any other.
+  Stamped pieces are checked at their exact spot and must be joined to a socket or stand on something.</li>
+<li><strong>Paints</strong> with the same reach and permission checks, and sends every piece's look to everyone.</li>
+<li><strong>Sends its grid switches and build limits</strong> (Grid Enabled, Allow Off Grid, Category Limits, Max Pieces Per Player),
+  so clients' previews match.</li>
 </ul>
 <p>Refusals reach the client as the same plain reasons as single player, through the Builder's <code>rejected</code> event.</p>
 <h2 id="who-may-change-what">Who may change what <a class="anchor" href="#who-may-change-what" aria-label="Link to this section">#</a></h2>

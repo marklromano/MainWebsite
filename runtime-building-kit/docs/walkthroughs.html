@@ -122,7 +122,26 @@ if (Input.GetMouseButtonDown(0)) builder.Confirm(ray);
 </ol>
 <p>The whole story, including permissions and late joiners, is in <a href="multiplayer.html">Multiplayer</a>; the
 <strong>Multiplayer</strong> sample is ready to play.</p>
-<h2 id="5-areas-and-your-own-rules">5. Areas and your own rules <a class="anchor" href="#5-areas-and-your-own-rules" aria-label="Link to this section">#</a></h2>
+<h2 id="5-wall-decorations-free-turning-and-looks">5. Wall decorations, free turning and looks <a class="anchor" href="#5-wall-decorations-free-turning-and-looks" aria-label="Link to this section">#</a></h2>
+<ol>
+<li>On a Piece Definition (a shelf, a lamp, a sign), set <strong>Goes On</strong> to Floor and tick <strong>Wall</strong> in <strong>Also Goes On</strong>: it
+    now stands on floors and tables and hangs on walls. For a picture, keep Goes On on Wall; <strong>Turns On Walls</strong> lets
+    players spin it to portrait.</li>
+<li>Decor that should look placed by hand: <strong>Own Rotation Step</strong> with 0 (turns freely), <strong>Random Turn</strong> 20 to 45, and
+    <strong>Allow Tilt</strong> for things that lean (books).</li>
+<li><strong>Looks:</strong> add a few colours (Tint) or materials. Players pick one with <code>NextVariant</code> and repaint later with the
+    Paint tool.</li>
+<li>Limits: <strong>Max Per Player</strong> 2 on a bed, or a Category Limit on the Build World.</li>
+</ol>
+<h2 id="6-rows-areas-and-blueprints">6. Rows, areas and blueprints <a class="anchor" href="#6-rows-areas-and-blueprints" aria-label="Link to this section">#</a></h2>
+<ol>
+<li>Tick <strong>Allow Rows</strong> on walls and fences, <strong>Allow Areas</strong> on foundations and floors (the presets do).</li>
+<li>Give the player a key that sets <code>builder.Shape</code> (Single, Line, Area): on press call <code>BeginShape()</code>, on release
+    <code>Confirm()</code>. The sample input does exactly this.</li>
+<li>Blueprints: a key for <code>SetTool(BuilderTool.Copy)</code>, then Confirm on a building copies it and starts stamping. Ship
+    ready-made ones as Blueprint assets and call <code>StartStamp(asset.Blueprint)</code>.</li>
+</ol>
+<h2 id="7-areas-and-your-own-rules">7. Areas and your own rules <a class="anchor" href="#7-areas-and-your-own-rules" aria-label="Link to this section">#</a></h2>
 <p>For an area, no code: add a <strong>Build Zone</strong> (box or sphere) set to <strong>Forbid</strong> ("Keep the spawn clear") or <strong>Only Allow</strong>
 (a plot). See <a href="gameplay.html#build-zones">Gameplay</a>.</p>
 <p>For anything else ("not underwater", "only on your own land", "not at night"), add an <code>IPlacementRule</code> to the
@@ -131,7 +150,7 @@ example is in <a href="extending.html#your-own-placement-rule">Extending</a>.</p
 <div class="doc-pager"><a class="pager prev" href="samples.html"><span class="label">Previous</span>Samples</a><a class="pager next" href="upgrading.html"><span class="label">Next</span>Upgrading</a></div>
 <p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Walkthroughs" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
 </article>
-<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#1-building-in-your-own-first-person-game">1. Building in your own first-person game</a></li><li class="toc-2"><a href="#2-furniture-in-a-room">2. Furniture in a room</a></li><li class="toc-2"><a href="#3-a-top-down-or-strategy-camera">3. A top-down or strategy camera</a></li><li class="toc-2"><a href="#4-building-together-multiplayer">4. Building together (multiplayer)</a></li><li class="toc-2"><a href="#5-areas-and-your-own-rules">5. Areas and your own rules</a></li></ul></nav>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#1-building-in-your-own-first-person-game">1. Building in your own first-person game</a></li><li class="toc-2"><a href="#2-furniture-in-a-room">2. Furniture in a room</a></li><li class="toc-2"><a href="#3-a-top-down-or-strategy-camera">3. A top-down or strategy camera</a></li><li class="toc-2"><a href="#4-building-together-multiplayer">4. Building together (multiplayer)</a></li><li class="toc-2"><a href="#5-wall-decorations-free-turning-and-looks">5. Wall decorations, free turning and looks</a></li><li class="toc-2"><a href="#6-rows-areas-and-blueprints">6. Rows, areas and blueprints</a></li><li class="toc-2"><a href="#7-areas-and-your-own-rules">7. Areas and your own rules</a></li></ul></nav>
 </div>
 </main>
 <footer class="site-footer">

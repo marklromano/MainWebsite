@@ -52,6 +52,10 @@
 <h1 id="known-issues">Known Issues</h1>
 <p>Version 1.0.0.</p>
 <ul>
+<li>While a row, an area or a blueprint is being dragged, the preview checks every piece of it (again only when the aim
+  or the world changes). On a very large base, very large rows can take a few milliseconds a frame while dragging.
+  <strong>Max Batch</strong> (64) caps them.</li>
+<li>A blueprint keeps pieces' looks, turn and socket links; it doesn't keep a piece's owner or saved contents of your own.</li>
 <li><strong>HDRP</strong> needs the project in Linear colour space (HDRP's own setup does this); in Gamma nothing is lit.</li>
 <li>With the old Input Manager, the samples read gamepad <strong>buttons</strong> only; gamepad sticks and the d-pad (build menu) need
   the Input System package. Changing keys in the build menu needs it too.</li>
