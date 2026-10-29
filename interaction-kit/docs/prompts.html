@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Prompts and button icons | Romano Assets</title>
+<meta name="description" content="Prompts and button icons: documentation for the All In One Interaction Kit for Unity.">
+<link rel="canonical" href="https://marklromano.github.io/interaction-kit/docs/prompts.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Prompts and button icons">
+<meta property="og:description" content="Prompts and button icons: documentation for the All In One Interaction Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/interaction-kit/docs/prompts.html">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Interaction Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html" aria-current="page">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="tools.html">Scene Overview and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html" aria-current="page">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="tools.html">Scene Overview and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Interaction Kit</a><span>/</span><span>Features</span></nav>
+<h1 id="prompts-and-button-icons">Prompts and button icons</h1>
+<p>The prompt shows what the player can do ("Open Door") with the button for the device they used <strong>last</strong>: keyboard and
+mouse, Xbox, PlayStation or Switch. It changes the moment they touch a different device. When something can't be used,
+it shows why ("Locked - find the red key") in red, without a button.</p><figure class="doc-figure"><img src="../../assets/img/interaction-kit/05-every-controller.jpg" alt="The prompt shows the button of the controller in use." width="1920" height="1080" loading="lazy"><figcaption>The prompt shows the button of the controller in use.</figcaption></figure>
+<h2 id="three-versions">Three versions <a class="anchor" href="#three-versions" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Interaction Prompt (No Packages)</strong>: drawn with Unity's built-in GUI. Works in every project.</li>
+<li><strong>Interaction Prompt (uGUI)</strong>: a Canvas with TextMesh Pro, for projects that use uGUI. Set <strong>Font</strong> to use your own.</li>
+<li><strong>Interaction Prompt (Custom)</strong>: your own prompt prefab, driven by the kit (see <a href="customizing.html#the-prompt">Customizing</a>).</li>
+</ul>
+<p>The look comes from a <strong>Theme</strong> (six ready-made ones, or yours) or a <strong>Prompt Style</strong>: what it shows, layout, panel,
+show/hide animation, hold progress and the "can't use" look. Which look wins, from first to last: the object's own
+(<strong>Interaction Appearance</strong>), the prompt's <strong>Style Asset</strong>, the prompt's <strong>Theme</strong>, the project-wide theme (<strong>Interaction
+Theme</strong> component), the prompt's <strong>Preset</strong>. All of it is in <a href="customizing.html">Customizing</a>.</p>
+<p>Both have the same settings:</p>
+<ul>
+<li><strong>Interactor</strong>: which player to follow. Empty = the first one found (fine for single player).</li>
+<li><strong>Preset</strong>: <strong>Pill</strong> (dark rounded panel, the default), <strong>Minimal</strong> (no panel, outlined text) or <strong>Bold</strong> (larger, high
+  contrast, for TVs).</li>
+<li><strong>Style Asset</strong>: your own look. <strong>Assets &gt; Create &gt; All In One Interaction Kit &gt; Prompt Style</strong>: size, font size, icon
+  size, padding, roundness, position on screen, fade time, colours (text, panel, accent, "can't use" colours).</li>
+<li><strong>Glyphs</strong>: the button icons. New prompts use the kit's set automatically.</li>
+<li><strong>Show Unavailable Reason</strong>: show why an object can't be used.</li>
+<li><strong>Placement</strong>: <strong>Fixed On Screen</strong> (the default, for first person: the style's position on screen) or <strong>Above Object</strong>
+  (next to the object, for 2D, top-down and third-person games; <strong>Object Offset</strong> sets how far above its centre). The 2D
+  demo uses Above Object.</li>
+<li><strong>Hold Format</strong>: the text for objects you hold the button on ("Hold to {0}", where {0} is the action).</li>
+</ul>
+<p>Objects you hold the button on show their progress the way the style says: by default a <strong>ring</strong> around the button, a
+faint track that fills smoothly clockwise from the top, sharp at any screen size. It can also be a bar, the button or
+panel filling up, your own sprite, or nothing (your own UI can use <strong>On Hold Progress</strong>).</p>
+<p>A Prompt Style also has a <strong>Font</strong> for the No Packages prompt. Every prompt text goes through the translation hook in
+<a href="customizing.html#your-language">Customizing</a>.</p>
+<h2 id="button-icons-glyph-sets">Button icons (glyph sets) <a class="anchor" href="#button-icons-glyph-sets" aria-label="Link to this section">#</a></h2>
+<p>The kit ships Kenney's <strong>Input Prompts</strong> icons (free, CC0) for the keyboard, mouse, Xbox, PlayStation and Switch:
+<code>Runtime/Glyphs/Kenney Input Prompts.asset</code>. Unknown controllers use the Xbox icons. A key without an icon is drawn as a
+key cap with its name.</p>
+<p>To use your own icons: <strong>Assets &gt; Create &gt; All In One Interaction Kit &gt; Glyph Set</strong>, add a sprite per key and per
+gamepad button (by position: South, East, West, North...), and assign it to the prompt's <strong>Glyphs</strong>.</p>
+<h2 id="crosshair">Crosshair <a class="anchor" href="#crosshair" aria-label="Link to this section">#</a></h2>
+<p><strong>Interaction Crosshair</strong> is a small dot: dim when nothing is targeted, bright when a usable object is, red when it is
+blocked. Colours and size are settings.</p>
+<div class="doc-pager"><a class="pager prev" href="more-objects.html"><span class="label">Previous</span>More ready-made objects</a><a class="pager next" href="hands-on-objects.html"><span class="label">Next</span>Carry, sockets, inspect, notes, keypads</a></div>
+<p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Prompts+and+button+icons" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#three-versions">Three versions</a></li><li class="toc-2"><a href="#button-icons-glyph-sets">Button icons (glyph sets)</a></li><li class="toc-2"><a href="#crosshair">Crosshair</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/marklromano/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

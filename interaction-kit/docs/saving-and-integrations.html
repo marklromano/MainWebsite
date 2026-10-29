@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Saving and integrations | Romano Assets</title>
+<meta name="description" content="Saving and integrations: documentation for the All In One Interaction Kit for Unity.">
+<link rel="canonical" href="https://marklromano.github.io/interaction-kit/docs/saving-and-integrations.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Saving and integrations">
+<meta property="og:description" content="Saving and integrations: documentation for the All In One Interaction Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/interaction-kit/docs/saving-and-integrations.html">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Interaction Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html" aria-current="page">Saving and integrations</a><a href="tools.html">Scene Overview and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html" aria-current="page">Saving and integrations</a><a href="tools.html">Scene Overview and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Interaction Kit</a><span>/</span><span>Features</span></nav>
+<h1 id="saving-and-integrations">Saving and integrations</h1>
+<h2 id="saving">Saving <a class="anchor" href="#saving" aria-label="Link to this section">#</a></h2>
+<p>The kit saves the state of every interactive object in the open scenes (doors open, chests looted, levers pulled,
+keypads unlocked, uses left, the elevator's floor) and the players' key rings.</p>
+<ul>
+<li><strong>No code:</strong> add <strong>Interaction Auto Save</strong> to the scene. It loads when the scene starts and saves when the game quits
+  (and every few seconds if you like). Call Save Now before loading another scene.</li>
+<li><strong>Code:</strong> <code>InteractionSave.Save("slot1")</code> and <code>InteractionSave.Load("slot1")</code>. Saves are JSON files in
+  Application.persistentDataPath (PlayerPrefs on WebGL).</li>
+<li><strong>Your own save system</strong> (any asset, a cloud save): put <code>InteractionSave.CaptureJson()</code> into your save file and pass
+  it to <code>InteractionSave.RestoreJson(json)</code> when loading, or set <code>InteractionSave.Store</code> to your own
+  <code>IInteractionSaveStore</code> (Write, TryRead, Delete) so the kit's Save and Load go through it.</li>
+</ul>
+<p>Objects are matched by their <strong>Interaction Save Id</strong> (added by the Setup Wizard, and by the Scene Overview's fix).
+Objects without one are matched by their place in the scene, which breaks if you rename or move them.</p>
+<h2 id="events-for-everything">Events for everything <a class="anchor" href="#events-for-everything" aria-label="Link to this section">#</a></h2>
+<ul>
+<li>Every object: <strong>Interaction State Events</strong> gives UnityEvents (no code) and a C# event for opened, closed, the state
+  number, used and denied. <code>Interactable.Interacted</code>, <code>Denied</code> and <code>StateChanged</code> are C# events on every object, and
+  <code>Interactable.AnyInteracted</code> fires for every object in the game.</li>
+<li><strong>Quests, dialogue, achievements:</strong> <strong>Interaction Signal</strong> raises a named signal ("vault_opened") when an object is
+  used, opened or closed. Listen with <code>InteractionSignals.Raised</code> (code) or an <strong>Interaction Signal Listener</strong> (no
+  code). Start a conversation by giving a character an Interactable with a signal your dialogue system listens to.</li>
+</ul>
+<h2 id="visual-scripting">Visual Scripting <a class="anchor" href="#visual-scripting" aria-label="Link to this section">#</a></h2>
+<p>When the Visual Scripting package is installed, these nodes appear under Romano Assets: <strong>Use Interactable</strong>, <strong>Set
+Interaction State</strong>, <strong>Get Interaction State</strong>, <strong>Raise Interaction Signal</strong>, <strong>Save Or Load Interactions</strong>, and the
+events <strong>On Interaction Signal</strong> and <strong>On Any Interaction</strong>. The kit never requires the package.</p>
+<h2 id="timeline">Timeline <a class="anchor" href="#timeline" aria-label="Link to this section">#</a></h2>
+<p>When Timeline is installed, add an <strong>Interaction Track</strong>, bind an object's Interactable, and add clips that set its
+state (open the door during a cutscene), optionally putting the old state back when the clip ends and raising a
+signal. <strong>Play Director On Use</strong> plays a Timeline when an object is used (this one needs no package).</p>
+<h2 id="cinemachine">Cinemachine <a class="anchor" href="#cinemachine" aria-label="Link to this section">#</a></h2>
+<p>Give a <strong>Camera Focus Point</strong> a <strong>Virtual Camera</strong>: a CinemachineCamera aimed at the object, switched off. During the
+close-up it is switched on, so Cinemachine blends to it, and switched off again after. Works with Cinemachine 2 and 3
+(the kit doesn't reference the package).</p>
+<h2 id="your-own-character-controller">Your own character controller <a class="anchor" href="#your-own-character-controller" aria-label="Link to this section">#</a></h2>
+<ol>
+<li>Put an <strong>Interactor</strong> on the player, with a finder (Look Ray Discovery for first person, Proximity Discovery for
+   third person and top-down) and an input (Key Interaction Input, or Input Action Interaction Input). Set its
+   Origin to the camera for first person.</li>
+<li>Pause your controller while the player reads, types a code, sits or climbs: check <code>interactor.IsBusy</code> in your
+   controller, or add an <strong>Interaction Controller Lock</strong> and list your controller scripts (it also frees the mouse
+   cursor meanwhile).</li>
+<li>Optional: an Interaction Highlighter, Markers, a prompt and a crosshair (Tools &gt; All In One Interaction Kit &gt; Scene
+   Overview tells you what's missing).</li>
+</ol>
+<h3 id="unitys-starter-assets">Unity's Starter Assets <a class="anchor" href="#unitys-starter-assets" aria-label="Link to this section">#</a></h3>
+<p>Unity's free Starter Assets (first and third person) work as they are: add the Interactor to the PlayerCapsule, set
+its Origin to the PlayerCameraRoot (first person) or use Proximity Discovery (third person), and add an
+<strong>Interaction Controller Lock</strong>. It finds the Starter Assets controller by itself and pauses it while the player is
+busy. Use Key Interaction Input for the interact button (it reads the Input System directly), or add an "Interact"
+action to the Starter Assets input actions and use Input Action Interaction Input.</p>
+<div class="doc-pager"><a class="pager prev" href="accessibility.html"><span class="label">Previous</span>Accessibility</a><a class="pager next" href="tools.html"><span class="label">Next</span>Scene Overview and tools</a></div>
+<p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Saving+and+integrations" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#saving">Saving</a></li><li class="toc-2"><a href="#events-for-everything">Events for everything</a></li><li class="toc-2"><a href="#visual-scripting">Visual Scripting</a></li><li class="toc-2"><a href="#timeline">Timeline</a></li><li class="toc-2"><a href="#cinemachine">Cinemachine</a></li><li class="toc-2"><a href="#your-own-character-controller">Your own character controller</a></li><li class="toc-3"><a href="#unitys-starter-assets">Unity&#x27;s Starter Assets</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/marklromano/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

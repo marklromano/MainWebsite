@@ -38,6 +38,7 @@ DISCORD_URL = "https://discord.gg/AmpBDxRAKu"
 ISSUES_URL = "https://github.com/marklromano/RomanoAssetSupport/issues"
 PREFAB_VERSION = "1.0.0"
 SAVE_VERSION = "1.0.0"
+INTERACTION_VERSION = "1.0.0"
 YEAR = "2026"
 
 ICON_EXTERNAL = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" '
@@ -144,14 +145,54 @@ PRODUCTS = [
         "shortcut_groups": {},
         "page_images": {},
     },
+    {
+        # Coming soon: page and docs are online before the store listing (Unity's reviewer opens them). On launch day:
+        # "status": "live", "store": its Asset Store link, and the product page's pill and buttons (tools/pages/interaction-kit.html).
+        "slug": "interaction-kit",
+        "name": "All In One Interaction Kit",
+        "short": "Interaction Kit",
+        "accent": "c-interact",
+        "status": "coming soon",
+        "version": INTERACTION_VERSION,
+        "store": "",
+        "summary": "Turn your own prefabs into doors, drawers, switches, pickups, keypads and puzzles, with prompts for "
+                   "every controller, a \"why can't I interact?\" debugger and optional multiplayer.",
+        "requirements": ["Unity 6000.0+", "Built-in, URP & HDRP", "No dependencies", "Full C# source"],
+        "menu": "Tools > All In One Interaction Kit",
+        "support_info": "**Tools > All In One Interaction Kit > Help and Support > Copy Support Info**",
+        "quick_start": [
+            "Import the package. Everything lands in <code>Assets/AllInOneInteractionKit/</code>. Open "
+            "<strong>Tools &gt; All In One Interaction Kit &gt; Open Demo &gt; The Locked Workshop (start here)</strong> and press Play.",
+            "Open <strong>Tools &gt; All In One Interaction Kit &gt; Setup Wizard</strong> and drag your prefab into "
+            "<strong>Prefab</strong>. Check the doors and drawers it found, then click <strong>Create Interactive Prefab</strong>.",
+            "On your player, add an <strong>Interactor</strong> (Origin: your camera), a <strong>Look Ray Discovery</strong> "
+            "and a <strong>Key Interaction Input</strong>. Add an <strong>Interaction Prompt (No Packages)</strong> to the scene.",
+            "Press Play, look at your new prefab and press <kbd>E</kbd> (or <kbd>X</kbd> / <kbd>Square</kbd> on a controller).",
+        ],
+        "pages": [],
+        "shortcut_groups": {},
+        "hub_links": [
+            ("index.html#quick-start", "Quick start", "From import to your first interactive prefab"),
+            ("customizing.html", "Make it yours", "Themes, prompts, hold progress and the crosshair"),
+            ("troubleshooting.html", "Troubleshooting", "Common problems and their fixes"),
+            ("changelog.html", "Changelog", "What changed in each version"),
+        ],
+        "page_images": {
+            "getting-started.html": ("interaction-kit/04-three-steps.jpg", "Drag in your prefab, check what the wizard found, press Play."),
+            "customizing.html": ("interaction-kit/02-make-it-yours.jpg", "The same prompt in the six ready-made themes."),
+            "prompts.html": ("interaction-kit/05-every-controller.jpg", "The prompt shows the button of the controller in use."),
+            "power-and-puzzles.html": ("interaction-kit/08-wire-it-up.jpg", "Switches, plates and logic wired to doors and lights, no code."),
+            "containers-and-loot.html": ("interaction-kit/10-clues-codes-loot.jpg", "Notes, keypads and chests from The Locked Workshop."),
+            "troubleshooting.html": ("interaction-kit/07-tells-you-why.jpg", "The F3 debugger: what the player is looking at and why it can't be used."),
+            "multiplayer.html": ("interaction-kit/11-2d-and-multiplayer.jpg", "A host and a client in the multiplayer demo, and the 2D demo."),
+        },
+    },
 ]
 
 # Kits without docs yet, for the docs hub and "More from Romano Assets": (name, accent, status, one line)
 COMING = [
     ("All In One Save Kit", "c-save", "In development",
      "Save and restore progress, world objects and settings, without code."),
-    ("All In One Interaction Kit", "c-interact", "In development",
-     "Doors, pickups, switches and anything the player can press, open or carry."),
     ("All In One Game Settings & Menu Kit", "c-settings", "In development",
      "Title screen, menus, settings, pause and loading screens, ready to drop in."),
     ("All In One Runtime Building Kit", "c-runtime", "In development",
@@ -205,6 +246,7 @@ def footer(root):
         <ul>
           <li><a href="{root}prefab-builder/index.html">Prefab Builder Kit</a></li>
           <li><a href="{root}save-kit/index.html">Save Kit</a></li>
+          <li><a href="{root}interaction-kit/index.html">Interaction Kit</a></li>
           <li><a href="{root}index.html#products">Coming next</a></li>
           <li><a href="{PUBLISHER_URL}" rel="noopener">Publisher page</a></li>
         </ul>
@@ -348,6 +390,11 @@ HAND_PAGES = [
      "All In One Save Kit",
      "Save and restore player progress, world objects and settings in Unity: no code needed, slots, autosaves, a "
      "finished save menu, backups and automatic recovery from damaged saves. In development."),
+    ("interaction-kit.html", "interaction-kit/index.html", "../", "interact",
+     "All In One Interaction Kit",
+     "Turn your own Unity prefabs into doors, drawers, switches, pickups, keypads and puzzles: a Setup Wizard, prompts "
+     "for every controller, a debugger that says why something can't be used, and optional multiplayer. Coming soon to "
+     "the Unity Asset Store."),
     ("support.html", "support/index.html", "../", "support",
      "Support",
      "Get help with Romano Assets tools: documentation, bug reports, Discord and email."),
@@ -377,12 +424,21 @@ def build_docs_hub():
     """docs/index.html: every kit's documentation in one place."""
     cards = []
     for p in PRODUCTS:
-        if p["status"] != "live":
+        if p["status"] not in ("live", "coming soon"):
             continue
         d = f"../{p['slug']}/docs/"
+        pill = f'<span class="pill pill-live">v{p["version"]}</span>' if p["status"] == "live" else \
+            f'<span class="pill pill-dev">v{p["version"]}, coming soon to the Asset Store</span>'
+        links = p.get("hub_links") or [
+            ("index.html#quick-start", "Quick start", "From import to your first placed piece"),
+            ("shortcuts.html", "Keyboard shortcuts", "Every key and mouse control"),
+            ("troubleshooting.html", "Troubleshooting", "Common problems and their fixes"),
+            ("changelog.html", "Changelog", "What changed in each version"),
+        ]
+        link_items = "\n    ".join(f'<li><a href="{d}{href}"><strong>{t}</strong><span>{line}</span></a></li>' for href, t, line in links)
         cards.append(f"""<article class="product product-flag {p['accent']}">
   <div class="flag-copy">
-    <div class="product-top"><span class="pill pill-live">v{p['version']}</span></div>
+    <div class="product-top">{pill}</div>
     <h2>{p['name']}</h2>
     <p>{p['summary']}</p>
     <div class="btn-row">
@@ -391,10 +447,7 @@ def build_docs_hub():
     </div>
   </div>
   <ul class="doc-links">
-    <li><a href="{d}index.html#quick-start"><strong>Quick start</strong><span>From import to your first placed piece</span></a></li>
-    <li><a href="{d}shortcuts.html"><strong>Keyboard shortcuts</strong><span>Every key and mouse control</span></a></li>
-    <li><a href="{d}troubleshooting.html"><strong>Troubleshooting</strong><span>Common problems and their fixes</span></a></li>
-    <li><a href="{d}changelog.html"><strong>Changelog</strong><span>What changed in each version</span></a></li>
+    {link_items}
   </ul>
 </article>""")
     soon = "".join(

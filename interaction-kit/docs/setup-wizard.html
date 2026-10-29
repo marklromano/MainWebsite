@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Setup Wizard | Romano Assets</title>
+<meta name="description" content="Setup Wizard: documentation for the All In One Interaction Kit for Unity.">
+<link rel="canonical" href="https://marklromano.github.io/interaction-kit/docs/setup-wizard.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Setup Wizard">
+<meta property="og:description" content="Setup Wizard: documentation for the All In One Interaction Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/interaction-kit/docs/setup-wizard.html">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Interaction Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html" aria-current="page">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="tools.html">Scene Overview and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html" aria-current="page">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="tools.html">Scene Overview and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Interaction Kit</a><span>/</span><span>Start here</span></nav>
+<h1 id="setup-wizard">Setup Wizard</h1>
+<p><strong>Tools &gt; All In One Interaction Kit &gt; Setup Wizard</strong>, or right-click a prefab in the Project window &gt;
+<strong>All In One Interaction Kit &gt; Make Interactive Door</strong>.</p>
+<p>The wizard never edits your prefab or model. It saves a <strong>new prefab</strong> next to it (<code>&lt;Name&gt;_Interactive.prefab</code>) that
+contains your original as a nested prefab, so later changes to your original still show up.</p>
+<h2 id="picking-your-prefab">Picking your prefab <a class="anchor" href="#picking-your-prefab" aria-label="Link to this section">#</a></h2>
+<p>Any of these works:</p>
+<ul>
+<li><strong>click a prefab in the Project window</strong> while the wizard is open: it picks it up straight away;</li>
+<li>drag it onto the <strong>Prefab</strong> field, or use the field's circle to browse;</li>
+<li>select an instance of it in your scene (Hierarchy or Scene view) and press <strong>Use selected</strong>: the wizard uses the
+  prefab it comes from;</li>
+<li>a scene object that isn't a prefab yet: press <strong>Save as prefab and use it</strong>.</li>
+</ul>
+<h2 id="the-preview">The preview <a class="anchor" href="#the-preview" aria-label="Link to this section">#</a></h2>
+<p>With <strong>Preview in Scene view</strong> on, a copy of your prefab appears where the Scene view is looking. For every moving part
+it shows:</p>
+<ul>
+<li>a yellow box around the part;</li>
+<li>hinged parts: the <strong>hinge line</strong>, and an <strong>arc</strong> for how far it opens and which way (blue: outward, orange: the other
+  way for doors that open either way), with a label such as <em>Door: left hinge, opens 100°, outward</em>;</li>
+<li>drawers: an <strong>arrow</strong> and an outline where the drawer ends up, labelled with how far it slides.</li>
+</ul>
+<p>Change a value in the wizard and the preview follows. The copy is never saved with your scene and goes when the wizard
+closes.</p>
+<h2 id="models-with-moving-parts">Models with moving parts <a class="anchor" href="#models-with-moving-parts" aria-label="Link to this section">#</a></h2>
+<p>The wizard finds a model's moving parts:</p>
+<ul>
+<li><strong>by name</strong>: child objects named like <strong>door</strong>, <strong>lid</strong>, <strong>hatch</strong>, <strong>gate</strong>, <strong>flap</strong>, <strong>drawer</strong> or <strong>tray</strong>;</li>
+<li><strong>by shape</strong>, when nothing is named like that (children called <em>Cube</em>, <em>Cube (1)</em>...): thin panels on the front of the
+  model become doors, boxes set into the front become drawers. Handles and knobs are too small to count, and the
+  biggest piece is the body. These are marked <em>guessed from its shape</em>: check them in the preview.</li>
+</ul>
+<p><strong>Not right? Change a part's type, remove it (x), or add one:</strong> click a part of the preview in the Scene view or the
+Hierarchy (or pick it from the <strong>Part</strong> list under <strong>Add a part</strong>), choose what it is, and press <strong>Add part</strong>.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tick box</td>
+<td>Untick a part to leave it alone. <strong>x</strong> removes it from the list. <strong>Show</strong> selects it in the preview.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td><strong>Door</strong> swings on its side; <strong>Drawer</strong> slides straight out; <strong>Lid</strong> lifts at the front on a hinge along its back edge (chests, hatches); <strong>Flap</strong> folds down at the front on a hinge along its bottom edge (oven doors, drop-front desks); <strong>Button</strong> pushes in and springs back; <strong>Lever</strong> tilts forward around its base. Buttons and levers can power things.</td>
+</tr>
+<tr>
+<td>Hinge side</td>
+<td>Doors: which edge the hinge is on, seen from the front. The wizard guesses it from where the part's pivot is.</td>
+</tr>
+<tr>
+<td>Opens (degrees)</td>
+<td>Doors, lids, flaps and levers: how far it opens.</td>
+</tr>
+<tr>
+<td>Slides out (m)</td>
+<td>Drawers: how far it slides out (it starts at three quarters of the drawer's depth).</td>
+</tr>
+<tr>
+<td>Swing</td>
+<td>Doors: <strong>Outward Only</strong> (out of the front, right for furniture), <strong>Inward Only</strong>, or <strong>Away From Player</strong> (either way, always away from whoever opens or pushes it, for doors you walk through).</td>
+</tr>
+<tr>
+<td>Motion</td>
+<td>Doors: <strong>Tween</strong> (smooth, scripted) or <strong>Physics</strong> (a real hinge you can push).</td>
+</tr>
+</tbody>
+</table></div>
+<p>What it sets up for you:</p>
+<ul>
+<li>each part gets its own <strong>Interactable</strong> and <strong>Hinge</strong>, <strong>Slide</strong> or <strong>Switch</strong>, so a cabinet with a door and a drawer has two;</li>
+<li>the <strong>front</strong> of the model is found automatically (the side the part sits on), so doors swing out of the front and
+  drawers slide out of it;</li>
+<li>parts turn around their edge even when the part's pivot is in the middle (the Hinge's <strong>Hinge Point</strong>);</li>
+<li>colliders are added if the model has none: mesh colliders for the body, box colliders for the parts.</li>
+</ul>
+<p><strong>Gives loot</strong> adds a Loot Container to the first part, so opening it hands out items (see
+<a href="containers-and-loot.html">Containers and loot</a>).</p>
+<h2 id="single-objects">Single objects <a class="anchor" href="#single-objects" aria-label="Link to this section">#</a></h2>
+<p>A prefab without moving parts becomes what you pick as <strong>Type</strong>:</p>
+<ul>
+<li><strong>Door</strong>: swings on a hinge (below);</li>
+<li><strong>Switch</strong>: on/off; <strong>Button</strong>: springs back after a press; <strong>Lever</strong>: tilts forward around its base. All three can
+  power things (see <a href="power-and-puzzles.html">Power and puzzles</a>);</li>
+<li><strong>Pressure Plate</strong>: powers things while weight stands on it; the detection box covers the model and half a metre above;</li>
+<li><strong>Container</strong>: a crate to search for loot;</li>
+<li><strong>Carryable</strong>, <strong>Inspectable</strong>, <strong>Readable</strong>, <strong>Keypad</strong>, <strong>Item Socket</strong>: see
+  <a href="hands-on-objects.html">Carry, sockets, inspect, notes and keypads</a>.</li>
+</ul>
+<h2 id="single-doors">Single doors <a class="anchor" href="#single-doors" aria-label="Link to this section">#</a></h2>
+<p>For a door, the wizard measures where the pivot is:</p>
+<ul>
+<li><strong>pivot in the middle</strong> (common for store models): it adds a hinge pivot on the edge you choose;</li>
+<li><strong>pivot already on an edge</strong>: it still wraps the door so your original stays untouched.</li>
+</ul>
+<p>Pick the <strong>Hinge side</strong>, <strong>Opens (degrees)</strong>, <strong>Swing</strong> and <strong>Motion</strong>, then <strong>Create Interactive Prefab</strong>. Doors
+default to <strong>Away From Player</strong>: they open away from whoever opens them, from either side.</p>
+<h2 id="after-creating">After creating <a class="anchor" href="#after-creating" aria-label="Link to this section">#</a></h2>
+<p>Drag the prefab into a scene and select the door: the <strong>Hinge</strong> inspector has a <strong>Preview</strong> slider and <strong>Closed</strong>,
+<strong>Open</strong> and <strong>Other way</strong> buttons, and the Scene view shows the arcs and a handle you can drag to set the open angle.
+Nothing in the preview is saved.</p>
+<h2 id="tips">Tips <a class="anchor" href="#tips" aria-label="Link to this section">#</a></h2>
+<ul>
+<li>Name your parts clearly in your 3D app (<em>door</em>, <em>drawer</em>): the wizard finds them by name. Unnamed parts are guessed
+  from their shape, and you can always add or change parts by clicking them.</li>
+<li>To make a door open one way only, set <strong>Swing</strong> on its Hinge to <strong>Outward Only</strong> or <strong>Inward Only</strong>.</li>
+<li>Physics doors ignore collisions with the rest of their own model (the frame or cabinet body) so they never jam.</li>
+</ul>
+<div class="doc-pager"><a class="pager prev" href="getting-started.html"><span class="label">Previous</span>Quick start</a><a class="pager next" href="samples.html"><span class="label">Next</span>Demo scenes</a></div>
+<p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Setup+Wizard" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#picking-your-prefab">Picking your prefab</a></li><li class="toc-2"><a href="#the-preview">The preview</a></li><li class="toc-2"><a href="#models-with-moving-parts">Models with moving parts</a></li><li class="toc-2"><a href="#single-objects">Single objects</a></li><li class="toc-2"><a href="#single-doors">Single doors</a></li><li class="toc-2"><a href="#after-creating">After creating</a></li><li class="toc-2"><a href="#tips">Tips</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/marklromano/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

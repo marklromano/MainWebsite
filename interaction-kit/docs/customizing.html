@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Customizing: make it yours | Romano Assets</title>
+<meta name="description" content="Customizing: make it yours: documentation for the All In One Interaction Kit for Unity.">
+<link rel="canonical" href="https://marklromano.github.io/interaction-kit/docs/customizing.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Customizing: make it yours">
+<meta property="og:description" content="Customizing: make it yours: documentation for the All In One Interaction Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marklromano.github.io/interaction-kit/docs/customizing.html">
+<meta property="og:image" content="https://marklromano.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.svg" alt="" width="30" height="30">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Interaction Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html" aria-current="page">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="tools.html">Scene Overview and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html" aria-current="page">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="tools.html">Scene Overview and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Interaction Kit</a><span>/</span><span>Features</span></nav>
+<h1 id="customizing-make-it-yours">Customizing: make it yours</h1>
+<p>Your game shouldn't look like everyone else's. Everything the player sees can be changed or switched off: the prompt,
+how holding shows its progress, the "can't use" look, the crosshair, the panels, the sounds and the words. Start from one
+of six ready-made themes, change anything, give single objects their own look, or draw it all with your own UI while the
+kit does the work. Nothing here needs code unless it says so.</p><figure class="doc-figure"><img src="../../assets/img/interaction-kit/02-make-it-yours.jpg" alt="The same prompt in the six ready-made themes." width="1920" height="1080" loading="lazy"><figcaption>The same prompt in the six ready-made themes.</figcaption></figure>
+<h2 id="make-it-yours-in-a-minute">Make it yours in a minute <a class="anchor" href="#make-it-yours-in-a-minute" aria-label="Link to this section">#</a></h2>
+<ol>
+<li><strong>Assets &gt; Create &gt; All In One Interaction Kit &gt; Theme (Modern / Minimal / Retro / In World / High Contrast / Colourblind Safe)</strong> makes a theme asset
+   from a ready-made look. Its inspector has the presets at the top, then the <strong>Prompt style</strong>, <strong>Crosshair style</strong> and
+   <strong>Highlight style</strong> in foldouts.</li>
+<li>Add an <strong>Interaction Theme</strong> component to your first scene (Add Component &gt; All In One Interaction Kit &gt; UI) and drop
+   your theme in. Every prompt and crosshair uses it. (No asset yet? Pick a <strong>Preset</strong> on the component.)</li>
+<li>Change anything in the theme while the game runs: the prompt and crosshair follow at once.</li>
+<li>One object should look different? Add an <strong>Interaction Appearance</strong> to it: its own theme, its own icon, or no prompt,
+   crosshair or highlight at all.</li>
+</ol>
+<p>Let players switch looks from your options menu: call <code>NextPreset()</code>, <code>UsePreset(1)</code> or <code>Use(theme)</code> on the Interaction
+Theme component, or set <code>InteractionTheme.Current</code>. The 3D demo's <strong>Make it yours</strong> button cycles the presets, and
+<strong>Tab</strong> opens a small <strong>Make it yours</strong> panel that changes the theme, what the prompt shows, how holding fills up, how
+messages show, where the prompt sits and the sizes of the prompt, icons, hold fill and crosshair, live (keys 1 to 9).</p>
+<p><strong>The quickest way in:</strong> the <strong>Quick setup</strong> at the top of a Prompt Style or Theme inspector has the five choices most
+people change, <strong>Prompt shows</strong>, <strong>Hold fills</strong>, <strong>Ring shape</strong>, <strong>Messages show as</strong>, <strong>Prompt position</strong> and four
+size sliders (<strong>Prompt size</strong>, <strong>Message icon size</strong>, <strong>Hold fill size</strong>, <strong>Crosshair size</strong>, 0.5x to 2x), with a
+live preview (pressing, holding on a keyboard and a gamepad, a red-key lock and "no power", and a small screen showing
+where the prompt sits).</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Preset</th>
+<th>Prompt</th>
+<th>Hold progress</th>
+<th>Crosshair</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Modern</strong></td>
+<td>Dark rounded pill, soft shadow, grows in; a red lock and "Locked" for the red-key door</td>
+<td>A ring round the button</td>
+<td>A dot that grows and lights up</td>
+</tr>
+<tr>
+<td><strong>Minimal</strong></td>
+<td>No panel, short text ("E  Open"), fades; just a coloured lock</td>
+<td>The button fills up</td>
+<td>A thin ring, only when there's something to use</td>
+</tr>
+<tr>
+<td><strong>Retro</strong></td>
+<td>Square terminal panel in phosphor green, capitals, slides up</td>
+<td>A bar that fills in steps</td>
+<td>A cross that turns 45 degrees</td>
+</tr>
+<tr>
+<td><strong>In World</strong></td>
+<td>Just the button in a small round badge, on the object, pops in; a lock in the key's colour</td>
+<td>A ring around the button</td>
+<td>Brackets around what you look at</td>
+</tr>
+<tr>
+<td><strong>High Contrast</strong></td>
+<td>Big bold white text on solid black, thick yellow outline</td>
+<td>A thick yellow ring</td>
+<td>A large white ring</td>
+</tr>
+<tr>
+<td><strong>Colourblind Safe</strong></td>
+<td>Modern, in blue and orange</td>
+<td>A blue ring</td>
+<td>Blue when usable, orange when not</td>
+</tr>
+<tr>
+<td>theme also has a <strong>Highlight style</strong> for the <a href="ways-to-interact.html">Interaction Highlighter</a>: Modern an amber outline, a soft white rim, Retro a pulsing green tint, In World a white outline, High Contrast a thick yellow outline, Safe a blue outline (orange when it can't be used).</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="your-own-objects">Your own objects <a class="anchor" href="#your-own-objects" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Any model or prefab:</strong> the <a href="setup-wizard.html">Setup Wizard</a> makes an interactive copy of it (doors, lids and drawers
+  found by name, or one object as a door, switch, button, lever, plate, crate, carryable, inspectable, note, keypad or
+  item socket). Your original is never changed. Or add an <strong>Interactable</strong> and a behaviour (Hinge, Slide, Switch...) to
+  any GameObject yourself.</li>
+<li><strong>Doors and drawers:</strong> open angle, hinge side and hinge point, axis, smooth (Tween: duration and easing curve) or physics
+  motion (spring, damper, swing damping, max spin speed, free swing when idle), how far a drawer slides, in which
+  direction and how fast, start open, and whether it blocks while moving. The <strong>Hinge</strong> inspector previews the angle and has a Scene view handle.</li>
+<li><strong>Words in the prompt:</strong> each object's <strong>Display Name</strong>, its <strong>Open Verb</strong> / <strong>Close Verb</strong> (or <strong>Verb</strong>), or a whole
+  <strong>Prompt Override</strong>.</li>
+<li><strong>Rules:</strong> <strong>Max Distance</strong>, <strong>Priority</strong>, <strong>Press</strong> or <strong>Hold</strong> (with <strong>Hold Duration</strong>), <strong>Cooldown</strong> and <strong>Max Concurrent
+  Users</strong> on the Interactable; locks (<strong>Lock</strong>: key and message), power (<strong>Needs Power</strong>: message) and your own rules in
+  code (<a href="extending.html">Extending</a>).</li>
+</ul>
+<h2 id="your-player-and-input">Your player and input <a class="anchor" href="#your-player-and-input" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Your own controller:</strong> the kit never moves the player. Put an <strong>Interactor</strong> on it; while a note, keypad or inspected
+  object is open, <code>Interactor.IsBusy</code> is true so you can pause your own controls.</li>
+<li><strong>Finding things:</strong> <strong>Look Ray Discovery</strong> (distance, radius, <strong>Layers</strong>, triggers), <strong>Proximity Discovery</strong> and
+  <strong>Proximity 2D Discovery</strong> (radius, <strong>Layers</strong>, facing). Only the layers you tick count.</li>
+<li><strong>Buttons:</strong> <strong>Key Interaction Input</strong>: the keyboard key and the gamepad button. With the Input System package,
+  <strong>Input Action Interaction Input</strong> uses any Input Action, so players can rebind it. Carry: <strong>Throw Key</strong> and <strong>Throw
+  Button</strong>. Notes, keypads and inspect: <strong>Close Key</strong> (the gamepad's back button always closes too). The debugger:
+  <strong>Toggle Key</strong>.</li>
+</ul>
+<h2 id="the-prompt">The prompt <a class="anchor" href="#the-prompt" aria-label="Link to this section">#</a></h2>
+<p>Every setting is on the <strong>Prompt Style</strong> (in a theme, or as its own asset on a prompt). See <a href="prompts.html">Prompts</a>.</p>
+<ul>
+<li><strong>What it shows:</strong> <strong>Prompt shows</strong>: <strong>Full</strong> ("E  Open Heavy Door"), <strong>Short</strong> (just the verb, "E  Open"), <strong>Key
+  Only</strong>, <strong>Text Only</strong>, or <strong>None</strong> (no prompt; the crosshair and the events still work). In the style these are
+  <strong>Content</strong> and <strong>Action Text</strong>; one object can choose its own (Interaction Appearance &gt; Action Text). <strong>Icon Position</strong>: left, right or above the text. <strong>Spacing</strong>, <strong>Padding</strong>,
+  <strong>Text Case</strong> (as written, CAPITALS, lower case).</li>
+<li><strong>Panel:</strong> on or off, <strong>Roundness</strong> (square to fully round), <strong>Outline Width</strong> and colour, a <strong>Shadow</strong> (colour and
+  offset), an <strong>Accent Bar</strong>, and every colour.</li>
+<li><strong>Show and hide:</strong> <strong>None</strong>, <strong>Fade</strong>, <strong>Scale</strong> (grows from <strong>Scale From</strong>) or <strong>Slide</strong> (rises by <strong>Slide
+  Distance</strong>), over <strong>Fade Time</strong>, shaped by an <strong>Easing</strong> curve (overshoot it for a pop).</li>
+<li><strong>Hold progress:</strong> <strong>Ring</strong> round the button (its <strong>Ring Shape</strong> follows the button: a rounded square round keys, a
+  circle round gamepad buttons; or always one of them; <strong>Ring Gap</strong>), <strong>Bar</strong> (a thin underline inside the prompt), <strong>Key
+  Fill</strong> (the key's face fills with colour, its letter stays sharp), <strong>Pie</strong> (a clock face behind the button), <strong>Panel
+  Fill</strong>, <strong>None</strong>, or <strong>Custom Sprite</strong> (your own sprite, filled horizontally, vertically or radially). <strong>Thickness</strong>,
+  <strong>Track Color</strong>, <strong>Hold Color</strong> (a gradient: colour changes as it fills), <strong>Start Angle</strong>, <strong>Clockwise</strong>, a <strong>Fill
+  Curve</strong> (fast at first, in steps...), and what happens when the button is let go: <strong>Drain</strong> (over <strong>Drain Time</strong>) or
+  <strong>Reset</strong>.</li>
+<li><strong>Messages (locked, needs an item, no power, wait, used up, in use, too far, hands full, anything else):</strong> each
+  can show as <strong>Full Text</strong> ("Locked - find the red key"), <strong>Short Text</strong> ("Locked"), <strong>Icon Only</strong> (a clean lock),
+  <strong>Context Icon</strong> (the icon in the colour of what it needs: a red lock for the red key), <strong>Icon And Short Text</strong>, or
+  <strong>None</strong>. <strong>Messages show as</strong> sets them all; <strong>Message Rules</strong> give one kind its own display, short text or icon;
+  an object can choose its own (Interaction Appearance &gt; Message Display). <strong>Show Waiting Messages</strong> also shows "wait",
+  "done" and "too far" (otherwise the prompt just hides then). Text and panel colours, <strong>Message Icon Color</strong>, and
+  <strong>Show Unavailable Text</strong> on or off.</li>
+<li><strong>Icons:</strong> the kit draws its own crisp icons (lock, key, power, clock, hand, check, cross, backpack) at 256 px, so they
+  work in every pipeline with nothing to import. Swap any of them in a Message Rule, or a lock's or socket's own
+  <strong>Icon</strong>. <strong>Key colours:</strong> a key named after a colour ("red", "blue key") colours its locks by itself; or tick <strong>Use
+  Key Color</strong> on the <strong>Key Pickup</strong> or the <strong>Lock</strong> (and <strong>Use Item Color</strong> on an <strong>Item Socket</strong>) and pick any colour.</li>
+<li><strong>Prompt position:</strong> <strong>Under Crosshair</strong> (a small even gap below it, <strong>Beside Gap</strong>), <strong>Replace Crosshair</strong> (in the
+  middle; the crosshair hides while something is in focus), <strong>Over Crosshair</strong> (the button sits exactly on the crosshair,
+  with the words beside it; the crosshair hides under it while something is in focus), <strong>Beside Crosshair</strong> right or left, <strong>Bottom Centre</strong>, <strong>Top
+  Centre</strong>, <strong>On Object</strong> (follows it, kept on screen; when you look right at it, it lines up over the crosshair:
+  <strong>On Object Align To Aim</strong>, <strong>On Object Max Above</strong>), or <strong>Custom</strong> (<strong>Custom Anchor</strong>, <strong>Custom Pivot</strong>, <strong>Custom
+  Offset</strong> in percent of the screen). It glides to a new spot over <strong>Position Blend Time</strong>. One object can choose its own
+  (Interaction Appearance &gt; Position). Lists of more actions follow the prompt. <strong>Use Placement</strong> keeps the older
+  <strong>Placement</strong> and <strong>Vertical Position</strong> settings.</li>
+<li><strong>Crisp and centred:</strong> every part snaps to whole pixels; the ring is always concentric with its button, and the icon
+  and text share a centre line, at any resolution, aspect and UI scale.</li>
+<li><strong>Button icons:</strong> your own <strong>Glyph Set</strong> per device (keyboard, Xbox, PlayStation, Switch), on the prompt or in a theme.
+  The kit ships Kenney's icons.</li>
+<li><strong>Words:</strong> <strong>Hold Format</strong> on the prompt ("Hold to {0}"), and the translation hook below.</li>
+<li><strong>Your own prompt UI:</strong> <strong>Interaction Prompt (Custom)</strong> drives your own prefab: put <strong>Interaction Prompt Events</strong> on it
+  and wire its events (text, icon, key label, hold progress, visible, alpha, hold mode, can't use) to your Text, Image and
+  Animator with no code, or implement <code>IInteractionPromptDisplay</code>. The kit still decides the text, the icon for the
+  player's device, the hold progress and the locked state. Every prompt also has <strong>On Shown</strong>, <strong>On Hidden</strong>, <strong>On Hold
+  Progress</strong> and <strong>On Text Changed</strong> events. The uGUI prompt uses TextMesh Pro with your font.</li>
+</ul>
+<h2 id="the-crosshair">The crosshair <a class="anchor" href="#the-crosshair" aria-label="Link to this section">#</a></h2>
+<p>Every setting is on the <strong>Crosshair Style</strong> (in a theme, or on the crosshair).</p>
+<ul>
+<li><strong>Shape:</strong> <strong>Dot</strong>, <strong>Ring</strong>, <strong>Cross</strong>, <strong>Brackets</strong>, <strong>Chevron</strong>, your own <strong>Sprite</strong>, or <strong>None</strong>; <strong>Size</strong>,
+  <strong>Thickness</strong>, <strong>Gap</strong>, an <strong>Outline</strong> so it reads on any background, or <strong>Show</strong> off to hide it.</li>
+<li><strong>A look per state:</strong> <strong>Idle</strong> (looking at nothing usable), <strong>Hover</strong> (something to use), <strong>Blocked</strong> (locked, no
+  power) and <strong>Holding</strong>: each with its own colour, size, turn, pulse, and whether it shows at all (hide it until there's
+  something to use).</li>
+<li><strong>Changing between looks:</strong> <strong>Transition Time</strong> and an <strong>Easing</strong> curve.</li>
+<li><strong>Hold progress on the crosshair:</strong> a ring round it, with its own size, thickness and colours.</li>
+<li><strong>Your own crosshair UI:</strong> turn <strong>Draw</strong> off and use <strong>On State Changed</strong> and <strong>On Hold Progress</strong>.</li>
+<li><strong>Per object:</strong> an <strong>Interaction Appearance</strong> with <strong>Show Crosshair</strong> off keeps the crosshair idle for that object, or
+  gives it its own theme.</li>
+</ul>
+<h2 id="notes-keypads-and-inspect">Notes, keypads and inspect <a class="anchor" href="#notes-keypads-and-inspect" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Look:</strong> notes: <strong>Paper Color</strong>, <strong>Ink Color</strong>, <strong>Font</strong>. Keypads: <strong>Panel</strong>, <strong>Display</strong>, <strong>Digit</strong>, <strong>Wrong</strong> and
+  <strong>Highlight</strong> colours, <strong>Font</strong>. Inspect: <strong>Text Color</strong>, <strong>Font</strong>, <strong>View Distance</strong>, <strong>View Rotation</strong>.</li>
+<li><strong>Text:</strong> notes: <strong>Title</strong>, <strong>Pages</strong>, <strong>Pages Footer</strong> ("Page {0} of {1} ..."), <strong>Footer</strong>. Keypads: <strong>Wrong Code
+  Text</strong>, <strong>Hint Text</strong>, <strong>Show Digits</strong>. Inspect: <strong>Title</strong>, <strong>Description</strong>, <strong>Hint Text</strong>. An empty hint or footer hides
+  it.</li>
+<li><strong>Your own UI:</strong> untick <strong>Draw Panel</strong> (notes, keypads) or <strong>Draw Text</strong> (inspect) and the kit draws nothing. Show your
+  own UI from the <strong>On Opened</strong> / <strong>On Closed</strong> events (inspect: <strong>On Inspect Started</strong> / <strong>Ended</strong>). Your keypad's buttons
+  call <code>PressKey("1")</code> ... <code>PressKey("OK")</code> (or <code>SubmitCode("1234")</code>); your note UI reads <code>Title</code>, <code>Pages</code> and <code>Page</code> and
+  calls <code>TurnPage(1)</code> and <code>Close(...)</code>. The kit still handles the code check, the lockout, multiplayer and freezing the
+  player.</li>
+</ul>
+<h2 id="sounds">Sounds <a class="anchor" href="#sounds" aria-label="Link to this section">#</a></h2>
+<p>Add <strong>Interaction Sounds</strong> (Add Component &gt; All In One Interaction Kit &gt; Feedback) to an interactable object and drop your
+AudioClips in:</p>
+<ul>
+<li><strong>Opened</strong> / <strong>Closed</strong>: when it opens or turns on, and closes or turns off (doors, drawers, lids, switches, levers,
+  buttons). Every player hears it in multiplayer.</li>
+<li><strong>Used</strong>: each successful use. <strong>Denied</strong>: it can't be used (locked, no power, too heavy).</li>
+<li><strong>Keypad</strong>: <strong>Key Pressed</strong>, <strong>Code Accepted</strong>, <strong>Wrong Code</strong>. <strong>Carry</strong>: <strong>Picked Up</strong>, <strong>Dropped</strong>, <strong>Thrown</strong>.
+  <strong>Loot</strong>: <strong>Looted</strong> (once per opening).</li>
+<li><strong>Source</strong> (empty = a 3D Audio Source is added), <strong>Volume</strong>, <strong>Pitch Variation</strong>.</li>
+</ul>
+<p>Anything else can play a sound from a UnityEvent: every part has events (below), and an event can call
+<code>AudioSource.PlayOneShot</code> with your clip.</p>
+<h2 id="events-for-sounds-effects-and-your-own-scripts">Events, for sounds, effects and your own scripts <a class="anchor" href="#events-for-sounds-effects-and-your-own-scripts" aria-label="Link to this section">#</a></h2>
+<p>Every object has events in the Inspector (no code) and as C# events:</p>
+<ul>
+<li><strong>Interactable:</strong> On Interacted, On Denied, On Hold Started, On Hold Canceled, On State Changed.</li>
+<li><strong>Power:</strong> every source (switch, plate, gate, puzzle, keypad, socket) has On Powered / On Unpowered; <strong>Power Receiver</strong>
+  too; <strong>Sequence Puzzle</strong>: On Progress, On Solved, On Failed.</li>
+<li><strong>Carry:</strong> On Picked Up, On Dropped, On Thrown. <strong>Item Socket:</strong> On Filled, On Emptied. <strong>Keypad:</strong> On Unlocked, On Wrong
+  Code, On Locked, On Opened, On Closed, On Key Pressed. <strong>Note:</strong> On Opened, On Closed. <strong>Inspect:</strong> On Inspect Started /
+  Ended. <strong>Loot Container:</strong> On Item Given, On Emptied. <strong>Key Ring:</strong> Changed (C# event).</li>
+</ul>
+<h2 id="your-language">Your language <a class="anchor" href="#your-language" aria-label="Link to this section">#</a></h2>
+<p>Every text the kit shows players (prompts, reasons such as "Locked", and the note, keypad and inspect text) goes through
+one hook. Point it at your localization system once, for example in a startup script:</p>
+<pre><code class="language-csharp">InteractionText.Translate = text =&gt; MyLocalization.Get(text); // return null to keep a text as written
+</code></pre>
+<p>What it receives: the whole prompt as shown ("Open Door", "Close Chest"), each reason as written ("Locked - find the red
+key", "Too heavy"), and your own panel words (note titles and pages, inspect titles and descriptions, the panel hints and
+footers). So your own texts can simply be keys into your translation table.</p>
+<h2 id="loot-and-inventory">Loot and inventory <a class="anchor" href="#loot-and-inventory" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Your items:</strong> <strong>Loot Item</strong> assets (id, display name, icon, key id) and <strong>Loot Table</strong> assets (always-included items,
+  weighted random rolls, count ranges). Chests use them through <strong>Loot Container</strong> (fixed items, a table, a seed, block
+  when empty).</li>
+<li><strong>Your inventory:</strong> put a component that implements <code>ILootReceiver</code> on the player (<a href="containers-and-loot.html">Containers and loot</a>).
+  The sample inventory and its "+ 7 Coin" messages are only an example.</li>
+</ul>
+<h2 id="left-as-they-are-on-purpose">Left as they are, on purpose <a class="anchor" href="#left-as-they-are-on-purpose" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>The F3 debugger's look:</strong> a development aid, not for players (its key and whether it starts visible are settings).</li>
+<li><strong>Power wire colours in the Scene view:</strong> editor-only (cyan while editing, yellow when powered, grey when off); they never
+  appear in your game. Turn them off with <strong>Tools &gt; All In One Interaction Kit &gt; Show Power Wires</strong>.</li>
+<li><strong>The built-in panels' layout</strong> (where the keys and the paper sit): change the colours, font and text, or untick Draw
+  Panel and use your own UI.</li>
+</ul>
+<div class="doc-pager"><a class="pager prev" href="multiplayer.html"><span class="label">Previous</span>Multiplayer</a><a class="pager next" href="accessibility.html"><span class="label">Next</span>Accessibility</a></div>
+<p class="doc-report"><a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?title=Docs:+Customizing:+make+it+yours" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#make-it-yours-in-a-minute">Make it yours in a minute</a></li><li class="toc-2"><a href="#your-own-objects">Your own objects</a></li><li class="toc-2"><a href="#your-player-and-input">Your player and input</a></li><li class="toc-2"><a href="#the-prompt">The prompt</a></li><li class="toc-2"><a href="#the-crosshair">The crosshair</a></li><li class="toc-2"><a href="#notes-keypads-and-inspect">Notes, keypads and inspect</a></li><li class="toc-2"><a href="#sounds">Sounds</a></li><li class="toc-2"><a href="#events-for-sounds-effects-and-your-own-scripts">Events, for sounds, effects and your own scripts</a></li><li class="toc-2"><a href="#your-language">Your language</a></li><li class="toc-2"><a href="#loot-and-inventory">Loot and inventory</a></li><li class="toc-2"><a href="#left-as-they-are-on-purpose">Left as they are, on purpose</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/marklromano/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>
