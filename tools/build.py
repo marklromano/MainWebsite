@@ -329,6 +329,7 @@ def fill(text, root, slug=""):
         "root": root, "store": STORE_URL, "publisher": PUBLISHER_URL, "email": EMAIL,
         "version": PREFAB_VERSION, "external": ICON_EXTERNAL,
         "discord_tile": discord_tile(), "issues_tile": issues_tile(root), "discord_button": discord_button(),
+        "support": support_section(root, slug),
     }
     return re.sub(r"\{\{(\w+)\}\}", lambda m: values[m.group(1)], text)
 
@@ -358,6 +359,37 @@ def more_from(root, slug):
       <h2 id="more-title">Other kits, built to the same standard</h2>
     </div>
     <div class="products">{"".join(cards)}</div>
+  </div>
+</section>"""
+
+
+def support_section(root, slug):
+    """A Support block for a kit's own page: its docs help page, Discord, the bug tracker and email, in one row."""
+    product = next((p for p in PRODUCTS if p["slug"] == slug), None)
+    if not product:
+        return ""
+    name = product["name"]
+    subject = name.replace("All In One ", "").replace(" ", "%20")
+    has_docs = product["status"] in ("live", "coming soon")
+    docs = (f'<a class="tile" href="{root}{slug}/docs/support.html"><span class="label">Docs</span>'
+            '<h3>Help and troubleshooting</h3><p>Common problems and their fixes, and what to include when you ask.</p></a>'
+            if has_docs else
+            f'<a class="tile" href="{root}support/index.html"><span class="label">Help</span>'
+            '<h3>Support page</h3><p>Every way to get help with Romano Assets tools, in one place.</p></a>')
+    return f"""<section class="section" id="support" aria-labelledby="support-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Support</p>
+      <h2 id="support-title">Help with the {html.escape(product["short"])}</h2>
+      <p>Stuck, found a bug or have an idea? Pick whichever is easiest. Every message gets an answer.</p>
+    </div>
+    <div class="tiles">
+      {docs}
+      {discord_tile()}
+      {issues_tile(root)}
+      <a class="tile" href="mailto:{EMAIL}?subject={subject}%20support"><span class="label">Email</span>
+        <h3>Email the developer</h3><p>{EMAIL}</p></a>
+    </div>
   </div>
 </section>"""
 

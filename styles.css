@@ -610,3 +610,9 @@ a.tile:hover { border-color: var(--blue); background: var(--surface-2); color: v
 .shot-cover .shot-frame img { aspect-ratio: 3 / 2; }
 a.shot-frame { display: block; transition: border-color 0.15s; }
 a.shot-frame:hover { border-color: var(--blue); }
+
+/* Small link row under a product card's buttons: Docs, Support */
+.card-links { display: flex; gap: 1.25rem; margin: 0.9rem 0 0; font-size: 0.9375rem; }
+.card-links a { color: var(--muted); text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem; }
+.card-links a::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: 0.6; }
+.card-links a:hover { color: var(--text); text-decoration: underline; }
