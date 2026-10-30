@@ -23,6 +23,7 @@ import pathlib
 import posixpath
 import re
 import shutil
+import urllib.parse
 
 SITE = pathlib.Path(__file__).resolve().parent.parent
 PAGES = pathlib.Path(__file__).resolve().parent / "pages"
@@ -41,6 +42,7 @@ PREFAB_VERSION = "1.0.0"
 SAVE_VERSION = "1.0.0"
 INTERACTION_VERSION = "1.0.0"
 RUNTIME_BUILDING_VERSION = "1.0.0"
+SETTINGS_VERSION = "1.0.0"
 YEAR = "2026"
 
 ICON_EXTERNAL = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" '
@@ -237,6 +239,49 @@ PRODUCTS = [
         "shortcut_groups": {},
         "page_images": {},
     },
+    {
+        # In development, like the Save Kit: page up, docs built locally, published on launch day.
+        "slug": "settings-menu-kit",
+        "name": "All In One Game Settings & Menu Kit",
+        "short": "Settings & Menu Kit",
+        "accent": "c-settings",
+        "status": "in development",
+        "version": SETTINGS_VERSION,
+        "store": "",
+        "summary": "A finished game front end: title screen, main menu, settings, pause, loading screen and dialogs, "
+                   "with key rebinding, accessibility, subtitles and three themes, ready for keyboard, mouse and gamepad.",
+        "requirements": ["Unity 6000.0+", "Built-in, URP & HDRP", "No code needed", "Full C# source"],
+        "menu": "Tools > All In One Game Settings & Menu Kit",
+        "quick_start": [
+            "Import the package. Everything lands in <code>Assets/RomanoAssets/SettingsMenuKit/</code>.",
+            "Open <strong>Tools &gt; All In One Game Settings &amp; Menu Kit</strong>. The <strong>Home</strong> tab lists the Quick Start steps.",
+            "Click each step's button in order: copy the settings profile, create the audio mixer, add the front end, "
+            "mark your menu scene. Each one gets a check mark.",
+            "Press Play. The title screen opens; settings save, apply and come back every time.",
+        ],
+        "pages": [
+            ("Start here", "QuickStart.md", "getting-started.html", "Quick start"),
+            ("Start here", "Samples.md", "samples.html", "Samples"),
+            ("Features", "Screens.md", "screens.html", "Screens"),
+            ("Features", "SettingsCatalog.md", "settings-catalog.html", "Settings catalog"),
+            ("Features", "DisplaySafety.md", "display-safety.html", "Display safety"),
+            ("Features", "Audio.md", "audio.html", "Audio"),
+            ("Features", "Graphics.md", "graphics.html", "Graphics"),
+            ("Features", "ControlsAndRebinding.md", "controls-and-rebinding.html", "Controls and rebinding"),
+            ("Features", "Themes.md", "themes.html", "Themes"),
+            ("Features", "Accessibility.md", "accessibility.html", "Accessibility"),
+            ("Features", "Localization.md", "languages.html", "Languages"),
+            ("Features", "PauseAndMultiplayer.md", "pause-and-multiplayer.html", "Pause and multiplayer"),
+            ("For programmers", "ExtendingAPI.md", "extending.html", "Extending and API"),
+            ("For programmers", "Upgrading.md", "upgrading.html", "Upgrading"),
+            ("Reference", "SettingsReference.md", "settings-reference.html", "Settings reference"),
+            ("Reference", "Troubleshooting.md", "troubleshooting.html", "Troubleshooting and FAQ"),
+            ("Reference", "KnownIssues.md", "known-issues.html", "Known issues"),
+            ("Reference", "Support.md", "support.html", "Support"),
+        ],
+        "shortcut_groups": {},
+        "page_images": {},
+    },
 ]
 
 # Kits without docs yet, for the docs hub and "More from Romano Assets": (name, accent, status, one line)
@@ -297,6 +342,7 @@ def footer(root):
           <li><a href="{root}prefab-builder/index.html">Prefab Builder Kit</a></li>
           <li><a href="{root}save-kit/index.html">Save Kit</a></li>
           <li><a href="{root}interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="{root}settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
           <li><a href="{root}runtime-building-kit/index.html">Runtime Building Kit</a></li>
           <li><a href="{root}index.html#products">Coming next</a></li>
           <li><a href="{PUBLISHER_URL}" rel="noopener">Publisher page</a></li>
@@ -492,6 +538,10 @@ HAND_PAGES = [
      "All In One Runtime Building Kit",
      "Let players build bases and place furniture at runtime in Unity: your own models become build pieces in about ten "
      "minutes without code, snap through sockets, and every refused spot says why. In development."),
+    ("settings-menu-kit.html", "settings-menu-kit/index.html", "../", "settings",
+     "All In One Game Settings & Menu Kit",
+     "A finished game front end for Unity: title screen, main menu, settings, pause and loading screens, key rebinding, "
+     "accessibility, subtitles and three themes, without code. In development."),
     ("support.html", "support/index.html", "../", "support",
      "Support",
      "Get help with Romano Assets tools: documentation, bug reports, Discord and email."),
@@ -823,7 +873,8 @@ def toc_html(toc):
 def report_link(title):
     if not ISSUES_URL:
         return f'<a href="mailto:{EMAIL}?subject=Docs:%20{html.escape(title)}">Something unclear? Tell us</a>'
-    q = re.sub(r"\s+", "+", f"Docs: {title}")
+    # Encoded, so an "&" in a title ("Settings & Menu Kit") stays part of it
+    q = urllib.parse.quote_plus(f"Docs: {title}", safe=":")
     return f'<a href="{ISSUES_URL}/new?title={html.escape(q)}" rel="noopener">Something unclear or wrong? Tell us</a>'
 
 
