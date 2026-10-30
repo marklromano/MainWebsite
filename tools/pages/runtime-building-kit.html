@@ -1,0 +1,251 @@
+<!-- HERO -->
+<!-- No pictures yet: when Mark's picture folder for this kit exists, switch to <div class="wrap hero-grid"> with the
+     hero-copy below and a <figure class="shot"> (menu "Tools > All In One Runtime Building Kit" in its .dim), as on the
+     other kit pages. -->
+<section class="product-hero blueprint">
+  <div class="wrap hero-copy">
+    <div class="title-row">
+      <span class="pill pill-dev">In development</span>
+      <span class="pill">Coming to the Asset Store</span>
+    </div>
+    <h1>All In One Runtime Building Kit</h1>
+    <p class="lead">
+      Let your players build bases and place furniture while they play. Turn your own model into a build piece in about
+      ten minutes, with no code. Pieces snap together through sockets, and every spot that's refused says why, in plain
+      words: "Overlaps Wall_03", "Needs 4 Wood (you have 2)", "Keep the path clear".
+    </p>
+    <div class="btn-row">
+      {{discord_button}}
+      <a class="btn btn-ghost" href="#features">Features</a>
+    </div>
+    <ul class="specs" aria-label="Requirements">
+      <li>Unity 6000.0+</li>
+      <li>Built-in, URP &amp; HDRP</li>
+      <li>No dependencies</li>
+      <li>Full C# source</li>
+    </ul>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">How it works</p>
+      <h2 id="how-title">From your model to a placed piece in three steps</h2>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>Make it buildable</h3>
+        <p>In <code>Tools &gt; All In One Runtime Building Kit</code>, drop your model or prefab into Make Buildable, check the measured size, pick a preset and click Create Piece. Your model is never changed.</p>
+      </li>
+      <li>
+        <h3>Test it</h3>
+        <p>Test in Play Mode opens a test scene with your piece ready to place. Place a second one and it snaps to the first.</p>
+      </li>
+      <li>
+        <h3>Build in your game</h3>
+        <p>Add a Build World to your scene and a Builder to your player. The Builder never reads input itself: call it from your own controls, or use the samples' input script.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section section-band" id="features" aria-labelledby="features-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Features</p>
+      <h2 id="features-title">Building that snaps, costs, saves and says why</h2>
+    </div>
+    <div class="tabs-grid">
+      <div class="tab-card tab-card-wide">
+        <div class="tab-name"><h3>Placement that explains itself</h3><span class="label">Sockets &middot; Grid &middot; Free</span></div>
+        <ul>
+          <li><strong>Sockets first, then the grid, then free placement:</strong> walls stand flush on the edge of a foundation, and a floor resting on walls lines up with the foundation below.</li>
+          <li><strong>Every refused spot says why:</strong> "Overlaps Wall_03", "Slope 38&deg; (max 30&deg;)", "Too far (12.4 m, max 8 m)", "Hangs over the edge of Table_01".</li>
+          <li><strong>A preview that never triggers gameplay:</strong> a see-through copy of the model's meshes only, with no colliders, scripts or physics, green or red.</li>
+          <li><strong>Turn it any way:</strong> steps, fine steps or freely with the mouse, per-piece steps, random turns for decor, pictures spun on walls, tilt.</li>
+          <li><strong>One piece, several surfaces:</strong> a lamp for tables and walls, or only some ("Goes on Tables only"). Nudge, raise and lower; hold a key to go off the grid.</li>
+          <li>Works with rotated and unevenly scaled pieces and any pivot. Add your own rules, with your own reasons, in C#.</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Build fast</h3><span class="label">Rows &middot; Areas &middot; Blueprints</span></div>
+        <ul>
+          <li>Drag out rows of walls and areas of foundations: the preview shows how many fit and what they cost, and one undo takes them back.</li>
+          <li>Copy a building and stamp it again, turned, anywhere: every piece checked and charged, by the host too.</li>
+          <li>Pick a placed piece with the eyedropper; give pieces looks players choose and paint later.</li>
+          <li>Build limits per piece, player or category, in plain words ("Sofa: only 2 per player").</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Make it yours</h3><span class="label">Four themes</span></div>
+        <ul>
+          <li>Classic, Blueprint, Warm and Minimal: one click changes the whole look</li>
+          <li>Change or switch off every part: preview, crosshair, words, hotbar, menu, sounds, effects</li>
+          <li>Every word in one Text Table, ready to translate</li>
+          <li>Your own UI through events; per-piece colours and sounds</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Your models, no code</h3></div>
+        <ul>
+          <li>Make Buildable measures your model and offers a one-click Scale when it's the wrong size</li>
+          <li>Presets: Foundation, Wall, Floor, Furniture, Wall Mounted</li>
+          <li>Box or Mesh collider for models without one</li>
+          <li>Pieces lists every problem with a Fix button</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Furniture and interiors</h3></div>
+        <ul>
+          <li>Stands on floors, tabletops and shelves</li>
+          <li>Hangs on walls or from ceilings</li>
+          <li>Needs Support refuses anything hanging over an edge</li>
+          <li>Turn a placed piece where it stands</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Costs and sandbox</h3></div>
+        <ul>
+          <li>Resource Types and a cost per piece</li>
+          <li>Your own inventory through <code>IResourceProvider</code>, or the included Simple Resource Inventory</li>
+          <li>A refund % when a piece is removed</li>
+          <li>Sandbox mode builds for free</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Remove, move, upgrade, undo</h3></div>
+        <ul>
+          <li>Remove with a refund</li>
+          <li>Pick a piece up and put it down elsewhere, for free</li>
+          <li>Upgrade in place to the next tier, keeping its links</li>
+          <li>Undo and redo each player's own actions; costs and refunds are reversed exactly</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Structure and Build Zones</h3></div>
+        <ul>
+          <li>Removing a piece that holds others up is refused ("Holds up Wall_01") or removes them too, as you choose</li>
+          <li>No physics collapse: pieces never fall</li>
+          <li>Build Zones forbid building in an area, or allow it only there, each with its own reason</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Saving</h3></div>
+        <ul>
+          <li>Versioned JSON saves that name pieces by ID, never by name or path</li>
+          <li>Pieces whose definition is missing are skipped and named</li>
+          <li>Save to the cloud or your own save system through <code>ISaveBackend</code></li>
+        </ul>
+      </div>
+      <div class="tab-card tab-card-wide">
+        <div class="tab-name"><h3>Multiplayer</h3><span class="label">Netcode for GameObjects</span></div>
+        <ul>
+          <li><strong>Host-authoritative:</strong> players see their own preview at once, and the host checks every request with the same rules and costs as single player, then sends the change to everyone.</li>
+          <li><strong>Forged requests are refused:</strong> the host uses the connection's client ID, checks where the player is, and answers a repeated request once.</li>
+          <li><strong>Everyone sees the same world:</strong> late joiners get everything built so far, refusals come back in plain words, and each player undoes only their own actions.</li>
+          <li>An "owner only" permission is included. Another networking library works through <code>IBuildMessenger</code>, and without Netcode for GameObjects everything else works as before.</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Build menu</h3></div>
+        <ul>
+          <li>Tab, or the gamepad's View button, opens every piece by category</li>
+          <li>Keyboard, d-pad and mouse</li>
+          <li>A Keys page to change the controls, saved between sessions (Input System)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAMPLES -->
+<!-- No pictures yet: when they exist, this becomes the gallery (<div class="gallery"> of <figure class="shot">) as on
+     the other kit pages, one picture per sample scene. -->
+<section class="section" aria-labelledby="samples-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Included sample scenes</p>
+      <h2 id="samples-title">Try it before you add it to your game</h2>
+      <p>Six sample scenes, each with its keys on screen and a short README. They look the same in the Built-in Render Pipeline, URP and HDRP.</p>
+    </div>
+    <ul class="standards">
+      <li><h3>Base Building</h3><p>F2 switches between the four themes in every sample. A cottage to extend: foundations, walls, a doorway, floors, a gable roof and stairs, with Wood and Stone costs, a wood-to-stone upgrade, undo and saving.</p></li>
+      <li><h3>Furniture &amp; Interior</h3><p>A furnished room: tables, chairs, a bookcase, books and plants that need support, pictures and lamps on the walls, a ceiling lamp.</p></li>
+      <li><h3>Third Person</h3><p>The base-building pieces with an orbiting camera, and reach measured from the character.</p></li>
+      <li><h3>Top Down</h3><p>The same with a top-down camera: the mouse pointer aims.</p></li>
+      <li><h3>First Slice</h3><p>The smallest set-up: a foundation, a wall and a crate. The kit window's Open Sample Scene opens it.</p></li>
+      <li><h3>Multiplayer</h3><p>Host and join, and build together with host-authoritative building. Needs Netcode for GameObjects 2.x.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section class="section section-band" aria-labelledby="specs-title">
+  <div class="wrap spec-grid">
+    <div class="notes">
+      <p class="label">Compatibility</p>
+      <h2 id="specs-title">What it runs on, as tested</h2>
+      <table class="spec-table compat">
+        <tbody>
+          <tr><th scope="row">Unity 6000.0</th><td class="ok">Tested</td><td>The minimum version</td></tr>
+          <tr><th scope="row">Unity 6000.3</th><td class="ok">Tested</td><td></td></tr>
+          <tr><th scope="row">Unity 6000.6</th><td class="ok">Tested</td><td>The newest version tested</td></tr>
+          <tr><th scope="row">Built-in Render Pipeline</th><td class="ok">Tested</td><td>The preview and every sample</td></tr>
+          <tr><th scope="row">URP</th><td class="ok">Tested</td><td>The preview and every sample</td></tr>
+          <tr><th scope="row">HDRP</th><td class="ok">Tested</td><td>The preview and every sample. The project needs Linear colour space, which HDRP's own setup sets</td></tr>
+          <tr><th scope="row">Windows, Mono</th><td class="ok">Tested</td><td>Player builds</td></tr>
+          <tr><th scope="row">Windows, IL2CPP</th><td class="ok">Tested</td><td>Player builds</td></tr>
+          <tr><th scope="row">Input System</th><td class="ok">Either</td><td>The kit reads no input. The samples use the Input System package when it's active, and the old Input Manager otherwise</td></tr>
+          <tr><th scope="row">Domain Reload off</th><td class="ok">Works</td><td>Faster Enter Play Mode works</td></tr>
+        </tbody>
+      </table>
+      <table class="spec-table">
+        <tbody>
+          <tr><th scope="row">Dependencies</th><td>None. The Input System and Netcode for GameObjects 2.x are used when you have them</td></tr>
+          <tr><th scope="row">Source</th><td>Full C#, in the <code>RomanoAssets.RuntimeBuildingKit</code> namespace</td></tr>
+          <tr><th scope="row">Your data</th><td><code>Assets/AllInOneRuntimeBuildingKitData/</code>, outside the kit's folder, so updates never touch it</td></tr>
+          <tr><th scope="row">Performance</th><td>The preview takes about 0.25 ms per frame with 900 placed pieces (Editor, Windows desktop)</td></tr>
+          <tr><th scope="row">Menu</th><td><code>Tools &gt; All In One Runtime Building Kit</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="notes">
+      <p class="label">Good to know</p>
+      <h3>Limits, stated up front</h3>
+      <ul>
+        <li>Multiplayer has one authority, a host or a dedicated server. Netcode's distributed authority mode isn't supported.</li>
+        <li>There is no physics collapse: pieces that lose their support are protected or removed, never dropped.</li>
+        <li>HDRP needs the project in Linear colour space (HDRP's own setup does this); in Gamma nothing is lit.</li>
+        <li>With the old Input Manager, the samples read gamepad buttons only. Sticks, the build menu's d-pad and changing keys need the Input System package.</li>
+        <li>Resource amounts belong to your inventory and are saved by it. The included Simple Resource Inventory doesn't save them.</li>
+      </ul>
+      <h3>Status</h3>
+      <ul>
+        <li>The kit is in development and not on the Asset Store yet. Its documentation goes up here the day it launches.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="wrap">
+    <div class="cta-box">
+      <div>
+        <h2>Hear the day it launches</h2>
+        <p>Join the Romano Assets Discord for launch news, or ask a question about the kit now.</p>
+      </div>
+      <div class="btn-row">
+        {{discord_button}}
+        <a class="btn btn-ghost" href="../support/index.html">Get help</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{support}}
+
+{{more_from}}

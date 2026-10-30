@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Changelog | Romano Assets</title>
+<meta name="description" content="Changelog: documentation for the All In One Runtime Building Kit for Unity.">
+<link rel="canonical" href="https://romanoassets.github.io/runtime-building-kit/docs/changelog.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Changelog">
+<meta property="og:description" content="Changelog: documentation for the All In One Runtime Building Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://romanoassets.github.io/runtime-building-kit/docs/changelog.html">
+<meta property="og:image" content="https://romanoassets.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/logo.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.png" alt="" width="34" height="34">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Runtime Building Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a><a href="walkthroughs.html">Walkthroughs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="kit-window.html">The kit window</a><a href="make-it-yours.html">Make it yours</a><a href="make-buildable.html">Make Buildable</a><a href="placement-and-sockets.html">Placement and sockets</a><a href="gameplay.html">Costs, tools, undo, saving</a><a href="multiplayer.html">Multiplayer</a></div><div class="docs-group"><p class=label>Reference</p><a href="extending.html">Extending (API)</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html" aria-current="page">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a><a href="walkthroughs.html">Walkthroughs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="kit-window.html">The kit window</a><a href="make-it-yours.html">Make it yours</a><a href="make-buildable.html">Make Buildable</a><a href="placement-and-sockets.html">Placement and sockets</a><a href="gameplay.html">Costs, tools, undo, saving</a><a href="multiplayer.html">Multiplayer</a></div><div class="docs-group"><p class=label>Reference</p><a href="extending.html">Extending (API)</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html" aria-current="page">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Runtime Building Kit</a><span>/</span><span>Reference</span></nav>
+<h1 id="changelog">Changelog</h1>
+<p>All notable changes to the All In One Runtime Building Kit. The format follows
+<a href="https://keepachangelog.com">Keep a Changelog</a>, and versions follow <a href="https://semver.org">Semantic Versioning</a>.</p>
+<h2 id="100---unreleased">[1.0.0] - Unreleased <a class="anchor" href="#100---unreleased" aria-label="Link to this section">#</a></h2>
+<p>The first release.</p>
+<h3 id="building">Building <a class="anchor" href="#building" aria-label="Link to this section">#</a></h3>
+<ul>
+<li><strong>Build pieces:</strong> a Piece Definition holds everything about a piece (footprint, sockets, placement modes, slope and
+  distance limits, cost, upgrade) with a stable ID for saves and multiplayer. Your model or prefab is never modified.</li>
+<li><strong>Snapping:</strong> pieces join through sockets (foundations side by side, walls on edges, floors and roofs on wall tops),
+  flush on the outer edge so storeys line up. Turn with R or the mouse wheel; flip walls; raise and lower free pieces.</li>
+<li><strong>Grid placement:</strong> foundations and floors placed apart line up on a build grid (cell size per piece or per world).</li>
+<li><strong>Furniture on any surface:</strong> pieces stand on floors, tabletops and shelves, hang on walls or from ceilings, and must
+  be fully supported ("Hangs over the edge of Table_01").</li>
+<li><strong>Clear reasons:</strong> every refused spot says why, e.g. "Overlaps Wall_03", "Slope 38° (max 30°)", "Too far (12.4 m,
+  max 8 m)", "Needs 4 Wood (you have 2)", with a tip when a socket is just out of reach.</li>
+<li><strong>Preview:</strong> a see-through copy of the model's meshes only (no colliders, scripts or physics), green or red. Zero
+  memory allocated per frame; about 0.24 ms per refresh with 900 placed pieces (AMD Ryzen 7 5700X3D, in the Editor).</li>
+<li><strong>Build Zones:</strong> boxes or spheres where building is forbidden or the only place allowed, each with its own reason and
+  optional piece and category filters.</li>
+</ul>
+<h3 id="placing">Placing <a class="anchor" href="#placing" aria-label="Link to this section">#</a></h3>
+<ul>
+<li><strong>Turning:</strong> rotation steps (per piece too, 0 turns freely), fine steps, free turning with the mouse or a stick, a snap
+  switch, a random turn for decor, each piece keeps its own turn, spinning on walls, optional tilt.</li>
+<li><strong>Surfaces:</strong> a piece can go on floors, walls and ceilings in any mix (a lamp for tables and walls), or only on certain
+  pieces or tagged objects ("Goes on Tables only").</li>
+<li><strong>Adjusting:</strong> nudge the preview across the surface, a position step so furniture lines up, a held key for off-grid
+  placement and a grid switch for everyone.</li>
+<li><strong>Eyedropper:</strong> pick a placed piece's type, turn and look.</li>
+<li><strong>Rows and areas:</strong> drag out walls, fences, foundations and floors; the preview shows how many fit and the total cost;
+  each piece is checked and charged; one undo takes them all back.</li>
+<li><strong>Blueprints:</strong> copy a building and stamp it again elsewhere, turned; keep them as assets or player files.</li>
+<li><strong>Looks:</strong> colours or materials per piece, chosen while placing and changed with the Paint tool; saved and sent to
+  every player.</li>
+<li><strong>Build limits</strong> per piece, per player and per category, with plain reasons ("Bed: only 2 per player").</li>
+</ul>
+<h3 id="make-it-yours">Make it yours <a class="anchor" href="#make-it-yours" aria-label="Link to this section">#</a></h3>
+<ul>
+<li><strong>Themes:</strong> one Build Theme sets how building looks, sounds and reads: preview colours and pulse, tool highlights,
+  crosshair (plus, dot, circle, brackets, your texture or none), fonts, colours and sizes of every line, hotbar, build
+  menu, sounds, place and remove effects, and Build Zones shown in play. Every part can be switched off. Four ready-made
+  themes (Classic, Blueprint, Warm, Minimal), New Theme From Preset, and changes that show at once, in the Game view too.</li>
+<li><strong>Per-piece look:</strong> a piece can have its own preview colours, sounds and effects on top of the theme.</li>
+<li><strong>Your words:</strong> every word players read comes from a Text Table, ready to translate, with a hook for your localisation.</li>
+<li><strong>Your UI:</strong> a ready-made Build HUD, or your own through <code>IBuildHudView</code>, the Build Presentation's events and
+  <code>IBuildMenu</code>.</li>
+<li><strong>Sounds with no audio files:</strong> short built-in sounds made by the kit; use your own clips any time.</li>
+</ul>
+<h3 id="gameplay">Gameplay <a class="anchor" href="#gameplay" aria-label="Link to this section">#</a></h3>
+<ul>
+<li><strong>Costs and sandbox:</strong> Resource Types, per-piece costs and an <code>IResourceProvider</code> for your inventory (a Simple
+  Resource Inventory is included). Sandbox mode builds for free.</li>
+<li><strong>Remove, move, upgrade:</strong> remove pieces (configurable refund %), pick them up and put them down elsewhere, turn them
+  in place, upgrade them to their next tier in place (a wooden wall to stone), keeping their links.</li>
+<li><strong>Undo and redo</strong> of each player's own actions, with costs and refunds reversed exactly.</li>
+<li><strong>Structure:</strong> removing a piece that holds others up is refused ("Holds up Wall_01") or removes them too
+  (configurable). No physics collapse.</li>
+<li><strong>Saving:</strong> versioned JSON saves through an <code>ISaveBackend</code> (JSON files by default); loading skips pieces whose
+  definition is missing and names them.</li>
+<li><strong>Requests:</strong> every change is a request the authority checks again (it never trusts the preview), so your game, a
+  rule of your own or a multiplayer host can refuse it.</li>
+</ul>
+<h3 id="multiplayer">Multiplayer <a class="anchor" href="#multiplayer" aria-label="Link to this section">#</a></h3>
+<ul>
+<li><strong>Netcode for GameObjects 2.x:</strong> host-authoritative building. Clients' requests are checked by the host with the same
+  rules and costs; changes and late joiners' worlds are sent as compact piece records; refusals come back in plain
+  words; forged player IDs and positions are refused; undo per player.</li>
+<li><strong>Permissions:</strong> <code>IBuildPermission</code> decides who may change whose pieces; an "owner only" component is included. The
+  host's rules (permission, sandbox, structure, refund %, Build Zones) reach clients so their previews give the same
+  reasons.</li>
+<li>Other networking libraries: <code>NetworkedBuildAuthority</code> over your own <code>IBuildMessenger</code>.</li>
+</ul>
+<h3 id="editor">Editor <a class="anchor" href="#editor" aria-label="Link to this section">#</a></h3>
+<ul>
+<li><strong>Make Buildable:</strong> drop in a model, check the measured size (with a one-click Scale for models imported at the wrong
+  size), pick a preset (Foundation, Wall, Floor, Furniture, Wall Mounted), create the piece in your data folder and
+  test it in Play Mode in one click.</li>
+<li><strong>Kit window</strong> (Tools &gt; All In One Runtime Building Kit): Home with a quick start and tour, Make Buildable, Pieces
+  with problems and one-click fixes, Settings, Help with support links and Copy support info.</li>
+<li><strong>Edit in Scene:</strong> drag a piece's footprint and sockets with handles.</li>
+</ul>
+<h3 id="samples">Samples <a class="anchor" href="#samples" aria-label="Link to this section">#</a></h3>
+<ul>
+<li><strong>Base Building</strong> (a cottage to extend, costs, upgrade, save and load), <strong>Furniture and Interior</strong>, <strong>Third Person</strong>
+  and <strong>Top Down</strong> cameras, the small <strong>First Slice</strong>, <strong>Multiplayer</strong>, and a <strong>Benchmark</strong> that times the preview on
+  your machine. Models from Kenney's Furniture Kit (CC0)
+  plus our own. A build menu with categories and key rebinding. Keyboard, mouse and gamepad; the Input System package
+  or the old Input Manager.</li>
+</ul>
+<h3 id="compatibility">Compatibility <a class="anchor" href="#compatibility" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>Unity 6000.0 or newer (tested on 6000.0, 6000.3 and 6000.6). Built-in Render Pipeline, URP and HDRP. Windows Mono
+  and IL2CPP. No package dependencies; works with Domain Reload off.</li>
+</ul>
+<div class="doc-pager"><a class="pager prev" href="support.html"><span class="label">Previous</span>Support</a><span></span></div>
+<p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+Changelog" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#100---unreleased">[1.0.0] - Unreleased</a></li><li class="toc-3"><a href="#building">Building</a></li><li class="toc-3"><a href="#placing">Placing</a></li><li class="toc-3"><a href="#make-it-yours">Make it yours</a></li><li class="toc-3"><a href="#gameplay">Gameplay</a></li><li class="toc-3"><a href="#multiplayer">Multiplayer</a></li><li class="toc-3"><a href="#editor">Editor</a></li><li class="toc-3"><a href="#samples">Samples</a></li><li class="toc-3"><a href="#compatibility">Compatibility</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/romanoassets/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/romanoassets" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

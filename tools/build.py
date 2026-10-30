@@ -40,6 +40,7 @@ GITHUB_URL = "https://github.com/romanoassets"
 PREFAB_VERSION = "1.0.0"
 SAVE_VERSION = "1.0.0"
 INTERACTION_VERSION = "1.0.0"
+RUNTIME_BUILDING_VERSION = "1.0.0"
 YEAR = "2026"
 
 ICON_EXTERNAL = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" '
@@ -188,6 +189,54 @@ PRODUCTS = [
             "multiplayer.html": ("interaction-kit/11-2d-and-multiplayer.jpg", "A host and a client in the multiplayer demo, and the 2D demo."),
         },
     },
+    {
+        # In development, like the Save Kit: page up, docs built locally, published on launch day.
+        # Its Documentation/docs.json sets the sidebar groups, order and titles; this list only keeps the addresses.
+        "slug": "runtime-building-kit",
+        "name": "All In One Runtime Building Kit",
+        "short": "Runtime Building Kit",
+        "accent": "c-runtime",
+        "status": "in development",
+        "version": RUNTIME_BUILDING_VERSION,
+        "store": "",
+        "summary": "Let players build bases and place furniture at runtime: turn your own models into build pieces in about "
+                   "ten minutes without code, snap them together through sockets, drag out rows and areas or stamp whole "
+                   "buildings, and see a plain reason whenever a spot is refused. Four ready-made themes, and every part "
+                   "of the HUD, preview, words and sounds can be changed or switched off.",
+        "requirements": ["Unity 6000.0+", "Built-in, URP & HDRP", "No dependencies", "Full C# source"],
+        "menu": "Tools > All In One Runtime Building Kit",
+        "support_info": "In the kit window, open the **Help** tab and click **Copy support info**",
+        # Its Quick Start takes about ten minutes, not the five the docs home says by default
+        "quick_start_time": "about ten minutes",
+        "quick_start": [
+            "Import the package. Everything lands in <code>Assets/AllInOneRuntimeBuildingKit/</code>; your own pieces "
+            "go to <code>Assets/AllInOneRuntimeBuildingKitData/</code>.",
+            "Open <strong>Tools &gt; All In One Runtime Building Kit &gt; Open</strong>, click <strong>Open Sample Scene</strong> "
+            "and press Play: <kbd>1</kbd>/<kbd>2</kbd> pick a piece, left click places, <kbd>R</kbd> turns it.",
+            "Open <strong>Make Buildable</strong>, drop in your own model, check the measured size, pick a preset and "
+            "click <strong>Create Piece</strong>.",
+            "Click <strong>Test in Play Mode</strong>: a test scene opens with your piece ready to place. Then check "
+            "<strong>Pieces</strong> and fix anything listed with one click.",
+        ],
+        "pages": [
+            ("Start here", "QuickStart.md", "getting-started.html", "Quick start"),
+            ("Start here", "Samples.md", "samples.html", "Samples"),
+            ("Start here", "Walkthroughs.md", "walkthroughs.html", "Walkthroughs"),
+            ("Start here", "Upgrading.md", "upgrading.html", "Upgrading"),
+            ("Using the kit", "KitWindow.md", "kit-window.html", "The kit window"),
+            ("Using the kit", "MakeItYours.md", "make-it-yours.html", "Make it yours"),
+            ("Using the kit", "MakeBuildable.md", "make-buildable.html", "Make Buildable"),
+            ("Using the kit", "PlacementAndSockets.md", "placement-and-sockets.html", "Placement and sockets"),
+            ("Using the kit", "Gameplay.md", "gameplay.html", "Costs, tools, undo, saving"),
+            ("Using the kit", "Multiplayer.md", "multiplayer.html", "Multiplayer"),
+            ("Reference", "Extending.md", "extending.html", "Extending (API)"),
+            ("Reference", "TroubleshootingFAQ.md", "troubleshooting.html", "Troubleshooting and FAQ"),
+            ("Reference", "KnownIssues.md", "known-issues.html", "Known issues"),
+            ("Reference", "Support.md", "support.html", "Support"),
+        ],
+        "shortcut_groups": {},
+        "page_images": {},
+    },
 ]
 
 # Kits without docs yet, for the docs hub and "More from Romano Assets": (name, accent, status, one line)
@@ -248,6 +297,7 @@ def footer(root):
           <li><a href="{root}prefab-builder/index.html">Prefab Builder Kit</a></li>
           <li><a href="{root}save-kit/index.html">Save Kit</a></li>
           <li><a href="{root}interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="{root}runtime-building-kit/index.html">Runtime Building Kit</a></li>
           <li><a href="{root}index.html#products">Coming next</a></li>
           <li><a href="{PUBLISHER_URL}" rel="noopener">Publisher page</a></li>
         </ul>
@@ -370,7 +420,8 @@ def support_section(root, slug):
         return ""
     name = product["name"]
     subject = name.replace("All In One ", "").replace(" ", "%20")
-    has_docs = product["status"] in ("live", "coming soon")
+    # Kits still in development may already have their manual built (linked from their page): use its Support page
+    has_docs = (SITE / slug / "docs" / "support.html").exists()
     docs = (f'<a class="tile" href="{root}{slug}/docs/support.html"><span class="label">Docs</span>'
             '<h3>Help and troubleshooting</h3><p>Common problems and their fixes, and what to include when you ask.</p></a>'
             if has_docs else
@@ -437,6 +488,10 @@ HAND_PAGES = [
      "Turn your own Unity prefabs into doors, drawers, switches, pickups, keypads and puzzles: a Setup Wizard, prompts "
      "for every controller, a debugger that says why something can't be used, and optional multiplayer. Coming soon to "
      "the Unity Asset Store."),
+    ("runtime-building-kit.html", "runtime-building-kit/index.html", "../", "runtime",
+     "All In One Runtime Building Kit",
+     "Let players build bases and place furniture at runtime in Unity: your own models become build pieces in about ten "
+     "minutes without code, snap through sockets, and every refused spot says why. In development."),
     ("support.html", "support/index.html", "../", "support",
      "Support",
      "Get help with Romano Assets tools: documentation, bug reports, Discord and email."),
@@ -552,9 +607,14 @@ def load_pages(product, docs_dir):
 
 
 def index_descriptions(index_md):
-    """The 'What it covers' column of Documentation/Index.md, by linked file."""
-    return {m.group(1): m.group(2).strip()
-            for m in re.finditer(r"^\|\s*\[[^\]]+\]\(([^)#]+\.md)\)\s*\|\s*(.+?)\s*\|\s*$", index_md, re.M)}
+    """What each page covers, from Documentation/Index.md, by linked file: a table row "| [Page](Page.md) | text |",
+    or a list item "- [Page](Page.md): text" (its wrapped lines included)."""
+    found = {m.group(1): m.group(2).strip()
+             for m in re.finditer(r"^\|\s*\[[^\]]+\]\(([^)#]+\.md)\)\s*\|\s*(.+?)\s*\|\s*$", index_md, re.M)}
+    for m in re.finditer(r"^[-*]\s+\[[^\]]+\]\(([^)#]+\.md)\):\s*(.+(?:\n[ \t]+\S.*)*)", index_md, re.M):
+        text = re.sub(r"\s+", " ", m.group(2)).strip()
+        found.setdefault(m.group(1), text[:1].upper() + text[1:])
+    return found
 
 
 CALLOUT = re.compile(r'<blockquote>\s*<p>\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*', re.I)
@@ -817,10 +877,10 @@ def build_docs(product, kit_root):
 
     # Pictures from the kit's Documentation/Images
     if (docs_dir / "Images").exists():
-        shutil.copytree(docs_dir / "Images", out_dir / "img", dirs_exist_ok=True)
+        shutil.copytree(docs_dir / "Images", out_dir / "img", dirs_exist_ok=True, ignore=shutil.ignore_patterns("*.meta"))
     for folder in sorted({posixpath.dirname(src) for _, src, _, _ in pages} - {""}):
         if (docs_dir / folder / "Images").exists():
-            shutil.copytree(docs_dir / folder / "Images", out_dir / "img" / folder, dirs_exist_ok=True)
+            shutil.copytree(docs_dir / folder / "Images", out_dir / "img" / folder, dirs_exist_ok=True, ignore=shutil.ignore_patterns("*.meta"))
 
     search = []
     rendered = {}
@@ -912,8 +972,9 @@ def docs_home(product, groups, rendered):
         for out, title in items:
             desc = rendered[out][2]
             if not desc:
-                m = re.search(r"^(?!#|\||-|\s)(.+)$", rendered[out][1], re.M)
-                desc = m.group(1) if m else ""
+                # The first paragraph, with its wrapped lines
+                m = re.search(r"^(?!#|\||-|\s|```)(.+(?:\n(?!#|\||-|\s|```).+)*)", rendered[out][1], re.M)
+                desc = re.sub(r"\s+", " ", m.group(1)) if m else ""
                 desc = re.sub(r"[*`]", "", desc)
                 desc = desc[:150].rsplit(" ", 1)[0] + "..." if len(desc) > 150 else desc
             desc = html.escape(re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", desc))
@@ -929,7 +990,7 @@ def docs_home(product, groups, rendered):
   {f'<a class="btn btn-ghost" href="{product["store"]}" rel="noopener">Asset Store {ICON_EXTERNAL}</a>' if product["store"] else ""}
 </div>
 <div class="callout" id="quick-start">
-  <p class="label label-accent">Quick start: five minutes</p>
+  <p class="label label-accent">Quick start: {product.get("quick_start_time", "five minutes")}</p>
   <ol>{steps}</ol>
 </div>
 {"".join(sections_html)}
