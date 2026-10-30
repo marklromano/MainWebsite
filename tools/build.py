@@ -29,13 +29,13 @@ PAGES = pathlib.Path(__file__).resolve().parent / "pages"
 
 # ---- Facts used on several pages: change them here ----
 
-SITE_URL = "https://marklromano.github.io"
+SITE_URL = "https://romanoassets.github.io"
 STORE_URL = "https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146"
 PUBLISHER_URL = "https://assetstore.unity.com/publishers/160196"
 EMAIL = "marklromano@outlook.com"
 # Empty until they exist: the pages then show "soon" instead of a link.
 DISCORD_URL = "https://discord.gg/AmpBDxRAKu"
-ISSUES_URL = "https://github.com/marklromano/RomanoAssetSupport/issues"
+ISSUES_URL = "https://github.com/romanoassets/RomanoAssetSupport/issues"
 PREFAB_VERSION = "1.0.0"
 SAVE_VERSION = "1.0.0"
 INTERACTION_VERSION = "1.0.0"

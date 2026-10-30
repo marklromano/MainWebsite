@@ -1,7 +1,7 @@
 # Romano Assets website
 
 The Romano Assets website: plain HTML and CSS, no framework, no web fonts, no trackers, cookies or analytics. The
-only script is the docs search (`assets/docs.js`), which is ours, runs offline and sends nothing anywhere. Published free with **GitHub Pages** at **https://marklromano.github.io**.
+only script is the docs search (`assets/docs.js`), which is ours, runs offline and sends nothing anywhere. Published free with **GitHub Pages** at **https://romanoassets.github.io**.
 
 ```
 index.html                    home: the products, standards, help, about
@@ -69,9 +69,14 @@ picture shown when someone shares a link to the site.
 
 GitHub Pages serves the `main` branch: push to `main` and the site updates within a minute or two.
 
-**The address.** GitHub serves https://marklromano.github.io from the repository named exactly
-`marklromano.github.io` (renamed from xMark42.github.io after the username change). In Settings > Pages: Source
-**Deploy from a branch**, branch **main**, folder **/ (root)**.
+**The address.** GitHub serves https://romanoassets.github.io from the repository named exactly
+`romanoassets.github.io` in the `romanoassets` organization (moved from marklromano/marklromano.github.io). In
+Settings > Pages: Source **Deploy from a branch**, branch **main**, folder **/ (root)**.
+
+**The old address.** https://marklromano.github.io is now a separate small repo,
+[marklromano/marklromano.github.io](https://github.com/marklromano/marklromano.github.io), that forwards every old
+link (including deep links) to the same page here. Keep it and its GitHub Pages site switched on: version 0.8.0 of the
+Prefab Builder Kit has the old address built in.
 
 **Your own domain (optional).** Buy a domain (e.g. `romanoassets.com`), enter it in Settings > Pages > Custom domain,
 add the DNS records GitHub shows at your registrar, and tick **Enforce HTTPS** once it's offered. Then change
