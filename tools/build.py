@@ -36,6 +36,7 @@ EMAIL = "marklromano@outlook.com"
 # Empty until they exist: the pages then show "soon" instead of a link.
 DISCORD_URL = "https://discord.gg/AmpBDxRAKu"
 ISSUES_URL = "https://github.com/romanoassets/RomanoAssetSupport/issues"
+GITHUB_URL = "https://github.com/romanoassets"
 PREFAB_VERSION = "1.0.0"
 SAVE_VERSION = "1.0.0"
 INTERACTION_VERSION = "1.0.0"
@@ -217,7 +218,7 @@ def header(root, active):
 <header class="site-header">
   <div class="wrap header-row">
     <a class="brand" href="{root}index.html" aria-label="Romano Assets home">
-      <img src="{root}assets/logo.svg" alt="" width="30" height="30">
+      <img src="{root}assets/logo.png" alt="" width="34" height="34">
       <span>Romano Assets</span>
     </a>
     <nav aria-label="Main">
@@ -238,7 +239,7 @@ def footer(root):
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand" href="{root}index.html"><img src="{root}assets/logo.svg" alt="" width="30" height="30"><span>Romano Assets</span></a>
+        <a class="brand" href="{root}index.html"><img src="{root}assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
         <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
       </div>
       <div>
@@ -266,6 +267,7 @@ def footer(root):
           <li><a href="mailto:{EMAIL}">Email</a></li>
           <li>{soon_or_link(DISCORD_URL, "Discord")}</li>
           <li>{soon_or_link(ISSUES_URL, "Bug tracker")}</li>
+          <li><a href="{GITHUB_URL}" rel="noopener">GitHub</a></li>
         </ul>
       </div>
     </div>
@@ -275,6 +277,13 @@ def footer(root):
     </div>
   </div>
 </footer>"""
+
+
+def og_image(path):
+    """The link-preview picture: a kit's own social art on its pages, the Romano Assets card everywhere else."""
+    if path.startswith("prefab-builder/"):
+        return "prefab-builder/social.jpg"
+    return "og-image.jpg"
 
 
 def page(root, active, title, description, body, path, scripts=""):
@@ -295,9 +304,10 @@ def page(root, active, title, description, body, path, scripts=""):
 <meta property="og:description" content="{html.escape(description)}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{SITE_URL}/assets/img/og-image.jpg">
+<meta property="og:image" content="{SITE_URL}/assets/img/{og_image(path)}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="{root}assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{root}assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="{root}assets/logo.png">
 <link rel="stylesheet" href="{root}styles.css">
 </head>
 <body>
