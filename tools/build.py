@@ -43,6 +43,7 @@ SAVE_VERSION = "1.0.0"
 INTERACTION_VERSION = "1.0.0"
 RUNTIME_BUILDING_VERSION = "1.0.0"
 SETTINGS_VERSION = "1.0.0"
+FOOTSTEP_VERSION = "0.1.0"
 YEAR = "2026"
 
 ICON_EXTERNAL = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" '
@@ -279,6 +280,32 @@ PRODUCTS = [
             ("Reference", "KnownIssues.md", "known-issues.html", "Known issues"),
             ("Reference", "Support.md", "support.html", "Support"),
         ],
+        "shortcut_groups": {},
+        "page_images": {},
+    },
+    {
+        # In development: page up, docs built with --docs footstep-kit=<folder>, published (and listed on the docs hub)
+        # on launch day with "status": "live" and "store" set. Its Documentation/docs.json sets the sidebar.
+        "slug": "footstep-kit",
+        "name": "All In One Surface Footstep Kit",
+        "short": "Footstep Kit",
+        "accent": "c-footstep",
+        "status": "in development",
+        "version": FOOTSTEP_VERSION,
+        "store": "",
+        "summary": "Footsteps that sound like what your characters walk on, for any controller in 3D and 2D, with effects, "
+                   "footprints, AI hearing and a debugger that says why a step was silent.",
+        "requirements": ["Unity 6000.0+", "Built-in, URP & HDRP", "No dependencies", "Full C# source"],
+        "menu": "Tools > All In One Surface Footstep Kit",
+        "support_info": "**Tools > All In One Surface Footstep Kit > Help and Support > Copy Support Info**",
+        "quick_start": [
+            "Import the package. Everything lands in <code>Assets/AllInOneFootstepKit/</code>. Try "
+            "<strong>Tools &gt; All In One Surface Footstep Kit &gt; Open Demo &gt; Showcase</strong> and press Play.",
+            "Open <strong>Tools &gt; All In One Surface Footstep Kit &gt; Setup Wizard</strong> and pick your character.",
+            "Check the surfaces it found in your scene, click <strong>Apply</strong>, then <strong>Add Footsteps</strong>.",
+            "Press Play and walk. No sound? <strong>Why No Footstep?</strong> tells you why, with a fix button.",
+        ],
+        "pages": [],
         "shortcut_groups": {},
         "page_images": {},
     },
@@ -542,6 +569,10 @@ HAND_PAGES = [
      "All In One Game Settings & Menu Kit",
      "A finished game front end for Unity: title screen, main menu, settings, pause and loading screens, key rebinding, "
      "accessibility, subtitles and three themes, without code. In development."),
+    ("footstep-kit.html", "footstep-kit/index.html", "../", "footstep",
+     "All In One Surface Footstep Kit",
+     "Footsteps for Unity that sound like what your characters walk on: any controller, 3D and 2D, terrain layers, "
+     "zones, effects, footprints, AI hearing and a Why No Footstep? debugger. In development."),
     ("support.html", "support/index.html", "../", "support",
      "Support",
      "Get help with Romano Assets tools: documentation, bug reports, Discord and email."),
