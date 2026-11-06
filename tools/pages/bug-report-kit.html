@@ -1,0 +1,213 @@
+<!-- HERO -->
+<section class="product-hero blueprint">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="title-row">
+        <span class="pill pill-dev">In development</span>
+        <span class="pill">Coming to the Asset Store</span>
+      </div>
+      <h1>All In One Bug Report Kit</h1>
+      <p class="lead">
+        Testers press one key, say what went wrong, and you get one file that shows it: their words, a marked-up
+        screenshot, the last seconds as pictures, the log with stack traces, recent events, system info and your game's
+        state. Open it in Unity and click straight to the broken line.
+      </p>
+      <div class="btn-row">
+        {{discord_button}}
+        <a class="btn btn-ghost" href="#features">Features</a>
+      </div>
+      <ul class="specs" aria-label="Requirements">
+        <li>Unity 6000.0+</li>
+        <li>Built-in, URP &amp; HDRP</li>
+        <li>No dependencies</li>
+        <li>Full C# source</li>
+      </ul>
+    </div>
+    <figure class="shot">
+      <div class="dim" aria-hidden="true">F8 in any development build</div>
+      <div class="shot-frame">
+        <img src="../assets/img/bugreport-form.jpg" width="1200" height="675"
+             alt="The report form over a game: a marked-up screenshot with a circle and an arrow, and a list of what gets saved, each part with a tick box">
+      </div>
+      <figcaption>The report form: mark up the screenshot, see exactly what gets saved.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">How it works</p>
+      <h2 id="how-title">From "it broke" to the broken line</h2>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>Import it</h3>
+        <p>The reporter starts by itself in the Editor and in development builds. No scene setup, no code.</p>
+      </li>
+      <li>
+        <h3>Testers press F8</h3>
+        <p>The screenshot is taken before the form appears. They pick a category, write a line, circle the problem and save.</p>
+      </li>
+      <li>
+        <h3>Open it in Unity</h3>
+        <p>The Report Inbox shows every report. Click a stack line to open your script, or jump the Scene view to where the tester stood.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section section-band" id="features" aria-labelledby="features-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Features</p>
+      <h2 id="features-title">Everything you need to fix a bug you didn't see happen</h2>
+    </div>
+    <div class="tabs-grid">
+      <div class="tab-card tab-card-wide">
+        <div class="tab-name"><h3>One file per report</h3><span class="label">A zip with a readable page inside</span></div>
+        <ul>
+          <li><strong>The tester's words, category and severity,</strong> with steps filled in from what they just did.</li>
+          <li><strong>Screenshot with markup</strong> (circle, arrow, blur) and a <strong>replay</strong> of the last seconds as pictures.</li>
+          <li><strong>Console log with stack traces,</strong> recent events, system info, scene and camera, your own game state and attached files.</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Report Inbox</h3></div>
+        <ul>
+          <li>Clickable stack traces that open your script at the line</li>
+          <li>Go to where the tester was, in the Scene view</li>
+          <li>Status, notes, search, filters, CSV export</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Debug overlay</h3></div>
+        <ul>
+          <li>In-game console with search, level filters and collapse</li>
+          <li>Commands from one attribute, such as <code>help</code> or <code>timescale</code></li>
+          <li>Frame rate, frame time graph and memory</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Debug options</h3></div>
+        <ul>
+          <li>Add <code>[DebugOption]</code> to a field and it appears in the overlay, no UI code</li>
+          <li>Or use a component, with no code at all</li>
+          <li>Pin any option to stay on screen</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Private by default</h3></div>
+        <ul>
+          <li>Reports stay on the device; no analytics, no account</li>
+          <li>Testers see and untick every part before saving</li>
+          <li>The computer's user name is hidden; add your own rule</li>
+          <li>Discord and your own server are optional, off until you switch them on</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Gone from release builds</h3></div>
+        <ul>
+          <li>Development builds only, by default</li>
+          <li>Release builds lose the code that starts it, the form, the overlay and the settings</li>
+          <li>Checked by building release players and looking inside them</li>
+        </ul>
+      </div>
+      <div class="tab-card tab-card-wide">
+        <div class="tab-name"><h3>Make it yours</h3><span class="label">Four themes, or your own</span></div>
+        <ul>
+          <li><strong>Studio, Daylight, Terminal and High Contrast,</strong> switchable live; your own colours, font, images and text size.</li>
+          <li><strong>Your own words</strong> for everything testers read, in one text table. Status messages as words, icons or both.</li>
+          <li><strong>Phones, gamepads and big screens:</strong> safe areas, touch gestures, a focus ring on every control, fit-tested on seven screen shapes.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section" aria-labelledby="gallery-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Included demo scenes</p>
+      <h2 id="gallery-title">Find a real bug in the first minute</h2>
+      <p>Bug Hunt is a tiny game with real bugs in it to find and report. Feature Gallery has one button for everything the kit does.</p>
+    </div>
+    <div class="gallery">
+      <figure class="shot">
+        <div class="shot-frame"><img src="../assets/img/bugreport-inbox.jpg" width="1200" height="675" loading="lazy" decoding="async" alt="The Report Inbox in the Unity Editor: a report with its marked-up screenshot, where the tester was, and a Go to where the tester was button"></div>
+        <figcaption>The Report Inbox in the Editor</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="shot-frame"><img src="../assets/img/bugreport-console.jpg" width="1200" height="675" loading="lazy" decoding="async" alt="The in-game console with warnings and an error, level filters, a command line and the stats strip"></div>
+        <figcaption>The in-game console and stats strip</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="shot-frame"><img src="../assets/img/bugreport-theme-daylight.jpg" width="1200" height="675" loading="lazy" decoding="async" alt="The report form in the light Daylight theme"></div>
+        <figcaption>The form in the Daylight theme</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="shot-frame"><img src="../assets/img/bugreport-theme-terminal.jpg" width="1200" height="675" loading="lazy" decoding="async" alt="The console in the green-on-black Terminal theme"></div>
+        <figcaption>The console in the Terminal theme</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section class="section section-band" aria-labelledby="specs-title">
+  <div class="wrap spec-grid">
+    <div class="notes">
+      <p class="label">Technical details</p>
+      <h2 id="specs-title">Built to be dependable</h2>
+      <table class="spec-table">
+        <tbody>
+          <tr><th scope="row">Unity</th><td>6000.0 or newer (tested on 6000.0, 6000.3 and 6000.6)</td></tr>
+          <tr><th scope="row">Render pipelines</th><td>Built-in, URP and HDRP</td></tr>
+          <tr><th scope="row">Input</th><td>Input Manager (old), the Input System package, or both</td></tr>
+          <tr><th scope="row">Platforms</th><td>Windows, Mono and IL2CPP (built and run); Android and WebGL scripts build</td></tr>
+          <tr><th scope="row">Uses</th><td>Nothing required. With Unity UI installed you get the full form and overlay; without it, a simpler built-in form</td></tr>
+          <tr><th scope="row">Performance</th><td>No garbage per frame while running (tested)</td></tr>
+          <tr><th scope="row">Source</th><td>Full C#, no native plugins</td></tr>
+          <tr><th scope="row">Domain Reload off</th><td>Supported</td></tr>
+          <tr><th scope="row">Menu</th><td><code>Tools &gt; All In One Bug Report Kit</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="notes">
+      <p class="label">Good to know</p>
+      <h3>Limits, stated up front</h3>
+      <ul>
+        <li>It hasn't been run on an Android or iOS device or in a browser yet: those scripts build, but aren't tested there.</li>
+        <li>A Discord webhook address in a build can be found by anyone who has the build. Use a private test channel.</li>
+        <li>It records pictures, not video.</li>
+      </ul>
+      <h3>Status</h3>
+      <ul>
+        <li>The kit is in its final checks before submission to the Asset Store. Its documentation goes up here the day it launches.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="wrap">
+    <div class="cta-box">
+      <div>
+        <h2>Hear the day it launches</h2>
+        <p>Join the Romano Assets Discord for launch news, or ask a question about the kit now.</p>
+      </div>
+      <div class="btn-row">
+        {{discord_button}}
+        <a class="btn btn-ghost" href="../support/index.html">Get help</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{support}}
+
+{{more_from}}

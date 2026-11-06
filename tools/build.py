@@ -43,6 +43,7 @@ SAVE_VERSION = "1.0.0"
 INTERACTION_VERSION = "1.0.0"
 RUNTIME_BUILDING_VERSION = "1.0.0"
 SETTINGS_VERSION = "1.0.0"
+BUG_REPORT_VERSION = "1.0.0"
 YEAR = "2026"
 
 ICON_EXTERNAL = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" '
@@ -282,6 +283,48 @@ PRODUCTS = [
         "shortcut_groups": {},
         "page_images": {},
     },
+    {
+        # In development, like the Save Kit: page up, docs built locally, published on launch day.
+        "slug": "bug-report-kit",
+        "name": "All In One Bug Report Kit",
+        "short": "Bug Report Kit",
+        "accent": "c-bugreport",
+        "status": "in development",
+        "version": BUG_REPORT_VERSION,
+        "store": "",
+        "summary": "Testers press one key and you get one file: their words, a marked-up screenshot, a replay of the last "
+                   "seconds, the log with stack traces, system info and your game's state. Plus an in-game console, "
+                   "stats and debug options, and a Report Inbox in the Editor that clicks straight to the broken line.",
+        "requirements": ["Unity 6000.0+", "Built-in, URP & HDRP", "No dependencies", "Full C# source"],
+        "menu": "Tools > All In One Bug Report Kit",
+        "support_info": "**Tools > All In One Bug Report Kit > Help and Support > Copy Support Info**",
+        "quick_start": [
+            "Import the package. Everything lands in <code>Assets/AllInOneBugReportKit/</code>; your settings go to "
+            "<code>Assets/AllInOneBugReportKitData/</code>.",
+            "Open <strong>Tools &gt; All In One Bug Report Kit &gt; Open Demo &gt; Bug Hunt</strong> and press Play.",
+            "Click <strong>Deliver the crate</strong>, press <kbd>F8</kbd>, write a line, circle the problem and click "
+            "<strong>Save report</strong>.",
+            "Stop playing and open <strong>Tools &gt; All In One Bug Report Kit &gt; Report Inbox</strong>. Click the "
+            "stack line to open the broken script.",
+        ],
+        "pages": [
+            ("Start here", "QuickStart.md", "getting-started.html", "Quick start"),
+            ("Start here", "Samples.md", "samples.html", "Samples"),
+            ("Using the kit", "ReportForm.md", "report-form.html", "The report form"),
+            ("Using the kit", "DebugOverlay.md", "debug-overlay.html", "Debug overlay"),
+            ("Using the kit", "ReportInbox.md", "report-inbox.html", "Report Inbox"),
+            ("Using the kit", "MakeItYours.md", "make-it-yours.html", "Make it yours"),
+            ("Using the kit", "BuildsAndPrivacy.md", "builds-and-privacy.html", "Builds and privacy"),
+            ("Reference", "Settings.md", "settings.html", "Settings"),
+            ("Reference", "Extending.md", "extending.html", "Extending (API)"),
+            ("Reference", "Upgrading.md", "upgrading.html", "Upgrading"),
+            ("Reference", "Troubleshooting.md", "troubleshooting.html", "Troubleshooting"),
+            ("Reference", "Support.md", "support.html", "Support"),
+        ],
+        "shortcut_groups": {},
+        # The kit's own Documentation/Images are in its pages already
+        "page_images": {},
+    },
 ]
 
 # Kits without docs yet, for the docs hub and "More from Romano Assets": (name, accent, status, one line)
@@ -292,6 +335,8 @@ COMING = [
      "Title screen, menus, settings, pause and loading screens, ready to drop in."),
     ("All In One Runtime Building Kit", "c-runtime", "In development",
      "Let players build bases and place furniture in your game."),
+    ("All In One Bug Report Kit", "c-bugreport", "In development",
+     "In-game bug reports with screenshot, replay and logs, plus a debug console."),
 ]
 
 NAV = [
@@ -344,6 +389,7 @@ def footer(root):
           <li><a href="{root}interaction-kit/index.html">Interaction Kit</a></li>
           <li><a href="{root}settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
           <li><a href="{root}runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="{root}bug-report-kit/index.html">Bug Report Kit</a></li>
           <li><a href="{root}index.html#products">Coming next</a></li>
           <li><a href="{PUBLISHER_URL}" rel="noopener">Publisher page</a></li>
         </ul>
@@ -542,6 +588,11 @@ HAND_PAGES = [
      "All In One Game Settings & Menu Kit",
      "A finished game front end for Unity: title screen, main menu, settings, pause and loading screens, key rebinding, "
      "accessibility, subtitles and three themes, without code. In development."),
+    ("bug-report-kit.html", "bug-report-kit/index.html", "../", "bugreport",
+     "All In One Bug Report Kit",
+     "In-game bug reports for Unity: testers press one key and you get one file with their words, a marked-up "
+     "screenshot, a replay, logs with stack traces and system info, plus a debug console and a Report Inbox that "
+     "clicks to the broken line. In development."),
     ("support.html", "support/index.html", "../", "support",
      "Support",
      "Get help with Romano Assets tools: documentation, bug reports, Discord and email."),

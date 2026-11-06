@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Settings | Romano Assets</title>
+<meta name="description" content="Settings: documentation for the All In One Bug Report Kit for Unity.">
+<link rel="canonical" href="https://romanoassets.github.io/bug-report-kit/docs/settings.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Settings">
+<meta property="og:description" content="Settings: documentation for the All In One Bug Report Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://romanoassets.github.io/bug-report-kit/docs/settings.html">
+<meta property="og:image" content="https://romanoassets.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/logo.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.png" alt="" width="34" height="34">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Bug Report Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="report-form.html">The report form</a><a href="debug-overlay.html">Debug overlay</a><a href="report-inbox.html">Report Inbox</a><a href="make-it-yours.html">Make it yours</a><a href="builds-and-privacy.html">Builds and privacy</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings.html" aria-current="page">Settings</a><a href="extending.html">Extending (API)</a><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="report-form.html">The report form</a><a href="debug-overlay.html">Debug overlay</a><a href="report-inbox.html">Report Inbox</a><a href="make-it-yours.html">Make it yours</a><a href="builds-and-privacy.html">Builds and privacy</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings.html" aria-current="page">Settings</a><a href="extending.html">Extending (API)</a><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Bug Report Kit</a><span>/</span><span>Reference</span></nav>
+<h1 id="settings">Settings</h1>
+<p>Open them with <strong>Tools &gt; All In One Bug Report Kit &gt; Settings</strong>. The first time, this makes
+<code>BugReportSettings.asset</code> in <code>Assets/AllInOneBugReportKitData</code>. That folder is yours: it sits outside the kit, so updating
+the kit never touches it. Every setting has a tooltip.</p>
+<h2 id="builds">Builds <a class="anchor" href="#builds" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Include In</td>
+<td>Development Builds Only</td>
+<td>Which builds contain the kit. See <a href="builds-and-privacy.html">Builds and privacy</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="look">Look <a class="anchor" href="#look" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Theme</td>
+<td>empty</td>
+<td>Your own theme asset. Empty uses the preset below</td>
+</tr>
+<tr>
+<td>Theme Preset</td>
+<td>Studio</td>
+<td>Studio, Daylight, Terminal or High Contrast</td>
+</tr>
+<tr>
+<td>Text Table</td>
+<td>empty</td>
+<td>Your own words for everything testers read. Empty uses the kit's English</td>
+</tr>
+</tbody>
+</table></div>
+<p>More in <a href="make-it-yours.html">Make it yours</a>.</p>
+<h2 id="opening-the-form">Opening the form <a class="anchor" href="#opening-the-form" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open Key</td>
+<td>F8</td>
+<td>Opens the report form</td>
+</tr>
+<tr>
+<td>Show On Screen Button</td>
+<td>off</td>
+<td>A small Report a Bug button, for touch screens and gamepads</td>
+</tr>
+<tr>
+<td>Touch Gestures</td>
+<td>on</td>
+<td>Three-finger tap opens or closes the overlay, four-finger tap opens the form</td>
+</tr>
+<tr>
+<td>Pause While Open</td>
+<td>on</td>
+<td>Stops game time while the form is open and frees the mouse cursor</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="debug-overlay">Debug overlay <a class="anchor" href="#debug-overlay" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enable Overlay</td>
+<td>on</td>
+<td>The console, stats strip and debug options</td>
+</tr>
+<tr>
+<td>Overlay Key</td>
+<td>the key above Tab</td>
+<td>Opens and closes the overlay</td>
+</tr>
+<tr>
+<td>Stats Strip</td>
+<td>With Overlay</td>
+<td>When frame rate, frame time and memory show: never, with the overlay, or always</td>
+</tr>
+<tr>
+<td>Error Badge</td>
+<td>on</td>
+<td>While the overlay is closed, a small badge counts new warnings and errors</td>
+</tr>
+<tr>
+<td>Enable Commands</td>
+<td>on</td>
+<td>Lets testers type commands in the console</td>
+</tr>
+</tbody>
+</table></div>
+<p>More in <a href="debug-overlay.html">Debug overlay</a>.</p>
+<h2 id="choices-in-the-form">Choices in the form <a class="anchor" href="#choices-in-the-form" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Categories</td>
+<td>Gameplay, Visual, Audio, UI, Performance, Other</td>
+<td>What a tester can pick. An empty list hides the choice</td>
+</tr>
+<tr>
+<td>Severities</td>
+<td>Minor, Major, Blocker</td>
+<td>Same, for severity</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="what-is-captured">What is captured <a class="anchor" href="#what-is-captured" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Log Lines</td>
+<td>1000</td>
+<td>How many Console lines are kept in memory</td>
+</tr>
+<tr>
+<td>Breadcrumb Seconds</td>
+<td>60</td>
+<td>How far back the recent events go</td>
+</tr>
+<tr>
+<td>Default Parts</td>
+<td>All</td>
+<td>Parts ticked when the form opens. Testers can still untick them</td>
+</tr>
+<tr>
+<td>Replay Seconds</td>
+<td>5</td>
+<td>How many seconds before the report the replay covers. 0 turns it off</td>
+</tr>
+<tr>
+<td>Replay Frames Per Second</td>
+<td>2</td>
+<td>More is smoother and uses more memory</td>
+</tr>
+<tr>
+<td>Hide User Name</td>
+<td>on</td>
+<td>Replaces the computer's user name in logs and game state</td>
+</tr>
+<tr>
+<td>Privacy Note</td>
+<td>empty</td>
+<td>The line in the form saying where reports go. Empty writes one that matches your destinations</td>
+</tr>
+<tr>
+<td>Auto Report Exceptions</td>
+<td>off</td>
+<td>Saves a report by itself the first time each different exception happens, at most 5 a session</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="optional-destinations">Optional destinations <a class="anchor" href="#optional-destinations" aria-label="Link to this section">#</a></h2>
+<p>The zip is always saved on the device. These are off until you switch them on.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Send To Discord, Discord Webhook Url</td>
+<td>off, empty</td>
+<td>Also posts each report to a Discord channel. Use a private test channel</td>
+</tr>
+<tr>
+<td>Send To Http, Http Url</td>
+<td>off, empty</td>
+<td>Also sends each report to your server as a form POST: a <code>report</code> zip plus <code>id</code>, <code>category</code>, <code>severity</code> and <code>summary</code></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Why Isn't It Working</strong> (same menu) checks these settings against your project and says in plain words what to change.</p>
+<div class="doc-pager"><a class="pager prev" href="builds-and-privacy.html"><span class="label">Previous</span>Builds and privacy</a><a class="pager next" href="extending.html"><span class="label">Next</span>Extending (API)</a></div>
+<p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+Settings" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#builds">Builds</a></li><li class="toc-2"><a href="#look">Look</a></li><li class="toc-2"><a href="#opening-the-form">Opening the form</a></li><li class="toc-2"><a href="#debug-overlay">Debug overlay</a></li><li class="toc-2"><a href="#choices-in-the-form">Choices in the form</a></li><li class="toc-2"><a href="#what-is-captured">What is captured</a></li><li class="toc-2"><a href="#optional-destinations">Optional destinations</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/romanoassets/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/romanoassets" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

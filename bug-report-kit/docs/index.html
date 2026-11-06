@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>All In One Bug Report Kit documentation | Romano Assets</title>
+<meta name="description" content="Documentation for the All In One Bug Report Kit for Unity: quick start, every tool, shortcuts and changelog.">
+<link rel="canonical" href="https://romanoassets.github.io/bug-report-kit/docs/">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="All In One Bug Report Kit documentation">
+<meta property="og:description" content="Documentation for the All In One Bug Report Kit for Unity: quick start, every tool, shortcuts and changelog.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://romanoassets.github.io/bug-report-kit/docs/">
+<meta property="og:image" content="https://romanoassets.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/logo.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.png" alt="" width="34" height="34">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Bug Report Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html" aria-current="page">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="report-form.html">The report form</a><a href="debug-overlay.html">Debug overlay</a><a href="report-inbox.html">Report Inbox</a><a href="make-it-yours.html">Make it yours</a><a href="builds-and-privacy.html">Builds and privacy</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings.html">Settings</a><a href="extending.html">Extending (API)</a><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html" aria-current="page">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="report-form.html">The report form</a><a href="debug-overlay.html">Debug overlay</a><a href="report-inbox.html">Report Inbox</a><a href="make-it-yours.html">Make it yours</a><a href="builds-and-privacy.html">Builds and privacy</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings.html">Settings</a><a href="extending.html">Extending (API)</a><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Bug Report Kit</a></nav>
+<h1>All In One Bug Report Kit documentation</h1>
+<p class="lead">Testers press one key and you get one file: their words, a marked-up screenshot, a replay of the last seconds, the log with stack traces, system info and your game's state. Plus an in-game console, stats and debug options, and a Report Inbox in the Editor that clicks straight to the broken line.</p>
+<ul class="specs"><li>Unity 6000.0+</li><li>Built-in, URP &amp; HDRP</li><li>No dependencies</li><li>Full C# source</li><li>Version 1.0.0</li></ul>
+<div class="btn-row">
+  <a class="btn" href="getting-started.html">Get started</a>
+  
+</div>
+<div class="callout" id="quick-start">
+  <p class="label label-accent">Quick start: five minutes</p>
+  <ol><li>Import the package. Everything lands in <code>Assets/AllInOneBugReportKit/</code>; your settings go to <code>Assets/AllInOneBugReportKitData/</code>.</li><li>Open <strong>Tools &gt; All In One Bug Report Kit &gt; Open Demo &gt; Bug Hunt</strong> and press Play.</li><li>Click <strong>Deliver the crate</strong>, press <kbd>F8</kbd>, write a line, circle the problem and click <strong>Save report</strong>.</li><li>Stop playing and open <strong>Tools &gt; All In One Bug Report Kit &gt; Report Inbox</strong>. Click the stack line to open the broken script.</li></ol>
+</div>
+<h2 id="start-here">Start here</h2><div class="doc-cards"><a class="doc-card" href="getting-started.html"><strong>Quick start</strong><span>Your first report in five minutes</span></a><a class="doc-card" href="samples.html"><strong>Samples</strong><span>The Bug Hunt and Feature Gallery demos</span></a></div><h2 id="using-the-kit">Using the kit</h2><div class="doc-cards"><a class="doc-card" href="report-form.html"><strong>The report form</strong><span>What testers see, what each report holds, markup and privacy</span></a><a class="doc-card" href="debug-overlay.html"><strong>Debug overlay</strong><span>Console, commands, stats, options and pinning</span></a><a class="doc-card" href="report-inbox.html"><strong>Report Inbox</strong><span>Reading reports in the Editor</span></a><a class="doc-card" href="make-it-yours.html"><strong>Make it yours</strong><span>Themes, presets, Display as, your own words, images and UI</span></a><a class="doc-card" href="builds-and-privacy.html"><strong>Builds and privacy</strong><span>Which builds contain the kit, and what leaves the device</span></a></div><h2 id="reference">Reference</h2><div class="doc-cards"><a class="doc-card" href="settings.html"><strong>Settings</strong><span>Every setting and its default</span></a><a class="doc-card" href="extending.html"><strong>Extending (API)</strong><span>The code API: game state, attachments, commands, your own UI and destinations</span></a><a class="doc-card" href="upgrading.html"><strong>Upgrading</strong><span>Updating the kit, and what changed</span></a><a class="doc-card" href="troubleshooting.html"><strong>Troubleshooting</strong><span>When something doesn&#x27;t work</span></a><a class="doc-card" href="support.html"><strong>Support</strong><span>Where to get help</span></a><a class="doc-card" href="changelog.html"><strong>Changelog</strong><span>What changed in each version</span></a></div>
+<h2 id="help">Need help?</h2>
+<div class="doc-cards">
+  <a class="doc-card" href="troubleshooting.html"><strong>Troubleshooting</strong><span>Answers to the most common problems.</span></a>
+  <a class="doc-card" href="https://discord.gg/AmpBDxRAKu" rel="noopener"><strong>Discord</strong><span>Ask other users and the developer.</span></a>
+  <a class="doc-card" href="support.html"><strong>Support</strong><span>Report a bug or email the developer.</span></a>
+</div>
+
+<div class="doc-pager"><span></span><a class="pager next" href="getting-started.html"><span class="label">Next</span>Quick start</a></div>
+<p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+Bug+Report+Kit+documentation" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#quick-start">Quick start</a></li><li class="toc-2"><a href="#start-here">Start here</a></li><li class="toc-2"><a href="#using-the-kit">Using the kit</a></li><li class="toc-2"><a href="#reference">Reference</a></li><li class="toc-2"><a href="#help">Need help?</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/romanoassets/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/romanoassets" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>
