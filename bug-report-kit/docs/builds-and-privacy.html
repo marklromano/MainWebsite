@@ -59,9 +59,9 @@
 <li><strong>Always</strong>: in every build, so players can report bugs too.</li>
 <li><strong>Never</strong>: switched off everywhere, the Editor included.</li>
 </ul>
-<p>A build that leaves the kit out really leaves it out: the code that starts it, the form, the overlay and the input
-code are removed, and the settings (with any Discord or server address) are not in the build. Your own calls such as
-<code>BugReporter.AddBreadcrumb</code> still compile and simply do nothing. This is checked by building release players and
+<p>A build that leaves the kit out really leaves it out: the code that starts it, the Unity UI form and overlay and the
+input code are removed, and the settings (with any Discord or server address) are not in the build. A small core stays
+so your own calls such as <code>BugReporter.AddBreadcrumb</code> still compile; nothing starts it, so they simply do nothing. This is checked by building release players and
 looking inside them.</p>
 <h2 id="what-leaves-the-device">What leaves the device <a class="anchor" href="#what-leaves-the-device" aria-label="Link to this section">#</a></h2>
 <p>Nothing, by default. Each report is a zip in the game's persistent data folder. The kit has no analytics, no
