@@ -43,7 +43,7 @@ SAVE_VERSION = "1.0.0"
 INTERACTION_VERSION = "1.0.0"
 RUNTIME_BUILDING_VERSION = "1.0.0"
 SETTINGS_VERSION = "1.0.0"
-BUG_REPORT_VERSION = "1.0.0"
+BUG_REPORT_VERSION = "1.0.1"
 YEAR = "2026"
 
 ICON_EXTERNAL = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" '
@@ -311,6 +311,7 @@ PRODUCTS = [
         "pages": [
             ("Start here", "QuickStart.md", "getting-started.html", "Quick start"),
             ("Start here", "Samples.md", "samples.html", "Samples"),
+            ("Start here", "AddingToYourGame.md", "adding-to-your-game.html", "Adding it to your own game"),
             ("Using the kit", "ReportForm.md", "report-form.html", "The report form"),
             ("Using the kit", "DebugOverlay.md", "debug-overlay.html", "Debug overlay"),
             ("Using the kit", "ReportInbox.md", "report-inbox.html", "Report Inbox"),

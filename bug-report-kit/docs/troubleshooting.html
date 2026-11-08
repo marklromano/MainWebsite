@@ -37,15 +37,15 @@
 <main id="main">
 <div class="wrap docs-shell">
 <aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">Bug Report Kit docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">In development</span></div>
+  <div class="docs-product"><a href="index.html">Bug Report Kit docs</a><span class="pill">v1.0.1</span><span class="pill pill-dev">In development</span></div>
   <div class="docs-search" hidden>
     <label class="sr-only" for="docs-q">Search the documentation</label>
     <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
     <kbd class="docs-search-key" aria-hidden="true">/</kbd>
     <div class="docs-results" id="docs-results" role="listbox" hidden></div>
   </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="report-form.html">The report form</a><a href="debug-overlay.html">Debug overlay</a><a href="report-inbox.html">Report Inbox</a><a href="make-it-yours.html">Make it yours</a><a href="builds-and-privacy.html">Builds and privacy</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings.html">Settings</a><a href="extending.html">Extending (API)</a><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html" aria-current="page">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="report-form.html">The report form</a><a href="debug-overlay.html">Debug overlay</a><a href="report-inbox.html">Report Inbox</a><a href="make-it-yours.html">Make it yours</a><a href="builds-and-privacy.html">Builds and privacy</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings.html">Settings</a><a href="extending.html">Extending (API)</a><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html" aria-current="page">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a><a href="adding-to-your-game.html">Adding it to your own game</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="report-form.html">The report form</a><a href="debug-overlay.html">Debug overlay</a><a href="report-inbox.html">Report Inbox</a><a href="make-it-yours.html">Make it yours</a><a href="builds-and-privacy.html">Builds and privacy</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings.html">Settings</a><a href="extending.html">Extending (API)</a><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html" aria-current="page">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a><a href="adding-to-your-game.html">Adding it to your own game</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="report-form.html">The report form</a><a href="debug-overlay.html">Debug overlay</a><a href="report-inbox.html">Report Inbox</a><a href="make-it-yours.html">Make it yours</a><a href="builds-and-privacy.html">Builds and privacy</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings.html">Settings</a><a href="extending.html">Extending (API)</a><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html" aria-current="page">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
   </nav>
 </aside>
 <article class="prose" id="doc">
@@ -63,7 +63,39 @@ offers a one-click fix where there is one.</p>
 <tbody>
 <tr>
 <td>F8 does nothing in the Editor</td>
-<td>Click the Game view first so it has the keyboard. Check Settings &gt; Include In isn't Never</td>
+<td>Click the Game view first so it has the keyboard. Check Settings &gt; Include In isn't Never. In Why Isn't It Working, click Open the Form Now while playing: if that works, your game is taking the key (see <a href="adding-to-your-game.html">Adding it to your own game</a>)</td>
+</tr>
+<tr>
+<td>F8 or the key above Tab does nothing while typing</td>
+<td>On purpose: the kit ignores its keys while one of your text fields has focus</td>
+</tr>
+<tr>
+<td>My game moves or shoots while I type in the form</td>
+<td>Your game's input keeps running. Switch it off on <code>BugReporter.FormOpened</code> (<a href="adding-to-your-game.html">Adding it to your own game</a>)</td>
+</tr>
+<tr>
+<td>The game unpauses after the form, or stays paused</td>
+<td>Your game paused itself (time scale 0) while the form was open, and the kit put back the time scale from before. If your game pauses itself, switch off Pause While Open and pause from <code>BugReporter.FormOpened</code></td>
+</tr>
+<tr>
+<td>"Go to where the tester was" lands in the wrong place</td>
+<td>The kit used a different camera than the player's. Set <code>BugReporter.TesterCamera</code></td>
+</tr>
+<tr>
+<td>A report has no log</td>
+<td>Your game set <code>Debug.unityLogger.logEnabled = false</code>. Why Isn't It Working warns about it while playing</td>
+</tr>
+<tr>
+<td>An attachment is missing</td>
+<td>It was over Max Attachment Megabytes, or its callback threw; the report's recent events say which</td>
+</tr>
+<tr>
+<td>A long log line ends in "characters cut"</td>
+<td>Lines and stack traces are kept up to 16,000 characters each</td>
+</tr>
+<tr>
+<td>My script can't see BugReporter</td>
+<td>Your assembly definition needs a reference to RomanoAssets.BugReport</td>
 </tr>
 <tr>
 <td>F8 does nothing in a build</td>
