@@ -336,7 +336,7 @@ COMING = [
     ("All In One Runtime Building Kit", "c-runtime", "In development",
      "Let players build bases and place furniture in your game."),
     ("All In One Bug Report Kit", "c-bugreport", "In development",
-     "In-game bug reports with screenshot, replay and logs, plus a debug console."),
+     "Free: in-game bug reports with screenshot, replay and logs, plus a debug console."),
 ]
 
 NAV = [
