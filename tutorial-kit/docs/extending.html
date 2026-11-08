@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Extending | Romano Assets</title>
+<meta name="description" content="Extending: documentation for the All In One Tutorial Kit for Unity.">
+<link rel="canonical" href="https://romanoassets.github.io/tutorial-kit/docs/extending.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Extending">
+<meta property="og:description" content="Extending: documentation for the All In One Tutorial Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://romanoassets.github.io/tutorial-kit/docs/extending.html">
+<meta property="og:image" content="https://romanoassets.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/logo.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.png" alt="" width="34" height="34">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Tutorial Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="flows-and-steps.html">Flows and steps</a><a href="targets.html">Targets</a><a href="finishing-steps.html">Finishing a step</a><a href="coach-marks-and-hints.html">Coach marks and hints</a><a href="make-it-yours.html">Make it yours</a><a href="button-pictures.html">Button pictures</a><a href="tools.html">Tools</a><a href="integrations.html">Integrations and saving</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html" aria-current="page">Extending and code API</a></div><div class="docs-group"><p class=label>Help</p><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="flows-and-steps.html">Flows and steps</a><a href="targets.html">Targets</a><a href="finishing-steps.html">Finishing a step</a><a href="coach-marks-and-hints.html">Coach marks and hints</a><a href="make-it-yours.html">Make it yours</a><a href="button-pictures.html">Button pictures</a><a href="tools.html">Tools</a><a href="integrations.html">Integrations and saving</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html" aria-current="page">Extending and code API</a></div><div class="docs-group"><p class=label>Help</p><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Tutorial Kit</a><span>/</span><span>For programmers</span></nav>
+<h1 id="extending">Extending</h1>
+<p>Everything works without code. For programmers, the kit is built to be extended.</p>
+<h2 id="control-a-flow">Control a flow <a class="anchor" href="#control-a-flow" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">flow.Play();            // start (respects Run Once and Resume)
+flow.Next();            // finish the current step
+flow.Back();
+flow.Skip();            // end it and remember it as done
+flow.Restart();         // start again from the first step
+flow.Stop();            // stop without saving it as done (it resumes next time)
+flow.Suspend();         // hold it: nothing shows or blocks, rules and timers wait
+flow.Resume();          // show the held step again
+flow.RefreshView();     // redraw after changing the look or words at runtime
+flow.ClearProgress();   // forget this player's progress for this flow
+</code></pre>
+<p>Read <code>IsRunning</code>, <code>IsSuspended</code>, <code>CurrentIndex</code>, <code>CurrentStep</code>, <code>StepVisible</code>, <code>TargetRect</code>, <code>Device</code>.</p>
+<h2 id="find-and-start-flows-from-anywhere">Find and start flows from anywhere <a class="anchor" href="#find-and-start-flows-from-anywhere" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">TutorialFlow.PlayById(&quot;shop-tour&quot;);     // from a button in another scene, a quest, a dialogue...
+TutorialFlow.Find(&quot;shop-tour&quot;);         // the loaded flow with that id, or null
+TutorialFlow.SuspendAll(true);          // your pause menu or loading screen opened
+TutorialFlow.SuspendAll(false);         // and closed
+TutorialFlow.RefreshAllViews();         // the player changed the language
+</code></pre>
+<p>A flow lives in its scene. For a tutorial that goes from the menu into the level, make one flow in each scene and start
+the second with <code>PlayById</code> (or <strong>Start: On Scene Start</strong>) after the level loads.</p>
+<p>Only one coach-mark flow shows at a time: a second one waits until the first ends (<strong>Wait For Other Tutorials</strong>, on by
+default). Hints never wait.</p>
+<h2 id="events-and-analytics">Events and analytics <a class="anchor" href="#events-and-analytics" aria-label="Link to this section">#</a></h2>
+<p>Each flow has <code>Started</code>, <code>StepShown</code>, <code>Completed</code>, <code>Skipped</code> (C#) and the matching UnityEvents. For analytics, listen to
+every flow at once:</p>
+<pre><code class="language-csharp">TutorialFlow.AnyEvent += e =&gt; MyAnalytics.Log(&quot;tutorial&quot;, e.Kind.ToString(), e.FlowId, e.StepKey, e.ElapsedSeconds);
+</code></pre>
+<p>The kinds are FlowStarted, StepShown, StepCompleted, FlowCompleted, FlowSkipped, FlowStopped, FlowSuspended and
+FlowResumed. Every flow ends with exactly one of Completed, Skipped or Stopped. <code>StepKey</code> stays the same when you move
+or insert steps, so your funnels keep working after updates. The kit itself sends nothing anywhere.</p>
+<h2 id="progress-save-slots-and-profiles">Progress, save slots and profiles <a class="anchor" href="#progress-save-slots-and-profiles" aria-label="Link to this section">#</a></h2>
+<p>Progress is saved in PlayerPrefs, which belong to this install of the game. For save slots or several players:</p>
+<pre><code class="language-csharp">TutorialProgress.UseProfile(&quot;slot-2&quot;);  // when the player picks a slot, before tutorials start
+TutorialProgress.ClearAll();            // &quot;Reset tutorials&quot; in your options, or a new game
+</code></pre>
+<p>Or keep progress in your own save file: implement <code>ITutorialProgressStore</code> (five methods) and set
+<code>TutorialProgress.Store</code>. Each step saves a stable key with its position, so adding, moving or removing steps in an
+update never resumes a player at the wrong step (an unknown saved step starts the flow from the beginning).</p>
+<h2 id="targets-that-appear-later">Targets that appear later <a class="anchor" href="#targets-that-appear-later" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">TutorialTargets.Register(&quot;shop.buy&quot;, buyButton.transform);
+TutorialTargets.Unregister(&quot;shop.buy&quot;, buyButton.transform);
+</code></pre>
+<p>Or put a <strong>Tutorial Target Id</strong> component on the prefab. See Targets.</p>
+<h2 id="your-own-rule">Your own rule <a class="anchor" href="#your-own-rule" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">public sealed class OpenedMapRule : CompletionRule
+{
+    protected override void OnBegin() =&gt; MapScreen.Opened += Done;
+    protected override void OnEnd() =&gt; MapScreen.Opened -= Done;
+    private void Done() =&gt; MarkDone();
+    public override void DescribeWaiting(System.Text.StringBuilder into) =&gt; into.Append(&quot;the map to open&quot;);
+}
+</code></pre>
+<p>Add it to a step like any rule. <code>OnTick</code> runs every frame (real time) while the step shows; <code>OnTargetClicked</code> runs when
+the player clicks the target. Unsubscribe in <code>OnEnd</code>: it always runs once when the step ends, is skipped or the flow's
+object is destroyed.</p>
+<h2 id="your-own-ui">Your own UI <a class="anchor" href="#your-own-ui" aria-label="Link to this section">#</a></h2>
+<p>Implement <code>ITutorialPresenter</code> on a component and put it on the flow's object (or drag it into <strong>Presenter</strong>). The flow
+calls <code>ShowStep</code> with everything already resolved (words, look, buttons, icon, position), <code>UpdateTarget</code> every frame
+with the target's screen rectangle, then <code>HideStep</code> and <code>EndFlow</code>. Call <code>flow.Next()</code>, <code>Back()</code>, <code>Skip()</code> and
+<code>NotifyTargetClicked()</code> from your buttons. If your UI reports clicks on uGUI targets itself, set
+<code>flow.TargetReportsClicks = true</code>; otherwise the flow counts a press inside the target. To make your UI the default for
+every flow, set <code>TutorialPresenters.CreateDefault</code>.</p>
+<h2 id="your-own-input">Your own input <a class="anchor" href="#your-own-input" aria-label="Link to this section">#</a></h2>
+<p>Implement <code>ITutorialInputSource</code> and set <code>TutorialInput.Source</code> to drive tutorials from any input system (Rewired,
+InControl, your own) or a replay. If players can type somewhere the kit doesn't know about, add a check so typed letters
+aren't counted as key presses: <code>TutorialInput.AddTypingCheck(() =&gt; myChatBox.IsTyping)</code>.</p>
+<h2 id="words">Words <a class="anchor" href="#words" aria-label="Link to this section">#</a></h2>
+<p><code>TutorialText.Translate = key =&gt; MyLocalisation.Get(key);</code> and call <code>TutorialFlow.RefreshAllViews()</code> when the language
+changes.</p>
+<h2 id="condition-rule-and-il2cpp">Condition Rule and IL2CPP <a class="anchor" href="#condition-rule-and-il2cpp" aria-label="Link to this section">#</a></h2>
+<p>The Condition Rule reads a field or property by name. With IL2CPP and high code stripping, a member only read this way
+can be removed: mark it <code>[UnityEngine.Scripting.Preserve]</code>, or use an Event Rule for anything the tutorial depends on.</p>
+<div class="doc-pager"><a class="pager prev" href="integrations.html"><span class="label">Previous</span>Integrations and saving</a><a class="pager next" href="upgrading.html"><span class="label">Next</span>Upgrading</a></div>
+<p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+Extending" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#control-a-flow">Control a flow</a></li><li class="toc-2"><a href="#find-and-start-flows-from-anywhere">Find and start flows from anywhere</a></li><li class="toc-2"><a href="#events-and-analytics">Events and analytics</a></li><li class="toc-2"><a href="#progress-save-slots-and-profiles">Progress, save slots and profiles</a></li><li class="toc-2"><a href="#targets-that-appear-later">Targets that appear later</a></li><li class="toc-2"><a href="#your-own-rule">Your own rule</a></li><li class="toc-2"><a href="#your-own-ui">Your own UI</a></li><li class="toc-2"><a href="#your-own-input">Your own input</a></li><li class="toc-2"><a href="#words">Words</a></li><li class="toc-2"><a href="#condition-rule-and-il2cpp">Condition Rule and IL2CPP</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/romanoassets/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/romanoassets" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

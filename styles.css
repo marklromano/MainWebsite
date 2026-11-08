@@ -24,6 +24,7 @@
   --c-save: #3DD68C;
   --c-interact: #FFB547;
   --c-settings: #B48CFF;
+  --c-tutorial: #4FC3F7;
   --c-runtime: #FF7A59;
 
   /* Type: system faces only (no web fonts, nothing loaded from other companies) */
@@ -295,6 +296,7 @@ a.product-link:hover { border-color: var(--accent); background: var(--surface-2)
 .c-save { --accent: var(--c-save); }
 .c-interact { --accent: var(--c-interact); }
 .c-settings { --accent: var(--c-settings); }
+.c-tutorial { --accent: var(--c-tutorial); }
 .c-runtime { --accent: var(--c-runtime); }
 
 .ticks { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.45rem; }

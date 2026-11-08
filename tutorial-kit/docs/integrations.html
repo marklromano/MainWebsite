@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Integrations | Romano Assets</title>
+<meta name="description" content="Integrations: documentation for the All In One Tutorial Kit for Unity.">
+<link rel="canonical" href="https://romanoassets.github.io/tutorial-kit/docs/integrations.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Integrations">
+<meta property="og:description" content="Integrations: documentation for the All In One Tutorial Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://romanoassets.github.io/tutorial-kit/docs/integrations.html">
+<meta property="og:image" content="https://romanoassets.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/logo.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.png" alt="" width="34" height="34">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Tutorial Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="flows-and-steps.html">Flows and steps</a><a href="targets.html">Targets</a><a href="finishing-steps.html">Finishing a step</a><a href="coach-marks-and-hints.html">Coach marks and hints</a><a href="make-it-yours.html">Make it yours</a><a href="button-pictures.html">Button pictures</a><a href="tools.html">Tools</a><a href="integrations.html" aria-current="page">Integrations and saving</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending and code API</a></div><div class="docs-group"><p class=label>Help</p><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="flows-and-steps.html">Flows and steps</a><a href="targets.html">Targets</a><a href="finishing-steps.html">Finishing a step</a><a href="coach-marks-and-hints.html">Coach marks and hints</a><a href="make-it-yours.html">Make it yours</a><a href="button-pictures.html">Button pictures</a><a href="tools.html">Tools</a><a href="integrations.html" aria-current="page">Integrations and saving</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending and code API</a></div><div class="docs-group"><p class=label>Help</p><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Tutorial Kit</a><span>/</span><span>Features</span></nav>
+<h1 id="integrations">Integrations</h1>
+<p>The kit needs no package. These work automatically when their package or kit is in your project.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>With</th>
+<th>What you get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uGUI (in every Unity template)</td>
+<td>The kit's tip card, spotlight and input gate for uGUI.</td>
+</tr>
+<tr>
+<td>UI Toolkit (built into Unity)</td>
+<td>UI Toolkit targets, and a UI Toolkit tip card. It is used when uGUI isn't in the project; add <strong>UI Toolkit Tutorial Presenter</strong> to a flow to use it anyway.</td>
+</tr>
+<tr>
+<td>Input System package</td>
+<td>Keys, pointer, touch, gamepad detection and the <strong>Input Action Rule</strong>. With Input Handling set to Both, the Input System is used.</td>
+</tr>
+<tr>
+<td>Visual Scripting package</td>
+<td><strong>Visual Scripting Event Rule</strong>: a graph's Custom Event finishes a step. Any graph can also call <strong>Mark Done</strong> on a rule or <strong>Next</strong> on a flow.</td>
+</tr>
+<tr>
+<td>All In One Interaction Kit</td>
+<td><strong>Interaction Kit Rule</strong>: using a door, switch or pickup finishes a step. Neither kit needs the other.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="saving-progress-with-your-save-system">Saving progress with your save system <a class="anchor" href="#saving-progress-with-your-save-system" aria-label="Link to this section">#</a></h2>
+<p>Progress goes to PlayerPrefs by default. To keep it in your own saves, implement <code>ITutorialProgressStore</code> (five small
+methods: get and set the step, get and set done, clear) and set it once at start:</p>
+<pre><code class="language-csharp">TutorialProgress.Store = new MySaveSystemProgressStore();
+</code></pre>
+<div class="doc-pager"><a class="pager prev" href="tools.html"><span class="label">Previous</span>Tools</a><a class="pager next" href="extending.html"><span class="label">Next</span>Extending and code API</a></div>
+<p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+Integrations" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/romanoassets/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/romanoassets" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>
