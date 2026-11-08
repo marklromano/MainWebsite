@@ -43,6 +43,7 @@ SAVE_VERSION = "1.0.0"
 INTERACTION_VERSION = "1.0.0"
 RUNTIME_BUILDING_VERSION = "1.0.0"
 SETTINGS_VERSION = "1.0.0"
+WAYPOINT_VERSION = "1.0.0"
 YEAR = "2026"
 
 ICON_EXTERNAL = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" '
@@ -282,6 +283,46 @@ PRODUCTS = [
         "shortcut_groups": {},
         "page_images": {},
     },
+    {
+        # In development, like the Save Kit: page up, docs built locally, published on launch day.
+        "slug": "waypoint-minimap-kit",
+        "name": "All In One Waypoint & Minimap Kit",
+        "short": "Waypoint & Minimap Kit",
+        "accent": "c-waypoint",
+        "status": "in development",
+        "version": WAYPOINT_VERSION,
+        "store": "",
+        "summary": "Show players where to go: objective markers, edge arrows with distance, a compass bar, a minimap and "
+                   "a full-screen map, with a one-click map maker, fog of war and region discovery.",
+        "requirements": ["Unity 6000.0+", "Built-in, URP & HDRP", "No code needed", "Full C# source"],
+        "menu": "Tools > All In One Waypoint & Minimap Kit",
+        "quick_start": [
+            "Import the package. Everything lands in <code>Assets/AllInOneWaypointKit/</code>.",
+            "Open <strong>Tools &gt; All In One Waypoint &amp; Minimap Kit &gt; Setup Wizard</strong>. It adds the HUD, "
+            "finds your player and camera, and picks a look.",
+            "Add a <strong>Waypoint</strong> component to any object and pick an icon.",
+            "Press Play. The waypoint shows on screen, at the screen edge, on the compass and on the minimap; M opens the map.",
+        ],
+        "pages": [
+            ("Start here", "QuickStart.md", "getting-started.html", "Quick start"),
+            ("Start here", "Samples.md", "samples.html", "Demo scenes"),
+            ("Start here", "FitYourGame.md", "fit-your-game.html", "Fit it into your game"),
+            ("Features", "Waypoint.md", "waypoint.html", "The Waypoint component"),
+            ("Features", "Hud.md", "hud.html", "The HUD: markers, edge arrows, compass, radar"),
+            ("Features", "MakeItYours.md", "make-it-yours.html", "Make it yours"),
+            ("Features", "Map.md", "map.html", "Minimap and full-screen map"),
+            ("Features", "Discovery.md", "discovery.html", "Fog of war and region discovery"),
+            ("Features", "Trails.md", "trails.html", "Objective trails, events and saving"),
+            ("Features", "TwoD.md", "2d.html", "2D and top-down games"),
+            ("Features", "Debugger.md", "debugger.html", "Why Can't I See It?"),
+            ("For programmers", "Extending.md", "extending.html", "Code and your own UI"),
+            ("For programmers", "Upgrading.md", "upgrading.html", "Upgrading"),
+            ("Reference", "Troubleshooting.md", "troubleshooting.html", "Troubleshooting"),
+            ("Reference", "Support.md", "support.html", "Support"),
+        ],
+        "shortcut_groups": {},
+        "page_images": {},
+    },
 ]
 
 # Kits without docs yet, for the docs hub and "More from Romano Assets": (name, accent, status, one line)
@@ -344,6 +385,7 @@ def footer(root):
           <li><a href="{root}interaction-kit/index.html">Interaction Kit</a></li>
           <li><a href="{root}settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
           <li><a href="{root}runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="{root}waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
           <li><a href="{root}index.html#products">Coming next</a></li>
           <li><a href="{PUBLISHER_URL}" rel="noopener">Publisher page</a></li>
         </ul>
@@ -542,6 +584,10 @@ HAND_PAGES = [
      "All In One Game Settings & Menu Kit",
      "A finished game front end for Unity: title screen, main menu, settings, pause and loading screens, key rebinding, "
      "accessibility, subtitles and three themes, without code. In development."),
+    ("waypoint-minimap-kit.html", "waypoint-minimap-kit/index.html", "../", "waypoint",
+     "All In One Waypoint & Minimap Kit",
+     "Show players where to go in Unity: objective markers, edge arrows with distance, a compass bar, a minimap and a "
+     "full-screen map, with a one-click map maker, fog of war and region discovery, without code. In development."),
     ("support.html", "support/index.html", "../", "support",
      "Support",
      "Get help with Romano Assets tools: documentation, bug reports, Discord and email."),

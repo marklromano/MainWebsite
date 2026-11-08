@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Code and your own UI | Romano Assets</title>
+<meta name="description" content="Code and your own UI: documentation for the All In One Waypoint &amp; Minimap Kit for Unity.">
+<link rel="canonical" href="https://romanoassets.github.io/waypoint-minimap-kit/docs/extending.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Code and your own UI">
+<meta property="og:description" content="Code and your own UI: documentation for the All In One Waypoint &amp; Minimap Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://romanoassets.github.io/waypoint-minimap-kit/docs/extending.html">
+<meta property="og:image" content="https://romanoassets.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/logo.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.png" alt="" width="34" height="34">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Waypoint &amp; Minimap Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a><a href="fit-your-game.html">Fit it into your game</a></div><div class="docs-group"><p class=label>Features</p><a href="waypoint.html">The Waypoint component</a><a href="hud.html">The Waypoint HUD: markers, edge arrows, compass, radar</a><a href="make-it-yours.html">Make it yours: presets and styles</a><a href="map.html">Maps: minimap and full-screen map</a><a href="discovery.html">Fog of war and region discovery</a><a href="trails.html">Objective trails, events and saving</a><a href="2d.html">2D and top-down games</a><a href="debugger.html">Why Can&#x27;t I See It? and the scene check</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html" aria-current="page">Code and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a><a href="fit-your-game.html">Fit it into your game</a></div><div class="docs-group"><p class=label>Features</p><a href="waypoint.html">The Waypoint component</a><a href="hud.html">The Waypoint HUD: markers, edge arrows, compass, radar</a><a href="make-it-yours.html">Make it yours: presets and styles</a><a href="map.html">Maps: minimap and full-screen map</a><a href="discovery.html">Fog of war and region discovery</a><a href="trails.html">Objective trails, events and saving</a><a href="2d.html">2D and top-down games</a><a href="debugger.html">Why Can&#x27;t I See It? and the scene check</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html" aria-current="page">Code and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Waypoint &amp; Minimap Kit</a><span>/</span><span>For programmers</span></nav>
+<h1 id="code-and-your-own-ui">Code and your own UI</h1>
+<p>Nothing here is needed for the main jobs. Everything is in the <code>RomanoAssets.WaypointKit</code> namespace.</p>
+<h2 id="waypoints-from-code">Waypoints from code <a class="anchor" href="#waypoints-from-code" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">var w = gameObject.AddComponent&lt;Waypoint&gt;();
+w.Label = &quot;Old Mill&quot;;
+w.Icon = WaypointIcon.Flag;
+w.IsObjective = true;
+w.Reached += wp =&gt; Debug.Log(&quot;Reached &quot; + wp.Label);
+
+w.Hide();   // switch off (markers disappear)
+w.Show();   // switch on
+</code></pre>
+<p>A waypoint with no object of yours (a quest coordinate):</p>
+<pre><code class="language-csharp">var drop = Waypoint.CreateAt(new Vector3(120f, 0f, 40f), &quot;Drop Zone&quot;, WaypointIcon.Pin);
+drop.Position = newPosition;
+drop.SetAsCurrentObjective();   // the only objective now
+drop.Remove();                  // gone
+</code></pre>
+<p>Useful: <code>WaypointRegistry.Waypoints</code>, <code>WaypointRegistry.CurrentObjective</code>, <code>WaypointRegistry.FindById(id)</code>,
+<code>WaypointRegistry.FindAll(label, list)</code>, <code>WaypointRegistry.SetGroupVisible(group, visible)</code>, the <code>Added</code> and <code>Removed</code>
+events, and <code>ResetReached()</code> for pooled objects.</p>
+<h2 id="the-hud-from-code">The HUD from code <a class="anchor" href="#the-hud-from-code" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">var hud = WaypointHud.Main;
+hud.UsePreset(WaypointPreset.Tactical);
+hud.ShowRadar = false;
+hud.Units = WaypointUnits.Feet;
+hud.RadarZoom = 2f;            // closer
+hud.SetCamera(vehicleCamera);  // camera switches (null = Main Camera)
+hud.SetPlayer(newCharacter);   // null = the object tagged Player
+hud.SetVisible(false);         // cutscenes and menus
+float ms = hud.LastDrawMilliseconds; // the HUD's own cost last frame
+hud.Style.Marker.iconSize = 40f;
+hud.Style.Touch();             // after changing style fields from code
+</code></pre>
+<h2 id="your-own-ui">Your own UI <a class="anchor" href="#your-own-ui" aria-label="Link to this section">#</a></h2>
+<p>Each frame the HUD works out, for every waypoint: distance, height, whether it's on screen, its screen position and
+edge angle, its compass bearing and its radar point. Read it after the <code>Drawn</code> event:</p>
+<pre><code class="language-csharp">hud.Drawn += h =&gt;
+{
+    if (h.TryGetView(myWaypoint, out var v) &amp;&amp; !v.IsOnScreen)
+        myArrow.SetPositionAndAngle(v.ScreenPosition, v.ScreenAngle);
+};
+</code></pre>
+<p>Switch off the parts you replace (<code>ShowMarkers</code>, <code>ShowEdgeArrows</code>, <code>ShowCompass</code>, <code>ShowRadar</code>) and keep the rest.
+<code>WaypointView.Reason</code> says why a waypoint isn't drawn.</p>
+<h2 id="words-for-other-languages">Words for other languages <a class="anchor" href="#words-for-other-languages" aria-label="Link to this section">#</a></h2>
+<ul>
+<li>Names: <code>Waypoint.Label</code> (set it from your localisation system).</li>
+<li>Units: <code>DistanceText.MetreSuffix</code>, <code>KilometreSuffix</code>, <code>FootSuffix</code>, <code>MileSuffix</code>.</li>
+<li>Compass letters: the style's Compass &gt; Direction Words.</li>
+</ul>
+<h2 id="saving">Saving <a class="anchor" href="#saving" aria-label="Link to this section">#</a></h2>
+<p><code>WaypointSave.Capture()</code> and <code>WaypointSave.Restore(text)</code>; see <a href="trails.html">Objective trails, events and saving</a>.</p>
+<h2 id="explaining">Explaining <a class="anchor" href="#explaining" aria-label="Link to this section">#</a></h2>
+<p><code>WaypointDiagnostics.Explain(waypoint)</code> returns the same plain sentence as the debugger.</p>
+<div class="doc-pager"><a class="pager prev" href="debugger.html"><span class="label">Previous</span>Why Can&#x27;t I See It? and the scene check</a><a class="pager next" href="upgrading.html"><span class="label">Next</span>Upgrading</a></div>
+<p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+Code+and+your+own+UI" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#waypoints-from-code">Waypoints from code</a></li><li class="toc-2"><a href="#the-hud-from-code">The HUD from code</a></li><li class="toc-2"><a href="#your-own-ui">Your own UI</a></li><li class="toc-2"><a href="#words-for-other-languages">Words for other languages</a></li><li class="toc-2"><a href="#saving">Saving</a></li><li class="toc-2"><a href="#explaining">Explaining</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/romanoassets/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/romanoassets" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>
