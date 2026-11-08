@@ -286,6 +286,7 @@ PRODUCTS = [
     {
         # In development, like the Save Kit: page up, docs built locally, published on launch day.
         "slug": "bug-report-kit",
+        "free": True,
         "name": "All In One Bug Report Kit",
         "short": "Bug Report Kit",
         "accent": "c-bugreport",
@@ -900,7 +901,7 @@ def docs_nav(groups, current):
 def docs_side(product, groups, current):
     links = docs_nav(groups, current)
     return f"""<aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">{html.escape(product['short'])} docs</a><span class="pill">v{product['version']}</span></div>
+  <div class="docs-product"><a href="index.html">{html.escape(product['short'])} docs</a><span class="pill">v{product['version']}</span>{'' if product['status'] == 'live' else '<span class="pill pill-dev">In development</span>'}</div>
   <div class="docs-search" hidden>
     <label class="sr-only" for="docs-q">Search the documentation</label>
     <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
@@ -1087,6 +1088,7 @@ def docs_home(product, groups, rendered):
     return f"""<h1>{html.escape(product['name'])} documentation</h1>
 <p class="lead">{product['summary']}</p>
 <ul class="specs">{reqs}<li>Version {product['version']}</li></ul>
+{'' if product['status'] == 'live' else '<p class="dim">In development: free, coming soon to the Asset Store.</p>' if product.get('free') else '<p class="dim">In development: coming soon to the Asset Store.</p>'}
 <div class="btn-row">
   <a class="btn" href="getting-started.html">Get started</a>
   {f'<a class="btn btn-ghost" href="{product["store"]}" rel="noopener">Asset Store {ICON_EXTERNAL}</a>' if product["store"] else ""}
