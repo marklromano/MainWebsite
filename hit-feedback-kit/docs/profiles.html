@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Profiles, presets and Juice | Romano Assets</title>
+<meta name="description" content="Profiles, presets and Juice: documentation for the All In One Hit Feedback Kit for Unity.">
+<link rel="canonical" href="https://romanoassets.github.io/hit-feedback-kit/docs/profiles.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Profiles, presets and Juice">
+<meta property="og:description" content="Profiles, presets and Juice: documentation for the All In One Hit Feedback Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://romanoassets.github.io/hit-feedback-kit/docs/profiles.html">
+<meta property="og:image" content="https://romanoassets.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/logo.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.png" alt="" width="34" height="34">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Hit Feedback Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="integration.html">Hook it into your game</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="hit-feedback.html">Hit Feedback and hitting things</a><a href="profiles.html" aria-current="page">Profiles, presets and Juice</a><a href="damage-numbers.html">Damage numbers</a><a href="hit-flash.html">Hit flash</a><a href="hitstop-shake-knockback.html">Hitstop, shake, knockback and squash</a><a href="health-bars.html">Health and health bars</a><a href="player-feedback.html">Player feedback</a><a href="sound-particles-kill.html">Sound, particles and the kill moment</a><a href="make-it-yours.html">Make it yours</a><a href="accessibility.html">Accessibility</a><a href="2d.html">2D games</a><a href="why-no-feedback.html">Why No Feedback? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code, events and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="integration.html">Hook it into your game</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="hit-feedback.html">Hit Feedback and hitting things</a><a href="profiles.html" aria-current="page">Profiles, presets and Juice</a><a href="damage-numbers.html">Damage numbers</a><a href="hit-flash.html">Hit flash</a><a href="hitstop-shake-knockback.html">Hitstop, shake, knockback and squash</a><a href="health-bars.html">Health and health bars</a><a href="player-feedback.html">Player feedback</a><a href="sound-particles-kill.html">Sound, particles and the kill moment</a><a href="make-it-yours.html">Make it yours</a><a href="accessibility.html">Accessibility</a><a href="2d.html">2D games</a><a href="why-no-feedback.html">Why No Feedback? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code, events and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Hit Feedback Kit</a><span>/</span><span>Features</span></nav>
+<h1 id="profiles-presets-and-juice">Profiles, presets and Juice</h1>
+<p>A <strong>Hit Feedback Profile</strong> holds everything a hit plays. Share one between all your goblins, another for bosses.</p>
+<h2 id="make-one">Make one <a class="anchor" href="#make-one" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Assets &gt; Create &gt; All In One Hit Feedback Kit &gt; Profile from Preset &gt; (preset)</strong>: a new profile already set to that feel.</li>
+<li>Or press <strong>Save As Profile</strong> on a Hit Feedback that uses a preset (saved in <code>Assets/HitFeedbackKitData/Profiles</code>).</li>
+</ul>
+<h2 id="the-presets">The presets <a class="anchor" href="#the-presets" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Preset</th>
+<th>Feel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arcade</td>
+<td>Big, bright and bouncy, with strong shake and hitstop. Kill pop and a screen flash.</td>
+</tr>
+<tr>
+<td>Action RPG</td>
+<td>Clear numbers that add up, crits that pop, a bar on hit.</td>
+</tr>
+<tr>
+<td>Souls-like</td>
+<td>Heavy and grounded: a global hitstop, rim flash, slow drain, quiet numbers at the hit point.</td>
+</tr>
+<tr>
+<td>Cartoon</td>
+<td>Squash and stretch, bouncy numbers ending in "!", bright colours, sparks and puffs.</td>
+</tr>
+<tr>
+<td>Shooter</td>
+<td>Small fast numbers at the hit point, a rim flash, light shake, no freeze.</td>
+</tr>
+<tr>
+<td>Idle and Mobile</td>
+<td>Many numbers that add up, short forms (1.2K), bigger numbers for bigger amounts, no shake.</td>
+</tr>
+<tr>
+<td>Minimal</td>
+<td>A clean flash and a small number, nothing else.</td>
+</tr>
+<tr>
+<td>Existing Game (safe)</td>
+<td>For a game that already has combat: numbers, flash, bar, sound and sparks only. Never moves, freezes or scales your objects, never touches your camera or time.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The buttons at the top of the profile inspector apply a preset. Your clips, icons, font and particle prefab are kept.</p>
+<h2 id="juice">Juice <a class="anchor" href="#juice" aria-label="Link to this section">#</a></h2>
+<p>One slider for everything. 0 keeps only numbers, bars and sounds; 1 is the preset; 2 doubles flash, shake, hitstop,
+knockback, squash and particles. There is also a master Juice for the whole game in <code>HitFeedbackSettings.Juice</code>, for an
+options menu.</p>
+<h2 id="scale-with-amount">Scale with amount <a class="anchor" href="#scale-with-amount" aria-label="Link to this section">#</a></h2>
+<p>Turn on <strong>Scale with amount</strong> and bigger hits feel bigger: shake, hitstop, knockback and squash scale with the amount
+compared with <strong>Full strength amount</strong>. (Number size by amount is a separate setting under Numbers.)</p>
+<h2 id="kinds">Kinds <a class="anchor" href="#kinds" aria-label="Link to this section">#</a></h2>
+<p>Each kind (Normal, Critical, Heal, Shield, Miss, Block, Damage Over Time, Status) has a colour, a colour-blind safe colour,
+a word, a suffix, a size, a strength, an icon and its sounds.</p>
+<h2 id="the-sections">The sections <a class="anchor" href="#the-sections" aria-label="Link to this section">#</a></h2>
+<p>Numbers, Flash, Hitstop, Camera shake and punch, Knockback, Squash, Floating health bar, Sound, Particles and Kill moment.
+Each is on its own page here. The inspector shows a live preview of the numbers as you change them.</p>
+<div class="doc-pager"><a class="pager prev" href="hit-feedback.html"><span class="label">Previous</span>Hit Feedback and hitting things</a><a class="pager next" href="damage-numbers.html"><span class="label">Next</span>Damage numbers</a></div>
+<p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+Profiles%2C+presets+and+Juice" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#make-one">Make one</a></li><li class="toc-2"><a href="#the-presets">The presets</a></li><li class="toc-2"><a href="#juice">Juice</a></li><li class="toc-2"><a href="#scale-with-amount">Scale with amount</a></li><li class="toc-2"><a href="#kinds">Kinds</a></li><li class="toc-2"><a href="#the-sections">The sections</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/romanoassets/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/romanoassets" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Setup Wizard | Romano Assets</title>
+<meta name="description" content="Setup Wizard: documentation for the All In One Hit Feedback Kit for Unity.">
+<link rel="canonical" href="https://romanoassets.github.io/hit-feedback-kit/docs/setup-wizard.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Setup Wizard">
+<meta property="og:description" content="Setup Wizard: documentation for the All In One Hit Feedback Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://romanoassets.github.io/hit-feedback-kit/docs/setup-wizard.html">
+<meta property="og:image" content="https://romanoassets.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/logo.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.png" alt="" width="34" height="34">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Hit Feedback Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html" aria-current="page">Setup Wizard</a><a href="integration.html">Hook it into your game</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="hit-feedback.html">Hit Feedback and hitting things</a><a href="profiles.html">Profiles, presets and Juice</a><a href="damage-numbers.html">Damage numbers</a><a href="hit-flash.html">Hit flash</a><a href="hitstop-shake-knockback.html">Hitstop, shake, knockback and squash</a><a href="health-bars.html">Health and health bars</a><a href="player-feedback.html">Player feedback</a><a href="sound-particles-kill.html">Sound, particles and the kill moment</a><a href="make-it-yours.html">Make it yours</a><a href="accessibility.html">Accessibility</a><a href="2d.html">2D games</a><a href="why-no-feedback.html">Why No Feedback? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code, events and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html" aria-current="page">Setup Wizard</a><a href="integration.html">Hook it into your game</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="hit-feedback.html">Hit Feedback and hitting things</a><a href="profiles.html">Profiles, presets and Juice</a><a href="damage-numbers.html">Damage numbers</a><a href="hit-flash.html">Hit flash</a><a href="hitstop-shake-knockback.html">Hitstop, shake, knockback and squash</a><a href="health-bars.html">Health and health bars</a><a href="player-feedback.html">Player feedback</a><a href="sound-particles-kill.html">Sound, particles and the kill moment</a><a href="make-it-yours.html">Make it yours</a><a href="accessibility.html">Accessibility</a><a href="2d.html">2D games</a><a href="why-no-feedback.html">Why No Feedback? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code, events and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Hit Feedback Kit</a><span>/</span><span>Start here</span></nav>
+<h1 id="setup-wizard">Setup Wizard</h1>
+<p><strong>Tools &gt; All In One Hit Feedback Kit &gt; Setup Wizard</strong> adds Hit Feedback to your own enemies, players and props, one or a
+whole folder at once. It also opens from the right-click menu in the Hierarchy and the Project window
+(<strong>All In One Hit Feedback Kit &gt; Add Hit Feedback (Setup Wizard)</strong>).</p>
+<h2 id="1-what-to-set-up">1. What to set up <a class="anchor" href="#1-what-to-set-up" aria-label="Link to this section">#</a></h2>
+<p>Select objects and press <strong>Use Selection</strong>. You can pick:</p>
+<ul>
+<li>prefabs in the Project window,</li>
+<li>a <strong>folder</strong>: every prefab in it,</li>
+<li>objects in the scene.</li>
+</ul>
+<p>For each one the wizard shows what it found: the renderers it will flash (meshes, skinned meshes, sprites), what will be
+pushed (Rigidbody, Rigidbody 2D, Character Controller, NavMesh Agent or the transform), whether an Animator will pause
+in hitstop, and whether it already has health. Problems are listed under it, for example "Marked Static" (static batched
+objects can't flash) or "Has missing scripts" (reimport it first).</p>
+<h2 id="2-the-feel">2. The feel <a class="anchor" href="#2-the-feel" aria-label="Link to this section">#</a></h2>
+<p>Pick a <strong>Preset</strong>, or drag in a <strong>profile</strong> you already made. You can change everything later. Adding to a game that already has combat? Pick <strong>Existing Game (safe)</strong>: numbers, flash, bar, sound and sparks, and nothing that moves, freezes or scales your objects or touches your camera.</p>
+<h2 id="3-who-controls-health">3. Who controls health? <a class="anchor" href="#3-who-controls-health" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Find it for me</strong> (recommended): looks for your own health script by name (Health, HP, Damageable, Stats...). When it
+  finds one it adds a <strong>Hit Feedback Bridge</strong> that watches its health value, so your game stays in charge. When there is
+  none it adds the kit's Health. It never adds a second health system next to yours.</li>
+<li><strong>My game already has health</strong>: always adds a Bridge (watching your health script when one is found; otherwise
+  connect your events to it, see <a href="integration.html">Hook it into your game</a>).</li>
+<li><strong>Add the kit's basic Health</strong> with a <strong>Max health</strong>: the kit's Health component, which plays feedback by itself on
+  every change. Skipped when the object already has health.</li>
+<li><strong>Feedback only</strong>: just Hit Feedback. You call <code>HitFeedback.Hit(target, amount)</code>.</li>
+</ul>
+<p>Ragdolls (three or more jointed bones) get knockback and squash switched off for that object, because physics owns the
+body. The list shows "your health: EnemyStats.currentHealth" or "ragdoll" when it spots them.</p>
+<h2 id="extras">Extras <a class="anchor" href="#extras" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>This is the player</strong>: adds Player Hit Feedback (vignette, direction arrows, low-health pulse, rumble).</li>
+</ul>
+<h2 id="4-add-it">4. Add it <a class="anchor" href="#4-add-it" aria-label="Link to this section">#</a></h2>
+<p><strong>Add Hit Feedback</strong>:</p>
+<ul>
+<li><strong>Prefabs</strong> get a new <strong>Prefab Variant</strong> called "Name (Hit Feedback)" in <code>Assets/HitFeedbackKitData/Prefabs</code>. Your
+  original prefab is not changed (a test checks its file stays byte-identical) and still receives your edits and pack
+  updates. Use the variant in your scenes.</li>
+<li><strong>Scene objects</strong> get the component directly. Undo works.</li>
+</ul>
+<p>Prefabs with missing scripts are skipped; reimport them and try again.</p>
+<div class="doc-pager"><a class="pager prev" href="getting-started.html"><span class="label">Previous</span>Quick start</a><a class="pager next" href="integration.html"><span class="label">Next</span>Hook it into your game</a></div>
+<p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+Setup+Wizard" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#1-what-to-set-up">1. What to set up</a></li><li class="toc-2"><a href="#2-the-feel">2. The feel</a></li><li class="toc-2"><a href="#3-who-controls-health">3. Who controls health?</a></li><li class="toc-2"><a href="#extras">Extras</a></li><li class="toc-2"><a href="#4-add-it">4. Add it</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/romanoassets/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/romanoassets" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>
