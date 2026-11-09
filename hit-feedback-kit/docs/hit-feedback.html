@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Hit Feedback and hitting things | Romano Assets</title>
+<meta name="description" content="Hit Feedback and hitting things: documentation for the All In One Hit Feedback Kit for Unity.">
+<link rel="canonical" href="https://romanoassets.github.io/hit-feedback-kit/docs/hit-feedback.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Hit Feedback and hitting things">
+<meta property="og:description" content="Hit Feedback and hitting things: documentation for the All In One Hit Feedback Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://romanoassets.github.io/hit-feedback-kit/docs/hit-feedback.html">
+<meta property="og:image" content="https://romanoassets.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/logo.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.png" alt="" width="34" height="34">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Hit Feedback Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="integration.html">Hook it into your game</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="hit-feedback.html" aria-current="page">Hit Feedback and hitting things</a><a href="profiles.html">Profiles, presets and Juice</a><a href="damage-numbers.html">Damage numbers</a><a href="hit-flash.html">Hit flash</a><a href="hitstop-shake-knockback.html">Hitstop, shake, knockback and squash</a><a href="health-bars.html">Health and health bars</a><a href="player-feedback.html">Player feedback</a><a href="sound-particles-kill.html">Sound, particles and the kill moment</a><a href="make-it-yours.html">Make it yours</a><a href="accessibility.html">Accessibility</a><a href="2d.html">2D games</a><a href="why-no-feedback.html">Why No Feedback? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code, events and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="integration.html">Hook it into your game</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="hit-feedback.html" aria-current="page">Hit Feedback and hitting things</a><a href="profiles.html">Profiles, presets and Juice</a><a href="damage-numbers.html">Damage numbers</a><a href="hit-flash.html">Hit flash</a><a href="hitstop-shake-knockback.html">Hitstop, shake, knockback and squash</a><a href="health-bars.html">Health and health bars</a><a href="player-feedback.html">Player feedback</a><a href="sound-particles-kill.html">Sound, particles and the kill moment</a><a href="make-it-yours.html">Make it yours</a><a href="accessibility.html">Accessibility</a><a href="2d.html">2D games</a><a href="why-no-feedback.html">Why No Feedback? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code, events and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Hit Feedback Kit</a><span>/</span><span>Features</span></nav>
+<h1 id="hit-feedback-and-hitting-things">Hit Feedback and hitting things</h1>
+<p><strong>Hit Feedback</strong> is the one component the kit needs. Put it on anything that can be hit: an enemy, the player, a crate.
+Every hit then plays the whole reaction from its profile.</p>
+<h2 id="hitting-it">Hitting it <a class="anchor" href="#hitting-it" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Way</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>One line of code</td>
+<td><code>HitFeedback.Hit(target, 25);</code> finds the Hit Feedback on the target or its nearest parent, so passing the collider you hit works. Returns false when there is none (the debugger remembers it).</td>
+</tr>
+<tr>
+<td>A full hit</td>
+<td><code>HitFeedback.Hit(target, new HitInfo(25, HitKind.Critical).At(point).By(attacker));</code></td>
+</tr>
+<tr>
+<td>The kit's Health</td>
+<td><code>health.Damage(25)</code>, <code>health.Damage(hitInfo)</code>, <code>health.Heal(10)</code>, <code>health.Kill()</code>. Feedback plays by itself.</td>
+</tr>
+<tr>
+<td>UnityEvents and animation events</td>
+<td>Methods with one float: <code>HitAmount</code>, <code>CriticalHit</code>, <code>HealAmount</code>, <code>ShieldHit</code>, <code>DamageOverTime</code>, <code>KillingHit</code>. And <code>Miss</code>, <code>Block</code>, <code>ShowStatus (string)</code>.</td>
+</tr>
+<tr>
+<td>Directly</td>
+<td><code>GetComponent&lt;HitFeedback&gt;().Play(hitInfo)</code> returns the hit's report.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="hitinfo-one-hit">HitInfo: one hit <a class="anchor" href="#hitinfo-one-hit" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amount</td>
+<td>The number shown.</td>
+</tr>
+<tr>
+<td>Kind</td>
+<td>Normal, Critical, Heal, Shield, Miss, Block, DamageOverTime or Status. Each kind has its own look and strength.</td>
+</tr>
+<tr>
+<td>IsKill (<code>.Killing()</code>)</td>
+<td>The killing blow: plays the kill moment.</td>
+</tr>
+<tr>
+<td>Point (<code>.At(point)</code>)</td>
+<td>Where it landed: numbers (Hit Point anchor) and particles start there.</td>
+</tr>
+<tr>
+<td>Direction (<code>.From(dir)</code>) or Source (<code>.By(attacker)</code>)</td>
+<td>Which way it travelled: knockback, camera punch and the player's damage arrow use it. Without either, the kit pushes away from the camera.</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>A word instead of the number ("Stunned").</td>
+</tr>
+<tr>
+<td>Icon</td>
+<td>An icon beside the number.</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>Scales flash, shake, hitstop and knockback for this hit.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="what-each-kind-plays">What each kind plays <a class="anchor" href="#what-each-kind-plays" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Kind</th>
+<th>Plays</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal, Critical, Shield, Block</td>
+<td>Everything (criticals stronger, blocks softer).</td>
+</tr>
+<tr>
+<td>Heal</td>
+<td>Number (green, with a +), flash, squash, bar, sound. No push, shake or freeze.</td>
+</tr>
+<tr>
+<td>Damage over time</td>
+<td>Small combining numbers, a light flash, bar, sound. No freeze, shake or push.</td>
+</tr>
+<tr>
+<td>Miss, Status</td>
+<td>The word and its sound only.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="the-component">The component <a class="anchor" href="#the-component" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Profile / Preset</td>
+<td>The feel. Without a profile asset the preset's shared profile is used; <strong>Save As Profile</strong> makes an asset you can change.</td>
+</tr>
+<tr>
+<td>Juice (with a profile asset)</td>
+<td>More or less of everything.</td>
+</tr>
+<tr>
+<td>Renderers to flash</td>
+<td>Empty: every mesh, skinned mesh and sprite under the object (lower LOD levels and children with their own Hit Feedback are skipped).</td>
+</tr>
+<tr>
+<td>Visual (squash)</td>
+<td>What squashes and pops. Use a child when the root also moves or scales.</td>
+</tr>
+<tr>
+<td>Number and bar anchor</td>
+<td>Where numbers and the bar appear. Empty: above the renderers.</td>
+</tr>
+<tr>
+<td>Health source</td>
+<td>Your own health script (anything with IHealthSource). Empty: found on the object.</td>
+</tr>
+<tr>
+<td>Overrides</td>
+<td>This object only: a strength, each part on or off, its own flash colour, its own Display as, a number offset, its own number colour and size, and its own floating bar style.</td>
+</tr>
+<tr>
+<td>Events</td>
+<td>On Hit (amount), On Killed.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="preview-in-the-inspector">Preview in the inspector <a class="anchor" href="#preview-in-the-inspector" aria-label="Link to this section">#</a></h2>
+<p>In Play Mode the <strong>Hit</strong>, <strong>Critical</strong>, <strong>Heal</strong> and <strong>Kill</strong> buttons play on the selected objects, and the inspector
+lists what the last hit played and why anything was skipped.</p>
+<div class="doc-pager"><a class="pager prev" href="samples.html"><span class="label">Previous</span>Demo scenes</a><a class="pager next" href="profiles.html"><span class="label">Next</span>Profiles, presets and Juice</a></div>
+<p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+Hit+Feedback+and+hitting+things" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#hitting-it">Hitting it</a></li><li class="toc-2"><a href="#hitinfo-one-hit">HitInfo: one hit</a></li><li class="toc-2"><a href="#what-each-kind-plays">What each kind plays</a></li><li class="toc-2"><a href="#the-component">The component</a></li><li class="toc-2"><a href="#preview-in-the-inspector">Preview in the inspector</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/romanoassets/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/romanoassets" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

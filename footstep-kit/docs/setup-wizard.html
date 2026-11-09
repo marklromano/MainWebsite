@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Setup Wizard | Romano Assets</title>
+<meta name="description" content="Setup Wizard: documentation for the All In One Surface Footstep Kit for Unity.">
+<link rel="canonical" href="https://romanoassets.github.io/footstep-kit/docs/setup-wizard.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Setup Wizard">
+<meta property="og:description" content="Setup Wizard: documentation for the All In One Surface Footstep Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://romanoassets.github.io/footstep-kit/docs/setup-wizard.html">
+<meta property="og:image" content="https://romanoassets.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/logo.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.png" alt="" width="34" height="34">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Footstep Kit docs</a><span class="pill">v0.1.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html" aria-current="page">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="surfaces.html">Surfaces and the Surface Library</a><a href="characters.html">Surface Footsteps (your characters)</a><a href="triggers.html">When steps happen</a><a href="zones.html">Footstep Zones</a><a href="make-it-yours.html">Make it yours: profiles and presets</a><a href="effects-and-footprints.html">Effects and footprints</a><a href="ai-hearing.html">AI hearing (stealth)</a><a href="2d.html">2D games</a><a href="why-no-footstep.html">Why No Footstep? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html" aria-current="page">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="surfaces.html">Surfaces and the Surface Library</a><a href="characters.html">Surface Footsteps (your characters)</a><a href="triggers.html">When steps happen</a><a href="zones.html">Footstep Zones</a><a href="make-it-yours.html">Make it yours: profiles and presets</a><a href="effects-and-footprints.html">Effects and footprints</a><a href="ai-hearing.html">AI hearing (stealth)</a><a href="2d.html">2D games</a><a href="why-no-footstep.html">Why No Footstep? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Footstep Kit</a><span>/</span><span>Start here</span></nav>
+<h1 id="setup-wizard">Setup Wizard</h1>
+<p><strong>Tools &gt; All In One Surface Footstep Kit &gt; Setup Wizard</strong> sets up footsteps on your own character and maps the
+surfaces in your scene. Nothing changes until you click <strong>Add Footsteps</strong> or <strong>Apply</strong>, and each is one undo step.</p>
+<h2 id="1-your-character">1. Your character <a class="anchor" href="#1-your-character" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>What it checks</th>
+<th>What it does with it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Character Controller or Capsule Collider</td>
+<td>Puts the feet at the bottom of the capsule (the pivot is often in the middle).</td>
+</tr>
+<tr>
+<td>Rigidbody 2D</td>
+<td>Picks 2D side view when it has gravity, 2D top-down when it doesn't.</td>
+</tr>
+<tr>
+<td>No controller</td>
+<td>Steps follow the object's movement, whatever moves it. Feet go to the bottom of the model.</td>
+</tr>
+<tr>
+<td>Tagged Player, or has a camera</td>
+<td>Turns on Flat sound: the player's own steps sound the same in both ears.</td>
+</tr>
+<tr>
+<td>Humanoid Animator</td>
+<td>Finds the foot bones, so footprints land under each foot.</td>
+</tr>
+<tr>
+<td>Footstep animation events</td>
+<td>Recommends Animation Events for exact timing.</td>
+</tr>
+<tr>
+<td>Another script with footstep clips</td>
+<td>Offers to silence it (sets its footstep volume to 0), so you don't hear both.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Prefabs:</strong> the wizard saves a Prefab Variant called "Name (Footsteps)" next to your prefab. Use the variant in your
+scenes. Your prefab stays exactly as it was and still receives your changes.</p>
+<h2 id="2-how-it-feels">2. How it feels <a class="anchor" href="#2-how-it-feels" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Preset:</strong> Realistic, Arcade, Stealth or Heavy. See <a href="make-it-yours.html">Make it yours</a>.</li>
+<li><strong>Steps come from:</strong> Automatic, Animation Events, Foot Bones or Manual. See <a href="triggers.html">When steps happen</a>.</li>
+<li><strong>Flat sound (the player):</strong> on for the character you control, off for NPCs.</li>
+</ul>
+<h2 id="3-your-surfaces">3. Your surfaces <a class="anchor" href="#3-your-surfaces" aria-label="Link to this section">#</a></h2>
+<p>Pick a <strong>Surface Library</strong>. The sample one has Wood, Stone, Grass, Gravel, Metal, Water, Carpet and Snow with sounds.
+<strong>Make my own copy</strong> copies it and its surfaces into <code>Assets/FootstepKitData</code>, where kit updates never touch them.</p>
+<p>The table lists each material, terrain layer and tile in the open scene, how often it's used, and what it plays now
+(and why). The wizard's guess is already picked; change any, then click <strong>Apply</strong> to save them in the library as rules.
+<strong>Show</strong> selects an object that uses it.</p>
+<h2 id="done">Done <a class="anchor" href="#done" aria-label="Link to this section">#</a></h2>
+<p>After <strong>Add Footsteps</strong> the wizard runs the setup check and lists any problem with a fix button, for example "no Audio
+Listener in the scene" or "the ground is on a layer Ground Layers leaves out".</p>
+<div class="doc-pager"><a class="pager prev" href="getting-started.html"><span class="label">Previous</span>Quick start</a><a class="pager next" href="samples.html"><span class="label">Next</span>Demo scenes</a></div>
+<p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+Setup+Wizard" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#1-your-character">1. Your character</a></li><li class="toc-2"><a href="#2-how-it-feels">2. How it feels</a></li><li class="toc-2"><a href="#3-your-surfaces">3. Your surfaces</a></li><li class="toc-2"><a href="#done">Done</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/romanoassets/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/romanoassets" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

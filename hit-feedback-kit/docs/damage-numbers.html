@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Damage numbers | Romano Assets</title>
+<meta name="description" content="Damage numbers: documentation for the All In One Hit Feedback Kit for Unity.">
+<link rel="canonical" href="https://romanoassets.github.io/hit-feedback-kit/docs/damage-numbers.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Damage numbers">
+<meta property="og:description" content="Damage numbers: documentation for the All In One Hit Feedback Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://romanoassets.github.io/hit-feedback-kit/docs/damage-numbers.html">
+<meta property="og:image" content="https://romanoassets.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/logo.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.png" alt="" width="34" height="34">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Hit Feedback Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="integration.html">Hook it into your game</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="hit-feedback.html">Hit Feedback and hitting things</a><a href="profiles.html">Profiles, presets and Juice</a><a href="damage-numbers.html" aria-current="page">Damage numbers</a><a href="hit-flash.html">Hit flash</a><a href="hitstop-shake-knockback.html">Hitstop, shake, knockback and squash</a><a href="health-bars.html">Health and health bars</a><a href="player-feedback.html">Player feedback</a><a href="sound-particles-kill.html">Sound, particles and the kill moment</a><a href="make-it-yours.html">Make it yours</a><a href="accessibility.html">Accessibility</a><a href="2d.html">2D games</a><a href="why-no-feedback.html">Why No Feedback? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code, events and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="integration.html">Hook it into your game</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="hit-feedback.html">Hit Feedback and hitting things</a><a href="profiles.html">Profiles, presets and Juice</a><a href="damage-numbers.html" aria-current="page">Damage numbers</a><a href="hit-flash.html">Hit flash</a><a href="hitstop-shake-knockback.html">Hitstop, shake, knockback and squash</a><a href="health-bars.html">Health and health bars</a><a href="player-feedback.html">Player feedback</a><a href="sound-particles-kill.html">Sound, particles and the kill moment</a><a href="make-it-yours.html">Make it yours</a><a href="accessibility.html">Accessibility</a><a href="2d.html">2D games</a><a href="why-no-feedback.html">Why No Feedback? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code, events and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Hit Feedback Kit</a><span>/</span><span>Features</span></nav>
+<h1 id="damage-numbers">Damage numbers</h1>
+<p>Numbers and words drawn on top of the finished frame (after post effects, so bloom never smears them), the same in
+every render pipeline. They are pooled and steady play makes no garbage.</p>
+<h2 id="settings-profile--numbers">Settings (Profile &gt; Numbers) <a class="anchor" href="#settings-profile--numbers" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Display as</td>
+<td>Number, Number And Icon, Icon, Word (the kind's word), None. Also per object under Overrides.</td>
+</tr>
+<tr>
+<td>Motion</td>
+<td>Rise, Arc (pops up and falls to a side), Punch (pops big and settles), Slide, Stay.</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Screen: always on top, the same size at any distance. World: sized by distance, and can hide behind walls.</td>
+</tr>
+<tr>
+<td>Anchor</td>
+<td>Above the target (above its bar), at the hit point, or at its middle. Plus an offset.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Text height in pixels at 1080p; scales with the screen, each kind's size and the player's text size.</td>
+</tr>
+<tr>
+<td>Font, Bold</td>
+<td>Any font asset in your project; empty uses Unity's built-in font. No fonts ship with the kit.</td>
+</tr>
+<tr>
+<td>Outline, Shadow, Shine</td>
+<td>A clean outline, a drop shadow, and a top-to-bottom shine.</td>
+</tr>
+<tr>
+<td>Lifetime, Distance, Spread, Pop</td>
+<td>How long, how far, how much sideways spread, how big the pop.</td>
+</tr>
+<tr>
+<td>Combine window, Combine growth</td>
+<td>Hits within the window add up into one growing number that pops again on each hit.</td>
+</tr>
+<tr>
+<td>Size by amount</td>
+<td>Bigger amounts show bigger numbers, up to Big Size at Big Amount.</td>
+</tr>
+<tr>
+<td>Crit shake</td>
+<td>Critical and killing numbers shake for a moment.</td>
+</tr>
+<tr>
+<td>Avoid overlap</td>
+<td>Numbers that would overlap push each other apart.</td>
+</tr>
+<tr>
+<td>Follow target</td>
+<td>Numbers move with the target, or stay where they appeared.</td>
+</tr>
+<tr>
+<td>Format, Decimals, Plus on heals</td>
+<td>1234, 1,234 or 1.2K / 3.4M / 5.6B / 7.8T.</td>
+</tr>
+<tr>
+<td>Hide behind walls, Wall layers</td>
+<td>World space only: a raycast from the camera every 0.1 s.</td>
+</tr>
+<tr>
+<td>Max distance</td>
+<td>Numbers farther than this aren't shown.</td>
+</tr>
+<tr>
+<td>Max on screen</td>
+<td>The oldest number makes way when the limit is reached.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="per-kind-profile--kinds">Per kind (Profile &gt; Kinds) <a class="anchor" href="#per-kind-profile--kinds" aria-label="Link to this section">#</a></h2>
+<p>Colour, colour-blind safe colour, word ("Miss", "Blocked"), suffix ("!" makes 123!), size, icon.</p>
+<h2 id="numbers-anywhere">Numbers anywhere <a class="anchor" href="#numbers-anywhere" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">DamageNumbers.Show(position, 25, HitKind.Heal);            // a number, Action RPG style or a profile you pass
+DamageNumbers.ShowText(position, &quot;Level up!&quot;, HitKind.Status, myProfile);
+DamageNumbers.Hidden = true;                              // hide them (for a cut scene)
+</code></pre>
+<h2 id="your-textmesh-pro-font">Your TextMesh Pro font <a class="anchor" href="#your-textmesh-pro-font" aria-label="Link to this section">#</a></h2>
+<p>With TextMesh Pro in your project (it comes with Unity 6's UI package), add <strong>TextMesh Pro Numbers</strong> (Add Component &gt; All
+In One Hit Feedback Kit) to any object in the scene and drag in your <strong>TMP font asset</strong> and, if you like, a material
+preset (outline, glow, gradient). While it is enabled every number is shown with TextMesh Pro in your font, in world
+space, facing the camera; kinds, colours, words, formatting and sizes still come from your profiles. Turn it off and the
+kit draws its own numbers again. In 1.0 it shows one number per hit (it doesn't add hits into one growing number).</p>
+<h2 id="your-own-text-ui-toolkit-your-prefab">Your own text (UI Toolkit, your prefab) <a class="anchor" href="#your-own-text-ui-toolkit-your-prefab" aria-label="Link to this section">#</a></h2>
+<p>Set <code>DamageNumbers.CustomDisplay</code> to your own object implementing <code>IDamageNumberDisplay</code>. The kit hands it every number
+with its text already worked out ("1.2K", "+25", "Miss"), its colour, size and icon. See <a href="extending.html">Code</a>.</p>
+<h2 id="when-numbers-are-hidden">When numbers are hidden <a class="anchor" href="#when-numbers-are-hidden" aria-label="Link to this section">#</a></h2>
+<p>The screen layer hides while the game is paused (Time.timeScale at 0 and not set by the kit's own hitstop) and when
+<code>HitFeedbackOverlay.Visible</code> is false, for example while your own menu is open. Numbers from a scene are cleared when a
+new scene loads on its own.</p>
+<div class="doc-pager"><a class="pager prev" href="profiles.html"><span class="label">Previous</span>Profiles, presets and Juice</a><a class="pager next" href="hit-flash.html"><span class="label">Next</span>Hit flash</a></div>
+<p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+Damage+numbers" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#settings-profile--numbers">Settings (Profile &gt; Numbers)</a></li><li class="toc-2"><a href="#per-kind-profile--kinds">Per kind (Profile &gt; Kinds)</a></li><li class="toc-2"><a href="#numbers-anywhere">Numbers anywhere</a></li><li class="toc-2"><a href="#your-textmesh-pro-font">Your TextMesh Pro font</a></li><li class="toc-2"><a href="#your-own-text-ui-toolkit-your-prefab">Your own text (UI Toolkit, your prefab)</a></li><li class="toc-2"><a href="#when-numbers-are-hidden">When numbers are hidden</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/romanoassets/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/romanoassets" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

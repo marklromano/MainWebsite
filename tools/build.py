@@ -44,6 +44,8 @@ INTERACTION_VERSION = "1.0.0"
 RUNTIME_BUILDING_VERSION = "1.0.0"
 SETTINGS_VERSION = "1.0.0"
 BUG_REPORT_VERSION = "1.0.1"
+FOOTSTEP_VERSION = "0.1.0"
+HIT_FEEDBACK_VERSION = "1.0.0"
 YEAR = "2026"
 
 ICON_EXTERNAL = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" '
@@ -327,6 +329,59 @@ PRODUCTS = [
         # The kit's own Documentation/Images are in its pages already
         "page_images": {},
     },
+    {
+        # In development: page up, docs built with --docs footstep-kit=<folder>, published (and listed on the docs hub)
+        # on launch day with "status": "live" and "store" set. Its Documentation/docs.json sets the sidebar.
+        "slug": "footstep-kit",
+        "name": "All In One Surface Footstep Kit",
+        "short": "Footstep Kit",
+        "accent": "c-footstep",
+        "status": "in development",
+        "version": FOOTSTEP_VERSION,
+        "store": "",
+        "summary": "Footsteps that sound like what your characters walk on, for any controller in 3D and 2D, with effects, "
+                   "footprints, AI hearing and a debugger that says why a step was silent.",
+        "requirements": ["Unity 6000.0+", "Built-in, URP & HDRP", "No dependencies", "Full C# source"],
+        "menu": "Tools > All In One Surface Footstep Kit",
+        "support_info": "**Tools > All In One Surface Footstep Kit > Help and Support > Copy Support Info**",
+        "quick_start": [
+            "Import the package. Everything lands in <code>Assets/AllInOneFootstepKit/</code>. Try "
+            "<strong>Tools &gt; All In One Surface Footstep Kit &gt; Open Demo &gt; Showcase</strong> and press Play.",
+            "Open <strong>Tools &gt; All In One Surface Footstep Kit &gt; Setup Wizard</strong> and pick your character.",
+            "Check the surfaces it found in your scene, click <strong>Apply</strong>, then <strong>Add Footsteps</strong>.",
+            "Press Play and walk. No sound? <strong>Why No Footstep?</strong> tells you why, with a fix button.",
+        ],
+        "pages": [],
+        "shortcut_groups": {},
+        "page_images": {},
+    },
+    {
+        # In development: page up, docs built with --docs hit-feedback-kit=<folder>, published (and listed on the docs hub)
+        # on launch day with "status": "live" and "store" set. Its Documentation/docs.json sets the sidebar.
+        "slug": "hit-feedback-kit",
+        "name": "All In One Hit Feedback Kit",
+        "short": "Hit Feedback Kit",
+        "accent": "c-hitfeedback",
+        "status": "in development",
+        "version": HIT_FEEDBACK_VERSION,
+        "store": "",
+        "summary": "Make every hit land: damage numbers, hit flash, hitstop, screen shake, knockback, health bars and sound "
+                   "from one component, with genre presets and a Why No Feedback? debugger.",
+        "requirements": ["Unity 6000.0+", "Built-in, URP & HDRP", "No dependencies", "Full C# source"],
+        "menu": "Tools > All In One Hit Feedback Kit",
+        "support_info": "**Tools > All In One Hit Feedback Kit > Help and Support > Copy Support Info**",
+        "quick_start": [
+            "Import the package. Everything lands in <code>Assets/HitFeedbackKit/</code>. Try "
+            "<strong>Tools &gt; All In One Hit Feedback Kit &gt; Open Demo &gt; Showcase</strong> and press Play.",
+            "Select your enemies and open <strong>Tools &gt; All In One Hit Feedback Kit &gt; Setup Wizard</strong>.",
+            "Pick a preset and click <strong>Add Hit Feedback</strong>.",
+            "Hit them with <code>HitFeedback.Hit(enemy, 25)</code>, the Health component or a UnityEvent. Nothing? "
+            "<strong>Why No Feedback?</strong> tells you why, with a fix button.",
+        ],
+        "pages": [],
+        "shortcut_groups": {},
+        "page_images": {},
+    },
 ]
 
 # Kits without docs yet, for the docs hub and "More from Romano Assets": (name, accent, status, one line)
@@ -595,6 +650,14 @@ HAND_PAGES = [
      "In-game bug reports for Unity: testers press one key and you get one file with their words, a marked-up "
      "screenshot, a replay, logs with stack traces and system info, plus a debug console and a Report Inbox that "
      "clicks to the broken line. In development."),
+    ("footstep-kit.html", "footstep-kit/index.html", "../", "footstep",
+     "All In One Surface Footstep Kit",
+     "Footsteps for Unity that sound like what your characters walk on: any controller, 3D and 2D, terrain layers, "
+     "zones, effects, footprints, AI hearing and a Why No Footstep? debugger. In development."),
+    ("hit-feedback-kit.html", "hit-feedback-kit/index.html", "../", "hitfeedback",
+     "All In One Hit Feedback Kit",
+     "Make every hit land in Unity: damage numbers, hit flash, hitstop, screen shake, knockback, health bars and sound "
+     "from one component, with genre presets and a Why No Feedback? debugger. In development."),
     ("support.html", "support/index.html", "../", "support",
      "Support",
      "Get help with Romano Assets tools: documentation, bug reports, Discord and email."),

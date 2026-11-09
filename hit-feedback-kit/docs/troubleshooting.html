@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Troubleshooting and FAQ | Romano Assets</title>
+<meta name="description" content="Troubleshooting and FAQ: documentation for the All In One Hit Feedback Kit for Unity.">
+<link rel="canonical" href="https://romanoassets.github.io/hit-feedback-kit/docs/troubleshooting.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Troubleshooting and FAQ">
+<meta property="og:description" content="Troubleshooting and FAQ: documentation for the All In One Hit Feedback Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://romanoassets.github.io/hit-feedback-kit/docs/troubleshooting.html">
+<meta property="og:image" content="https://romanoassets.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/logo.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.png" alt="" width="34" height="34">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Hit Feedback Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="integration.html">Hook it into your game</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="hit-feedback.html">Hit Feedback and hitting things</a><a href="profiles.html">Profiles, presets and Juice</a><a href="damage-numbers.html">Damage numbers</a><a href="hit-flash.html">Hit flash</a><a href="hitstop-shake-knockback.html">Hitstop, shake, knockback and squash</a><a href="health-bars.html">Health and health bars</a><a href="player-feedback.html">Player feedback</a><a href="sound-particles-kill.html">Sound, particles and the kill moment</a><a href="make-it-yours.html">Make it yours</a><a href="accessibility.html">Accessibility</a><a href="2d.html">2D games</a><a href="why-no-feedback.html">Why No Feedback? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code, events and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html" aria-current="page">Troubleshooting and FAQ</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="integration.html">Hook it into your game</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="hit-feedback.html">Hit Feedback and hitting things</a><a href="profiles.html">Profiles, presets and Juice</a><a href="damage-numbers.html">Damage numbers</a><a href="hit-flash.html">Hit flash</a><a href="hitstop-shake-knockback.html">Hitstop, shake, knockback and squash</a><a href="health-bars.html">Health and health bars</a><a href="player-feedback.html">Player feedback</a><a href="sound-particles-kill.html">Sound, particles and the kill moment</a><a href="make-it-yours.html">Make it yours</a><a href="accessibility.html">Accessibility</a><a href="2d.html">2D games</a><a href="why-no-feedback.html">Why No Feedback? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code, events and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html" aria-current="page">Troubleshooting and FAQ</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Hit Feedback Kit</a><span>/</span><span>Reference</span></nav>
+<h1 id="troubleshooting-and-faq">Troubleshooting and FAQ</h1>
+<p><strong>First, open Why No Feedback?</strong> It names the reason for almost everything below, with a fix.</p>
+<h2 id="nothing-happens-when-i-hit">Nothing happens when I hit <a class="anchor" href="#nothing-happens-when-i-hit" aria-label="Link to this section">#</a></h2>
+<ul>
+<li>Is there a Hit Feedback on the object, or a parent of the collider you hit? Why No Feedback? catches hits on objects
+  without one.</li>
+<li>Using the kit's Health? Damage while invulnerable, or after death, plays nothing.</li>
+<li>Is <code>HitFeedbackSettings.Enabled</code> on, and the master Juice above 0?</li>
+</ul>
+<h2 id="no-numbers-or-no-shake">No numbers or no shake <a class="anchor" href="#no-numbers-or-no-shake" aria-label="Link to this section">#</a></h2>
+<p>The kit needs a camera: the one tagged <strong>MainCamera</strong>, or set <code>HitFeedbackSettings.Camera</code> (or the camera tag in Project
+Settings). Numbers farther than Max Distance aren't shown.</p>
+<h2 id="numbers-show-over-my-pause-menu--under-my-ui">Numbers show over my pause menu / under my UI <a class="anchor" href="#numbers-show-over-my-pause-menu--under-my-ui" aria-label="Link to this section">#</a></h2>
+<p>The screen layer is drawn after the frame. It hides by itself while the game is paused (<code>Time.timeScale</code> at 0). For
+other menus set <code>HitFeedbackOverlay.Visible = false</code> while they are open. Your own OnGUI windows draw on top of it.</p>
+<h2 id="the-flash-doesnt-show">The flash doesn't show <a class="anchor" href="#the-flash-doesnt-show" aria-label="Link to this section">#</a></h2>
+<ul>
+<li>Static batched objects can't flash: untick Batching Static (Why No Feedback? has the button).</li>
+<li>Particle, trail and line renderers aren't flashed.</li>
+<li>Added renderers at runtime? Call <code>RebuildFlash()</code>.</li>
+</ul>
+<h2 id="knockback-does-nothing">Knockback does nothing <a class="anchor" href="#knockback-does-nothing" aria-label="Link to this section">#</a></h2>
+<p>The object needs something to move: a non-kinematic Rigidbody or Rigidbody 2D, a Character Controller, a NavMesh Agent, or
+Move Transform turned on. Kinematic bodies are moved like transforms.</p>
+<h2 id="my-camera-controller-and-the-shake">My camera controller and the shake <a class="anchor" href="#my-camera-controller-and-the-shake" aria-label="Link to this section">#</a></h2>
+<p>They don't fight: the shake is added after your controller runs and removed before it runs again. If you shake a camera
+rig instead, add Hit Camera Shake to the camera and set its Shake Target.</p>
+<h2 id="squash-changes-my-collider">Squash changes my collider <a class="anchor" href="#squash-changes-my-collider" aria-label="Link to this section">#</a></h2>
+<p>Set Hit Feedback &gt; Visual to a child that holds only the model.</p>
+<h2 id="slow-motion-stayed-on">Slow motion stayed on <a class="anchor" href="#slow-motion-stayed-on" aria-label="Link to this section">#</a></h2>
+<p>It can't: the game's own time scale always comes back, and if your game changes <code>Time.timeScale</code> (a pause menu) the kit
+lets go at once. <code>TimeControl.StopAll()</code> ends every stop now.</p>
+<h2 id="is-it-multiplayer-ready">Is it multiplayer ready? <a class="anchor" href="#is-it-multiplayer-ready" aria-label="Link to this section">#</a></h2>
+<p>Feedback is local; play it on each client from your networked hit event. See <a href="extending.html#multiplayer">Code</a>.</p>
+<h2 id="known-limits">Known limits <a class="anchor" href="#known-limits" aria-label="Link to this section">#</a></h2>
+<ul>
+<li>Numbers and bars are a screen layer, not 3D objects in the scene; "World" numbers are sized by distance and hidden
+  behind walls by a raycast.</li>
+<li>No UI Toolkit or VR-specific feedback in 1.0 (bring your own display through <code>IDamageNumberDisplay</code>).</li>
+</ul>
+<div class="doc-pager"><a class="pager prev" href="upgrading.html"><span class="label">Previous</span>Upgrading</a><a class="pager next" href="support.html"><span class="label">Next</span>Support</a></div>
+<p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+Troubleshooting+and+FAQ" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#nothing-happens-when-i-hit">Nothing happens when I hit</a></li><li class="toc-2"><a href="#no-numbers-or-no-shake">No numbers or no shake</a></li><li class="toc-2"><a href="#numbers-show-over-my-pause-menu--under-my-ui">Numbers show over my pause menu / under my UI</a></li><li class="toc-2"><a href="#the-flash-doesnt-show">The flash doesn&#x27;t show</a></li><li class="toc-2"><a href="#knockback-does-nothing">Knockback does nothing</a></li><li class="toc-2"><a href="#my-camera-controller-and-the-shake">My camera controller and the shake</a></li><li class="toc-2"><a href="#squash-changes-my-collider">Squash changes my collider</a></li><li class="toc-2"><a href="#slow-motion-stayed-on">Slow motion stayed on</a></li><li class="toc-2"><a href="#is-it-multiplayer-ready">Is it multiplayer ready?</a></li><li class="toc-2"><a href="#known-limits">Known limits</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/romanoassets/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/romanoassets" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>
