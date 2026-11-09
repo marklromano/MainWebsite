@@ -113,13 +113,13 @@ PRODUCTS = [
         },
     },
     {
-        # In development: its page is up, its docs build with --docs save-kit=<folder> but are published (and listed
+        # Coming soon: its page is up, its docs build with --docs save-kit=<folder> but are published (and listed
         # on the docs hub) only once "status" is "live" and "store" is set, on launch day.
         "slug": "save-kit",
         "name": "All In One Save Kit",
         "short": "Save Kit",
         "accent": "c-save",
-        "status": "in development",
+        "status": "coming soon",
         "version": SAVE_VERSION,
         "store": "",
         "summary": "Save and restore player progress, world objects and settings, with slots, autosaves, a finished save "
@@ -138,6 +138,8 @@ PRODUCTS = [
             ("Walkthroughs", "Walkthroughs/FirstSave.md", "walkthrough-first-save.html", "Your first save"),
             ("Walkthroughs", "Walkthroughs/WorldObjects.md", "walkthrough-world-objects.html", "World objects"),
             ("Walkthroughs", "Walkthroughs/SaveMenu.md", "walkthrough-save-menu.html", "The save menu"),
+            ("Walkthroughs", "Walkthroughs/OwnMenu.md", "walkthrough-own-menu.html", "Your own save menu (uGUI)"),
+            ("Walkthroughs", "Walkthroughs/OwnMenuUIToolkit.md", "walkthrough-own-menu-ui-toolkit.html", "Your own save menu (UI Toolkit)"),
             ("Walkthroughs", "Walkthroughs/BackupsAndRecovery.md", "walkthrough-backups.html", "Backups and recovery"),
             ("Walkthroughs", "Walkthroughs/GameUpdates.md", "walkthrough-game-updates.html", "Game updates"),
             ("Learn", "Guide.md", "guide.html", "Guide"),
@@ -197,13 +199,13 @@ PRODUCTS = [
         },
     },
     {
-        # In development, like the Save Kit: page up, docs built locally, published on launch day.
+        # Coming soon, like the Save Kit: page up, docs built locally, published on launch day.
         # Its Documentation/docs.json sets the sidebar groups, order and titles; this list only keeps the addresses.
         "slug": "runtime-building-kit",
         "name": "All In One Runtime Building Kit",
         "short": "Runtime Building Kit",
         "accent": "c-runtime",
-        "status": "in development",
+        "status": "coming soon",
         "version": RUNTIME_BUILDING_VERSION,
         "store": "",
         "summary": "Let players build bases and place furniture at runtime: turn your own models into build pieces in about "
@@ -245,12 +247,12 @@ PRODUCTS = [
         "page_images": {},
     },
     {
-        # In development, like the Save Kit: page up, docs built locally, published on launch day.
+        # Coming soon, like the Save Kit: page up, docs built locally, published on launch day.
         "slug": "settings-menu-kit",
         "name": "All In One Game Settings & Menu Kit",
         "short": "Settings & Menu Kit",
         "accent": "c-settings",
-        "status": "in development",
+        "status": "coming soon",
         "version": SETTINGS_VERSION,
         "store": "",
         "summary": "A finished game front end: title screen, main menu, settings, pause, loading screen and dialogs, "
@@ -288,13 +290,13 @@ PRODUCTS = [
         "page_images": {},
     },
     {
-        # In development, like the Save Kit: page up, docs built locally, published on launch day.
+        # Coming soon, like the Save Kit: page up, docs built locally, published on launch day.
         "slug": "bug-report-kit",
         "free": True,
         "name": "All In One Bug Report Kit",
         "short": "Bug Report Kit",
         "accent": "c-bugreport",
-        "status": "in development",
+        "status": "coming soon",
         "version": BUG_REPORT_VERSION,
         "store": "",
         "summary": "Testers press one key and you get one file: their words, a marked-up screenshot, a replay of the last "
@@ -332,13 +334,13 @@ PRODUCTS = [
         "page_images": {},
     },
     {
-        # In development: page up, docs built with --docs footstep-kit=<folder>, published (and listed on the docs hub)
+        # Coming soon: page up, docs built with --docs footstep-kit=<folder>, published (and listed on the docs hub)
         # on launch day with "status": "live" and "store" set. Its Documentation/docs.json sets the sidebar.
         "slug": "footstep-kit",
         "name": "All In One Surface Footstep Kit",
         "short": "Footstep Kit",
         "accent": "c-footstep",
-        "status": "in development",
+        "status": "coming soon",
         "version": FOOTSTEP_VERSION,
         "store": "",
         "summary": "Footsteps that sound like what your characters walk on, for any controller in 3D and 2D, with effects, "
@@ -358,13 +360,13 @@ PRODUCTS = [
         "page_images": {},
     },
     {
-        # In development: page up, docs built with --docs hit-feedback-kit=<folder>, published (and listed on the docs hub)
+        # Coming soon: page up, docs built with --docs hit-feedback-kit=<folder>, published (and listed on the docs hub)
         # on launch day with "status": "live" and "store" set. Its Documentation/docs.json sets the sidebar.
         "slug": "hit-feedback-kit",
         "name": "All In One Hit Feedback Kit",
         "short": "Hit Feedback Kit",
         "accent": "c-hitfeedback",
-        "status": "in development",
+        "status": "coming soon",
         "version": HIT_FEEDBACK_VERSION,
         "store": "",
         "summary": "Make every hit land: damage numbers, hit flash, hitstop, screen shake, knockback, health bars and sound "
@@ -385,13 +387,13 @@ PRODUCTS = [
         "page_images": {},
     },
     {
-        # In development: submitted to the Asset Store (free), page and docs up so the store links work.
+        # Coming soon: submitted to the Asset Store (free), page and docs up so the store links work.
         # Its Documentation/docs.json sets the sidebar groups, order and titles.
         "slug": "tutorial-kit",
         "name": "All In One Tutorial Kit",
         "short": "Tutorial Kit",
         "accent": "c-tutorial",
-        "status": "in development",
+        "status": "coming soon",
         "free": True,
         "version": TUTORIAL_VERSION,
         "store": "",
@@ -410,12 +412,12 @@ PRODUCTS = [
         "page_images": {},
     },
     {
-        # In development, like the Save Kit: page up, docs built locally, published on launch day.
+        # Coming soon, like the Save Kit: page up, docs built locally, published on launch day.
         "slug": "waypoint-minimap-kit",
         "name": "All In One Waypoint & Minimap Kit",
         "short": "Waypoint & Minimap Kit",
         "accent": "c-waypoint",
-        "status": "in development",
+        "status": "coming soon",
         "version": WAYPOINT_VERSION,
         "store": "",
         "summary": "Show players where to go: objective markers, edge arrows with distance, a compass bar, a minimap and "
@@ -452,16 +454,7 @@ PRODUCTS = [
 ]
 
 # Kits without docs yet, for the docs hub and "More from Romano Assets": (name, accent, status, one line)
-COMING = [
-    ("All In One Save Kit", "c-save", "In development",
-     "Save and restore progress, world objects and settings, without code."),
-    ("All In One Game Settings & Menu Kit", "c-settings", "In development",
-     "Title screen, menus, settings, pause and loading screens, ready to drop in."),
-    ("All In One Runtime Building Kit", "c-runtime", "In development",
-     "Let players build bases and place furniture in your game."),
-    ("All In One Bug Report Kit", "c-bugreport", "In development",
-     "Free: in-game bug reports with screenshot, replay and logs, plus a debug console."),
-]
+COMING = []
 
 NAV = [
     ("products", "Products", "index.html#products"),
@@ -509,14 +502,15 @@ def footer(root):
         <h4>Products</h4>
         <ul>
           <li><a href="{root}prefab-builder/index.html">Prefab Builder Kit</a></li>
-          <li><a href="{root}save-kit/index.html">Save Kit</a></li>
           <li><a href="{root}interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="{root}save-kit/index.html">Save Kit</a></li>
           <li><a href="{root}settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
           <li><a href="{root}runtime-building-kit/index.html">Runtime Building Kit</a></li>
           <li><a href="{root}bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="{root}footstep-kit/index.html">Surface Footstep Kit</a></li>
           <li><a href="{root}tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="{root}hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
           <li><a href="{root}waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
-          <li><a href="{root}index.html#products">Coming next</a></li>
           <li><a href="{PUBLISHER_URL}" rel="noopener">Publisher page</a></li>
         </ul>
       </div>
@@ -700,7 +694,7 @@ HAND_PAGES = [
     ("save-kit.html", "save-kit/index.html", "../", "save",
      "All In One Save Kit",
      "Save and restore player progress, world objects and settings in Unity: no code needed, slots, autosaves, a "
-     "finished save menu, backups and automatic recovery from damaged saves. In development."),
+     "finished save menu, backups and automatic recovery from damaged saves. Coming soon to the Asset Store."),
     ("interaction-kit.html", "interaction-kit/index.html", "../", "interact",
      "All In One Interaction Kit",
      "Turn your own Unity prefabs into doors, drawers, switches, pickups, keypads and puzzles: a Setup Wizard, prompts "
@@ -709,32 +703,32 @@ HAND_PAGES = [
     ("runtime-building-kit.html", "runtime-building-kit/index.html", "../", "runtime",
      "All In One Runtime Building Kit",
      "Let players build bases and place furniture at runtime in Unity: your own models become build pieces in about ten "
-     "minutes without code, snap through sockets, and every refused spot says why. In development."),
+     "minutes without code, snap through sockets, and every refused spot says why. Coming soon to the Asset Store."),
     ("settings-menu-kit.html", "settings-menu-kit/index.html", "../", "settings",
      "All In One Game Settings & Menu Kit",
      "A finished game front end for Unity: title screen, main menu, settings, pause and loading screens, key rebinding, "
-     "accessibility, subtitles and three themes, without code. In development."),
+     "accessibility, subtitles and three themes, without code. Coming soon to the Asset Store."),
     ("bug-report-kit.html", "bug-report-kit/index.html", "../", "bugreport",
      "All In One Bug Report Kit",
      "In-game bug reports for Unity: testers press one key and you get one file with their words, a marked-up "
      "screenshot, a replay, logs with stack traces and system info, plus a debug console and a Report Inbox that "
-     "clicks to the broken line. In development."),
+     "clicks to the broken line. Coming soon to the Asset Store."),
     ("footstep-kit.html", "footstep-kit/index.html", "../", "footstep",
      "All In One Surface Footstep Kit",
      "Footsteps for Unity that sound like what your characters walk on: any controller, 3D and 2D, terrain layers, "
-     "zones, effects, footprints, AI hearing and a Why No Footstep? debugger. In development."),
+     "zones, effects, footprints, AI hearing and a Why No Footstep? debugger. Coming soon to the Asset Store."),
     ("hit-feedback-kit.html", "hit-feedback-kit/index.html", "../", "hitfeedback",
      "All In One Hit Feedback Kit",
      "Make every hit land in Unity: damage numbers, hit flash, hitstop, screen shake, knockback, health bars and sound "
-     "from one component, with genre presets and a Why No Feedback? debugger. In development."),
+     "from one component, with genre presets and a Why No Feedback? debugger. Coming soon to the Asset Store."),
     ("tutorial-kit.html", "tutorial-kit/index.html", "../", "tutorial",
      "All In One Tutorial Kit",
      "In-game tutorials and onboarding for Unity without code: spotlight any button or object, show a tip, and finish "
-     "each step when the player really does it. uGUI, UI Toolkit, 2D and 3D. Free. In development."),
+     "each step when the player really does it. uGUI, UI Toolkit, 2D and 3D. Free. Coming soon to the Asset Store."),
     ("waypoint-minimap-kit.html", "waypoint-minimap-kit/index.html", "../", "waypoint",
      "All In One Waypoint & Minimap Kit",
      "Show players where to go in Unity: objective markers, edge arrows with distance, a compass bar, a minimap and a "
-     "full-screen map, with a one-click map maker, fog of war and region discovery, without code. In development."),
+     "full-screen map, with a one-click map maker, fog of war and region discovery, without code. Coming soon to the Asset Store."),
     ("support.html", "support/index.html", "../", "support",
      "Support",
      "Get help with Romano Assets tools: documentation, bug reports, Discord and email."),
@@ -749,6 +743,23 @@ def build_pages():
         body = fill((PAGES / fragment).read_text(encoding="utf-8"), root, out.split("/")[0] if "/" in out else "")
         write(out, page(root, active, title, description, body, out))
     build_docs_hub()
+    sync_footers()
+
+
+def sync_footers():
+    """Docs pages are only regenerated with --docs, so give every page already on the site today's footer (the kit list
+    in it changes whenever a kit is added)."""
+    for path in SITE.rglob("*.html"):
+        rel = path.relative_to(SITE)
+        if rel.parts[0] in ("tools", "assets", ".git"):
+            continue
+        text = path.read_text(encoding="utf-8")
+        start, end = text.find('<footer class="site-footer">'), text.find("</footer>")
+        if start < 0 or end < 0:
+            continue
+        new = text[:start] + footer("../" * (len(rel.parts) - 1)) + text[end + len("</footer>"):]
+        if new != text:
+            path.write_text(new, encoding="utf-8")
 
 
 def write(out, text):
@@ -770,11 +781,13 @@ def build_docs_hub():
         pill = f'<span class="pill pill-live">v{p["version"]}</span>' if p["status"] == "live" else \
             f'<span class="pill pill-dev">v{p["version"]}, coming soon to the Asset Store</span>'
         links = p.get("hub_links") or [
-            ("index.html#quick-start", "Quick start", "From import to your first placed piece"),
+            ("index.html#quick-start", "Quick start", "From import to your first result in minutes"),
             ("shortcuts.html", "Keyboard shortcuts", "Every key and mouse control"),
             ("troubleshooting.html", "Troubleshooting", "Common problems and their fixes"),
             ("changelog.html", "Changelog", "What changed in each version"),
         ]
+        # Only pages this kit's manual has (not every kit has a shortcuts page)
+        links = [l for l in links if (SITE / p["slug"] / "docs" / l[0].split("#")[0]).exists()]
         link_items = "\n    ".join(f'<li><a href="{d}{href}"><strong>{t}</strong><span>{line}</span></a></li>' for href, t, line in links)
         cards.append(f"""<article class="product product-flag {p['accent']}">
   <div class="flag-copy">
@@ -1042,7 +1055,7 @@ def docs_nav(groups, current):
 def docs_side(product, groups, current):
     links = docs_nav(groups, current)
     return f"""<aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">{html.escape(product['short'])} docs</a><span class="pill">v{product['version']}</span>{'' if product['status'] == 'live' else '<span class="pill pill-dev">In development</span>'}</div>
+  <div class="docs-product"><a href="index.html">{html.escape(product['short'])} docs</a><span class="pill">v{product['version']}</span>{'' if product['status'] == 'live' else '<span class="pill pill-dev">Coming soon</span>'}</div>
   <div class="docs-search" hidden>
     <label class="sr-only" for="docs-q">Search the documentation</label>
     <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
@@ -1229,7 +1242,7 @@ def docs_home(product, groups, rendered):
     return f"""<h1>{html.escape(product['name'])} documentation</h1>
 <p class="lead">{product['summary']}</p>
 <ul class="specs">{reqs}<li>Version {product['version']}</li></ul>
-{'' if product['status'] == 'live' else '<p class="dim">In development: free, coming soon to the Asset Store.</p>' if product.get('free') else '<p class="dim">In development: coming soon to the Asset Store.</p>'}
+{'' if product['status'] == 'live' else '<p class="dim">Free, coming soon to the Asset Store.</p>' if product.get('free') else '<p class="dim">Coming soon to the Asset Store.</p>'}
 <div class="btn-row">
   <a class="btn" href="getting-started.html">Get started</a>
   {f'<a class="btn btn-ghost" href="{product["store"]}" rel="noopener">Asset Store {ICON_EXTERNAL}</a>' if product["store"] else ""}

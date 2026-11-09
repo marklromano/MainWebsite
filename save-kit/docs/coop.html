@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Co-op | Romano Assets</title>
+<meta name="description" content="Co-op: documentation for the All In One Save Kit for Unity.">
+<link rel="canonical" href="https://romanoassets.github.io/save-kit/docs/coop.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Co-op">
+<meta property="og:description" content="Co-op: documentation for the All In One Save Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://romanoassets.github.io/save-kit/docs/coop.html">
+<meta property="og:image" content="https://romanoassets.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/logo.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.png" alt="" width="34" height="34">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Save Kit docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="walkthroughs.html">Walkthroughs</a></div><div class="docs-group"><p class=label>Walkthroughs</p><a href="walkthrough-first-save.html">Your first save</a><a href="walkthrough-world-objects.html">World objects</a><a href="walkthrough-save-menu.html">The save menu</a><a href="walkthrough-own-menu.html">Your own save menu (uGUI)</a><a href="walkthrough-own-menu-ui-toolkit.html">Your own save menu (UI Toolkit)</a><a href="walkthrough-backups.html">Backups and recovery</a><a href="walkthrough-game-updates.html">Game updates</a></div><div class="docs-group"><p class=label>Learn</p><a href="guide.html">Guide</a><a href="game-updates.html">Game updates and migrations</a><a href="coop.html" aria-current="page">Co-op</a><a href="steam-cloud.html">Steam Cloud</a></div><div class="docs-group"><p class=label>Reference</p><a href="reference.html">Reference</a><a href="api.html">API reference</a><a href="limits-and-faq.html">Limits and FAQ</a><a href="troubleshooting.html">Troubleshooting</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="walkthroughs.html">Walkthroughs</a></div><div class="docs-group"><p class=label>Walkthroughs</p><a href="walkthrough-first-save.html">Your first save</a><a href="walkthrough-world-objects.html">World objects</a><a href="walkthrough-save-menu.html">The save menu</a><a href="walkthrough-own-menu.html">Your own save menu (uGUI)</a><a href="walkthrough-own-menu-ui-toolkit.html">Your own save menu (UI Toolkit)</a><a href="walkthrough-backups.html">Backups and recovery</a><a href="walkthrough-game-updates.html">Game updates</a></div><div class="docs-group"><p class=label>Learn</p><a href="guide.html">Guide</a><a href="game-updates.html">Game updates and migrations</a><a href="coop.html" aria-current="page">Co-op</a><a href="steam-cloud.html">Steam Cloud</a></div><div class="docs-group"><p class=label>Reference</p><a href="reference.html">Reference</a><a href="api.html">API reference</a><a href="limits-and-faq.html">Limits and FAQ</a><a href="troubleshooting.html">Troubleshooting</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Save Kit</a><span>/</span><span>Learn</span></nav>
+<h1 id="co-op">Co-op</h1>
+<p>This guide is for programmers. It explains how All In One Save Kit by Romano Assets saves a co-op game: who may save, how each player's own data is kept, how saved objects come back as networked objects, and what your network library still has to do. It ends with a walkthrough of the Netcode for GameObjects (NGO) sample.</p>
+<p>The kit has no networking code of its own. Its core works with any networking library through three small interfaces in the namespace <code>AllInOneSaveKit.Coop</code>. The 1.0 sample uses NGO 2.x in Unity 6, and NGO is the only library shown and tested.</p>
+<p>Settings in bold, such as <strong>World Load Mode</strong>, are fields on the settings asset <code>AllInOneSaveKitSettings</code>. Select it in the Project window to change them.</p>
+<h2 id="the-rules-in-short">The rules in short <a class="anchor" href="#the-rules-in-short" aria-label="Link to this section">#</a></h2>
+<ol>
+<li><strong>The host owns the world.</strong> Only the host, or a solo player, saves and loads world data. A client that tries gets <code>HostOnly</code> (<a href="troubleshooting.html#sk140">SK140</a>), and no file is touched.</li>
+<li><strong>The host loads before friends join.</strong> There is no loading during a session in 1.0.</li>
+<li><strong>The host can save at any time.</strong> Clients never see the save buttons.</li>
+<li><strong>Each player's own data lives in the host's save</strong>, under a stable player ID that your game supplies, such as a Steam ID.</li>
+<li><strong>The kit restores state on the host only.</strong> Your network library shows that state to the clients. Every value a client must see has to be network-synced by your game.</li>
+<li><strong>Every player keeps their own settings.</strong> The global file, which holds the Settings category, stays available to clients.</li>
+</ol>
+<h2 id="the-host-only-model">The host-only model <a class="anchor" href="#the-host-only-model" aria-label="Link to this section">#</a></h2>
+<h3 id="who-may-save-isaveauthority">Who may save: <code>ISaveAuthority</code> <a class="anchor" href="#who-may-save-isaveauthority" aria-label="Link to this section">#</a></h3>
+<pre><code class="language-csharp">public interface ISaveAuthority
+{
+    bool HasSaveAuthority { get; }
+}
+</code></pre>
+<p>Set it with <code>SaveKit.Authority</code>. Left at null, the default, the game counts as a solo game and saving is always allowed. A game with no co-op never sets it.</p>
+<p>When <code>HasSaveAuthority</code> returns false, the kit refuses these calls with <code>HostOnly</code> before it touches storage:</p>
+<ul>
+<li><code>SaveKit.Save</code>, <code>SaveAsync</code>, <code>Autosave</code>, <code>AutosaveAsync</code> and <code>Quicksave</code></li>
+<li><code>SaveKit.Load</code>, <code>LoadAsync</code>, <code>LoadNewestAutosave</code> and <code>LoadQuicksave</code>, including the versions that take a <code>SlotInfo</code></li>
+<li><code>SaveKit.Delete</code>, <code>RestoreBackup</code> and <code>RestoreBackupAsync</code></li>
+</ul>
+<p>The global file stays available, so a client can still call <code>SaveKit.SaveGlobal()</code>, <code>SaveGlobalAsync()</code>, <code>LoadGlobal()</code> and <code>LoadGlobalAsync()</code>. Reading slot information, such as <code>SaveKit.HasSave</code> and <code>SaveKit.GetSlotInfos</code>, also still works. It only reads that computer's own files.</p>
+<p>The kit's own autosaves follow the same rule. On a client, the timer and scene-change autosaves are skipped. When <strong>Autosave On Quit</strong> is on, a client's quit saves its global file instead of an autosave. If <code>HasSaveAuthority</code> throws an exception, the kit treats the answer as no and says why in the Console.</p>
+<p>The NGO sample's authority, <code>NgoSaveAuthority</code>, shows the usual rule:</p>
+<pre><code class="language-csharp">public bool HasSaveAuthority
+{
+    get
+    {
+        NetworkManager manager = _manager;
+        if (manager == null) return true;
+        if (!manager.IsListening) return true;
+        return manager.IsServer;
+    }
+}
+</code></pre>
+<ul>
+<li><strong>Not in a session</strong> (main menu, solo play): yes. This is what lets the host load a save before hosting.</li>
+<li><strong>The host</strong>, or a dedicated server: yes, because <code>IsServer</code> is true.</li>
+<li><strong>A connected client</strong>: no.</li>
+</ul>
+<p>Set it once the kit has started, because <code>SaveKit.Shutdown()</code> sets <code>Authority</code>, <code>Identity</code> and <code>SpawnHandler</code> back to null. With <strong>Initialise Automatically</strong> on, the default, the kit has already started when your first scene's <code>Awake</code> runs; with it off, set the hooks after your own <code>SaveKit.Initialise()</code> call:</p>
+<pre><code class="language-csharp">SaveKit.Authority = new NgoSaveAuthority(NetworkManager.Singleton);
+</code></pre>
+<h3 id="hiding-the-save-buttons">Hiding the save buttons <a class="anchor" href="#hiding-the-save-buttons" aria-label="Link to this section">#</a></h3>
+<p><code>SaveKit.CanSave</code> and <code>SaveKit.CanLoad</code> are true when the kit has started and there is no authority, or the authority says yes. Both are false on a connected client.</p>
+<p>The kit's save menu checks them for you. A client sees the slot cards without their Save, Load, Delete and Restore backup buttons, and a line saying "Only the host can save or load." Change that line in the menu's text asset (<code>HostOnlyLine</code>).</p>
+<p>For buttons of your own, check the same two properties. The sample's menu goes one step further. It shows Save only while hosting, and Load only before a session starts:</p>
+<pre><code class="language-csharp">// Hide what this player may not do. A connected client gets false from both.
+bool canSave = server &amp;&amp; SaveKit.CanSave;
+bool canLoad = !listening &amp;&amp; SaveKit.CanLoad;
+</code></pre>
+<h3 id="clients-keep-their-own-settings">Clients keep their own settings <a class="anchor" href="#clients-keep-their-own-settings" aria-label="Link to this section">#</a></h3>
+<p>Every copy of the game keeps its own global file, client or host. The kit loads it when it starts, and a load of the host's world never touches it. The sample remembers the name each player types this way:</p>
+<pre><code class="language-csharp">SaveKit.Data.Set(PlayerNameKey, playerName, SettingsCategory);
+SaveKit.SaveGlobalAsync();
+</code></pre>
+<h3 id="the-host-loads-before-friends-join">The host loads before friends join <a class="anchor" href="#the-host-loads-before-friends-join" aria-label="Link to this section">#</a></h3>
+<p>A co-op session runs like this:</p>
+<ol>
+<li>The host picks a save, or a new game, from the main menu.</li>
+<li>The game loads the world on the host before the session starts.</li>
+<li>The host starts the session and friends join. The network library shows them the world, and the game gives each player their own data back by player ID.</li>
+<li>The host can save at any time. Clients do not see the save buttons.</li>
+<li>When a friend leaves, their data stays in the host's save and comes back the next time they join.</li>
+</ol>
+<p>Loading a different save during a session is not part of 1.0. To switch saves, end the session, load, and host again.</p>
+<h3 id="saving-during-a-session">Saving during a session <a class="anchor" href="#saving-during-a-session" aria-label="Link to this section">#</a></h3>
+<p>The host can save whenever it likes, by hand or through the autosave timer. The one exception is while <code>SaveKit.LoadAsync</code> is still loading the scenes of its save (see <a href="troubleshooting.html#sk154">SK154</a>), and that does not happen mid-session because the host loads first.</p>
+<p><code>SaveEvents.Saving</code> is raised before a save gathers anything, for autosaves too. Handle it to write every connected player's latest values into <code>SaveKit.Players</code>, so they are part of that save. The sample's bridge does exactly that.</p>
+<h2 id="player-ids-and-per-player-data">Player IDs and per-player data <a class="anchor" href="#player-ids-and-per-player-data" aria-label="Link to this section">#</a></h2>
+<h3 id="stable-player-ids-iplayeridentity">Stable player IDs: <code>IPlayerIdentity</code> <a class="anchor" href="#stable-player-ids-iplayeridentity" aria-label="Link to this section">#</a></h3>
+<pre><code class="language-csharp">public interface IPlayerIdentity
+{
+    bool TryGetPlayerId(ulong connectionId, out string playerId);
+}
+</code></pre>
+<ul>
+<li><code>connectionId</code> is the network library's number for a connection. It changes every time a player connects, so it can never be the player ID. If your library uses <code>int</code> numbers, convert them to <code>ulong</code>.</li>
+<li><code>playerId</code> must stay the same for one player across sessions. A Steam ID is a good choice, as is a platform account ID or an ID from your own login.</li>
+<li>Return false while a player's ID is not known yet, for example before their Steam ID arrives. Do not throw. If <code>TryGetPlayerId</code> throws, the kit catches the exception, logs <a href="troubleshooting.html#sk141">SK141</a> and treats the player as unknown.</li>
+<li><code>SaveKit.Players.ForConnection(connectionId)</code> also logs SK141, once per connection, when no identity is set or the identity does not name the connection. That player then starts from defaults. <code>SaveKit.Players.TryGetPlayerId</code> is the quiet form, for code that asks again later: it logs only when the identity throws.</li>
+</ul>
+<p>Set it with <code>SaveKit.Identity</code>. The host usually learns a player's ID while approving the connection, so the identity is a simple map that your approval code fills in. A minimal version looks like this. The sample's <code>NgoPlayerIdentity</code> is the full version for NGO.</p>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using AllInOneSaveKit.Coop;
+
+public sealed class PlayerIdMap : IPlayerIdentity
+{
+    readonly Dictionary&lt;ulong, string&gt; ids = new Dictionary&lt;ulong, string&gt;();
+
+    public void Set(ulong connectionId, string playerId)
+    {
+        ids[connectionId] = playerId;
+    }
+
+    public void Remove(ulong connectionId)
+    {
+        ids.Remove(connectionId);
+    }
+
+    public bool TryGetPlayerId(ulong connectionId, out string playerId)
+    {
+        return ids.TryGetValue(connectionId, out playerId);
+    }
+}
+</code></pre>
+<p>A player ID that a client simply sends can be faked. The sample uses the name typed in its menu, which is fine for a demo. A real game should check the ID on the host, for example by verifying a Steam ID against a Steam auth ticket.</p>
+<h3 id="per-player-data-savekitplayers">Per-player data: <code>SaveKit.Players</code> <a class="anchor" href="#per-player-data-savekitplayers" aria-label="Link to this section">#</a></h3>
+<p><code>SaveKit.Players</code> holds each player's own data on the host: position, inventory, anything that belongs to one player rather than to the world. It is never null.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Member</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>For(playerId)</code></td>
+<td>The player's <code>SaveData</code>, created empty the first time you ask. Null for a null or empty ID. You can keep the object: a load refills it in place.</td>
+</tr>
+<tr>
+<td><code>ForConnection(connectionId)</code></td>
+<td>The same, found through <code>SaveKit.Identity</code>. Null when there is no identity or it does not name the player, with an SK141 warning in the Console once per connection.</td>
+</tr>
+<tr>
+<td><code>TryGetPlayerId(connectionId, out playerId)</code></td>
+<td>Asks <code>SaveKit.Identity</code> quietly, and catches its errors, which it reports as SK141.</td>
+</tr>
+<tr>
+<td><code>Has(playerId)</code></td>
+<td>Whether the player holds at least one value. True for a returning player, false for a new one.</td>
+</tr>
+<tr>
+<td><code>Remove(playerId)</code></td>
+<td>Forgets a player. The next save no longer writes them.</td>
+</tr>
+<tr>
+<td><code>GetPlayerIds(list)</code></td>
+<td>Every player with at least one value, in the order they were first seen.</td>
+</tr>
+<tr>
+<td><code>Clear()</code></td>
+<td>Forgets every player, which is what a new game wants.</td>
+</tr>
+</tbody>
+</table></div>
+<p><code>SaveData</code> is the same class as <code>SaveKit.Data</code>, so <code>Set</code> and <code>Get</code> work the same way, with a category:</p>
+<pre><code class="language-csharp">SaveData mine = SaveKit.Players.For(steamId);
+mine.Set(&quot;position&quot;, transform.position, &quot;Progress&quot;);
+Vector3 back = SaveKit.Players.For(steamId).Get(&quot;position&quot;, spawnPoint, &quot;Progress&quot;);
+</code></pre>
+<p><strong>How it is stored.</strong> Player data goes into the host's save file beside the categories, under <code>players.&lt;player id&gt;.&lt;category&gt;</code>:</p>
+<pre><code class="language-json">&quot;data&quot;: {
+  &quot;Progress&quot;: { ... },
+  &quot;World&quot;: { ... },
+  &quot;players&quot;: {
+    &quot;alice&quot;: {
+      &quot;Progress&quot;: { &quot;position&quot;: ..., &quot;rotation&quot;: ... },
+      &quot;Inventory&quot;: { &quot;inventory&quot;: ... }
+    }
+  }
+}
+</code></pre>
+<ul>
+<li>A save writes each player's values for every category it saves. A save of only some categories writes only those.</li>
+<li>Keep per-player values in Slot categories, such as Progress and Inventory. A value in a Global category would go into the host's global file, not into the slot.</li>
+<li>A slot load replaces the players' values for the categories it loads with what the file holds.</li>
+<li>The section is called <code>players</code>, so no category may have exactly that name. The kit refuses to start with a category called <code>players</code> (<a href="troubleshooting.html#sk153">SK153</a>).</li>
+</ul>
+<p><strong>Players the save does not know.</strong> <code>For(id)</code> gives an unknown player empty data, so every <code>Get</code> returns the fallback you pass. That is how new players start from defaults. Use <code>Has(id)</code> when you need to tell a returning player from a new one.</p>
+<p><strong>Players who leave.</strong> The kit keeps a player's data in <code>SaveKit.Players</code> until you call <code>Remove</code> or <code>Clear</code>, and every save writes it. Your game only has to write the player's latest values before their object goes. The sample does this when the player's object despawns on the host.</p>
+<p><strong>Applying the data is your game's job.</strong> The kit keeps, saves and loads each player's data. Putting it back onto a player's object when they join is game code, because only your game knows what a player object is. The sample's <code>CoopSaveBridge</code> shows one way to do it.</p>
+<h2 id="the-spawn-hook-ispawnhandler">The spawn hook: <code>ISpawnHandler</code> <a class="anchor" href="#the-spawn-hook-ispawnhandler" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">public interface ISpawnHandler
+{
+    GameObject Spawn(GameObject prefab, Vector3 position, Quaternion rotation, Transform parent);
+    void Despawn(GameObject instance);
+}
+</code></pre>
+<p>Set it with <code>SaveKit.SpawnHandler</code>. Left at null, the kit uses <code>Instantiate</code> and <code>Destroy</code>.</p>
+<p><strong>When the kit calls it:</strong></p>
+<ul>
+<li><strong><code>Spawn</code></strong>: during a load, once for each saved runtime object, before its state is restored. A runtime object is an instance of a prefab that was created during play and saved with its prefab ID. The prefab comes from the Prefab Registry. For an object at the root of the scene whose Saveable saves its position, <code>position</code> and <code>rotation</code> are the saved ones, so a network spawn starts in the right place. <code>parent</code> is null. The kit sets parents, and the exact transform, in its second pass. It also gives the new object its saved ID straight after <code>Spawn</code> returns, so the hook only has to make the object.</li>
+<li><strong><code>Despawn</code></strong>: when a load removes a runtime object that the save replaces, for example in <strong>World Load Mode</strong> Restore Into Current Scenes.</li>
+</ul>
+<p><strong>What the hook must return.</strong> Return the object you made, with the prefab's Saveable on its root. If <code>Spawn</code> returns null, or the object has no Saveable on its root, that object is skipped with <a href="troubleshooting.html#sk131">SK131</a>, and the rest of the load goes ahead.</p>
+<p><strong>Spawns during play do not need the hook.</strong> The hook is only for what a load re-creates. Objects your game spawns during play are tracked automatically when their prefab has a Saveable on its root and is in the Prefab Registry.</p>
+<h3 id="networked-spawning-on-the-host">Networked spawning on the host <a class="anchor" href="#networked-spawning-on-the-host" aria-label="Link to this section">#</a></h3>
+<p>On the host, the hook should spawn through your network library, so that every client gets the object. The sample's <code>NgoSpawnHandler</code> handles three cases:</p>
+<pre><code class="language-csharp">NetworkObject prefabObject = prefab.GetComponent&lt;NetworkObject&gt;();
+if (prefabObject == null) return Object.Instantiate(prefab, position, rotation, parent);
+
+NetworkManager manager = _manager;
+bool listening = manager != null &amp;&amp; manager.IsListening &amp;&amp; !manager.ShutdownInProgress;
+if (listening &amp;&amp; manager.IsServer) return SpawnOnServer(manager, prefab, prefabObject, position, rotation, parent);
+
+GameObject instance = Object.Instantiate(prefab, position, rotation, parent);
+
+// Before a session starts the object waits for the server; on a client it stays local.
+if (!listening) _pending.Add(instance);
+return instance;
+</code></pre>
+<ul>
+<li><strong>On a running host</strong>, it instantiates and spawns in one step with <code>prefabObject.InstantiateAndSpawn(...)</code>, with <code>destroyWithScene</code> set to true. A prefab missing from the NetworkManager's Network Prefabs list is refused with a Console warning, so every prefab the kit re-creates must be in both lists: the kit's Prefab Registry and NGO's Network Prefabs list.</li>
+<li><strong>Before the session starts</strong>, which is when the host loads, the object is instantiated and kept as pending. It is spawned on the network when the server starts (see <a href="#how-the-host-loads-before-hosting">How the host loads before hosting</a>).</li>
+<li><strong>On a connected client</strong>, the object is only made locally. Only the host spawns networked objects. In practice a client never loads, so this case is a safety net.</li>
+</ul>
+<p><code>Despawn</code> despawns a spawned object on the host with <code>NetworkObject.Despawn(true)</code>, and simply destroys one that was never spawned.</p>
+<h3 id="pools">Pools <a class="anchor" href="#pools" aria-label="Link to this section">#</a></h3>
+<p>A hook backed by a pool takes an object from the pool in <code>Spawn</code> and returns it to the pool in <code>Despawn</code>. The kit gives the object its saved ID after <code>Spawn</code> returns, so the pool does not have to. Keep calling <code>SaveKit.World.Despawned(obj)</code> when your pool takes an object back during play, and <code>SaveKit.World.Spawned(obj)</code> when it hands one out, so an object waiting in the pool is never saved (see the pooled objects row in <a href="limits-and-faq.html">LimitsAndFAQ.md</a>).</p>
+<h2 id="what-your-network-library-must-sync">What your network library must sync <a class="anchor" href="#what-your-network-library-must-sync" aria-label="Link to this section">#</a></h2>
+<p><strong>The kit restores state on the host only.</strong> It never sends anything over the network. Getting the restored state to the clients is the network library's job, so every value a client must see has to be network-synced by your game, for example with a <code>NetworkVariable</code>.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>What is saved</th>
+<th>What the host has after a load</th>
+<th>How clients see it in the sample</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Runtime-spawned networked objects</td>
+<td>Re-created through the spawn hook as networked objects</td>
+<td>NGO sends spawned NetworkObjects to every client</td>
+</tr>
+<tr>
+<td>Position and rotation</td>
+<td>Set on the host's transform</td>
+<td>A <code>NetworkTransform</code> with server authority</td>
+</tr>
+<tr>
+<td>Fields of your scripts (Field Picker or <code>ISaveable</code>)</td>
+<td>Set on the host's component</td>
+<td>A <code>NetworkVariable</code>, as <code>CoopItem.Kind</code> uses</td>
+</tr>
+<tr>
+<td>Each player's data</td>
+<td>Applied to the player's object by your code</td>
+<td><code>CoopPlayer</code>'s server-authoritative <code>NetworkTransform</code> and its <code>NetworkList&lt;int&gt;</code> inventory</td>
+</tr>
+<tr>
+<td>Values in <code>SaveKit.Data</code>, such as a shared day counter</td>
+<td>Back in <code>SaveKit.Data</code> on the host</td>
+<td>Not shown in the sample. Copy them into a <code>NetworkVariable</code> on the host.</td>
+</tr>
+<tr>
+<td>Scene objects that the load switches off or destroys</td>
+<td>Applied on the host</td>
+<td>Not shown in the sample. It depends on how your library synchronises objects placed in a scene, so test it.</td>
+</tr>
+</tbody>
+</table></div>
+<p>If a transform is synced with owner authority, the owner keeps overwriting what the host restored. The sample uses server authority for players and items.</p>
+<p><strong>The pattern.</strong> Keep a plain copy of each synced value for the save, and push it into the network variable when the object spawns on the host. <code>CoopItem</code> saves its kind itself as an <code>ISaveable</code>:</p>
+<pre><code class="language-csharp">public void CaptureState(SaveWriter w)
+{
+    w.Write(KindKey, Kind);
+}
+
+public void RestoreState(SaveReader r)
+{
+    Kind = r.Read(KindKey, kind);
+}
+</code></pre>
+<p>A load on the host can make an item before the session starts, and NGO only accepts writes to a spawned object. So the item pushes its saved kind into the <code>NetworkVariable</code> as it spawns:</p>
+<pre><code class="language-csharp">public override void OnNetworkSpawn()
+{
+    _kind.OnValueChanged += OnKindChanged;
+
+    if (IsServer)
+    {
+        if (_kind.Value != kind) _kind.Value = kind;
+    }
+    else
+    {
+        kind = _kind.Value;
+        SaveKit.World.Despawned(gameObject);
+    }
+    ShowKind(_kind.Value);
+}
+</code></pre>
+<p>The <code>else</code> branch matters too. On a client, NGO makes its own copies of the host's objects. <code>SaveKit.World.Despawned(gameObject)</code> keeps those copies out of the client's own world memory, because the world belongs to the host's save.</p>
+<h2 id="other-networking-libraries">Other networking libraries <a class="anchor" href="#other-networking-libraries" aria-label="Link to this section">#</a></h2>
+<p>The core is not tied to NGO. Any library that has a host, or a server, connects to the kit through the same three interfaces and two habits. Your library's own documentation tells you which of its calls answer each question below.</p>
+<ol>
+<li><strong><code>ISaveAuthority</code>: may this copy of the game save?</strong> Return true when it is not in a session, which is what lets the host load before hosting, and when it is the host or a dedicated server. Return false for a connected client. Set it with <code>SaveKit.Authority</code>.</li>
+<li><strong><code>IPlayerIdentity</code>: who is this connection?</strong> Map the library's number for a connection to the stable ID the player sent when joining, as <code>PlayerIdMap</code> above does. Fill the map in where your host accepts a joining player, and remove the entry when the player leaves. If your library numbers connections with something other than a <code>ulong</code>, convert it, or keep your own <code>ulong</code> per connection. Set it with <code>SaveKit.Identity</code>.</li>
+<li><strong><code>ISpawnHandler</code>: how does a saved object come back?</strong> On a running host, instantiate the prefab and spawn it through the library, so every client gets it. Before the session starts, instantiate it, keep it as pending, and spawn it once the server is running; keep such objects away from anything your library does to the objects it finds in a scene when a session starts. On a client, make the object locally only. Set it with <code>SaveKit.SpawnHandler</code>.</li>
+<li><strong>Per-player data.</strong> On <code>SaveEvents.Saving</code>, write each connected player's data into <code>SaveKit.Players</code>. When a player joins, read theirs back. When a player leaves, write theirs one last time, before their object is gone.</li>
+<li><strong>Sync.</strong> Every value clients must see goes through the library's own synced values, written on the host. Push values the kit restored into them as each object spawns on the network.</li>
+</ol>
+<p>The NGO sample is a worked example of all five, and the parts of it that do not depend on NGO's own calls carry over to any library.</p>
+<p>The host-only model needs one machine that owns the world: a host or a server. Setups where no single machine owns the world, such as modes where every client has authority over its own objects, do not fit it.</p>
+<p>1.0 is built and tested with NGO only. No other networking library is tested, and 1.0 has no samples for them.</p>
+<h2 id="the-ngo-sample">The NGO sample <a class="anchor" href="#the-ngo-sample" aria-label="Link to this section">#</a></h2>
+<p>The sample is a small host-and-join game. The host saves a world of spawned cubes, friends join and see it, and a friend who leaves and joins again gets their own position and inventory back. A short version of this walkthrough ships with it as <code>Samples/CoopNGO/README.md</code>.</p>
+<h3 id="what-you-need">What you need <a class="anchor" href="#what-you-need" aria-label="Link to this section">#</a></h3>
+<ul>
+<li><strong>Unity 6.</strong> The sample was tested in Unity 6000.6.</li>
+<li><strong>Netcode for GameObjects 2.x</strong>, from the Package Manager. It installs Unity Transport. The sample was tested with NGO 2.13.3; its assembly accepts any 2.x version.</li>
+<li><strong>TextMesh Pro's essential resources</strong>, for the menu's text. Import them with <strong>Window → TextMeshPro → Import TMP Essential Resources</strong> if the generator warns that they are missing.</li>
+<li>Either input system works: the Input System package or the old Input Manager.</li>
+<li>The sample makes its materials for the active render pipeline at runtime. It was checked in URP; HDRP gets automated tests only. The kit's core has no rendering code.</li>
+</ul>
+<p>The sample's scripts sit in their own assembly, <code>AllInOneSaveKit.Samples.NGO</code>, in <code>Samples/CoopNGO</code>. It compiles only when NGO 2.x is installed in Unity 6. The assembly uses <code>versionDefines</code> to define <code>AIOSK_NGO2</code> for <code>com.unity.netcode.gameobjects</code> versions from 2.0.0 up to, but not including, 3.0.0, plus <code>defineConstraints</code> on <code>AIOSK_NGO2</code> and <code>UNITY_6000_0_OR_NEWER</code>. In Unity 2022.3, with NGO 1.x, or without NGO, the sample does not compile, and nothing else in the kit uses it. Its editor code is in a second assembly, <code>AllInOneSaveKit.Samples.NGO.Editor</code>, with the same conditions.</p>
+<h3 id="building-the-sample">Building the sample <a class="anchor" href="#building-the-sample" aria-label="Link to this section">#</a></h3>
+<p>The sample ships as scripts only. A menu command builds its scene and prefabs, because the Asset Store limits packages nested inside packages.</p>
+<ol>
+<li>Install <strong>Netcode for GameObjects 2.x</strong> with the Package Manager.</li>
+<li>Choose <strong>Tools → All In One Save Kit → Samples → Build Co-op NGO Sample</strong>. The menu item appears once NGO 2.x is installed.</li>
+<li>Press <strong>Build</strong>. The scene that is open now is closed first, with the usual offer to save it.</li>
+<li>When asked, press <strong>Add</strong> to put the sample scene in the build's scene list. Two builds need it.</li>
+</ol>
+<p>The command builds everything in <code>Assets/AllInOneSaveKitSamples/CoopNGO/</code>, outside the kit's folder, so updating the kit never touches it:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>File</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CoopNGO.unity</code></td>
+<td>The scene: a NetworkManager with Unity Transport, a camera, a light, the ground, a player spawn point, the item spawner and the sample's menu. It also holds the kit's save menu when the menu prefab is in the project.</td>
+</tr>
+<tr>
+<td><code>Prefabs/CoopPlayer.prefab</code></td>
+<td>The player: <code>NetworkObject</code>, <code>NetworkTransform</code> (server authority), <code>CoopPlayer</code> and a capsule. No Saveable.</td>
+</tr>
+<tr>
+<td><code>Prefabs/CoopItem.prefab</code></td>
+<td>The item: <code>NetworkObject</code>, <code>NetworkTransform</code>, <code>CoopItem</code>, a Saveable with Position on, and a cube.</td>
+</tr>
+<tr>
+<td><code>CoopNetworkPrefabs.asset</code></td>
+<td>The Network Prefabs list the NetworkManager uses. It holds both prefabs.</td>
+</tr>
+<tr>
+<td><code>Data/CoopSampleSettings.asset</code></td>
+<td>The sample's own save settings: <strong>Save Folder Name</strong> <code>CoopNGOSample</code>, <strong>World Load Mode</strong> Restore Into Current Scenes, <strong>Autosave On Quit</strong> off.</td>
+</tr>
+<tr>
+<td><code>Data/CoopPrefabRegistry.asset</code></td>
+<td>The sample's Prefab Registry. It holds the item prefab.</td>
+</tr>
+<tr>
+<td><code>Data/CoopSceneRegistry.asset</code></td>
+<td>The sample's Scene Registry. It holds the sample scene.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The NetworkManager has connection approval on and scene management off, because both copies of the game start in the same scene.</p>
+<p>Running the command again rebuilds these files in place and keeps their GUIDs, so any changes you made to them are replaced. The sample saves into its own folder, <code>%USERPROFILE%\AppData\LocalLow\&lt;Company Name&gt;\&lt;Product Name&gt;\CoopNGOSample</code>, never into your game's saves. The sample's settings asset is not in a <code>Resources</code> folder, so the kit may start by itself with your project's own settings first; the sample's menu then stops it and starts it again with the sample's settings. Run the sample on its own rather than inside your game.</p>
+<p>For batch mode, the same build runs with <code>-executeMethod AllInOneSaveKit.Samples.NGO.Editor.CoopSampleGenerator.Generate</code>. It asks nothing, does not change the build's scene list, and fails the run when anything is wrong.</p>
+<h3 id="trying-it">Trying it <a class="anchor" href="#trying-it" aria-label="Link to this section">#</a></h3>
+<p><strong>With two builds:</strong></p>
+<ol>
+<li>Check that <code>CoopNGO.unity</code> is in the build's scene list (<strong>File → Build Profiles</strong>, Scene List).</li>
+<li>Build for Windows and start the build twice. One build plus Play in the Editor also works.</li>
+<li>In the first window, type a name and press <strong>Host new game</strong>. Windows may ask whether to let the game through the firewall. Allow it on private networks if a second computer is going to join.</li>
+<li>In the second window, type the host's address and a different name, then press <strong>Join</strong>. On the same computer the address is <code>127.0.0.1</code>. From another computer on your network, use the host computer's address. The port is 7777, and <code>address:port</code> also works. The sample connects directly by address, and playing over the internet would need port forwarding or a relay service, which the sample does not set up.</li>
+</ol>
+<p><strong>With Multiplayer Play Mode</strong>, if you have Unity's <code>com.unity.multiplayer.playmode</code> package: open <strong>Window → Multiplayer → Multiplayer Play Mode</strong>, switch on a second player, press Play, then host in one window and join in the other.</p>
+<p><strong>Controls:</strong> WASD or the arrow keys move. <strong>E</strong> picks up the nearest cube. Typing in a text field never moves the player.</p>
+<p><strong>What to check:</strong></p>
+<ol>
+<li>The host starts a new game. 12 cubes appear around the item spawner.</li>
+<li>A friend joins and sees the same cubes. Both of you pick some up.</li>
+<li>The host saves. The friend sees no Save or Load button.</li>
+<li>The host presses <strong>Leave</strong>, which ends the session for everyone. Changes since the last save are lost, so save first.</li>
+<li>The host presses <strong>Load (before hosting)</strong> and picks the save. The host button changes to <strong>Host loaded save</strong>. The host presses it.</li>
+<li>The cubes are back where they were. The friend joins with the same name and gets their position and inventory back.</li>
+<li>Someone joins with a new name. They start at the spawn point with nothing.</li>
+</ol>
+<p>A second player who tries to join with the name of a player already in the game is turned away, with the reason shown in their status line. Two builds on one PC share one global settings file, so both remember the same name: change it in the second window before joining.</p>
+<p>A player whose connection dropped without leaving properly, for example after a crash, stays in the host's game until Unity Transport notices that the connection is gone, which takes 30 seconds with its default timeout. Until then, joining again with the same name is turned away.</p>
+<h3 id="what-each-script-does">What each script does <a class="anchor" href="#what-each-script-does" aria-label="Link to this section">#</a></h3>
+<p>All of them are in <code>Samples/CoopNGO/Scripts</code>, in the namespace <code>AllInOneSaveKit.Samples.NGO</code>.</p>
+<p><strong><code>CoopSaveBridge</code></strong> connects the kit to a Netcode session. Two calls, once the kit has started, are all a host needs:</p>
+<pre><code class="language-csharp">CoopSaveBridge bridge = CoopSaveBridge.Install(NetworkManager.Singleton);
+bridge.StartHost();   // or bridge.StartServer(); a client calls NetworkManager.StartClient()
+</code></pre>
+<ul>
+<li><strong>Install it on every peer</strong>, host and clients alike. It turns connection approval on, and connection approval is part of Netcode's configuration check, so a client whose setting differs from the host's cannot connect. On a client, the bridge's authority also makes <code>SaveKit.CanSave</code> false.</li>
+<li>Sets <code>SaveKit.Authority</code>, <code>SaveKit.Identity</code> and <code>SaveKit.SpawnHandler</code> to an <code>NgoSaveAuthority</code>, an <code>NgoPlayerIdentity</code> and an <code>NgoSpawnHandler</code>.</li>
+<li>Turns connection approval on and sets its own <code>ConnectionApprovalCallback</code>, which records the player ID from each joining player's payload, turns away a second player with the ID of one who is still connected, and spawns each player where their saved data says.</li>
+<li><strong>Chains your own approval.</strong> If the NetworkManager already had a <code>ConnectionApprovalCallback</code> when the bridge was installed, the bridge keeps it and asks it first. When your callback turns a player away, or sets <code>Pending</code> to answer later, its answer stands. Otherwise the bridge adds its part: the player ID, and the spawn position and rotation when your callback did not set them. An exception in your callback turns the player away, with a Console warning.</li>
+<li>On <code>SaveEvents.Saving</code>, writes every connected player's position, rotation and inventory into <code>SaveKit.Players</code>. Position and rotation go in <code>PositionCategory</code> ("Progress"), and the inventory in <code>InventoryCategory</code> ("Inventory"). Both categories must exist in the settings, and the defaults do.</li>
+<li>Restores a player as their object spawns on the host, and captures a leaving player as their object despawns and again as they disconnect, so their latest data is kept whichever order Netcode reports the leave in.</li>
+<li>Spawns the objects that a load made before the session started, once the server is listening.</li>
+<li>Warns in the Console when a save loads while a session is running, which 1.0 does not support. Each player's own settings file may load at any time.</li>
+</ul>
+<p><strong>Starting a session.</strong> <code>bridge.StartHost()</code> and <code>bridge.StartServer()</code> prepare the session and then start the NetworkManager as a host or as a dedicated server; both return whether it started. Preparing forgets the last session's connections and keeps the objects a load made away from Netcode's start-of-session sweep (see <a href="#how-the-host-loads-before-hosting">How the host loads before hosting</a>). If you start the NetworkManager yourself, call <code>bridge.PrepareSession()</code> just before. A plain <code>NetworkManager.StartHost()</code> is covered anyway, through the host's own approval, but a plain <code>NetworkManager.StartServer()</code> is not: use <code>bridge.StartServer()</code> for a dedicated server.</p>
+<p>Its other public members: <code>Find(manager)</code>, <code>Uninstall()</code>, <code>IsInstalled</code>, <code>Manager</code>, <code>Authority</code>, <code>Identity</code>, <code>SpawnHandler</code>, <code>DefaultSpawnPosition</code>, <code>DefaultSpawnRotation</code>, <code>CapturePlayer(player)</code>, <code>CaptureConnectedPlayers()</code> and <code>RestorePlayer(player)</code>. Install the bridge once the kit has started, because stopping the kit removes every save event handler, and call <code>Uninstall()</code> before <code>SaveKit.Shutdown()</code>. Uninstalling puts back the co-op hooks, the approval callback and the approval setting that were there before, and throws away pending objects nobody spawned. <code>Install</code> returns null, with a Console warning, when it cannot install.</p>
+<p>This is how the bridge captures one player:</p>
+<pre><code class="language-csharp">SaveData data = SaveKit.Players.For(playerId);
+if (data == null) return false;
+
+Transform t = player.transform;
+data.Set(PositionKey, t.position, PositionCategory);
+data.Set(RotationKey, t.rotation, PositionCategory);
+data.Set(InventoryKey, player.CopyInventory(), InventoryCategory);
+</code></pre>
+<p>And this is how it looks a player up, falling back to the defaults for a player the save does not know:</p>
+<pre><code class="language-csharp">position = _defaultSpawnPosition;
+rotation = _defaultSpawnRotation;
+items = NoItems;
+if (string.IsNullOrEmpty(playerId) || !SaveKit.Players.Has(playerId)) return false;
+
+SaveData data = SaveKit.Players.For(playerId);
+position = data.Get(PositionKey, position, PositionCategory);
+rotation = data.Get(RotationKey, rotation, PositionCategory);
+items = data.Get(InventoryKey, NoItems, InventoryCategory) ?? NoItems;
+return true;
+</code></pre>
+<p><strong><code>NgoSaveAuthority</code></strong> is the <code>ISaveAuthority</code> for NGO, shown in full <a href="#who-may-save-isaveauthority">above</a>.</p>
+<p><strong><code>NgoPlayerIdentity</code></strong> is the <code>IPlayerIdentity</code> for NGO. It maps a Netcode client ID to the stable player ID, filled in by the bridge's approval. It names the host from the payload in the host's own <code>NetworkConfig.ConnectionData</code>. Its members are <code>TryGetPlayerId</code>, <code>TryGetClientId</code>, <code>Set</code>, <code>Remove</code>, <code>Clear</code> and <code>Count</code>.</p>
+<p><strong><code>NgoSpawnHandler</code></strong> is the <code>ISpawnHandler</code> for NGO, described <a href="#networked-spawning-on-the-host">above</a>. Besides <code>Spawn</code> and <code>Despawn</code>, it has <code>SpawnPending()</code>, <code>DiscardPending()</code> and <code>PendingCount</code>. <code>DiscardPending()</code> throws away the objects a load made that nobody is going to host, which a new game or joining someone else's game wants. On the host, it can only parent a networked object under another spawned NetworkObject, as Netcode requires. Otherwise the object stays at the scene root, with a warning. Netcode cannot spawn a switched-off object, so an item saved switched off is re-created switched off and stays a local object on the host; it is still saved. Switch it on and call <code>SpawnPending()</code> to put it on the network.</p>
+<p><strong><code>CoopPlayer</code></strong> is the player, a <code>NetworkBehaviour</code>. Its owner sends input to the host, and the host moves it. Its inventory is a <code>NetworkList&lt;int&gt;</code> of item kinds, written only on the host. On the host, <code>OnNetworkSpawn</code> asks the bridge to restore the player and <code>OnNetworkDespawn</code> asks it to capture them. <code>ApplyState(position, rotation, items)</code> and <code>CopyInventory()</code> are what the bridge uses, and <code>PickUpNearest()</code> picks up the closest cube within <code>PickUpRadius</code>. It is deliberately not a Saveable: its data is per player, so it goes through <code>SaveKit.Players</code>.</p>
+<p><strong><code>CoopItem</code></strong> is a cube, a <code>NetworkBehaviour</code> and an <code>ISaveable</code>. Its <code>Kind</code> lives in a <code>NetworkVariable&lt;int&gt;</code> and is copied to a plain field for the save, under the key <code>KindKey</code> ("kind"). On a client it keeps its copy out of the client's own world memory. <code>FindNearest</code>, <code>CountSpawned</code> and <code>InstanceCount</code> help the player and the spawner.</p>
+<p><strong><code>CoopItemSpawner</code></strong> scatters the starting cubes for a new game. When the server starts with no cubes in the scene, it spawns <code>StartCount</code> cubes (12 by default) around itself through <code>SaveKit.SpawnHandler</code>, so they are networked and saved as runtime spawns. When the host loaded a save first, the loaded cubes are already there, spawned or still pending in <code>NgoSpawnHandler</code>, and it adds nothing. Cubes a new game threw away with <code>DiscardPending()</code> do not count. <code>SpawnItem(position, kind)</code> spawns one cube.</p>
+<p><strong><code>CoopSampleMenu</code></strong> is the on-screen menu. It starts the kit with the sample's settings and sets <code>SaveKit.World.LoadMode</code> to <code>WorldLoadMode.RestoreIntoCurrentScenes</code>. It installs the bridge and offers Host, Join (address and name), Load (before hosting), Save (while hosting) and Leave, with on-screen instructions. Host goes through <code>bridge.StartHost()</code>. Save and Load open the kit's save menu when the scene has one, and otherwise use slot 1 directly. It hides Save and Load as described in <a href="#hiding-the-save-buttons">Hiding the save buttons</a>, and remembers the typed name in the global file. Join after a Load puts the loaded world away first, because a client plays in the host's world.</p>
+<p><strong><code>CoopConnectionPayload</code></strong> is the small JSON payload each player sends when joining, which holds their player ID. <code>Create(playerId)</code> makes the bytes for <code>NetworkConfig.ConnectionData</code>, and <code>TryRead(bytes, out playerId)</code> reads them back on the host. The payload comes from another computer, so reading it is careful:</p>
+<ul>
+<li>A payload longer than <code>MaximumPayloadBytes</code> (256 bytes), or one that is not a JSON object, names nobody, so that player starts from defaults and is not kept in the save. <code>Create</code> never makes a longer one.</li>
+<li><code>NormalisePlayerId(playerId)</code> cleans an ID the same way on both sides: it removes control characters, trims spaces, and cuts the ID to <code>MaximumPlayerIdLength</code> (64) characters without splitting a character, such as an emoji or an accented letter, in two.</li>
+</ul>
+<pre><code class="language-csharp">NetworkManager.Singleton.NetworkConfig.ConnectionData = CoopConnectionPayload.Create(steamId);
+NetworkManager.Singleton.StartClient();
+</code></pre>
+<p>Two small helpers complete the sample. <code>CoopInput</code> reads the keys from whichever input system the project uses, and <code>CoopMaterial</code> makes a plain coloured material for the active render pipeline.</p>
+<h3 id="how-the-host-loads-before-hosting">How the host loads before hosting <a class="anchor" href="#how-the-host-loads-before-hosting" aria-label="Link to this section">#</a></h3>
+<p>The host loads while it is not yet in a session, so the network cannot spawn anything at that moment. The sample handles this in five steps:</p>
+<ol>
+<li><strong>Start.</strong> The kit runs with <strong>World Load Mode</strong> set to Restore Into Current Scenes, so a load restores into the scene that is already open. The bridge is installed, and the NetworkManager is not listening.</li>
+<li><strong>Load.</strong> The host presses Load. <code>NgoSaveAuthority</code> says yes, because the manager is not listening. <code>SaveKit.LoadAsync</code> brings back <code>SaveKit.Players</code> and re-creates the saved cubes through <code>NgoSpawnHandler.Spawn</code>. With no server running, each cube is instantiated and kept as pending, and its saved kind goes into its plain field.</li>
+<li><strong>Host.</strong> The host presses Host, and the menu calls <code>bridge.StartHost()</code>. Before it starts the NetworkManager, the bridge prepares the session: it clears its player map and switches the pending cubes off. That keeps them away from Netcode's start-of-session sweep, which spawns the active NetworkObjects it finds. Older NGO 2.x versions may take such objects for objects placed in the scene, which clients cannot find. If the session cannot start, the cubes are switched back on.</li>
+<li><strong>Server started.</strong> <code>OnServerStarted</code> switches the cubes back on and spawns each one with <code>NetworkObject.Spawn(true)</code>. Each cube pushes its saved kind into its <code>NetworkVariable</code> as it spawns. The item spawner sees cubes in the scene and adds none.</li>
+<li><strong>Players.</strong> The host's own player spawns and gets its saved data back. Friends join, the bridge records their IDs and spawn positions, and NGO sends them the cubes.</li>
+</ol>
+<p>The moments in the bridge's code. Preparing the session:</p>
+<pre><code class="language-csharp">public void PrepareSession()
+{
+    _identity.Clear();
+    _restored.Clear();
+    _players.Clear();
+    _spawnHandler.HidePending();
+}
+</code></pre>
+<p>The host's own approval prepares the session too, so a game that calls <code>NetworkManager.StartHost()</code> itself is covered:</p>
+<pre><code class="language-csharp">// The host approves itself as it starts: a new session, also when the game called
+// NetworkManager.StartHost itself rather than through the bridge.
+if (isHost) PrepareSession();
+</code></pre>
+<p>And once the server is listening:</p>
+<pre><code class="language-csharp">void OnServerStarted()
+{
+    if (!_installed) return;
+    _spawnHandler.SpawnPending();
+}
+</code></pre>
+<p>A dedicated server has no host approval of its own, which is why it has to start through <code>bridge.StartServer()</code>, or call <code>bridge.PrepareSession()</code> first.</p>
+<h3 id="starting-a-new-game">Starting a new game <a class="anchor" href="#starting-a-new-game" aria-label="Link to this section">#</a></h3>
+<p>A co-op host starts a new game in the scene that is already open, so the old world has to go before hosting. The sample's <strong>Host new game</strong> does it with three calls:</p>
+<pre><code class="language-csharp">void StartNewGame()
+{
+    if (_bridge != null) _bridge.SpawnHandler.DiscardPending();
+    SaveKit.World.ClearAll();
+    SaveKit.Players.Clear();
+}
+</code></pre>
+<ul>
+<li><code>DiscardPending()</code> throws away any items a load made that are still waiting to be hosted.</li>
+<li><code>SaveKit.World.ClearAll()</code> forgets scene memory, destroyed lists and spawned objects, and <code>SaveKit.Players.Clear()</code> forgets every player's data.</li>
+<li>They leave <code>SaveKit.Data</code>, the playtime and the slot name alone. The sample keeps nothing else there.</li>
+</ul>
+<p>In your own game, <code>SaveKit.NewGame()</code> is the fuller choice and works for a new game in the open scene too. It does everything <code>ClearAll</code> and <code>Players.Clear</code> do, and also empties every Slot category in <code>SaveKit.Data</code>, so values such as a day counter start again, and resets the slot name, location, summary lines, playtime and autosave timer. It keeps Global categories. What <code>NewGame</code> cannot do is reset your scene's objects: they keep whatever state they have, and the next slot save or quicksave captures them as they are (the kit's own autosaves leave the open scene out until then). So put them back to their new-game state yourself; the sample, for example, starts every session with no cubes in the scene and lets its item spawner scatter new ones. Still call <code>DiscardPending()</code> for items a load made. Make a slot save or a quicksave before the host leaves that scene, or its changes since <code>NewGame</code> are not remembered when the game comes back to it (see <a href="guide.html#starting-a-new-game">Starting a new game</a> in the Manual).</p>
+<h3 id="adapting-it-to-your-game">Adapting it to your game <a class="anchor" href="#adapting-it-to-your-game" aria-label="Link to this section">#</a></h3>
+<ol>
+<li><strong>Copy what you need.</strong> Copy the scripts out of <code>Samples/CoopNGO/Scripts</code> into your own folder and namespace, because a kit update replaces the sample folder. <code>CoopSaveBridge</code>, <code>NgoSaveAuthority</code>, <code>NgoPlayerIdentity</code>, <code>NgoSpawnHandler</code> and <code>CoopConnectionPayload</code> are the reusable parts. <code>CoopPlayer</code>, <code>CoopItem</code> and the menu are examples.</li>
+<li><strong>Install after the kit starts, on every peer.</strong> Call <code>CoopSaveBridge.Install(NetworkManager.Singleton)</code> once the kit has started, which with <strong>Initialise Automatically</strong> on is already the case in your first scene's <code>Awake</code>, and before the host or client starts. Install it on the host and on every client. Call <code>Uninstall()</code> before <code>SaveKit.Shutdown()</code>.</li>
+<li><strong>Load into the open scene, before hosting.</strong> Set <strong>World Load Mode</strong> to Restore Into Current Scenes, in the settings asset or with <code>SaveKit.World.LoadMode</code>. Open the gameplay scene, wait for <code>SaveKit.LoadAsync</code> to finish, and only then call <code>bridge.StartHost()</code>, or <code>bridge.StartServer()</code> for a dedicated server. If you start the NetworkManager yourself, call <code>bridge.PrepareSession()</code> just before.</li>
+<li><strong>Send a stable ID.</strong> Set <code>NetworkConfig.ConnectionData = CoopConnectionPayload.Create(steamId)</code> before starting the host or the client, and verify the ID on the host. The payload is limited to 256 bytes and the ID to 64 characters.</li>
+<li><strong>Chain your approval checks.</strong> Set your own <code>ConnectionApprovalCallback</code>, with checks such as auth tickets or a full server, before you install the bridge. The bridge keeps it, asks it first, and lets its answer stand when it turns a player away or sets <code>Pending</code>. Do not set another callback while the bridge is installed, because that would replace the bridge's.</li>
+<li><strong>Save your player data.</strong> Change <code>CapturePlayer</code> and the lookup to write and read your own player values, in Slot categories. Keep the Saveable off your player prefab: players come back through <code>SaveKit.Players</code>, not as saved world objects.</li>
+<li><strong>Register every prefab twice.</strong> Every prefab the kit re-creates needs a Saveable on its root, an entry in the kit's Prefab Registry, and an entry in the NetworkManager's Network Prefabs list.</li>
+<li><strong>Sync what clients must see.</strong> Use <code>NetworkVariable</code>, <code>NetworkList</code> and server-authoritative <code>NetworkTransform</code>, and push restored values in <code>OnNetworkSpawn</code> on the host, as <code>CoopItem</code> does. On clients, call <code>SaveKit.World.Despawned(gameObject)</code> for networked copies of saved objects.</li>
+<li><strong>Gate your menu.</strong> Show Save and Load only when <code>SaveKit.CanSave</code> and <code>SaveKit.CanLoad</code> allow it, and offer Load only on the way to hosting, never before joining.</li>
+<li><strong>Start new games the right way.</strong> Call <code>SaveKit.NewGame()</code>, or <code>SaveKit.World.ClearAll()</code> and <code>SaveKit.Players.Clear()</code> as the sample does, plus <code>bridge.SpawnHandler.DiscardPending()</code>. For a new game in the open scene, also put the scene's objects back to their new-game state yourself (see <a href="#starting-a-new-game">Starting a new game</a>).</li>
+<li><strong>Capture scenes you unload yourself.</strong> If the host changes scenes during a session through NGO's scene manager, call <code>SaveKit.World.CaptureScene(scene)</code> on the host before a scene unloads, as with any scene loader of your own.</li>
+<li><strong>Test the whole loop with two builds.</strong> Save, quit, load, host, join, leave and rejoin, then join with an unknown ID. On a client, <code>SaveKit.Save(1)</code> should return <code>HostOnly</code>.</li>
+</ol>
+<h2 id="limits">Limits <a class="anchor" href="#limits" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>There is no loading during a session.</strong> The host loads before friends join.</li>
+<li><strong>Only Netcode for GameObjects 2.x is shown and tested</strong>, with NGO 2.13.3. Other libraries can use the three interfaces, but 1.0 has no samples for them.</li>
+<li><strong>A dropped connection lingers.</strong> A player whose connection dropped stays in the game until Unity Transport's disconnect timeout, 30 seconds by default. Rejoining under the same ID is turned away until then.</li>
+<li><strong>Switched-off items stay local.</strong> An item saved switched off is re-created switched off and stays a local object on the host, still saved, until it is switched on and <code>SpawnPending()</code> runs.</li>
+<li><strong>The kit never syncs anything itself.</strong> State is restored on the host, and your network library shows it to clients.</li>
+<li><strong>The sample's player IDs are typed names.</strong> Use an ID that cannot be faked in a real game.</li>
+<li><strong>Encryption is not anti-cheat.</strong> In co-op the host's save is the authority anyway (see <a href="limits-and-faq.html">LimitsAndFAQ.md</a>).</li>
+</ul>
+<h2 id="contact">Contact <a class="anchor" href="#contact" aria-label="Link to this section">#</a></h2>
+<p>Report a bug with <a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?template=bug_report.yml">the bug report form</a>, ask a question in <a href="https://github.com/marklromano/RomanoAssetSupport/discussions">Discussions</a>, email <strong>marklromano@outlook.com</strong> or visit <strong>https://marklromano.github.io/</strong>.</p>
+<div class="doc-pager"><a class="pager prev" href="game-updates.html"><span class="label">Previous</span>Game updates and migrations</a><a class="pager next" href="steam-cloud.html"><span class="label">Next</span>Steam Cloud</a></div>
+<p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+Co-op" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#the-rules-in-short">The rules in short</a></li><li class="toc-2"><a href="#the-host-only-model">The host-only model</a></li><li class="toc-3"><a href="#who-may-save-isaveauthority">Who may save: ISaveAuthority</a></li><li class="toc-3"><a href="#hiding-the-save-buttons">Hiding the save buttons</a></li><li class="toc-3"><a href="#clients-keep-their-own-settings">Clients keep their own settings</a></li><li class="toc-3"><a href="#the-host-loads-before-friends-join">The host loads before friends join</a></li><li class="toc-3"><a href="#saving-during-a-session">Saving during a session</a></li><li class="toc-2"><a href="#player-ids-and-per-player-data">Player IDs and per-player data</a></li><li class="toc-3"><a href="#stable-player-ids-iplayeridentity">Stable player IDs: IPlayerIdentity</a></li><li class="toc-3"><a href="#per-player-data-savekitplayers">Per-player data: SaveKit.Players</a></li><li class="toc-2"><a href="#the-spawn-hook-ispawnhandler">The spawn hook: ISpawnHandler</a></li><li class="toc-3"><a href="#networked-spawning-on-the-host">Networked spawning on the host</a></li><li class="toc-3"><a href="#pools">Pools</a></li><li class="toc-2"><a href="#what-your-network-library-must-sync">What your network library must sync</a></li><li class="toc-2"><a href="#other-networking-libraries">Other networking libraries</a></li><li class="toc-2"><a href="#the-ngo-sample">The NGO sample</a></li><li class="toc-3"><a href="#what-you-need">What you need</a></li><li class="toc-3"><a href="#building-the-sample">Building the sample</a></li><li class="toc-3"><a href="#trying-it">Trying it</a></li><li class="toc-3"><a href="#what-each-script-does">What each script does</a></li><li class="toc-3"><a href="#how-the-host-loads-before-hosting">How the host loads before hosting</a></li><li class="toc-3"><a href="#starting-a-new-game">Starting a new game</a></li><li class="toc-3"><a href="#adapting-it-to-your-game">Adapting it to your game</a></li><li class="toc-2"><a href="#limits">Limits</a></li><li class="toc-2"><a href="#contact">Contact</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/romanoassets/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/romanoassets" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

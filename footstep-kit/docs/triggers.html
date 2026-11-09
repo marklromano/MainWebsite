@@ -37,15 +37,15 @@
 <main id="main">
 <div class="wrap docs-shell">
 <aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">Footstep Kit docs</a><span class="pill">v0.1.0</span></div>
+  <div class="docs-product"><a href="index.html">Footstep Kit docs</a><span class="pill">v0.1.0</span><span class="pill pill-dev">Coming soon</span></div>
   <div class="docs-search" hidden>
     <label class="sr-only" for="docs-q">Search the documentation</label>
     <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
     <kbd class="docs-search-key" aria-hidden="true">/</kbd>
     <div class="docs-results" id="docs-results" role="listbox" hidden></div>
   </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="surfaces.html">Surfaces and the Surface Library</a><a href="characters.html">Surface Footsteps (your characters)</a><a href="triggers.html" aria-current="page">When steps happen</a><a href="zones.html">Footstep Zones</a><a href="make-it-yours.html">Make it yours: profiles and presets</a><a href="effects-and-footprints.html">Effects and footprints</a><a href="ai-hearing.html">AI hearing (stealth)</a><a href="2d.html">2D games</a><a href="why-no-footstep.html">Why No Footstep? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="surfaces.html">Surfaces and the Surface Library</a><a href="characters.html">Surface Footsteps (your characters)</a><a href="triggers.html" aria-current="page">When steps happen</a><a href="zones.html">Footstep Zones</a><a href="make-it-yours.html">Make it yours: profiles and presets</a><a href="effects-and-footprints.html">Effects and footprints</a><a href="ai-hearing.html">AI hearing (stealth)</a><a href="2d.html">2D games</a><a href="why-no-footstep.html">Why No Footstep? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="surfaces.html">Surfaces and the Surface Library</a><a href="characters.html">Surface Footsteps (your characters)</a><a href="your-game.html">Your controller and game</a><a href="triggers.html" aria-current="page">When steps happen</a><a href="zones.html">Footstep Zones</a><a href="make-it-yours.html">Make it yours: profiles and presets</a><a href="effects-and-footprints.html">Effects and footprints</a><a href="ai-hearing.html">AI hearing (stealth)</a><a href="2d.html">2D games</a><a href="why-no-footstep.html">Why No Footstep? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="surfaces.html">Surfaces and the Surface Library</a><a href="characters.html">Surface Footsteps (your characters)</a><a href="your-game.html">Your controller and game</a><a href="triggers.html" aria-current="page">When steps happen</a><a href="zones.html">Footstep Zones</a><a href="make-it-yours.html">Make it yours: profiles and presets</a><a href="effects-and-footprints.html">Effects and footprints</a><a href="ai-hearing.html">AI hearing (stealth)</a><a href="2d.html">2D games</a><a href="why-no-footstep.html">Why No Footstep? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
   </nav>
 </aside>
 <article class="prose" id="doc">
@@ -64,8 +64,9 @@ touching down after Min Air Time is a landing, louder for a faster fall.</p>
 animation packs already use), and <code>OnLand</code> for landings.</p>
 <p>Unity sends animation events to the Animator's own object. When Surface Footsteps sits on a parent (usual), add
 <strong>Footstep Animation Events</strong> to the Animator's object; the Setup Wizard and the debugger's fix button do it for you.
-In a blend tree every clip fires its events: only events from the clip with the most weight (50% or more) count, so
-you never hear double steps. Jumps and landings are still detected from movement.</p>
+In a blend tree or crossfade every clip fires its events. An event from a clip with half the weight or more plays at
+once; when no clip has that much, only the strongest event of that frame plays (down to <strong>Min Event Weight</strong>, 0.2), so
+steps are never doubled or lost. Jumps and landings are still detected from movement.</p>
 <h2 id="foot-bones">Foot Bones <a class="anchor" href="#foot-bones" aria-label="Link to this section">#</a></h2>
 <p>For animated characters without events: the kit watches each foot bone and plays a step when it comes down. It learns
 how high each foot lifts, so it works with any rig and scale. Set Left Foot and Right Foot (the wizard finds them on
@@ -76,7 +77,7 @@ ladders or anything with its own timing.</p>
 <h2 id="never-machine-gun-steps">Never machine-gun steps <a class="anchor" href="#never-machine-gun-steps" aria-label="Link to this section">#</a></h2>
 <p><strong>Min Step Interval</strong> (0.12 s in Realistic) is the shortest time between two steps, whatever triggers them. Skipped
 steps show "Too soon" in the debugger.</p>
-<div class="doc-pager"><a class="pager prev" href="characters.html"><span class="label">Previous</span>Surface Footsteps (your characters)</a><a class="pager next" href="zones.html"><span class="label">Next</span>Footstep Zones</a></div>
+<div class="doc-pager"><a class="pager prev" href="your-game.html"><span class="label">Previous</span>Your controller and game</a><a class="pager next" href="zones.html"><span class="label">Next</span>Footstep Zones</a></div>
 <p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+When+steps+happen" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
 </article>
 <nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#automatic-default">Automatic (default)</a></li><li class="toc-2"><a href="#animation-events">Animation Events</a></li><li class="toc-2"><a href="#foot-bones">Foot Bones</a></li><li class="toc-2"><a href="#manual">Manual</a></li><li class="toc-2"><a href="#never-machine-gun-steps">Never machine-gun steps</a></li></ul></nav>
@@ -93,11 +94,15 @@ steps show "Too soon" in the debugger.</p>
         <h4>Products</h4>
         <ul>
           <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
-          <li><a href="../../save-kit/index.html">Save Kit</a></li>
           <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
           <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
           <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
-          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
           <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
         </ul>
       </div>

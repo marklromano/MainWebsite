@@ -37,15 +37,15 @@
 <main id="main">
 <div class="wrap docs-shell">
 <aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">Footstep Kit docs</a><span class="pill">v0.1.0</span></div>
+  <div class="docs-product"><a href="index.html">Footstep Kit docs</a><span class="pill">v0.1.0</span><span class="pill pill-dev">Coming soon</span></div>
   <div class="docs-search" hidden>
     <label class="sr-only" for="docs-q">Search the documentation</label>
     <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
     <kbd class="docs-search-key" aria-hidden="true">/</kbd>
     <div class="docs-results" id="docs-results" role="listbox" hidden></div>
   </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="surfaces.html" aria-current="page">Surfaces and the Surface Library</a><a href="characters.html">Surface Footsteps (your characters)</a><a href="triggers.html">When steps happen</a><a href="zones.html">Footstep Zones</a><a href="make-it-yours.html">Make it yours: profiles and presets</a><a href="effects-and-footprints.html">Effects and footprints</a><a href="ai-hearing.html">AI hearing (stealth)</a><a href="2d.html">2D games</a><a href="why-no-footstep.html">Why No Footstep? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="surfaces.html" aria-current="page">Surfaces and the Surface Library</a><a href="characters.html">Surface Footsteps (your characters)</a><a href="triggers.html">When steps happen</a><a href="zones.html">Footstep Zones</a><a href="make-it-yours.html">Make it yours: profiles and presets</a><a href="effects-and-footprints.html">Effects and footprints</a><a href="ai-hearing.html">AI hearing (stealth)</a><a href="2d.html">2D games</a><a href="why-no-footstep.html">Why No Footstep? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="surfaces.html" aria-current="page">Surfaces and the Surface Library</a><a href="characters.html">Surface Footsteps (your characters)</a><a href="your-game.html">Your controller and game</a><a href="triggers.html">When steps happen</a><a href="zones.html">Footstep Zones</a><a href="make-it-yours.html">Make it yours: profiles and presets</a><a href="effects-and-footprints.html">Effects and footprints</a><a href="ai-hearing.html">AI hearing (stealth)</a><a href="2d.html">2D games</a><a href="why-no-footstep.html">Why No Footstep? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="surfaces.html" aria-current="page">Surfaces and the Surface Library</a><a href="characters.html">Surface Footsteps (your characters)</a><a href="your-game.html">Your controller and game</a><a href="triggers.html">When steps happen</a><a href="zones.html">Footstep Zones</a><a href="make-it-yours.html">Make it yours: profiles and presets</a><a href="effects-and-footprints.html">Effects and footprints</a><a href="ai-hearing.html">AI hearing (stealth)</a><a href="2d.html">2D games</a><a href="why-no-footstep.html">Why No Footstep? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
   </nav>
 </aside>
 <article class="prose" id="doc">
@@ -94,6 +94,24 @@ your own "Squeaky Floorboards". It holds:</p>
 </table></div>
 <p>Each <strong>sound set</strong> picks one clip at random, never the same one twice in a row, with a little random volume and pitch.
 The surface inspector has <strong>Walk</strong>, <strong>Run</strong> and <strong>Land</strong> buttons to listen without pressing Play.</p>
+<h2 id="your-own-sounds-in-one-click">Your own sounds in one click <a class="anchor" href="#your-own-sounds-in-one-click" aria-label="Link to this section">#</a></h2>
+<p>Select your footstep clips (or a whole folder of them) in the Project window and choose <strong>Assets &gt; All In One Surface
+Footstep Kit &gt; Make Surface From Selected Clips</strong>. It makes a new surface in <code>Assets/FootstepKitData/Surfaces</code>:</p>
+<ul>
+<li>Clips with <strong>run</strong>, <strong>sprint</strong> or <strong>jog</strong> in their name go to Run, <strong>crouch</strong> or <strong>sneak</strong> to Crouch, <strong>jump</strong> to Jump and
+  <strong>land</strong> to Land; everything else is a walk step.</li>
+<li>The surface is named after the word the clip names share ("Gravel_Step_01", "Gravel_Run_02" makes "Gravel"), and that
+  word becomes its keyword, so materials called "Gravel..." find it straight away.</li>
+<li>It's added to your own Surface Library if you have one. Your clips aren't moved or changed.</li>
+</ul>
+<p>You can also drag many clips at once onto any sound list in a surface's inspector.</p>
+<h2 id="sounds-included">Sounds included <a class="anchor" href="#sounds-included" aria-label="Link to this section">#</a></h2>
+<p>The sample library has 13 surfaces and more than 200 sounds, CC0 recordings plus a few of our own (see Third-Party
+Notices.txt): Wood,
+Stone, Grass, Gravel, Dirt, Mud, Sand, Leaves, Metal, Water, Carpet, Snow and Ice, with landing sounds for the soft
+surfaces, wood, metal and water. There are also gear sounds a character can add to every step (Leather, Cloth, Plate
+Armour, Armour Jingle) and a Robot Feet surface to force on a robot. Make your own copy (Setup Wizard) before changing
+them.</p>
 <h2 id="the-surface-library">The Surface Library <a class="anchor" href="#the-surface-library" aria-label="Link to this section">#</a></h2>
 <p>A <strong>Surface Library</strong> (Create &gt; All In One Surface Footstep Kit &gt; Surface Library) lists your surfaces and how to
 recognise them. Given what a foot touched, it checks in this order and stops at the first answer:</p>
@@ -124,7 +142,7 @@ lists in the library's inspector.</p>
 <div class="doc-pager"><a class="pager prev" href="samples.html"><span class="label">Previous</span>Demo scenes</a><a class="pager next" href="characters.html"><span class="label">Next</span>Surface Footsteps (your characters)</a></div>
 <p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+Surfaces+and+the+Surface+Library" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
 </article>
-<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#surfaces">Surfaces</a></li><li class="toc-2"><a href="#the-surface-library">The Surface Library</a></li><li class="toc-2"><a href="#tips">Tips</a></li></ul></nav>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#surfaces">Surfaces</a></li><li class="toc-2"><a href="#your-own-sounds-in-one-click">Your own sounds in one click</a></li><li class="toc-2"><a href="#sounds-included">Sounds included</a></li><li class="toc-2"><a href="#the-surface-library">The Surface Library</a></li><li class="toc-2"><a href="#tips">Tips</a></li></ul></nav>
 </div>
 </main>
 <footer class="site-footer">
@@ -138,11 +156,15 @@ lists in the library's inspector.</p>
         <h4>Products</h4>
         <ul>
           <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
-          <li><a href="../../save-kit/index.html">Save Kit</a></li>
           <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
           <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
           <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
-          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
           <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
         </ul>
       </div>

@@ -26,10 +26,10 @@
   --c-settings: #B48CFF;
   --c-tutorial: #4FC3F7;
   --c-runtime: #FF7A59;
-  --c-bugreport: #4FD1E8;
-  --c-footstep: #4FD1C5;
-  --c-hitfeedback: #FF7A45;
-  --c-waypoint: #2FD3E0;
+  --c-bugreport: #F472B6;
+  --c-footstep: #A3E635;
+  --c-hitfeedback: #FF4D4D;
+  --c-waypoint: #FACC15;
 
   /* Type: system faces only (no web fonts, nothing loaded from other companies) */
   --font: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
@@ -626,3 +626,7 @@ a.shot-frame:hover { border-color: var(--blue); }
 .card-links a { color: var(--muted); text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem; }
 .card-links a::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: 0.6; }
 .card-links a:hover { color: var(--text); text-decoration: underline; }
+
+/* Long unbreakable values (folder paths in <code>) wrap instead of widening the spec grid past a phone screen */
+.spec-grid > * { min-width: 0; }
+.spec-table td { overflow-wrap: anywhere; }

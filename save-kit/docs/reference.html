@@ -1,0 +1,2282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>All In One Save Kit: Reference | Romano Assets</title>
+<meta name="description" content="All In One Save Kit: Reference: documentation for the All In One Save Kit for Unity.">
+<link rel="canonical" href="https://romanoassets.github.io/save-kit/docs/reference.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="All In One Save Kit: Reference">
+<meta property="og:description" content="All In One Save Kit: Reference: documentation for the All In One Save Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://romanoassets.github.io/save-kit/docs/reference.html">
+<meta property="og:image" content="https://romanoassets.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/logo.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.png" alt="" width="34" height="34">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Save Kit docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="walkthroughs.html">Walkthroughs</a></div><div class="docs-group"><p class=label>Walkthroughs</p><a href="walkthrough-first-save.html">Your first save</a><a href="walkthrough-world-objects.html">World objects</a><a href="walkthrough-save-menu.html">The save menu</a><a href="walkthrough-own-menu.html">Your own save menu (uGUI)</a><a href="walkthrough-own-menu-ui-toolkit.html">Your own save menu (UI Toolkit)</a><a href="walkthrough-backups.html">Backups and recovery</a><a href="walkthrough-game-updates.html">Game updates</a></div><div class="docs-group"><p class=label>Learn</p><a href="guide.html">Guide</a><a href="game-updates.html">Game updates and migrations</a><a href="coop.html">Co-op</a><a href="steam-cloud.html">Steam Cloud</a></div><div class="docs-group"><p class=label>Reference</p><a href="reference.html" aria-current="page">Reference</a><a href="api.html">API reference</a><a href="limits-and-faq.html">Limits and FAQ</a><a href="troubleshooting.html">Troubleshooting</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="walkthroughs.html">Walkthroughs</a></div><div class="docs-group"><p class=label>Walkthroughs</p><a href="walkthrough-first-save.html">Your first save</a><a href="walkthrough-world-objects.html">World objects</a><a href="walkthrough-save-menu.html">The save menu</a><a href="walkthrough-own-menu.html">Your own save menu (uGUI)</a><a href="walkthrough-own-menu-ui-toolkit.html">Your own save menu (UI Toolkit)</a><a href="walkthrough-backups.html">Backups and recovery</a><a href="walkthrough-game-updates.html">Game updates</a></div><div class="docs-group"><p class=label>Learn</p><a href="guide.html">Guide</a><a href="game-updates.html">Game updates and migrations</a><a href="coop.html">Co-op</a><a href="steam-cloud.html">Steam Cloud</a></div><div class="docs-group"><p class=label>Reference</p><a href="reference.html" aria-current="page">Reference</a><a href="api.html">API reference</a><a href="limits-and-faq.html">Limits and FAQ</a><a href="troubleshooting.html">Troubleshooting</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Save Kit</a><span>/</span><span>Reference</span></nav>
+<h1 id="all-in-one-save-kit-reference">All In One Save Kit: Reference</h1>
+<p>Version 1.0 · Romano Assets</p>
+<p>This Reference explains how each part of All In One Save Kit works: the save tree and files, what can be saved, world persistence in depth, reliability and recovery, file options, the save menu's options, the editor tools, performance and logging. For step-by-step tasks, see the <a href="guide.html">Guide</a>; for the C# API, the <a href="api.html">API Reference</a>.</p>
+<p>Settings in bold, such as <strong>Save Version</strong>, are fields on the settings asset <code>AllInOneSaveKitSettings</code>. To change one, select the asset in the Project window; most are on its <strong>Basics</strong> tab, the rest under <strong>Advanced</strong>.</p>
+<h2 id="contents">Contents <a class="anchor" href="#contents" aria-label="Link to this section">#</a></h2>
+<ol>
+<li><a href="#core-concepts">Core concepts</a>
+   - <a href="#the-save-tree">The save tree</a>
+   - <a href="#files-slots-the-global-file-autosaves-and-the-quicksave">Files: slots, the global file, autosaves and the quicksave</a>
+   - <a href="#file-names-and-the-save-folder">File names and the save folder</a>
+   - <a href="#profile-folders">Profile folders: several players on one PC</a>
+   - <a href="#categories">Categories</a>
+   - <a href="#save-versions">Save versions</a>
+   - <a href="#the-settings-asset">The settings asset</a></li>
+<li><a href="guide.html#saving-plain-values">Saving plain values</a>
+   - <a href="#what-can-be-saved">What can be saved</a>
+   - <a href="#dictionaries">Dictionaries</a></li>
+<li><a href="guide.html#saving-and-loading">Saving and loading</a>
+   - <a href="#threads-and-the-file-queue">Threads and the file queue</a>
+   - <a href="#no-code-components">Save Actions, Save Events and Save Point</a></li>
+<li><a href="guide.html#slots-and-slot-info">Slots and slot info</a>
+   - <a href="#what-a-slot-records">What a slot records</a></li>
+<li><a href="guide.html#world-persistence">World persistence</a>
+   - <a href="#parents">Parents</a>
+   - <a href="#load-modes">Load modes</a>
+   - <a href="#physics">Physics</a>
+   - <a href="#component-savers">Component savers</a>
+   - <a href="#dontdestroyonload-objects">DontDestroyOnLoad objects</a>
+   - <a href="#world-data-in-the-file">World data in the file</a>
+   - <a href="#the-registries">The registries</a></li>
+<li><a href="#reliability-and-recovery">Reliability and recovery</a>
+   - <a href="#crash-safe-writes">Crash-safe writes</a>
+   - <a href="#checksums">Checksums</a>
+   - <a href="#rotating-backups">Rotating backups</a>
+   - <a href="#automatic-fallback">Automatic fallback</a>
+   - <a href="#damaged-files-are-kept">Damaged files are kept</a>
+   - <a href="#disk-full-and-access-denied">Disk full and access denied</a>
+   - <a href="#what-the-player-sees">What the player sees</a></li>
+<li><a href="#file-options">File options</a>
+   - <a href="#readable-json-and-pretty-printing">Readable JSON and pretty printing</a>
+   - <a href="#compression">Compression</a>
+   - <a href="#encryption">Encryption</a>
+   - <a href="#how-the-options-combine">How the options combine</a>
+   - <a href="#changing-options-in-an-update">Changing options in an update</a>
+   - <a href="#edited-saves-the-checksum-policy">Edited saves: the checksum policy</a>
+   - <a href="#the-global-files-own-options">The global file's own options</a></li>
+<li><a href="guide.html#the-save-and-load-menu">The save and load menu</a>
+   - <a href="#modes-and-cards">Modes and cards</a>
+   - <a href="#actions-and-confirmations">Actions and confirmations</a>
+   - <a href="#menu-settings">Menu settings</a>
+   - <a href="#controls">Controls</a>
+   - <a href="#game-menu">The Game Menu</a>
+   - <a href="#saving-indicator">The saving indicator</a></li>
+<li><a href="#editor-tools">Editor tools</a>
+   - <a href="#the-start-window">The Start window</a>
+   - <a href="#the-start-window">The Start window</a>
+   - <a href="#the-start-window">The Start window</a>
+   - <a href="#setup-wizard">Setup Wizard</a>
+   - <a href="#the-settings-inspector">The settings asset's Inspector</a>
+   - <a href="#the-play-mode-toast">The Play Mode toast</a>
+   - <a href="#the-settings-inspector">The settings asset's Inspector</a>
+   - <a href="#the-play-mode-toast">The Play Mode toast</a>
+   - <a href="#the-settings-inspector">The settings asset's Inspector</a>
+   - <a href="#the-play-mode-toast">The Play Mode toast</a>
+   - <a href="#save-inspector">Save Inspector</a>
+   - <a href="#diagnostics">Diagnostics</a>
+   - <a href="#the-saveable-inspector">The Saveable inspector</a>
+   - <a href="#other-menu-commands">Other menu commands</a></li>
+<li><a href="#performance">Performance</a>
+   - <a href="#background-work">Background work</a>
+   - <a href="#profiler-markers">Profiler markers</a>
+   - <a href="#where-the-time-goes">Where the time goes</a>
+   - <a href="#compact-files-for-release">Compact files for release</a>
+   - <a href="#measured-benchmarks">Measured benchmarks</a></li>
+<li><a href="#logging-and-reports">Logging and reports</a>
+   - <a href="#log-levels">Log levels</a>
+   - <a href="#the-one-line-report">The one-line report</a>
+   - <a href="#the-report">The report</a></li>
+</ol>
+<p><a id="core-concepts"></a></p>
+<h2 id="core-concepts">Core concepts <a class="anchor" href="#core-concepts" aria-label="Link to this section">#</a></h2>
+<p><a id="the-save-tree"></a></p>
+<h3 id="the-save-tree">The save tree <a class="anchor" href="#the-save-tree" aria-label="Link to this section">#</a></h3>
+<p>Everything the kit saves goes into one structure, the save tree. A save file is a small envelope around it:</p>
+<ul>
+<li>a <strong>header</strong>: the save format, your game's save version, the game version, the kit version, the time of the save in UTC, a checksum and how the file is packed;</li>
+<li>the <strong>slot info</strong> the menu shows: name, playtime, location, game version and summary lines;</li>
+<li>the <strong>data</strong>: one section per category, plus a <code>players</code> section in co-op games.</li>
+</ul>
+<p>In memory, the data part is <code>SaveKit.Data</code>. Your plain values go there, and the Saveable objects in your scenes write their state there when a save gathers it. A save copies the data into the file; a load replaces it. The menu, the Save Inspector, Diagnostics and recovery all read this same structure.</p>
+<p><a id="files-slots-the-global-file-autosaves-and-the-quicksave"></a></p>
+<h3 id="files-slots-the-global-file-autosaves-and-the-quicksave">Files: slots, the global file, autosaves and the quicksave <a class="anchor" href="#files-slots-the-global-file-autosaves-and-the-quicksave" aria-label="Link to this section">#</a></h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>File</th>
+<th>Default name</th>
+<th>What it holds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manual slots</td>
+<td><code>slot_01.save</code> to <code>slot_10.save</code></td>
+<td>One playthrough each. 10 slots by default, adjustable from 1 to 99.</td>
+</tr>
+<tr>
+<td>The global file</td>
+<td><code>global.save</code></td>
+<td>The Global categories, such as Settings. One file for the whole game.</td>
+</tr>
+<tr>
+<td>Autosaves</td>
+<td><code>autosave_1.save</code> to <code>autosave_3.save</code></td>
+<td>Each autosave overwrites the oldest of these files, so an autosave never replaces the newest one. 3 by default, adjustable from 1 to 10.</td>
+</tr>
+<tr>
+<td>The quicksave</td>
+<td><code>quicksave.save</code></td>
+<td>One extra slot for a quick-save key. Off by default.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Slot files, autosaves and the quicksave hold the Slot categories. The global file holds the Global categories. Loading a slot never touches the global file, so a player's settings never go back to an older state.</p>
+<p><a id="file-names-and-the-save-folder"></a></p>
+<h3 id="file-names-and-the-save-folder">File names and the save folder <a class="anchor" href="#file-names-and-the-save-folder" aria-label="Link to this section">#</a></h3>
+<p>Saves are kept in a folder inside <code>Application.persistentDataPath</code>. On Windows that is:</p>
+<pre><code class="language-text">%USERPROFILE%\AppData\LocalLow\&lt;Company Name&gt;\&lt;Product Name&gt;\Saves
+</code></pre>
+<ul>
+<li>Company Name and Product Name come from <strong>Project Settings → Player</strong>. The Editor and a Windows build use the same folder.</li>
+<li><code>Saves</code> is <strong>Save Folder Name</strong>. If <strong>Profile Folder</strong> is set, saves go into that folder inside it (see <a href="#profile-folders">Profile folders</a>).</li>
+<li>Once the kit has started, <code>SaveKit.Storage.DescribeLocation()</code> returns the folder. The Save Inspector's <strong>Copy folder path</strong> button shows it in Explorer.</li>
+</ul>
+<p>You can change the names in the settings asset:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Slot File Name Format</strong></td>
+<td><code>slot_{0:00}</code></td>
+<td><code>{0}</code> is the slot number; <code>{0:00}</code> gives two digits. A pattern without <code>{0}</code> stops the kit starting with <code>SettingsInvalid</code> (<a href="troubleshooting.html#sk153">SK153</a>).</td>
+</tr>
+<tr>
+<td><strong>Autosave File Name Format</strong></td>
+<td><code>autosave_{0}</code></td>
+<td><code>{0}</code> is the autosave number.</td>
+</tr>
+<tr>
+<td><strong>Global File Name Base</strong></td>
+<td><code>global</code></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Quicksave File Name Base</strong></td>
+<td><code>quicksave</code></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>File Options → File Extension</strong></td>
+<td><code>.save</code></td>
+<td>Used by the slots, the autosaves and the quicksave, and by the global file unless it has its own extension (see <a href="#the-global-files-own-options">The global file's own options</a>).</td>
+</tr>
+</tbody>
+</table></div>
+<p>Beside each save you may find these files. Only the real saves end in <code>.save</code>, which is what keeps a Steam Cloud pattern of <code>*.save</code> clean:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>File</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>slot_01.save.tmp</code></td>
+<td>A save that was being written when the game stopped</td>
+</tr>
+<tr>
+<td><code>slot_01.save.bak1</code>, <code>.bak2</code> …</td>
+<td>Rotating backups, newest first. A <code>.bak0</code> working copy exists for a moment during each save.</td>
+</tr>
+<tr>
+<td><code>slot_01.save.corrupt-&lt;time&gt;</code></td>
+<td>A damaged file, moved aside and kept for support</td>
+</tr>
+<tr>
+<td><code>slot_01.save.thumb.png</code></td>
+<td>The slot's thumbnail</td>
+</tr>
+<tr>
+<td><code>slots.index</code></td>
+<td>A cache of slot info that makes the menu fast. The kit checks it against each file before using it.</td>
+</tr>
+</tbody>
+</table></div>
+<p><a id="profile-folders"></a></p>
+<h3 id="profile-folders-several-players-on-one-pc">Profile folders: several players on one PC <a class="anchor" href="#profile-folders-several-players-on-one-pc" aria-label="Link to this section">#</a></h3>
+<p><strong>Profile Folder</strong> puts the saves into a folder inside the save folder, so that two people who share a PC each keep their own saves.</p>
+<ul>
+<li><strong>A fixed name</strong>, such as <code>Player1</code>, is used exactly as written.</li>
+<li><strong><code>{profile}</code></strong> is replaced, when the kit starts, by <code>SaveKit.ProfileId</code>, which your game sets at runtime, for example to the player's Steam ID. A <strong>Profile Folder</strong> of <code>{profile}</code> puts the saves of the Steam user 76561198000000000 into <code>Saves/76561198000000000</code>. The placeholder can also sit inside a longer name, such as <code>Profile_{profile}</code>.</li>
+</ul>
+<p>The kit never works out the id itself: it only knows what your game gives it. So with <code>{profile}</code>, the kit has to wait for your game:</p>
+<ol>
+<li>In the settings asset, set <strong>Profile Folder</strong> to <code>{profile}</code> and switch <strong>Initialise Automatically</strong> off.</li>
+<li>When your game knows who is playing, set the id, then start the kit:</li>
+</ol>
+<pre><code class="language-csharp">SaveKit.ProfileId = playerId;               // for example the player's Steam ID, as a plain number
+SaveResult started = SaveKit.Initialise();
+if (!started.Success) Debug.LogError(started.ToString());
+</code></pre>
+<ul>
+<li><strong>No id, no start.</strong> With <code>{profile}</code> in <strong>Profile Folder</strong> and an empty <code>SaveKit.ProfileId</code>, the kit refuses to start with <code>SettingsInvalid</code> (<a href="troubleshooting.html#sk153">SK153</a>) rather than mix two players' saves. With <strong>Initialise Automatically</strong> still on, that shows in the Console as "The kit could not start by itself". When there is no player id, for example in the Editor without Steam running, set a fixed one such as <code>local</code>.</li>
+<li><strong>What an id may hold.</strong> Letters, digits, <code>-</code> and <code>_</code> are always fine. An id with a character that a folder name cannot hold, such as <code>/</code>, <code>\</code>, <code>:</code> or <code>*</code>, with <code>..</code>, or with spaces at either end, is refused with SK153.</li>
+<li><strong>When the id is read.</strong> The kit reads <code>SaveKit.ProfileId</code> only when it starts, so changing it later does nothing until the next start. To switch players, call <code>SaveKit.Shutdown()</code>, set the new id and call <code>SaveKit.Initialise()</code>; <code>Shutdown</code> also removes your event handlers and co-op hooks, so set them again afterwards. <code>Shutdown</code> keeps the id; a new Play session forgets it.</li>
+<li><strong>Keeping automatic start on.</strong> Unity runs a static method marked <code>[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]</code> before the kit starts by itself, so a game that already knows the player at that moment can set <code>SaveKit.ProfileId</code> there instead. <code>SubsystemRegistration</code> is too early, because the kit clears the id at that moment, and <code>BeforeSceneLoad</code> races the kit's own start.</li>
+<li><strong>In the Save Inspector</strong>, outside Play Mode, there is usually no id, so the Inspector lists the save folder itself, with each player's folder inside it. Use <strong>Choose folder...</strong> to look into one.</li>
+<li><strong>Decide before release.</strong> Adding a profile folder in an update moves the saves to a new folder, so existing saves seem to disappear (<a href="troubleshooting.html#sk100">SK100</a>).</li>
+</ul>
+<p>The <a href="guide.html#steam-cloud">Steam Cloud</a> guide uses <code>{profile}</code> with the player's Steam ID.</p>
+<p><a id="categories"></a></p>
+<h3 id="categories">Categories <a class="anchor" href="#categories" aria-label="Link to this section">#</a></h3>
+<p>Every saved value belongs to one category. A category decides two things: which file the value goes into, and which saves include it.</p>
+<ul>
+<li><strong>Slot</strong> categories are stored inside each save slot. Progress, inventory, quests and world state belong here.</li>
+<li><strong>Global</strong> categories are stored in the one global file. Player settings belong here.</li>
+</ul>
+<p>A new settings asset starts with five categories:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Scope</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Settings</td>
+<td>Global</td>
+<td>Player settings</td>
+</tr>
+<tr>
+<td>Progress</td>
+<td>Slot</td>
+<td>The <strong>Default Category</strong>: values saved without a category go here</td>
+</tr>
+<tr>
+<td>Inventory</td>
+<td>Slot</td>
+<td></td>
+</tr>
+<tr>
+<td>Quests</td>
+<td>Slot</td>
+<td></td>
+</tr>
+<tr>
+<td>World</td>
+<td>Slot</td>
+<td>The <strong>World Category</strong>: Saveable objects are saved here unless they name another category</td>
+</tr>
+</tbody>
+</table></div>
+<p>You can rename them, add your own and change their scope on the settings asset's <strong>Advanced</strong> tab, under <strong>Categories</strong> (<strong>In each slot</strong> or <strong>One shared file</strong>), then <strong>Apply the categories</strong>. The default category and the world category must exist, or the kit refuses to start.</p>
+<ul>
+<li><strong>Renaming a category</strong> in the settings does not rename it inside save files that already exist. Old saves keep the old name until a migration step renames it (see <a href="game-updates.html">GameUpdates.md</a>).</li>
+<li><strong>A name the settings do not define</strong> is reported once in the Console as <code>CategoryUnknown</code> (<a href="troubleshooting.html#sk150">SK150</a>), and its values are never saved. Names are case-sensitive.</li>
+<li><strong>Partial saves.</strong> A save or load can include all categories or only some, for example a checkpoint that saves only Progress and World. See <a href="guide.html#partial-saves-and-loads">Partial saves and loads</a>.</li>
+<li><strong>Reserved names.</strong> No category may be called <code>players</code>: every save keeps each co-op player's own data under that name, beside the categories, so the kit refuses to start with <code>SettingsInvalid</code> (<a href="troubleshooting.html#sk153">SK153</a>) when one is. Inside a category that holds Saveable objects, the kit uses the keys <code>scenes</code>, <code>persistent</code>, <code>loadedScenes</code> and <code>activeScene</code> itself, so do not store plain values under those keys in such a category.</li>
+</ul>
+<p><a id="save-versions"></a></p>
+<h3 id="save-versions">Save versions <a class="anchor" href="#save-versions" aria-label="Link to this section">#</a></h3>
+<p>Every file records the save version it was written with. <strong>Save Version</strong> is a whole number in the settings asset, 1 by default. Raise it when your saved data changes in a way old saves need help with, and write a small migration step that upgrades version N to N + 1. Migration steps run in order when an old file loads. Saves from a newer version of your game are refused with <code>NewerVersion</code> (<a href="troubleshooting.html#sk120">SK120</a>) and left untouched.</p>
+<p><a href="game-updates.html">GameUpdates.md</a> explains when to raise the version, how to write steps, the tree editing helpers, and how to test with old save files.</p>
+<p><a id="the-settings-asset"></a></p>
+<h3 id="the-settings-asset">The settings asset <a class="anchor" href="#the-settings-asset" aria-label="Link to this section">#</a></h3>
+<p>Every setting, with its default. Select the asset to edit them: its Inspector has a <strong>Basics</strong> tab for what most games touch and an <strong>Advanced</strong> tab whose sections start collapsed. The Inspector uses plainer labels than the field names below, which are the names used in code; the <strong>In the Inspector</strong> column gives both. The Setup Wizard edits the Basics.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Setting</th>
+<th>Default</th>
+<th>In the Inspector</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start-up</td>
+<td><strong>Initialise Automatically</strong></td>
+<td>on</td>
+<td>Basics: <strong>Start the kit by itself</strong></td>
+<td>Starts the kit by itself before the first scene loads. Off: call <code>SaveKit.Initialise()</code> yourself. See <a href="guide.html#starting-the-kit-in-your-game">Starting the kit</a>.</td>
+</tr>
+<tr>
+<td>Files</td>
+<td><strong>Save Folder Name</strong></td>
+<td><code>Saves</code></td>
+<td>Basics: <strong>Save folder</strong></td>
+<td>Folder inside the persistent data path</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Profile Folder</strong></td>
+<td>empty</td>
+<td>Advanced, File names: <strong>Profile folder</strong></td>
+<td>Folder inside the save folder, to keep players apart on one PC. <code>{profile}</code> in it is replaced by <code>SaveKit.ProfileId</code>; anything else is used exactly as written. See <a href="#profile-folders">Profile folders</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Slot File Name Format</strong></td>
+<td><code>slot_{0:00}</code></td>
+<td>Basics: <strong>Slot file names</strong></td>
+<td>See <a href="#file-names-and-the-save-folder">File names</a></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Global File Name Base</strong></td>
+<td><code>global</code></td>
+<td>Advanced, File names: <strong>Shared file name</strong></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Autosave File Name Format</strong></td>
+<td><code>autosave_{0}</code></td>
+<td>Advanced, File names: <strong>Autosave file names</strong></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Quicksave File Name Base</strong></td>
+<td><code>quicksave</code></td>
+<td>Advanced, File names: <strong>Quicksave file name</strong></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>File Options</strong></td>
+<td></td>
+<td>Basics: <strong>File extension</strong>; the rest under Advanced, <strong>Packing, encryption and backups</strong></td>
+<td>How the slots, the autosaves and the quicksave are written. See <a href="#file-options">File options</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Use Slot Options For Global File</strong></td>
+<td>on</td>
+<td>Advanced, Packing: <strong>Shared file: Write it differently</strong> (the opposite)</td>
+<td>The global file is written with <strong>File Options</strong> too. Off: it uses <strong>Global File Options</strong>.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Global File Options</strong></td>
+<td>as File Options, with no extension</td>
+<td>Advanced, Packing: under <strong>Shared file</strong></td>
+<td>The global file's own options, used while <strong>Use Slot Options For Global File</strong> is off. See <a href="#the-global-files-own-options">The global file's own options</a>.</td>
+</tr>
+<tr>
+<td>Slots</td>
+<td><strong>Slot Count</strong></td>
+<td>10</td>
+<td>Basics: <strong>Save slots</strong></td>
+<td>Manual slots, 1 to 99</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Autosave File Count</strong></td>
+<td>3</td>
+<td>Basics: <strong>Autosave files</strong></td>
+<td>Autosave files to rotate through, 1 to 10</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Quicksave Enabled</strong></td>
+<td>off</td>
+<td>Basics: <strong>Quicksave slot</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Autosave triggers</td>
+<td><strong>Autosave On Timer</strong></td>
+<td>off</td>
+<td>Basics: <strong>Every few minutes</strong></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Autosave Interval Seconds</strong></td>
+<td>300</td>
+<td>Basics: <strong>Every (seconds)</strong></td>
+<td>Minimum 5</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Autosave On Scene Change</strong></td>
+<td>off</td>
+<td>Basics: <strong>When a scene loads</strong></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Autosave On Quit</strong></td>
+<td>on</td>
+<td>Basics: <strong>When the game quits</strong></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Capture Autosave Thumbnails</strong></td>
+<td>on</td>
+<td>Basics: <strong>Take a picture</strong></td>
+<td>Autosaves and quicksaves render a thumbnail from the main camera, see <a href="guide.html#thumbnails">Thumbnails</a></td>
+</tr>
+<tr>
+<td>Game updates</td>
+<td><strong>Save Version</strong></td>
+<td>1</td>
+<td>Advanced, Game updates: <strong>Save version</strong></td>
+<td>See <a href="#save-versions">Save versions</a></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Auto Discover Migrations</strong></td>
+<td>on</td>
+<td>Advanced, Game updates: <strong>Find migration steps by itself</strong></td>
+<td>Finds <code>[SaveMigration]</code> methods when the kit starts</td>
+</tr>
+<tr>
+<td>Categories</td>
+<td><strong>Categories</strong></td>
+<td>five, see <a href="#categories">Categories</a></td>
+<td>Advanced: <strong>Categories</strong></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Default Category</strong></td>
+<td><code>Progress</code></td>
+<td>Advanced, Categories: <strong>Values saved from code go in</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>World</td>
+<td><strong>World Category</strong></td>
+<td><code>World</code></td>
+<td>Advanced, Categories: <strong>Saveable objects go in</strong></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>World Load Mode</strong></td>
+<td>Load Saved Scenes</td>
+<td>Advanced, World objects: <strong>When a save is loaded</strong></td>
+<td>See <a href="#load-modes">Load modes</a></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Prefab Registry</strong>, <strong>Asset Registry</strong>, <strong>Scene Registry</strong></td>
+<td>created with the settings</td>
+<td>Advanced, World objects: <strong>List of spawned prefabs</strong>, <strong>List of saved assets</strong>, <strong>List of scenes</strong></td>
+<td>See <a href="#the-registries">The registries</a></td>
+</tr>
+<tr>
+<td>Diagnostics</td>
+<td><strong>Log Level</strong></td>
+<td>Warnings</td>
+<td>Basics: <strong>Console messages</strong></td>
+<td>See <a href="#logging-and-reports">Logging and reports</a></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Report To Console</strong></td>
+<td>off</td>
+<td>Basics: <strong>Log each save</strong></td>
+<td>Prints a one-line report of every save and load to the Console, at the Warnings and Verbose log levels</td>
+</tr>
+</tbody>
+</table></div>
+<p>The kit reads the asset and never writes to it at runtime. To change a value in code for one run, switch <strong>Initialise Automatically</strong> off, change a copy (<code>Instantiate(asset)</code>) and pass it to <code>SaveKit.Initialise(settings)</code>.</p>
+<hr />
+<p><a id="saving-plain-values"></a></p>
+<h2 id="saving-plain-values">Saving plain values <a class="anchor" href="#saving-plain-values" aria-label="Link to this section">#</a></h2>
+<p>More on this topic is in the <a href="guide.html#saving-plain-values">Guide</a>.</p>
+<p><a id="what-can-be-saved"></a></p>
+<h3 id="what-can-be-saved">What can be saved <a class="anchor" href="#what-can-be-saved" aria-label="Link to this section">#</a></h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Kind</th>
+<th>Types</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Numbers</td>
+<td><code>int</code>, <code>long</code>, <code>float</code>, <code>double</code>, <code>decimal</code>, <code>short</code>, <code>byte</code>, <code>sbyte</code>, <code>ushort</code>, <code>uint</code>, <code>ulong</code></td>
+</tr>
+<tr>
+<td>Text and flags</td>
+<td><code>string</code>, <code>char</code>, <code>bool</code></td>
+</tr>
+<tr>
+<td>Time and ids</td>
+<td><code>DateTime</code> (stored as UTC), <code>TimeSpan</code>, <code>Guid</code>, <code>byte[]</code></td>
+</tr>
+<tr>
+<td>Enums</td>
+<td>Any enum, stored by name, so reordering or inserting values never breaks a save</td>
+</tr>
+<tr>
+<td>Unity values</td>
+<td><code>Vector2</code>, <code>Vector3</code>, <code>Vector4</code>, <code>Vector2Int</code>, <code>Vector3Int</code>, <code>Quaternion</code>, <code>Color</code>, <code>Color32</code>, <code>Rect</code>, <code>RectInt</code>, <code>Bounds</code>, <code>BoundsInt</code></td>
+</tr>
+<tr>
+<td>Collections</td>
+<td><code>List&lt;T&gt;</code> and <code>T[]</code> of any of the above, or of your own classes</td>
+</tr>
+<tr>
+<td>Your own classes and structs</td>
+<td>Marked <code>[Serializable]</code>, saved under Unity's own rules through <code>JsonUtility</code>. If the Inspector shows a value, the kit can save it.</td>
+</tr>
+<tr>
+<td>Dictionaries</td>
+<td><code>Dictionary&lt;string, T&gt;</code> and <code>Dictionary&lt;int, T&gt;</code>, where <code>T</code> is any type above (see <a href="#dictionaries">Dictionaries</a>)</td>
+</tr>
+</tbody>
+</table></div>
+<pre><code class="language-csharp">using System;
+using System.Collections.Generic;
+using AllInOneSaveKit;
+using UnityEngine;
+
+public enum Difficulty { Easy, Normal, Hard }
+
+[Serializable]
+public class GraphicsOptions
+{
+    public int quality = 2;
+    public bool vsync = true;
+}
+
+public class SaveTypesExample : MonoBehaviour
+{
+    public void Store(GraphicsOptions options)
+    {
+        SaveKit.Data.Set(&quot;difficulty&quot;, Difficulty.Hard, &quot;Settings&quot;);              // stored as &quot;Hard&quot;
+        SaveKit.Data.Set(&quot;unlocked&quot;, new List&lt;string&gt; { &quot;Forest&quot;, &quot;Caves&quot; }, &quot;Progress&quot;);
+        SaveKit.Data.Set(&quot;lastCheckpoint&quot;, new Vector3(12f, 0f, -4f), &quot;Progress&quot;);
+        SaveKit.Data.Set(&quot;firstPlayed&quot;, DateTime.UtcNow, &quot;Progress&quot;);
+        SaveKit.Data.Set(&quot;graphics&quot;, options, &quot;Settings&quot;);                         // through JsonUtility
+    }
+
+    public void ReadBack()
+    {
+        Difficulty difficulty = SaveKit.Data.Get(&quot;difficulty&quot;, Difficulty.Normal, &quot;Settings&quot;);
+        List&lt;string&gt; unlocked = SaveKit.Data.Get(&quot;unlocked&quot;, new List&lt;string&gt;(), &quot;Progress&quot;);
+        Vector3 checkpoint = SaveKit.Data.Get(&quot;lastCheckpoint&quot;, Vector3.zero, &quot;Progress&quot;);
+        DateTime firstPlayed = SaveKit.Data.Get(&quot;firstPlayed&quot;, DateTime.UtcNow, &quot;Progress&quot;).ToLocalTime();
+        GraphicsOptions graphics = SaveKit.Data.Get(&quot;graphics&quot;, new GraphicsOptions(), &quot;Settings&quot;);
+        Debug.Log(difficulty + &quot; &quot; + unlocked.Count + &quot; &quot; + checkpoint + &quot; &quot; + firstPlayed + &quot; &quot; + graphics.quality);
+    }
+}
+</code></pre>
+<p>Good to know:</p>
+<ul>
+<li><strong>Enums by name.</strong> An enum value that no longer exists, because you removed or renamed it, reads back as the fallback instead of failing the load.</li>
+<li><strong>Dates are stored as UTC.</strong> A <code>DateTime</code> comes back with <code>Kind</code> set to <code>Utc</code>, as the same moment in time. Call <code>.ToLocalTime()</code> before you show it to a player. A date whose <code>Kind</code> is <code>Unspecified</code> is treated as local time when it is saved.</li>
+<li><strong>Numbers are exact.</strong> Floats and doubles read back bit for bit, including NaN, infinity and negative zero. A readable file shows the shortest text that reads back as exactly the same number, so <code>0.8f</code> is written as <code>0.8</code>. A few values need more digits: up to nine for a float and seventeen for a double.</li>
+<li><strong>Numbers look the same in every language.</strong> The kit writes numbers in one fixed format, whatever the player's language settings, so a save made on a German PC loads on an English one.</li>
+<li><strong>Your own classes</strong> follow Unity's rules: public fields and <code>[SerializeField]</code> fields of supported types are saved; properties, interfaces and dictionary fields inside the class are not.</li>
+</ul>
+<p><a id="dictionaries"></a></p>
+<h3 id="dictionaries">Dictionaries <a class="anchor" href="#dictionaries" aria-label="Link to this section">#</a></h3>
+<p>A <code>Dictionary&lt;string, T&gt;</code> or a <code>Dictionary&lt;int, T&gt;</code> is saved like any other value, as long as <code>T</code> is a type the kit can save:</p>
+<pre><code class="language-csharp">var kills = new Dictionary&lt;string, int&gt; { { &quot;slime&quot;, 12 }, { &quot;bat&quot;, 3 } };
+SaveKit.Data.Set(&quot;kills&quot;, kills, &quot;Progress&quot;);
+
+Dictionary&lt;string, int&gt; loaded = SaveKit.Data.Get(&quot;kills&quot;, new Dictionary&lt;string, int&gt;(), &quot;Progress&quot;);
+</code></pre>
+<ul>
+<li><code>Get</code> builds a new dictionary from the save each time. When nothing is saved under the key, it returns your fallback.</li>
+<li>In the file, a dictionary is a JSON object. <code>int</code> keys are written as text, such as <code>"12"</code>.</li>
+<li>A dictionary with other keys, such as an enum, or with values the kit cannot save, is not saved. The Console warns once with <code>InvalidArgument</code> (<a href="troubleshooting.html#sk002">SK002</a>), and <code>Get</code> returns your fallback. Save such data as two lists instead, or from an <code>ISaveable</code>.</li>
+<li>A category's writer and reader do the same: <code>SaveKit.Data.Writer("Progress").WriteDictionary("kills", kills)</code> writes it, and <code>SaveKit.Data.Reader("Progress").ReadDictionary&lt;int&gt;("kills")</code> reads it back, or null when there is none. Read <code>int</code> keys back with <code>ReadIntDictionary&lt;TValue&gt;</code>. <code>Writer(category)</code> and <code>Reader(category)</code> also offer <code>WriteList</code>, <code>ReadList</code>, <code>WriteObject</code> and <code>ReadObject</code>, for code that prefers to write a group of values at once.</li>
+<li>A dictionary field of a script cannot be ticked in the Field Picker, because Unity does not save dictionary fields. Save it from an <code>ISaveable</code> (see <a href="guide.html#custom-scripts-isaveable">Custom scripts</a>).</li>
+</ul>
+<hr />
+<p><a id="saving-and-loading"></a></p>
+<h2 id="saving-and-loading">Saving and loading <a class="anchor" href="#saving-and-loading" aria-label="Link to this section">#</a></h2>
+<p>More on this topic is in the <a href="guide.html#saving-and-loading">Guide</a>.</p>
+<p><a id="threads-and-the-file-queue"></a>
+<a id="no-code-components"></a></p>
+<h3 id="save-actions-save-events-and-save-point">Save Actions, Save Events and Save Point <a class="anchor" href="#save-actions-save-events-and-save-point" aria-label="Link to this section">#</a></h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Settings</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Save Actions</strong></td>
+<td><strong>Continue Scene</strong>, <strong>New Game Scene</strong>, <strong>Delete All Includes Settings</strong>, <strong>On Succeeded</strong>, <strong>On Failed</strong> (with the reason)</td>
+<td>Methods for UnityEvents: <code>SaveToSlot(int)</code>, <code>LoadSlot(int)</code>, <code>Quicksave()</code>, <code>Quickload()</code>, <code>Autosave()</code>, <code>Continue()</code>, <code>NewGame()</code>, <code>DeleteSlot(int)</code>, <code>DeleteAllSaves()</code>. Saves and loads run in the background; deletes are immediate. <code>Running</code> counts the actions still working</td>
+</tr>
+<tr>
+<td><strong>Save Events</strong> (<code>SaveEventListener</code>)</td>
+<td><strong>Slots</strong>, <strong>Autosaves</strong>, <strong>Quicksave</strong> (on), <strong>Global File</strong> (off); seven UnityEvents</td>
+<td>Listens while enabled. A file of no known kind counts as a slot when the event names a slot number</td>
+</tr>
+<tr>
+<td><strong>Save Point</strong></td>
+<td><strong>Target</strong> (Autosave, Slot or Quicksave), <strong>Slot</strong>, <strong>Player Tag</strong> (<code>Player</code>; empty is anything), <strong>Save On Enter</strong>, <strong>Cooldown Seconds</strong> (10), <strong>Only Once</strong>, <strong>Location Name</strong>, <strong>On Saved</strong>, <strong>On Failed</strong></td>
+<td>Works with 3D and 2D trigger colliders. <code>SaveNow()</code> saves when <code>CanSaveNow</code>: not used up, not cooling down, not already saving, and <code>SaveKit.CanSave</code>. The cooldown uses real time</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="threads-and-the-file-queue">Threads and the file queue <a class="anchor" href="#threads-and-the-file-queue" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>Capturing and restoring run on the main thread, because Unity's APIs require it.</li>
+<li>Reading the old file, migrating, merging, serialising, compressing, encrypting and writing run on a background thread for the <code>Async</code> calls and for <code>SaveInBackground</code> and <code>LoadInBackground</code>. The blocking calls do the same work on the calling thread. <a href="#profiler-markers">Profiler markers</a> show which thread each stage ran on.</li>
+<li>Work for one file runs one item at a time, in the order it was asked for. Two saves fired in a row both finish, and the file holds the second one.</li>
+</ul>
+<hr />
+<p><a id="slots-and-slot-info"></a></p>
+<h2 id="slots-and-slot-info">Slots and slot info <a class="anchor" href="#slots-and-slot-info" aria-label="Link to this section">#</a></h2>
+<p>More on this topic is in the <a href="guide.html#slots-and-slot-info">Guide</a>.</p>
+<h3 id="what-a-slot-records">What a slot records <a class="anchor" href="#what-a-slot-records" aria-label="Link to this section">#</a></h3>
+<p>Each save records slot info that the menu reads without unpacking the game data:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th><code>SlotInfo</code> member</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SlotNumber</code></td>
+<td>The slot, counting from 1; 0 for an autosave or the quicksave</td>
+</tr>
+<tr>
+<td><code>FileName</code>, <code>Exists</code></td>
+<td>The file, and whether there is a save in it</td>
+</tr>
+<tr>
+<td><code>Name</code></td>
+<td><code>SaveKit.SlotName</code> at the time of the save, or <code>Slot N</code> when the game set none</td>
+</tr>
+<tr>
+<td><code>SavedUtc</code></td>
+<td>When it was saved, in UTC (use <code>ToLocalTime()</code> to show it)</td>
+</tr>
+<tr>
+<td><code>PlaytimeSeconds</code></td>
+<td>Playtime at the time of the save</td>
+</tr>
+<tr>
+<td><code>Location</code></td>
+<td><code>SaveKit.Location</code> at the time of the save</td>
+</tr>
+<tr>
+<td><code>Summary</code></td>
+<td>Up to four short lines, such as "Day 12" and "$4,300". The menu shows the first two.</td>
+</tr>
+<tr>
+<td><code>GameVersion</code>, <code>SaveVersion</code></td>
+<td>The game's version (<code>Application.version</code>) and save version</td>
+</tr>
+<tr>
+<td><code>ThumbnailFileName</code></td>
+<td>The thumbnail file, or empty</td>
+</tr>
+<tr>
+<td><code>BackupCount</code>, <code>FileBytes</code>, <code>Packing</code></td>
+<td>Backups on disk, file size, and how the file is packed</td>
+</tr>
+<tr>
+<td><code>IsDamaged</code>, <code>HasValidBackup</code>, <code>RecoveredFromBackup</code></td>
+<td>The main file is damaged; a backup can stand in; these details come from a backup copy</td>
+</tr>
+<tr>
+<td><code>IsFromNewerVersion</code></td>
+<td>Saved by a newer version of the game, so it cannot be loaded</td>
+</tr>
+<tr>
+<td><code>IsAutosave</code>, <code>IsQuicksave</code>, <code>Status</code></td>
+<td>What kind of save it is, and the code from reading it</td>
+</tr>
+</tbody>
+</table></div>
+<p>Set the name, location and summary before you save:</p>
+<pre><code class="language-csharp">SaveKit.SlotName = &quot;Chapter 3&quot;;
+SaveKit.Location = &quot;Downtown&quot;;
+SaveKit.SetSummary(&quot;Day 12&quot;, &quot;$4,300&quot;);
+</code></pre>
+<p>These are kept between saves, and a load sets them from the file. A default name such as <code>Slot 3</code> is not carried over, so saving that game into slot 5 records <code>Slot 5</code>.</p>
+<p><strong>Playtime</strong> is counted by the kit while it runs, in unscaled time. <code>SaveKit.Playtime</code> gives the total in <code>Seconds</code>; set <code>IsPaused</code> to stop the clock during menus or cutscenes. A load sets the clock from the save, and <code>NewGame</code> starts it from zero. <code>PlaytimeTracker.Format(seconds)</code> turns a number of seconds into short text such as <code>2h 15m</code>.</p>
+<p><a id="world-persistence"></a></p>
+<h2 id="world-persistence">World persistence <a class="anchor" href="#world-persistence" aria-label="Link to this section">#</a></h2>
+<p>More on this topic is in the <a href="guide.html#world-persistence">Guide</a>.</p>
+<p><a id="parents"></a></p>
+<h3 id="parents">Parents <a class="anchor" href="#parents" aria-label="Link to this section">#</a></h3>
+<p>The Position saver records the parent when the parent is a saved object or the scene root, and restores it in the second pass, once every object exists.</p>
+<ul>
+<li>A scene object under a parent that is not saved keeps the parent it has in the scene.</li>
+<li>A runtime object under a parent that is not saved, such as a plain "Enemies" container, records that parent's path in the scene and its world pose, so it comes back in the same place. The path assumes sibling names are unique and contain no <code>/</code>. If the parent cannot be found, the object goes to the scene root at the same world position.</li>
+</ul>
+<p><a id="load-modes"></a></p>
+<h3 id="load-modes">Load modes <a class="anchor" href="#load-modes" aria-label="Link to this section">#</a></h3>
+<p><strong>World Load Mode</strong> in the settings decides how a load treats scenes. <code>SaveKit.World.LoadMode</code> changes it at runtime.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Mode</th>
+<th><code>LoadAsync</code></th>
+<th><code>Load</code> (blocking)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Load Saved Scenes</strong> (default)</td>
+<td>Loads the scenes the save was made in, restores each as it loads, sets the active scene, then fires <code>Loaded</code></td>
+<td>Restores into the scenes that are loaded now</td>
+</tr>
+<tr>
+<td><strong>Restore Into Current Scenes</strong></td>
+<td>Restores into the scenes that are loaded now</td>
+<td>Restores into the scenes that are loaded now</td>
+</tr>
+</tbody>
+</table></div>
+<p>When restoring into the scenes that are loaded now, the state of any other saved scene stays in memory and is applied when that scene loads. A file that holds no world data leaves the scenes alone.</p>
+<p>Restoring into an open scene cannot bring back a scene object that was destroyed after the save, because the kit has no prefab to make it from: it is skipped with an <code>ObjectNotFound</code> warning. Load Saved Scenes mode reloads the scenes, so everything comes back.</p>
+<p><strong>Scene loader hook.</strong> For a loading screen, or scenes that are not in Build Settings, set <code>SaveKit.World.SceneLoader</code> to your own <code>ISceneLoader</code> (namespace <code>AllInOneSaveKit.World</code>). Return the <code>AsyncOperation</code> of a <code>SceneManager</code> load and leave <code>allowSceneActivation</code> on:</p>
+<pre><code class="language-csharp">using AllInOneSaveKit.World;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public sealed class LoadingScreenSceneLoader : ISceneLoader
+{
+    public AsyncOperation LoadScene(string scenePath, string sceneName, LoadSceneMode mode)
+    {
+        // Show your loading screen here.
+        string scene = string.IsNullOrEmpty(scenePath) ? sceneName : scenePath;
+        return SceneManager.LoadSceneAsync(scene, mode);
+    }
+}
+</code></pre>
+<p>Return null for a scene you cannot load. Games that load scenes through Addressables load them themselves and use Restore Into Current Scenes, or call <code>SaveKit.World.ApplyScene(scene)</code> once each scene is in.</p>
+<p><a id="physics"></a>
+<a id="component-savers"></a></p>
+<h3 id="component-savers">Component savers <a class="anchor" href="#component-savers" aria-label="Link to this section">#</a></h3>
+<p>The Animator, Audio Source, Enabled and NavMesh Agent savers are components beside a Saveable, saved in its entry under their own name like any <code>ISaveable</code> (see <a href="#world-data-in-the-file">World data in the file</a>). Each compiles only when its Unity module is switched on in the Package Manager (Animation, Audio, AI); the Enabled saver always does.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Stored members</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Animator Saver</td>
+<td><code>parameters</code> (one member per float, int or bool parameter), <code>stateHashes</code>, <code>stateTimes</code>, <code>layerWeights</code></td>
+<td><strong>Save Parameters</strong> and <strong>Save States</strong> switch the two halves. A state that no longer exists after a game update is left to the controller. The state is played with <code>Animator.Play</code> at the saved normalized time once the Animator is initialised</td>
+</tr>
+<tr>
+<td>Audio Source Saver</td>
+<td><code>playing</code>, <code>time</code>, <code>volume</code>, <code>pitch</code></td>
+<td><strong>Save Playback</strong> and <strong>Save Volume And Pitch</strong> switch the two halves. A time past the clip's end is clamped</td>
+</tr>
+<tr>
+<td>Enabled Saver</td>
+<td><code>enabled</code>, a list of true or false in the order of <strong>Targets</strong></td>
+<td>Behaviours, Renderers and Colliders; anything else in the list is skipped</td>
+</tr>
+<tr>
+<td>NavMesh Agent Saver</td>
+<td><code>position</code>, <code>speed</code>, <code>stopped</code>, <code>hasDestination</code>, <code>destination</code></td>
+<td>Applied on the agent's next frame with <code>Warp</code>, then <code>SetDestination</code> and <code>isStopped</code> when it is on a NavMesh</td>
+</tr>
+</tbody>
+</table></div>
+<p>State a load hands over before the component can take it is kept, and saved again unchanged if the game saves first; <code>HasPendingRestore</code> says whether it is waiting.</p>
+<h3 id="physics">Physics <a class="anchor" href="#physics" aria-label="Link to this section">#</a></h3>
+<p>Every body whose position a restore puts back is held kinematic for at least one simulated physics step, then released with its saved velocities and sleep state (or with its own settings when the Physics saver is off). Objects that are restored touching each other, such as stacked crates, therefore start from rest instead of bursting apart.</p>
+<p>The release happens in <code>FixedUpdate</code>. If <code>Physics.simulationMode</code> is set to Update or Script, the release may not line up with your simulation step.</p>
+<p><a id="dontdestroyonload-objects"></a></p>
+<h3 id="dontdestroyonload-objects">DontDestroyOnLoad objects <a class="anchor" href="#dontdestroyonload-objects" aria-label="Link to this section">#</a></h3>
+<p>Saveables under <code>DontDestroyOnLoad</code>, such as a game manager, are saved in a separate <code>persistent</code> section of their category, not with any scene. A load restores them first, before the scenes. Their destruction is not recorded by the Destroyed saver.</p>
+<p><a id="world-data-in-the-file"></a></p>
+<h3 id="world-data-in-the-file">World data in the file <a class="anchor" href="#world-data-in-the-file" aria-label="Link to this section">#</a></h3>
+<p>A readable save, shortened, with ids cut short for space:</p>
+<pre><code class="language-json">{
+  &quot;aiosk&quot;: 1,
+  &quot;header&quot;: {
+    &quot;saveVersion&quot;: 1,
+    &quot;gameVersion&quot;: &quot;0.9.2&quot;,
+    &quot;kitVersion&quot;: &quot;1.0.0&quot;,
+    &quot;savedUtc&quot;: &quot;2026-11-02T18:41:07Z&quot;,
+    &quot;checksum&quot;: &quot;crc32:5F1A9C02&quot;,
+    &quot;packing&quot;: &quot;readable&quot;
+  },
+  &quot;info&quot;: {
+    &quot;name&quot;: &quot;Slot 1&quot;,
+    &quot;playtimeSeconds&quot;: 8123,
+    &quot;location&quot;: &quot;Downtown&quot;,
+    &quot;gameVersion&quot;: &quot;0.9.2&quot;,
+    &quot;summary&quot;: [&quot;Day 12&quot;, &quot;$4,300&quot;]
+  },
+  &quot;data&quot;: {
+    &quot;Progress&quot;: { &quot;gold&quot;: 4300, &quot;day&quot;: 12 },
+    &quot;World&quot;: {
+      &quot;scenes&quot;: {
+        &quot;4f2a9c…&quot;: {
+          &quot;label&quot;: &quot;Assets/Levels/Town.unity&quot;,
+          &quot;objects&quot;: {
+            &quot;8c1f…&quot;: {
+              &quot;name&quot;: &quot;Chest_03&quot;,
+              &quot;Position&quot;: { &quot;p&quot;: [12, 0, -4], &quot;r&quot;: [0, 0, 0, 1], &quot;s&quot;: [1, 1, 1], &quot;parent&quot;: &quot;&quot; },
+              &quot;Active&quot;: true,
+              &quot;fields&quot;: { &quot;ChestLid.isOpen&quot;: true, &quot;Health.current&quot;: 50, &quot;ChestLid.door&quot;: { &quot;obj&quot;: &quot;5e7a…&quot;, &quot;t&quot;: &quot;Door&quot; } },
+              &quot;custom&quot;: { &quot;Chest&quot;: { &quot;open&quot;: true, &quot;contents&quot;: [&quot;a1b2…&quot;] } }
+            }
+          },
+          &quot;destroyed&quot;: [&quot;77de…&quot;],
+          &quot;spawned&quot;: [
+            {
+              &quot;prefab&quot;: &quot;e5c0…&quot;,
+              &quot;id&quot;: &quot;0b9d…&quot;,
+              &quot;parent&quot;: &quot;&quot;,
+              &quot;state&quot;: { &quot;name&quot;: &quot;Crate(Clone)&quot;, &quot;Position&quot;: { &quot;p&quot;: [3, 1, 0], &quot;r&quot;: [0, 0, 0, 1], &quot;s&quot;: [1, 1, 1], &quot;parent&quot;: &quot;&quot; } }
+            }
+          ]
+        }
+      },
+      &quot;loadedScenes&quot;: [&quot;4f2a9c…&quot;],
+      &quot;activeScene&quot;: &quot;4f2a9c…&quot;
+    },
+    &quot;players&quot;: {
+      &quot;76561198000000000&quot;: { &quot;Progress&quot;: { &quot;position&quot;: [4, 0, 2] }, &quot;Inventory&quot;: { &quot;items&quot;: [3, 1] } }
+    }
+  }
+}
+</code></pre>
+<ul>
+<li>Each scene section has a <code>label</code> (the scene path, for people reading the file), <code>objects</code> (scene objects by id), <code>destroyed</code> and <code>spawned</code> (runtime objects with their prefab id, parent and <code>state</code>; saved children of a prefab are under <code>children</code>).</li>
+<li>An object entry holds <code>name</code>, then whatever its savers write: <code>Position</code> (<code>p</code>, <code>r</code>, <code>s</code> and <code>parent</code>), <code>Active</code>, <code>Physics</code>, <code>fields</code> with keys <code>&lt;ComponentType&gt;.&lt;field&gt;</code>, and <code>custom</code> with one entry per <code>ISaveable</code> script, keyed by class name.</li>
+<li>Links from ticked fields and from <code>WriteObjectLink</code> are <code>{ "obj": "&lt;id&gt;" }</code> for a GameObject, <code>{ "obj": "&lt;id&gt;", "t": "&lt;component type&gt;" }</code> for a component (plus <code>"c"</code> when it is not the first component of that type on its object, see <a href="guide.html#references-between-objects-and-to-assets">References</a>), and <code>{ "asset": "&lt;asset id&gt;" }</code> for an asset. <code>WriteAsset</code> and <code>WriteAssets</code> store the asset id as plain text, as in <code>contents</code> above.</li>
+<li>DontDestroyOnLoad objects are in the category's <code>persistent</code> section. In co-op, per-player data is in a <code>players</code> section beside the categories, as <code>players.&lt;player id&gt;.&lt;category&gt;</code>; a game without co-op has no <code>players</code> section.</li>
+</ul>
+<p>The Save Inspector shows this tree with readable names, and lets you search it.</p>
+<p><a id="the-registries"></a></p>
+<h3 id="the-registries">The registries <a class="anchor" href="#the-registries" aria-label="Link to this section">#</a></h3>
+<p>Three registry assets, created by the wizard and linked from the settings asset, let the kit find things again:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Registry</th>
+<th>Lists</th>
+<th>Kept up to date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Prefab Registry</strong></td>
+<td>Prefabs with a Saveable on the root, by asset GUID</td>
+<td>Automatically: prefabs are checked whenever Unity imports them, and deleted ones leave the registry</td>
+</tr>
+<tr>
+<td><strong>Scene Registry</strong></td>
+<td>Scenes, by asset GUID, with their path</td>
+<td>Automatically: every scene in Build Settings is listed, and moving or renaming a listed scene updates its path</td>
+</tr>
+<tr>
+<td><strong>Asset Registry</strong></td>
+<td>Assets a save may link to, such as item definitions</td>
+<td>By you: Diagnostics registers assets linked from ticked fields in one click, and <strong>Register Selected Assets</strong> registers the assets you select; deleted assets leave the registry automatically</td>
+</tr>
+</tbody>
+</table></div>
+<p>Upkeep works only while the project has a settings asset that points at the registries. <strong>Tools → All In One Save Kit → Registries → Rebuild Registries</strong> checks every prefab and scene from scratch.</p>
+<p>A scene that is in neither Build Settings nor the Scene Registry is saved under its path instead, with a one-time <code>SceneNotRegistered</code> warning (<a href="troubleshooting.html#sk133">SK133</a>); moving or renaming it would then lose its saved state.</p>
+<p><strong>Registering assets you write from <code>ISaveable</code>.</strong> Diagnostics only sees assets linked from ticked fields. For assets your own scripts write with <code>WriteAsset</code>, <code>WriteAssets</code> or <code>WriteObjectLink</code>, select them in the Project window and choose <strong>Tools → All In One Save Kit → Registries → Register Selected Assets</strong>. It adds the selected ScriptableObjects and prefabs to the settings asset's Asset Registry in one Undo step, skips anything else, such as folders, scenes and the kit's own settings and registries, and says in the Console how many it added. The command is greyed out while nothing that can be registered is selected.</p>
+<p>For many assets of one type, a small editor script, saved in a folder called <code>Editor</code>, can register them all at once:</p>
+<pre><code class="language-csharp">// Editor/RegisterItemDefinitions.cs
+using AllInOneSaveKit.Editor.Registries;
+using AllInOneSaveKit.Settings;
+using UnityEditor;
+
+public static class RegisterItemDefinitions
+{
+    [MenuItem(&quot;Tools/My Game/Register Item Definitions&quot;)]
+    static void Register()
+    {
+        SaveKitSettings settings = RegistryUpkeep.FindSettings();
+        if (settings == null || settings.AssetRegistry == null) return;
+
+        foreach (string guid in AssetDatabase.FindAssets(&quot;t:ItemDefinition&quot;))
+        {
+            var item = AssetDatabase.LoadAssetAtPath&lt;ItemDefinition&gt;(AssetDatabase.GUIDToAssetPath(guid));
+            if (item != null) RegistryUpkeep.RegisterAsset(settings.AssetRegistry, item);
+        }
+    }
+}
+</code></pre>
+<hr />
+<p><a id="reliability-and-recovery"></a></p>
+<h2 id="reliability-and-recovery">Reliability and recovery <a class="anchor" href="#reliability-and-recovery" aria-label="Link to this section">#</a></h2>
+<p>The promise: at every moment during a save, at least one complete, valid copy of it is on disk, and nothing the kit does throws into your game.</p>
+<h3 id="crash-safe-writes">Crash-safe writes <a class="anchor" href="#crash-safe-writes" aria-label="Link to this section">#</a></h3>
+<p>Every save follows the same steps:</p>
+<ol>
+<li>Capture the values on the main thread.</li>
+<li>Serialise, compress and encrypt (when switched on).</li>
+<li>Write <code>slot_01.save.tmp</code>, flush it to the disk, read it back and check it.</li>
+<li>Swap it into place with the operating system's atomic replace, then rotate the backups.</li>
+<li>Write the thumbnail and the slot cache, then report.</li>
+</ol>
+<p>The old save stays intact until the new one is proven good. Anything that goes wrong before the swap leaves every file as it was. A problem tidying the backups after the swap is a warning on a successful save, never a failed one.</p>
+<h3 id="checksums">Checksums <a class="anchor" href="#checksums" aria-label="Link to this section">#</a></h3>
+<p>Every file carries a CRC-32 checksum of its data, checked on every load. A readable file whose data no longer matches its checksum counts as damaged (see <a href="#edited-saves-the-checksum-policy">Edited saves</a> for the exceptions). An encrypted file also carries a tamper check (see <a href="#encryption">Encryption</a>).</p>
+<h3 id="rotating-backups">Rotating backups <a class="anchor" href="#rotating-backups" aria-label="Link to this section">#</a></h3>
+<p>Each save keeps <strong>File Options → Backup Count</strong> older copies, 2 by default, adjustable from 0 to 5: <code>.bak1</code> is the newest, <code>.bak2</code> the one before. A load tries the main file first, then a complete <code>.tmp</code>, then <code>.bak1</code>, <code>.bak2</code> and so on, and the first valid copy wins. Only damage makes a load move on; a locked file or a missing drive reports itself instead.</p>
+<h3 id="automatic-fallback">Automatic fallback <a class="anchor" href="#automatic-fallback" aria-label="Link to this section">#</a></h3>
+<p><strong>File Options → Automatic Fallback</strong> is on by default.</p>
+<ul>
+<li><strong>On:</strong> a damaged slot, autosave or quicksave loads from its newest valid backup. The result is a success with the code <code>RecoveredFromBackup</code> (<a href="troubleshooting.html#sk102">SK102</a>), <code>LoadedFrom</code> and <code>SavedUtc</code> say which copy was used, and the <code>RecoveredFromBackup</code> event fires.</li>
+<li><strong>Off:</strong> loading a damaged save fails with its damage code and moves nothing. The slot info reports <code>IsDamaged</code> and <code>HasValidBackup</code>, and the menu offers Restore backup, which calls <code>SaveKit.RestoreBackup</code>.</li>
+<li><strong>The global file always falls back</strong>, whatever this setting says.</li>
+<li><strong>Saving over a damaged slot works either way.</strong> The save keeps the categories it does not write from the newest valid copy.</li>
+</ul>
+<p>With fallback off, a crash during the very first save of a slot leaves only the <code>.tmp</code> file. The slot then reports <a href="troubleshooting.html#sk101">SK101</a>, and Restore backup puts the <code>.tmp</code> file in place.</p>
+<h3 id="damaged-files-are-kept">Damaged files are kept <a class="anchor" href="#damaged-files-are-kept" aria-label="Link to this section">#</a></h3>
+<p>When a load falls back, the damaged main file is renamed <code>.corrupt-&lt;time&gt;</code> and kept for support, never deleted. A file with no valid copy at all gives a clean <code>FileDamaged</code> result (<a href="troubleshooting.html#sk101">SK101</a>); the game keeps running and nothing is deleted.</p>
+<h3 id="disk-full-and-access-denied">Disk full and access denied <a class="anchor" href="#disk-full-and-access-denied" aria-label="Link to this section">#</a></h3>
+<p>If the disk is full or the folder cannot be written, the save fails with <code>DiskFull</code> (<a href="troubleshooting.html#sk110">SK110</a>) or <code>AccessDenied</code> (<a href="troubleshooting.html#sk111">SK111</a>), and every existing save stays byte-for-byte as it was. A save tree nested deeper than 128 levels is refused before anything is written, because it could never be read back.</p>
+<h3 id="what-the-player-sees">What the player sees <a class="anchor" href="#what-the-player-sees" aria-label="Link to this section">#</a></h3>
+<p>In the save menu, a damaged slot shows a <strong>Damaged</strong> badge. Loading it with fallback on shows "Restored from backup (date)". With fallback off, the card shows a <strong>Restore backup</strong> button. A slot whose details come from a backup copy shows a <strong>Restored</strong> badge. See <a href="guide.html#the-save-and-load-menu">The save and load menu</a>.</p>
+<hr />
+<p><a id="file-options"></a></p>
+<h2 id="file-options">File options <a class="anchor" href="#file-options" aria-label="Link to this section">#</a></h2>
+<p><strong>File Options</strong> in the settings asset decides how the slots, the autosaves and the quicksave are written. The global file is written the same way, unless you give it options of its own (see <a href="#the-global-files-own-options">The global file's own options</a>).</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pretty Print</strong></td>
+<td>Automatic</td>
+<td>Indents readable files. Automatic: indented in the Editor and in development builds, compact in release builds. Always or Never force it.</td>
+</tr>
+<tr>
+<td><strong>Compress</strong></td>
+<td>off</td>
+<td>GZip-compresses the data</td>
+</tr>
+<tr>
+<td><strong>Encrypt</strong></td>
+<td>off</td>
+<td>Encrypts the data, with a tamper check</td>
+</tr>
+<tr>
+<td><strong>Encrypt Slot Info</strong></td>
+<td>off</td>
+<td>Encrypts the slot info too. Off, the menu reads names, dates and summaries without decrypting anything.</td>
+</tr>
+<tr>
+<td><strong>Passphrase</strong></td>
+<td><code>change-me-before-you-ship</code></td>
+<td>The secret the keys are made from. Switching <strong>Encrypt</strong> on (Advanced tab) generates a random one; <strong>Generate</strong> makes another.</td>
+</tr>
+<tr>
+<td><strong>Key Salt</strong></td>
+<td>random, set when the file options are first applied</td>
+<td>Mixed into the keys, so two games with the same passphrase get different keys. Empty uses a fixed salt made from the product name.</td>
+</tr>
+<tr>
+<td><strong>Key Iterations</strong></td>
+<td>100000</td>
+<td>How many times the passphrase is stretched into a key. Values below 1000 use 100000.</td>
+</tr>
+<tr>
+<td><strong>Backup Count</strong></td>
+<td>2</td>
+<td>Rotating backups per file, 0 to 5</td>
+</tr>
+<tr>
+<td><strong>Checksum Policy</strong></td>
+<td>Treat Edits As Damaged</td>
+<td>What to do with a readable file edited by hand</td>
+</tr>
+<tr>
+<td><strong>File Extension</strong></td>
+<td><code>.save</code></td>
+<td>The extension of the save files. Backups, temporary files and damaged copies add their own endings after it.</td>
+</tr>
+<tr>
+<td><strong>Automatic Fallback</strong></td>
+<td>on</td>
+<td>See <a href="#reliability-and-recovery">Reliability and recovery</a></td>
+</tr>
+</tbody>
+</table></div>
+<p><a id="readable-json-and-pretty-printing"></a></p>
+<h3 id="readable-json-and-pretty-printing">Readable JSON and pretty printing <a class="anchor" href="#readable-json-and-pretty-printing" aria-label="Link to this section">#</a></h3>
+<p>Saves are readable JSON by default: any text editor opens them, and they are easy to support. With <strong>Pretty Print</strong> on Automatic, files are indented while you develop and compact in a release build, which is the compact mode for shipping. Whitespace never changes the checksum.</p>
+<p><a id="compression"></a></p>
+<h3 id="compression">Compression <a class="anchor" href="#compression" aria-label="Link to this section">#</a></h3>
+<p>GZip makes large saves several times smaller. It is off by default because typical saves are small. Compressed files can no longer be read in a text editor; the Save Inspector still opens them.</p>
+<p><a id="encryption"></a></p>
+<h3 id="encryption">Encryption <a class="anchor" href="#encryption" aria-label="Link to this section">#</a></h3>
+<p>Encryption stops players editing saves in a text editor, and its tamper check notices edits.</p>
+<ul>
+<li><strong>How it works:</strong> AES-256 in CBC mode with a random IV for every write, and an HMAC-SHA256 over the header and the encrypted data (encrypt-then-MAC). The keys are derived once, when the kit starts, from <strong>Passphrase</strong>, <strong>Key Salt</strong> and <strong>Key Iterations</strong> with PBKDF2 (SHA-256).</li>
+<li><strong>A changed byte</strong> fails the tamper check (<code>TamperDetected</code>, <a href="troubleshooting.html#sk105">SK105</a>) and the backup loads. A file written with another passphrase gives <code>EncryptionKeyWrong</code> (<a href="troubleshooting.html#sk106">SK106</a>).</li>
+<li><strong>Its limits:</strong> the key ships inside your game, so a determined player can dig it out, especially from Mono builds, which are easy to decompile. It is not anti-cheat, and it must never protect passwords, payment details or other personal data. In co-op, the host's save is the authority anyway.</li>
+<li><strong>Set your own passphrase before release.</strong> Diagnostics warns while the default one is set and either the slots or the global file are encrypted. After release, never change <strong>Passphrase</strong>, <strong>Key Salt</strong> or <strong>Key Iterations</strong>, or existing encrypted saves can no longer be opened.</li>
+<li>Thumbnails are never encrypted.</li>
+</ul>
+<p><a href="limits-and-faq.html">LimitsAndFAQ.md</a> explains the limits of encryption in more detail.</p>
+<p><a id="how-the-options-combine"></a></p>
+<h3 id="how-the-options-combine">How the options combine <a class="anchor" href="#how-the-options-combine" aria-label="Link to this section">#</a></h3>
+<p>Data is compressed first, then encrypted, because encrypted data cannot be compressed. A compressed or encrypted file uses a binary envelope: a short marker, a readable header, then the packed data. The loader tells readable and packed files apart from their first bytes, and the header records which options were used, so any mix loads correctly.</p>
+<p><a id="changing-options-in-an-update"></a></p>
+<h3 id="changing-options-in-an-update">Changing options in an update <a class="anchor" href="#changing-options-in-an-update" aria-label="Link to this section">#</a></h3>
+<p>Each file records how it was written, and the loader follows the file, not the settings. You can switch compression or encryption on or off in a game update and old files still load; they are written the new way the next time they are saved. The same goes for giving the global file its own options, or taking them away again (see below). The one thing you must not change after release is the passphrase, salt or iteration count. See <a href="game-updates.html">GameUpdates.md</a>.</p>
+<p><a id="edited-saves-the-checksum-policy"></a></p>
+<h3 id="edited-saves-the-checksum-policy">Edited saves: the checksum policy <a class="anchor" href="#edited-saves-the-checksum-policy" aria-label="Link to this section">#</a></h3>
+<p>A readable save edited by hand no longer matches its checksum.</p>
+<ul>
+<li><strong>Treat Edits As Damaged</strong> (default): in a build, the file counts as damaged and the newest backup loads instead (<code>ChecksumMismatch</code>, <a href="troubleshooting.html#sk104">SK104</a>). This also catches files that were cut short.</li>
+<li><strong>Accept With Warning:</strong> the file loads, with a warning in the report. Use this for moddable games.</li>
+<li><strong>The Editor always accepts edited files</strong>, with a warning, so you can tweak saves while you test.</li>
+</ul>
+<p><a id="the-global-files-own-options"></a></p>
+<h3 id="the-global-files-own-options">The global file's own options <a class="anchor" href="#the-global-files-own-options" aria-label="Link to this section">#</a></h3>
+<p>The global file holds the player's settings. By default it is written with <strong>File Options</strong>, like the slots. To give it options of its own, tick <strong>Write it differently</strong> under <strong>Shared file</strong> on the settings asset's Advanced tab (in code, untick <strong>Use Slot Options For Global File</strong>) and fill in <strong>Global File Options</strong>, or tick <strong>Different options for the settings file</strong> in the wizard's <strong>File options</strong> step.</p>
+<ul>
+<li><strong>Global File Options</strong> has the same fields as <strong>File Options</strong>. The global file then uses its own <strong>Pretty Print</strong>, <strong>Compress</strong>, <strong>Encrypt</strong>, <strong>Encrypt Slot Info</strong>, <strong>Backup Count</strong>, <strong>Checksum Policy</strong> and <strong>File Extension</strong>.</li>
+<li><strong>Passphrase</strong>, <strong>Key Salt</strong> and <strong>Key Iterations</strong> always come from <strong>File Options</strong>, so every file of your game shares one key. The ones in <strong>Global File Options</strong> are never used.</li>
+<li><strong>Automatic Fallback</strong> makes no difference: the global file always falls back to its newest good backup.</li>
+<li><strong>An empty File Extension</strong>, the default, keeps the slots' extension. <strong>Another extension</strong>, such as <code>.local</code>, gives the global file its own name, <code>global.local</code>, and its working copies follow it: <code>global.local.tmp</code>, <code>global.local.bak1</code> and so on. This is how you keep machine-specific settings, such as graphics quality, out of a Steam Cloud pattern of <code>*.save</code> (see <a href="steam-cloud.html">SteamCloud.md</a>).</li>
+<li><strong>An extension the kit cannot use</strong> stops it starting with <code>SettingsInvalid</code> (<a href="troubleshooting.html#sk153">SK153</a>). It needs a dot followed by a few letters, and it cannot be <code>.tmp</code> or start with <code>.bak</code> or <code>.corrupt</code>, which the kit uses for its own copies.</li>
+<li><strong>Switching after release is safe.</strong> When a game update gives the global file its own extension, or takes it away again by going back to the slots' options, the kit looks for the file under both names and loads whichever was written last, so the player keeps their latest settings. The next save writes the new name, and the old file is left where it is. Only those two names are looked at: changing the global file's own extension from one value to another, such as from <code>.local</code> to <code>.cfg</code>, leaves the settings under the old name behind.</li>
+<li>The Save Inspector lists the global file under its own extension too.</li>
+</ul>
+<p>The kit reads these options when it starts.</p>
+<hr />
+<p><a id="the-save-and-load-menu"></a></p>
+<h2 id="the-save-and-load-menu">The save and load menu <a class="anchor" href="#the-save-and-load-menu" aria-label="Link to this section">#</a></h2>
+<p>More on this topic is in the <a href="guide.html#the-save-and-load-menu">Guide</a>.</p>
+<h3 id="modes-and-cards">Modes and cards <a class="anchor" href="#modes-and-cards" aria-label="Link to this section">#</a></h3>
+<ul>
+<li><strong>Save mode</strong> lists the manual slots.</li>
+<li><strong>Load mode</strong> lists the autosaves (newest first), the quicksave when it is switched on and exists, then the manual slots that hold a save, then the empty ones. Empty slots are dimmed, show "Empty" and cannot be loaded.</li>
+</ul>
+<p>Each card shows the thumbnail (or "No preview"), the name, the local date and time, the playtime, the location, the first two summary lines, and badges:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Badge</th>
+<th>Means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Autosave</strong> / <strong>Quicksave</strong></td>
+<td>The card is an autosave or the quicksave</td>
+</tr>
+<tr>
+<td><strong>Damaged</strong></td>
+<td>The main file is damaged</td>
+</tr>
+<tr>
+<td><strong>Restored</strong></td>
+<td>The card's details come from a backup copy</td>
+</tr>
+<tr>
+<td><strong>From a newer version</strong></td>
+<td>Saved by a newer version of the game; it cannot be loaded</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="actions-and-confirmations">Actions and confirmations <a class="anchor" href="#actions-and-confirmations" aria-label="Link to this section">#</a></h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Action</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Save to an empty slot</td>
+<td>Saves straight away</td>
+</tr>
+<tr>
+<td>Save over a used slot</td>
+<td>Asks "Overwrite …?" first. A damaged or newer-version slot gets its own warning.</td>
+</tr>
+<tr>
+<td>Load</td>
+<td>Asks "Load …? Unsaved progress will be lost." first, unless <strong>Ask before loading</strong> is off</td>
+</tr>
+<tr>
+<td>Load a damaged slot (fallback on)</td>
+<td>Loads the newest good backup; the status line says "Restored from backup (date)" and the menu stays open so the player can read it</td>
+</tr>
+<tr>
+<td>Restore backup (fallback off)</td>
+<td>Puts the newest good backup back; asks first only when <strong>Ask before restoring a backup</strong> is on</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Asks "Delete …? This cannot be undone." first</td>
+</tr>
+<tr>
+<td>Save, with <strong>Players can name their saves</strong> on</td>
+<td>Asks for a name in the same question (and "Overwrite …?" over a used slot); Enter saves. The name becomes <code>SaveKit.SlotName</code></td>
+</tr>
+<tr>
+<td>Rename (Save mode, <strong>Players can name their saves</strong> on)</td>
+<td>Asks for the new name; the save time stays</td>
+</tr>
+<tr>
+<td>Copy (Save mode, <strong>Players can copy a save</strong> on)</td>
+<td>Copies the save into the first empty slot, with its picture; says so when every slot is used</td>
+</tr>
+</tbody>
+</table></div>
+<p>While a save, load or restore runs, the Back button is disabled, and closing waits for it to finish so the result line is never lost.</p>
+<h3 id="menu-settings">Menu settings <a class="anchor" href="#menu-settings" aria-label="Link to this section">#</a></h3>
+<p>On the <code>SaveMenu</code> component:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Theme</strong>, <strong>Words</strong></td>
+<td>the default assets</td>
+<td>The look and the words</td>
+</tr>
+<tr>
+<td><strong>Ask before loading</strong> (<code>ConfirmLoad</code>)</td>
+<td>on</td>
+<td>Ask before loading</td>
+</tr>
+<tr>
+<td><strong>Ask before restoring a backup</strong> (<code>ConfirmRestore</code>)</td>
+<td>off</td>
+<td>Ask before Restore backup</td>
+</tr>
+<tr>
+<td><strong>List autosaves in the Load menu</strong> (<code>ShowAutosavesInLoadMode</code>)</td>
+<td>on</td>
+<td>The player can load an autosave from the Load menu</td>
+</tr>
+<tr>
+<td><strong>List the quicksave in the Load menu</strong> (<code>ShowQuicksaveInLoadMode</code>)</td>
+<td>on</td>
+<td>The player can load the quicksave from the Load menu</td>
+</tr>
+<tr>
+<td><strong>Take a picture for each save</strong> (<code>CaptureThumbnail</code>)</td>
+<td>on</td>
+<td>Take a thumbnail just before the Save menu shows</td>
+</tr>
+<tr>
+<td><strong>Camera for the picture (empty: main camera)</strong> (<code>ThumbnailCamera</code>)</td>
+<td>empty (<code>Camera.main</code>)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Pause the game while open</strong> (<code>PauseTimeWhileOpen</code>)</td>
+<td>off</td>
+<td>Sets <code>Time.timeScale</code> to 0 while open and puts it back on close</td>
+</tr>
+<tr>
+<td><strong>Close after loading</strong> (<code>CloseAfterLoad</code>)</td>
+<td>on</td>
+<td>A load that used a backup keeps the menu open</td>
+</tr>
+<tr>
+<td><strong>Close after saving</strong> (<code>CloseAfterSave</code>)</td>
+<td>off</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Back key</strong> (<code>CloseKey</code>)</td>
+<td>Escape</td>
+<td>The key that backs out of a question or the menu; None for no key</td>
+</tr>
+<tr>
+<td><strong>The gamepad's back button backs out too</strong> (<code>CloseWithGamepad</code>)</td>
+<td>on</td>
+<td>Whether the gamepad's East button (B, Circle) backs out too</td>
+</tr>
+<tr>
+<td><strong>Players can name their saves</strong> (<code>PlayerNamedSaves</code>)</td>
+<td>off</td>
+<td>Ask for a name when saving, and show Rename on saved slots</td>
+</tr>
+<tr>
+<td><strong>Players can copy a save</strong> (<code>AllowCopy</code>)</td>
+<td>off</td>
+<td>Show Copy on saved slots in the Save menu</td>
+</tr>
+<tr>
+<td><strong>Your own question box</strong> (<code>Confirmation</code>)</td>
+<td>empty</td>
+<td>A component implementing <code>ISaveMenuConfirmation</code>, used instead of the menu's own dialog. When it also implements <code>ISaveMenuNamePrompt</code>, names are asked through it too</td>
+</tr>
+<tr>
+<td><strong>Events</strong></td>
+<td>empty</td>
+<td>On Opened, On Closed, On Selection Moved, On Question Asked, On Saved, On Loaded, On Deleted, On Restored, On Failed (UnityEvents, for sounds and effects)</td>
+</tr>
+</tbody>
+</table></div>
+<p>The menu raises <code>Opened</code>, <code>Closed</code>, <code>SaveFinished</code>, <code>LoadFinished</code>, <code>DeleteFinished</code> and <code>RestoreFinished</code>, and exposes <code>IsOpen</code>, <code>IsBusy</code>, <code>Mode</code>, <code>Cards</code>, <code>StatusMessage</code>, <code>Tab</code> (with <code>SetTab</code>) and <code>TabsShown</code>. In Load Saved Scenes mode a load replaces the loaded scenes, so keep the menu in a scene that stays loaded, or under <code>DontDestroyOnLoad</code>, if you need <code>LoadFinished</code>.</p>
+<p><a id="menu-layout"></a></p>
+<h3 id="the-menus-look-and-layout">The menu's look and layout <a class="anchor" href="#the-menus-look-and-layout" aria-label="Link to this section">#</a></h3>
+<p>The look lives on a <strong>Menu Theme</strong> asset: every colour, the TextMesh Pro font (empty uses TMP's default), seven font sizes, <strong>Corner Radius</strong> (0 to 48), <strong>Selection Outline</strong> (1 to 8) and <strong>Card Spacing</strong> (0 to 64). Its <strong>Layout</strong> block (<code>MenuTheme.Layout</code>, a <code>MenuLayout</code>) arranges the menu without any prefab edit:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Columns</strong></td>
+<td>1</td>
+<td>1 is the list; 2 to 4 is a grid of tiles with the picture on top and the buttons at the bottom</td>
+</tr>
+<tr>
+<td><strong>Card Height</strong></td>
+<td>184</td>
+<td>A list card's height, 140 to 320. Grid tiles size themselves</td>
+</tr>
+<tr>
+<td><strong>Show Thumbnail</strong>, <strong>Show Date</strong>, <strong>Show Playtime</strong>, <strong>Show Location</strong>, <strong>Show Summary</strong>, <strong>Show Badges</strong></td>
+<td>on</td>
+<td>Which details a card shows. A hidden row leaves no gap; "Empty" on an empty slot always shows</td>
+</tr>
+<tr>
+<td><strong>Placement</strong></td>
+<td>Centre</td>
+<td>The panel in the centre, or against the left or right edge (56 pixels in)</td>
+</tr>
+<tr>
+<td><strong>Width</strong></td>
+<td>1440</td>
+<td>The panel's width, 900 to 1800. A list uses at least 1200</td>
+</tr>
+<tr>
+<td><strong>Show Title</strong></td>
+<td>on</td>
+<td>The title, the line under it and the accent bar</td>
+</tr>
+<tr>
+<td><strong>Dim Background</strong></td>
+<td>on</td>
+<td>Off leaves the game in full view; the clear backdrop still takes the clicks</td>
+</tr>
+<tr>
+<td><strong>Show Status</strong></td>
+<td>on</td>
+<td>The status line under the list</td>
+</tr>
+<tr>
+<td><strong>Show Tabs</strong></td>
+<td>off</td>
+<td>The Load menu's All, Saves and Autosaves tabs, when autosaves or the quicksave are listed. The list moves down 64 pixels to make room</td>
+</tr>
+<tr>
+<td><strong>Newest First</strong></td>
+<td>off</td>
+<td>Saves listed by save time, newest at the top, in both modes; empty slots follow in slot order</td>
+</tr>
+<tr>
+<td><strong>Fade In Seconds</strong></td>
+<td>0</td>
+<td>How long the menu fades in as it opens, 0 to 1</td>
+</tr>
+<tr>
+<td><strong>Button Fade Seconds</strong></td>
+<td>0.08</td>
+<td>How long a button takes to change colour, 0 to 1</td>
+</tr>
+</tbody>
+</table></div>
+<p>The defaults are the menu's original look. <code>SlotListLayout</code>, on the list's content, lays one column out exactly as a vertical layout group did, and a grid with equal tiles per row; in a grid, left and right move along a row and down goes from a tile into its buttons, then to the tile below. With the default layout, a prefab variant of the menu or the card keeps its own panel, title and card arrangement; a changed layout arranges them as described above. A card or menu that does not name its layout areas always keeps its own arrangement.</p>
+<p>One part can differ from its theme: its <strong>Themed Element</strong> has <strong>Override Colour</strong> and <strong>Override Font Size</strong>. <strong>Assets → Create → All In One Save Kit → Menu Theme from a Style</strong> starts a new theme from any ready-made one. Six ready-made themes are in <code>UI/Settings/Styles</code>: Dark (the default), Light, Fantasy, Sci-fi, Cozy and Minimal. The <a href="#menu-style">Menu Style window</a> edits all of this.</p>
+<h3 id="controls">Controls <a class="anchor" href="#controls" aria-label="Link to this section">#</a></h3>
+<ul>
+<li><strong>Mouse and touch</strong> work through uGUI pointer events. Buttons are at least 64 pixels tall at the 1920×1080 reference resolution.</li>
+<li><strong>Keyboard and gamepad</strong> work through uGUI navigation, with the old Input Manager, the Input System, or both: arrow keys or the d-pad move between cards and their buttons, Submit presses, Cancel (Escape, or East/B on a gamepad) closes the open confirmation, or else the menu.</li>
+<li>Something is always selected while the menu is open, and the list scrolls to keep the selected card in view, also with 99 slots.</li>
+<li>Closing the menu gives the selection back to whatever was selected before it opened, such as your pause menu's Save button.</li>
+</ul>
+<p><strong>Test hotkeys.</strong> The <code>SaveMenuHotkeys</code> component, which the Start window and the wizard add with the menu, opens the Save menu with F5 and the Load menu with F9; the same key again closes it. <strong>Active In</strong> says where the keys work: <strong>Editor Only</strong> (the default: while you test in Play Mode, never in a built game), <strong>Editor And Builds</strong>, or <strong>Off</strong>. Change the keys with <strong>Save Key</strong> and <strong>Load Key</strong>, or set one to None. It works with both input systems.</p>
+<p><a id="game-menu"></a></p>
+<h3 id="the-game-menu">The Game Menu <a class="anchor" href="#the-game-menu" aria-label="Link to this section">#</a></h3>
+<p><code>GameMenu.prefab</code> in <code>UI/Prefabs</code>. Its own canvas sits under the save menu's (sort order 90 to the menu's 100), so Save Game and Load Game open over it.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Theme</strong>, <strong>Text</strong></td>
+<td>the default assets</td>
+<td>The same look and words as the save menu</td>
+</tr>
+<tr>
+<td><strong>Where the buttons sit</strong> (<code>Placement</code>)</td>
+<td>Centre</td>
+<td>The panel in the centre, or 96 pixels in from the left or right edge</td>
+</tr>
+<tr>
+<td><strong>Show Continue</strong>, <strong>Show New Game</strong>, <strong>Show Load Game</strong>, <strong>Show Quit</strong></td>
+<td>on</td>
+<td>Which buttons show</td>
+</tr>
+<tr>
+<td><strong>Show Save Game</strong>, <strong>Show Reset Progress</strong></td>
+<td>off</td>
+<td>Save Game opens the save menu to save; Delete All Saves deletes every save after asking</td>
+</tr>
+<tr>
+<td><strong>Save Menu</strong></td>
+<td>empty</td>
+<td>The save menu Save Game and Load Game open</td>
+</tr>
+<tr>
+<td><strong>Open On Start</strong></td>
+<td>on</td>
+<td>Off for a pause menu</td>
+</tr>
+<tr>
+<td><strong>Toggle Key</strong></td>
+<td>None</td>
+<td>A key that opens and closes it, such as Escape for a pause menu. Ignored while the save menu or a question is open</td>
+</tr>
+<tr>
+<td><strong>Close When Playing</strong></td>
+<td>on</td>
+<td>Hide it once Continue, New Game or a load from the save menu has started the game</td>
+</tr>
+<tr>
+<td>Title, line under it</td>
+<td>the game's name; none</td>
+<td>The words are Menu Text's <strong>Game Menu Title</strong> (empty: <code>Application.productName</code>) and <strong>Game Menu Subtitle</strong> (empty: none); the theme's Layout switches each off</td>
+</tr>
+<tr>
+<td><strong>Continue Scene</strong>, <strong>New Game Scene</strong>, <strong>Quit Scene</strong></td>
+<td>empty</td>
+<td>Scenes to load first, for New Game, and for Quit (empty quits the game, or stops Play Mode in the Editor)</td>
+</tr>
+<tr>
+<td><strong>Ask Before Quitting</strong>, <strong>Ask Before New Game</strong></td>
+<td>on</td>
+<td>Ask "without saving?" when <code>SaveKit.HasUnsavedProgress</code> is true</td>
+</tr>
+<tr>
+<td><strong>Reset Includes Settings</strong></td>
+<td>off</td>
+<td>Whether Delete All Saves takes the global file too</td>
+</tr>
+<tr>
+<td><strong>Events</strong></td>
+<td>empty</td>
+<td>On Opened, On Closed, On Continued, On New Game, On Reset, On Quitting, On Failed</td>
+</tr>
+</tbody>
+</table></div>
+<p><code>Open()</code>, <code>Close()</code>, <code>Toggle()</code> and <code>Refresh()</code> (which greys Continue in or out) are public, as are <code>Continue()</code>, <code>NewGame()</code>, <code>SaveGame()</code>, <code>LoadGame()</code>, <code>ResetProgress()</code> and <code>Quit()</code> for your own buttons.</p>
+<p><a id="saving-indicator"></a></p>
+<h3 id="the-saving-indicator">The saving indicator <a class="anchor" href="#the-saving-indicator" aria-label="Link to this section">#</a></h3>
+<p><code>SavingIndicator.prefab</code> in <code>UI/Prefabs</code>: its own canvas at sort order 200, which never takes a click.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Theme</strong>, <strong>Text</strong></td>
+<td>the default assets</td>
+<td>Box colour (Dialog), words colour (Dialog Text), each state's icon and colour, font and corner roundness; the full words are in Menu Text, Saving indicator, the short ones in Short words</td>
+</tr>
+<tr>
+<td><strong>Display as</strong></td>
+<td>the theme's (icon and short text)</td>
+<td>Full text, short text, icon, icon in its colour, icon and short text, or none</td>
+</tr>
+<tr>
+<td><strong>Position</strong></td>
+<td>the theme's (bottom right, 40 in)</td>
+<td>Six places on the screen's edges or Custom (anchor plus offset), with a margin; it glides to a new place</td>
+</tr>
+<tr>
+<td><strong>Spin the icon while saving</strong></td>
+<td>on</td>
+<td>Turn the ring while the save runs</td>
+</tr>
+<tr>
+<td><strong>Show it for autosaves</strong> (<code>Autosaves</code>), <strong>Show it for the quicksave</strong> (<code>Quicksave</code>), <strong>Show it for numbered slots</strong> (<code>Slots</code>)</td>
+<td>on</td>
+<td>Which saves show it</td>
+</tr>
+<tr>
+<td><strong>Show it for the player's settings</strong> (<code>GlobalFile</code>)</td>
+<td>off</td>
+<td>Saving the player's settings (the global file) shows it</td>
+</tr>
+<tr>
+<td><strong>Show "Saving..." for at least</strong> (<code>MinimumSeconds</code>)</td>
+<td>1</td>
+<td>The least time "Saving..." shows</td>
+</tr>
+<tr>
+<td><strong>Show "Saved" for</strong> (<code>SavedSeconds</code>)</td>
+<td>1</td>
+<td>How long "Saved" shows; 0 goes straight to fading</td>
+</tr>
+<tr>
+<td><strong>Say when a save fails</strong></td>
+<td>on</td>
+<td>"Save failed" when a save did not work</td>
+</tr>
+<tr>
+<td><strong>Time to fade in and out</strong> (<code>FadeSeconds</code>)</td>
+<td>0.25</td>
+<td>Fade in and out; 0 is at once</td>
+</tr>
+<tr>
+<td><strong>Keep it when a new scene loads</strong></td>
+<td>on</td>
+<td><code>DontDestroyOnLoad</code> when it is a root object</td>
+</tr>
+</tbody>
+</table></div>
+<p>Times are real time, so it works while the game is paused. A save that never reports back is given up after 30 seconds. One indicator is kept across scene loads: a scene that holds another adds no second one. <code>Corner</code>, <code>ShowWords</code> and <code>ShowIcon</code> still work from code: setting one gives the indicator its own position or display. An indicator set up with another corner, margin or with words or icon off keeps that look after updating, and a Menu Text whose Saving indicator words were changed keeps them as its short words.</p>
+<p><a id="screens-and-safe-area"></a></p>
+<h3 id="every-screen-and-the-safe-area">Every screen and the safe area <a class="anchor" href="#every-screen-and-the-safe-area" aria-label="Link to this section">#</a></h3>
+<p>The menu prefabs scale with the Canvas Scaler's <strong>Expand</strong> mode at a 1920×1080 reference: the whole design always fits, on 720p to 4K, 21:9 ultrawide, 4:3 and phones held upright, with more room around it on wider or taller screens. Each panel (the save menu's, the Game Menu's, the indicator's and the notes' boxes) sits under a <strong>Safe Area Panel</strong> object, which shrinks to <code>Screen.safeArea</code>: clear of a phone's notch, rounded corners and home bar, and of a TV's overscan. The dim backdrops still cover the whole screen. <strong>Phones held upright.</strong> Each kit canvas also has an <strong>Orientation Scaler</strong>, which picks the reference size when the screen's shape changes (a phone turning), with no per-frame cost. With the theme's <strong>Layout &gt; Portrait</strong> on <strong>Auto</strong> (the default), a screen taller than wide gets a phone layout drawn 760 units wide: on a 1080-pixel-wide phone, body text is about 31 pixels and buttons about 90 (a comfortable touch target); the save menu fills the safe width less 16 units each side, with one column of tiles; the Game Menu takes 80% of the safe width; a question is never wider than the screen. <strong>Landscape</strong> keeps the 1920×1080 layout, scaled down to fit. <strong>Custom</strong> draws the phone layout at <strong>Portrait Width</strong> (600 to 1080; smaller makes everything bigger).</p>
+<p>On a screen with no unsafe edges nothing changes. <code>SafeAreaPanel.Simulated = new Rect(0.04f, 0.05f, 0.92f, 0.88f);</code> tries an inset on a desktop; <code>null</code> goes back to the screen's own. A world-space canvas is not fitted.</p>
+<p><a id="save-notes"></a></p>
+<h3 id="the-save-notes">The save notes <a class="anchor" href="#the-save-notes" aria-label="Link to this section">#</a></h3>
+<p><code>SaveNotes.prefab</code> in <code>UI/Prefabs</code>: its own canvas at sort order 199, which never takes a click.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Theme</strong>, <strong>Text</strong></td>
+<td>the default assets</td>
+<td>As the indicator; the sentences are in Menu Text, Save notes</td>
+</tr>
+<tr>
+<td><strong>Display as</strong></td>
+<td>the theme's (icon and short text)</td>
+<td>As the indicator</td>
+</tr>
+<tr>
+<td><strong>Position</strong></td>
+<td>the theme's (top centre, 40 in)</td>
+<td>As the indicator</td>
+</tr>
+<tr>
+<td><strong>Note loads that worked</strong> (<code>Loads</code>), <strong>Note saves that came back from a backup</strong> (<code>Restores</code>), <strong>Note saves and loads that failed</strong> (<code>Failures</code>)</td>
+<td>on</td>
+<td>Which news gets a note</td>
+</tr>
+<tr>
+<td><strong>Note saves that worked</strong> (<code>Saves</code>)</td>
+<td>off</td>
+<td>A save that worked (the indicator already shows it)</td>
+</tr>
+<tr>
+<td><strong>Show each note for</strong> (<code>ShowSeconds</code>)</td>
+<td>2.5</td>
+<td>How long a note stays</td>
+</tr>
+<tr>
+<td><strong>Time to fade in and out</strong> (<code>FadeSeconds</code>)</td>
+<td>0.25</td>
+<td>Fade in and out (it grows the last few percent as it appears); 0 is at once</td>
+</tr>
+<tr>
+<td><strong>Keep the notes when a new scene loads</strong></td>
+<td>on</td>
+<td><code>DontDestroyOnLoad</code> when it is a root object</td>
+</tr>
+</tbody>
+</table></div>
+<p>Loads and saves of the global file never get a note. A failure is not hidden by a "Loaded" in the same frame, nor "Restored" by the "Loaded" of the same load.</p>
+<p><strong>Pause menus.</strong> A pause menu that reads Escape itself should check <code>saveMenu.ConsumedCancelThisFrame</code> and <code>saveMenu.IsOpen</code> in <code>LateUpdate</code>, as in the example above, so one key press does not close both.</p>
+<p><a id="editor-tools"></a></p>
+<h2 id="editor-tools">Editor tools <a class="anchor" href="#editor-tools" aria-label="Link to this section">#</a></h2>
+<p>Every tool is under <strong>Tools → All In One Save Kit</strong>.</p>
+<p><a id="the-start-window"></a></p>
+<h3 id="the-start-window">The Start window <a class="anchor" href="#the-start-window" aria-label="Link to this section">#</a></h3>
+<p><strong>Tools → All In One Save Kit → Start.</strong> It opens by itself once per project, the first time the kit loads in a project without a settings asset (never in batch mode or in Play Mode). With <strong>Show this window when the project opens</strong> ticked on its <strong>Help and support</strong> page, it also opens once each time the project opens.</p>
+<ul>
+<li><strong>The status strip</strong> checks what a first save needs, each with a one-click fix that <strong>Edit → Undo</strong> takes back:</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Settings found</strong></td>
+<td><strong>Create</strong> makes the settings asset and the three registries with the recommended defaults</td>
+</tr>
+<tr>
+<td><strong>Scene saved</strong></td>
+<td><strong>Save scene</strong> saves the open scene, asking where when it is still Untitled</td>
+</tr>
+<tr>
+<td><strong>Scene in Build Settings</strong></td>
+<td><strong>Add</strong> lists the open scene in Build Settings (once it is saved)</td>
+</tr>
+<tr>
+<td><strong>Hotkeys on</strong></td>
+<td><strong>Add</strong> puts the save menu, an EventSystem and the F5 / F9 test hotkeys in the open scene; <strong>Turn on</strong> switches hotkeys that are off back on, in the Editor only</td>
+</tr>
+<tr>
+<td><strong>Menu text ready</strong></td>
+<td><strong>Import</strong> adds TextMesh Pro's essential resources (a font and its settings) straight away; without them the menu and the demos show no text. Importing cannot be undone, and does not need to be</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Make objects remember their state</strong> adds a Saveable to every object selected in the Hierarchy, ticking the fields that look like state. <strong>Suggest objects in this scene</strong> lists objects that look like they change during play, as the scene scan does.</li>
+<li><strong>Add a save/load menu</strong> chooses where the test hotkeys work (<strong>Editor only</strong>, <strong>Editor and builds</strong> or <strong>Off</strong>) and adds the menu to the open scene, optionally with the scene in Build Settings, and imports TextMesh Pro's essential resources when they are missing. When a demo scene is opened in a project without them, the kit asks once per editor session whether to import them.</li>
+<li><strong>The footer</strong> opens the settings, the Setup Wizard, the Save Inspector and Diagnostics, selects the Quick Start, Guide and Troubleshooting documents in the Project window, and opens <strong>Help and support</strong>.</li>
+<li><strong>Help and support</strong> shows the kit's version, buttons that select each document, the Discord invite, the bug tracker, Discussions, the website and the e-mail address as selectable text with <strong>Copy</strong> buttons, <strong>Copy system info</strong> (kit version, Unity version, render pipeline, platform) and <strong>Report a bug</strong> (see <a href="#other-menu-commands">Other menu commands</a>), and the switch <strong>Show this window when the project opens</strong> (off by default). The kit never opens a browser or another program; every address is there to copy.</li>
+<li><strong>Save values from my scripts</strong> shows <code>SaveKit.Data.Set</code>, <code>SaveKit.Data.Get</code>, <code>SaveKit.Save</code> and <code>SaveKit.Load</code> in a few lines, with <strong>Copy the code</strong>.</li>
+<li><strong>Make it yours</strong> opens the <a href="#menu-style">Menu Style</a> window. The footer's <strong>Menu Style</strong> button and the <strong>Add a save/load menu</strong> flow's <strong>Make it yours</strong> button open it too.</li>
+</ul>
+<p><a id="menu-style"></a></p>
+<h3 id="menu-style">Menu Style <a class="anchor" href="#menu-style" aria-label="Link to this section">#</a></h3>
+<p><strong>Tools → All In One Save Kit → Menu Style</strong>, also <strong>Make it yours</strong> in the Start window. It edits the save menu in the open scene; with none, <strong>Add the save menu to this scene</strong> adds the prefab (one Undo step). With several, a list picks one.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Tab</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Style</strong></td>
+<td><strong>Use</strong> applies one of the six styles: colours, sizes and shape. The menu's font, layout, words and message choices are kept</td>
+</tr>
+<tr>
+<td><strong>Messages</strong></td>
+<td>Display as for the indicator, the notes, the status line and the badges; where the indicator and the notes sit, and the glide time; the state colours; each kind's icon and own display. The preview switches to <strong>Messages</strong></td>
+</tr>
+<tr>
+<td><strong>Colours</strong></td>
+<td>Every colour of the theme, in Surfaces, Text, Accents, Buttons and Badges, with a warning for each pair of colours that reads badly (body text below 4.5:1, labels below 3:1)</td>
+</tr>
+<tr>
+<td><strong>Text and shape</strong></td>
+<td>Font, font sizes, corner roundness, selection outline, gap between cards</td>
+</tr>
+<tr>
+<td><strong>Layout</strong></td>
+<td>Every setting of <a href="#menu-layout">the menu's layout</a>, and <strong>Back to the original layout</strong></td>
+</tr>
+<tr>
+<td><strong>Words</strong></td>
+<td>Every line of the menu's <strong>Menu Text</strong>, grouped, with what <code>{0}</code> means under each line and a warning when a line would show wrongly. Edits go to a draft; <strong>Save as my text</strong> keeps them, <strong>Start again</strong> drops them. Closing the window with unsaved words asks first</td>
+</tr>
+<tr>
+<td><strong>Share</strong></td>
+<td><strong>Export this style...</strong> writes the theme with its layout and the words to a <code>.json</code> file (a font goes by its GUID and name). <strong>Import a style...</strong> reads one into the menu's own copies; a font the project lacks is left as it is, and the window says so</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The first change makes the game's own copy, <code>MyMenuTheme</code> or <code>MyMenuText</code>, in <code>Menu</code> inside your data folder (<code>Assets/AllInOneSaveKitData/Menu</code> by default) and assigns it to the menu. A second menu, or the same menu after an undo, gets that same copy. The kit's assets are never changed.</li>
+<li>Each action is one Undo step. <strong>Undo</strong> after a style or an import puts the menu back on its old theme; the copy stays in your data folder and is used again next time.</li>
+<li><strong>Preview</strong> draws a copy of the menu with made-up saves in a preview scene of its own, in Save or Load mode. It never adds anything to, changes or marks as changed the open scene.</li>
+</ul>
+<p><a id="setup-wizard"></a></p>
+<h3 id="setup-wizard">Setup Wizard <a class="anchor" href="#setup-wizard" aria-label="Link to this section">#</a></h3>
+<p><strong>Tools → All In One Save Kit → Setup Wizard.</strong> Running it again edits the settings that are there. Each step has <strong>Back</strong>, <strong>Skip</strong> and <strong>Apply and continue</strong>; each Apply is one Undo step.</p>
+<p><a id="game-presets"></a><strong>What kind of game is it?</strong> Step 1 starts with presets. Picking one lists exactly what it would change, before anything changes; <strong>Use these settings</strong> puts the values into the step, and <strong>Apply and continue</strong> applies them as one Undo step. The settings asset's <strong>Basics</strong> tab has the same row, which applies at once as one Undo step.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Preset</th>
+<th>Sets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Story / RPG</strong></td>
+<td>20 slots, quicksave on, autosave on quit and when a scene loads, timer off, 3 autosave files, pictures on</td>
+</tr>
+<tr>
+<td><strong>Roguelike</strong></td>
+<td>1 slot, quicksave off, autosave on quit only, 1 autosave file, pictures off. The player does not pick slots: save and load slot 1 from code, or rely on the autosave</td>
+</tr>
+<tr>
+<td><strong>Arcade / mobile</strong></td>
+<td>1 slot, quicksave off, autosave on quit and when a scene loads, timer off, 1 autosave file, pictures off, compact (never indented) and compressed files</td>
+</tr>
+<tr>
+<td><strong>Custom</strong></td>
+<td>Nothing</td>
+</tr>
+</tbody>
+</table></div>
+<p>Presets never change encryption, the passphrase or key, the save folder or file names. Lowering the slot count warns that saves in the higher slots stay on disk but stop showing in the menu. Turning on compression is safe for saves already written: each file says how it was packed.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Step</th>
+<th>What you choose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Where saves go</td>
+<td>Where the settings and registries go (<strong>Kit settings folder</strong>, when the project has none yet), <strong>Save folder</strong>, <strong>Slot file names</strong> and <strong>File extension</strong>. Folded away under <strong>Slots and autosave</strong>: <strong>Save slots</strong> (1 to 99), <strong>Quicksave slot</strong>, <strong>Autosave when the game quits</strong>, <strong>Autosave every few minutes</strong> (with <strong>Seconds between autosaves</strong>), <strong>Autosave when a scene loads</strong>, <strong>Autosave files</strong> and <strong>Start the kit by itself</strong> (on).</td>
+</tr>
+<tr>
+<td>2. Menu and hotkeys</td>
+<td>Adds <strong>Save menu</strong>, <strong>Test hotkeys (F5 / F9)</strong> with <strong>Work in</strong> (Editor only by default) and an <strong>EventSystem</strong> to the open scene, and the scene itself to Build Settings (on when the scene is saved and not listed yet); checks for TextMesh Pro's essential resources and offers <strong>Import TMP Essentials</strong></td>
+</tr>
+<tr>
+<td>Finish</td>
+<td>Lists everything the wizard created or changed, with buttons to open the Start window, select the settings asset and open the Save Inspector</td>
+</tr>
+</tbody>
+</table></div>
+<p>The first Apply creates the settings asset and the three registries in your data folder and fills the Prefab and Scene Registries. The wizard adds no code. With <strong>Start the kit by itself</strong> on, none is needed; with it off, start the kit as <a href="guide.html#starting-the-kit-in-your-game">Starting the kit in your game</a> shows.</p>
+<p><a id="the-settings-inspector"></a></p>
+<h3 id="the-settings-assets-inspector">The settings asset's Inspector <a class="anchor" href="#the-settings-assets-inspector" aria-label="Link to this section">#</a></h3>
+<p>Select <code>AllInOneSaveKitSettings</code> to edit it. <strong>Basics</strong> holds the <a href="#game-presets">game presets</a>, where saves go, slots, autosave, start-up and Console messages. <strong>Advanced</strong> holds, each in a section that starts collapsed:</p>
+<ul>
+<li><strong>File names and the profile folder</strong>: <strong>Profile folder</strong> (see <a href="#profile-folders">Profile folders</a>), <strong>Shared file name</strong>, <strong>Autosave file names</strong>, <strong>Quicksave file name</strong>.</li>
+<li><strong>Categories</strong>: rename, add or remove categories, choose <strong>In each slot</strong> or <strong>One shared file</strong> for each, and pick where values from code and Saveable objects go (those two cannot be removed). <strong>Apply the categories</strong> applies them as one Undo step; <strong>Undo my edits</strong> goes back to what the asset holds.</li>
+<li><strong>Packing, encryption and backups</strong>: <strong>Indent the text</strong>, <strong>Compress</strong>, <strong>Encrypt</strong> with <strong>Passphrase</strong> and <strong>Generate</strong>, <strong>Older copies kept</strong>, <strong>Use a good copy by itself</strong>, <strong>A save edited by hand</strong>, and under <strong>Shared file</strong>, <strong>Write it differently</strong> with its own <strong>Indent the text</strong>, <strong>Compress</strong>, <strong>Encrypt</strong>, <strong>Older copies kept</strong> and <strong>File extension</strong> (see <a href="#the-global-files-own-options">The global file's own options</a>). <strong>Apply the file options</strong> applies them as one Undo step.</li>
+<li><strong>Game updates</strong>: <strong>Save version</strong> and <strong>Find migration steps by itself</strong> (see <a href="#save-versions">Save versions</a>).</li>
+<li><strong>World objects</strong>: <strong>When a save is loaded</strong> (see <a href="#load-modes">Load modes</a>) and the three registries.</li>
+<li><strong>Scene scan</strong>: lists objects in the open scenes that look stateful: a Rigidbody, a trigger collider (pickups, checkpoints), a script with fields named like state such as <code>isOpen</code> or <code>health</code>, a script that implements <code>ISaveable</code>, or a renderer that starts hidden. Tick the ones to keep; each gets a Saveable with the state-like fields already ticked.</li>
+</ul>
+<p><a id="the-play-mode-toast"></a></p>
+<h3 id="the-play-mode-toast">The Play Mode toast <a class="anchor" href="#the-play-mode-toast" aria-label="Link to this section">#</a></h3>
+<p>In the Editor, a short note at the top of the Game view says what each save or load did, for example "Saved Slot 1: 12 objects, 3 values" or "Loaded Slot 1: 11 restored, 1 skipped, Chest_02 not found (SK130). Click for details". A load of plain values only says how many values came back. A failed call names its code. Clicking the note opens the Save Inspector on that report. It is on by default; <strong>Tools → All In One Save Kit → Play Mode Toasts</strong> switches it off and on, per user. It is never added in batch mode and does not exist in builds.</p>
+<p><a id="save-inspector"></a></p>
+<h3 id="save-inspector">Save Inspector <a class="anchor" href="#save-inspector" aria-label="Link to this section">#</a></h3>
+<p><strong>Tools → All In One Save Kit → Save Inspector</strong> shows what is inside any save.</p>
+<ul>
+<li><strong>The list</strong> shows every save in the game's save folder, including a global file with its own extension, with a status badge (OK, Damaged, Wrong key, Missing, Unreadable, Newer version, Older version), Encrypted and Compressed badges, and a line with its backups, size, save version and local time. A damaged save with a good backup says so. <strong>Choose folder...</strong> looks at another folder, such as a copy of a player's save folder or one player's profile folder; <strong>Game's folder</strong> goes back. <strong>Refresh</strong> lists again. With <code>{profile}</code> in <strong>Profile Folder</strong>, the game's folder is the save folder itself until <code>SaveKit.ProfileId</code> is set; each player's saves are in a folder inside it, which <strong>Choose folder...</strong> opens.</li>
+<li><strong>The tree</strong> opens a save as file → category → scene → object → value. Scenes show their path and objects their saved name. A saved transform reads as one row, such as "Position (0, 0.5, 2)  Rotation (0°, 90°, 0°)  Scale (1, 1, 1)", and opens to the raw values; the playtime shows its clock time too. Pick a backup, the temporary file or a damaged copy from the copy menu to look at it instead of the main file. Encrypted saves open with your project's key, and edited readable saves open with a warning.</li>
+<li><strong>Search</strong> finds keys and values, ignoring case; matches stay visible and are highlighted. <strong>Expand all</strong> and <strong>Collapse all</strong> help with large saves.</li>
+<li><strong>Highlight:</strong> clicking an object row selects and pings that object when it is in an open scene.</li>
+<li><strong>Live view:</strong> in Play Mode, the <strong>Live view</strong> entry shows what a save would write right now, without writing anything. <strong>Auto refresh</strong> rebuilds it by itself, at most twice a second; <strong>Export...</strong> writes it as readable JSON.</li>
+<li><strong>Actions:</strong> <strong>Import...</strong> copies a player's save file into the folder for debugging; replacing a save that is there asks first and keeps the old one as a backup. <strong>Export readable...</strong> writes an indented, decrypted, unpacked copy. <strong>Restore backup</strong> puts the newest good backup of a damaged save back in place. <strong>Delete</strong> removes a save with its backups and thumbnail. <strong>Copy folder path</strong> copies the folder's path, to paste into Explorer's address bar. Right-click a file or a row for more, such as copying a value, a file's path or an object id.</li>
+<li><strong>Recent saves and loads</strong> lists the reports of the current Play session with the time of each (see <a href="#logging-and-reports">Logging and reports</a>).</li>
+</ul>
+<p><a id="diagnostics"></a></p>
+<h3 id="diagnostics">Diagnostics <a class="anchor" href="#diagnostics" aria-label="Link to this section">#</a></h3>
+<p><strong>Tools → All In One Save Kit → Diagnostics</strong> finds what would stop saves working. Choose what to check in the toolbar (<strong>Open scenes</strong>, <strong>Build Settings scenes</strong>, <strong>Prefabs</strong>) and press <strong>Run</strong>. Build Settings scenes are read one at a time without opening them. The kit's own folders are left out. Scenes and prefabs are checked outside Play Mode only.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Finds</th>
+<th>One-click fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DuplicateId</code></td>
+<td>Two Saveables sharing an id, in one scene or across the scenes checked</td>
+<td>Gives the copy a new id; the original keeps its own</td>
+</tr>
+<tr>
+<td><code>MissingId</code></td>
+<td>A scene Saveable without an id</td>
+<td>Assigns an id</td>
+</tr>
+<tr>
+<td><code>PrefabNotRegistered</code></td>
+<td>A prefab with a Saveable on its root that is not in the Prefab Registry, or carries the wrong prefab id</td>
+<td>Registers the prefab, or stamps the right id</td>
+</tr>
+<tr>
+<td><code>AssetNotRegistered</code></td>
+<td>A ticked field linking to an asset that neither the Asset Registry nor the Prefab Registry lists</td>
+<td>Registers the asset</td>
+</tr>
+<tr>
+<td><code>FieldNotSaveable</code></td>
+<td>A ticked field that cannot be saved, or no longer exists</td>
+<td>Unticks it</td>
+</tr>
+<tr>
+<td><code>SceneNotInBuildSettings</code></td>
+<td>A scene with Saveables that is not in Build Settings, so a load cannot open it in a build</td>
+<td>Adds it to Build Settings</td>
+</tr>
+<tr>
+<td><code>DefaultPassphrase</code></td>
+<td>Encryption on, for the slots or for the global file, with the default passphrase</td>
+<td>None: the message explains how to set your own</td>
+</tr>
+<tr>
+<td><code>UnsupportedBuildTarget</code></td>
+<td>A build target other than Windows: an error for WebGL, a warning for others</td>
+<td>None</td>
+</tr>
+<tr>
+<td><code>NoSettings</code>, <code>NoRegistries</code></td>
+<td>No settings asset, or a settings asset without its registries</td>
+<td>Opens the Setup Wizard</td>
+</tr>
+<tr>
+<td><code>MenuTextMissing</code></td>
+<td>TextMesh Pro's essential resources are not in the project, so the save menu and the demos show no text</td>
+<td>Imports them</td>
+</tr>
+</tbody>
+</table></div>
+<p>Each issue has a plain-English message, a <strong>Select</strong> button for the object it is about and, where a fix is safe, a fix button. <strong>Fix all</strong> runs every safe fix at once; it shows only when there is one. Every fix can be undone with <strong>Edit → Undo</strong>, except the import of TextMesh Pro's resources, which Fix all leaves out.</p>
+<p>At runtime, the kit adds its own warnings to the Console, such as a scene with Saveables that unloaded without being captured.</p>
+<p><a id="the-saveable-inspector"></a></p>
+<h3 id="the-saveable-inspector">The Saveable inspector <a class="anchor" href="#the-saveable-inspector" aria-label="Link to this section">#</a></h3>
+<p>The Saveable's inspector has these parts:</p>
+<ul>
+<li><strong>The summary:</strong> one sentence at the top that says what it saves, such as "Saves position, active state and 2 fields: Is Open, Gold."</li>
+<li><strong>What to save:</strong> the built-in savers <strong>Position</strong>, <strong>Active state</strong>, <strong>Destroyed</strong> with <strong>When it comes back</strong>, and <strong>Movement</strong> (physics), each with a one-line explanation.</li>
+<li><strong>Values from your scripts (the Field Picker):</strong> one group per component, with a ticked count, a <strong>Ticked only</strong> filter, greyed fields with their reasons, and a list of broken ticks with <strong>Untick</strong> buttons. Select a single object to use it.</li>
+<li><strong>The Start warning:</strong> when the script's own <code>Start</code> method may set a ticked field, a warning says so, because the kit restores saved values before <code>Start</code> runs (see <a href="guide.html#load-order-awake-restore-start">Load order</a>). It comes from a quick look through the script's text, so it says "may"; <strong>Dismiss</strong> hides it for that field in this project and <strong>Select script</strong> shows the script in the Project window.</li>
+<li><strong>Advanced: id and category</strong>, collapsed by default: the object's <strong>Id</strong> (read-only) with a <strong>New id</strong> button, which asks first because saves made so far no longer find the object (on a prefab asset, the <strong>Prefab id</strong>; in Play Mode, runtime objects show their <strong>Runtime id</strong>), and the <strong>Category</strong>, with "World category (World)" as the default and every category from the settings.</li>
+</ul>
+<p><a id="other-menu-commands"></a></p>
+<h3 id="other-menu-commands">Other menu commands <a class="anchor" href="#other-menu-commands" aria-label="Link to this section">#</a></h3>
+<p>Every command the kit adds under <strong>Tools → All In One Save Kit</strong>:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tools → All In One Save Kit → Start</strong></td>
+<td>Opens the Start window (see <a href="#the-start-window">The Start window</a>)</td>
+</tr>
+<tr>
+<td><strong>Tools → All In One Save Kit → Setup Wizard</strong></td>
+<td>Opens the Setup Wizard (see <a href="#setup-wizard">Setup Wizard</a>)</td>
+</tr>
+<tr>
+<td><strong>Tools → All In One Save Kit → Play Mode Toasts</strong></td>
+<td>Switches the Play Mode toast on and off (see <a href="#the-play-mode-toast">The Play Mode toast</a>)</td>
+</tr>
+<tr>
+<td><strong>Tools → All In One Save Kit → Report a Bug</strong></td>
+<td>Copies a bug report to the clipboard (kit, Unity and render pipeline versions, platform, the last three saves and loads, and Diagnostics' findings, with no file paths beyond the save folder's name and no saved values) and shows the bug report form's address, with what it can fill already filled, on the Start window's <strong>Help and support</strong> page to copy. Nothing opens in a browser. The Start window's <strong>Report a bug</strong> button does the same.</td>
+</tr>
+<tr>
+<td><strong>Tools → All In One Save Kit → Save Inspector</strong></td>
+<td>Opens the Save Inspector (see <a href="#save-inspector">Save Inspector</a>)</td>
+</tr>
+<tr>
+<td><strong>Tools → All In One Save Kit → Diagnostics</strong></td>
+<td>Opens Diagnostics (see <a href="#diagnostics">Diagnostics</a>)</td>
+</tr>
+<tr>
+<td><strong>Tools → All In One Save Kit → Registries → Rebuild Registries</strong></td>
+<td>Checks every prefab and Build Settings scene and brings the registries fully up to date</td>
+</tr>
+<tr>
+<td><strong>Tools → All In One Save Kit → Registries → Register Selected Assets</strong></td>
+<td>Adds the ScriptableObjects and prefabs selected in the Project window to the Asset Registry (see <a href="#the-registries">The registries</a>)</td>
+</tr>
+<tr>
+<td><strong>Tools → All In One Save Kit → Generators → Rebuild Menu Prefabs</strong></td>
+<td>Rebuilds the three menu prefabs, after asking. Variants, scenes and the default theme and text are kept.</td>
+</tr>
+<tr>
+<td><strong>Tools → All In One Save Kit → Generators → Rebuild Demo Scenes</strong></td>
+<td>Rebuilds the four demo scenes with their prefabs, settings and registries, after asking. Your own scenes, your Build Settings and your game's settings are not touched, and demo saves already made keep working (see <a href="guide.html#samples">Samples</a>).</td>
+</tr>
+<tr>
+<td><strong>Tools → All In One Save Kit → Samples → Build Co-op NGO Sample</strong></td>
+<td>Builds the co-op sample's scene and prefabs. It appears only once Netcode for GameObjects 2.x is installed in Unity 6 (see <a href="guide.html#samples">Samples</a>).</td>
+</tr>
+<tr>
+<td><strong>Tools → All In One Save Kit → Required Packages</strong></td>
+<td>Explains which of uGUI and, in Unity 2022.3, TextMesh Pro is missing and how to install it, and opens the Package Manager on it. It installs nothing itself. It appears only while one of them is missing (see <a href="guide.html#required-unity-packages">Required Unity packages</a>).</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<p><a id="performance"></a></p>
+<h2 id="performance">Performance <a class="anchor" href="#performance" aria-label="Link to this section">#</a></h2>
+<p><a id="background-work"></a></p>
+<h3 id="background-work">Background work <a class="anchor" href="#background-work" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>On the main thread, a save only captures: it reads the Saveables and copies the values. Reading the old file, migrating, merging, serialising, compressing, encrypting, writing and verifying, and writing the thumbnail and the slot cache, run on a background thread for every <code>Async</code> call and for <code>SaveInBackground</code>.</li>
+<li>A load reads, verifies, unpacks and migrates on a background thread, and only puts the values into the game on the main thread. This holds for every <code>Async</code> load and for <code>LoadInBackground</code>.</li>
+<li>The blocking calls (<code>Save</code>, <code>Load</code>, <code>SaveGlobal</code>, <code>LoadGlobal</code>, <code>Autosave</code>, <code>Quicksave</code>, <code>LoadQuicksave</code>, <code>LoadNewestAutosave</code> and <code>RestoreBackup</code>) do all of this on the calling thread. Use them where waiting is the point, such as when the game quits. The kit's own quit autosave is one of them; its timed and scene-change autosaves run in the background.</li>
+<li>Reading slot info for a menu (<code>GetSlotInfo</code>, <code>GetSlotInfos</code>, <code>GetAutosaveInfos</code>) reads files on the calling thread, but only once per change: the result is kept in <code>slots.index</code> until the file changes.</li>
+</ul>
+<p><a id="profiler-markers"></a></p>
+<h3 id="profiler-markers">Profiler markers <a class="anchor" href="#profiler-markers" aria-label="Link to this section">#</a></h3>
+<p>Each stage of a save and a load shows up in Unity's Profiler under its own marker, on the thread it ran on. Open <strong>Window → Analysis → Profiler</strong>, record while the game saves or loads, and find the markers in the CPU Usage module's Timeline view.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Marker</th>
+<th>Stage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AIOSK.Capture</code></td>
+<td>Gathering the values and the world before a save, on the main thread</td>
+</tr>
+<tr>
+<td><code>AIOSK.Serialize</code></td>
+<td>Turning the save tree into JSON text</td>
+</tr>
+<tr>
+<td><code>AIOSK.Compress</code></td>
+<td>GZip compression of the data</td>
+</tr>
+<tr>
+<td><code>AIOSK.Encrypt</code></td>
+<td>Encrypting the data and signing the file</td>
+</tr>
+<tr>
+<td><code>AIOSK.Write</code></td>
+<td>Every disk write: the temporary file, the swap into place, the backups, the thumbnail and the slot cache</td>
+</tr>
+<tr>
+<td><code>AIOSK.Verify</code></td>
+<td>Reading the temporary file back and checking it before it is swapped into place</td>
+</tr>
+<tr>
+<td><code>AIOSK.Read</code></td>
+<td>Every disk read</td>
+</tr>
+<tr>
+<td><code>AIOSK.Decrypt</code></td>
+<td>Checking the signature and decrypting the data</td>
+</tr>
+<tr>
+<td><code>AIOSK.Decompress</code></td>
+<td>Unpacking compressed data</td>
+</tr>
+<tr>
+<td><code>AIOSK.Parse</code></td>
+<td>Turning JSON text into the save tree and checking its checksum</td>
+</tr>
+<tr>
+<td><code>AIOSK.Migrate</code></td>
+<td>Running migration steps on an old save</td>
+</tr>
+<tr>
+<td><code>AIOSK.Restore</code></td>
+<td>Putting the loaded values back into the game and the world, on the main thread</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><code>AIOSK.Capture</code> and <code>AIOSK.Restore</code> always run on the main thread. With the <code>Async</code> and callback calls, the other ten run on a background thread, so the main thread shows no <code>AIOSK.Write</code> or <code>AIOSK.Read</code> during a background save. With the blocking calls they run on the calling thread.</li>
+<li>The markers cost next to nothing while the Profiler is not recording.</li>
+<li>The names are also constants in <code>SaveProfilerMarkers</code> (namespace <code>AllInOneSaveKit.Diagnostics</code>), such as <code>SaveProfilerMarkers.Write</code>, for code that reads the markers with Unity's <code>ProfilerRecorder</code>, for example in a performance test.</li>
+</ul>
+<p><a id="where-the-time-goes"></a></p>
+<h3 id="where-the-time-goes">Where the time goes <a class="anchor" href="#where-the-time-goes" aria-label="Link to this section">#</a></h3>
+<p>Main-thread time grows with the number of Saveables and ticked fields. Objects whose pose has not changed since the last save cost less, because the kit reuses their saved position. Every report records how long each stage took (<code>CaptureMilliseconds</code>, <code>SerializeMilliseconds</code>, <code>CompressMilliseconds</code>, <code>EncryptMilliseconds</code>, <code>StorageMilliseconds</code>, <code>RestoreMilliseconds</code> and <code>TotalMilliseconds</code>), with the file size and object counts. The Console's one-line report gives the total for every save and load, and at the Verbose log level the time of each stage too. The Save Inspector's report list shows them all.</p>
+<p><a id="compact-files-for-release"></a></p>
+<h3 id="compact-files-for-release">Compact files for release <a class="anchor" href="#compact-files-for-release" aria-label="Link to this section">#</a></h3>
+<p>With <strong>Pretty Print</strong> on Automatic, release builds write compact JSON, without indentation. For large worlds, switch on <strong>Compress</strong>: JSON usually shrinks several times.</p>
+<p><a id="measured-benchmarks"></a></p>
+<h3 id="measured-benchmarks">Measured benchmarks <a class="anchor" href="#measured-benchmarks" aria-label="Link to this section">#</a></h3>
+<p>The kit is built to these targets, measured in a release Windows build:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1: save 1,000 objects with 5 fields each</td>
+<td>Main-thread capture 8 ms or less; the whole save 100 ms or less</td>
+</tr>
+<tr>
+<td>P2: save 10,000 objects</td>
+<td>Main-thread capture 60 ms or less; compression makes the file at least 3 times smaller</td>
+</tr>
+<tr>
+<td>P3: restore 1,000 objects into a loaded scene</td>
+<td>50 ms or less on the main thread</td>
+</tr>
+<tr>
+<td>P4: a background save</td>
+<td>No disk work on the main thread, confirmed by the Profiler markers</td>
+</tr>
+</tbody>
+</table></div>
+<p>Results for 1.0.0. The machine: AMD Ryzen 7 5700X3D (8 cores, 16 threads), 32 GB RAM, AMD Radeon RX 9060 XT, Windows 11 (10.0.26200), Unity 6000.3.24f1, Built-in render pipeline, release Windows players. Every run is the worst case: every object is changed before every save, so nothing can be skipped. Times are medians of 30 measured saves or loads (P1 and P3) or 40 (P2) after warm-up runs, and a test passes when its median meets the target.</p>
+<p><strong>IL2CPP</strong> (the backend to ship with), two runs of the 1.0.0 code, given in run order:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Measured</th>
+<th>Target</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1: main-thread capture, 1,000 objects × 5 fields</td>
+<td>median 6.311 / 6.241 ms (90th percentile 7.57 ms in the first run)</td>
+<td>8 ms</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>P1: whole save, capture to file on disk (<code>SaveAsync</code> awaited)</td>
+<td>median 59.34 / 62.79 ms</td>
+<td>100 ms</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>P2: main-thread capture, 10,000 objects</td>
+<td>median 58.87 / 58.27 ms (90th percentile 77.5 / 79.4 ms)</td>
+<td>60 ms</td>
+<td>Pass on the median in both runs</td>
+</tr>
+<tr>
+<td>P2: file size, readable against compressed</td>
+<td>3,772,645 bytes readable, 811,127 bytes compressed: 4.65 times smaller</td>
+<td>3 times</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>P3: restore 1,000 objects into a loaded scene</td>
+<td>median 6.704 / 6.702 ms</td>
+<td>50 ms</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>P4: background save</td>
+<td>0 of 35 storage calls and 0 of 105 file-metadata calls on the main thread. In a development build, 0 <code>AIOSK.Write</code> samples on the main thread and 25 on background threads (release builds compile the markers out).</td>
+<td>none on the main thread</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>Automatic autosave thumbnail (informational)</td>
+<td>median 2.00 ms on the main thread (render and read back; the PNG is encoded on the background thread in 2.35 ms)</td>
+<td>n/a</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Single large captures can take longer than 60 ms.</strong> The P2 median meets the target, but only just, and the 90th percentile does not: 77 to 79 ms. So at least one capture of 10,000 changed objects in ten takes longer than the target. Earlier builds during development measured P2 medians of 52.9 to 54.7 ms; the 1.0.0 numbers above are the ones that describe the shipped code. A development build is slower and is not the target configuration.</p>
+<p><strong>Mono</strong> (release), one run of the 1.0.0 code:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Measured</th>
+<th>Target</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1: main-thread capture</td>
+<td>median 6.664 ms (90th percentile 7.63 ms)</td>
+<td>8 ms</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>P1: whole save</td>
+<td>median 70.46 ms</td>
+<td>100 ms</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>P2: main-thread capture, 10,000 objects</td>
+<td>median 66.60 ms</td>
+<td>60 ms</td>
+<td><strong>Fail</strong></td>
+</tr>
+<tr>
+<td>P2: file size</td>
+<td>4.65 times smaller</td>
+<td>3 times</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>P3: restore 1,000 objects</td>
+<td>median 11.09 ms</td>
+<td>50 ms</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>P4: background save</td>
+<td>0 of 35 storage calls on the main thread</td>
+<td>none on the main thread</td>
+<td>Pass</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Mono misses the P2 capture target.</strong> On Mono, capturing 10,000 changed objects in one go takes a median of 66.60 ms on this machine, over the 60 ms target. The capture makes a call into the engine and some small allocations for every object, and both cost more under Mono than under IL2CPP. Every other target holds on Mono. For release builds of games with very large worlds, build with IL2CPP (<strong>Player Settings → Other Settings → Scripting Backend</strong>).</p>
+<p><strong>Autosave and quicksave thumbnails.</strong> An autosave's or quicksave's own picture adds a median of 2.0 ms on the main thread (90th percentile 2.2 ms, slowest 2.9 ms; 20 pictures of a scene with a light and 100 cubes, release IL2CPP player run with a graphics device). The PNG, about 2.3 ms more, is made on the save's background thread.</p>
+<p>These are measurements on one machine, not guarantees: a slower CPU, a larger world or more fields per object take longer. The capture, and for an autosave or quicksave its picture, are the only parts of a save that hold the main thread; the capture grows with the number of saved objects and fields; the Profiler markers in <a href="#profiler-markers">Profiler markers</a> show where the time goes in your own game.</p>
+<hr />
+<p><a id="logging-and-reports"></a></p>
+<h2 id="logging-and-reports">Logging and reports <a class="anchor" href="#logging-and-reports" aria-label="Link to this section">#</a></h2>
+<h3 id="log-levels">Log levels <a class="anchor" href="#log-levels" aria-label="Link to this section">#</a></h3>
+<p>Every line the kit writes to the Console starts with <code>[All In One Save Kit]</code>, followed by the <code>SK</code> code when there is one.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>What reaches the Console</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Off</td>
+<td>Nothing</td>
+</tr>
+<tr>
+<td>Errors</td>
+<td>Failures only</td>
+</tr>
+<tr>
+<td>Warnings (default)</td>
+<td>Failures and warnings, including the warnings in each save and load report, and a one-line report for every save and load while <strong>Report To Console</strong> is on</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>Everything: the one-line report for every save and load, with the time of each stage, and information lines such as where the saves are kept</td>
+</tr>
+</tbody>
+</table></div>
+<p>Set <strong>Log Level</strong> in the settings asset; it applies when the kit starts. To change it while the game runs, set <code>SaveLog.Level</code> (namespace <code>AllInOneSaveKit.Diagnostics</code>). Use Verbose while you investigate a problem, and Warnings for release.</p>
+<h3 id="the-one-line-report">The one-line report <a class="anchor" href="#the-one-line-report" aria-label="Link to this section">#</a></h3>
+<p>With <strong>Report To Console</strong> on (under Diagnostics in the settings asset; off by default, so the Console stays quiet), every save and load prints one line at the Warnings and Verbose levels:</p>
+<pre><code class="language-text">[All In One Save Kit] Save slot_01.save: 12.4 ms, 5 categories, 214 values, 40 objects (3 spawned), 5321 bytes, 0 warnings
+[All In One Save Kit] Load slot_01.save: 9.8 ms, 5 categories, 214 values, 40 objects restored, 1 skipped, 5321 bytes, read from Backup1, 2 warnings
+</code></pre>
+<ul>
+<li>A save or load that failed says so after the file name, for example <code>Load slot_01.save failed with SK101 FileDamaged: ...</code>.</li>
+<li>"read from Backup1" means the load fell back to a backup; "skipped" counts saved objects that are no longer in the scene.</li>
+<li>At Verbose, the line also gives the time of each stage after a <code>|</code>: capture, serialize, compress, encrypt, storage and restore, and how many migration steps ran.</li>
+<li>Tick <strong>Report To Console</strong> to get the line at Warnings. The warnings themselves are always printed, and Verbose always prints the line; every report is also in the Save Inspector's Recent saves and loads. To change it while the game runs, set <code>SaveLog.ReportToConsole</code>.</li>
+</ul>
+<p>The kit does not print every failed call. A call refused before it starts, such as one that returns <code>SlotOutOfRange</code>, only appears in the result, so always check <code>Success</code> in your own code. The kit's own autosaves do print their failures.</p>
+<h3 id="the-report">The report <a class="anchor" href="#the-report" aria-label="Link to this section">#</a></h3>
+<p>Every save and load produces a <code>SaveReport</code>, available as <code>result.Report</code> and in the <code>Saved</code> and <code>Loaded</code> events:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Member</th>
+<th>What it holds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Operation</code>, <code>FileName</code></td>
+<td>What was done, to which file</td>
+</tr>
+<tr>
+<td><code>CaptureMilliseconds</code>, <code>SerializeMilliseconds</code>, <code>CompressMilliseconds</code>, <code>EncryptMilliseconds</code>, <code>StorageMilliseconds</code>, <code>RestoreMilliseconds</code>, <code>TotalMilliseconds</code></td>
+<td>Timings</td>
+</tr>
+<tr>
+<td><code>FileBytes</code>, <code>UnpackedBytes</code></td>
+<td>Size on disk, and size of the data once unpacked</td>
+</tr>
+<tr>
+<td><code>CategoryCount</code>, <code>ValueCount</code></td>
+<td>Categories and values</td>
+</tr>
+<tr>
+<td><code>ObjectCount</code>, <code>SpawnedCount</code>, <code>RestoredCount</code>, <code>DestroyedCount</code></td>
+<td>World objects saved or restored, runtime objects written or re-created, destroyed-list entries applied</td>
+</tr>
+<tr>
+<td><code>SkippedCount</code>, <code>SkippedObjects</code></td>
+<td>Saved objects that are no longer in the scene, as "name (id)"</td>
+</tr>
+<tr>
+<td><code>LoadedFrom</code>, <code>Packing</code>, <code>MigrationsRun</code></td>
+<td>Which copy was read, how the file was packed, which migration steps ran</td>
+</tr>
+<tr>
+<td><code>Warnings</code></td>
+<td>Each with its own code and detail</td>
+</tr>
+</tbody>
+</table></div>
+<p><code>report.ToString()</code> gives a one-line summary. Every finished report is also kept, whatever the log level, in <code>SaveLog.RecentReports</code> (the last 20 of the Play session), and <code>SaveLog.ReportAdded</code> fires for each one. The Save Inspector lists them under <strong>Recent saves and loads</strong>.</p>
+<pre><code class="language-csharp">using AllInOneSaveKit.Diagnostics;
+using UnityEngine;
+
+public class SaveDebugLog : MonoBehaviour
+{
+    void Awake()
+    {
+        SaveLog.Level = SaveLogLevel.Verbose;
+        SaveLog.ReportAdded += report =&gt; Debug.Log(&quot;Save report: &quot; + report);
+    }
+}
+</code></pre>
+<p><code>SaveLog.ReportAdded</code> handlers are dropped at the start of every Play session.</p>
+<hr />
+<div class="doc-pager"><a class="pager prev" href="steam-cloud.html"><span class="label">Previous</span>Steam Cloud</a><a class="pager next" href="api.html"><span class="label">Next</span>API reference</a></div>
+<p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+All+In+One+Save+Kit:+Reference" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#contents">Contents</a></li><li class="toc-2"><a href="#core-concepts">Core concepts</a></li><li class="toc-3"><a href="#the-save-tree">The save tree</a></li><li class="toc-3"><a href="#files-slots-the-global-file-autosaves-and-the-quicksave">Files: slots, the global file, autosaves and the quicksave</a></li><li class="toc-3"><a href="#file-names-and-the-save-folder">File names and the save folder</a></li><li class="toc-3"><a href="#profile-folders-several-players-on-one-pc">Profile folders: several players on one PC</a></li><li class="toc-3"><a href="#categories">Categories</a></li><li class="toc-3"><a href="#save-versions">Save versions</a></li><li class="toc-3"><a href="#the-settings-asset">The settings asset</a></li><li class="toc-2"><a href="#saving-plain-values">Saving plain values</a></li><li class="toc-3"><a href="#what-can-be-saved">What can be saved</a></li><li class="toc-3"><a href="#dictionaries">Dictionaries</a></li><li class="toc-2"><a href="#saving-and-loading">Saving and loading</a></li><li class="toc-3"><a href="#save-actions-save-events-and-save-point">Save Actions, Save Events and Save Point</a></li><li class="toc-3"><a href="#threads-and-the-file-queue">Threads and the file queue</a></li><li class="toc-2"><a href="#slots-and-slot-info">Slots and slot info</a></li><li class="toc-3"><a href="#what-a-slot-records">What a slot records</a></li><li class="toc-2"><a href="#world-persistence">World persistence</a></li><li class="toc-3"><a href="#parents">Parents</a></li><li class="toc-3"><a href="#load-modes">Load modes</a></li><li class="toc-3"><a href="#component-savers">Component savers</a></li><li class="toc-3"><a href="#physics">Physics</a></li><li class="toc-3"><a href="#dontdestroyonload-objects">DontDestroyOnLoad objects</a></li><li class="toc-3"><a href="#world-data-in-the-file">World data in the file</a></li><li class="toc-3"><a href="#the-registries">The registries</a></li><li class="toc-2"><a href="#reliability-and-recovery">Reliability and recovery</a></li><li class="toc-3"><a href="#crash-safe-writes">Crash-safe writes</a></li><li class="toc-3"><a href="#checksums">Checksums</a></li><li class="toc-3"><a href="#rotating-backups">Rotating backups</a></li><li class="toc-3"><a href="#automatic-fallback">Automatic fallback</a></li><li class="toc-3"><a href="#damaged-files-are-kept">Damaged files are kept</a></li><li class="toc-3"><a href="#disk-full-and-access-denied">Disk full and access denied</a></li><li class="toc-3"><a href="#what-the-player-sees">What the player sees</a></li><li class="toc-2"><a href="#file-options">File options</a></li><li class="toc-3"><a href="#readable-json-and-pretty-printing">Readable JSON and pretty printing</a></li><li class="toc-3"><a href="#compression">Compression</a></li><li class="toc-3"><a href="#encryption">Encryption</a></li><li class="toc-3"><a href="#how-the-options-combine">How the options combine</a></li><li class="toc-3"><a href="#changing-options-in-an-update">Changing options in an update</a></li><li class="toc-3"><a href="#edited-saves-the-checksum-policy">Edited saves: the checksum policy</a></li><li class="toc-3"><a href="#the-global-files-own-options">The global file&#x27;s own options</a></li><li class="toc-2"><a href="#the-save-and-load-menu">The save and load menu</a></li><li class="toc-3"><a href="#modes-and-cards">Modes and cards</a></li><li class="toc-3"><a href="#actions-and-confirmations">Actions and confirmations</a></li><li class="toc-3"><a href="#menu-settings">Menu settings</a></li><li class="toc-3"><a href="#the-menus-look-and-layout">The menu&#x27;s look and layout</a></li><li class="toc-3"><a href="#controls">Controls</a></li><li class="toc-3"><a href="#the-game-menu">The Game Menu</a></li><li class="toc-3"><a href="#the-saving-indicator">The saving indicator</a></li><li class="toc-3"><a href="#every-screen-and-the-safe-area">Every screen and the safe area</a></li><li class="toc-3"><a href="#the-save-notes">The save notes</a></li><li class="toc-2"><a href="#editor-tools">Editor tools</a></li><li class="toc-3"><a href="#the-start-window">The Start window</a></li><li class="toc-3"><a href="#menu-style">Menu Style</a></li><li class="toc-3"><a href="#setup-wizard">Setup Wizard</a></li><li class="toc-3"><a href="#the-settings-assets-inspector">The settings asset&#x27;s Inspector</a></li><li class="toc-3"><a href="#the-play-mode-toast">The Play Mode toast</a></li><li class="toc-3"><a href="#save-inspector">Save Inspector</a></li><li class="toc-3"><a href="#diagnostics">Diagnostics</a></li><li class="toc-3"><a href="#the-saveable-inspector">The Saveable inspector</a></li><li class="toc-3"><a href="#other-menu-commands">Other menu commands</a></li><li class="toc-2"><a href="#performance">Performance</a></li><li class="toc-3"><a href="#background-work">Background work</a></li><li class="toc-3"><a href="#profiler-markers">Profiler markers</a></li><li class="toc-3"><a href="#where-the-time-goes">Where the time goes</a></li><li class="toc-3"><a href="#compact-files-for-release">Compact files for release</a></li><li class="toc-3"><a href="#measured-benchmarks">Measured benchmarks</a></li><li class="toc-2"><a href="#logging-and-reports">Logging and reports</a></li><li class="toc-3"><a href="#log-levels">Log levels</a></li><li class="toc-3"><a href="#the-one-line-report">The one-line report</a></li><li class="toc-3"><a href="#the-report">The report</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/romanoassets/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/romanoassets" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>
