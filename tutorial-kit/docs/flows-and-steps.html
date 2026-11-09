@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Flows and Steps | Romano Assets</title>
+<meta name="description" content="Flows and Steps: documentation for the All In One Tutorial Kit for Unity.">
+<link rel="canonical" href="https://romanoassets.github.io/tutorial-kit/docs/flows-and-steps.html">
+<meta property="og:site_name" content="Romano Assets">
+<meta property="og:title" content="Flows and Steps">
+<meta property="og:description" content="Flows and Steps: documentation for the All In One Tutorial Kit for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://romanoassets.github.io/tutorial-kit/docs/flows-and-steps.html">
+<meta property="og:image" content="https://romanoassets.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/logo.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
+      <img src="../../assets/logo.png" alt="" width="34" height="34">
+      <span>Romano Assets</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Tutorial Kit docs</a><span class="pill">v1.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="flows-and-steps.html" aria-current="page">Flows and steps</a><a href="targets.html">Targets</a><a href="finishing-steps.html">Finishing a step</a><a href="coach-marks-and-hints.html">Coach marks and hints</a><a href="make-it-yours.html">Make it yours</a><a href="button-pictures.html">Button pictures</a><a href="tools.html">Tools</a><a href="integrations.html">Integrations and saving</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending and code API</a></div><div class="docs-group"><p class=label>Help</p><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="flows-and-steps.html" aria-current="page">Flows and steps</a><a href="targets.html">Targets</a><a href="finishing-steps.html">Finishing a step</a><a href="coach-marks-and-hints.html">Coach marks and hints</a><a href="make-it-yours.html">Make it yours</a><a href="button-pictures.html">Button pictures</a><a href="tools.html">Tools</a><a href="integrations.html">Integrations and saving</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending and code API</a></div><div class="docs-group"><p class=label>Help</p><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Tutorial Kit</a><span>/</span><span>Features</span></nav>
+<h1 id="flows-and-steps">Flows and Steps</h1>
+<p>A <strong>Tutorial Flow</strong> is one tutorial. Its <strong>steps</strong> are its child objects with a <strong>Tutorial Step</strong> component, shown in
+order from top to bottom. Reorder steps by reordering the children, or with the arrows in the flow's Inspector.</p>
+<h2 id="the-flow">The flow <a class="anchor" href="#the-flow" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Theme Preset / Theme</td>
+<td>The look (see <a href="make-it-yours.html">Make It Yours</a>).</td>
+</tr>
+<tr>
+<td>Style</td>
+<td><strong>Coach Mark</strong> dims and waits; <strong>Hint</strong> is small and never blocks. Steps can override it.</td>
+</tr>
+<tr>
+<td>Input Gate</td>
+<td>What the player can click: only the target, only the card, or everything. Steps can override it.</td>
+</tr>
+<tr>
+<td>Start</td>
+<td><strong>On Scene Start</strong>, or <strong>Manually</strong> (a trigger, a button, a UnityEvent or code calls Play).</td>
+</tr>
+<tr>
+<td>Run Once Per Player</td>
+<td>Once the player finishes or skips it, it never runs again for them (on this install, or in this save slot with a profile: see Progress).</td>
+</tr>
+<tr>
+<td>Resume Where Left</td>
+<td>If the player quits halfway, the flow continues from the same step next time.</td>
+</tr>
+<tr>
+<td>Show Until Learned</td>
+<td>For repeating hints: stop after the player finished it this many times (0 for no limit).</td>
+</tr>
+<tr>
+<td>Flow Id</td>
+<td>The name progress is saved under. Keep it once players have it.</td>
+</tr>
+<tr>
+<td>Glyphs</td>
+<td>The button picture set (see <a href="button-pictures.html">Button Pictures</a>).</td>
+</tr>
+<tr>
+<td>Presenter</td>
+<td>Your own UI (see <a href="extending.html">Extending</a>). Empty uses the kit's tip card.</td>
+</tr>
+<tr>
+<td>Next Keys / Skip Key</td>
+<td>Extra keys for Next, and a key for Skip (none by default: many games open their pause menu with Escape; the Skip button always works).</td>
+</tr>
+<tr>
+<td>Wait For Other Tutorials</td>
+<td>When another coach-mark flow is showing, wait until it ends before starting. On by default.</td>
+</tr>
+<tr>
+<td>Sort Order</td>
+<td>Draw order of the dim and card above your UI. Raise it if one of your canvases uses a higher Sort Order (the highest is 32767).</td>
+</tr>
+</tbody>
+</table></div>
+<p>Events: <strong>On Started</strong>, <strong>On Step Shown</strong> (with the step's number), <strong>On Completed</strong>, <strong>On Skipped</strong>.</p>
+<h2 id="the-step">The step <a class="anchor" href="#the-step" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title, Text</td>
+<td>The tip card's words. Short sentences work best.</td>
+</tr>
+<tr>
+<td>Short Text</td>
+<td>A few words for compact cards and hints.</td>
+</tr>
+<tr>
+<td>Icon</td>
+<td>A picture shown when the look's Display As uses icons.</td>
+</tr>
+<tr>
+<td>Glyph Action</td>
+<td>Shows the button picture for this action on the player's device (Jump, Interact...).</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>What the step points at (see <a href="targets.html">Targets</a>).</td>
+</tr>
+<tr>
+<td>When Target Missing</td>
+<td>Wait for it (default: nothing shows or blocks until it appears), show the card anyway, or skip the step.</td>
+</tr>
+<tr>
+<td>Finish When</td>
+<td>Any rule or all rules. A step with no rule finishes with Next.</td>
+</tr>
+<tr>
+<td>Next Button</td>
+<td>Auto shows it when the step has no rule.</td>
+</tr>
+<tr>
+<td>Optional</td>
+<td>Next can pass over the step even when its rules aren't done.</td>
+</tr>
+<tr>
+<td>Skip If Already Done</td>
+<td>If the player already did it (its rules are done the moment it starts), skip it.</td>
+</tr>
+<tr>
+<td>Next Step</td>
+<td>Where to go next: empty for the following step, or any step to branch or loop.</td>
+</tr>
+<tr>
+<td>Theme Override, Display As, Position</td>
+<td>A different look, message or card position for this step only.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Events: <strong>On Shown</strong> and <strong>On Completed</strong> (not called when the step is skipped).</p>
+<h2 id="starting-a-flow">Starting a flow <a class="anchor" href="#starting-a-flow" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>On Scene Start</strong>: it plays as soon as the scene starts.</li>
+<li><strong>Tutorial Trigger</strong> component: when the player enters an area (3D or 2D trigger), the first time an object is seen
+  on screen, when an object turns on, or after a delay.</li>
+<li><strong>Play</strong> from a UnityEvent (a button's On Click) or from code: <code>flow.Play()</code>.</li>
+</ul>
+<h2 id="progress">Progress <a class="anchor" href="#progress" aria-label="Link to this section">#</a></h2>
+<p>Progress is saved in PlayerPrefs under <code>RomanoAssets.TutorialKit.&lt;flow id&gt;</code>. PlayerPrefs belong to this install of the
+game: for save slots or several players call <code>TutorialProgress.UseProfile("slot-2")</code>, or keep progress with your game's
+saves by setting <code>TutorialProgress.Store</code> to your own <code>ITutorialProgressStore</code> (see <a href="extending.html">Extending</a>).
+<code>TutorialProgress.ClearAll()</code> forgets everything (a new game, or "Reset tutorials" in your options).
+<strong>Restart</strong> starts one flow again from its first step.</p>
+<p>Each step saves a stable key next to its position, so inserting, moving or removing steps in an update never resumes a
+player at the wrong step.</p>
+<p>While testing, the step's Inspector has <strong>Test From This Step</strong> in Play mode: it starts the flow at that step even if
+you finished it before.</p>
+<h2 id="pausing">Pausing <a class="anchor" href="#pausing" aria-label="Link to this section">#</a></h2>
+<p>Tutorials run on real time, so they keep working while your game is paused (<code>Time.timeScale = 0</code>): good for menu
+tours. When your pause menu, a dialogue or a loading screen opens over a running tutorial, call <code>flow.Suspend()</code> (or
+<code>TutorialFlow.SuspendAll(true)</code>) and <code>Resume()</code> when it closes: nothing shows or blocks meanwhile, and its rules and
+timers wait.</p>
+<div class="doc-pager"><a class="pager prev" href="samples.html"><span class="label">Previous</span>Demo scenes</a><a class="pager next" href="targets.html"><span class="label">Next</span>Targets</a></div>
+<p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+Flows+and+Steps" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#the-flow">The flow</a></li><li class="toc-2"><a href="#the-step">The step</a></li><li class="toc-2"><a href="#starting-a-flow">Starting a flow</a></li><li class="toc-2"><a href="#progress">Progress</a></li><li class="toc-2"><a href="#pausing">Pausing</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
+        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../index.html#products">Coming next</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/romanoassets/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/romanoassets" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

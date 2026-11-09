@@ -46,6 +46,7 @@ SETTINGS_VERSION = "1.0.0"
 BUG_REPORT_VERSION = "1.0.1"
 FOOTSTEP_VERSION = "0.1.0"
 HIT_FEEDBACK_VERSION = "1.0.0"
+TUTORIAL_VERSION = "1.0.0"
 YEAR = "2026"
 
 ICON_EXTERNAL = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" '
@@ -382,6 +383,31 @@ PRODUCTS = [
         "shortcut_groups": {},
         "page_images": {},
     },
+    {
+        # In development: submitted to the Asset Store (free), page and docs up so the store links work.
+        # Its Documentation/docs.json sets the sidebar groups, order and titles.
+        "slug": "tutorial-kit",
+        "name": "All In One Tutorial Kit",
+        "short": "Tutorial Kit",
+        "accent": "c-tutorial",
+        "status": "in development",
+        "free": True,
+        "version": TUTORIAL_VERSION,
+        "store": "",
+        "summary": "In-game tutorials and onboarding without code: spotlight any button or object, show a tip, and finish "
+                   "each step when the player really does it. uGUI, UI Toolkit, 2D and 3D.",
+        "requirements": ["Unity 6000.0+", "Built-in, URP & HDRP", "No code needed", "Full C# source"],
+        "menu": "Tools > All In One Tutorial Kit",
+        "quick_start": [
+            "Import the package. Everything lands in <code>Assets/AllInOneTutorialKit/</code>.",
+            "Open <strong>Tools &gt; All In One Tutorial Kit &gt; Open Demo &gt; Menu Tour (uGUI)</strong> and press Play to see it work.",
+            "In your own scene, select the buttons or objects to point at and choose <strong>Add Selected As Steps</strong>.",
+            "Write each step's words and press Play. Live Preview shows a step without pressing Play.",
+        ],
+        "pages": [],
+        "shortcut_groups": {},
+        "page_images": {},
+    },
 ]
 
 # Kits without docs yet, for the docs hub and "More from Romano Assets": (name, accent, status, one line)
@@ -447,6 +473,7 @@ def footer(root):
           <li><a href="{root}settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
           <li><a href="{root}runtime-building-kit/index.html">Runtime Building Kit</a></li>
           <li><a href="{root}bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="{root}tutorial-kit/index.html">Tutorial Kit</a></li>
           <li><a href="{root}index.html#products">Coming next</a></li>
           <li><a href="{PUBLISHER_URL}" rel="noopener">Publisher page</a></li>
         </ul>
@@ -658,6 +685,10 @@ HAND_PAGES = [
      "All In One Hit Feedback Kit",
      "Make every hit land in Unity: damage numbers, hit flash, hitstop, screen shake, knockback, health bars and sound "
      "from one component, with genre presets and a Why No Feedback? debugger. In development."),
+    ("tutorial-kit.html", "tutorial-kit/index.html", "../", "tutorial",
+     "All In One Tutorial Kit",
+     "In-game tutorials and onboarding for Unity without code: spotlight any button or object, show a tip, and finish "
+     "each step when the player really does it. uGUI, UI Toolkit, 2D and 3D. Free. In development."),
     ("support.html", "support/index.html", "../", "support",
      "Support",
      "Get help with Romano Assets tools: documentation, bug reports, Discord and email."),

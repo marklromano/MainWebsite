@@ -24,6 +24,7 @@
   --c-save: #3DD68C;
   --c-interact: #FFB547;
   --c-settings: #B48CFF;
+  --c-tutorial: #4FC3F7;
   --c-runtime: #FF7A59;
   --c-bugreport: #4FD1E8;
   --c-footstep: #4FD1C5;
@@ -298,6 +299,7 @@ a.product-link:hover { border-color: var(--accent); background: var(--surface-2)
 .c-save { --accent: var(--c-save); }
 .c-interact { --accent: var(--c-interact); }
 .c-settings { --accent: var(--c-settings); }
+.c-tutorial { --accent: var(--c-tutorial); }
 .c-runtime { --accent: var(--c-runtime); }
 .c-bugreport { --accent: var(--c-bugreport); }
 .c-footstep { --accent: var(--c-footstep); }
