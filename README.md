@@ -1,7 +1,7 @@
-# Romano Assets website
+# Rare Geometry website
 
-The Romano Assets website: plain HTML and CSS, no framework, no web fonts, no trackers, cookies or analytics. The
-only script is the docs search (`assets/docs.js`), which is ours, runs offline and sends nothing anywhere. Published free with **GitHub Pages** at **https://romanoassets.github.io**.
+The Rare Geometry website: plain HTML and CSS, no framework, no web fonts, no trackers, cookies or analytics. The
+only script is the docs search (`assets/docs.js`), which is ours, runs offline and sends nothing anywhere. Published free with **GitHub Pages** at **https://raregeometry.github.io**.
 
 ```
 index.html                    home: the products, standards, help, about
@@ -69,8 +69,8 @@ picture shown when someone shares a link to the site.
 
 GitHub Pages serves the `main` branch: push to `main` and the site updates within a minute or two.
 
-**The address.** GitHub serves https://romanoassets.github.io from the repository named exactly
-`romanoassets.github.io` in the `romanoassets` organization (moved from marklromano/marklromano.github.io). In
+**The address.** GitHub serves https://raregeometry.github.io from the repository named exactly
+`raregeometry.github.io` in the `romanoassets` organization (moved from marklromano/marklromano.github.io). In
 Settings > Pages: Source **Deploy from a branch**, branch **main**, folder **/ (root)**.
 
 **The old address.** https://marklromano.github.io is now a separate small repo,

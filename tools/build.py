@@ -1,4 +1,4 @@
-"""Builds the Romano Assets website: every page shares one header and footer from this file.
+"""Builds the Rare Geometry website: every page shares one header and footer from this file.
 
     python tools/build.py                                         # rebuild the hand-written pages
     python tools/build.py --docs prefab-builder=<product folder>  # also rebuild that kit's documentation
@@ -30,14 +30,14 @@ PAGES = pathlib.Path(__file__).resolve().parent / "pages"
 
 # ---- Facts used on several pages: change them here ----
 
-SITE_URL = "https://romanoassets.github.io"
+SITE_URL = "https://raregeometry.github.io"
 STORE_URL = "https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146"
 PUBLISHER_URL = "https://assetstore.unity.com/publishers/160196"
 EMAIL = "marklromano@outlook.com"
 # Empty until they exist: the pages then show "soon" instead of a link.
 DISCORD_URL = "https://discord.gg/AmpBDxRAKu"
-ISSUES_URL = "https://github.com/romanoassets/RomanoAssetSupport/issues"
-GITHUB_URL = "https://github.com/romanoassets"
+ISSUES_URL = "https://github.com/raregeometry/Support/issues"
+GITHUB_URL = "https://github.com/raregeometry"
 PREFAB_VERSION = "1.0.0"
 SAVE_VERSION = "1.0.0"
 INTERACTION_VERSION = "1.0.0"
@@ -453,7 +453,7 @@ PRODUCTS = [
     },
 ]
 
-# Kits without docs yet, for the docs hub and "More from Romano Assets": (name, accent, status, one line)
+# Kits without docs yet, for the docs hub and "More from Rare Geometry": (name, accent, status, one line)
 COMING = []
 
 NAV = [
@@ -473,9 +473,9 @@ def header(root, active):
     return f"""<a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-row">
-    <a class="brand" href="{root}index.html" aria-label="Romano Assets home">
-      <img src="{root}assets/logo.png" alt="" width="34" height="34">
-      <span>Romano Assets</span>
+    <a class="brand" href="{root}index.html" aria-label="Rare Geometry home">
+      <img src="{root}assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
     </a>
     <nav aria-label="Main">
       <ul class="nav">
@@ -495,8 +495,8 @@ def footer(root):
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand" href="{root}index.html"><img src="{root}assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
-        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+        <a class="brand" href="{root}index.html"><img src="{root}assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
       </div>
       <div>
         <h4>Products</h4>
@@ -534,7 +534,7 @@ def footer(root):
       </div>
     </div>
     <div class="footer-base">
-      <p>&copy; {YEAR} Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>&copy; {YEAR} Rare Geometry. Unity is a trademark of Unity Technologies.</p>
       <p>No trackers, no cookies, no analytics.</p>
     </div>
   </div>
@@ -542,14 +542,14 @@ def footer(root):
 
 
 def og_image(path):
-    """The link-preview picture: a kit's own social art on its pages, the Romano Assets card everywhere else."""
+    """The link-preview picture: a kit's own social art on its pages, the Rare Geometry card everywhere else."""
     if path.startswith("prefab-builder/"):
         return "prefab-builder/social.jpg"
     return "og-image.jpg"
 
 
 def page(root, active, title, description, body, path, scripts=""):
-    full_title = "Romano Assets" if title == "Romano Assets" else f"{title} | Romano Assets"
+    full_title = "Rare Geometry" if title == "Rare Geometry" else f"{title} | Rare Geometry"
     canonical = f"{SITE_URL}/{path}".replace("/index.html", "/")
     return f"""<!doctype html>
 <html lang="en">
@@ -561,15 +561,16 @@ def page(root, active, title, description, body, path, scripts=""):
 <title>{html.escape(full_title)}</title>
 <meta name="description" content="{html.escape(description)}">
 <link rel="canonical" href="{canonical}">
-<meta property="og:site_name" content="Romano Assets">
+<meta property="og:site_name" content="Rare Geometry">
 <meta property="og:title" content="{html.escape(title)}">
 <meta property="og:description" content="{html.escape(description)}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{SITE_URL}/assets/img/{og_image(path)}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="{root}assets/logo.png" type="image/png">
-<link rel="apple-touch-icon" href="{root}assets/logo.png">
+<link rel="icon" href="{root}assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="{root}assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{root}assets/favicon-180.png">
 <link rel="stylesheet" href="{root}styles.css">
 </head>
 <body>
@@ -617,7 +618,7 @@ def more_from(root, slug):
     return f"""<section class="section section-band" aria-labelledby="more-title">
   <div class="wrap">
     <div class="section-head">
-      <p class="label">More from Romano Assets</p>
+      <p class="label">More from Rare Geometry</p>
       <h2 id="more-title">Other kits, built to the same standard</h2>
     </div>
     <div class="products">{"".join(cards)}</div>
@@ -638,7 +639,7 @@ def support_section(root, slug):
             '<h3>Help and troubleshooting</h3><p>Common problems and their fixes, and what to include when you ask.</p></a>'
             if has_docs else
             f'<a class="tile" href="{root}support/index.html"><span class="label">Help</span>'
-            '<h3>Support page</h3><p>Every way to get help with Romano Assets tools, in one place.</p></a>')
+            '<h3>Support page</h3><p>Every way to get help with Rare Geometry tools, in one place.</p></a>')
     return f"""<section class="section" id="support" aria-labelledby="support-title">
   <div class="wrap">
     <div class="section-head">
@@ -684,8 +685,8 @@ def issues_tile(root):
 HAND_PAGES = [
     # fragment, output, root, active nav, title, description
     ("home.html", "index.html", "", "",
-     "Romano Assets",
-     "Unity editor tools by Romano Assets. Home of the All In One Prefab Builder Kit: turn any pack of prefabs into a "
+     "Rare Geometry",
+     "Unity editor tools by Rare Geometry. Home of the All In One Prefab Builder Kit: turn any pack of prefabs into a "
      "world-building kit."),
     ("prefab-builder.html", "prefab-builder/index.html", "../", "prefab",
      "All In One Prefab Builder Kit",
@@ -731,7 +732,7 @@ HAND_PAGES = [
      "full-screen map, with a one-click map maker, fog of war and region discovery, without code. Coming soon to the Asset Store."),
     ("support.html", "support/index.html", "../", "support",
      "Support",
-     "Get help with Romano Assets tools: documentation, bug reports, Discord and email."),
+     "Get help with Rare Geometry tools: documentation, bug reports, Discord and email."),
     ("404.html", "404.html", "/", "",
      "Page not found",
      "This page doesn't exist."),
@@ -822,7 +823,7 @@ def build_docs_hub():
   </div>
 </section>"""
     write("docs/index.html", page("../", "docs", "Documentation",
-                                  "Documentation for every Romano Assets Unity tool.", body, "docs/index.html"))
+                                  "Documentation for every Rare Geometry Unity tool.", body, "docs/index.html"))
 
 
 # ---- Docs: a kit's offline Documentation/*.md as a documentation site ----

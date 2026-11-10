@@ -5,27 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0B1220">
-<title>Game Updates | Romano Assets</title>
+<title>Game Updates | Rare Geometry</title>
 <meta name="description" content="Game Updates: documentation for the All In One Save Kit for Unity.">
-<link rel="canonical" href="https://romanoassets.github.io/save-kit/docs/game-updates.html">
-<meta property="og:site_name" content="Romano Assets">
+<link rel="canonical" href="https://raregeometry.github.io/save-kit/docs/game-updates.html">
+<meta property="og:site_name" content="Rare Geometry">
 <meta property="og:title" content="Game Updates">
 <meta property="og:description" content="Game Updates: documentation for the All In One Save Kit for Unity.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://romanoassets.github.io/save-kit/docs/game-updates.html">
-<meta property="og:image" content="https://romanoassets.github.io/assets/img/og-image.jpg">
+<meta property="og:url" content="https://raregeometry.github.io/save-kit/docs/game-updates.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../../assets/logo.png" type="image/png">
-<link rel="apple-touch-icon" href="../../assets/logo.png">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
 <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-row">
-    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
-      <img src="../../assets/logo.png" alt="" width="34" height="34">
-      <span>Romano Assets</span>
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
     </a>
     <nav aria-label="Main">
       <ul class="nav">
@@ -52,7 +53,7 @@
 <nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Save Kit</a><span>/</span><span>Learn</span></nav>
 <h1 id="game-updates">Game Updates</h1>
 <p>This guide is for programmers. It explains how to change your game after release without breaking the saves your players already have.</p>
-<p>All In One Save Kit by Romano Assets plans for updates in three ways:</p>
+<p>All In One Save Kit by Rare Geometry plans for updates in three ways:</p>
 <ul>
 <li>Every save records which version of your save data it holds.</li>
 <li>Small <strong>migration steps</strong> that you write upgrade old saves one version at a time.</li>
@@ -638,7 +639,7 @@ public static class StarFarmMigrations
 <p>The file on disk is still the version 1 file until the player saves. After that save, the slot holds version 3 data, and the version 1 file is kept as <code>slot_01.save.bak1</code>.</p>
 <p>Something else not working? Every result code has an entry in <a href="troubleshooting.html">Troubleshooting</a>.</p>
 <div class="doc-pager"><a class="pager prev" href="guide.html"><span class="label">Previous</span>Guide</a><a class="pager next" href="coop.html"><span class="label">Next</span>Co-op</a></div>
-<p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+Game+Updates" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Game+Updates" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
 </article>
 <nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#the-rules-in-short">The rules in short</a></li><li class="toc-2"><a href="#what-the-save-version-is">What the save version is</a></li><li class="toc-2"><a href="#when-to-raise-the-save-version">When to raise the save version</a></li><li class="toc-2"><a href="#writing-a-migration-step">Writing a migration step</a></li><li class="toc-3"><a href="#adding-steps-by-hand">Adding steps by hand</a></li><li class="toc-2"><a href="#the-savetree-helpers">The SaveTree helpers</a></li><li class="toc-3"><a href="#where-your-values-are-in-the-tree">Where your values are in the tree</a></li><li class="toc-3"><a href="#per-player-data-and-renamecategory">Per-player data and RenameCategory</a></li><li class="toc-3"><a href="#renaming-an-enum-value">Renaming an enum value</a></li><li class="toc-2"><a href="#order-and-gaps">Order and gaps</a></li><li class="toc-2"><a href="#duplicates">Duplicates</a></li><li class="toc-2"><a href="#when-a-step-fails">When a step fails</a></li><li class="toc-2"><a href="#steps-run-on-a-background-thread">Steps run on a background thread</a></li><li class="toc-2"><a href="#saves-from-a-newer-version-are-refused">Saves from a newer version are refused</a></li><li class="toc-2"><a href="#tolerant-loading-what-needs-no-migration">Tolerant loading: what needs no migration</a></li><li class="toc-2"><a href="#changing-compression-or-encryption-in-an-update">Changing compression or encryption in an update</a></li><li class="toc-2"><a href="#il2cpp-and-code-stripping">IL2CPP and code stripping</a></li><li class="toc-2"><a href="#the-pre-migration-file-stays-as-a-backup">The pre-migration file stays as a backup</a></li><li class="toc-2"><a href="#testing-with-old-save-files">Testing with old save files</a></li><li class="toc-2"><a href="#worked-example-version-1-to-version-3">Worked example: version 1 to version 3</a></li><li class="toc-3"><a href="#version-1-shipped-with-save-version-1">Version 1 (shipped with Save Version 1)</a></li><li class="toc-3"><a href="#version-2-save-version-2">Version 2 (Save Version 2)</a></li><li class="toc-3"><a href="#version-3-save-version-3">Version 3 (Save Version 3)</a></li><li class="toc-3"><a href="#the-steps-in-the-version-3-build">The steps in the version 3 build</a></li><li class="toc-3"><a href="#what-happens">What happens</a></li></ul></nav>
 </div>
@@ -647,8 +648,8 @@ public static class StarFarmMigrations
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand" href="../../index.html"><img src="../../assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
-        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
       </div>
       <div>
         <h4>Products</h4>
@@ -680,13 +681,13 @@ public static class StarFarmMigrations
           <li><a href="../../support/index.html">Support</a></li>
           <li><a href="mailto:marklromano@outlook.com">Email</a></li>
           <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
-          <li><a href="https://github.com/romanoassets/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
-          <li><a href="https://github.com/romanoassets" rel="noopener">GitHub</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-base">
-      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
       <p>No trackers, no cookies, no analytics.</p>
     </div>
   </div>

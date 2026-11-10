@@ -5,27 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0B1220">
-<title>Troubleshooting | Romano Assets</title>
+<title>Troubleshooting | Rare Geometry</title>
 <meta name="description" content="Troubleshooting: documentation for the All In One Save Kit for Unity.">
-<link rel="canonical" href="https://romanoassets.github.io/save-kit/docs/troubleshooting.html">
-<meta property="og:site_name" content="Romano Assets">
+<link rel="canonical" href="https://raregeometry.github.io/save-kit/docs/troubleshooting.html">
+<meta property="og:site_name" content="Rare Geometry">
 <meta property="og:title" content="Troubleshooting">
 <meta property="og:description" content="Troubleshooting: documentation for the All In One Save Kit for Unity.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://romanoassets.github.io/save-kit/docs/troubleshooting.html">
-<meta property="og:image" content="https://romanoassets.github.io/assets/img/og-image.jpg">
+<meta property="og:url" content="https://raregeometry.github.io/save-kit/docs/troubleshooting.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../../assets/logo.png" type="image/png">
-<link rel="apple-touch-icon" href="../../assets/logo.png">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
 <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-row">
-    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
-      <img src="../../assets/logo.png" alt="" width="34" height="34">
-      <span>Romano Assets</span>
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
     </a>
     <nav aria-label="Main">
       <ul class="nav">
@@ -51,7 +52,7 @@
 <article class="prose" id="doc">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Save Kit</a><span>/</span><span>Reference</span></nav>
 <h1 id="troubleshooting">Troubleshooting</h1>
-<p>All In One Save Kit by Romano Assets never throws an exception into your game. Every save, load and delete returns a result instead. When there is something to report, the result carries a code such as <code>SK101</code>, a plain-English message and a link to this guide. This guide has one entry for each code. Each entry explains what the code means, what usually causes it and how to fix it.</p>
+<p>All In One Save Kit by Rare Geometry never throws an exception into your game. Every save, load and delete returns a result instead. When there is something to report, the result carries a code such as <code>SK101</code>, a plain-English message and a link to this guide. This guide has one entry for each code. Each entry explains what the code means, what usually causes it and how to fix it.</p>
 <p><a id="missing-menus"></a></p>
 <h2 id="if-the-kits-menus-are-missing-after-import">If the kit's menus are missing after import <a class="anchor" href="#if-the-kits-menus-are-missing-after-import" aria-label="Link to this section">#</a></h2>
 <p><strong>What it means:</strong> The save menu, the editor tools' windows (the Start window, the Setup Wizard, the Save Inspector and Diagnostics) and the demos are built on two Unity packages, <strong>Unity UI</strong> (<code>com.unity.ugui</code>) and <strong>TextMesh Pro</strong>, and one of them is missing from the project. TextMesh Pro is part of Unity UI from Unity 2023.2 and the separate <code>com.unity.textmeshpro</code> package in Unity 2022.3. The kit still imports without compile errors: the runtime (<code>SaveKit</code>) and the core editor services (saved ids for Saveables, the registries and their <strong>Registries</strong> commands, and the migration link file for builds) compile and keep working. The menu, the windows and the demos wait for the package, so <strong>Tools → All In One Save Kit</strong> shows only <strong>Required Packages</strong> and the <strong>Registries</strong> commands. The Console shows a warning once per editor session that starts <code>[All In One Save Kit] The kit's save menu, editor tool windows and demos need</code> and names the package, and says how to install it; <strong>Tools → All In One Save Kit → Required Packages</strong> shows the same steps. A player build stops with the same message until the package is in.</p>
@@ -537,8 +538,8 @@ if (!loaded.Success) Debug.LogWarning(loaded.ToString());
 <p><strong>Likely cause:</strong> Game code saved during a load. For example, the player pressed a save button, or a script saved straight after starting <code>LoadAsync</code> without awaiting it. The kit's own timer and scene-change autosaves wait for the load to finish. The autosave on quit is skipped during a load, with a Console warning.</p>
 <p><strong>Fix:</strong> Before saving, <code>await SaveKit.LoadAsync(...)</code> or wait for the <code>SaveEvents.Loaded</code> event. Disable save buttons while a load runs, then save again once it has finished. Saving the global file with <code>SaveKit.SaveGlobal()</code> is still allowed during a load, so player settings are never blocked.</p>
 <h2 id="still-stuck">Still stuck? <a class="anchor" href="#still-stuck" aria-label="Link to this section">#</a></h2>
-<p>Report a bug with <a href="https://github.com/marklromano/RomanoAssetSupport/issues/new?template=bug_report.yml">the bug report form</a>, ask a question in <a href="https://github.com/marklromano/RomanoAssetSupport/discussions">Discussions</a>, email <strong>marklromano@outlook.com</strong> or visit <strong>https://marklromano.github.io/</strong>.</p>
-<p><strong>Get help:</strong> Discord https://discord.gg/AmpBDxRAKu · bug tracker https://github.com/marklromano/RomanoAssetSupport · website https://marklromano.github.io/ · e-mail marklromano@outlook.com. With a question or a bug, please paste your system info: in Unity, <strong>Tools → All In One Save Kit → Start → Help and support → Copy system info</strong>. To get an answer quickly, please send:</p>
+<p>Report a bug with <a href="https://github.com/raregeometry/Support/issues/new?template=bug_report.yml">the bug report form</a>, ask a question in <a href="https://github.com/raregeometry/Support/discussions">Discussions</a>, email <strong>marklromano@outlook.com</strong> or visit <strong>https://marklromano.github.io/</strong>.</p>
+<p><strong>Get help:</strong> Discord https://discord.gg/AmpBDxRAKu · bug tracker https://github.com/raregeometry/Support · website https://marklromano.github.io/ · e-mail marklromano@outlook.com. With a question or a bug, please paste your system info: in Unity, <strong>Tools → All In One Save Kit → Start → Help and support → Copy system info</strong>. To get an answer quickly, please send:</p>
 <ol>
 <li><strong>The Console report.</strong> Include every line that starts with <code>[All In One Save Kit]</code> from around the time of the problem, with any stack trace. If you can reproduce the problem, set <strong>Log Level</strong> to Verbose first.</li>
 <li><strong>The save file.</strong> Use <strong>Tools → All In One Save Kit → Save Inspector</strong> to export the save. For a damaged save, zip the raw files from the save folder instead, including any <code>.bak</code>, <code>.tmp</code> and <code>.corrupt-</code> copies. The Save Inspector can open that folder for you.</li>
@@ -547,7 +548,7 @@ if (!loaded.Success) Debug.LogWarning(loaded.ToString());
 </ol>
 <p>Support covers bugs in the kit and questions about setting it up. It does not include reviewing or debugging your own game code. A stack trace usually shows which side a problem is on: one that ends in your script points at your code, and one inside <code>AllInOneSaveKit</code> points at the kit.</p>
 <div class="doc-pager"><a class="pager prev" href="limits-and-faq.html"><span class="label">Previous</span>Limits and FAQ</a><a class="pager next" href="known-issues.html"><span class="label">Next</span>Known issues</a></div>
-<p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+Troubleshooting" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Troubleshooting" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
 </article>
 <nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#if-the-kits-menus-are-missing-after-import">If the kit&#x27;s menus are missing after import</a></li><li class="toc-2"><a href="#how-codes-appear">How codes appear</a></li><li class="toc-2"><a href="#reading-the-console-report">Reading the Console report</a></li><li class="toc-2"><a href="#quick-index">Quick index</a></li><li class="toc-2"><a href="#sk001-unknown">SK001: Unknown</a></li><li class="toc-2"><a href="#sk002-invalidargument">SK002: InvalidArgument</a></li><li class="toc-2"><a href="#sk003-busy">SK003: Busy</a></li><li class="toc-2"><a href="#sk004-cancelled">SK004: Cancelled</a></li><li class="toc-2"><a href="#sk005-notinitialised">SK005: NotInitialised</a></li><li class="toc-2"><a href="#sk100-filenotfound">SK100: FileNotFound</a></li><li class="toc-2"><a href="#sk101-filedamaged">SK101: FileDamaged</a></li><li class="toc-2"><a href="#sk102-recoveredfrombackup">SK102: RecoveredFromBackup</a></li><li class="toc-2"><a href="#sk103-unsupportedformat">SK103: UnsupportedFormat</a></li><li class="toc-2"><a href="#sk104-checksummismatch">SK104: ChecksumMismatch</a></li><li class="toc-2"><a href="#sk105-tamperdetected">SK105: TamperDetected</a></li><li class="toc-2"><a href="#sk106-encryptionkeywrong">SK106: EncryptionKeyWrong</a></li><li class="toc-2"><a href="#sk107-compressionfailed">SK107: CompressionFailed</a></li><li class="toc-2"><a href="#sk110-diskfull">SK110: DiskFull</a></li><li class="toc-2"><a href="#sk111-accessdenied">SK111: AccessDenied</a></li><li class="toc-2"><a href="#sk112-storageunavailable">SK112: StorageUnavailable</a></li><li class="toc-2"><a href="#sk113-pathtoolong">SK113: PathTooLong</a></li><li class="toc-2"><a href="#sk120-newerversion">SK120: NewerVersion</a></li><li class="toc-2"><a href="#sk121-migrationmissing">SK121: MigrationMissing</a></li><li class="toc-2"><a href="#sk122-migrationfailed">SK122: MigrationFailed</a></li><li class="toc-2"><a href="#sk123-saveversioninvalid">SK123: SaveVersionInvalid</a></li><li class="toc-2"><a href="#sk130-objectnotfound">SK130: ObjectNotFound</a></li><li class="toc-2"><a href="#sk131-prefabnotregistered">SK131: PrefabNotRegistered</a></li><li class="toc-2"><a href="#sk132-assetnotregistered">SK132: AssetNotRegistered</a></li><li class="toc-2"><a href="#sk133-scenenotregistered">SK133: SceneNotRegistered</a></li><li class="toc-2"><a href="#sk134-scenenotinbuildsettings">SK134: SceneNotInBuildSettings</a></li><li class="toc-2"><a href="#sk140-hostonly">SK140: HostOnly</a></li><li class="toc-2"><a href="#sk141-playerunknown">SK141: PlayerUnknown</a></li><li class="toc-2"><a href="#sk150-categoryunknown">SK150: CategoryUnknown</a></li><li class="toc-2"><a href="#sk151-slotoutofrange">SK151: SlotOutOfRange</a></li><li class="toc-2"><a href="#sk152-slotempty">SK152: SlotEmpty</a></li><li class="toc-2"><a href="#sk153-settingsinvalid">SK153: SettingsInvalid</a></li><li class="toc-2"><a href="#sk154-loadinprogress">SK154: LoadInProgress</a></li><li class="toc-2"><a href="#still-stuck">Still stuck?</a></li></ul></nav>
 </div>
@@ -556,8 +557,8 @@ if (!loaded.Success) Debug.LogWarning(loaded.ToString());
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand" href="../../index.html"><img src="../../assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
-        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
       </div>
       <div>
         <h4>Products</h4>
@@ -589,13 +590,13 @@ if (!loaded.Success) Debug.LogWarning(loaded.ToString());
           <li><a href="../../support/index.html">Support</a></li>
           <li><a href="mailto:marklromano@outlook.com">Email</a></li>
           <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
-          <li><a href="https://github.com/romanoassets/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
-          <li><a href="https://github.com/romanoassets" rel="noopener">GitHub</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-base">
-      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
       <p>No trackers, no cookies, no analytics.</p>
     </div>
   </div>

@@ -5,27 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0B1220">
-<title>Steam Cloud | Romano Assets</title>
+<title>Steam Cloud | Rare Geometry</title>
 <meta name="description" content="Steam Cloud: documentation for the All In One Save Kit for Unity.">
-<link rel="canonical" href="https://romanoassets.github.io/save-kit/docs/steam-cloud.html">
-<meta property="og:site_name" content="Romano Assets">
+<link rel="canonical" href="https://raregeometry.github.io/save-kit/docs/steam-cloud.html">
+<meta property="og:site_name" content="Rare Geometry">
 <meta property="og:title" content="Steam Cloud">
 <meta property="og:description" content="Steam Cloud: documentation for the All In One Save Kit for Unity.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://romanoassets.github.io/save-kit/docs/steam-cloud.html">
-<meta property="og:image" content="https://romanoassets.github.io/assets/img/og-image.jpg">
+<meta property="og:url" content="https://raregeometry.github.io/save-kit/docs/steam-cloud.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../../assets/logo.png" type="image/png">
-<link rel="apple-touch-icon" href="../../assets/logo.png">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
 <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-row">
-    <a class="brand" href="../../index.html" aria-label="Romano Assets home">
-      <img src="../../assets/logo.png" alt="" width="34" height="34">
-      <span>Romano Assets</span>
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
     </a>
     <nav aria-label="Main">
       <ul class="nav">
@@ -51,7 +52,7 @@
 <article class="prose" id="doc">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Save Kit</a><span>/</span><span>Learn</span></nav>
 <h1 id="steam-cloud">Steam Cloud</h1>
-<p>Steam Auto-Cloud copies the save files you choose to Steam's servers when the player quits. When the game starts again, on any PC, Steam copies them back. You set it up on the Steamworks partner site. It needs no game code, and All In One Save Kit by Romano Assets works with it as it is.</p>
+<p>Steam Auto-Cloud copies the save files you choose to Steam's servers when the player quits. When the game starts again, on any PC, Steam copies them back. You set it up on the Steamworks partner site. It needs no game code, and All In One Save Kit by Rare Geometry works with it as it is.</p>
 <p>This guide gives the Auto-Cloud settings that match the kit's folders and file names. Steam's own documentation is at <a href="https://partner.steamgames.com/doc/features/cloud">partner.steamgames.com/doc/features/cloud</a>.</p>
 <p><strong>Scope.</strong> All In One Save Kit 1.0 is tested on Windows, so this guide covers Windows builds. The kit has no built-in cloud sync and never talks to Steam. Steam does all the copying.</p>
 <h2 id="before-you-start">Before you start <a class="anchor" href="#before-you-start" aria-label="Link to this section">#</a></h2>
@@ -399,7 +400,7 @@ public class SaveKitSteamStartup : MonoBehaviour
 </table></div>
 <p>Something else not working? Every result code has an entry in <a href="troubleshooting.html">Troubleshooting</a>.</p>
 <div class="doc-pager"><a class="pager prev" href="coop.html"><span class="label">Previous</span>Co-op</a><a class="pager next" href="reference.html"><span class="label">Next</span>Reference</a></div>
-<p class="doc-report"><a href="https://github.com/romanoassets/RomanoAssetSupport/issues/new?title=Docs:+Steam+Cloud" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Steam+Cloud" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
 </article>
 <nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#before-you-start">Before you start</a></li><li class="toc-2"><a href="#step-1-set-the-byte-quota-and-the-file-count">Step 1: Set the byte quota and the file count</a></li><li class="toc-2"><a href="#step-2-add-the-root-path">Step 2: Add the Root Path</a></li><li class="toc-2"><a href="#step-3-give-each-steam-user-their-own-folder">Step 3: Give each Steam user their own folder</a></li><li class="toc-2"><a href="#step-4-keep-device-specific-settings-local">Step 4: Keep device-specific settings local</a></li><li class="toc-2"><a href="#step-5-what-stays-local">Step 5: What stays local</a></li><li class="toc-2"><a href="#step-6-test">Step 6: Test</a></li><li class="toc-3"><a href="#if-nothing-syncs">If nothing syncs</a></li><li class="toc-2"><a href="#settings-at-a-glance">Settings at a glance</a></li></ul></nav>
 </div>
@@ -408,8 +409,8 @@ public class SaveKitSteamStartup : MonoBehaviour
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand" href="../../index.html"><img src="../../assets/logo.png" alt="" width="34" height="34"><span>Romano Assets</span></a>
-        <p>Unity editor tools, built while making a real game and polished for everyone else.</p>
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
       </div>
       <div>
         <h4>Products</h4>
@@ -441,13 +442,13 @@ public class SaveKitSteamStartup : MonoBehaviour
           <li><a href="../../support/index.html">Support</a></li>
           <li><a href="mailto:marklromano@outlook.com">Email</a></li>
           <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
-          <li><a href="https://github.com/romanoassets/RomanoAssetSupport/issues" rel="noopener">Bug tracker</a></li>
-          <li><a href="https://github.com/romanoassets" rel="noopener">GitHub</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-base">
-      <p>&copy; 2026 Romano Assets. Unity is a trademark of Unity Technologies.</p>
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
       <p>No trackers, no cookies, no analytics.</p>
     </div>
   </div>
