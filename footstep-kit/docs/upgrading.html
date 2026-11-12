@@ -2,124 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#0B1220">
-<title>Upgrading | Rare Geometry</title>
-<meta name="description" content="Upgrading: documentation for the All In One Surface Footstep Kit for Unity.">
-<link rel="canonical" href="https://raregeometry.github.io/footstep-kit/docs/upgrading.html">
-<meta property="og:site_name" content="Rare Geometry">
-<meta property="og:title" content="Upgrading">
-<meta property="og:description" content="Upgrading: documentation for the All In One Surface Footstep Kit for Unity.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://raregeometry.github.io/footstep-kit/docs/upgrading.html">
-<meta property="og:image" content="https://raregeometry.github.io/assets/img/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moved | Rare Geometry</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://raregeometry.github.io/responsive-fx/docs/">
+<meta http-equiv="refresh" content="0; url=../../responsive-fx/docs/index.html">
 <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="wrap header-row">
-    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
-      <img src="../../assets/logo.svg" alt="" width="34" height="34">
-      <span>Rare Geometry</span>
-    </a>
-    <nav aria-label="Main">
-      <ul class="nav">
-        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<main id="main">
-<div class="wrap docs-shell">
-<aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">Footstep Kit docs</a><span class="pill">v0.1.0</span><span class="pill pill-dev">Coming soon</span></div>
-  <div class="docs-search" hidden>
-    <label class="sr-only" for="docs-q">Search the documentation</label>
-    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
-    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
-    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
-  </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="surfaces.html">Surfaces and the Surface Library</a><a href="characters.html">Surface Footsteps (your characters)</a><a href="your-game.html">Your controller and game</a><a href="triggers.html">When steps happen</a><a href="zones.html">Footstep Zones</a><a href="make-it-yours.html">Make it yours: profiles and presets</a><a href="effects-and-footprints.html">Effects and footprints</a><a href="ai-hearing.html">AI hearing (stealth)</a><a href="2d.html">2D games</a><a href="why-no-footstep.html">Why No Footstep? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html" aria-current="page">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="surfaces.html">Surfaces and the Surface Library</a><a href="characters.html">Surface Footsteps (your characters)</a><a href="your-game.html">Your controller and game</a><a href="triggers.html">When steps happen</a><a href="zones.html">Footstep Zones</a><a href="make-it-yours.html">Make it yours: profiles and presets</a><a href="effects-and-footprints.html">Effects and footprints</a><a href="ai-hearing.html">AI hearing (stealth)</a><a href="2d.html">2D games</a><a href="why-no-footstep.html">Why No Footstep? and Scene Overview</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html" aria-current="page">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
-  </nav>
-</aside>
-<article class="prose" id="doc">
-<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Footstep Kit</a><span>/</span><span>For programmers</span></nav>
-<h1 id="upgrading">Upgrading</h1>
-<h2 id="updating-the-kit">Updating the kit <a class="anchor" href="#updating-the-kit" aria-label="Link to this section">#</a></h2>
-<ol>
-<li>Back up your project (or commit it).</li>
-<li>Import the new version from the Package Manager (My Assets).</li>
-<li>Read the <a href="https://raregeometry.github.io/footstep-kit/docs/">changelog</a> section for your version.</li>
-</ol>
-<p>Your own content lives outside the kit's folder (<code>Assets/FootstepKitData</code> for libraries, surfaces and profiles made by
-the tools), so an update never overwrites it. If you changed the <strong>sample</strong> library or surfaces directly, make your own
-copy first (Setup Wizard &gt; Make my own copy): updates replace the sample files.</p>
-<p>The kit's folder can be moved or renamed in your project; tools find their files wherever they are.</p>
-<h2 id="coming-from-another-footstep-tool">Coming from another footstep tool <a class="anchor" href="#coming-from-another-footstep-tool" aria-label="Link to this section">#</a></h2>
-<ul>
-<li>Your existing physics materials or tags per ground can be mapped once in the Surface Library.</li>
-<li>Animation events named <code>OnFootstep</code> (Starter Assets and many packs) already work with Animation Events.</li>
-<li>Remove or silence the other tool's audio so you don't hear both (the wizard offers this for Starter Assets).</li>
-</ul>
-<h2 id="version-history">Version history <a class="anchor" href="#version-history" aria-label="Link to this section">#</a></h2>
-<p>See CHANGELOG.md in the kit's folder.</p>
-<div class="doc-pager"><a class="pager prev" href="extending.html"><span class="label">Previous</span>Extending with code</a><a class="pager next" href="troubleshooting.html"><span class="label">Next</span>Troubleshooting</a></div>
-<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Upgrading" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
-</article>
-<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#updating-the-kit">Updating the kit</a></li><li class="toc-2"><a href="#coming-from-another-footstep-tool">Coming from another footstep tool</a></li><li class="toc-2"><a href="#version-history">Version history</a></li></ul></nav>
-</div>
-</main>
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
-        <p>Core systems, carefully built.</p>
-      </div>
-      <div>
-        <h4>Products</h4>
-        <ul>
-          <li><a href="../../footstep-kit/index.html">Footstep Kit</a></li>
-          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
-          <li><a href="../../shipready/index.html">Shipready</a></li>
-          <li><a href="../../bearing/index.html">Bearing</a></li>
-          <li><a href="../../snapbuild/index.html">Snapbuild</a></li>
-          <li><a href="../../interactra/index.html">Interactra</a></li>
-          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Learn</h4>
-        <ul>
-          <li><a href="../../docs/index.html">Documentation</a></li>
-          <li><a href="../../support/index.html">Troubleshooting and help</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Help</h4>
-        <ul>
-          <li><a href="../../support/index.html">Support</a></li>
-          <li><a href="mailto:raregeometrysupport@gmail.com">Email</a></li>
-          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
-          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
-          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-base">
-      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
-      <p>No trackers, no cookies, no analytics.</p>
-    </div>
-  </div>
-</footer>
-<script src="search-index.js"></script>
-<script src="../../assets/docs.js"></script>
+<main id="main"><section class="section"><div class="wrap">
+<h1>This page has moved</h1>
+<p>It is now part of Responsive FX. <a href="../../responsive-fx/docs/index.html">Continue to Responsive FX</a>.</p>
+</div></section></main>
+<script>location.replace("../../responsive-fx/docs/index.html");</script>
 </body>
 </html>

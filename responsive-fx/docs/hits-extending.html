@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Code, events and your own UI | Rare Geometry</title>
+<meta name="description" content="Code, events and your own UI: documentation for the Responsive FX for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/responsive-fx/docs/hits-extending.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Code, events and your own UI">
+<meta property="og:description" content="Code, events and your own UI: documentation for the Responsive FX for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/responsive-fx/docs/hits-extending.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/responsive-fx/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Responsive FX docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="impact-lab.html">Impact Lab</a></div><div class="docs-group"><p class=label>The system</p><a href="surfaces.html">Surfaces and responses</a><a href="contacts.html">Contacts</a><a href="noise-and-hearing.html">Noise and hearing</a><a href="player-options.html">Player options and screens</a><a href="response-graph.html">Response Graph</a><a href="integrations.html">Integrations</a></div><div class="docs-group"><p class=label>Hit feedback</p><a href="hits.html">Overview</a><a href="hits-quick-start.html">Quick start</a><a href="hits-setup-wizard.html">Setup Wizard</a><a href="hit-feedback.html">Hit Feedback</a><a href="hits-profiles.html">Profiles, presets and Juice</a><a href="hit-recipe-studio.html">Hit Recipe Studio</a><a href="damage-numbers.html">Damage numbers</a><a href="hit-flash.html">Hit flash</a><a href="hits-motion.html">Hitstop, shake, knockback, squash</a><a href="health-bars.html">Health and health bars</a><a href="player-feedback.html">Player feedback</a><a href="sound-particles-kill.html">Sound, particles, kill moment</a><a href="accessibility.html">Accessibility</a><a href="hits-2d.html">2D games</a><a href="hits-make-it-yours.html">Make it yours</a><a href="hits-integration.html">Hook it into your game</a><a href="hits-extending.html" aria-current="page">Code, events and your own UI</a><a href="why-no-feedback.html">Why No Feedback?</a><a href="hits-samples.html">Demo scenes</a><a href="troubleshooting.html">Troubleshooting and FAQ</a></div><div class="docs-group"><p class=label>Footsteps</p><a href="steps.html">Overview</a><a href="steps-quick-start.html">Quick start</a><a href="steps-setup-wizard.html">Setup Wizard</a><a href="steps-characters.html">Surface Footsteps</a><a href="steps-triggers.html">When steps happen</a><a href="steps-surfaces.html">The Surface Library</a><a href="surface-zones.html">Surface Zones</a><a href="effects-and-footprints.html">Effects and footprints</a><a href="ai-hearing.html">AI hearing (stealth)</a><a href="steps-2d.html">2D games</a><a href="steps-make-it-yours.html">Make it yours</a><a href="your-game.html">Your controller and game</a><a href="steps-extending.html">Extending with code</a><a href="why-no-footstep.html">Why No Footstep?</a><a href="steps-samples.html">Demo scenes</a><a href="steps-troubleshooting.html">Troubleshooting</a></div><div class="docs-group"><p class=label>Reference</p><a href="upgrading.html">Upgrading</a><a href="help-in-unity.html">Help inside Unity</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="impact-lab.html">Impact Lab</a></div><div class="docs-group"><p class=label>The system</p><a href="surfaces.html">Surfaces and responses</a><a href="contacts.html">Contacts</a><a href="noise-and-hearing.html">Noise and hearing</a><a href="player-options.html">Player options and screens</a><a href="response-graph.html">Response Graph</a><a href="integrations.html">Integrations</a></div><div class="docs-group"><p class=label>Hit feedback</p><a href="hits.html">Overview</a><a href="hits-quick-start.html">Quick start</a><a href="hits-setup-wizard.html">Setup Wizard</a><a href="hit-feedback.html">Hit Feedback</a><a href="hits-profiles.html">Profiles, presets and Juice</a><a href="hit-recipe-studio.html">Hit Recipe Studio</a><a href="damage-numbers.html">Damage numbers</a><a href="hit-flash.html">Hit flash</a><a href="hits-motion.html">Hitstop, shake, knockback, squash</a><a href="health-bars.html">Health and health bars</a><a href="player-feedback.html">Player feedback</a><a href="sound-particles-kill.html">Sound, particles, kill moment</a><a href="accessibility.html">Accessibility</a><a href="hits-2d.html">2D games</a><a href="hits-make-it-yours.html">Make it yours</a><a href="hits-integration.html">Hook it into your game</a><a href="hits-extending.html" aria-current="page">Code, events and your own UI</a><a href="why-no-feedback.html">Why No Feedback?</a><a href="hits-samples.html">Demo scenes</a><a href="troubleshooting.html">Troubleshooting and FAQ</a></div><div class="docs-group"><p class=label>Footsteps</p><a href="steps.html">Overview</a><a href="steps-quick-start.html">Quick start</a><a href="steps-setup-wizard.html">Setup Wizard</a><a href="steps-characters.html">Surface Footsteps</a><a href="steps-triggers.html">When steps happen</a><a href="steps-surfaces.html">The Surface Library</a><a href="surface-zones.html">Surface Zones</a><a href="effects-and-footprints.html">Effects and footprints</a><a href="ai-hearing.html">AI hearing (stealth)</a><a href="steps-2d.html">2D games</a><a href="steps-make-it-yours.html">Make it yours</a><a href="your-game.html">Your controller and game</a><a href="steps-extending.html">Extending with code</a><a href="why-no-footstep.html">Why No Footstep?</a><a href="steps-samples.html">Demo scenes</a><a href="steps-troubleshooting.html">Troubleshooting</a></div><div class="docs-group"><p class=label>Reference</p><a href="upgrading.html">Upgrading</a><a href="help-in-unity.html">Help inside Unity</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Responsive FX</a><span>/</span><span>Hit feedback</span></nav>
+<h1 id="code-events-and-your-own-ui">Code, events and your own UI</h1>
+<p>Namespace <code>RareGeometry.ResponsiveFX</code>. Everything below is public and documented in the code.</p>
+<h2 id="hitting">Hitting <a class="anchor" href="#hitting" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">HitFeedback.Hit(target, 25);                                   // GameObject or any Component (a collider you hit)
+HitFeedback.Hit(target, new HitInfo(25, HitKind.Critical)
+    .At(hitPoint).From(direction).By(attacker).Killing(isKill));
+var report = hitFeedback.Play(hitInfo);                        // what played and why
+hitFeedback.Freeze(0.1f);                                      // a target-only freeze by itself
+hitFeedback.StopAll();                                         // stop everything running on it and put it back
+</code></pre>
+<h2 id="events">Events <a class="anchor" href="#events" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Event</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>HitFeedback.AnyHit</code> (static)</td>
+<td>Every hit on any target: your combo counter, achievements, logs.</td>
+</tr>
+<tr>
+<td><code>hitFeedback.Played</code></td>
+<td>Every hit on this target, with its report.</td>
+</tr>
+<tr>
+<td><code>OnHit</code> (UnityEvent with the amount), <code>OnKilled</code></td>
+<td>In the inspector, no code.</td>
+</tr>
+<tr>
+<td><code>Health.OnDamaged</code>, <code>OnHealed</code>, <code>OnDied</code>, <code>Changed</code></td>
+<td>Health changes.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="your-own-health">Your own health <a class="anchor" href="#your-own-health" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">public class MyHealth : MonoBehaviour, IHealthSource
+{
+    public float hp = 100, maxHp = 100;
+    public float CurrentHealth =&gt; hp;
+    public float MaxHealth =&gt; maxHp;
+    public float CurrentShield =&gt; 0;
+    public float MaxShield =&gt; 0;
+}
+</code></pre>
+<h2 id="your-own-number-display-textmesh-pro-ui-toolkit">Your own number display (TextMesh Pro, UI Toolkit) <a class="anchor" href="#your-own-number-display-textmesh-pro-ui-toolkit" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">public class MyNumbers : MonoBehaviour, IDamageNumberDisplay
+{
+    void OnEnable() =&gt; DamageNumbers.CustomDisplay = this;
+    void OnDisable() { if (DamageNumbers.CustomDisplay == (IDamageNumberDisplay)this) DamageNumbers.CustomDisplay = null; }
+
+    public int Show(Vector3 worldPosition, string text, HitKind kind, Color color, float sizeInPixels, Sprite icon, int combineWith, HitFeedback owner)
+    {
+        // Spawn your TextMeshPro popup here. The text is ready: &quot;1.2K&quot;, &quot;+25&quot;, &quot;Miss&quot;.
+        return 0;
+    }
+}
+</code></pre>
+<p>Your own display gets a string per number (Responsive FX's own numbers make none).</p>
+<h2 id="your-scripts-in-hitstop">Your scripts in hitstop <a class="anchor" href="#your-scripts-in-hitstop" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">public class MyAI : MonoBehaviour, IHitstopReceiver
+{
+    bool frozen;
+    public void OnHitstop(bool isFrozen) =&gt; frozen = isFrozen;
+    void Update() { if (frozen) return; /* ... */ }
+}
+</code></pre>
+<h2 id="global-settings-time-and-the-screen">Global settings, time and the screen <a class="anchor" href="#global-settings-time-and-the-screen" aria-label="Link to this section">#</a></h2>
+<p><code>HitFeedbackSettings</code> (accessibility, master juice, volume, rumble, camera, <code>Translate</code> for your localisation),
+<code>TimeControl.Request(scale, seconds)</code> and <code>StopAll()</code> (safe slow motion), <code>ScreenFlash.Play(color, amount)</code>,
+<code>DamageNumbers.Show / ShowText / Clear / Hidden / Prewarm</code>, <code>HitFeedbackOverlay.Visible</code> (hide the screen layer behind your
+menus) and <code>HitCameraShake.For(camera).AddTrauma(amount, settings)</code>.</p>
+<h2 id="multiplayer">Multiplayer <a class="anchor" href="#multiplayer" aria-label="Link to this section">#</a></h2>
+<p>Feedback is local to each player's screen, so there is nothing to sync: play the hit on every client from your own
+networked event (an RPC or a synced health change). With Netcode for GameObjects, call <code>HitFeedback.Hit</code> in the
+<code>ClientRpc</code> (or <code>OnValueChanged</code> of a health NetworkVariable) that tells clients about the hit.</p>
+<h2 id="performance">Performance <a class="anchor" href="#performance" aria-label="Link to this section">#</a></h2>
+<p>Numbers, bars and the player's screen effects are drawn in a few batched calls. Hits, numbers and bars make no garbage
+in steady play (checked by Responsive FX's tests and in built players). Call <code>DamageNumbers.Prewarm()</code> while loading to make
+the number pool up front.</p>
+<div class="doc-pager"><a class="pager prev" href="hits-integration.html"><span class="label">Previous</span>Hook it into your game</a><a class="pager next" href="why-no-feedback.html"><span class="label">Next</span>Why No Feedback?</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Code%2C+events+and+your+own+UI" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#hitting">Hitting</a></li><li class="toc-2"><a href="#events">Events</a></li><li class="toc-2"><a href="#your-own-health">Your own health</a></li><li class="toc-2"><a href="#your-own-number-display-textmesh-pro-ui-toolkit">Your own number display (TextMesh Pro, UI Toolkit)</a></li><li class="toc-2"><a href="#your-scripts-in-hitstop">Your scripts in hitstop</a></li><li class="toc-2"><a href="#global-settings-time-and-the-screen">Global settings, time and the screen</a></li><li class="toc-2"><a href="#multiplayer">Multiplayer</a></li><li class="toc-2"><a href="#performance">Performance</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../shipready/index.html">Shipready</a></li>
+          <li><a href="../../bearing/index.html">Bearing</a></li>
+          <li><a href="../../snapbuild/index.html">Snapbuild</a></li>
+          <li><a href="../../interactra/index.html">Interactra</a></li>
+          <li><a href="../../responsive-fx/index.html">Responsive FX</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../support/index.html">Troubleshooting and help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:raregeometrysupport@gmail.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

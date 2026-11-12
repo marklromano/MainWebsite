@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Hitstop, shake, knockback and squash | Rare Geometry</title>
+<meta name="description" content="Hitstop, shake, knockback and squash: documentation for the Responsive FX for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/responsive-fx/docs/hits-motion.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Hitstop, shake, knockback and squash">
+<meta property="og:description" content="Hitstop, shake, knockback and squash: documentation for the Responsive FX for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/responsive-fx/docs/hits-motion.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/responsive-fx/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Responsive FX docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="impact-lab.html">Impact Lab</a></div><div class="docs-group"><p class=label>The system</p><a href="surfaces.html">Surfaces and responses</a><a href="contacts.html">Contacts</a><a href="noise-and-hearing.html">Noise and hearing</a><a href="player-options.html">Player options and screens</a><a href="response-graph.html">Response Graph</a><a href="integrations.html">Integrations</a></div><div class="docs-group"><p class=label>Hit feedback</p><a href="hits.html">Overview</a><a href="hits-quick-start.html">Quick start</a><a href="hits-setup-wizard.html">Setup Wizard</a><a href="hit-feedback.html">Hit Feedback</a><a href="hits-profiles.html">Profiles, presets and Juice</a><a href="hit-recipe-studio.html">Hit Recipe Studio</a><a href="damage-numbers.html">Damage numbers</a><a href="hit-flash.html">Hit flash</a><a href="hits-motion.html" aria-current="page">Hitstop, shake, knockback, squash</a><a href="health-bars.html">Health and health bars</a><a href="player-feedback.html">Player feedback</a><a href="sound-particles-kill.html">Sound, particles, kill moment</a><a href="accessibility.html">Accessibility</a><a href="hits-2d.html">2D games</a><a href="hits-make-it-yours.html">Make it yours</a><a href="hits-integration.html">Hook it into your game</a><a href="hits-extending.html">Code, events and your own UI</a><a href="why-no-feedback.html">Why No Feedback?</a><a href="hits-samples.html">Demo scenes</a><a href="troubleshooting.html">Troubleshooting and FAQ</a></div><div class="docs-group"><p class=label>Footsteps</p><a href="steps.html">Overview</a><a href="steps-quick-start.html">Quick start</a><a href="steps-setup-wizard.html">Setup Wizard</a><a href="steps-characters.html">Surface Footsteps</a><a href="steps-triggers.html">When steps happen</a><a href="steps-surfaces.html">The Surface Library</a><a href="surface-zones.html">Surface Zones</a><a href="effects-and-footprints.html">Effects and footprints</a><a href="ai-hearing.html">AI hearing (stealth)</a><a href="steps-2d.html">2D games</a><a href="steps-make-it-yours.html">Make it yours</a><a href="your-game.html">Your controller and game</a><a href="steps-extending.html">Extending with code</a><a href="why-no-footstep.html">Why No Footstep?</a><a href="steps-samples.html">Demo scenes</a><a href="steps-troubleshooting.html">Troubleshooting</a></div><div class="docs-group"><p class=label>Reference</p><a href="upgrading.html">Upgrading</a><a href="help-in-unity.html">Help inside Unity</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="impact-lab.html">Impact Lab</a></div><div class="docs-group"><p class=label>The system</p><a href="surfaces.html">Surfaces and responses</a><a href="contacts.html">Contacts</a><a href="noise-and-hearing.html">Noise and hearing</a><a href="player-options.html">Player options and screens</a><a href="response-graph.html">Response Graph</a><a href="integrations.html">Integrations</a></div><div class="docs-group"><p class=label>Hit feedback</p><a href="hits.html">Overview</a><a href="hits-quick-start.html">Quick start</a><a href="hits-setup-wizard.html">Setup Wizard</a><a href="hit-feedback.html">Hit Feedback</a><a href="hits-profiles.html">Profiles, presets and Juice</a><a href="hit-recipe-studio.html">Hit Recipe Studio</a><a href="damage-numbers.html">Damage numbers</a><a href="hit-flash.html">Hit flash</a><a href="hits-motion.html" aria-current="page">Hitstop, shake, knockback, squash</a><a href="health-bars.html">Health and health bars</a><a href="player-feedback.html">Player feedback</a><a href="sound-particles-kill.html">Sound, particles, kill moment</a><a href="accessibility.html">Accessibility</a><a href="hits-2d.html">2D games</a><a href="hits-make-it-yours.html">Make it yours</a><a href="hits-integration.html">Hook it into your game</a><a href="hits-extending.html">Code, events and your own UI</a><a href="why-no-feedback.html">Why No Feedback?</a><a href="hits-samples.html">Demo scenes</a><a href="troubleshooting.html">Troubleshooting and FAQ</a></div><div class="docs-group"><p class=label>Footsteps</p><a href="steps.html">Overview</a><a href="steps-quick-start.html">Quick start</a><a href="steps-setup-wizard.html">Setup Wizard</a><a href="steps-characters.html">Surface Footsteps</a><a href="steps-triggers.html">When steps happen</a><a href="steps-surfaces.html">The Surface Library</a><a href="surface-zones.html">Surface Zones</a><a href="effects-and-footprints.html">Effects and footprints</a><a href="ai-hearing.html">AI hearing (stealth)</a><a href="steps-2d.html">2D games</a><a href="steps-make-it-yours.html">Make it yours</a><a href="your-game.html">Your controller and game</a><a href="steps-extending.html">Extending with code</a><a href="why-no-footstep.html">Why No Footstep?</a><a href="steps-samples.html">Demo scenes</a><a href="steps-troubleshooting.html">Troubleshooting</a></div><div class="docs-group"><p class=label>Reference</p><a href="upgrading.html">Upgrading</a><a href="help-in-unity.html">Help inside Unity</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Responsive FX</a><span>/</span><span>Hit feedback</span></nav>
+<h1 id="hitstop-shake-knockback-and-squash">Hitstop, shake, knockback and squash</h1>
+<p>Every one of these puts things back exactly afterwards: the object's velocity, the game's time scale, your camera, the
+object's scale.</p>
+<h2 id="hitstop-profile--hitstop">Hitstop (Profile &gt; Hitstop) <a class="anchor" href="#hitstop-profile--hitstop" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mode</td>
+<td>Target Only: just the hit object pauses (its Animators, Rigidbodies, Rigidbody 2Ds, particle systems, NavMesh Agent and your own scripts with IHitstopReceiver). Global: the whole game freezes for a moment. Off.</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>Real seconds for a normal hit (0.05 is about three frames). Each kind's strength scales it.</td>
+</tr>
+<tr>
+<td>Max duration</td>
+<td>The longest a single stop may last. A second hit while frozen extends the freeze up to this, never stacks past it.</td>
+</tr>
+<tr>
+<td>Freeze attacker</td>
+<td>Target Only: the attacker (the hit's Source, when it has Hit Feedback) freezes for the same moment.</td>
+</tr>
+<tr>
+<td>Global time scale</td>
+<td>Game speed during a global stop (0 is a full freeze).</td>
+</tr>
+</tbody>
+</table></div>
+<p>Global stops go through <code>TimeControl</code>: overlapping stops never stack (the slowest wins until it ends), your game's own time
+scale comes back exactly, and if your game changes <code>Time.timeScale</code> itself (a pause menu) Responsive FX lets go at once and never
+unpauses it. Your own scripts can pause too: add <code>IHitstopReceiver</code> to them.</p>
+<h2 id="camera-shake-and-punch-profile--camera-shake-and-punch">Camera shake and punch (Profile &gt; Camera shake and punch) <a class="anchor" href="#camera-shake-and-punch-profile--camera-shake-and-punch" aria-label="Link to this section">#</a></h2>
+<p>Trauma based: each hit adds trauma, the shake is trauma squared (small hits stay subtle, big ones build up) and it fades
+smoothly.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trauma</td>
+<td>How much a normal hit adds (0 to 1).</td>
+</tr>
+<tr>
+<td>Max offset, Max angle, Frequency, Recovery</td>
+<td>The feel of the shake.</td>
+</tr>
+<tr>
+<td>Punch</td>
+<td>A quick nudge in the hit's direction.</td>
+</tr>
+<tr>
+<td>FOV kick</td>
+<td>A quick zoom (on 2D orthographic cameras, the same as a size change).</td>
+</tr>
+<tr>
+<td>Max distance</td>
+<td>Hits farther from the camera shake less, down to nothing.</td>
+</tr>
+<tr>
+<td>Use Cinemachine</td>
+<td>Cinemachine 3 impulses instead (your camera needs a Cinemachine Impulse Listener).</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>It never fights your camera controller.</strong> The shake is laid on after every script has moved the camera (and after
+Cinemachine) and taken off before any script runs again, so your controller always sees its own position. It is added to
+the camera tagged MainCamera on the first hit (<code>HitCameraShake</code>); add that component yourself to change its strength or
+shake a camera rig instead. Another camera: set <code>HitFeedbackSettings.Camera</code> or the camera tag in Project Settings.</p>
+<h2 id="knockback-profile--knockback">Knockback (Profile &gt; Knockback) <a class="anchor" href="#knockback-profile--knockback" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Mover</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rigidbody</td>
+<td>A push (velocity change, or an impulse when Ignore Mass is off).</td>
+</tr>
+<tr>
+<td>Rigidbody 2D</td>
+<td>A push along the hit, with an upward part.</td>
+</tr>
+<tr>
+<td>Character Controller</td>
+<td>A short glide using Move, so it respects collisions.</td>
+</tr>
+<tr>
+<td>NavMesh Agent</td>
+<td>A short glide using the agent's Move.</td>
+</tr>
+<tr>
+<td>Nothing (transform)</td>
+<td>A short glide of the transform, when Move Transform is on.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Force, Upward, Duration (for glides), Ignore Mass, Move Transform. The direction comes from the hit's Direction, its
+Source, its Point, or else away from the camera.</p>
+<h2 id="squash-profile--squash">Squash (Profile &gt; Squash) <a class="anchor" href="#squash-profile--squash" aria-label="Link to this section">#</a></h2>
+<p>Scale Punch, Squash And Stretch, or Wobble, by an amount and for a duration. It works on the Visual you set (a child, so
+the root's own scale and collider stay as they are) and always ends at the exact starting scale. If your animation also
+scales the object, Responsive FX squashes on top of it.</p>
+<div class="doc-pager"><a class="pager prev" href="hit-flash.html"><span class="label">Previous</span>Hit flash</a><a class="pager next" href="health-bars.html"><span class="label">Next</span>Health and health bars</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Hitstop%2C+shake%2C+knockback+and+squash" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#hitstop-profile--hitstop">Hitstop (Profile &gt; Hitstop)</a></li><li class="toc-2"><a href="#camera-shake-and-punch-profile--camera-shake-and-punch">Camera shake and punch (Profile &gt; Camera shake and punch)</a></li><li class="toc-2"><a href="#knockback-profile--knockback">Knockback (Profile &gt; Knockback)</a></li><li class="toc-2"><a href="#squash-profile--squash">Squash (Profile &gt; Squash)</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../shipready/index.html">Shipready</a></li>
+          <li><a href="../../bearing/index.html">Bearing</a></li>
+          <li><a href="../../snapbuild/index.html">Snapbuild</a></li>
+          <li><a href="../../interactra/index.html">Interactra</a></li>
+          <li><a href="../../responsive-fx/index.html">Responsive FX</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../support/index.html">Troubleshooting and help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:raregeometrysupport@gmail.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

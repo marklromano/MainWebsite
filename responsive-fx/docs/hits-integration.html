@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Hook it into your game | Rare Geometry</title>
+<meta name="description" content="Hook it into your game: documentation for the Responsive FX for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/responsive-fx/docs/hits-integration.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Hook it into your game">
+<meta property="og:description" content="Hook it into your game: documentation for the Responsive FX for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/responsive-fx/docs/hits-integration.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/responsive-fx/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Responsive FX docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="impact-lab.html">Impact Lab</a></div><div class="docs-group"><p class=label>The system</p><a href="surfaces.html">Surfaces and responses</a><a href="contacts.html">Contacts</a><a href="noise-and-hearing.html">Noise and hearing</a><a href="player-options.html">Player options and screens</a><a href="response-graph.html">Response Graph</a><a href="integrations.html">Integrations</a></div><div class="docs-group"><p class=label>Hit feedback</p><a href="hits.html">Overview</a><a href="hits-quick-start.html">Quick start</a><a href="hits-setup-wizard.html">Setup Wizard</a><a href="hit-feedback.html">Hit Feedback</a><a href="hits-profiles.html">Profiles, presets and Juice</a><a href="hit-recipe-studio.html">Hit Recipe Studio</a><a href="damage-numbers.html">Damage numbers</a><a href="hit-flash.html">Hit flash</a><a href="hits-motion.html">Hitstop, shake, knockback, squash</a><a href="health-bars.html">Health and health bars</a><a href="player-feedback.html">Player feedback</a><a href="sound-particles-kill.html">Sound, particles, kill moment</a><a href="accessibility.html">Accessibility</a><a href="hits-2d.html">2D games</a><a href="hits-make-it-yours.html">Make it yours</a><a href="hits-integration.html" aria-current="page">Hook it into your game</a><a href="hits-extending.html">Code, events and your own UI</a><a href="why-no-feedback.html">Why No Feedback?</a><a href="hits-samples.html">Demo scenes</a><a href="troubleshooting.html">Troubleshooting and FAQ</a></div><div class="docs-group"><p class=label>Footsteps</p><a href="steps.html">Overview</a><a href="steps-quick-start.html">Quick start</a><a href="steps-setup-wizard.html">Setup Wizard</a><a href="steps-characters.html">Surface Footsteps</a><a href="steps-triggers.html">When steps happen</a><a href="steps-surfaces.html">The Surface Library</a><a href="surface-zones.html">Surface Zones</a><a href="effects-and-footprints.html">Effects and footprints</a><a href="ai-hearing.html">AI hearing (stealth)</a><a href="steps-2d.html">2D games</a><a href="steps-make-it-yours.html">Make it yours</a><a href="your-game.html">Your controller and game</a><a href="steps-extending.html">Extending with code</a><a href="why-no-footstep.html">Why No Footstep?</a><a href="steps-samples.html">Demo scenes</a><a href="steps-troubleshooting.html">Troubleshooting</a></div><div class="docs-group"><p class=label>Reference</p><a href="upgrading.html">Upgrading</a><a href="help-in-unity.html">Help inside Unity</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="impact-lab.html">Impact Lab</a></div><div class="docs-group"><p class=label>The system</p><a href="surfaces.html">Surfaces and responses</a><a href="contacts.html">Contacts</a><a href="noise-and-hearing.html">Noise and hearing</a><a href="player-options.html">Player options and screens</a><a href="response-graph.html">Response Graph</a><a href="integrations.html">Integrations</a></div><div class="docs-group"><p class=label>Hit feedback</p><a href="hits.html">Overview</a><a href="hits-quick-start.html">Quick start</a><a href="hits-setup-wizard.html">Setup Wizard</a><a href="hit-feedback.html">Hit Feedback</a><a href="hits-profiles.html">Profiles, presets and Juice</a><a href="hit-recipe-studio.html">Hit Recipe Studio</a><a href="damage-numbers.html">Damage numbers</a><a href="hit-flash.html">Hit flash</a><a href="hits-motion.html">Hitstop, shake, knockback, squash</a><a href="health-bars.html">Health and health bars</a><a href="player-feedback.html">Player feedback</a><a href="sound-particles-kill.html">Sound, particles, kill moment</a><a href="accessibility.html">Accessibility</a><a href="hits-2d.html">2D games</a><a href="hits-make-it-yours.html">Make it yours</a><a href="hits-integration.html" aria-current="page">Hook it into your game</a><a href="hits-extending.html">Code, events and your own UI</a><a href="why-no-feedback.html">Why No Feedback?</a><a href="hits-samples.html">Demo scenes</a><a href="troubleshooting.html">Troubleshooting and FAQ</a></div><div class="docs-group"><p class=label>Footsteps</p><a href="steps.html">Overview</a><a href="steps-quick-start.html">Quick start</a><a href="steps-setup-wizard.html">Setup Wizard</a><a href="steps-characters.html">Surface Footsteps</a><a href="steps-triggers.html">When steps happen</a><a href="steps-surfaces.html">The Surface Library</a><a href="surface-zones.html">Surface Zones</a><a href="effects-and-footprints.html">Effects and footprints</a><a href="ai-hearing.html">AI hearing (stealth)</a><a href="steps-2d.html">2D games</a><a href="steps-make-it-yours.html">Make it yours</a><a href="your-game.html">Your controller and game</a><a href="steps-extending.html">Extending with code</a><a href="why-no-footstep.html">Why No Footstep?</a><a href="steps-samples.html">Demo scenes</a><a href="steps-troubleshooting.html">Troubleshooting</a></div><div class="docs-group"><p class=label>Reference</p><a href="upgrading.html">Upgrading</a><a href="help-in-unity.html">Help inside Unity</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Responsive FX</a><span>/</span><span>Hit feedback</span></nav>
+<h1 id="hook-it-into-your-game">Hook it into your game</h1>
+<p>Your game already decides who gets hurt, how much and when they die. Responsive FX only shows it. This page is about connecting
+the two without changing how your game works.</p>
+<h2 id="pick-one-route">Pick one route <a class="anchor" href="#pick-one-route" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Your game has...</th>
+<th>Use</th>
+<th>Code?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A health script with a health number (a field or property)</td>
+<td><strong>Hit Feedback Bridge, Watch</strong></td>
+<td>None</td>
+</tr>
+<tr>
+<td>A health script with UnityEvents (OnDamaged, OnHealthChanged, OnDied)</td>
+<td><strong>Hit Feedback Bridge, events</strong></td>
+<td>None</td>
+</tr>
+<tr>
+<td>A place in code where damage is dealt</td>
+<td><code>HitFeedback.Hit(target, amount)</code></td>
+<td>One line</td>
+</tr>
+<tr>
+<td>No health at all yet</td>
+<td>Responsive FX's <strong>Health</strong> component</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Projectiles, hitboxes or traps but no damage code</td>
+<td>The <strong>Hit On Contact</strong> recipe</td>
+<td>None</td>
+</tr>
+</tbody>
+</table></div>
+<p>Use <strong>one</strong> route per enemy. Two routes (for example a Bridge watching your health <em>and</em> a call to <code>HitFeedback.Hit</code> in
+your damage code) show every hit twice.</p>
+<p>The <strong>Setup Wizard</strong> picks the route for you: under <em>Who controls health?</em>, <em>Find it for me</em> looks for your health
+script by name. When it finds one, it adds a Bridge that watches it. It never adds Responsive FX's Health next to your own.</p>
+<h2 id="the-existing-game-preset">The Existing Game preset <a class="anchor" href="#the-existing-game-preset" aria-label="Link to this section">#</a></h2>
+<p>Start with <strong>Existing Game (safe)</strong> when your game already has combat. It shows numbers, the flash, the bar, sound and
+sparks, and nothing else: no knockback, no squash, no hitstop, no camera shake, no slow motion, and the kill moment
+never hides or destroys your object. Your movement, physics, camera and time are never touched. Once that works, turn
+on the extras you want one at a time in the profile.</p>
+<h2 id="hit-feedback-bridge">Hit Feedback Bridge <a class="anchor" href="#hit-feedback-bridge" aria-label="Link to this section">#</a></h2>
+<p>Add <strong>Hit Feedback Bridge</strong> next to Hit Feedback (Add Component &gt; Responsive FX).</p>
+<p><strong>Watch a value (no code).</strong> Press <strong>Find my health script</strong>, or drag your health script into <em>Health script</em> and pick
+its health value from the list (any float, int or double field or property). Optionally pick its max health value for
+the bar. Then every drop plays a hit, reaching <em>Dead at or below</em> plays the kill, a rise shows healing, and the bar
+follows the value. Coming back from zero (a respawn) shows nothing and tidies the object up. The Bridge only reads: it
+never changes your health. Reading it every frame makes no garbage.</p>
+<p><strong>Call it from your events.</strong> In your health script's UnityEvent press <strong>+</strong>, drag the object in and pick <strong>Hit
+Feedback Bridge</strong> and a method:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>HealthChanged</code> / <code>HealthChangedInt</code></td>
+<td>Events that send the new health. Works out damage, heals and the kill.</td>
+</tr>
+<tr>
+<td><code>PlayDamage</code> / <code>PlayDamageInt</code></td>
+<td>Events that send the damage taken (a negative "changed by" amount works too).</td>
+</tr>
+<tr>
+<td><code>PlayCritical</code>, <code>PlayHeal</code>, <code>PlayShieldHit</code></td>
+<td>The other kinds.</td>
+</tr>
+<tr>
+<td><code>PlayKill</code> / <code>PlayKillNoNumber</code></td>
+<td>OnDied, OnKilled.</td>
+</tr>
+<tr>
+<td><code>PlayMiss</code>, <code>PlayBlock</code></td>
+<td>Dodges and blocks.</td>
+</tr>
+<tr>
+<td><code>SetAttacker</code>, <code>SetHitPoint</code></td>
+<td>Call just before a hit to give it a direction or a contact point.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Test it (Play Mode).</strong> The Bridge inspector shows which route is in use, the current and max health, the last change
+and how many hits came from each route.</p>
+<ul>
+<li><strong>Test Damage</strong> and <strong>Test Heal</strong> change your health value itself by <em>Amount</em> (fields and properties with a setter,
+  kept between 0 and max), so the hit goes through exactly the route your game uses.</li>
+<li><strong>Preview Critical, Preview Block, Preview Kill</strong> show the reaction and change nothing in your game.</li>
+<li><strong>Last hit used defaults for</strong> lists what the last hit didn't know: no attacker (knockback pushes away from the
+  camera) or no hit point (numbers and sparks start at the target). Give them with <code>SetAttacker</code> and <code>SetHitPoint</code>.</li>
+<li>A warning appears when the same hit arrives twice (the value dropped and an event called the Bridge together): that
+  shows two numbers, so use one route per object.</li>
+</ul>
+<p><strong>What watching can't know.</strong> A watched value only says it went down or up. Who hit, where, a critical (unless
+<em>Critical from</em> is set), a block, a miss or shield damage need the event route or <code>HitFeedback.Hit</code> with a <code>HitInfo</code>.</p>
+<h2 id="recipes">Recipes <a class="anchor" href="#recipes" aria-label="Link to this section">#</a></h2>
+<h3 id="your-own-health-script-in-code">Your own health script, in code <a class="anchor" href="#your-own-health-script-in-code" aria-label="Link to this section">#</a></h3>
+<pre><code class="language-csharp">public void TakeDamage(float amount, Vector3 point, Transform attacker)
+{
+    hp -= amount;
+    HitFeedback.Hit(gameObject, new HitInfo(amount).At(point).By(attacker).Killing(hp &lt;= 0));
+}
+</code></pre>
+<p>Add <code>IHealthSource</code> to the same script (four properties, see <a href="hits-extending.html">Code, events and your own UI</a>) and the
+bars follow your health too.</p>
+<h3 id="projectiles-3d-and-2d">Projectiles, 3D and 2D <a class="anchor" href="#projectiles-3d-and-2d" aria-label="Link to this section">#</a></h3>
+<p>Put <strong>Hit On Contact</strong> (Recipes) on the bullet. It works with collisions and triggers in 3D and 2D, uses the exact
+contact point and the bullet's direction, and can destroy the bullet on its first hit. Turn on <em>Feedback only</em> when your
+own script deals the damage. From your own projectile code:</p>
+<pre><code class="language-csharp">void OnCollisionEnter(Collision c)
+{
+    HitFeedback.Hit(c.collider, new HitInfo(damage).At(c.GetContact(0).point).From(-c.relativeVelocity));
+}
+</code></pre>
+<p><code>HitFeedback.Hit</code> takes the collider you touched: it finds the Hit Feedback on it or on a parent, so hitting an arm
+collider on a character works.</p>
+<h3 id="melee-hitboxes-and-trigger-zones">Melee hitboxes and trigger zones <a class="anchor" href="#melee-hitboxes-and-trigger-zones" aria-label="Link to this section">#</a></h3>
+<p><strong>Hit On Contact</strong> on the hitbox. Each target is hit once per <em>Once every</em> seconds, so a hitbox that stays inside an
+enemy for several frames, or touches three of its colliders, gives one hit.</p>
+<h3 id="hitscan-weapons">Hitscan weapons <a class="anchor" href="#hitscan-weapons" aria-label="Link to this section">#</a></h3>
+<p>Call <strong>Hitscan Hit</strong>'s <code>Fire()</code> (or <code>FireShot</code> from a UnityEvent). It casts a ray forward and plays the hit at the point
+struck. Or in your own code: <code>HitFeedback.Hit(rayHit.collider, new HitInfo(damage).At(rayHit.point).From(ray.direction))</code>.</p>
+<h3 id="visual-scripting">Visual Scripting <a class="anchor" href="#visual-scripting" aria-label="Link to this section">#</a></h3>
+<p>Every Bridge method and <code>HitFeedback.HitAmount</code>, <code>CriticalHit</code>, <code>HealAmount</code>, <code>KillingHit</code> take one number, so they
+show up as plain nodes. In a Script Graph, get the Hit Feedback (or Bridge) component and call the method with your
+damage.</p>
+<h3 id="pooled-enemies">Pooled enemies <a class="anchor" href="#pooled-enemies" aria-label="Link to this section">#</a></h3>
+<p>Nothing to do: Hit Feedback puts the object back (colour, scale, frozen state) when it is disabled and enabled again.
+If you reuse an object without disabling it, call <code>hitFeedback.ResetVisual()</code> when you respawn it.</p>
+<h3 id="ragdolls">Ragdolls <a class="anchor" href="#ragdolls" aria-label="Link to this section">#</a></h3>
+<p>The Setup Wizard spots ragdolls (three or more jointed bones) and turns off knockback and squash for them, because
+physics owns the body. The flash, numbers, bar, sound and sparks still play. Put Hit Feedback on the root; hits on any
+bone find it.</p>
+<h3 id="many-renderers-lods-and-custom-shaders">Many renderers, LODs and custom shaders <a class="anchor" href="#many-renderers-lods-and-custom-shaders" aria-label="Link to this section">#</a></h3>
+<p>The flash draws a copy of each renderer with Responsive FX's own shader, so it shows whatever your material is, custom
+shaders included, and never changes your materials. The copy is solid: it doesn't follow alpha cutouts, dissolves or
+vertex animation done in a shader. Only the first LOD flashes. To choose exactly what flashes (skip a
+weapon, a shadow blob or a VFX mesh), fill in <em>Renderers</em> on Hit Feedback.</p>
+<h3 id="your-own-camera-cinemachine-and-camera-rigs">Your own camera, Cinemachine and camera rigs <a class="anchor" href="#your-own-camera-cinemachine-and-camera-rigs" aria-label="Link to this section">#</a></h3>
+<p>Shake moves the camera a little after everything else and puts it back before your scripts run, so camera follow
+scripts keep working. With Cinemachine 3, tick <strong>Use Cinemachine</strong> in the profile's shake to send impulses instead (your Cinemachine camera needs an Impulse Listener). When <code>Camera.main</code> is not
+the camera players see (a rig, several cameras), add <strong>Hit Feedback Camera</strong> to the right one. Split screen with one
+shake per player is not supported in 1.0.</p>
+<h3 id="multiplayer">Multiplayer <a class="anchor" href="#multiplayer" aria-label="Link to this section">#</a></h3>
+<p>Play feedback where it is seen: on every client, from the health value your network code already syncs. Watch that
+value with the Bridge, or call <code>bridge.HealthChanged(newValue)</code> from your sync callback. Don't send feedback over the
+network yourself, and don't play it on the server only.</p>
+<h3 id="scriptableobject-event-channels">ScriptableObject event channels <a class="anchor" href="#scriptableobject-event-channels" aria-label="Link to this section">#</a></h3>
+<p>Add a listener for your channel on the enemy and point its response at the Bridge's <code>PlayDamage</code> or <code>HealthChanged</code>.</p>
+<h3 id="your-textmesh-pro-font">Your TextMesh Pro font <a class="anchor" href="#your-textmesh-pro-font" aria-label="Link to this section">#</a></h3>
+<p>Add <strong>TextMesh Pro Numbers</strong> to any object in the scene and drag in your TMP font asset: numbers then use your font and
+material. See <a href="damage-numbers.html">Damage numbers</a>.</p>
+<h3 id="big-frameworks-and-character-controllers">Big frameworks and character controllers <a class="anchor" href="#big-frameworks-and-character-controllers" aria-label="Link to this section">#</a></h3>
+<p>Most combat frameworks have either a health value (use <strong>Watch</strong>) or damage and death events (use <strong>events</strong>). If their
+health lives in a system rather than a field, add a small script that listens to their event and calls the Bridge.
+Choose the <strong>Existing Game</strong> preset so knockback and hitstop don't fight their movement. We test against plain Unity
+components, not against each framework.</p>
+<h2 id="when-nothing-shows">When nothing shows <a class="anchor" href="#when-nothing-shows" aria-label="Link to this section">#</a></h2>
+<p>Open <strong>Tools &gt; Responsive FX &gt; Why No Feedback?</strong>. It lists every hit, says which effects played and why
+the others didn't, and names objects you hit that have no Hit Feedback. The Hit Feedback inspector also says whether your
+game has sent it any hits yet (Preview Hit doesn't count).</p>
+<div class="doc-pager"><a class="pager prev" href="hits-make-it-yours.html"><span class="label">Previous</span>Make it yours</a><a class="pager next" href="hits-extending.html"><span class="label">Next</span>Code, events and your own UI</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Hook+it+into+your+game" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#pick-one-route">Pick one route</a></li><li class="toc-2"><a href="#the-existing-game-preset">The Existing Game preset</a></li><li class="toc-2"><a href="#hit-feedback-bridge">Hit Feedback Bridge</a></li><li class="toc-2"><a href="#recipes">Recipes</a></li><li class="toc-3"><a href="#your-own-health-script-in-code">Your own health script, in code</a></li><li class="toc-3"><a href="#projectiles-3d-and-2d">Projectiles, 3D and 2D</a></li><li class="toc-3"><a href="#melee-hitboxes-and-trigger-zones">Melee hitboxes and trigger zones</a></li><li class="toc-3"><a href="#hitscan-weapons">Hitscan weapons</a></li><li class="toc-3"><a href="#visual-scripting">Visual Scripting</a></li><li class="toc-3"><a href="#pooled-enemies">Pooled enemies</a></li><li class="toc-3"><a href="#ragdolls">Ragdolls</a></li><li class="toc-3"><a href="#many-renderers-lods-and-custom-shaders">Many renderers, LODs and custom shaders</a></li><li class="toc-3"><a href="#your-own-camera-cinemachine-and-camera-rigs">Your own camera, Cinemachine and camera rigs</a></li><li class="toc-3"><a href="#multiplayer">Multiplayer</a></li><li class="toc-3"><a href="#scriptableobject-event-channels">ScriptableObject event channels</a></li><li class="toc-3"><a href="#your-textmesh-pro-font">Your TextMesh Pro font</a></li><li class="toc-3"><a href="#big-frameworks-and-character-controllers">Big frameworks and character controllers</a></li><li class="toc-2"><a href="#when-nothing-shows">When nothing shows</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../shipready/index.html">Shipready</a></li>
+          <li><a href="../../bearing/index.html">Bearing</a></li>
+          <li><a href="../../snapbuild/index.html">Snapbuild</a></li>
+          <li><a href="../../interactra/index.html">Interactra</a></li>
+          <li><a href="../../responsive-fx/index.html">Responsive FX</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../support/index.html">Troubleshooting and help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:raregeometrysupport@gmail.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

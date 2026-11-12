@@ -574,6 +574,82 @@ PRODUCTS = [
         "shortcut_groups": {},
         "page_images": {},
     },
+    {
+        # Coming soon: page, manual and playable web demo up (Mark, 12 Nov: "push the Responsive FX page and demo to the
+        # website"); on launch day set "status": "live" and "store". Replaces the Hit Feedback and Footstep kits.
+        "slug": "responsive-fx",
+        "lineup": True,
+        "name": "Responsive FX",
+        "short": "Responsive FX",
+        "the": "",
+        "accent": "c-rfx",
+        "status": "coming soon",
+        "version": "1.0.0",
+        "store": "",
+        "summary": "Game feel for every hit, step and impact: sound, effects, marks, screen feedback and noise your AI "
+                   "hears, tuned in one window and adjustable by your players.",
+        "requirements": ["Unity 6000.0+", "Built-in, URP & HDRP", "No dependencies", "Full C# source"],
+        "menu": "Tools > Responsive FX",
+        "support_info": "In **Tools > Responsive FX > Help and Support**, click **Copy system info**",
+        "quick_start": [
+            "Import the package. Responsive FX lands in <code>Assets/RareGeometry/ResponsiveFX/</code>.",
+            "Open <strong>Tools &gt; Responsive FX &gt; Demos &gt; Response Playground</strong> and press Play. Walk, "
+            "strike (click), shoot (<kbd>F</kbd>) and open the player options (<kbd>O</kbd>).",
+            "Run the <strong>Setup Wizards</strong> (hits and steps) on your own character. Your prefab gets a variant; "
+            "the original stays as it is.",
+            "Open <strong>Tools &gt; Responsive FX &gt; Impact Lab</strong>, click a square, press Listen and tune it.",
+        ],
+        "pages": [
+            ("Start here", "QuickStart.md", "getting-started.html", "Quick start"),
+            ("Start here", "ImpactLab.md", "impact-lab.html", "Impact Lab"),
+            ("The system", "Surfaces.md", "surfaces.html", "Surfaces and responses"),
+            ("The system", "Contacts.md", "contacts.html", "Contacts"),
+            ("The system", "NoiseAndHearing.md", "noise-and-hearing.html", "Noise and hearing"),
+            ("The system", "PlayerOptions.md", "player-options.html", "Player options and screens"),
+            ("The system", "ResponseGraph.md", "response-graph.html", "Response Graph"),
+            ("The system", "Integrations.md", "integrations.html", "Integrations"),
+            ("Hit feedback", "Hits/Index.md", "hits.html", "Overview"),
+            ("Hit feedback", "Hits/QuickStart.md", "hits-quick-start.html", "Quick start"),
+            ("Hit feedback", "Hits/SetupWizard.md", "hits-setup-wizard.html", "Setup Wizard"),
+            ("Hit feedback", "Hits/HitFeedback.md", "hit-feedback.html", "Hit Feedback"),
+            ("Hit feedback", "Hits/Profiles.md", "hits-profiles.html", "Profiles, presets and Juice"),
+            ("Hit feedback", "Hits/HitRecipeStudio.md", "hit-recipe-studio.html", "Hit Recipe Studio"),
+            ("Hit feedback", "Hits/DamageNumbers.md", "damage-numbers.html", "Damage numbers"),
+            ("Hit feedback", "Hits/Flash.md", "hit-flash.html", "Hit flash"),
+            ("Hit feedback", "Hits/Motion.md", "hits-motion.html", "Hitstop, shake, knockback, squash"),
+            ("Hit feedback", "Hits/HealthBars.md", "health-bars.html", "Health and health bars"),
+            ("Hit feedback", "Hits/PlayerFeedback.md", "player-feedback.html", "Player feedback"),
+            ("Hit feedback", "Hits/SoundParticlesKill.md", "sound-particles-kill.html", "Sound, particles, kill moment"),
+            ("Hit feedback", "Hits/Accessibility.md", "accessibility.html", "Accessibility"),
+            ("Hit feedback", "Hits/TwoD.md", "hits-2d.html", "2D games"),
+            ("Hit feedback", "Hits/MakeItYours.md", "hits-make-it-yours.html", "Make it yours"),
+            ("Hit feedback", "Hits/Integration.md", "hits-integration.html", "Hook it into your game"),
+            ("Hit feedback", "Hits/Extending.md", "hits-extending.html", "Code, events and your own UI"),
+            ("Hit feedback", "Hits/Debugger.md", "why-no-feedback.html", "Why No Feedback?"),
+            ("Hit feedback", "Hits/Samples.md", "hits-samples.html", "Demo scenes"),
+            ("Hit feedback", "Hits/Troubleshooting.md", "troubleshooting.html", "Troubleshooting and FAQ"),
+            ("Footsteps", "Steps/Index.md", "steps.html", "Overview"),
+            ("Footsteps", "Steps/QuickStart.md", "steps-quick-start.html", "Quick start"),
+            ("Footsteps", "Steps/SetupWizard.md", "steps-setup-wizard.html", "Setup Wizard"),
+            ("Footsteps", "Steps/Characters.md", "steps-characters.html", "Surface Footsteps"),
+            ("Footsteps", "Steps/Triggers.md", "steps-triggers.html", "When steps happen"),
+            ("Footsteps", "Steps/Surfaces.md", "steps-surfaces.html", "The Surface Library"),
+            ("Footsteps", "Steps/Zones.md", "surface-zones.html", "Surface Zones"),
+            ("Footsteps", "Steps/EffectsAndFootprints.md", "effects-and-footprints.html", "Effects and footprints"),
+            ("Footsteps", "Steps/AIHearing.md", "ai-hearing.html", "AI hearing (stealth)"),
+            ("Footsteps", "Steps/TwoD.md", "steps-2d.html", "2D games"),
+            ("Footsteps", "Steps/MakeItYours.md", "steps-make-it-yours.html", "Make it yours"),
+            ("Footsteps", "Steps/YourGame.md", "your-game.html", "Your controller and game"),
+            ("Footsteps", "Steps/Extending.md", "steps-extending.html", "Extending with code"),
+            ("Footsteps", "Steps/Debugger.md", "why-no-footstep.html", "Why No Footstep?"),
+            ("Footsteps", "Steps/Samples.md", "steps-samples.html", "Demo scenes"),
+            ("Footsteps", "Steps/Troubleshooting.md", "steps-troubleshooting.html", "Troubleshooting"),
+            ("Reference", "Hits/Upgrading.md", "upgrading.html", "Upgrading"),
+            ("Reference", "Steps/Support.md", "help-in-unity.html", "Help inside Unity"),
+        ],
+        "shortcut_groups": {},
+        "page_images": {},
+    },
 ]
 
 # Kits without docs yet, for the docs hub and "More from Rare Geometry": (name, accent, status, one line)
@@ -762,6 +838,8 @@ def og_image(path):
         return "bearing/social.jpg"
     if path.startswith("interactra/"):
         return "interactra/social.jpg"
+    if path.startswith("responsive-fx/"):
+        return "responsive-fx/social.jpg"
     return "og-image.jpg"
 
 
@@ -964,6 +1042,11 @@ HAND_PAGES = [
      "Interactra",
      "Make anything interactive, then let players build, for Unity: doors, switches, keys and elevators from your own "
      "prefabs, runtime building with ghosts, blueprints and wiring. Play the demo in your browser. Coming soon to the Unity Asset Store."),
+    ("responsive-fx.html", "responsive-fx/index.html", "../", "rfx",
+     "Responsive FX",
+     "Game feel for every hit, step and impact in Unity: damage numbers, hitstop and shake, footsteps and footprints, "
+     "bullet marks, physics impacts and AI hearing, tuned in one window. Play the demo in your browser. Coming soon to "
+     "the Unity Asset Store."),
     ("support.html", "support/index.html", "../", "support",
      "Support",
      "Get help with Rare Geometry tools: documentation, bug reports, Discord and email."),
