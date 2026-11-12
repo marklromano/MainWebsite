@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Extending with code | Rare Geometry</title>
+<meta name="description" content="Extending with code: documentation for the Interactra for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/interactra/docs/extending.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Extending with code">
+<meta property="og:description" content="Extending with code: documentation for the Interactra for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/interactra/docs/extending.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/interactra/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Interactra docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="build-feel-and-wiring.html">Build feel, wires and player options</a><a href="tools.html">Workbench and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html" aria-current="page">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="build-feel-and-wiring.html">Build feel, wires and player options</a><a href="tools.html">Workbench and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html" aria-current="page">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Interactra</a><span>/</span><span>For programmers</span></nav>
+<h1 id="extending-with-code">Extending with code</h1>
+<p>Everything is in the <code>RareGeometry.Interactra</code> namespace (editor tools in <code>RareGeometry.Interactra.Editor</code>).</p>
+<h2 id="events">Events <a class="anchor" href="#events" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">interactable.Interacted += (target, interactor) =&gt; Debug.Log($&quot;{interactor.name} used {target.name}&quot;);
+interactable.Denied += (target, interactor, check) =&gt; Debug.Log(&quot;Refused: &quot; + check.Reason);
+interactable.StateChanged += target =&gt; Save();
+interactor.FocusChanged += (who, focus) =&gt; Highlight(focus);
+</code></pre>
+<p>The same events are on the Interactable in the Inspector (On Interacted, On Denied...) for no-code use.</p>
+<h2 id="use-an-object-from-code">Use an object from code <a class="anchor" href="#use-an-object-from-code" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">var result = interactable.Request(interactor);              // the normal path (goes to the host in multiplayer)
+var forced = interactable.ExecuteAuthoritative(null, false); // apply now, skipping the range check (cut scenes, triggers)
+var check = interactable.Evaluate(interactor, true);        // would it work? check.Allowed, check.Reason
+interactor.SetExternalInput(true);                          // press the interact button for AI or tests
+</code></pre>
+<h2 id="your-own-behaviour">Your own behaviour <a class="anchor" href="#your-own-behaviour" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">public sealed class LightSwitch : InteractionBehaviour
+{
+    [SerializeField] private Light lamp;
+    public override string Verb =&gt; lamp.enabled ? &quot;Turn Off&quot; : &quot;Turn On&quot;;
+    public override int StateValue =&gt; lamp.enabled ? 1 : 0;
+    public override void ApplyState(int value, bool instant) =&gt; lamp.enabled = value != 0;
+    public override void Apply(Interactor interactor) { lamp.enabled = !lamp.enabled; NotifyStateChanged(); }
+}
+</code></pre>
+<p>Put it next to an <strong>Interactable</strong>. <code>StateValue</code> / <code>ApplyState</code> make it save and network correctly.</p>
+<h2 id="your-own-rule">Your own rule <a class="anchor" href="#your-own-rule" aria-label="Link to this section">#</a></h2>
+<p>Derive from <code>InteractionCondition</code> and return <code>InteractionCheck.Allow</code> or
+<code>InteractionCheck.Block(InteractionBlocker.Condition, "Needs power", this)</code> from <code>Evaluate</code>. The reason appears in the
+prompt and the debug overlay.</p>
+<h2 id="saving-and-loading">Saving and loading <a class="anchor" href="#saving-and-loading" aria-label="Link to this section">#</a></h2>
+<p>Each object's state is a short list of numbers:</p>
+<pre><code class="language-csharp">InteractableSnapshot snapshot = interactable.CaptureSnapshot(); // [Serializable]: JSON or any save system
+interactable.RestoreSnapshot(snapshot, instant: true);
+</code></pre>
+<h2 id="your-own-input">Your own input <a class="anchor" href="#your-own-input" aria-label="Link to this section">#</a></h2>
+<p>Derive from <code>InteractionInputSource</code> (the interact button, plus the key and gamepad button shown in prompts), or
+implement <code>IInteractionInputBackend</code> and call <code>InteractionInput.SetBackend</code> to change how keys and buttons are read.</p>
+<h2 id="your-own-prompt">Your own prompt <a class="anchor" href="#your-own-prompt" aria-label="Link to this section">#</a></h2>
+<p>Derive from <code>InteractionPromptPresenter</code>: it works out the text, button, device, fade and hold progress every frame
+(<code>View</code>); you only draw it.</p>
+<div class="doc-pager"><a class="pager prev" href="tools.html"><span class="label">Previous</span>Workbench and tools</a><a class="pager next" href="upgrading.html"><span class="label">Next</span>Upgrading</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Extending+with+code" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#events">Events</a></li><li class="toc-2"><a href="#use-an-object-from-code">Use an object from code</a></li><li class="toc-2"><a href="#your-own-behaviour">Your own behaviour</a></li><li class="toc-2"><a href="#your-own-rule">Your own rule</a></li><li class="toc-2"><a href="#saving-and-loading">Saving and loading</a></li><li class="toc-2"><a href="#your-own-input">Your own input</a></li><li class="toc-2"><a href="#your-own-prompt">Your own prompt</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../shipready/index.html">Shipready</a></li>
+          <li><a href="../../bearing/index.html">Bearing</a></li>
+          <li><a href="../../snapbuild/index.html">Snapbuild</a></li>
+          <li><a href="../../interactra/index.html">Interactra</a></li>
+          <li><a href="../../responsive-fx/index.html">Responsive FX</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../support/index.html">Troubleshooting and help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:raregeometrysupport@gmail.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

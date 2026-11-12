@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Ways to interact | Rare Geometry</title>
+<meta name="description" content="Ways to interact: documentation for the Interactra for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/interactra/docs/ways-to-interact.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Ways to interact">
+<meta property="og:description" content="Ways to interact: documentation for the Interactra for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/interactra/docs/ways-to-interact.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/interactra/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Interactra docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html" aria-current="page">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="build-feel-and-wiring.html">Build feel, wires and player options</a><a href="tools.html">Workbench and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html" aria-current="page">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="build-feel-and-wiring.html">Build feel, wires and player options</a><a href="tools.html">Workbench and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Interactra</a><span>/</span><span>Features</span></nav>
+<h1 id="ways-to-interact">Ways to interact</h1>
+<p>Every way a player can find and use objects, and how to switch each one on. Everything here works with both input
+systems, keyboard, mouse, gamepad and touch, and costs no garbage per frame.</p>
+<h2 id="how-an-object-is-used">How an object is used <a class="anchor" href="#how-an-object-is-used" aria-label="Link to this section">#</a></h2>
+<p>Set <strong>Mode</strong> on the object's <strong>Interactable</strong>:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>The player...</th>
+<th>Settings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Press</td>
+<td>presses the button once</td>
+<td></td>
+</tr>
+<tr>
+<td>Hold</td>
+<td>keeps the button down until the ring fills</td>
+<td>Hold Duration</td>
+</tr>
+<tr>
+<td>Double Tap</td>
+<td>presses twice quickly</td>
+<td>Tap Window</td>
+</tr>
+<tr>
+<td>Mash</td>
+<td>presses again and again (a stuck door, a winch)</td>
+<td>Mash Count, Tap Window (the count drains when they slow down)</td>
+</tr>
+</tbody>
+</table></div>
+<p>The prompt says how ("Hold to Open Door", "Double-tap to Open Door", "Tap repeatedly to Force Door"); change those
+words on the prompt (Hold Format, Double Tap Format, Mash Format). Players can turn Mash into Hold and Double Tap into
+Press, and holds into toggles, in the <a href="accessibility.html">accessibility settings</a>.</p>
+<h2 id="several-actions-on-one-object">Several actions on one object <a class="anchor" href="#several-actions-on-one-object" aria-label="Link to this section">#</a></h2>
+<p>Add <strong>Interaction Actions (Several Per Object)</strong> next to the Interactable. Each action has a verb, how it is triggered
+and what it runs (one of the object's parts, an event, or both):</p>
+<ul>
+<li><strong>Press</strong> and <strong>Hold</strong> on the same button: tap to open, hold to lock. A tap is letting go within Tap Time.</li>
+<li><strong>Own Key</strong>: its own key and gamepad button (F to kick, Q to knock).</li>
+<li><strong>Menu Only</strong>: only in the radial menu.</li>
+</ul>
+<p><strong>Menu: Stacked</strong> lists the extra actions under the prompt, each as a small prompt of its own with its key cap
+("[F] Kick", "[E] Hold to Lock"). <strong>Menu: Radial</strong> opens a ring of all actions when the player holds the button: they
+point with the mouse or a stick and let go to pick (the picked slice lights up in the theme's accent colour); a tap runs
+the first action. Give an action an <strong>Icon</strong> to show it beside the verb in the ring. Both take the prompt's look: the
+theme's colours, key caps and font, its <strong>Shows</strong> setting (key and words, key only, words only) and the <strong>Prompt Size</strong>
+slider. <strong>List Scale</strong> and <strong>Radial Size</strong> set their size next to the prompt. Turn <strong>Draw</strong> off and use the component's
+events (or <strong>Get List Views</strong>) to show your own menu. In multiplayer the host runs the action the player picked.</p>
+<h2 id="grab-and-move-by-hand">Grab and move by hand <a class="anchor" href="#grab-and-move-by-hand" aria-label="Link to this section">#</a></h2>
+<p>Add <strong>Drag Interaction (Grab And Move)</strong> to a door, drawer, lever, valve or wheel. Players hold the button on it and
+move the mouse (or the right stick) to swing it, pull it or turn it, as far as they like; when they let go it settles
+open or closed. A quick tap still opens and closes it as usual. Physics doors keep their swing. Set the speed per
+object (Degrees Per Pixel, Metres Per Pixel) and flip the direction with Invert.</p>
+<h2 id="without-pressing-anything">Without pressing anything <a class="anchor" href="#without-pressing-anything" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Auto Interact Zone</strong>: a trigger area that uses objects when a player walks in (automatic doors, pickups you walk
+  over) and optionally when they leave (close the gate behind them). Can be limited to players who turned on Auto
+  Interact in the accessibility settings.</li>
+<li><strong>Gaze Interaction Input</strong>: looking at an object for a moment uses it (Dwell Time). Set it as the Interactor's input
+  and give it your key input as Also Use, so both work. Its On Progress event drives a filling ring.</li>
+</ul>
+<h2 id="mouse-touch-and-phones">Mouse, touch and phones <a class="anchor" href="#mouse-touch-and-phones" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Pointer Discovery (Mouse And Touch)</strong> finds the object under the mouse, or under the finger that tapped it (touch
+  screens have no hover, so a tapped object stays picked for a few seconds). 3D and 2D.</li>
+<li><strong>Pointer Interaction Input (Click And Tap)</strong>: clicking or tapping the object uses it; holding works for Hold objects.</li>
+<li><strong>Interaction Touch Button</strong>: an on-screen button for phones that shows the action ("Open") and works as the
+  interact button. Shown on touch devices only by default. Call Pointer Down / Pointer Up from your own UI button
+  instead if you like.</li>
+<li>On a touch screen the prompt says "Tap to Open Door" (or "Touch and hold to...") and shows no key.</li>
+</ul>
+<h2 id="rebinding">Rebinding <a class="anchor" href="#rebinding" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Key Interaction Input</strong>: call <strong>Listen For Key</strong> from your settings menu; the next key or gamepad button becomes
+  the interact button (Escape cancels). Set Remember Binding As to keep it between sessions.</li>
+<li><strong>Interaction Rebinding (Input System)</strong>: rebinds the interact action's keyboard or gamepad binding, saves it, and
+  can reset it.</li>
+</ul>
+<p>Prompts show the new button at once.</p>
+<h2 id="finding-what-the-player-means">Finding what the player means <a class="anchor" href="#finding-what-the-player-means" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Look Ray Discovery</strong>: a ray from the camera. <strong>Cone Angle</strong> adds aim assist: when the ray just misses, the best
+  object within that angle is picked (never through walls). <strong>Angle Weight</strong> decides how much being off centre counts.</li>
+<li><strong>Proximity Discovery</strong> (third person, top-down): the nearest object around the player. <strong>Max Angle</strong> limits it to
+  what is in front; <strong>Require Line Of Sight</strong> skips objects behind walls. The 2D version has line of sight too.</li>
+<li><strong>Sticky Focus Time</strong> on the Interactor keeps the current object a moment longer, so the prompt doesn't flicker at
+  the edge of range.</li>
+</ul>
+<h2 id="seeing-what-can-be-used">Seeing what can be used <a class="anchor" href="#seeing-what-can-be-used" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Interaction Highlighter</strong>: marks the object being looked at with an outline, a tint, a rim glow, a pulse, or
+  nothing, in Built-in, URP and HDRP, without touching your materials. The look comes from the theme (each preset has
+  one) or a Highlight Style asset; objects that can't be used get the blocked colour. An Interaction Appearance turns
+  it off for one object.</li>
+<li><strong>Interaction Markers (Nearby And Off Screen)</strong>: a dot or icon over each usable object near the player, fading with
+  distance, and arrows at the edge of the screen to important objects that are off screen. An <strong>Interaction Marker</strong>
+  on an object gives it its own icon, colour and label, makes it important, or hides its marker.</li>
+</ul>
+<div class="doc-pager"><a class="pager prev" href="components.html"><span class="label">Previous</span>Components</a><a class="pager next" href="more-objects.html"><span class="label">Next</span>More ready-made objects</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Ways+to+interact" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#how-an-object-is-used">How an object is used</a></li><li class="toc-2"><a href="#several-actions-on-one-object">Several actions on one object</a></li><li class="toc-2"><a href="#grab-and-move-by-hand">Grab and move by hand</a></li><li class="toc-2"><a href="#without-pressing-anything">Without pressing anything</a></li><li class="toc-2"><a href="#mouse-touch-and-phones">Mouse, touch and phones</a></li><li class="toc-2"><a href="#rebinding">Rebinding</a></li><li class="toc-2"><a href="#finding-what-the-player-means">Finding what the player means</a></li><li class="toc-2"><a href="#seeing-what-can-be-used">Seeing what can be used</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../shipready/index.html">Shipready</a></li>
+          <li><a href="../../bearing/index.html">Bearing</a></li>
+          <li><a href="../../snapbuild/index.html">Snapbuild</a></li>
+          <li><a href="../../interactra/index.html">Interactra</a></li>
+          <li><a href="../../responsive-fx/index.html">Responsive FX</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../support/index.html">Troubleshooting and help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:raregeometrysupport@gmail.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

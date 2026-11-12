@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Workbench and tools | Rare Geometry</title>
+<meta name="description" content="Workbench and tools: documentation for the Interactra for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/interactra/docs/tools.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Workbench and tools">
+<meta property="og:description" content="Workbench and tools: documentation for the Interactra for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/interactra/docs/tools.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/interactra/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Interactra docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="build-feel-and-wiring.html">Build feel, wires and player options</a><a href="tools.html" aria-current="page">Workbench and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="build-feel-and-wiring.html">Build feel, wires and player options</a><a href="tools.html" aria-current="page">Workbench and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Interactra</a><span>/</span><span>Features</span></nav>
+<h1 id="workbench-and-tools">Workbench and tools</h1>
+<h2 id="workbench">Workbench <a class="anchor" href="#workbench" aria-label="Link to this section">#</a></h2>
+<p><strong>Tools &gt; Interactra &gt; Workbench</strong> is the one window for setting up, inspecting and testing. Its tabs:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Tab</th>
+<th>What it is for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start</td>
+<td>Where to begin: the demos, the Setup Wizard, and Help with every support address and <strong>Copy system info</strong>.</td>
+</tr>
+<tr>
+<td>Objects</td>
+<td>Every interactive object in the open scenes: what it is (door, drawer, lock...), its state (live in Play mode, with its prompt) and its problems. Click a name to select the object.</td>
+</tr>
+<tr>
+<td>Pieces</td>
+<td>The building pieces players can place, their icons, costs and categories, and <strong>Make buildable</strong> for your own prefabs.</td>
+</tr>
+<tr>
+<td>Wiring</td>
+<td>Power sources and what they drive, and the wire look players see.</td>
+</tr>
+<tr>
+<td>Rules</td>
+<td>World Rules: what players may do (build, wire, remove, options they may change), as presets or your own.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The <strong>Test</strong> page lists checks to run before you ship; <strong>Help</strong> has the documentation and support links.</p>
+<h2 id="checking-for-problems">Checking for problems <a class="anchor" href="#checking-for-problems" aria-label="Link to this section">#</a></h2>
+<p>The Objects tab (and <strong>Tools &gt; Interactra &gt; Check Scene For Problems</strong>) finds common setup mistakes, with a one-click
+fix where there is one:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Does nothing (no part like a Hinge or Switch)</td>
+<td>Add one, or use the Setup Wizard</td>
+</tr>
+<tr>
+<td>No collider (players can't look at it)</td>
+<td>Adds a box collider around what it shows (2D for sprites)</td>
+</tr>
+<tr>
+<td>Colliders on the Ignore Raycast layer</td>
+<td>Moves them to Default</td>
+</tr>
+<tr>
+<td>Max Distance under half a metre</td>
+<td>Sets 2.5 m</td>
+</tr>
+<tr>
+<td>Empty prompt</td>
+<td>Uses the object's name</td>
+</tr>
+<tr>
+<td>No id, or an id used twice (copied objects)</td>
+<td>Adds one, or gives a new one</td>
+</tr>
+<tr>
+<td>No Interactor in the scene</td>
+<td>(add one to your player)</td>
+</tr>
+<tr>
+<td>No prompt in the scene</td>
+<td>Adds one</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Fix all</strong> applies every fix for errors and warnings at once (each can be undone).</p>
+<h2 id="live-answers-in-the-inspector">Live answers in the Inspector <a class="anchor" href="#live-answers-in-the-inspector" aria-label="Link to this section">#</a></h2>
+<p>In Play mode every condition (Lock, Power, Use Limit, your own) shows a line in its Inspector: <strong>Now: passes</strong>, or
+<strong>Now: blocks</strong> and the reason the player would see. Fields that are empty on purpose say so (for example a Power
+Receiver's Source, which a wire placed in play fills).</p>
+<h2 id="making-many-prefabs-interactive">Making many prefabs interactive <a class="anchor" href="#making-many-prefabs-interactive" aria-label="Link to this section">#</a></h2>
+<p>Select prefabs in the Project window (as many as you like), then <strong>Assets &gt; Interactra &gt; Make
+Selected Prefabs Interactive</strong>, or <strong>Convert all selected prefabs</strong> in the Setup Wizard. Models with doors, drawers
+and lids as child objects get each part set up; single objects are recognised by name (switch, button, lever, plate,
+crate, note, keypad, fuse box, door). Your originals are never changed: a new prefab is saved next to each. Anything
+it can't recognise is listed so you can set it up in the wizard.</p>
+<h2 id="gizmos">Gizmos <a class="anchor" href="#gizmos" aria-label="Link to this section">#</a></h2>
+<p>Select an Interactable to see how close players must be (its bounds grown by Max Distance). Hinges show their arc,
+ladders their climb and exits, elevators their stops.</p>
+<div class="doc-pager"><a class="pager prev" href="build-feel-and-wiring.html"><span class="label">Previous</span>Build feel, wires and player options</a><a class="pager next" href="extending.html"><span class="label">Next</span>Extending with code</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Workbench+and+tools" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#workbench">Workbench</a></li><li class="toc-2"><a href="#checking-for-problems">Checking for problems</a></li><li class="toc-2"><a href="#live-answers-in-the-inspector">Live answers in the Inspector</a></li><li class="toc-2"><a href="#making-many-prefabs-interactive">Making many prefabs interactive</a></li><li class="toc-2"><a href="#gizmos">Gizmos</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../shipready/index.html">Shipready</a></li>
+          <li><a href="../../bearing/index.html">Bearing</a></li>
+          <li><a href="../../snapbuild/index.html">Snapbuild</a></li>
+          <li><a href="../../interactra/index.html">Interactra</a></li>
+          <li><a href="../../responsive-fx/index.html">Responsive FX</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../support/index.html">Troubleshooting and help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:raregeometrysupport@gmail.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

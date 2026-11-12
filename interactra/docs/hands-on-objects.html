@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Carry, sockets, inspect, notes and keypads | Rare Geometry</title>
+<meta name="description" content="Carry, sockets, inspect, notes and keypads: documentation for the Interactra for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/interactra/docs/hands-on-objects.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Carry, sockets, inspect, notes and keypads">
+<meta property="og:description" content="Carry, sockets, inspect, notes and keypads: documentation for the Interactra for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/interactra/docs/hands-on-objects.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/interactra/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Interactra docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html" aria-current="page">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="build-feel-and-wiring.html">Build feel, wires and player options</a><a href="tools.html">Workbench and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html" aria-current="page">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="build-feel-and-wiring.html">Build feel, wires and player options</a><a href="tools.html">Workbench and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Interactra</a><span>/</span><span>Features</span></nav>
+<h1 id="carry-sockets-inspect-notes-and-keypads">Carry, sockets, inspect, notes and keypads</h1>
+<p>Objects the player handles. Make any of them with the Setup Wizard (pick the <strong>Type</strong>) or add the component next to an
+Interactable.</p>
+<h2 id="carry-and-throw">Carry and throw <a class="anchor" href="#carry-and-throw" aria-label="Link to this section">#</a></h2>
+<p><strong>Carry</strong> (needs a Rigidbody): "Pick Up" holds it in front of the view. It still collides with the world, so it can
+knock things over and be used to push buttons or weigh down plates.</p>
+<ul>
+<li>Use it again, or press the interact button while aiming at nothing usable, to drop it (the prompt says "Drop ...").</li>
+<li><strong>Throw</strong>: the left mouse button or the right shoulder button (<strong>Throw Key</strong> / <strong>Throw Button</strong>), at <strong>Throw Speed</strong>.</li>
+<li><strong>Max Mass</strong>: heavier objects say "Too heavy". Only one thing at a time: "Hands full".</li>
+<li><strong>Item Id</strong> (e.g. <code>fuse</code>) lets an Item Socket recognise it.</li>
+<li>Events: On Picked Up, On Dropped, On Thrown.</li>
+</ul>
+<h2 id="item-sockets">Item sockets <a class="anchor" href="#item-sockets" aria-label="Link to this section">#</a></h2>
+<p><strong>Item Socket</strong>: a place for a carried item, like a fuse box, a gem slot or a battery holder. Carry the item with the
+matching <strong>Accepts Item Id</strong> to it and use it: the item snaps to the <strong>Snap Point</strong> and the socket <strong>powers things</strong>
+(see <a href="power-and-puzzles.html">Power and puzzles</a>). Without the item, the prompt says what's missing (<strong>Missing Message</strong>,
+e.g. "Needs a fuse"). With <strong>Allow Remove</strong>, using it again hands the item back. <strong>Start Item</strong> puts one in from the
+start.</p>
+<h2 id="inspect">Inspect <a class="anchor" href="#inspect" aria-label="Link to this section">#</a></h2>
+<p><strong>Inspect</strong>: brings the object up close; the mouse or right stick turns it, the interact button, Escape or the gamepad's
+back button puts it back where it was. <strong>Title</strong> and <strong>Description</strong> show underneath (a clue, a collectible's story).
+<strong>View Rotation</strong> turns it when it comes up close so its best side faces the player (X 90 for a coin or gear modelled
+lying flat).
+The player stands still meanwhile, and the prompt and crosshair hide.</p>
+<h2 id="readable-notes">Readable notes <a class="anchor" href="#readable-notes" aria-label="Link to this section">#</a></h2>
+<p><strong>Readable</strong>: a note, letter or book. Its <strong>Pages</strong> show on a paper panel; A/D, the arrow keys or the shoulder buttons turn
+pages; the interact button or Escape closes it. <strong>Paper Color</strong> and <strong>Ink Color</strong> set the look. <strong>Has Been Read</strong> tells
+your code the player opened it.</p>
+<h2 id="keypads">Keypads <a class="anchor" href="#keypads" aria-label="Link to this section">#</a></h2>
+<p><strong>Keypad</strong>: use it to open a keypad on screen and enter the <strong>Code</strong>: number keys, the mouse, or a gamepad (stick to
+move, the interact button to press). The right code unlocks it, which <strong>powers things</strong>: put a <strong>Power Receiver</strong> on a
+door and drag the keypad into its Source. Wrong codes flash "Wrong code"; <strong>Max Attempts</strong> in a row locks it out for
+<strong>Lockout Seconds</strong>. <strong>Relockable</strong> lets players lock it again. Events: On Unlocked, On Wrong Code, On Locked.</p>
+<h2 id="in-2d-games">In 2D games <a class="anchor" href="#in-2d-games" aria-label="Link to this section">#</a></h2>
+<p>Readable notes and keypads work the same in 2D (with Proximity 2D Discovery): the panels are drawn on screen. Carry,
+Item Socket and Inspect are for 3D (they use 3D physics and a camera view of the object).</p>
+<h2 id="your-look-your-text-your-own-ui">Your look, your text, your own UI <a class="anchor" href="#your-look-your-text-your-own-ui" aria-label="Link to this section">#</a></h2>
+<p>The note, keypad and inspect panels have colour, <strong>Font</strong>, text and <strong>Close Key</strong> settings; untick <strong>Draw Panel</strong> (or
+<strong>Draw Text</strong> for inspect) to show your own UI instead. See <a href="customizing.html#notes-keypads-and-inspect">Customizing</a>.</p>
+<h2 id="for-your-own-controller">For your own controller <a class="anchor" href="#for-your-own-controller" aria-label="Link to this section">#</a></h2>
+<p>While the player inspects, reads or types a code, <code>Interactor.IsBusy</code> is true: stop moving and looking around (the
+sample controller does). <code>Interactor.Carrying</code> tells you what they hold.</p>
+<h2 id="multiplayer">Multiplayer <a class="anchor" href="#multiplayer" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Carry</strong>: add a Network Object, a <strong>Network Transform</strong> (Authority Mode: Owner), a <strong>Network Rigidbody</strong> and
+  <strong>Network Carry</strong>. The player who picks it up moves it on their own machine; everyone sees it; only one player can hold
+  it at a time.</li>
+<li><strong>Item Socket</strong>: a Network Interactable; the host places the item, so everyone sees it in place.</li>
+<li><strong>Keypad</strong>: a Network Interactable and <strong>Network Keypad</strong>: the host checks codes; a right code unlocks it for everyone.</li>
+<li><strong>Inspect</strong> and <strong>Readable</strong> happen only on the player's own machine; nothing to add.</li>
+</ul>
+<div class="doc-pager"><a class="pager prev" href="prompts.html"><span class="label">Previous</span>Prompts and button icons</a><a class="pager next" href="power-and-puzzles.html"><span class="label">Next</span>Power and puzzles</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Carry%2C+sockets%2C+inspect%2C+notes+and+keypads" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#carry-and-throw">Carry and throw</a></li><li class="toc-2"><a href="#item-sockets">Item sockets</a></li><li class="toc-2"><a href="#inspect">Inspect</a></li><li class="toc-2"><a href="#readable-notes">Readable notes</a></li><li class="toc-2"><a href="#keypads">Keypads</a></li><li class="toc-2"><a href="#in-2d-games">In 2D games</a></li><li class="toc-2"><a href="#your-look-your-text-your-own-ui">Your look, your text, your own UI</a></li><li class="toc-2"><a href="#for-your-own-controller">For your own controller</a></li><li class="toc-2"><a href="#multiplayer">Multiplayer</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../shipready/index.html">Shipready</a></li>
+          <li><a href="../../bearing/index.html">Bearing</a></li>
+          <li><a href="../../snapbuild/index.html">Snapbuild</a></li>
+          <li><a href="../../interactra/index.html">Interactra</a></li>
+          <li><a href="../../responsive-fx/index.html">Responsive FX</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../support/index.html">Troubleshooting and help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:raregeometrysupport@gmail.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

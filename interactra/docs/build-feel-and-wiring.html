@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Build feel, wires and player options | Rare Geometry</title>
+<meta name="description" content="Build feel, wires and player options: documentation for the Interactra for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/interactra/docs/build-feel-and-wiring.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Build feel, wires and player options">
+<meta property="og:description" content="Build feel, wires and player options: documentation for the Interactra for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/interactra/docs/build-feel-and-wiring.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/interactra/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Interactra docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="build-feel-and-wiring.html" aria-current="page">Build feel, wires and player options</a><a href="tools.html">Workbench and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="build-feel-and-wiring.html" aria-current="page">Build feel, wires and player options</a><a href="tools.html">Workbench and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Interactra</a><span>/</span><span>Features</span></nav>
+<h1 id="build-feel-wires-and-player-options">Build feel, wires and player options</h1>
+<p>How building, wiring and the hands-on objects look and feel, and what your players may change. Everything here is a
+setting; nothing needs code.</p>
+<h2 id="build-animations">Build animations <a class="anchor" href="#build-animations" aria-label="Link to this section">#</a></h2>
+<p>A placed piece can arrive in one of five ways. Set it for the whole game on the build theme (<strong>Effects &gt; Build</strong>), or
+per piece on its Piece Look.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Style</th>
+<th>What the player sees</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>The piece is simply there.</td>
+</tr>
+<tr>
+<td>Grow</td>
+<td>It grows from its base.</td>
+</tr>
+<tr>
+<td>Rise</td>
+<td>It rises out of the ground.</td>
+</tr>
+<tr>
+<td>Drop</td>
+<td>It drops in from above and settles.</td>
+</tr>
+<tr>
+<td>Assemble</td>
+<td>Its parts fly in and lock together.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Build Duration</strong> sets how long it takes. With the player option <strong>Reduce motion</strong> on, pieces appear at once.</p>
+<h2 id="blueprints">Blueprints <a class="anchor" href="#blueprints" aria-label="Link to this section">#</a></h2>
+<p>Set <strong>Blueprint Build Time</strong> on the Build World above 0 and placed pieces start as see-through blueprints. A player
+finishes one by holding <strong>Build</strong> on it: the real piece fills in from the ground while the button is held. Blueprints
+are saved, undone and loaded like any piece. To finish them your own way (delivered resources, crafting, a quest), set
+<code>PieceBlueprint.Progress</code> from 0 to 1, or call <code>Complete()</code>.</p>
+<h2 id="debris-when-a-piece-is-removed">Debris when a piece is removed <a class="anchor" href="#debris-when-a-piece-is-removed" aria-label="Link to this section">#</a></h2>
+<p>On the build theme, <strong>Effects &gt; Remove</strong> can be <strong>Debris</strong>: the removed piece breaks into slabs along its own shape,
+in its own colours, which tumble and fade. The Industrial look uses it.</p>
+<h2 id="wire-looks">Wire looks <a class="anchor" href="#wire-looks" aria-label="Link to this section">#</a></h2>
+<p><strong>Wire Visuals</strong> (on the wiring object in your scene, or the Workbench's Wiring tab) has a <strong>Style</strong>:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Style</th>
+<th>Look</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tidy</td>
+<td>Along the wall: up, then across, with rounded corners.</td>
+</tr>
+<tr>
+<td>Loose</td>
+<td>Hanging between the two ends.</td>
+</tr>
+<tr>
+<td>Straight</td>
+<td>A straight line.</td>
+</tr>
+<tr>
+<td>Only while wiring</td>
+<td>Hidden until the player takes out the wire tool.</td>
+</tr>
+<tr>
+<td>Hidden</td>
+<td>Never drawn (the connection still works).</td>
+</tr>
+</tbody>
+</table></div>
+<p>Powered wires can spark; players can hide wires with the <strong>Show wires</strong> option if you allow it.</p>
+<h2 id="thrown-objects">Thrown objects <a class="anchor" href="#thrown-objects" aria-label="Link to this section">#</a></h2>
+<p>A carried object that can be thrown shows where it will land: a line along its path and a ring at the landing spot.
+On the Carry behaviour: <strong>Show Throw Arc</strong>, its colour, width and how many seconds of flight it shows.</p>
+<h2 id="elevators-with-doors-and-call-buttons">Elevators with doors and call buttons <a class="anchor" href="#elevators-with-doors-and-call-buttons" aria-label="Link to this section">#</a></h2>
+<p><strong>Elevator Or Moving Platform</strong> has a <strong>Doors</strong> list. Each entry is a panel that slides by its <strong>Open Offset</strong>; stop
+-1 means a door on the cabin (it opens at every stop), 0, 1, ... a landing door at that stop. Doors open when the
+elevator arrives and close before it leaves; <strong>Door Time</strong> is how long they take.</p>
+<p><strong>Elevator Call Button</strong> has <strong>Lit While Waiting</strong>: an object (a glowing ring, a lit cap) shown from the press until
+the elevator arrives, like a real call button. Use one button per floor outside, and one per floor inside the cabin.</p>
+<h2 id="breakables-that-break-apart">Breakables that break apart <a class="anchor" href="#breakables-that-break-apart" aria-label="Link to this section">#</a></h2>
+<p>A <strong>Breakable</strong> with no broken version of its own shatters into pieces in its own colours (<strong>Shatter</strong>, and how many
+<strong>Pieces</strong>). Give it a <strong>Broken Prefab</strong> to use your own debris instead.</p>
+<h2 id="player-options">Player options <a class="anchor" href="#player-options" aria-label="Link to this section">#</a></h2>
+<p>A <strong>Player Options</strong> asset lists what your players may change and where each option starts: prompt size, press instead
+of hold, hold time, reduced motion, captions, use things by walking up, rumble, building screen size, key hints and
+wire visibility. Untick <strong>Players May Change</strong> to fix an option at your value; the options panel (F10 in the demo)
+lists only what players may change and marks what they changed.</p>
+<h2 id="places-for-a-map">Places for a map <a class="anchor" href="#places-for-a-map" aria-label="Link to this section">#</a></h2>
+<p>Add <strong>Map Place</strong> to anything a map should show (a house, a door, a key). With a Rare Geometry map product such as
+Bearing installed, the place appears on its compass and maps; alone, the component does nothing and costs nothing.</p>
+<div class="doc-pager"><a class="pager prev" href="saving-and-integrations.html"><span class="label">Previous</span>Saving and integrations</a><a class="pager next" href="tools.html"><span class="label">Next</span>Workbench and tools</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Build+feel%2C+wires+and+player+options" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#build-animations">Build animations</a></li><li class="toc-2"><a href="#blueprints">Blueprints</a></li><li class="toc-2"><a href="#debris-when-a-piece-is-removed">Debris when a piece is removed</a></li><li class="toc-2"><a href="#wire-looks">Wire looks</a></li><li class="toc-2"><a href="#thrown-objects">Thrown objects</a></li><li class="toc-2"><a href="#elevators-with-doors-and-call-buttons">Elevators with doors and call buttons</a></li><li class="toc-2"><a href="#breakables-that-break-apart">Breakables that break apart</a></li><li class="toc-2"><a href="#player-options">Player options</a></li><li class="toc-2"><a href="#places-for-a-map">Places for a map</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../shipready/index.html">Shipready</a></li>
+          <li><a href="../../bearing/index.html">Bearing</a></li>
+          <li><a href="../../snapbuild/index.html">Snapbuild</a></li>
+          <li><a href="../../interactra/index.html">Interactra</a></li>
+          <li><a href="../../responsive-fx/index.html">Responsive FX</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../support/index.html">Troubleshooting and help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:raregeometrysupport@gmail.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

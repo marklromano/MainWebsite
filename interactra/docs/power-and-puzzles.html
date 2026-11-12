@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Power and puzzles | Rare Geometry</title>
+<meta name="description" content="Power and puzzles: documentation for the Interactra for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/interactra/docs/power-and-puzzles.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Power and puzzles">
+<meta property="og:description" content="Power and puzzles: documentation for the Interactra for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/interactra/docs/power-and-puzzles.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/interactra/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Interactra docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html" aria-current="page">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="build-feel-and-wiring.html">Build feel, wires and player options</a><a href="tools.html">Workbench and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html" aria-current="page">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="build-feel-and-wiring.html">Build feel, wires and player options</a><a href="tools.html">Workbench and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Interactra</a><span>/</span><span>Features</span></nav>
+<h1 id="power-and-puzzles">Power and puzzles</h1>
+<p>Wire switches, levers, buttons and pressure plates to doors, lights and anything else, with logic in between. No code.</p>
+<h2 id="the-idea">The idea <a class="anchor" href="#the-idea" aria-label="Link to this section">#</a></h2>
+<p>A <strong>power source</strong> is either on or off. Anything that should react to it has a field for a source: drag the GameObject
+with the switch (or plate, gate, puzzle) into it. In the Scene view, wires show what powers what: cyan while editing,
+yellow when powered and grey when off in Play mode. <strong>Tools &gt; Interactra &gt; Show Power Wires</strong> turns
+them on or off.</p>
+<h2 id="sources">Sources <a class="anchor" href="#sources" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Powered while...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Switch</strong> (on an Interactable)</td>
+<td><strong>Toggle</strong>: it's on ("Turn On" / "Turn Off"). <strong>Momentary</strong>: for a moment after each press ("Press"), like a push button. Optional <strong>Moving Part</strong> that moves while on.</td>
+</tr>
+<tr>
+<td><strong>Power From State</strong></td>
+<td>Any part with an open/on state is on: a lever made from a <strong>Hinge</strong>, a handle made from a <strong>Slide</strong>. Added automatically with a Switch. <strong>Invert</strong> = powered while off/closed.</td>
+</tr>
+<tr>
+<td><strong>Pressure Plate</strong></td>
+<td>Enough weight stands on it (<strong>Weight</strong> mode, in kg) or enough things (<strong>Count</strong> mode). Crates count with their Rigidbody mass; players and NPCs (CharacterController or kinematic Rigidbody) as <strong>Character Weight</strong>. Scenery never counts. Its <strong>Box Collider</strong> is the detection area: cover the plate and about half a metre above it. <strong>Plate Visual</strong> sinks while pressed.</td>
+</tr>
+<tr>
+<td><strong>Pressure Plate 2D</strong></td>
+<td>The same for 2D physics. Dynamic Rigidbody 2D bodies count with their mass, kinematic ones (players or NPCs moved by script) as <strong>Character Weight</strong>; things without a Rigidbody 2D never count. Its <strong>Box Collider 2D</strong> is the detection area.</td>
+</tr>
+<tr>
+<td><strong>Power Gate</strong></td>
+<td>Its <strong>Inputs</strong> combine: <strong>Any</strong> (OR), <strong>All</strong> (AND), <strong>None</strong> (NOT), <strong>Exactly One</strong> (XOR), or <strong>Toggle</strong> (flips each time an input turns on). <strong>On Delay</strong> / <strong>Off Delay</strong> for timed doors ("stand on the plate for 2 seconds").</td>
+</tr>
+<tr>
+<td><strong>Sequence Puzzle</strong></td>
+<td>Its inputs were used in the right order (<strong>Sequence</strong>). A wrong input is a fail: the progress resets and the switches in <strong>Reset On Fail</strong> switch back off. Events: On Progress, On Solved, On Failed.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Every source also has <strong>On Powered</strong> / <strong>On Unpowered</strong> events for sounds and effects.</p>
+<h2 id="what-power-can-do">What power can do <a class="anchor" href="#what-power-can-do" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Power Receiver</strong></td>
+<td>Drives a part next to it (a door's Hinge, a Slide, a Switch): <strong>Follow Power</strong> (open while powered), <strong>Open Once</strong>, <strong>Toggle On Power</strong>, or <strong>Events Only</strong>. Power opens a door even if it's locked.</td>
+</tr>
+<tr>
+<td><strong>Needs Power</strong> (condition)</td>
+<td>The object can only be used while powered; otherwise the prompt says why ("No power").</td>
+</tr>
+<tr>
+<td><strong>Powered Light</strong></td>
+<td>Switches Lights, and objects such as a lit bulb, with the power.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="recipes">Recipes <a class="anchor" href="#recipes" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>A lever opens a gate</strong>: make the lever with the Setup Wizard (Type <strong>Lever</strong>), put a <strong>Power Receiver</strong> on the gate's
+  door part, drag the lever into <strong>Source</strong>.</li>
+<li><strong>Two plates at once</strong>: a <strong>Power Gate</strong> set to <strong>All</strong> with both plates as inputs; the door's receiver uses the gate.</li>
+<li><strong>Press the buttons in order</strong>: three <strong>Buttons</strong>; a <strong>Sequence Puzzle</strong> with them in the right order; a receiver on
+  the door with <strong>Open Once</strong>.</li>
+<li><strong>Lights out when the breaker trips</strong>: a <strong>Switch</strong> as the breaker; <strong>Powered Light</strong> on each lamp; <strong>Needs Power</strong> on
+  the terminal.</li>
+</ul>
+<h2 id="multiplayer">Multiplayer <a class="anchor" href="#multiplayer" aria-label="Link to this section">#</a></h2>
+<p>Switches and levers are shared by their <strong>Network Interactable</strong> like any door. For pressure plates, gates with delays or
+toggles, and puzzles, add a <strong>Network Power Source</strong>: the host decides, and every player (and late joiner) gets the same
+value. Receivers only change doors on the host; clients receive the door's state.</p>
+<div class="doc-pager"><a class="pager prev" href="hands-on-objects.html"><span class="label">Previous</span>Carry, sockets, inspect, notes, keypads</a><a class="pager next" href="containers-and-loot.html"><span class="label">Next</span>Containers and loot</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Power+and+puzzles" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#the-idea">The idea</a></li><li class="toc-2"><a href="#sources">Sources</a></li><li class="toc-2"><a href="#what-power-can-do">What power can do</a></li><li class="toc-2"><a href="#recipes">Recipes</a></li><li class="toc-2"><a href="#multiplayer">Multiplayer</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../shipready/index.html">Shipready</a></li>
+          <li><a href="../../bearing/index.html">Bearing</a></li>
+          <li><a href="../../snapbuild/index.html">Snapbuild</a></li>
+          <li><a href="../../interactra/index.html">Interactra</a></li>
+          <li><a href="../../responsive-fx/index.html">Responsive FX</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../support/index.html">Troubleshooting and help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:raregeometrysupport@gmail.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

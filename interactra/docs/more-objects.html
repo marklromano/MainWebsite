@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>More ready-made objects | Rare Geometry</title>
+<meta name="description" content="More ready-made objects: documentation for the Interactra for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/interactra/docs/more-objects.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="More ready-made objects">
+<meta property="og:description" content="More ready-made objects: documentation for the Interactra for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/interactra/docs/more-objects.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/interactra/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Interactra docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html" aria-current="page">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="build-feel-and-wiring.html">Build feel, wires and player options</a><a href="tools.html">Workbench and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="setup-wizard.html">Setup Wizard</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="components.html">Components</a><a href="ways-to-interact.html">Ways to interact</a><a href="more-objects.html" aria-current="page">More ready-made objects</a><a href="prompts.html">Prompts and button icons</a><a href="hands-on-objects.html">Carry, sockets, inspect, notes, keypads</a><a href="power-and-puzzles.html">Power and puzzles</a><a href="containers-and-loot.html">Containers and loot</a><a href="multiplayer.html">Multiplayer</a><a href="customizing.html">Customizing: make it yours</a><a href="accessibility.html">Accessibility</a><a href="saving-and-integrations.html">Saving and integrations</a><a href="build-feel-and-wiring.html">Build feel, wires and player options</a><a href="tools.html">Workbench and tools</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending with code</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Interactra</a><span>/</span><span>Features</span></nav>
+<h1 id="more-ready-made-objects">More ready-made objects</h1>
+<p>Each of these is a component you add next to an <strong>Interactable</strong> (or the Setup Wizard adds for you). All of them save
+their state (see <a href="saving-and-integrations.html">Saving</a>), work in multiplayer, and have events for your own effects.</p>
+<h2 id="things-to-pick-up">Things to pick up <a class="anchor" href="#things-to-pick-up" aria-label="Link to this section">#</a></h2>
+<p><strong>Item Pickup</strong>: an item lying in the world. Kind <strong>To Inventory</strong> hands it to the player's inventory through your
+Loot Receiver (keys go to the Key Ring), <strong>Consume</strong> uses it on the spot (On Consumed: heal, add ammo), <strong>Collectible</strong>
+counts it (On Collected, and a static Collected event for "3 / 10 found"). It can respawn after a while. When the
+inventory is full it stays and says "No room".</p>
+<h2 id="things-to-turn-and-dial">Things to turn and dial <a class="anchor" href="#things-to-turn-and-dial" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Valve Or Wheel</strong>: turns in steps (a quarter turn by default) until fully open, then turns back. Fully open can
+  power things (Power From State &gt; Only When Full). On Open Amount drives gauges, water or steam.</li>
+<li><strong>Combination Dial</strong>: a safe dial. Turn it (A / D, arrows, mouse wheel, stick) and press the interact button on each
+  number; the right numbers in order unlock it and power the safe door.</li>
+</ul>
+<h2 id="things-to-climb-and-sit-on">Things to climb and sit on <a class="anchor" href="#things-to-climb-and-sit-on" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Ladder</strong>: grab on, climb with up / down, step off at the top or bottom exit. Turn Built In Climb off to only get the
+  events and play your own animation.</li>
+<li><strong>Seat</strong>: sit (placed at the seat point, facing its forward), stand with the interact button or Esc. One player per
+  seat. Follows a moving seat (a vehicle, a swing).</li>
+</ul>
+<p>Both move the player's body safely (CharacterController and Rigidbody are paused meanwhile) and pause your controller
+through Interactor.IsBusy (or an Interaction Controller Lock).</p>
+<h2 id="things-to-read-hear-and-watch">Things to read, hear and watch <a class="anchor" href="#things-to-read-hear-and-watch" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Sign</strong>: shows its text in a bubble next to it, while looked at or after using it.</li>
+<li><strong>Audio Log</strong>: plays a clip with timed subtitles; remembers that it was heard.</li>
+<li><strong>Screen</strong>: a monitor, TV or terminal that shows the next page (materials or objects) on each use and goes dark
+  without power.</li>
+</ul>
+<h2 id="things-that-break">Things that break <a class="anchor" href="#things-that-break" aria-label="Link to this section">#</a></h2>
+<p><strong>Breakable</strong>: hits to break (each use is one hit), or break on a hard impact, or call Damage from your weapons. It
+hides itself, spawns a broken version or debris, drops prefabs (Item Pickups) into the world and gives items to the
+breaker's inventory. Restoring its state puts it back together.</p>
+<h2 id="doors-in-pairs-and-roll-up-doors">Doors in pairs and roll-up doors <a class="anchor" href="#doors-in-pairs-and-roll-up-doors" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Linked Parts</strong>: objects that move together, like double doors or a pair of shutters. Use either one and both open.</li>
+<li><strong>Roll-Up Door</strong>: garage doors, shop shutters and blinds: the curtain rolls up into the top while a roller turns.</li>
+</ul>
+<h2 id="elevators-and-moving-platforms">Elevators and moving platforms <a class="anchor" href="#elevators-and-moving-platforms" aria-label="Link to this section">#</a></h2>
+<p><strong>Elevator Or Moving Platform</strong> moves between stops and carries whatever stands on it (players with a
+CharacterController or Rigidbody, crates). Use it to go to the next stop, call it with <strong>Elevator Call Button</strong>s on
+each floor, or set Automatic for a platform that goes back and forth. It stops without power. On Arrived and On
+Departed open and close the doors on each floor.</p>
+<h2 id="rules-and-helpers">Rules and helpers <a class="anchor" href="#rules-and-helpers" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Use Limit</strong>: one time only, or a number of uses, optionally refilling after a while.</li>
+<li><strong>Custom Condition</strong>: block the object until something happens, without code: flip it from any event, require
+  objects to be active or inactive, or give it a check from code.</li>
+<li><strong>Auto Reset</strong>: puts the object back by itself after a delay (doors close, levers flip back), waiting while a player
+  is close.</li>
+<li><strong>Camera Focus Point</strong>: moves the camera to a close-up and locks the player while using the object (a keypad, a
+  workbench); with Cinemachine, switches on a virtual camera instead.</li>
+<li><strong>Play Director On Use</strong>: plays a Timeline when the object is used or opened, optionally locking the player until it
+  ends.</li>
+</ul>
+<h2 id="feel">Feel <a class="anchor" href="#feel" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Interaction Feedback</strong>: gamepad rumble, camera shake, particles and a rattle, separately for used, opened, closed
+  and "can't use" (a locked handle rattles). Players can turn rumble and shake off.</li>
+<li><strong>Interaction Sounds</strong>: several clips per sound (never the same twice in a row), random pitch and volume, and a
+  moving sound (a creak or rumble) that gets louder and higher the faster the part moves.</li>
+</ul>
+<div class="doc-pager"><a class="pager prev" href="ways-to-interact.html"><span class="label">Previous</span>Ways to interact</a><a class="pager next" href="prompts.html"><span class="label">Next</span>Prompts and button icons</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+More+ready-made+objects" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#things-to-pick-up">Things to pick up</a></li><li class="toc-2"><a href="#things-to-turn-and-dial">Things to turn and dial</a></li><li class="toc-2"><a href="#things-to-climb-and-sit-on">Things to climb and sit on</a></li><li class="toc-2"><a href="#things-to-read-hear-and-watch">Things to read, hear and watch</a></li><li class="toc-2"><a href="#things-that-break">Things that break</a></li><li class="toc-2"><a href="#doors-in-pairs-and-roll-up-doors">Doors in pairs and roll-up doors</a></li><li class="toc-2"><a href="#elevators-and-moving-platforms">Elevators and moving platforms</a></li><li class="toc-2"><a href="#rules-and-helpers">Rules and helpers</a></li><li class="toc-2"><a href="#feel">Feel</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../shipready/index.html">Shipready</a></li>
+          <li><a href="../../bearing/index.html">Bearing</a></li>
+          <li><a href="../../snapbuild/index.html">Snapbuild</a></li>
+          <li><a href="../../interactra/index.html">Interactra</a></li>
+          <li><a href="../../responsive-fx/index.html">Responsive FX</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../support/index.html">Troubleshooting and help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:raregeometrysupport@gmail.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>
