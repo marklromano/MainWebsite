@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Snapbuild: Modular Level Builder | Rare Geometry</title>
+<meta name="description" content="Build whole levels in Unity from the modular packs you already own: drag a room and get a building, draw roads that join themselves, dress streets in one click. Try the demo in your browser.">
+<link rel="canonical" href="https://raregeometry.github.io/snapbuild/">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Snapbuild: Modular Level Builder">
+<meta property="og:description" content="Build whole levels in Unity from the modular packs you already own: drag a room and get a building, draw roads that join themselves, dress streets in one click. Try the demo in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/snapbuild/">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/snapbuild/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/favicon-180.png">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../index.html" aria-label="Rare Geometry home">
+      <img src="../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../index.html#products">Products</a></li><li><a href="../prefab-builder/index.html" aria-current="page">Prefab Builder</a></li><li><a href="../docs/index.html">Docs</a></li><li><a href="../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<!-- HERO -->
+<section class="product-hero blueprint">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="title-row">
+        <span class="pill pill-live">On the Asset Store</span>
+        <span class="pill">v2.0.0</span>
+      </div>
+      <h1>Snapbuild</h1>
+      <p class="lead">
+        Build whole levels from the modular packs you already own. Drag a room and get a building, draw roads that join
+        themselves, dress streets in one click. A see-through ghost shows everything before it goes down, and your pack's
+        own files are never changed.
+      </p>
+      <div class="btn-row">
+        <a class="btn" href="demo/index.html">Try it in your browser</a>
+        <a class="btn btn-ghost" href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Get it on the Asset Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg></a>
+        <a class="btn btn-ghost" href="docs/index.html">Quick start</a>
+      </div>
+      <ul class="specs" aria-label="Requirements">
+        <li>Unity 6000.0.85f1+</li>
+        <li>Built-in, URP &amp; HDRP</li>
+        <li>No dependencies</li>
+        <li>Full C# source</li>
+      </ul>
+    </div>
+    <figure class="shot">
+      <div class="dim" aria-hidden="true">Tools &gt; Snapbuild &gt; Level Builder</div>
+      <a class="shot-frame" href="../assets/img/snapbuild/02-rooms.jpg">
+        <img src="../assets/img/snapbuild/02-rooms.jpg" width="1920" height="1080"
+             alt="Drag a room, get a building: a see-through ghost of a whole building with the Level Builder beside it">
+      </a>
+    </figure>
+  </div>
+</section>
+
+<!-- RISE CLIP -->
+<section class="section" aria-labelledby="rise-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">See it build</p>
+      <h2 id="rise-title">Drag. Let go. Watch it rise.</h2>
+      <p>The ghost shows the whole building while you drag. Let go and every piece rises into place (or drops, or pops, or simply appears: your choice in every tool that places pieces).</p>
+    </div>
+    <figure class="shot">
+      <div class="shot-frame">
+        <video autoplay loop muted playsinline width="1920" height="1054" poster="../assets/img/snapbuild/03-watch-it-rise-sm.jpg">
+          <source src="../assets/img/snapbuild/rise.webm" type="video/webm">
+          <source src="../assets/img/snapbuild/rise.mp4" type="video/mp4">
+        </video>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section-band" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">How it works</p>
+      <h2 id="how-title">From a modular pack to a street in three steps</h2>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>Add your pack</h3>
+        <p>A folder in your project, a folder on disk or a <code>.zip</code>. Every piece is measured and sorted for you, and Snapbuild guesses which pieces are walls, corners, floors and roofs. Check one review screen.</p>
+      </li>
+      <li>
+        <h3>Drag rooms and roads</h3>
+        <p><strong>Build &gt; Rooms</strong>: drag a rectangle or click any outline and a whole building goes down. <strong>Build &gt; Roads</strong>: drag along the grid and the right tiles join up.</p>
+      </li>
+      <li>
+        <h3>Dress and check</h3>
+        <p><strong>Dress</strong> the street with lights, signs and fences, <strong>Arrange</strong> props with physics, then let <strong>Check</strong> find anything clipping or floating.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section" id="features" aria-labelledby="features-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Features</p>
+      <h2 id="features-title">Five tabs, one window</h2>
+      <p>Everything lives in the Level Builder, in the order you build: Kit, Build, Dress, Arrange, Check. Every control has a tooltip, every action is one Undo, and every shortcut can be rebound.</p>
+    </div>
+    <div class="tabs-grid">
+      <div class="tab-card tab-card-wide">
+        <div class="tab-name"><h3>Build</h3><span class="label">Rooms &middot; Stamp &middot; Roads &middot; Brush &middot; Fill &middot; Row &middot; Spline</span></div>
+        <ul>
+          <li><strong>Rooms:</strong> whole buildings from one drag: walls, corners, floors, roof, door and windows. Rooms stay rooms: resize them, add stories, make any wall a window, door, gap or steps, add stairs, save blueprints.</li>
+          <li><strong>Roads:</strong> straights, corners, T-junctions and crossroads picked and joined as you draw. Shift-drag takes a road up.</li>
+          <li><strong>Brush, Fill, Row and Spline:</strong> paint woods, tile an area, lay rows, paths and fences along your lines.</li>
+          <li><strong>Build effect:</strong> new pieces rise, drop or pop into place.</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Kit</h3></div>
+        <ul>
+          <li>Add any modular pack: prefabs, FBX, OBJ, .zip</li>
+          <li>Roles: which piece is a wall, corner or roof</li>
+          <li>Build Catalog for in-game build menus</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Dress</h3></div>
+        <ul>
+          <li>Street furniture down both sides of a road</li>
+          <li>Signs with your own text, road markings</li>
+          <li>Power lines and bunting that sag</li>
+          <li>Fences, road closures, Vary</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Arrange</h3></div>
+        <ul>
+          <li>Drop and throw with real physics</li>
+          <li>Line, arc, circle and grid</li>
+          <li>Mirror, extrude and radial copies</li>
+          <li>Move, rotate and scale with snapping</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Check</h3></div>
+        <ul>
+          <li>Clipping, floating, sunken, doubles</li>
+          <li>Validate against your rules, measure</li>
+          <li>Level ground, combine meshes</li>
+          <li>Play from here; playable marks</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section section-band" aria-labelledby="gallery-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Gallery</p>
+      <h2 id="gallery-title">See it in the editor</h2>
+      <p>Every picture is the real Unity editor with the sample kits that come with Snapbuild, made from Kenney's free (CC0) City Kits and Modular Buildings. Click a picture to see it full size.</p>
+    </div>
+    <div class="gallery">
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/01-build-worlds.jpg"><img src="../assets/img/snapbuild/01-build-worlds-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="A city with a building's ghost being dragged out, the Level Builder beside it"></a>
+        <figcaption>Build whole worlds from your own pack</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/02-rooms.jpg"><img src="../assets/img/snapbuild/02-rooms-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Rooms: a see-through ghost of a whole building, with insets of it rising, resized and roofed"></a>
+        <figcaption>Drag a room, get a building</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/03-watch-it-rise.jpg"><img src="../assets/img/snapbuild/03-watch-it-rise-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Build effect: the ghost, the building rising piece by piece, the finished building"></a>
+        <figcaption>Let go, watch it rise</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/04-roads.jpg"><img src="../assets/img/snapbuild/04-roads-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="A road being drawn and then laid, joining the street at a T-junction"></a>
+        <figcaption>Roads join as you draw</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/05-dress-the-street.jpg"><img src="../assets/img/snapbuild/05-dress-the-street-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Street lights and bins lining both sides of a new road"></a>
+        <figcaption>Dress the street in one click</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/06-cables.jpg"><img src="../assets/img/snapbuild/06-cables-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Cables hanging with a natural sag between telegraph poles along a road"></a>
+        <figcaption>Power lines, pole to pole</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/07-vary.jpg"><img src="../assets/img/snapbuild/07-vary-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Eight identical houses, then the same row after Vary"></a>
+        <figcaption>No copy-paste look</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/08-signs.jpg"><img src="../assets/img/snapbuild/08-signs-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Shop signs on walls and arrows painted on the road"></a>
+        <figcaption>Signs and road marks</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/09-paths-fences.jpg"><img src="../assets/img/snapbuild/09-paths-fences-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="A stone path laid along a curve inside a fenced park"></a>
+        <figcaption>Paths and fences follow your lines</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/10-brush.jpg"><img src="../assets/img/snapbuild/10-brush-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Trees painted with the brush, its circle on the last dab"></a>
+        <figcaption>Paint woods with a brush</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/11-fill.jpg"><img src="../assets/img/snapbuild/11-fill-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="A solar farm laid edge to edge by Fill"></a>
+        <figcaption>Fill any area in one drag</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/12-physics.jpg"><img src="../assets/img/snapbuild/12-physics-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Traffic cones dropped and settled against each other"></a>
+        <figcaption>Drop it with real physics</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/13-line-it-up.jpg"><img src="../assets/img/snapbuild/13-line-it-up-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Scattered containers, then lined up side by side"></a>
+        <figcaption>Line it up in one click</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/14-repeat.jpg"><img src="../assets/img/snapbuild/14-repeat-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Parasols copied in a ring round a planter"></a>
+        <figcaption>Repeat: mirror, row or ring</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/15-ground.jpg"><img src="../assets/img/snapbuild/15-ground-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Props floating above the ground, then set down in one click"></a>
+        <figcaption>Nothing floats, nothing sinks</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/16-find-problems.jpg"><img src="../assets/img/snapbuild/16-find-problems-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Pieces clipping into a wall, outlined in red and listed"></a>
+        <figcaption>Find problems, fix them fast</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/17-ready-to-play.jpg"><img src="../assets/img/snapbuild/17-ready-to-play-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Map pins and door tags marked for your game"></a>
+        <figcaption>Ready to play</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/18-level-builder.jpg"><img src="../assets/img/snapbuild/18-level-builder-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="The Level Builder window and its five tabs"></a>
+        <figcaption>Meet the Level Builder</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/19-your-pack.jpg"><img src="../assets/img/snapbuild/19-your-pack-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="The Add Pack review screen"></a>
+        <figcaption>Use your own modular pack</figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot-frame" href="../assets/img/snapbuild/20-build-menus.jpg"><img src="../assets/img/snapbuild/20-build-menus-sm.jpg" width="960" height="540" loading="lazy" decoding="async" alt="A build catalog with names, pictures and categories"></a>
+        <figcaption>Build menus for your players</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section class="section" aria-labelledby="specs-title">
+  <div class="wrap spec-grid">
+    <div class="notes">
+      <p class="label">Compatibility</p>
+      <h2 id="specs-title">What it runs on, as tested</h2>
+      <table class="spec-table compat">
+        <tbody>
+          <tr><th scope="row">Unity 6000.0.85f1</th><td class="ok">Tested</td><td>The minimum version</td></tr>
+          <tr><th scope="row">Unity 6000.3</th><td class="ok">Tested</td><td>The current Unity 6 release</td></tr>
+          <tr><th scope="row">Unity 6000.6</th><td class="ok">Tested</td><td>The newest version tested</td></tr>
+          <tr><th scope="row">Built-in, URP, HDRP</th><td class="ok">Tested</td><td>The sample kits and demo scenes included</td></tr>
+          <tr><th scope="row">Domain Reload off</th><td class="ok">Tested</td><td>Faster Enter Play Mode works</td></tr>
+        </tbody>
+      </table>
+      <table class="spec-table">
+        <tbody>
+          <tr><th scope="row">Dependencies</th><td>None: Unity's built-in modules only</td></tr>
+          <tr><th scope="row">Source</th><td>Full C#, with its own assembly definitions</td></tr>
+          <tr><th scope="row">Undo</th><td>One step per action</td></tr>
+          <tr><th scope="row">Documentation</th><td>Offline in the package, and <a href="docs/index.html">online here</a></td></tr>
+          <tr><th scope="row">Menu</th><td><code>Tools &gt; Snapbuild</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="notes">
+      <p class="label">Good to know</p>
+      <h3>Updating from the Prefab Builder Kit 1.0</h3>
+      <ul>
+        <li>Snapbuild is a free update on the same Asset Store page. Your kits, rule sets, palettes, presets, scenes and keys carry over.</li>
+        <li>Your data lives outside the product folder, so updates never touch it.</li>
+      </ul>
+      <h3>Limits, stated up front</h3>
+      <ul>
+        <li>Rooms build on a grid with square corners: any L, T or courtyard outline works, curved walls don't.</li>
+        <li>It's an editor tool: it adds nothing to your game at runtime beyond a few small helper components.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-band">
+  <div class="wrap">
+    <div class="cta-box">
+      <div>
+        <h2>Build your next level in an afternoon</h2>
+        <p>Try the demo in your browser, then get Snapbuild on the Unity Asset Store.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn" href="demo/index.html">Try the demo</a>
+        <a class="btn btn-ghost" href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Get it on the Asset Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="support" aria-labelledby="support-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Support</p>
+      <h2 id="support-title">Help with the Snapbuild</h2>
+      <p>Stuck, found a bug or have an idea? Pick whichever is easiest. Every message gets an answer.</p>
+    </div>
+    <div class="tiles">
+      <a class="tile" href="../snapbuild/docs/support.html"><span class="label">Docs</span><h3>Help and troubleshooting</h3><p>Common problems and their fixes, and what to include when you ask.</p></a>
+      <a class="tile" href="https://discord.gg/AmpBDxRAKu" rel="noopener"><span class="label">Community</span><h3>Discord</h3><p>Ask questions, share what you build, hear about updates first.</p></a>
+      <a class="tile" href="https://github.com/raregeometry/Support/issues" rel="noopener"><span class="label">Bugs</span><h3>Report a bug</h3><p>Open an issue on GitHub and follow it until it is fixed.</p></a>
+      <a class="tile" href="mailto:marklromano@outlook.com?subject=Snapbuild%20support"><span class="label">Email</span>
+        <h3>Email the developer</h3><p>marklromano@outlook.com</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-band" aria-labelledby="more-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">More from Rare Geometry</p>
+      <h2 id="more-title">Other kits, built to the same standard</h2>
+    </div>
+    <div class="products"><a class="product product-link c-prefab" href="../prefab-builder/index.html"><div class="product-top"><span class="pill pill-live">On the Asset Store</span></div><h3>All In One Prefab Builder Kit</h3><p>Turn any pack of prefabs into a world-building kit: snap, draw roads, scatter, fence, dress streets, settle with physics and check your scene, all from one window.</p></a><a class="product product-link c-save" href="../save-kit/index.html"><div class="product-top"><span class="pill pill-dev">Coming soon</span></div><h3>All In One Save Kit</h3><p>Save and restore player progress, world objects and settings, with slots, autosaves, a finished save menu, backups and automatic recovery from damaged saves.</p></a><a class="product product-link c-interact" href="../interaction-kit/index.html"><div class="product-top"><span class="pill pill-dev">Coming soon</span></div><h3>All In One Interaction Kit</h3><p>Turn your own prefabs into doors, drawers, switches, pickups, keypads and puzzles, with prompts for every controller, a &quot;why can&#x27;t I interact?&quot; debugger and optional multiplayer.</p></a><a class="product product-link c-runtime" href="../runtime-building-kit/index.html"><div class="product-top"><span class="pill pill-dev">Coming soon</span></div><h3>All In One Runtime Building Kit</h3><p>Let players build bases and place furniture at runtime: turn your own models into build pieces in about ten minutes without code, snap them together through sockets, drag out rows and areas or stamp whole buildings, and see a plain reason whenever a spot is refused. Four ready-made themes, and every part of the HUD, preview, words and sounds can be changed or switched off.</p></a><a class="product product-link c-settings" href="../settings-menu-kit/index.html"><div class="product-top"><span class="pill pill-dev">Coming soon</span></div><h3>All In One Game Settings &amp; Menu Kit</h3><p>A finished game front end: title screen, main menu, settings, pause, loading screen and dialogs, with key rebinding, accessibility, subtitles and three themes, ready for keyboard, mouse and gamepad.</p></a><a class="product product-link c-bugreport" href="../bug-report-kit/index.html"><div class="product-top"><span class="pill pill-dev">Coming soon</span></div><h3>All In One Bug Report Kit</h3><p>Testers press one key and you get one file: their words, a marked-up screenshot, a replay of the last seconds, the log with stack traces, system info and your game&#x27;s state. Plus an in-game console, stats and debug options, and a Report Inbox in the Editor that clicks straight to the broken line.</p></a><a class="product product-link c-footstep" href="../footstep-kit/index.html"><div class="product-top"><span class="pill pill-dev">Coming soon</span></div><h3>All In One Surface Footstep Kit</h3><p>Footsteps that sound like what your characters walk on, for any controller in 3D and 2D, with effects, footprints, AI hearing and a debugger that says why a step was silent.</p></a><a class="product product-link c-hitfeedback" href="../hit-feedback-kit/index.html"><div class="product-top"><span class="pill pill-dev">Coming soon</span></div><h3>All In One Hit Feedback Kit</h3><p>Make every hit land: damage numbers, hit flash, hitstop, screen shake, knockback, health bars and sound from one component, with genre presets and a Why No Feedback? debugger.</p></a><a class="product product-link c-tutorial" href="../tutorial-kit/index.html"><div class="product-top"><span class="pill pill-dev">Coming soon</span></div><h3>All In One Tutorial Kit</h3><p>In-game tutorials and onboarding without code: spotlight any button or object, show a tip, and finish each step when the player really does it. uGUI, UI Toolkit, 2D and 3D.</p></a><a class="product product-link c-waypoint" href="../waypoint-minimap-kit/index.html"><div class="product-top"><span class="pill pill-dev">Coming soon</span></div><h3>All In One Waypoint &amp; Minimap Kit</h3><p>Show players where to go: objective markers, edge arrows with distance, a compass bar, a minimap and a full-screen map, with a one-click map maker, fog of war and region discovery.</p></a></div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html"><img src="../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../docs/index.html">Documentation</a></li>
+          <li><a href="../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

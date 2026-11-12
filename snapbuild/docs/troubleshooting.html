@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Troubleshooting | Rare Geometry</title>
+<meta name="description" content="Troubleshooting: documentation for the Snapbuild for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/snapbuild/docs/troubleshooting.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Troubleshooting">
+<meta property="og:description" content="Troubleshooting: documentation for the Snapbuild for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/snapbuild/docs/troubleshooting.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/snapbuild/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Snapbuild docs</a><span class="pill">v2.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="world-builder-window.html">The Level Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="rooms.html">Rooms and Roles</a><a href="move-tab.html">Arrange: Move tools</a><a href="place-tab.html">Build: Place tools</a><a href="physics-tab.html">Arrange: Physics tools</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Check: Fix tools</a><a href="check-tab.html">Check: Check tools</a><a href="settings-tab.html">Settings</a><a href="build-catalog.html">Build Catalog</a><a href="make-playable.html">Make Playable</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html" aria-current="page">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="world-builder-window.html">The Level Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="rooms.html">Rooms and Roles</a><a href="move-tab.html">Arrange: Move tools</a><a href="place-tab.html">Build: Place tools</a><a href="physics-tab.html">Arrange: Physics tools</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Check: Fix tools</a><a href="check-tab.html">Check: Check tools</a><a href="settings-tab.html">Settings</a><a href="build-catalog.html">Build Catalog</a><a href="make-playable.html">Make Playable</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html" aria-current="page">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Snapbuild</a><span>/</span><span>More</span></nav>
+<h1 id="troubleshooting">Troubleshooting</h1>
+<p><strong>Asking for help, reporting a bug.</strong> In the Level Builder window, the <strong>?</strong> at the top (or <strong>Tools &gt; Snapbuild &gt; Get Help, Report a Bug</strong>) has the
+addresses to copy: the Discord and the publisher's page. <strong>Copy system info</strong> puts what we need to know on the clipboard: Snapbuild's version,
+Unity's, the render pipeline, your data folder and your kits. Paste it into your message.</p>
+<p><strong>A pack isn't offered on the first page.</strong> It needs at least 5 prefabs or models, must not already be a kit's folder,
+and must not be on the ignore list ("Not a pack"). Choose it in the folder browser instead.</p>
+<p><strong>Pieces are in the wrong category.</strong> Fix them on the review screen (select several and set them at once). If a pack
+names things in a way the scanner doesn't know, add its words to the category's keywords in the RuleSet and re-scan:
+hand-set categories are kept, guesses are redone.</p>
+<p><strong>Thumbnails stay as "...".</strong> Unity makes them in the background, a few at a time; big packs take a moment. A piece
+with nothing visible never gets one.</p>
+<p><strong>A piece is flagged "will look pink".</strong> Its material uses a shader for a different render pipeline. Convert the
+pack's materials with your render pipeline's material converter (the pack's files are yours to convert; the Prefab
+Builder never changes them).</p>
+<p><strong>The kit looks tiny next to my character.</strong> The pack is built at a different scale. Set the kit's <strong>Scale</strong> on the
+review screen (a suggestion appears when buildings are hardly taller than your character); the placeable copies are
+scaled, never the pack.</p>
+<p><strong>R doesn't turn the ghost.</strong> The Scene view needs keyboard focus (click in it once). If you changed the Stamp shortcuts,
+check Settings &gt; Hotkeys.</p>
+<p><strong>The ghost is always red.</strong> It overlaps something (more than touching). Shift-click places it anyway, or switch on
+<strong>Allow overlaps</strong> (<strong>O</strong> while stamping).</p>
+<p><strong>Snapping keeps pulling the piece somewhere I don't want.</strong> Lower the <strong>Snap distance</strong> (Stamp panel), switch off
+<strong>Snap to pieces</strong> (or the grid: its own switch, on the Grid row), or hold <strong>Ctrl</strong> (Cmd) to place freely.</p>
+<p><strong>Pieces don't snap to each other.</strong> <strong>Snap to pieces</strong> must be on (Stamp panel, or the Scene overlay), and the piece must
+come within the <strong>Snap distance</strong> of the other: raise it to grab from further away. The grid alone only lines pieces up
+with its lines, not with each other.</p>
+<p><strong>A piece doesn't file into a folder.</strong> Only kit pieces placed at the top of the Hierarchy are filed; check Settings &gt;
+Folders, and the never re-parent list.</p>
+<p><strong>Placed objects from a kit lost their prefab link.</strong> The kit was removed together with its placeable copies. Re-add
+the pack; to keep links, remove kits without their copies.</p>
+<p><strong>The brush paints nothing.</strong> "Only on the ground" is on and the ground under the circle has no floor type (or it's a
+terrain and terrain awareness is off). The Brush panel offers a one-click fix. With <strong>Same floor type only</strong> (or Ctrl), it
+only paints on the floor type the stroke started on: start on the floor you want.</p>
+<p><strong>A floor is in the wrong floor type</strong> (a grey road in Concrete, say). Settings &gt; Floors &amp; Terrain: open the floor type,
+move the piece to the right one. Change a floor type's colour if many pieces land in the wrong one, then <strong>Sort floors
+again</strong>; or lower the floor colour tolerance (Settings &gt; Folders) to split close colours into separate floor types.</p>
+<p><strong>"The scatter is combined."</strong> Un-combine the group (Build &gt; Brush) to paint or erase in it, then combine again.</p>
+<p><strong>A row or fence comes out sideways, or far too many thin pieces.</strong> The pieces' front side is wrong: fix it on the
+review screen (Kit &gt; Kits &gt; Review…), the line lays each piece by its front.</p>
+<p><strong>Some pieces of a row, spline or fence are missing.</strong> They showed red: they'd have stood in something (a building, a
+prop, not ground, roads or sidewalks) with <strong>Allow overlaps</strong> off (switch it on to place them
+anyway), or they were off the floor with <strong>Same floor type only</strong> on.</p>
+<p><strong>The fence won't go where I drag.</strong> <strong>Whole panels only</strong> is on: the fence grows a whole panel at a time. Drag further, or untick
+Fixed for any size.</p>
+<p><strong>The fence has no opening.</strong> The opening is set to the side facing a road and there's no road piece next to the area:
+choose a side instead.</p>
+<p><strong>Fill leaves cells grey.</strong> They're already tiled, or something stands in them (a building, a prop): tiles only go on
+empty ground, so filling twice never tiles twice.</p>
+<p><strong>Fill spreads fewer pieces than it says.</strong> They found no room: the area is too small for that many at that density, or
+something already stands there (<strong>Allow overlaps</strong> off). Lower the density.</p>
+<p><strong>Same floor type only lets pieces onto the road.</strong> It checks the floor with a ray straight down; a ground or road piece
+without a collider still counts as its own floor (the ray falls through it), for Row, Spline, Fence, Fill and the Brush.
+If pieces still cross over, the two floors may be the same floor type (Settings &gt; Floors &amp; Terrain).</p>
+<p><strong>Every ghost shows red.</strong> Something in the scene encloses everything: a sky dome or skybox object round the scene. Anything
+250 m or more every way is now treated as a backdrop and never counts as in the way; if yours is smaller, move it off the
+playing area or disable it while building.</p>
+<p><strong>Finishing a spline.</strong> Press <strong>Z</strong> (or click its last point again, double-click or right-click) to lay it, <strong>X</strong> to close
+the loop, or use <strong>Lay it</strong> / <strong>Loop</strong> in the Scene overlay. (Unity keeps Esc and Enter for itself in some set-ups.)</p>
+<p><strong>I can't select or move things with Snapbuild open.</strong> Press <strong>Q, W, E, T or Y</strong> (or pick a tool in Unity's
+toolbar, or press Esc with nothing to cancel): the Scene view is Unity's again until you pick a piece or a mode.</p>
+<p><strong>R switches to the Scale tool instead of turning the fronts.</strong> Keep the mouse over the Scene view when you press it; R
+turns the fronts only while Row, Spline or Fence is the mode.</p>
+<p><strong>Street furniture stands on the road, or too far out.</strong> Each kind has its own distance from the road edge (Dress &gt;
+Street): positive puts it beside the road, negative onto a sidewalk that's part of the road piece (as in kits whose road
+tiles have their own sidewalks).</p>
+<p><strong>The dresser places nothing.</strong> The kinds start empty: choose a kind and click its pieces in the palette.</p>
+<p><strong>The dresser leaves a gap by a building.</strong> Nothing goes in front of a building's door (the middle of its front). If the
+building's front side is wrong, fix it on the review screen.</p>
+<p><strong>A closure goes on the wrong edge, or the traffic comes from the wrong side.</strong> A click takes the road edge nearest the mouse;
+to be exact, drag a line where you want it. <strong>⇄ Turn round</strong> (in the panel) swaps the traffic side. If its pieces stand
+sideways, turn them with ↻ (their front side is set wrong in the kit); R turns the road laid beyond it.</p>
+<p><strong>Sign text is too big or small.</strong> Fit to the board sizes it from the board's face; or move <strong>Size</strong> to set how tall the letters are (that turns Fit off).
+For signs already placed: select them, Dress &gt; Signs changes them straight away (a closure's sign: its Sign tab).</p>
+<p><strong>Liking it?</strong> If Snapbuild saves you time, a rating or a review on its Asset Store page helps a lot: it's how
+other people find it.</p>
+<h2 id="known-limitations-this-version">Known limitations (this version) <a class="anchor" href="#known-limitations-this-version" aria-label="Link to this section">#</a></h2>
+<ul>
+<li>There are no tools for rooms, facades, maps or splitting a scene (see the list of tools in
+  <a href="world-builder-window.html">The Level Builder window</a> for what's here).</li>
+<li>The street dresser and closures work on the road grid (the road kit's cell): curved road pieces are dressed along their
+  cells' straight edges.</li>
+<li>Sign text uses Unity's built-in text (TextMesh), which every render pipeline draws; TextMeshPro isn't used yet.</li>
+<li>Spline pieces are laid end to end along the curve: on a tight bend, straight pieces leave small gaps on the outside
+  and overlap on the inside.</li>
+<li>Snapping uses visible boxes: a piece with a very irregular shape (an L-shaped building) snaps by its outer box.</li>
+<li>Model formats Unity can't import without an extra package (glTF needs one) are only scanned if that package is
+  installed.</li>
+<li>Custom snap points are entered as numbers; a visual editor comes later.</li>
+</ul>
+<div class="doc-pager"><a class="pager prev" href="extending.html"><span class="label">Previous</span>Extending with code</a><a class="pager next" href="shortcuts.html"><span class="label">Next</span>Keyboard shortcuts</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Troubleshooting" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

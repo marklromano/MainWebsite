@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Rooms and Roles | Rare Geometry</title>
+<meta name="description" content="Rooms and Roles: documentation for the Snapbuild for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/snapbuild/docs/rooms.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Rooms and Roles">
+<meta property="og:description" content="Rooms and Roles: documentation for the Snapbuild for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/snapbuild/docs/rooms.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/snapbuild/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Snapbuild docs</a><span class="pill">v2.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="world-builder-window.html">The Level Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="rooms.html" aria-current="page">Rooms and Roles</a><a href="move-tab.html">Arrange: Move tools</a><a href="place-tab.html">Build: Place tools</a><a href="physics-tab.html">Arrange: Physics tools</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Check: Fix tools</a><a href="check-tab.html">Check: Check tools</a><a href="settings-tab.html">Settings</a><a href="build-catalog.html">Build Catalog</a><a href="make-playable.html">Make Playable</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="world-builder-window.html">The Level Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="rooms.html" aria-current="page">Rooms and Roles</a><a href="move-tab.html">Arrange: Move tools</a><a href="place-tab.html">Build: Place tools</a><a href="physics-tab.html">Arrange: Physics tools</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Check: Fix tools</a><a href="check-tab.html">Check: Check tools</a><a href="settings-tab.html">Settings</a><a href="build-catalog.html">Build Catalog</a><a href="make-playable.html">Make Playable</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Snapbuild</a><span>/</span><span>The tabs</span></nav>
+<h1 id="rooms-and-roles">Rooms and Roles</h1>
+<p>Rooms builds whole structures from your kit's pieces: you drag a rectangle and walls, corners, a floor, a roof, a door
+and windows go down. A room stays a room. Select it later and drag a side to resize it, click a wall to make it a
+window, a door or a gap, add a story. What you chose by hand stays where you chose it.</p>
+<p>Rooms needs to know which pieces are walls, corners, floors and roofs. That is what <strong>Kit &gt; Roles</strong> is for. Snapbuild
+guesses the roles of every piece when a kit is made; you check them once.</p>
+<h2 id="build-a-room">Build a room <a class="anchor" href="#build-a-room" aria-label="Link to this section">#</a></h2>
+<ol>
+<li>Open <strong>Build &gt; Rooms</strong>.</li>
+<li>Pick the <strong>Kit</strong> and the <strong>Family</strong> (the set of parts that go together, for example stone or wood).</li>
+<li>Drag a rectangle in the Scene view. A see-through ghost of the whole building shows every piece before you let go, with
+   a count and the size in metres (the door is outlined in yellow). Let go and the room is built. One Undo takes it away.</li>
+</ol>
+<p>Settings for the next room (and for the selected room, see below):</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stories</td>
+<td>How many stories of walls, one on top of another.</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>None, Some or Many: how many walls get a window by themselves.</td>
+</tr>
+<tr>
+<td>Door</td>
+<td>A door in the middle of the first side, on the ground floor.</td>
+</tr>
+<tr>
+<td>Corners</td>
+<td>Corner pieces (or pillars) where walls meet.</td>
+</tr>
+<tr>
+<td>Floor</td>
+<td>Floor tiles inside the walls, when the family has a floor piece.</td>
+</tr>
+<tr>
+<td>Roof</td>
+<td>A ceiling or roof over the top story, when the family has the pieces.</td>
+</tr>
+<tr>
+<td>Roof (kind)</td>
+<td>Which roof family to use, when the kit has several (flat, gable, slanted).</td>
+</tr>
+</tbody>
+</table></div>
+<p>Rooms grow a wall at a time. One wall's length (the module) and one story's height are measured from the family's wall
+piece and shown under the settings.</p>
+<p><strong>Build effect</strong> (under the settings, also in Roads): how new pieces appear in the Scene view when a tool places them.
+Rise (each piece rises out of the ground, bottom first), Drop (drops into place), Pop (grows to full size) or None (at once).
+It is only a look in the editor: the pieces are placed straight away, nothing about them changes, and it never runs in Play
+mode. It applies to every tool that places pieces, for you only.</p>
+<h3 id="any-outline-and-runs-of-walls">Any outline, and runs of walls <a class="anchor" href="#any-outline-and-runs-of-walls" aria-label="Link to this section">#</a></h3>
+<p>Switch <strong>Rectangle</strong> to <strong>Draw</strong> and click the corners one after another. Sides run along the grid, so any outline with
+square corners works: an L, a T, a courtyard.</p>
+<ul>
+<li>Click the first corner again: the outline closes and becomes a room.</li>
+<li><strong>Enter</strong> (or a double click): the outline stays open and becomes a run of walls.</li>
+<li><strong>Backspace</strong> takes back the last corner. <strong>Esc</strong> cancels.</li>
+</ul>
+<h2 id="change-a-room-after-it-is-built">Change a room after it is built <a class="anchor" href="#change-a-room-after-it-is-built" aria-label="Link to this section">#</a></h2>
+<p>Click a room (or any piece of it) with Rooms open. Its settings show in the window and change the room at once.</p>
+<ul>
+<li><strong>Resize:</strong> drag one of the yellow handles in the middle of each side. The ghost shows the room at its new size; let go and
+  only what changed is rebuilt. Walls that stay keep their objects, and anything you did to them.</li>
+<li><strong>Change a wall:</strong> click the wall in the Scene view, then choose <strong>Auto</strong>, <strong>Wall</strong>, <strong>Window</strong>, <strong>Door</strong> or <strong>Gap</strong>
+  under This piece. When the family has a steps piece there is <strong>Steps</strong> too (an entrance with steps).</li>
+<li><strong>Next variant:</strong> another piece with the same role, in this place only.</li>
+<li><strong>Freeze:</strong> this piece is never replaced, moved or re-rolled while its place exists. Use it after adjusting a piece by
+  hand.</li>
+<li><strong>Detach:</strong> the piece leaves the room and stays where it is as a plain object; the room leaves its place empty.</li>
+<li><strong>Stairs:</strong> select a floor tile and click <strong>Stairs up from here</strong>. A staircase stands on the tile and the floor above
+  it is left open. <strong>Turn the stairs</strong> changes the way it climbs.</li>
+<li><strong>Re-roll:</strong> another mix of variants and windows. Walls you chose by hand, and frozen ones, stay.</li>
+<li><strong>Rebuild:</strong> builds the room again from its settings: puts back pieces deleted by hand.</li>
+<li><strong>Bake:</strong> the room becomes plain objects. It keeps everything it built and stops being a room that can be resized.
+  Undo brings the room back.</li>
+</ul>
+<p>A room never rebuilds by itself. It changes only when you change a setting, drag a side or press a button.</p>
+<h2 id="blueprints">Blueprints <a class="anchor" href="#blueprints" aria-label="Link to this section">#</a></h2>
+<p>A blueprint is a room saved to build again: its kit, family, outline, stories and every wall you chose.</p>
+<ul>
+<li><strong>Blueprints &gt; Save this room as a blueprint...</strong> with a room selected.</li>
+<li><strong>Blueprints &gt; Build &gt; (name)</strong>: the blueprint follows the mouse. Click to build it. <strong>R</strong> turns it a quarter turn;
+  <strong>Shift-click</strong> keeps it in hand to build another; <strong>Esc</strong> puts it away.</li>
+<li>Blueprints are small text files in your data folder (<code>Blueprints/</code>), so they travel with the project.</li>
+</ul>
+<h2 id="kit--roles">Kit &gt; Roles <a class="anchor" href="#kit--roles" aria-label="Link to this section">#</a></h2>
+<p>Each row is a piece of the kit.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Column</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Role</td>
+<td>What the piece is in a building: Wall, Wall with window, Wall with door, Corner, Inside corner, Pillar, Floor, Ceiling, Roof, Roof edge, Roof corner, Roof inside corner, Stairs, or Not a building part.</td>
+</tr>
+<tr>
+<td>Family</td>
+<td>The set of parts it goes with. Rooms builds from one family at a time. Pick one in use, or New...</td>
+</tr>
+<tr>
+<td>Often</td>
+<td>How likely the piece is to be chosen among those with the same role and family. 0 means only when you pick it (Next variant).</td>
+</tr>
+<tr>
+<td>Turn (↻)</td>
+<td>A quarter turn for a corner or roof piece that comes out facing the wrong way.</td>
+</tr>
+</tbody>
+</table></div>
+<p>In a narrow window the last columns are hidden; right-click a row for everything they do.</p>
+<p>How Snapbuild guesses:</p>
+<ul>
+<li><strong>Names:</strong> words such as wall, window, door, corner, pillar, floor, roof, stairs in a piece's name, and the word that
+  tells sets apart (stone, wood) as the family.</li>
+<li><strong>Sizes:</strong> the most common wall length is the kit's module. A door leaf or a window frame on its own is not a wall
+  module and gets no role.</li>
+<li><strong>Shapes:</strong> for corners and roof pieces Snapbuild measures the model. A roof tile with a raised border on one side
+  is an edge, on two neighbouring sides a corner, on none a middle tile; a sloping tile's low side is its eave. This is
+  also how it knows which way to turn them.</li>
+</ul>
+<p>What you set by hand is kept when the pack is scanned again. <strong>Guess again</strong> guesses everything you have not set.</p>
+<h2 id="what-the-families-of-the-sample-kit-look-like">What the families of the sample kit look like <a class="anchor" href="#what-the-families-of-the-sample-kit-look-like" aria-label="Link to this section">#</a></h2>
+<p><strong>Try the sample kits</strong> (Home) makes the Kenney Modular Buildings kit. Its walls are blocks 5 m long, so Rooms places a
+block in every cell along the inside of the outline, corner blocks in the corners, and the flat roof with its border.</p>
+<h2 id="troubleshooting">Troubleshooting <a class="anchor" href="#troubleshooting" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>"This kit has no piece marked as a wall."</strong> Open Kit &gt; Roles, list Every piece and give the wall pieces the Wall
+  role.</li>
+<li><strong>Corners or roof edges face the wrong way.</strong> Click ↻ on that piece in Kit &gt; Roles, then Rebuild the room.</li>
+<li><strong>Walls overlap or leave gaps.</strong> The module is the wall piece's length. If the family mixes walls of different
+  lengths, give the odd ones another family.</li>
+<li><strong>A piece I moved jumped back.</strong> Freeze it before changing the room, or Detach it.</li>
+</ul>
+<div class="doc-pager"><a class="pager prev" href="upgrading.html"><span class="label">Previous</span>Upgrading</a><a class="pager next" href="move-tab.html"><span class="label">Next</span>Arrange: Move tools</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Rooms+and+Roles" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#build-a-room">Build a room</a></li><li class="toc-3"><a href="#any-outline-and-runs-of-walls">Any outline, and runs of walls</a></li><li class="toc-2"><a href="#change-a-room-after-it-is-built">Change a room after it is built</a></li><li class="toc-2"><a href="#blueprints">Blueprints</a></li><li class="toc-2"><a href="#kit--roles">Kit &gt; Roles</a></li><li class="toc-2"><a href="#what-the-families-of-the-sample-kit-look-like">What the families of the sample kit look like</a></li><li class="toc-2"><a href="#troubleshooting">Troubleshooting</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

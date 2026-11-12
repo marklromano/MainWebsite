@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Rules, Profiles, Palettes and Styles | Rare Geometry</title>
+<meta name="description" content="Rules, Profiles, Palettes and Styles: documentation for the Snapbuild for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/snapbuild/docs/rules-and-data.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Rules, Profiles, Palettes and Styles">
+<meta property="og:description" content="Rules, Profiles, Palettes and Styles: documentation for the Snapbuild for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/snapbuild/docs/rules-and-data.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/snapbuild/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Snapbuild docs</a><span class="pill">v2.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="world-builder-window.html">The Level Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="rooms.html">Rooms and Roles</a><a href="move-tab.html">Arrange: Move tools</a><a href="place-tab.html">Build: Place tools</a><a href="physics-tab.html">Arrange: Physics tools</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Check: Fix tools</a><a href="check-tab.html">Check: Check tools</a><a href="settings-tab.html">Settings</a><a href="build-catalog.html">Build Catalog</a><a href="make-playable.html">Make Playable</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html" aria-current="page">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="world-builder-window.html">The Level Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="rooms.html">Rooms and Roles</a><a href="move-tab.html">Arrange: Move tools</a><a href="place-tab.html">Build: Place tools</a><a href="physics-tab.html">Arrange: Physics tools</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Check: Fix tools</a><a href="check-tab.html">Check: Check tools</a><a href="settings-tab.html">Settings</a><a href="build-catalog.html">Build Catalog</a><a href="make-playable.html">Make Playable</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html" aria-current="page">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Snapbuild</a><span>/</span><span>Your project&#x27;s rules</span></nav>
+<h1 id="rules-profiles-palettes-and-styles">Rules, Profiles, Palettes and Styles</h1>
+<p>Everything Snapbuild decides is data you can change. Nothing assumes a particular game.</p>
+<h2 id="ruleset">RuleSet <a class="anchor" href="#ruleset" aria-label="Link to this section">#</a></h2>
+<p>A RuleSet holds every placement rule. One is active at a time. The <strong>Default Rule Set</strong> is based on common
+city-building practice.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What it holds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Snap</td>
+<td>Default grid, Snap to pieces distance, rotation step (90°), height step, Snap to pieces on/off.</td>
+</tr>
+<tr>
+<td>Categories</td>
+<td>The categories pieces are sorted into (see below).</td>
+</tr>
+<tr>
+<td>Street furniture</td>
+<td>Your kinds of street furniture (Dress &gt; Street): each with its picked pieces, density (per 100 m of road side), alternating sides and distance from the road edge.</td>
+</tr>
+<tr>
+<td>Closure types</td>
+<td>Road closed, bridge closed, private road: the sign texts Dress &gt; Closures offers (plain data, one line per entry).</td>
+</tr>
+<tr>
+<td>Corner pieces</td>
+<td>Off / Warn / Block for non-corner pieces on corners.</td>
+</tr>
+<tr>
+<td>Style mixing</td>
+<td>Off / Warn / Block for kits of different styles within a radius.</td>
+</tr>
+<tr>
+<td>Empty ground cells</td>
+<td>An empty cell next to a building, the most empty cells in a row by a road.</td>
+</tr>
+<tr>
+<td>Scale rules</td>
+<td>Door headroom and side clearance, aisle clearance, curb height as a share of the step height: all applied to the Character Profile.</td>
+</tr>
+<tr>
+<td>Scatter</td>
+<td>What counts as scatter (max height and width), chunk size for combining, cull distance.</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Most objects and triangles (Check &gt; Performance compares against them), props per cell, scatter triangle limit.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="categories">Categories <a class="anchor" href="#categories" aria-label="Link to this section">#</a></h3>
+<p>Each category has an <strong>id</strong> (stored in kits: don't change it once used), a display name, and:</p>
+<ul>
+<li><strong>Grid</strong>: the grid a piece snaps to when alone; 0 = the kit's grid cell (road and ground tiles).</li>
+<li><strong>Setback</strong> min / max from the road edge, <strong>minimum spacing</strong>, <strong>triangle budget</strong>.</li>
+<li><strong>Ground-like</strong>: its pieces get a Surface Tag and other pieces stand on them.</li>
+<li><strong>Mark static</strong>, <strong>Add collider if missing</strong>: used when making placeable copies.</li>
+<li><strong>Name keywords</strong>, <strong>folder keywords</strong>, <strong>exclude keywords</strong>: how the scanner recognises it. Keywords are comma
+  separated. A word matches its plural, and keywords of 4+ letters also match longer words starting with them
+  ("lamp" → "lamppost"); 5+ letters also match words ending with them ("light" → "streetlight"). "street" never
+  matches "tree". Exclude keywords rule a category out ("signal" for signs).</li>
+<li>Order matters: when two categories match a name equally well, the one listed first wins.</li>
+</ul>
+<p>The default categories: closures, signs, lights, fences, vehicles, nature, interiors, roads, ground, buildings, props.
+Add your own with any id ("market" with the keywords "stall, stand").</p>
+<h2 id="character-profile">Character Profile <a class="anchor" href="#character-profile" aria-label="Link to this section">#</a></h2>
+<p>The character the world is built for: <strong>height</strong> (1.8 m by default), <strong>radius</strong>, <strong>step height</strong>, <strong>steepest slope</strong>,
+<strong>walk</strong>, <strong>run</strong> and <strong>vehicle</strong> speeds. Every scale rule reads from it (a doorway must be at least height +
+headroom), and travel-time estimates use its speeds. A RuleSet points to one profile.</p>
+<h2 id="palettes">Palettes <a class="anchor" href="#palettes" aria-label="Link to this section">#</a></h2>
+<p>Named colours (tints and accents), each with a role: wall, trim, accent, ground. Recolouring applies them through
+<strong>material variants</strong> of a kit's shared materials (one per colour, shared by every piece using it) never through
+unique materials per object. Two palettes are made on first use: <strong>Warm Town</strong> and <strong>Clean Suburb</strong>.</p>
+<h2 id="styles">Styles <a class="anchor" href="#styles" aria-label="Link to this section">#</a></h2>
+<p>A style is a look that kits belong to. It has a description and a colour (for lists and markers). The RuleSet's
+<strong>Style mixing</strong> rule uses it.</p>
+<h2 id="project-settings">Project settings <a class="anchor" href="#project-settings" aria-label="Link to this section">#</a></h2>
+<p>Stored in <code>ProjectSettings/AllInOneWorldBuilderSettings.asset</code>:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data folder</td>
+<td><code>Assets/RareGeometryData/Snapbuild</code></td>
+</tr>
+<tr>
+<td>Packs folder</td>
+<td><code>Assets/Imported Packs</code> (where packs added from disk are copied)</td>
+</tr>
+<tr>
+<td>Small-props layer</td>
+<td><code>SmallProps</code></td>
+</tr>
+<tr>
+<td>Facade / enterable tags</td>
+<td><code>Facade</code>, <code>Enterable</code></td>
+</tr>
+<tr>
+<td>Floor types (surfaces)</td>
+<td>Asphalt, Concrete, Grass, Gravel, Dirt, Sand, Wood, Metal, Ceramic, Stone, Water: each with a colour and the words that suggest it (edited in Settings &gt; Floors &amp; Terrain)</td>
+</tr>
+<tr>
+<td>Floor colour tolerance</td>
+<td>22: how different a ground piece's colour may be and still join a floor type</td>
+</tr>
+<tr>
+<td>Default ground / road surface</td>
+<td>Concrete / Asphalt</td>
+</tr>
+<tr>
+<td>Scene folders</td>
+<td>A root (<code>World</code>) and a folder per category; scatter folders <code>Scatter (source)</code> and <code>Scatter</code></td>
+</tr>
+<tr>
+<td>Terrain</td>
+<td>Awareness off; slope for nature, props, vehicles; flatten under buildings off, 1.5 m margin</td>
+</tr>
+<tr>
+<td>Never re-parent</td>
+<td>Component types whose objects are never moved into folders (for example networked objects)</td>
+</tr>
+<tr>
+<td>Pack detection</td>
+<td>On; ignored folders; at least 5 pieces to count as a pack</td>
+</tr>
+</tbody>
+</table></div>
+<p>Layers and tags named here are only created after asking you, never silently.</p>
+<div class="doc-pager"><a class="pager prev" href="make-playable.html"><span class="label">Previous</span>Make Playable</a><a class="pager next" href="presets.html"><span class="label">Next</span>Presets</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Rules%2C+Profiles%2C+Palettes+and+Styles" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#ruleset">RuleSet</a></li><li class="toc-3"><a href="#categories">Categories</a></li><li class="toc-2"><a href="#character-profile">Character Profile</a></li><li class="toc-2"><a href="#palettes">Palettes</a></li><li class="toc-2"><a href="#styles">Styles</a></li><li class="toc-2"><a href="#project-settings">Project settings</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

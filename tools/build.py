@@ -516,6 +516,34 @@ PRODUCTS = [
         "shortcut_groups": {},
         "page_images": {},
     },
+    {
+        # Snapbuild is the Prefab Builder Kit's 2.0: the same Asset Store listing, renamed. Page, docs
+        # (--docs snapbuild=<its product folder>) and the web demo (snapbuild/demo/) are up.
+        "slug": "snapbuild",
+        "lineup": True,
+        "name": "Snapbuild",
+        "short": "Snapbuild",
+        "the": "",
+        "accent": "c-prefab",
+        "status": "live",
+        "version": "2.0.0",
+        "store": STORE_URL,
+        "summary": "Build whole levels from the modular packs you already own: drag a room and get a building, draw roads "
+                   "that join themselves, dress streets in one click.",
+        "requirements": ["Unity 6000.0.85f1+", "Built-in, URP & HDRP", "No dependencies", "Full C# source"],
+        "menu": "Tools > Snapbuild",
+        "support_info": "In the Level Builder, click **\u22ee > Copy support info**",
+        "quick_start": [
+            "Import the package from the Asset Store. Everything lands in <code>Assets/RareGeometry/</code>.",
+            "Open <strong>Tools &gt; Snapbuild &gt; Level Builder</strong> and click <strong>Try the sample city</strong> on Home, "
+            "or add your own pack with <strong>Turn my pack into a kit</strong>.",
+            "Open <strong>Build &gt; Rooms</strong> and drag a rectangle in the Scene view: a see-through ghost shows the building; let go to build it.",
+            "Open <strong>Build &gt; Roads</strong> and drag along the grid, then <strong>Dress &gt; Street</strong> to line it with lights and bins.",
+        ],
+        "pages": [],
+        "shortcut_groups": {},
+        "page_images": {},
+    },
 ]
 
 # Kits without docs yet, for the docs hub and "More from Rare Geometry": (name, accent, status, one line)
@@ -698,6 +726,8 @@ def og_image(path):
         return "prefab-builder/social.jpg"
     if path.startswith("shipready/"):
         return "shipready/social.jpg"
+    if path.startswith("snapbuild/"):
+        return "snapbuild/social.jpg"
     if path.startswith("bearing/"):
         return "bearing/social.jpg"
     return "og-image.jpg"
@@ -894,6 +924,10 @@ HAND_PAGES = [
      "Bearing",
      "Compass, minimap, world markers and a full-screen map built from your level for Unity, with routes that follow "
      "your roads, fast travel, fog of war and floors. Play the demo in your browser. Coming soon to the Unity Asset Store."),
+    ("snapbuild.html", "snapbuild/index.html", "../", "",
+     "Snapbuild: Modular Level Builder",
+     "Build whole levels in Unity from the modular packs you already own: drag a room and get a building, draw roads that "
+     "join themselves, dress streets in one click. Try the demo in your browser."),
     ("support.html", "support/index.html", "../", "support",
      "Support",
      "Get help with Rare Geometry tools: documentation, bug reports, Discord and email."),

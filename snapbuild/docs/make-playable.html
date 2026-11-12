@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Make Playable | Rare Geometry</title>
+<meta name="description" content="Make Playable: documentation for the Snapbuild for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/snapbuild/docs/make-playable.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Make Playable">
+<meta property="og:description" content="Make Playable: documentation for the Snapbuild for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/snapbuild/docs/make-playable.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/snapbuild/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Snapbuild docs</a><span class="pill">v2.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="world-builder-window.html">The Level Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="rooms.html">Rooms and Roles</a><a href="move-tab.html">Arrange: Move tools</a><a href="place-tab.html">Build: Place tools</a><a href="physics-tab.html">Arrange: Physics tools</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Check: Fix tools</a><a href="check-tab.html">Check: Check tools</a><a href="settings-tab.html">Settings</a><a href="build-catalog.html">Build Catalog</a><a href="make-playable.html" aria-current="page">Make Playable</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="world-builder-window.html">The Level Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="rooms.html">Rooms and Roles</a><a href="move-tab.html">Arrange: Move tools</a><a href="place-tab.html">Build: Place tools</a><a href="physics-tab.html">Arrange: Physics tools</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Check: Fix tools</a><a href="check-tab.html">Check: Check tools</a><a href="settings-tab.html">Settings</a><a href="build-catalog.html">Build Catalog</a><a href="make-playable.html" aria-current="page">Make Playable</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Snapbuild</a><span>/</span><span>The tabs</span></nav>
+<h1 id="make-playable">Make Playable</h1>
+<p><strong>Check &gt; Playable</strong> hands what you built to the rest of your game, one tick at a time and only what you ask for.
+Nothing here is needed to build levels, and everything can be removed again.</p>
+<p>Select placed objects (a building, a door, a whole room), then use the sections below.</p>
+<h2 id="id">ID <a class="anchor" href="#id" aria-label="Link to this section">#</a></h2>
+<p><strong>Give IDs</strong> adds a stable ID to each selected object: a unique ID that stays the same between sessions. Save systems
+and other products refer to the object by it. A copy of an object gets an ID of its own.</p>
+<h2 id="place">Place <a class="anchor" href="#place" aria-label="Link to this section">#</a></h2>
+<p><strong>Mark as a place</strong> makes the selected objects places players can find: a shop, a tower, the way out.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>The name players see. Empty: the object's name.</td>
+</tr>
+<tr>
+<td>Category</td>
+<td>For map filters and legends (Shop, Door, Landmark). Pick one in use, or New...</td>
+</tr>
+<tr>
+<td>Starts as</td>
+<td>Not found yet, found, the current objective, done, or not shown at all.</td>
+</tr>
+</tbody>
+</table></div>
+<p>A map or compass product shows every place by itself. With Bearing in the project your places appear on its compass,
+minimap and map with no setup. With none installed a place does nothing and costs nothing.</p>
+<p>From code:</p>
+<pre><code class="language-csharp">using RareGeometry.Core;
+using RareGeometry.Snapbuild;
+
+var mill = GetComponent&lt;SnapbuildPlace&gt;();
+mill.Label = &quot;Old Mill&quot;;
+mill.State = PoiState.Completed;          // every map shows the change
+
+foreach (var place in SnapbuildPlaces.All) { /* every enabled place */ }
+</code></pre>
+<h2 id="surface">Surface <a class="anchor" href="#surface" aria-label="Link to this section">#</a></h2>
+<p><strong>Tag as</strong> gives the selected objects a shared surface (wood, stone, grass): what they are made of, as every Rare
+Geometry product understands it. With Responsive FX in the project, footsteps and impacts on them sound right.</p>
+<p><strong>From floor types</strong> does it for you: ground and road pieces already know their floor type (Settings &gt; Floors), and
+each gets the shared surface of the same name. Surface assets that do not exist yet are made in your data folder
+(<code>Surfaces/</code>).</p>
+<h2 id="parts">Parts <a class="anchor" href="#parts" aria-label="Link to this section">#</a></h2>
+<p><strong>Mark doors and windows</strong> marks each door, window and stairs piece of the selected rooms (by their roles in Kit &gt;
+Roles) with a Building Part component, and gives doors an ID. Your game finds them without searching by name:</p>
+<pre><code class="language-csharp">using RareGeometry.Snapbuild;
+
+foreach (var door in SnapbuildParts.Of(SnapbuildPart.Door))
+{
+    // add your door script, or let an interaction product take over
+}
+</code></pre>
+<h2 id="seeing-the-marks">Seeing the marks <a class="anchor" href="#seeing-the-marks" aria-label="Link to this section">#</a></h2>
+<p>With <strong>Show marks in the Scene view</strong> on (and the Scene view's Gizmos on), every place has a pin with its name and
+category, and every marked door, window and stairs a small tag, so you can check a level's marks at a glance. They are
+only drawn in the editor.</p>
+<h2 id="signs-at-run-time">Signs at run time <a class="anchor" href="#signs-at-run-time" aria-label="Link to this section">#</a></h2>
+<p>Signs made with Dress &gt; Signs can be changed while the game runs:</p>
+<pre><code class="language-csharp">using RareGeometry.Snapbuild;
+
+SnapbuildSigns.SetText(sign, &quot;CLOSED&quot;);            // keeps fitting the board
+SnapbuildSigns.SetColor(sign, Color.red);
+SnapbuildSigns.SetAll(s =&gt; Translate(s.text));     // every sign, for example a translation
+</code></pre>
+<p><strong>Translations by key.</strong> Give a sign a <strong>Key</strong> in its Inspector (for example <code>shop.open</code>), then set every keyed sign
+from your own table in one call. Signs with no key are left as they are:</p>
+<pre><code class="language-csharp">SnapbuildSigns.Translate(key =&gt; myTable.Get(key, language));
+</code></pre>
+<p><code>SnapbuildSigns.Changed</code> tells you when a sign was changed this way.</p>
+<h2 id="decals-at-run-time">Decals at run time <a class="anchor" href="#decals-at-run-time" aria-label="Link to this section">#</a></h2>
+<p>Decals made with Dress &gt; Decals can be changed while the game runs, in builds too. No material is made per decal:</p>
+<pre><code class="language-csharp">SnapbuildDecals.SetImage(decal, poster2);                 // its height follows the new image
+SnapbuildDecals.SetTint(decal, new Color(1, 1, 1, 0.5f)); // alpha fades it
+SnapbuildDecals.SetWidth(decal, 3f);                      // metres
+SnapbuildDecals.SetShown(decal, false);                   // hide it, keep it
+SnapbuildDecals.Apply(decal);                             // after changing its fields yourself
+</code></pre>
+<p>Cables and bunting: change a <code>Cable</code>'s fields and call its <code>Rebuild()</code>.</p>
+<h2 id="who-uses-it">Who uses it <a class="anchor" href="#who-uses-it" aria-label="Link to this section">#</a></h2>
+<p>The last section of the panel lists the Rare Geometry products in the project and what each does with what you marked.
+None is needed: marks made now are picked up when a product is added later.</p>
+<div class="doc-pager"><a class="pager prev" href="build-catalog.html"><span class="label">Previous</span>Build Catalog</a><a class="pager next" href="rules-and-data.html"><span class="label">Next</span>Rules, profiles, palettes and styles</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Make+Playable" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#id">ID</a></li><li class="toc-2"><a href="#place">Place</a></li><li class="toc-2"><a href="#surface">Surface</a></li><li class="toc-2"><a href="#parts">Parts</a></li><li class="toc-2"><a href="#seeing-the-marks">Seeing the marks</a></li><li class="toc-2"><a href="#signs-at-run-time">Signs at run time</a></li><li class="toc-2"><a href="#decals-at-run-time">Decals at run time</a></li><li class="toc-2"><a href="#who-uses-it">Who uses it</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

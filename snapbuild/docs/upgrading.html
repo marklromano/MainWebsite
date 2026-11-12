@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Upgrading | Rare Geometry</title>
+<meta name="description" content="Upgrading: documentation for the Snapbuild for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/snapbuild/docs/upgrading.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Upgrading">
+<meta property="og:description" content="Upgrading: documentation for the Snapbuild for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/snapbuild/docs/upgrading.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/snapbuild/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Snapbuild docs</a><span class="pill">v2.0.0</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="world-builder-window.html">The Level Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html" aria-current="page">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="rooms.html">Rooms and Roles</a><a href="move-tab.html">Arrange: Move tools</a><a href="place-tab.html">Build: Place tools</a><a href="physics-tab.html">Arrange: Physics tools</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Check: Fix tools</a><a href="check-tab.html">Check: Check tools</a><a href="settings-tab.html">Settings</a><a href="build-catalog.html">Build Catalog</a><a href="make-playable.html">Make Playable</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Getting started</a><a href="world-builder-window.html">The Level Builder window</a><a href="adding-packs.html">Adding packs</a><a href="upgrading.html" aria-current="page">Upgrading</a></div><div class="docs-group"><p class=label>The tabs</p><a href="rooms.html">Rooms and Roles</a><a href="move-tab.html">Arrange: Move tools</a><a href="place-tab.html">Build: Place tools</a><a href="physics-tab.html">Arrange: Physics tools</a><a href="dress-tab.html">Dress</a><a href="fix-tab.html">Check: Fix tools</a><a href="check-tab.html">Check: Check tools</a><a href="settings-tab.html">Settings</a><a href="build-catalog.html">Build Catalog</a><a href="make-playable.html">Make Playable</a></div><div class="docs-group"><p class=label>Your project's rules</p><a href="rules-and-data.html">Rules, profiles, palettes and styles</a><a href="presets.html">Presets</a></div><div class="docs-group"><p class=label>More</p><a href="extending.html">Extending with code</a><a href="troubleshooting.html">Troubleshooting and support</a><a href="shortcuts.html">Keyboard shortcuts</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Snapbuild</a><span>/</span><span>Start here</span></nav>
+<h1 id="upgrading">Upgrading</h1>
+<p>How to update Snapbuild, and what changes for you in each version. The full list of changes is in
+<code>CHANGELOG.md</code>, in the product folder.</p>
+<h2 id="how-to-update">How to update <a class="anchor" href="#how-to-update" aria-label="Link to this section">#</a></h2>
+<ol>
+<li>Save your scene.</li>
+<li>Import the new package from the Package Manager (My Assets), over the version you have.</li>
+</ol>
+<p>That is all. Unity updates every file where it already is, so nothing in your scenes changes. Your own work isn't in the
+product folder: your kits, rule sets, palettes, blueprints and placeable copies are in your data folder, the project's
+settings in <code>ProjectSettings/AllInOneWorldBuilderSettings.asset</code> (the file keeps its first name, so your settings are
+found), and your hotkeys and tool presets in Unity's own preferences. Pieces you placed are ordinary objects in your
+scenes.</p>
+<p>If you prefer a clean install, delete the product folder first and then import: the result is the same, with the product
+in its new folder straight away.</p>
+<h2 id="200">2.0.0 <a class="anchor" href="#200" aria-label="Link to this section">#</a></h2>
+<p>A free update for everyone who owns 1.0 (the Prefab Builder kit). The product is called <strong>Snapbuild</strong> now and its window
+the <strong>Level Builder</strong>. <strong>Nothing you made changes:</strong> kits, rule sets, palettes, presets, scenes and placed pieces carry
+over, and every public C# type and member of 1.0 is still there (a test checks this).</p>
+<p>What is different for you:</p>
+<ul>
+<li><strong>Menus:</strong> everything is under <strong>Tools &gt; Snapbuild</strong>. The window opens with <strong>Tools &gt; Snapbuild &gt; Level Builder</strong>
+  (Alt+Shift+W, as before).</li>
+<li><strong>Five tabs:</strong> Kit, Build, Dress, Arrange and Check. Build holds what was Place; Arrange holds Move and Physics; Check
+  holds Fix and Check; Kits moved from Settings to the Kit tab; the rest of Settings is behind the gear. The tools are
+  the same and keep their keys. Shift+1 to 5 pick the tabs, Shift+6 Settings, Shift+7 Home.</li>
+<li><strong>Shortcuts:</strong> they are listed under <strong>Snapbuild</strong> in Edit &gt; Shortcuts. Keys you changed in 1.0 are carried over the
+  first time the new version loads (you will see a line in the Console saying how many).</li>
+<li><strong>Folders:</strong> after an update the files are where they were (<code>Assets/AllInOnePrefabBuilderKit</code>, and your data in
+  <code>Assets/AllInOnePrefabBuilderData</code>). Everything works there. The Level Builder shows a panel with two buttons, to use
+  when it suits you: <strong>Move Snapbuild to Assets/RareGeometry/Snapbuild</strong> and <strong>Move your data to
+  Assets/RareGeometryData/Snapbuild</strong>. Both keep every file's ID, so scenes, kits and prefabs carry on as they were.
+  The ✕ puts the panel away for good.</li>
+<li><strong>A shared folder:</strong> <code>Assets/RareGeometry/Core</code> and <code>Assets/RareGeometry/EditorUI</code> are new. They are small and shared
+  by every Rare Geometry product, so two products never bring two copies. Leave them where they are.</li>
+<li><strong>Colours:</strong> the window's highlight is yellow now (it was blue). Ghosts and snap lines are blue.</li>
+<li><strong>Your own tools:</strong> a tool you wrote for 1.0 (a <code>WorldBuilderMode</code> subclass) still shows. One that named a tab of its
+  own now shows among the Build tools.</li>
+</ul>
+<p>New in 2.0, all optional: Rooms and Roles, Repeat, Level ground, Combine, the placement filter, Fill's border and
+middle, fence resizing and Make Playable. See the <a href="index.html">overview</a>.</p>
+<h2 id="100">1.0.0 <a class="anchor" href="#100" aria-label="Link to this section">#</a></h2>
+<p>A free update for everyone who owns 0.8. <strong>Nothing to do:</strong> kits, rule sets, palettes, hotkeys and scenes made with 0.8
+all carry over, and every menu item, hotkey and public C# type and member of 0.8 is still there (a test checks this).</p>
+<ul>
+<li><strong>Unity 6000.0 LTS or newer</strong> (0.8 needed 6000.3).</li>
+<li><strong>Home (⌂)</strong> opens the first time for someone with no kits yet. You can open it any time from the ⌂ button.</li>
+<li>Some tools and options have <strong>clearer names</strong>: Check &gt; Similar and Arrange &gt; Drop (they shared names with other tools),
+  Allow overlaps (was Place over red), Same floor type only (Stay on this floor), Ground pieces sit on top (Floors on top
+  of the ground), Whole panels only (Fixed), Panels face in (Fronts in), Around the selection (Inverse), Facing (Turn
+  them). They do what they did; your settings for them are kept.</li>
+<li><strong>Settings</strong> show in plain words with units; the rarely changed ones are under <strong>Advanced</strong>.</li>
+<li><strong>Tool picks are kept per project</strong> now. Picks you made in 0.8 (brush pieces, slots, recent decals) start empty once in
+  each project; pick them again.</li>
+<li><strong>Sign text</strong> finds the board more reliably. Signs placed with 0.8 keep their text where it is until you change them.</li>
+</ul>
+<h2 id="080">0.8.0 <a class="anchor" href="#080" aria-label="Link to this section">#</a></h2>
+<ul>
+<li>The product folder and the data folder were renamed (an old
+  data folder is renamed for you the first time the kit loads, so your kits keep working).</li>
+<li>Needed Unity 6000.3 or newer.</li>
+</ul>
+<div class="doc-pager"><a class="pager prev" href="adding-packs.html"><span class="label">Previous</span>Adding packs</a><a class="pager next" href="rooms.html"><span class="label">Next</span>Rooms and Roles</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Upgrading" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#how-to-update">How to update</a></li><li class="toc-2"><a href="#200">2.0.0</a></li><li class="toc-2"><a href="#100">1.0.0</a></li><li class="toc-2"><a href="#080">0.8.0</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>
