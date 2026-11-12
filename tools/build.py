@@ -712,40 +712,159 @@ def write_redirects():
             write(rel.as_posix(), redirect_stub(root, target, label))
 
 
-ICON_DEFAULT = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">'
-                '<path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>')
+# ---- The look of each product on the site (home page cards and "closer look" rows, the icon beside a product
+# page's title, "More from Rare Geometry"). Words only: a product's facts stay in PRODUCTS. Pictures are in
+# assets/img/<slug>/icon.png (its store icon) and assets/img/home/ (cut by tools/site_images.py). ----
+
+LINEUP_ART = {
+    "shipready": {
+        "line": "Menus, settings, saves and playtest tools",
+        "tagline": "From first launch to final save.",
+        "ticks": ["Title screen, main menu, pause, settings and credits, already connected",
+                  "92 ready-made settings with rebinding and accessibility presets",
+                  "Saves that survive crashes, with slots, autosaves and backups"],
+        "main_alt": "A Load Game menu made with Shipready: three save slots, each with a picture, place and play time",
+        "inset_alt": "Shipready's settings menu on the Audio tab",
+    },
+    "bearing": {
+        "line": "Minimap, compass and waypoints",
+        "tagline": "Lead players to what matters.",
+        "ticks": ["A full map built from your level, with floors for buildings",
+                  "Compass, minimap and world markers that stay calm by default",
+                  "Routes that follow your roads, fast travel and fog of war"],
+        "main_alt": "Bearing's full-screen map of an island with places, a tracked objective and region progress",
+        "inset_alt": "The Chart Table window listing every place in the level",
+    },
+    "snapbuild": {
+        "line": "World building from your own prefabs",
+        "tagline": "Build worlds from the prefabs you own.",
+        "ticks": ["Stamp and paint your prefabs on a grid that snaps",
+                  "Roads that join themselves and streets dressed in one click",
+                  "A ghost shows everything first, and your pack's files are never changed"],
+        "main_alt": "A house shown as a see-through ghost about to be stamped into a street of a town built with Snapbuild",
+        "inset_alt": "Snapbuild's Level Builder window on the Stamp tool with a palette of buildings",
+    },
+    "interactra": {
+        "line": "Interaction and runtime building",
+        "tagline": "Build worlds you can use.",
+        "ticks": ["Doors, drawers, switches, keys, keypads and elevators from your own prefabs",
+                  "Runtime building with ghosts, blueprints and wiring",
+                  "One save for everything players build and change"],
+        "main_alt": "A wall's ghost snapping into place beside a house, with the build bar along the bottom",
+        "inset_alt": "A lever wired to a powered door",
+    },
+    "responsive-fx": {
+        "line": "Hit feedback, footsteps and surface impacts",
+        "tagline": "Feel every hit. Hear every step.",
+        "ticks": ["Damage numbers, hitstop, shake and health bars for every hit",
+                  "Footsteps, footprints and bullet marks that match the surface",
+                  "Noise your AI can hear, all tuned in one window"],
+        "main_alt": "A knight striking a pane of glass, which cracks and sprays shards",
+        "inset_alt": "Impact Lab: a grid of surfaces against contacts",
+    },
+}
+
+
+def lineup_order():
+    """Home page order: the lineup first, products on the Asset Store before the ones coming soon."""
+    return sorted(current_products(), key=lambda q: (not q.get("lineup"), q["status"] != "live"))
+
+
+def status_pill(p):
+    if p["status"] == "live":
+        return '<span class="pill pill-live">On the Asset Store</span>'
+    return f'<span class="pill pill-dev">{html.escape(p["status"].capitalize())}</span>'
+
+
+def icon_img(root, slug, size):
+    """The product's own icon, or nothing when it has none on the site yet."""
+    if not (SITE / "assets" / "img" / slug / "icon.png").exists():
+        return ""
+    return (f'<img class="picon" src="{root}assets/img/{slug}/icon.png" width="{size}" height="{size}" alt="" '
+            f'loading="lazy" decoding="async">')
+
+
+def home_img(root, slug, part, alt, cls, lazy=True):
+    path = SITE / "assets" / "img" / "home" / f"{slug}-{part}.jpg"
+    if not path.exists():
+        return ""
+    width, height = jpeg_size(path)
+    lazy_attr = ' loading="lazy" decoding="async"' if lazy else ""
+    return (f'<img class="{cls}" src="{root}assets/img/home/{slug}-{part}.jpg" width="{width}" height="{height}" '
+            f'alt="{html.escape(alt)}"{lazy_attr}>')
+
+
+def jpeg_size(path):
+    """Width and height of a JPEG, read from its header (so the build needs no image library)."""
+    data = path.read_bytes()
+    i = 2
+    while i < len(data):
+        if data[i] != 0xFF:
+            i += 1
+            continue
+        marker = data[i + 1]
+        if marker in (0xC0, 0xC1, 0xC2):
+            return int.from_bytes(data[i + 7:i + 9], "big"), int.from_bytes(data[i + 5:i + 7], "big")
+        i += 2 + int.from_bytes(data[i + 2:i + 4], "big")
+    return 16, 10
+
+
+def product_card(root, p, heading="h3", lazy=True):
+    """One picture card: a real capture, the product's icon, its name and one line. The whole card is the link."""
+    slug = p["slug"]
+    art = LINEUP_ART.get(slug, {})
+    shot = home_img(root, slug, "card", "", "pcard-img", lazy)
+    return f"""<article class="pcard p-{slug}">
+        <div class="pcard-shot">{shot}</div>
+        <div class="pcard-body">
+          {icon_img(root, slug, 52)}
+          <{heading}><a href="{root}{slug}/index.html">{html.escape(p['name'])}</a></{heading}>
+          <p>{html.escape(art.get('line') or p['summary'])}</p>
+          {status_pill(p)}
+        </div>
+      </article>"""
 
 
 def product_cards(root):
-    """The home page's product cards: the lineup first, then anything else still current (the live Prefab Builder Kit)."""
-    cards = []
-    for p in sorted(current_products(), key=lambda q: (not q.get("lineup"), q["status"] != "live")):
+    """The home page's product cards, five across: the lineup first, then anything else still current."""
+    return "\n      ".join(product_card(root, p, lazy=False) for p in lineup_order())
+
+
+def product_showcase(root):
+    """The home page's "closer look": one wide row per product, pictures on alternating sides."""
+    rows = []
+    for p in lineup_order():
         slug = p["slug"]
-        if p["status"] == "live":
-            pill = '<span class="pill pill-live">On the Asset Store</span>'
-        else:
-            pill = f'<span class="pill pill-dev">{html.escape(p["status"].capitalize())}</span>'
-        links = []
+        art = LINEUP_ART.get(slug, {})
+        buttons = [f'<a class="btn" href="{root}{slug}/index.html">Explore {html.escape(p["short"])}</a>']
         if (SITE / slug / "demo" / "index.html").exists():
-            links.append(f'<a href="{root}{slug}/demo/index.html">Try the demo</a>')
+            buttons.append(f'<a class="btn btn-ghost" href="{root}{slug}/demo/index.html">Play the demo</a>')
+        links = []
+        if p["status"] == "live" and p.get("store"):
+            links.append(f'<a href="{p["store"]}" rel="noopener">Asset Store</a>')
         if (SITE / slug / "docs" / "index.html").exists():
             links.append(f'<a href="{root}{slug}/docs/index.html">Docs</a>')
         links.append(f'<a href="{root}{slug}/index.html#support">Support</a>')
-        store = (f'<a class="btn" href="{p["store"]}" rel="noopener">View on the Asset Store {ICON_EXTERNAL}</a>'
-                 if p["status"] == "live" and p.get("store") else "")
-        cards.append(f"""<article class="product {p['accent']}">
-        <div class="product-top">
-          <span class="product-icon" aria-hidden="true">{p.get('icon', ICON_DEFAULT)}</span>
-          {pill}
+        ticks = "".join(f"<li>{html.escape(tick)}</li>" for tick in art.get("ticks", []))
+        tagline = f'<p class="show-tagline">{html.escape(art["tagline"])}</p>' if art.get("tagline") else ""
+        rows.append(f"""<article class="show p-{slug}" id="{slug}">
+        <a class="show-art" href="{root}{slug}/index.html" tabindex="-1" aria-hidden="true">
+          {home_img(root, slug, "inset", "", "show-inset")}
+          {home_img(root, slug, "main", "", "show-main")}
+        </a>
+        <div class="show-copy">
+          <div class="show-title">
+            {icon_img(root, slug, 64)}
+            <div><h3>{html.escape(p['name'])}</h3>{status_pill(p)}</div>
+          </div>
+          {tagline}
+          <p>{html.escape(p['summary'])}</p>
+          <ul class="ticks">{ticks}</ul>
+          <div class="btn-row">{''.join(buttons)}</div>
+          <p class="card-links">{''.join(links)}</p>
         </div>
-        <h3>{html.escape(p['name'])}</h3>
-        <p>{html.escape(p['summary'])}</p>
-        <div class="btn-row">
-          {store}<a class="btn btn-ghost" href="{root}{slug}/index.html">Details</a>
-        </div>
-        <p class="card-links">{''.join(links)}</p>
       </article>""")
-    return "\n      ".join(cards)
+    return "\n      ".join(rows)
 
 
 def footer_products(root):
@@ -843,6 +962,12 @@ def og_image(path):
     return "og-image.jpg"
 
 
+def body_class(path):
+    """A product's pages carry its class (p-<slug>), which sets its accent colour in styles.css."""
+    slug = path.split("/")[0]
+    return f' class="p-{slug}"' if "/" in path and slug in LINEUP_ART else ""
+
+
 def page(root, active, title, description, body, path, scripts=""):
     full_title = "Rare Geometry" if title == "Rare Geometry" else f"{title} | Rare Geometry"
     canonical = f"{SITE_URL}/{path}".replace("/index.html", "/")
@@ -852,7 +977,7 @@ def page(root, active, title, description, body, path, scripts=""):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#0B1220">
+<meta name="theme-color" content="#0D1014">
 <title>{html.escape(full_title)}</title>
 <meta name="description" content="{html.escape(description)}">
 <link rel="canonical" href="{canonical}">
@@ -868,7 +993,7 @@ def page(root, active, title, description, body, path, scripts=""):
 <link rel="apple-touch-icon" href="{root}assets/favicon-180.png">
 <link rel="stylesheet" href="{root}styles.css">
 </head>
-<body>
+<body{body_class(path)}>
 {header(root, active)}
 <main id="main">
 {body}
@@ -889,22 +1014,19 @@ def fill(text, root, slug=""):
         "discord_tile": discord_tile(), "issues_tile": issues_tile(root), "discord_button": discord_button(),
         "support": support_section(root, slug),
         "product_cards": product_cards(root),
+        "product_showcase": product_showcase(root),
     }
     return re.sub(r"\{\{(\w+)\}\}", lambda m: values[m.group(1)], text)
 
 
 def more_from(root, slug):
-    """The other kits, as cards linking to their pages (Shipping Standard: cross-link every product)."""
+    """The other products, as picture cards linking to their pages (Shipping Standard: cross-link every product)."""
     cards, named = [], set()
-    for p in current_products():
+    for p in lineup_order():
         named.add(p["name"])
         if p["slug"] == slug:
             continue
-        pill = '<span class="pill pill-live">On the Asset Store</span>' if p["status"] == "live" else \
-            f'<span class="pill pill-dev">{html.escape(p["status"].capitalize())}</span>'
-        cards.append(f'<a class="product product-link {p["accent"]}" href="{root}{p["slug"]}/index.html">'
-                     f'<div class="product-top">{pill}</div><h3>{html.escape(p["name"])}</h3>'
-                     f'<p>{html.escape(p["summary"])}</p></a>')
+        cards.append(product_card(root, p))
     for name, accent, status, line in COMING:
         if name in named:
             continue
@@ -917,7 +1039,7 @@ def more_from(root, slug):
       <p class="label">More from Rare Geometry</p>
       <h2 id="more-title">Other tools, built to the same standard</h2>
     </div>
-    <div class="products">{"".join(cards)}</div>
+    <div class="lineup lineup-{len(cards)}">{"".join(cards)}</div>
   </div>
 </section>"""
 
@@ -1056,6 +1178,15 @@ HAND_PAGES = [
 ]
 
 
+def title_with_icon(body, root, kit):
+    """Puts the product's icon beside the first <h1> of its page (the hero title)."""
+    icon = icon_img(root, kit["slug"], 72).replace(' loading="lazy" decoding="async"', "")
+    if not icon:
+        return body
+    return re.sub(r"<h1>(.*?)</h1>", lambda m: f'<div class="product-title">{icon}<h1>{m.group(1)}</h1></div>',
+                  body, count=1, flags=re.S)
+
+
 def build_pages():
     by_slug = {p["slug"]: p for p in PRODUCTS}
     for fragment, out, root, active, title, description in HAND_PAGES:
@@ -1063,6 +1194,8 @@ def build_pages():
         if kit and retired(kit):
             continue
         body = fill((PAGES / fragment).read_text(encoding="utf-8"), root, out.split("/")[0] if "/" in out else "")
+        if kit and kit["slug"] in LINEUP_ART:
+            body = title_with_icon(body, root, kit)
         write(out, page(root, active, title, description, body, out))
     write_redirects()
     build_docs_hub()
@@ -1114,10 +1247,10 @@ def build_docs_hub():
         # Only pages this kit's manual has (not every kit has a shortcuts page)
         links = [l for l in links if (SITE / p["slug"] / "docs" / l[0].split("#")[0]).exists()]
         link_items = "\n    ".join(f'<li><a href="{d}{href}"><strong>{t}</strong><span>{line}</span></a></li>' for href, t, line in links)
-        cards.append(f"""<article class="product product-flag {p['accent']}">
+        cards.append(f"""<article class="product product-flag {p['accent']} p-{p['slug']}">
   <div class="flag-copy">
     <div class="product-top">{pill}</div>
-    <h2>{p['name']}</h2>
+    <div class="show-title">{icon_img('../', p['slug'], 56)}<h2>{p['name']}</h2></div>
     <p>{p['summary']}</p>
     <div class="btn-row">
       <a class="btn" href="{d}index.html">Open the documentation</a>

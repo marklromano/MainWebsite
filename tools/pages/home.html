@@ -1,32 +1,32 @@
-<!-- HERO -->
-<section class="hero blueprint">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <p class="label label-accent">Unity tools</p>
+<!-- HERO: the promise, then the five products as pictures -->
+<section class="hero hero-home blueprint">
+  <div class="wrap wrap-wide">
+    <div class="hero-head">
+      <p class="label">Unity tools</p>
       <h1>Core systems, <em>carefully built.</em></h1>
+      <div class="five-bar" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
       <p class="lead">
         Rare Geometry makes the systems every game needs and few people want to build twice: menus and saves,
-        navigation, interaction, feedback and level building. Each one is finished, documented and supported.
+        navigation, interaction, feedback and world building. Each one is finished, documented and supported.
       </p>
       <div class="btn-row">
         <a class="btn" href="#products">See the products</a>
         <a class="btn btn-ghost" href="{{root}}docs/index.html">Documentation</a>
       </div>
-      <ul class="specs" aria-label="Every tool">
-        <li>Full C# source</li>
-        <li>Works alone or together</li>
-        <li>Offline docs</li>
-      </ul>
     </div>
-    <figure class="shot shot-cover">
-      <div class="shot-frame">
-        <img src="{{root}}assets/img/og-image.jpg" width="1200" height="630" alt="Rare Geometry">
-      </div>
-    </figure>
+    <div class="lineup lineup-5" aria-label="The products">
+      {{product_cards}}
+    </div>
+    <ul class="specs specs-center" aria-label="Every tool">
+      <li>Full C# source</li>
+      <li>Works alone or together</li>
+      <li>A playable web demo for each</li>
+      <li>Offline docs</li>
+    </ul>
   </div>
 </section>
 
-<!-- PRODUCTS -->
+<!-- PRODUCTS: a closer look at each -->
 <section class="section" id="products" aria-labelledby="products-title">
   <div class="wrap">
     <div class="section-head">
@@ -35,8 +35,8 @@
       <p>Every product does its job completely and works on its own. Use several and they share saves, accessibility choices, a look and one support channel.</p>
     </div>
 
-    <div class="products">
-      {{product_cards}}
+    <div class="showcase">
+      {{product_showcase}}
     </div>
   </div>
 </section>
@@ -49,12 +49,12 @@
       <h2 id="standards-title">Tools you can trust in a real project</h2>
     </div>
     <ul class="standards">
-      <li><h3>Full C# source</h3><p>Read it, step through it, change it. Nothing is hidden in a DLL.</p></li>
-      <li><h3>Unity's own packages only</h3><p>Built on what Unity ships. Import it and it works; no third-party code to install.</p></li>
-      <li><h3>Your files stay yours</h3><p>Your art packs are never modified, and your own data lives in its own folder, safe across updates.</p></li>
-      <li><h3>Help inside the editor</h3><p>Tooltips on every control, a first-run tour, and offline documentation that ships in the package.</p></li>
-      <li><h3>Undo that works</h3><p>Every action is one Undo step. Try things freely.</p></li>
-      <li><h3>Built-in, URP and HDRP</h3><p>Tested on all three render pipelines, from Unity 6000.0 LTS to the newest Unity 6, with Domain Reload on or off.</p></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 5l-3 14"/></svg><h3>Full C# source</h3><p>Read it, step through it, change it. Nothing is hidden in a DLL.</p></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg><h3>Unity's own packages only</h3><p>Built on what Unity ships. Import it and it works; no third-party code to install.</p></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5V18a1.5 1.5 0 0 0 1.5 1.5h15A1.5 1.5 0 0 0 21 18V9a1.5 1.5 0 0 0-1.5-1.5H12L10 5H4.5A1.5 1.5 0 0 0 3 6.5z"/><path d="M9 14l2 2 4-4"/></svg><h3>Your files stay yours</h3><p>Your art packs are never modified, and your own data lives in its own folder, safe across updates.</p></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.6 2.2c-.7.4-1.1 1-1.1 1.8M12 16.8v.2"/></svg><h3>Help inside the editor</h3><p>Tooltips on every control, a first-run tour, and offline documentation that ships in the package.</p></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5L4 9l4 4"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg><h3>Undo that works</h3><p>Every action is one Undo step. Try things freely.</p></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12.5l9 5 9-5M3 17l9 5 9-5"/></svg><h3>Built-in, URP and HDRP</h3><p>Tested on all three render pipelines, from Unity 6000.0 LTS to the newest Unity 6, with Domain Reload on or off.</p></li>
     </ul>
   </div>
 </section>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#0B1220">
+<meta name="theme-color" content="#0D1014">
 <title>Rare Geometry</title>
 <meta name="description" content="Unity tools by Rare Geometry: core systems for finished games, each one complete on its own and built to work together. Documentation, web demos and support.">
 <link rel="canonical" href="https://raregeometry.github.io/">
@@ -36,35 +36,79 @@
   </div>
 </header>
 <main id="main">
-<!-- HERO -->
-<section class="hero blueprint">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <p class="label label-accent">Unity tools</p>
+<!-- HERO: the promise, then the five products as pictures -->
+<section class="hero hero-home blueprint">
+  <div class="wrap wrap-wide">
+    <div class="hero-head">
+      <p class="label">Unity tools</p>
       <h1>Core systems, <em>carefully built.</em></h1>
+      <div class="five-bar" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
       <p class="lead">
         Rare Geometry makes the systems every game needs and few people want to build twice: menus and saves,
-        navigation, interaction, feedback and level building. Each one is finished, documented and supported.
+        navigation, interaction, feedback and world building. Each one is finished, documented and supported.
       </p>
       <div class="btn-row">
         <a class="btn" href="#products">See the products</a>
         <a class="btn btn-ghost" href="docs/index.html">Documentation</a>
       </div>
-      <ul class="specs" aria-label="Every tool">
-        <li>Full C# source</li>
-        <li>Works alone or together</li>
-        <li>Offline docs</li>
-      </ul>
     </div>
-    <figure class="shot shot-cover">
-      <div class="shot-frame">
-        <img src="assets/img/og-image.jpg" width="1200" height="630" alt="Rare Geometry">
-      </div>
-    </figure>
+    <div class="lineup lineup-5" aria-label="The products">
+      <article class="pcard p-snapbuild">
+        <div class="pcard-shot"><img class="pcard-img" src="assets/img/home/snapbuild-card.jpg" width="720" height="450" alt=""></div>
+        <div class="pcard-body">
+          <img class="picon" src="assets/img/snapbuild/icon.png" width="52" height="52" alt="" loading="lazy" decoding="async">
+          <h3><a href="snapbuild/index.html">Snapbuild</a></h3>
+          <p>World building from your own prefabs</p>
+          <span class="pill pill-live">On the Asset Store</span>
+        </div>
+      </article>
+      <article class="pcard p-shipready">
+        <div class="pcard-shot"><img class="pcard-img" src="assets/img/home/shipready-card.jpg" width="720" height="450" alt=""></div>
+        <div class="pcard-body">
+          <img class="picon" src="assets/img/shipready/icon.png" width="52" height="52" alt="" loading="lazy" decoding="async">
+          <h3><a href="shipready/index.html">Shipready</a></h3>
+          <p>Menus, settings, saves and playtest tools</p>
+          <span class="pill pill-dev">Coming soon</span>
+        </div>
+      </article>
+      <article class="pcard p-bearing">
+        <div class="pcard-shot"><img class="pcard-img" src="assets/img/home/bearing-card.jpg" width="720" height="450" alt=""></div>
+        <div class="pcard-body">
+          <img class="picon" src="assets/img/bearing/icon.png" width="52" height="52" alt="" loading="lazy" decoding="async">
+          <h3><a href="bearing/index.html">Bearing</a></h3>
+          <p>Minimap, compass and waypoints</p>
+          <span class="pill pill-dev">Coming soon</span>
+        </div>
+      </article>
+      <article class="pcard p-interactra">
+        <div class="pcard-shot"><img class="pcard-img" src="assets/img/home/interactra-card.jpg" width="720" height="450" alt=""></div>
+        <div class="pcard-body">
+          <img class="picon" src="assets/img/interactra/icon.png" width="52" height="52" alt="" loading="lazy" decoding="async">
+          <h3><a href="interactra/index.html">Interactra</a></h3>
+          <p>Interaction and runtime building</p>
+          <span class="pill pill-dev">Coming soon</span>
+        </div>
+      </article>
+      <article class="pcard p-responsive-fx">
+        <div class="pcard-shot"><img class="pcard-img" src="assets/img/home/responsive-fx-card.jpg" width="720" height="450" alt=""></div>
+        <div class="pcard-body">
+          <img class="picon" src="assets/img/responsive-fx/icon.png" width="52" height="52" alt="" loading="lazy" decoding="async">
+          <h3><a href="responsive-fx/index.html">Responsive FX</a></h3>
+          <p>Hit feedback, footsteps and surface impacts</p>
+          <span class="pill pill-dev">Coming soon</span>
+        </div>
+      </article>
+    </div>
+    <ul class="specs specs-center" aria-label="Every tool">
+      <li>Full C# source</li>
+      <li>Works alone or together</li>
+      <li>A playable web demo for each</li>
+      <li>Offline docs</li>
+    </ul>
   </div>
 </section>
 
-<!-- PRODUCTS -->
+<!-- PRODUCTS: a closer look at each -->
 <section class="section" id="products" aria-labelledby="products-title">
   <div class="wrap">
     <div class="section-head">
@@ -73,66 +117,91 @@
       <p>Every product does its job completely and works on its own. Use several and they share saves, accessibility choices, a look and one support channel.</p>
     </div>
 
-    <div class="products">
-      <article class="product c-prefab">
-        <div class="product-top">
-          <span class="product-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></span>
-          <span class="pill pill-live">On the Asset Store</span>
+    <div class="showcase">
+      <article class="show p-snapbuild" id="snapbuild">
+        <a class="show-art" href="snapbuild/index.html" tabindex="-1" aria-hidden="true">
+          <img class="show-inset" src="assets/img/home/snapbuild-inset.jpg" width="373" height="557" alt="" loading="lazy" decoding="async">
+          <img class="show-main" src="assets/img/home/snapbuild-main.jpg" width="1200" height="671" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="show-copy">
+          <div class="show-title">
+            <img class="picon" src="assets/img/snapbuild/icon.png" width="64" height="64" alt="" loading="lazy" decoding="async">
+            <div><h3>Snapbuild</h3><span class="pill pill-live">On the Asset Store</span></div>
+          </div>
+          <p class="show-tagline">Build worlds from the prefabs you own.</p>
+          <p>Build whole worlds from the prefabs you already own: stamp and paint them on a grid that snaps, draw roads that join themselves, dress streets in one click and drag out whole buildings.</p>
+          <ul class="ticks"><li>Stamp and paint your prefabs on a grid that snaps</li><li>Roads that join themselves and streets dressed in one click</li><li>A ghost shows everything first, and your pack&#x27;s files are never changed</li></ul>
+          <div class="btn-row"><a class="btn" href="snapbuild/index.html">Explore Snapbuild</a><a class="btn btn-ghost" href="snapbuild/demo/index.html">Play the demo</a></div>
+          <p class="card-links"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a><a href="snapbuild/docs/index.html">Docs</a><a href="snapbuild/index.html#support">Support</a></p>
         </div>
-        <h3>Snapbuild</h3>
-        <p>Build whole levels from the modular packs you already own: drag a room and get a building, draw roads that join themselves, dress streets in one click.</p>
-        <div class="btn-row">
-          <a class="btn" href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">View on the Asset Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg></a><a class="btn btn-ghost" href="snapbuild/index.html">Details</a>
-        </div>
-        <p class="card-links"><a href="snapbuild/demo/index.html">Try the demo</a><a href="snapbuild/docs/index.html">Docs</a><a href="snapbuild/index.html#support">Support</a></p>
       </article>
-      <article class="product c-shipready">
-        <div class="product-top">
-          <span class="product-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></span>
-          <span class="pill pill-dev">Coming soon</span>
+      <article class="show p-shipready" id="shipready">
+        <a class="show-art" href="shipready/index.html" tabindex="-1" aria-hidden="true">
+          <img class="show-inset" src="assets/img/home/shipready-inset.jpg" width="640" height="361" alt="" loading="lazy" decoding="async">
+          <img class="show-main" src="assets/img/home/shipready-main.jpg" width="1200" height="557" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="show-copy">
+          <div class="show-title">
+            <img class="picon" src="assets/img/shipready/icon.png" width="64" height="64" alt="" loading="lazy" decoding="async">
+            <div><h3>Shipready</h3><span class="pill pill-dev">Coming soon</span></div>
+          </div>
+          <p class="show-tagline">From first launch to final save.</p>
+          <p>Menus, settings, saves, tutorials and playtest tools in one connected package: the title screen, the settings players expect, saves that survive crashes, first-time tours and bug reports with steps.</p>
+          <ul class="ticks"><li>Title screen, main menu, pause, settings and credits, already connected</li><li>92 ready-made settings with rebinding and accessibility presets</li><li>Saves that survive crashes, with slots, autosaves and backups</li></ul>
+          <div class="btn-row"><a class="btn" href="shipready/index.html">Explore Shipready</a><a class="btn btn-ghost" href="shipready/demo/index.html">Play the demo</a></div>
+          <p class="card-links"><a href="shipready/docs/index.html">Docs</a><a href="shipready/index.html#support">Support</a></p>
         </div>
-        <h3>Shipready</h3>
-        <p>Menus, settings, saves, tutorials and playtest tools in one connected package: the title screen, the settings players expect, saves that survive crashes, first-time tours and bug reports with steps.</p>
-        <div class="btn-row">
-          <a class="btn btn-ghost" href="shipready/index.html">Details</a>
-        </div>
-        <p class="card-links"><a href="shipready/demo/index.html">Try the demo</a><a href="shipready/docs/index.html">Docs</a><a href="shipready/index.html#support">Support</a></p>
       </article>
-      <article class="product c-bearing">
-        <div class="product-top">
-          <span class="product-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></span>
-          <span class="pill pill-dev">Coming soon</span>
+      <article class="show p-bearing" id="bearing">
+        <a class="show-art" href="bearing/index.html" tabindex="-1" aria-hidden="true">
+          <img class="show-inset" src="assets/img/home/bearing-inset.jpg" width="640" height="289" alt="" loading="lazy" decoding="async">
+          <img class="show-main" src="assets/img/home/bearing-main.jpg" width="831" height="461" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="show-copy">
+          <div class="show-title">
+            <img class="picon" src="assets/img/bearing/icon.png" width="64" height="64" alt="" loading="lazy" decoding="async">
+            <div><h3>Bearing</h3><span class="pill pill-dev">Coming soon</span></div>
+          </div>
+          <p class="show-tagline">Lead players to what matters.</p>
+          <p>Compass, minimap, world markers and a full-screen map built from your level, with routes that follow your roads, fast travel, fog of war and floors for buildings.</p>
+          <ul class="ticks"><li>A full map built from your level, with floors for buildings</li><li>Compass, minimap and world markers that stay calm by default</li><li>Routes that follow your roads, fast travel and fog of war</li></ul>
+          <div class="btn-row"><a class="btn" href="bearing/index.html">Explore Bearing</a><a class="btn btn-ghost" href="bearing/demo/index.html">Play the demo</a></div>
+          <p class="card-links"><a href="bearing/docs/index.html">Docs</a><a href="bearing/index.html#support">Support</a></p>
         </div>
-        <h3>Bearing</h3>
-        <p>Compass, minimap, world markers and a full-screen map built from your level, with routes that follow your roads, fast travel, fog of war and floors for buildings.</p>
-        <div class="btn-row">
-          <a class="btn btn-ghost" href="bearing/index.html">Details</a>
-        </div>
-        <p class="card-links"><a href="bearing/demo/index.html">Try the demo</a><a href="bearing/docs/index.html">Docs</a><a href="bearing/index.html#support">Support</a></p>
       </article>
-      <article class="product c-interactra">
-        <div class="product-top">
-          <span class="product-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></span>
-          <span class="pill pill-dev">Coming soon</span>
+      <article class="show p-interactra" id="interactra">
+        <a class="show-art" href="interactra/index.html" tabindex="-1" aria-hidden="true">
+          <img class="show-inset" src="assets/img/home/interactra-inset.jpg" width="640" height="360" alt="" loading="lazy" decoding="async">
+          <img class="show-main" src="assets/img/home/interactra-main.jpg" width="1200" height="675" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="show-copy">
+          <div class="show-title">
+            <img class="picon" src="assets/img/interactra/icon.png" width="64" height="64" alt="" loading="lazy" decoding="async">
+            <div><h3>Interactra</h3><span class="pill pill-dev">Coming soon</span></div>
+          </div>
+          <p class="show-tagline">Build worlds you can use.</p>
+          <p>Make anything interactive, then let players build: doors, switches, keys and elevators from your own prefabs, runtime building with ghosts, blueprints and wiring, and one save for all of it.</p>
+          <ul class="ticks"><li>Doors, drawers, switches, keys, keypads and elevators from your own prefabs</li><li>Runtime building with ghosts, blueprints and wiring</li><li>One save for everything players build and change</li></ul>
+          <div class="btn-row"><a class="btn" href="interactra/index.html">Explore Interactra</a><a class="btn btn-ghost" href="interactra/demo/index.html">Play the demo</a></div>
+          <p class="card-links"><a href="interactra/docs/index.html">Docs</a><a href="interactra/index.html#support">Support</a></p>
         </div>
-        <h3>Interactra</h3>
-        <p>Make anything interactive, then let players build: doors, switches, keys and elevators from your own prefabs, runtime building with ghosts, blueprints and wiring, and one save for all of it.</p>
-        <div class="btn-row">
-          <a class="btn btn-ghost" href="interactra/index.html">Details</a>
-        </div>
-        <p class="card-links"><a href="interactra/demo/index.html">Try the demo</a><a href="interactra/docs/index.html">Docs</a><a href="interactra/index.html#support">Support</a></p>
       </article>
-      <article class="product c-rfx">
-        <div class="product-top">
-          <span class="product-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></span>
-          <span class="pill pill-dev">Coming soon</span>
+      <article class="show p-responsive-fx" id="responsive-fx">
+        <a class="show-art" href="responsive-fx/index.html" tabindex="-1" aria-hidden="true">
+          <img class="show-inset" src="assets/img/home/responsive-fx-inset.jpg" width="528" height="418" alt="" loading="lazy" decoding="async">
+          <img class="show-main" src="assets/img/home/responsive-fx-main.jpg" width="1200" height="675" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="show-copy">
+          <div class="show-title">
+            <img class="picon" src="assets/img/responsive-fx/icon.png" width="64" height="64" alt="" loading="lazy" decoding="async">
+            <div><h3>Responsive FX</h3><span class="pill pill-dev">Coming soon</span></div>
+          </div>
+          <p class="show-tagline">Feel every hit. Hear every step.</p>
+          <p>Game feel for every hit, step and impact: sound, effects, marks, screen feedback and noise your AI hears, tuned in one window and adjustable by your players.</p>
+          <ul class="ticks"><li>Damage numbers, hitstop, shake and health bars for every hit</li><li>Footsteps, footprints and bullet marks that match the surface</li><li>Noise your AI can hear, all tuned in one window</li></ul>
+          <div class="btn-row"><a class="btn" href="responsive-fx/index.html">Explore Responsive FX</a><a class="btn btn-ghost" href="responsive-fx/demo/index.html">Play the demo</a></div>
+          <p class="card-links"><a href="responsive-fx/docs/index.html">Docs</a><a href="responsive-fx/index.html#support">Support</a></p>
         </div>
-        <h3>Responsive FX</h3>
-        <p>Game feel for every hit, step and impact: sound, effects, marks, screen feedback and noise your AI hears, tuned in one window and adjustable by your players.</p>
-        <div class="btn-row">
-          <a class="btn btn-ghost" href="responsive-fx/index.html">Details</a>
-        </div>
-        <p class="card-links"><a href="responsive-fx/demo/index.html">Try the demo</a><a href="responsive-fx/docs/index.html">Docs</a><a href="responsive-fx/index.html#support">Support</a></p>
       </article>
     </div>
   </div>
@@ -146,12 +215,12 @@
       <h2 id="standards-title">Tools you can trust in a real project</h2>
     </div>
     <ul class="standards">
-      <li><h3>Full C# source</h3><p>Read it, step through it, change it. Nothing is hidden in a DLL.</p></li>
-      <li><h3>Unity's own packages only</h3><p>Built on what Unity ships. Import it and it works; no third-party code to install.</p></li>
-      <li><h3>Your files stay yours</h3><p>Your art packs are never modified, and your own data lives in its own folder, safe across updates.</p></li>
-      <li><h3>Help inside the editor</h3><p>Tooltips on every control, a first-run tour, and offline documentation that ships in the package.</p></li>
-      <li><h3>Undo that works</h3><p>Every action is one Undo step. Try things freely.</p></li>
-      <li><h3>Built-in, URP and HDRP</h3><p>Tested on all three render pipelines, from Unity 6000.0 LTS to the newest Unity 6, with Domain Reload on or off.</p></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 5l-3 14"/></svg><h3>Full C# source</h3><p>Read it, step through it, change it. Nothing is hidden in a DLL.</p></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg><h3>Unity's own packages only</h3><p>Built on what Unity ships. Import it and it works; no third-party code to install.</p></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5V18a1.5 1.5 0 0 0 1.5 1.5h15A1.5 1.5 0 0 0 21 18V9a1.5 1.5 0 0 0-1.5-1.5H12L10 5H4.5A1.5 1.5 0 0 0 3 6.5z"/><path d="M9 14l2 2 4-4"/></svg><h3>Your files stay yours</h3><p>Your art packs are never modified, and your own data lives in its own folder, safe across updates.</p></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.6 2.2c-.7.4-1.1 1-1.1 1.8M12 16.8v.2"/></svg><h3>Help inside the editor</h3><p>Tooltips on every control, a first-run tour, and offline documentation that ships in the package.</p></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5L4 9l4 4"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg><h3>Undo that works</h3><p>Every action is one Undo step. Try things freely.</p></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12.5l9 5 9-5M3 17l9 5 9-5"/></svg><h3>Built-in, URP and HDRP</h3><p>Tested on all three render pipelines, from Unity 6000.0 LTS to the newest Unity 6, with Domain Reload on or off.</p></li>
     </ul>
   </div>
 </section>
