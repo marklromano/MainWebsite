@@ -1231,7 +1231,7 @@ def doc_figure(img, caption, lazy=True):
             f'</a><figcaption>{cap}</figcaption></figure>')
 
 
-SITE_FIGURE = re.compile(r'<figure class="doc-figure" data-site-figure>.*?</figure>', re.S)
+SITE_FIGURE = re.compile(r'\n?<figure class="doc-figure" data-site-figure>.*?</figure>', re.S)
 
 
 def add_doc_figures(body_html, images):
