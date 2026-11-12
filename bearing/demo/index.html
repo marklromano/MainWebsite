@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Bearing: playable demo</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #0b1924; overflow: hidden; font-family: Segoe UI, Helvetica, Arial, sans-serif; }
+    #game { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; background: #0b1924; outline: none; }
+    #loading { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #e8eef2; gap: 18px; }
+    #loading h1 { margin: 0; font-size: 40px; letter-spacing: 0.06em; font-weight: 700; }
+    #loading p { margin: 0; opacity: 0.7; font-size: 15px; }
+    #bar { width: min(420px, 70vw); height: 6px; border-radius: 3px; background: rgba(255,255,255,0.12); overflow: hidden; }
+    #fill { width: 0%; height: 100%; background: #42d6c5; transition: width 0.2s ease-out; }
+    #error { display: none; color: #ffb4a8; font-size: 15px; max-width: 520px; text-align: center; }
+  </style>
+</head>
+<body>
+  <canvas id="game" tabindex="-1"></canvas>
+  <div id="loading">
+    <h1>BEARING</h1>
+    <p>Compass, minimap, maps and routes for Unity. A playable demo.</p>
+    <div id="bar"><div id="fill"></div></div>
+    <p id="error"></p>
+  </div>
+  <script>
+    var canvas = document.getElementById("game");
+    var fill = document.getElementById("fill");
+    var loading = document.getElementById("loading");
+    var config = {
+      dataUrl: "Build/WebDemo.data.unityweb",
+      frameworkUrl: "Build/WebDemo.framework.js.unityweb",
+      codeUrl: "Build/WebDemo.wasm.unityweb",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "Rare Geometry",
+      productName: "Bearing Demo",
+      productVersion: "1.0.0",
+      matchWebGLToCanvasSize: true,
+      devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2)
+    };
+    var script = document.createElement("script");
+    script.src = "Build/WebDemo.loader.js";
+    script.onload = function () {
+      createUnityInstance(canvas, config, function (progress) {
+        fill.style.width = Math.round(progress * 100) + "%";
+      }).then(function () {
+        loading.style.display = "none";
+        canvas.focus();
+      }).catch(function (message) {
+        var e = document.getElementById("error");
+        e.textContent = "The demo could not start in this browser: " + message;
+        e.style.display = "block";
+      });
+    };
+    document.body.appendChild(script);
+    // Clicking the game gives it the keyboard (WASD, M, Q, O, H).
+    canvas.addEventListener("pointerdown", function () { canvas.focus(); });
+  </script>
+</body>
+</html>
