@@ -727,7 +727,7 @@ LINEUP_ART = {
         "inset_alt": "Shipready's settings menu on the Audio tab",
     },
     "bearing": {
-        "line": "Minimap, compass and waypoints",
+        "line": "Minimap, compass, waypoints and world map",
         "tagline": "Lead players to what matters.",
         "ticks": ["A full map built from your level, with floors for buildings",
                   "Compass, minimap and world markers that stay calm by default",
