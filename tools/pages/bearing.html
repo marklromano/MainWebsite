@@ -1,0 +1,207 @@
+<!-- HERO -->
+<section class="product-hero blueprint">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="title-row">
+        <span class="pill pill-dev">Coming soon</span>
+        <span class="pill">Coming soon to the Unity Asset Store</span>
+      </div>
+      <h1>Bearing</h1>
+      <p class="lead">
+        Compass, minimap, world markers and a full-screen map built from your level, with routes that follow your roads,
+        fast travel, fog of war and floors for buildings. Calm by default, styled your way.
+      </p>
+      <div class="btn-row">
+        <span class="btn" aria-disabled="true">Demo coming shortly</span>
+        <a class="btn btn-ghost" href="#features">Features</a>
+      </div>
+      <ul class="specs" aria-label="Requirements">
+        <li>Unity 6000.0+</li>
+        <li>Built-in, URP &amp; HDRP</li>
+        <li>Both input systems</li>
+        <li>Full C# source</li>
+      </ul>
+    </div>
+    <figure class="shot">
+      <div class="dim" aria-hidden="true">Tools &gt; Bearing</div>
+      <div class="shot-frame">
+        <img src="{{root}}assets/img/bearing/hero.jpg" width="1200" height="675"
+             alt="A low-poly island path with Bearing's compass bar across the top, an objective marker on the Watch Stone, and the minimap at the bottom left">
+      </div>
+      <figcaption>The Showcase demo: compass, objective marker and minimap, working together.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">How it works</p>
+      <h2 id="how-title">Navigation in your scene in three steps</h2>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>Run the Setup Wizard</h3>
+        <p>It checks your scene for a camera and a player and adds the HUD, with one click for anything missing.</p>
+      </li>
+      <li>
+        <h3>Mark your places</h3>
+        <p>Add a Waypoint to a landmark, a quest giver or a door, or add them all from the Chart Table. Pick an icon, a state and when it shows.</p>
+      </li>
+      <li>
+        <h3>Bake the map and press Play</h3>
+        <p>The map is traced from your level's geometry: roads, water, buildings and coast. Press <kbd>M</kbd> for the full map.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section section-band" id="features" aria-labelledby="features-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Features</p>
+      <h2 id="features-title">Everything a player needs to find their way</h2>
+    </div>
+    <div class="tabs-grid">
+      <div class="tab-card tab-card-wide">
+        <div class="tab-name"><h3>A map built from your level</h3><span class="label">No overhead camera</span></div>
+        <ul>
+          <li><strong>Traced from geometry:</strong> roads, rivers, bridges, buildings and coast, in a clean map style.</li>
+          <li><strong>Floors for buildings:</strong> floor plans that switch as the player climbs; the minimap fits the building on entry.</li>
+          <li><strong>No hard edges:</strong> past the map's edge the world carries on, or the view stops at it, or a themed surround frames it.</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Compass and minimap</h3></div>
+        <ul>
+          <li>Places, objectives and distances on the compass</li>
+          <li>Bar, Open Rail, Fantasy and Sci-fi frames, straight or curved</li>
+          <li>Turning or north-up minimap with route and moving entities</li>
+          <li>Open water mode that points to the nearest shore</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>The full map</h3></div>
+        <ul>
+          <li>Regions in any shape, with progress</li>
+          <li>Place cards with Track and Fast travel</li>
+          <li>Search and a folding map key</li>
+          <li>Player pins and stamps: name, icon, colour, move, delete</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Routes and travel</h3></div>
+        <ul>
+          <li>Routes that keep to roads and trails</li>
+          <li>Shown on the ground, the minimap, the map and the compass</li>
+          <li>Fast travel lands a few steps away, facing the place, on clear ground</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Discovery</h3></div>
+        <ul>
+          <li>Fog of war that clears as players explore</li>
+          <li>Lookouts that uncover the land around them</li>
+          <li>Discovery banners and reveals</li>
+          <li>A world scan that lights up what is near</li>
+        </ul>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name"><h3>Calm by default, yours to change</h3></div>
+        <ul>
+          <li>Only the objective and nearby places show</li>
+          <li>Four looks: Explorer, Tactical, Minimal and Holo</li>
+          <li>In-game options with reduced motion, text size, high contrast and colour-blind palettes</li>
+          <li>Mouse, gamepad and touch; 4:3, 21:9 and portrait layouts</li>
+        </ul>
+      </div>
+      <div class="tab-card tab-card-wide">
+        <div class="tab-name"><h3>Built for your project</h3><span class="label">Editor tools</span></div>
+        <ul>
+          <li><strong>Chart Table:</strong> every place, region and route in one window.</li>
+          <li><strong>Setup Wizard:</strong> checks your scene and adds what is missing.</li>
+          <li><strong>Moving entities and sharing:</strong> trails, last known positions, shared pins and pings (Netcode for GameObjects sample).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section" aria-labelledby="gallery-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Included demo scenes</p>
+      <h2 id="gallery-title">Play it in your browser, then in Unity</h2>
+      <p>An island with regions, boats and a lookout; a valley with a two-floor house and fast travel; and a top-down 2D level.</p>
+    </div>
+    <div class="gallery">
+      <figure class="shot">
+        <div class="shot-frame"><img src="{{root}}assets/img/bearing/full-map.jpg" width="1200" height="675" loading="lazy" decoding="async" alt="Bearing's full map of the island with regions, a place card for the Watch Stone and the map key"></div>
+        <figcaption>The full map: regions, place cards and tracking</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="shot-frame"><img src="{{root}}assets/img/bearing/floors.jpg" width="1200" height="675" loading="lazy" decoding="async" alt="The Watch House floor plan on the map, with the floor name at the top right"></div>
+        <figcaption>Floor plans for buildings</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="shot-frame"><img src="{{root}}assets/img/bearing/chart-table.jpg" width="1200" height="675" loading="lazy" decoding="async" alt="The Chart Table window listing every place with its state, category and floor"></div>
+        <figcaption>The Chart Table: every place in one window</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section class="section section-band" aria-labelledby="specs-title">
+  <div class="wrap spec-grid">
+    <div class="notes">
+      <p class="label">Technical details</p>
+      <h2 id="specs-title">Built to fit your project</h2>
+      <table class="spec-table">
+        <tbody>
+          <tr><th scope="row">Unity</th><td>6000.0 or newer (tested on 6000.0, 6000.3 and 6000.6)</td></tr>
+          <tr><th scope="row">Render pipelines</th><td>Built-in, URP and HDRP (the HUD is UI Toolkit)</td></tr>
+          <tr><th scope="row">Input</th><td>Input Manager and the Input System package</td></tr>
+          <tr><th scope="row">Platforms</th><td>Windows (Mono and IL2CPP), Android and Web (tested)</td></tr>
+          <tr><th scope="row">Optional</th><td>Netcode for GameObjects, for the shared markers sample</td></tr>
+          <tr><th scope="row">Source</th><td>Full C#, no third-party code, no native plugins</td></tr>
+          <tr><th scope="row">Menu</th><td><code>Tools &gt; Bearing</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="notes">
+      <p class="label">Good to know</p>
+      <h3>Limits, stated up front</h3>
+      <ul>
+        <li>The traced map draws what your level's geometry shows. A photo from above or your own picture works too.</li>
+        <li>A 2D Tilemap isn't traced automatically: use a photo from above or your own picture.</li>
+        <li>Shared markers work through any network; the included adapter is for Netcode for GameObjects.</li>
+      </ul>
+      <h3>Status</h3>
+      <ul>
+        <li>Bearing is in its final checks before submission to the Asset Store. Its documentation goes up here the day it launches.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="wrap">
+    <div class="cta-box">
+      <div>
+        <h2>Hear the day it launches</h2>
+        <p>Join the Rare Geometry Discord for launch news, or ask a question about Bearing now.</p>
+      </div>
+      <div class="btn-row">
+        {{discord_button}}
+        <a class="btn btn-ghost" href="../support/index.html">Get help</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{more_from}}

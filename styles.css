@@ -30,6 +30,7 @@
   --c-footstep: #A3E635;
   --c-hitfeedback: #FF4D4D;
   --c-waypoint: #FACC15;
+  --c-bearing: #42D6C5;
 
   /* Type: system faces only (no web fonts, nothing loaded from other companies) */
   --font: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
@@ -307,6 +308,7 @@ a.product-link:hover { border-color: var(--accent); background: var(--surface-2)
 .c-footstep { --accent: var(--c-footstep); }
 .c-hitfeedback { --accent: var(--c-hitfeedback); }
 .c-waypoint { --accent: var(--c-waypoint); }
+.c-bearing { --accent: var(--c-bearing); }
 
 .ticks { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.45rem; }
 .ticks li { position: relative; padding-left: 1.5rem; color: var(--muted); font-size: 0.9375rem; }

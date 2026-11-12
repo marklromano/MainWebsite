@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>The Waypoint HUD | Rare Geometry</title>
+<meta name="description" content="The Waypoint HUD: documentation for the Bearing for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/bearing/docs/hud.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="The Waypoint HUD">
+<meta property="og:description" content="The Waypoint HUD: documentation for the Bearing for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/bearing/docs/hud.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/bearing/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Bearing docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a><a href="fit-your-game.html">Fit it into your game</a><a href="common-tasks.html">Common tasks and recipes</a></div><div class="docs-group"><p class=label>Features</p><a href="chart-table.html">Chart Table: places, states, chains, fast travel</a><a href="routes.html">Routes, tracker, floors and map filters</a><a href="player-map.html">Players on the map: pins, stamps, tracking, fast travel</a><a href="scan-and-entities.html">World scan and moving entities</a><a href="sharing.html">Sharing markers with other players</a><a href="waypoint.html">The Waypoint component</a><a href="hud.html" aria-current="page">The Waypoint HUD: markers, edge arrows, compass, radar</a><a href="make-it-yours.html">Make it yours: presets and styles</a><a href="map.html">Maps: minimap and full-screen map</a><a href="discovery.html">Fog of war and region discovery</a><a href="trails.html">Objective trails, events and saving</a><a href="2d.html">2D and top-down games</a><a href="debugger.html">Why Can&#x27;t I See It? and the scene check</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="faq.html">Questions people ask</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a><a href="fit-your-game.html">Fit it into your game</a><a href="common-tasks.html">Common tasks and recipes</a></div><div class="docs-group"><p class=label>Features</p><a href="chart-table.html">Chart Table: places, states, chains, fast travel</a><a href="routes.html">Routes, tracker, floors and map filters</a><a href="player-map.html">Players on the map: pins, stamps, tracking, fast travel</a><a href="scan-and-entities.html">World scan and moving entities</a><a href="sharing.html">Sharing markers with other players</a><a href="waypoint.html">The Waypoint component</a><a href="hud.html" aria-current="page">The Waypoint HUD: markers, edge arrows, compass, radar</a><a href="make-it-yours.html">Make it yours: presets and styles</a><a href="map.html">Maps: minimap and full-screen map</a><a href="discovery.html">Fog of war and region discovery</a><a href="trails.html">Objective trails, events and saving</a><a href="2d.html">2D and top-down games</a><a href="debugger.html">Why Can&#x27;t I See It? and the scene check</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="faq.html">Questions people ask</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Bearing</a><span>/</span><span>Features</span></nav>
+<h1 id="the-waypoint-hud">The Waypoint HUD</h1>
+<p>One <strong>Waypoint HUD</strong> in the scene draws every waypoint for one camera. The Setup Wizard adds it; you can also use
+<strong>GameObject &gt; Bearing &gt; Waypoint HUD</strong>.</p>
+<h2 id="look">Look <a class="anchor" href="#look" aria-label="Link to this section">#</a></h2>
+<p>Press a preset button (Explorer, Tactical, Minimal, Holo) and the Game view changes at once. <strong>Save as my own style</strong>
+saves the current look as a Style asset you can change in every detail. See <a href="make-it-yours.html">Make it yours</a>.</p>
+<h2 id="show">Show <a class="anchor" href="#show" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Markers on screen</td>
+<td>An icon above each visible waypoint, with its name and distance.</td>
+</tr>
+<tr>
+<td>Edge arrows</td>
+<td>For waypoints off screen or behind the player: an arrow at the screen edge, with the icon and distance.</td>
+</tr>
+<tr>
+<td>Compass bar</td>
+<td>Directions and waypoint icons along the top (or bottom).</td>
+</tr>
+<tr>
+<td>Radar</td>
+<td>A round or square radar in a corner, with an optional map picture.</td>
+</tr>
+<tr>
+<td>Units</td>
+<td>Metres, feet, or plain numbers.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="player-and-camera">Player and camera <a class="anchor" href="#player-and-camera" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>View Camera</td>
+<td>The camera players see through. Empty = the camera tagged MainCamera (looked up every frame, so camera switches just work).</td>
+</tr>
+<tr>
+<td>Player</td>
+<td>Distances, reaching and the radar centre are measured from here. Empty = the object tagged Player (found by itself), else the camera. The inspector says which.</td>
+</tr>
+<tr>
+<td>Plane</td>
+<td>XZ for 3D games, XY for 2D games (<a href="2d.html">2D games</a>).</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="full-screen-map">Full-screen map <a class="anchor" href="#full-screen-map" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open with key</td>
+<td>M by default (None = only from code or a button: <code>ToggleMap()</code>).</td>
+</tr>
+<tr>
+<td>Free the mouse while open</td>
+<td>Unlocks the mouse while the map is open and puts it back after.</td>
+</tr>
+<tr>
+<td>Pause the game while open</td>
+<td>Sets Time.timeScale to 0 while the map is open.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="more">More <a class="anchor" href="#more" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keep clear of my own HUD</td>
+<td>Screen areas (fractions of the screen from its top-left: x, y, width, height) that edge arrows keep out of, for your own health bar or quest list. Shown as orange boxes in the Game view while not playing.</td>
+</tr>
+<tr>
+<td>Hide When Paused</td>
+<td>Hide the HUD while Time.timeScale is 0.</td>
+</tr>
+<tr>
+<td>Only these groups</td>
+<td>Show only waypoints in these groups (empty = all); for split screen.</td>
+</tr>
+<tr>
+<td>Fade behind walls on layers</td>
+<td>Markers behind these layers fade. Nothing = off. At most 16 wall checks a frame, spread over waypoints.</td>
+</tr>
+<tr>
+<td>World north rotation</td>
+<td>Which world direction is north, in degrees.</td>
+</tr>
+<tr>
+<td>UI Scale</td>
+<td>This HUD bigger or smaller.</td>
+</tr>
+<tr>
+<td>Sorting Order</td>
+<td>Draw order against your other UI Toolkit panels.</td>
+</tr>
+<tr>
+<td>Check Reach</td>
+<td>This HUD's player fires waypoints' Reached events. Turn off on extra split-screen HUDs if only one player should.</td>
+</tr>
+<tr>
+<td>Preview In Edit Mode</td>
+<td>Draw in the Game view while not playing.</td>
+</tr>
+<tr>
+<td>Panel Settings</td>
+<td>Your own UI Toolkit Panel Settings. Empty = the HUD makes its own (scales with the screen from 1080p).</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="beacons">Beacons <a class="anchor" href="#beacons" aria-label="Link to this section">#</a></h2>
+<p>A beacon is a pillar of light rising from a place, so the player sees where to go from far away. The HUD draws it, so it
+looks the same in Built-in, URP and HDRP with nothing to set up. Turn it on in the style's <strong>Beacons</strong> section and pick
+which places get one (the objective, the objective and the tracked place, or every place the player knows); each place can say
+Always or Never (Show on &gt; Beacon). At most the nearest 6 are drawn at once (Max Beacons; 0 = no limit), so the sky
+never fills with pillars. Height, width, opacity, colour, a slow glow and the fade as the player arrives are all
+settings.</p>
+<h2 id="where-each-part-sits">Where each part sits <a class="anchor" href="#where-each-part-sits" aria-label="Link to this section">#</a></h2>
+<p>Every look starts from the same layout, on one 28 px margin (at 1080p) from the screen edges:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Default place</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compass bar</td>
+<td>top centre, 28 px from the top</td>
+</tr>
+<tr>
+<td>Objective tracker</td>
+<td>top right, its top on the compass bar's line, 28 px from the right</td>
+</tr>
+<tr>
+<td>Minimap</td>
+<td>bottom left, 28 px from the left and the bottom</td>
+</tr>
+<tr>
+<td>Discovery banner</td>
+<td>centred under the compass bar</td>
+</tr>
+<tr>
+<td>Edge arrows</td>
+<td>along the screen edges, kept clear of the minimap and the tracker</td>
+</tr>
+</tbody>
+</table></div>
+<p>On a narrow screen the tracker keeps its corner and narrows (long names end in "..."). Only when there is no room
+beside the compass at all (for example one half of a side-by-side split screen) does it move under the compass row.
+Each part's own section moves it (corner, gaps), and the Layout section below fine-tunes it. A style made before this
+layout keeps the positions it saved; set Tracker &gt; Edge Gap to 28 and Radar &gt; Margin to 28 to use it.</p>
+<h2 id="layout-nudge-size-and-opacity-per-part">Layout: nudge, size and opacity per part <a class="anchor" href="#layout-nudge-size-and-opacity-per-part" aria-label="Link to this section">#</a></h2>
+<p>The style's <strong>Layout</strong> section moves the compass, minimap, tracker and banner a little from where their own settings
+put them, sizes each about its middle and makes each see-through. Offsets are in pixels at 1080p, so they look the same
+at every resolution. Use it to make room for your own HUD.</p>
+<h2 id="language">Language <a class="anchor" href="#language" aria-label="Link to this section">#</a></h2>
+<p>Set a <strong>Text Table</strong> on the HUD (More &gt; Language) to show every word in your game's language. See
+<a href="extending.html#words-for-other-languages">Code and your own UI</a>.</p>
+<h2 id="how-it-behaves">How it behaves <a class="anchor" href="#how-it-behaves" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Crowds:</strong> each style sets the most markers, arrows, compass icons and radar blips at once. The objective wins, then higher Priority, then the nearest.</li>
+<li><strong>Reaching</strong> is decided once a frame from the nearest player, however many HUDs there are.</li>
+<li><strong>Hiding everything:</strong> <code>SetVisible(false)</code> for cutscenes and menus.</li>
+<li><strong>Edge arrows</strong> never overlap each other, keep clear of the compass bar and the radar, and stay inside the screen's safe area.</li>
+<li><strong>Behind the player</strong> an arrow points down or to the side, never up, so it reads as "turn around".</li>
+<li><strong>Split screen:</strong> one HUD per camera; each draws in its camera's part of the screen.</li>
+<li><strong>Performance:</strong> no garbage per frame in steady play, no extra cameras, no shaders. Tested with every preset.</li>
+</ul>
+<div class="doc-pager"><a class="pager prev" href="waypoint.html"><span class="label">Previous</span>The Waypoint component</a><a class="pager next" href="make-it-yours.html"><span class="label">Next</span>Make it yours: presets and styles</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+The+Waypoint+HUD" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#look">Look</a></li><li class="toc-2"><a href="#show">Show</a></li><li class="toc-2"><a href="#player-and-camera">Player and camera</a></li><li class="toc-2"><a href="#full-screen-map">Full-screen map</a></li><li class="toc-2"><a href="#more">More</a></li><li class="toc-2"><a href="#beacons">Beacons</a></li><li class="toc-2"><a href="#where-each-part-sits">Where each part sits</a></li><li class="toc-2"><a href="#layout-nudge-size-and-opacity-per-part">Layout: nudge, size and opacity per part</a></li><li class="toc-2"><a href="#language">Language</a></li><li class="toc-2"><a href="#how-it-behaves">How it behaves</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:raregeometrysupport@gmail.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

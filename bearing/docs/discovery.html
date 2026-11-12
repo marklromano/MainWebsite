@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Fog of war and region discovery | Rare Geometry</title>
+<meta name="description" content="Fog of war and region discovery: documentation for the Bearing for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/bearing/docs/discovery.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Fog of war and region discovery">
+<meta property="og:description" content="Fog of war and region discovery: documentation for the Bearing for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/bearing/docs/discovery.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/bearing/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Bearing docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a><a href="fit-your-game.html">Fit it into your game</a><a href="common-tasks.html">Common tasks and recipes</a></div><div class="docs-group"><p class=label>Features</p><a href="chart-table.html">Chart Table: places, states, chains, fast travel</a><a href="routes.html">Routes, tracker, floors and map filters</a><a href="player-map.html">Players on the map: pins, stamps, tracking, fast travel</a><a href="scan-and-entities.html">World scan and moving entities</a><a href="sharing.html">Sharing markers with other players</a><a href="waypoint.html">The Waypoint component</a><a href="hud.html">The Waypoint HUD: markers, edge arrows, compass, radar</a><a href="make-it-yours.html">Make it yours: presets and styles</a><a href="map.html">Maps: minimap and full-screen map</a><a href="discovery.html" aria-current="page">Fog of war and region discovery</a><a href="trails.html">Objective trails, events and saving</a><a href="2d.html">2D and top-down games</a><a href="debugger.html">Why Can&#x27;t I See It? and the scene check</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="faq.html">Questions people ask</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a><a href="fit-your-game.html">Fit it into your game</a><a href="common-tasks.html">Common tasks and recipes</a></div><div class="docs-group"><p class=label>Features</p><a href="chart-table.html">Chart Table: places, states, chains, fast travel</a><a href="routes.html">Routes, tracker, floors and map filters</a><a href="player-map.html">Players on the map: pins, stamps, tracking, fast travel</a><a href="scan-and-entities.html">World scan and moving entities</a><a href="sharing.html">Sharing markers with other players</a><a href="waypoint.html">The Waypoint component</a><a href="hud.html">The Waypoint HUD: markers, edge arrows, compass, radar</a><a href="make-it-yours.html">Make it yours: presets and styles</a><a href="map.html">Maps: minimap and full-screen map</a><a href="discovery.html" aria-current="page">Fog of war and region discovery</a><a href="trails.html">Objective trails, events and saving</a><a href="2d.html">2D and top-down games</a><a href="debugger.html">Why Can&#x27;t I See It? and the scene check</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="faq.html">Questions people ask</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Bearing</a><span>/</span><span>Features</span></nav>
+<h1 id="fog-of-war-and-region-discovery">Fog of war and region discovery</h1>
+<h2 id="fog-of-war">Fog of war <a class="anchor" href="#fog-of-war" aria-label="Link to this section">#</a></h2>
+<p>Tick <strong>Fog of war</strong> on the Waypoint Map. The map starts covered and is uncovered round the player as they explore, on
+the minimap and the full-screen map.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reveal radius</td>
+<td>How far round the player the fog lifts, in metres.</td>
+</tr>
+<tr>
+<td>Fog cell size</td>
+<td>The fog's grid, in metres (smaller is finer; the default 3 m makes a 300 m map 100 x 100 cells).</td>
+</tr>
+<tr>
+<td>Fog colour</td>
+<td>Its alpha is how much of the land still shows through (0.94 = only a faint shape).</td>
+</tr>
+<tr>
+<td>Hide waypoints in fog</td>
+<td>Waypoints under the fog are left off the map (the current objective always shows).</td>
+</tr>
+</tbody>
+</table></div>
+<p>From code: <code>map.Fog.RevealAll()</code>, <code>RevealCircle</code>, <code>RevealRect</code>, <code>Reset()</code>, <code>Uncovered</code> (0 to 1, for "map 45% explored").</p>
+<h2 id="regions">Regions <a class="anchor" href="#regions" aria-label="Link to this section">#</a></h2>
+<p>A <strong>Waypoint Map Region</strong> is a named area (a village, a forest, a district). Add one with <strong>GameObject &gt; Bearing &gt;
+Waypoint Map Region</strong> or the map's <strong>Add Region</strong> button, then size its box, or give it its own shape:</p>
+<ul>
+<li><strong>Draw it:</strong> set <strong>Shape</strong> to Polygon, press <strong>Edit outline</strong> in its inspector, then in the Scene view Shift+click on the
+  ground to add a corner, drag the dots to move them and Ctrl+click a dot to remove it. Corners sit on the ground.</li>
+<li><strong>Fill it from the map:</strong> put the region's object on the area in the map picture (a field, a lake, a district on the
+  Clean map) and press <strong>Fill from map</strong>. It floods out over similar colours (Tolerance) and makes the outline from what
+  it filled; adjust the corners afterwards if you like. The Chart Table's Map tab lists every region with the same button.</li>
+</ul>
+<p>Everything follows the shape: discovering it, uncovering the fog, region reveals (towers, items, events spread out in
+its shape), its place count, and the faint outline drawn on the full-screen map (and, for the region the player is in,
+on the minimap). Full-screen map &gt; <strong>Region Outlines</strong> turns the outlines off.</p>
+<p>The first time the player walks in:</p>
+<ul>
+<li>a <strong>Discovered</strong> banner shows its name near the top of the screen,</li>
+<li>its <strong>On Discovered</strong> event runs (and the static <code>WaypointMapRegion.AnyDiscovered</code>),</li>
+<li>with fog of war on, its whole area is uncovered,</li>
+<li>its name appears on the full-screen map.</li>
+</ul>
+<p>Places are discovered too (see <a href="chart-table.html">Chart Table</a>). The banner (words, name only, icon only or none; position; time; a queue so two never overlap) is in the style's Banner section; each region can turn its banner
+off.</p>
+<h2 id="towers-maps-and-story-reveals">Towers, maps and story reveals <a class="anchor" href="#towers-maps-and-story-reveals" aria-label="Link to this section">#</a></h2>
+<p>A <strong>Waypoint Region Reveal</strong> uncovers part of the map at once. Make one with <strong>GameObject &gt; Bearing &gt; Region Reveal</strong>:</p>
+<ul>
+<li><strong>Tower (walk up to it):</strong> a big circle clears outward from the tower while the map opens, so the player watches it.</li>
+<li><strong>Item (call Reveal on pickup):</strong> a whole region clears. Call <code>Reveal()</code> from your pickup (a UnityEvent works).</li>
+<li><strong>Event (call Reveal from your story):</strong> a circle clears; the places inside stay to be found.</li>
+</ul>
+<p>The clearing spreads over <strong>Reveal Time</strong> and the places inside are discovered as it reaches them, each playing its own
+reveal. Pick which categories it discovers, a sound and an event. A used tower stays used after loading a save.</p>
+<p>On a region, <strong>Revealed by</strong> (walking in, a lookout tower, an item, a story event) makes or updates the reveal for you.</p>
+<h2 id="region-progress">Region progress <a class="anchor" href="#region-progress" aria-label="Link to this section">#</a></h2>
+<p>The full-screen map writes how many of each discovered region's places the player has found next to its name
+("Old Mill  3/7"). The words are the style's Full-screen map &gt; Region Progress (<code>{name}</code>, <code>{found}</code>, <code>{total}</code>); turn it
+off with Show Region Progress. From code: <code>region.CountPlaces(out found, out total)</code>.</p>
+<h2 id="saving">Saving <a class="anchor" href="#saving" aria-label="Link to this section">#</a></h2>
+<p><code>WaypointSave.Capture()</code> includes the fog and which regions were discovered. <code>Restore</code> puts them back, also for maps and
+regions in scenes loaded later.</p>
+<h2 id="reveal-animations">Reveal animations <a class="anchor" href="#reveal-animations" aria-label="Link to this section">#</a></h2>
+<p>When a place changes state, its icons play a short animation on the screen marker, the compass, the minimap and the
+full-screen map. By default a discovered place's "?" flips over to its real icon and a ring bursts out; becoming the
+objective pulses; completing pops.</p>
+<p>Everything is a setting in the style's <strong>Reveal animations</strong> section:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enabled</td>
+<td>All reveal animations on or off.</td>
+</tr>
+<tr>
+<td>Discovered, Activated, Completed, Other Change</td>
+<td>One animation per kind of change: Kind (None, Pop, Flip, Pulse, Ring, Flip And Ring, Drop, Spin, Wiggle), Duration, Easing (Linear, Ease Out, Ease In Out, Overshoot), Scale (peak size), Ring Scale, Sound and Volume. Untick Enabled to turn one off.</td>
+</tr>
+<tr>
+<td>Appeared</td>
+<td>A place that appears while the game runs (spawned, unlocked, a shared pin). None by default.</td>
+</tr>
+<tr>
+<td>Ping</td>
+<td>A teammate's ping landing (a Ring by default).</td>
+</tr>
+<tr>
+<td>On Markers, On Compass, On Minimap, On Map</td>
+<td>Which displays play it.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Motion presets.</strong> The style inspector's <strong>Motion</strong> row sets every animation at once: <strong>Off</strong>, <strong>Subtle</strong>, <strong>Standard</strong>
+(the defaults), <strong>Lively</strong> or <strong>Arcade</strong>. It covers the reveals above, the objective's pulse (Markers on screen: Pulse Kind
+Ring, Breathe or both, and Pulse Seconds), the banner's entrance (Discovery banner: Entrance Slide down, Slide up, Zoom or
+Fade) and the route's flow (Route: Flow and Flow Speed). Colours, sizes and layout stay as they are; Undo brings yours
+back. From code: <code>style.ApplyMotion(MotionPreset.Lively)</code>. Players who turn on Reduced motion see none of it.</p>
+<p>A place can override it (Waypoint &gt; Discovery and fast travel &gt; <strong>Reveal animation</strong>): Use Style, Off, or Own (its own
+animation for every change). Going Hidden or back to Undiscovered never animates.</p>
+<p>Sound: set a clip on the animation, or listen to <code>WaypointHud.RevealStarted (place, from, to, animation)</code> and play your
+own. From code: <code>WaypointReveals.Play</code>, <code>WaypointReveals.PoseOf</code>, <code>waypoint.IsRevealing</code>.</p>
+<div class="doc-pager"><a class="pager prev" href="map.html"><span class="label">Previous</span>Maps: minimap and full-screen map</a><a class="pager next" href="trails.html"><span class="label">Next</span>Objective trails, events and saving</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Fog+of+war+and+region+discovery" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#fog-of-war">Fog of war</a></li><li class="toc-2"><a href="#regions">Regions</a></li><li class="toc-2"><a href="#towers-maps-and-story-reveals">Towers, maps and story reveals</a></li><li class="toc-2"><a href="#region-progress">Region progress</a></li><li class="toc-2"><a href="#saving">Saving</a></li><li class="toc-2"><a href="#reveal-animations">Reveal animations</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:raregeometrysupport@gmail.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

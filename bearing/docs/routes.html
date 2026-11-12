@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Routes, tracker, floors and map filters | Rare Geometry</title>
+<meta name="description" content="Routes, tracker, floors and map filters: documentation for the Bearing for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/bearing/docs/routes.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Routes, tracker, floors and map filters">
+<meta property="og:description" content="Routes, tracker, floors and map filters: documentation for the Bearing for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/bearing/docs/routes.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/bearing/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Bearing docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a><a href="fit-your-game.html">Fit it into your game</a><a href="common-tasks.html">Common tasks and recipes</a></div><div class="docs-group"><p class=label>Features</p><a href="chart-table.html">Chart Table: places, states, chains, fast travel</a><a href="routes.html" aria-current="page">Routes, tracker, floors and map filters</a><a href="player-map.html">Players on the map: pins, stamps, tracking, fast travel</a><a href="scan-and-entities.html">World scan and moving entities</a><a href="sharing.html">Sharing markers with other players</a><a href="waypoint.html">The Waypoint component</a><a href="hud.html">The Waypoint HUD: markers, edge arrows, compass, radar</a><a href="make-it-yours.html">Make it yours: presets and styles</a><a href="map.html">Maps: minimap and full-screen map</a><a href="discovery.html">Fog of war and region discovery</a><a href="trails.html">Objective trails, events and saving</a><a href="2d.html">2D and top-down games</a><a href="debugger.html">Why Can&#x27;t I See It? and the scene check</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="faq.html">Questions people ask</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a><a href="fit-your-game.html">Fit it into your game</a><a href="common-tasks.html">Common tasks and recipes</a></div><div class="docs-group"><p class=label>Features</p><a href="chart-table.html">Chart Table: places, states, chains, fast travel</a><a href="routes.html" aria-current="page">Routes, tracker, floors and map filters</a><a href="player-map.html">Players on the map: pins, stamps, tracking, fast travel</a><a href="scan-and-entities.html">World scan and moving entities</a><a href="sharing.html">Sharing markers with other players</a><a href="waypoint.html">The Waypoint component</a><a href="hud.html">The Waypoint HUD: markers, edge arrows, compass, radar</a><a href="make-it-yours.html">Make it yours: presets and styles</a><a href="map.html">Maps: minimap and full-screen map</a><a href="discovery.html">Fog of war and region discovery</a><a href="trails.html">Objective trails, events and saving</a><a href="2d.html">2D and top-down games</a><a href="debugger.html">Why Can&#x27;t I See It? and the scene check</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="faq.html">Questions people ask</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Bearing</a><span>/</span><span>Features</span></nav>
+<h1 id="routes-tracker-floors-and-map-filters">Routes, tracker, floors and map filters</h1>
+<h2 id="routes">Routes <a class="anchor" href="#routes" aria-label="Link to this section">#</a></h2>
+<p>Add a <strong>Waypoint Route</strong> (GameObject &gt; Bearing, or Add Component &gt; Bearing &gt; Waypoint Route; the HUD's object is a good
+place). With no Target it leads to the current objective (the nearest Active place); give it a Target, or let the player
+track a place, to lead somewhere else. It works like a game's GPS: the route is worked out once and then kept steady. The
+line shortens as the player follows it, and it is only worked out again when the player strays more than <strong>Stray
+Distance</strong> from it, the place moves, or a clearly shorter way opens up (checked every few seconds, taken only when 15%
+shorter). It is drawn:</p>
+<ul>
+<li>on screen, as soft dashes laid on the ground (a ray down every metre and a half, so it follows hills and steps). It
+  starts a couple of metres ahead of the player and fades in, fades out before <strong>Draw Ahead</strong> ends, narrows with
+  distance, is hidden where walls, rocks and hills are in the way, and never crosses the compass, the minimap or the
+  objective list;</li>
+<li>on the minimap and on the full-screen map (the whole route, the same corners as on screen);</li>
+<li>as a chevron on the compass bar where the route turns next.</li>
+</ul>
+<h3 id="modes">Modes <a class="anchor" href="#modes" aria-label="Link to this section">#</a></h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fastest (NavMesh)</td>
+<td>The quickest walking path round walls and water, from a baked NavMesh (Window &gt; AI &gt; Navigation, or NavMesh Surface).</td>
+</tr>
+<tr>
+<td>Prefer roads and trails</td>
+<td>Along your roads and trails when that is at most <strong>Road Detour</strong> times the direct way (1.35 = up to 35% longer), the fastest way on and off them. Otherwise the direct fastest way.</td>
+</tr>
+<tr>
+<td>Roads and trails only</td>
+<td>Along the roads wherever they go (when the player is within <strong>Road Reach</strong> of one), the fastest way only to get on and off.</td>
+</tr>
+<tr>
+<td>Straight line</td>
+<td>A straight line to the place (flying, sailing, open plains).</td>
+</tr>
+<tr>
+<td>My points</td>
+<td>Your own points in order (a tour, a river).</td>
+</tr>
+<tr>
+<td>Off</td>
+<td>No line; the compass cue and the markers still point the way.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Roads and trails:</strong> put a <strong>Waypoint Road</strong> on an empty object and give it child points along the road, in order (or
+list them). Where a road's point comes within <strong>Join Distance</strong> of another road they connect, so crossroads and forks
+work. <strong>Preference</strong> below 1 makes routes go further to use a road (a main road); above 1 only when it saves a lot (a
+rough track). Roads draw nothing; select one to see it in the Scene view.</p>
+<p><strong>A place's own mode:</strong> each Waypoint has <strong>Route</strong> (Route default, or its own: a dock reached by sea set to Straight
+line, a town to Prefer roads).</p>
+<p><strong>Players:</strong> Player Options &gt; <strong>Route options</strong> adds a Route section to the in-game options panel (only when the scene
+has a Waypoint Route): <strong>Route</strong> (Game default, Fastest, Roads first, Straight line, Off) and <strong>Route on screen</strong>. The
+order of who decides: the player's Off always wins, then the place's own mode, then the player's choice, then the route's
+mode.</p>
+<h3 id="when-there-is-no-path-and-when-the-line-shows">When there is no path, and when the line shows <a class="anchor" href="#when-there-is-no-path-and-when-the-line-shows" aria-label="Link to this section">#</a></h3>
+<p><strong>Fallback</strong> is what shows when there is no path (no NavMesh, the place off it, no road near): <strong>Straight line</strong>, <strong>Compass
+only</strong> (no line, the compass cue still shows the way) or <strong>Hide</strong>. <code>Status</code> says what is shown (NavMesh, NavMeshPartial,
+Roads, Manual, StraightLine, Fallback) and <code>Reason</code> says why in plain words; <strong>Tools &gt; Bearing &gt; Diagnostics</strong> lists it.</p>
+<p><strong>Show When:</strong> <strong>Always</strong>; <strong>Tracked or set places only</strong> (no line to the automatic nearest objective, only to a place
+the player tracks or your game sets as the Target); <strong>Map open only</strong> (the world and minimap stay clear); <strong>A few seconds
+after setting</strong> (the line shows for Show Seconds when a place is set and after a reroute, then fades). The route hides
+within Hide Within of the place, and comes back only 2 m further out, so it doesn't blink at the edge.</p>
+<p>The look is the style's <strong>Route</strong> section: <strong>Line Kind</strong> (dashes, dots, chevrons pointing the way, or solid), <strong>Show
+Walked</strong> (the part already walked stays as a faint grey line on the minimap and map, in Walked Color), <strong>Flow</strong> (the
+dashes move towards the place; off by default), on screen, on the map, on the minimap, colour (or the objective colour),
+widths, dash and gap, opacity, height above the ground, Draw Ahead, Start Ahead, Fade, Follow Ground, Hide Behind
+Walls and the layers that hide it. <strong>Compass &gt; Show Route Cue</strong> switches the chevron.</p>
+<p>From code: <code>route.Target = place;</code>, <code>route.Mode = RouteMode.PreferRoads;</code>, <code>route.Recalculate();</code>, <code>route.Corners</code>,
+<code>route.Status</code>, <code>route.Reason</code>, <code>route.EffectiveMode</code>, <code>route.Changed</code>; <code>WaypointRoad.MarkChanged()</code> after moving road
+points at run time.</p>
+<h2 id="objective-tracker">Objective tracker <a class="anchor" href="#objective-tracker" aria-label="Link to this section">#</a></h2>
+<p>A short list in a screen corner: every Active place (the current objectives, nearest first), then up to <strong>Max Tracked</strong>
+places you set <strong>Tracked</strong> on (Waypoint &gt; Discovery and fast travel &gt; Show in the tracker), each with its icon, name and distance. Style section
+<strong>Tracker</strong>: on/off, corner, margins, how many, distances, icon size, title, panel colour. Undiscovered places show as "?".</p>
+<h2 id="compass-bearing-readout-and-height-arrows">Compass bearing readout and height arrows <a class="anchor" href="#compass-bearing-readout-and-height-arrows" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Compass &gt; Show Bearing</strong> writes the heading under the centre mark: <strong>NE 45°</strong> or <strong>045°</strong> (Bearing As). The direction
+  letters come from the compass's direction words, so they follow your language.</li>
+<li><strong>Marker &gt; Show Height Arrow</strong>: a small up or down arrow beside a marker (and its edge arrow) when the place is more
+  than Height Threshold metres above or below the player. The compass and minimap have their own height arrows.</li>
+</ul>
+<h2 id="floors">Floors <a class="anchor" href="#floors" aria-label="Link to this section">#</a></h2>
+<p>For buildings and levels mapped one floor at a time, fill the Waypoint Map's <strong>Floors</strong> list: a name, the height range
+(world Y; Z in 2D) and the floor's own picture. The minimap shows the player's floor. The full-screen map opens on the
+player's floor; the up and down buttons at its lower right step through the floors, with the floor name above them.
+Places carry a <strong>Floor</strong> number (0 = the first floor in the list); places on other floors are dimmed.</p>
+<h2 id="map-legend-and-filters">Map legend and filters <a class="anchor" href="#map-legend-and-filters" aria-label="Link to this section">#</a></h2>
+<p>The full-screen map's places legend (top right) lists the place states that are on the map (Places, Objective, Done...)
+and their categories. Click a row to hide or show those places. From code: <code>WaypointMapFilters.SetStateShown</code>,
+<code>SetCategoryShown</code>, <code>ShowAll</code>. Filters are saved with the rest.</p>
+<h2 id="saving">Saving <a class="anchor" href="#saving" aria-label="Link to this section">#</a></h2>
+<p><code>WaypointSave</code> (format 3) and the shared save also keep: which places are tracked, the map filters and the route's
+target.</p>
+<div class="doc-pager"><a class="pager prev" href="chart-table.html"><span class="label">Previous</span>Chart Table: places, states, chains, fast travel</a><a class="pager next" href="player-map.html"><span class="label">Next</span>Players on the map: pins, stamps, tracking, fast travel</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Routes%2C+tracker%2C+floors+and+map+filters" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#routes">Routes</a></li><li class="toc-3"><a href="#modes">Modes</a></li><li class="toc-3"><a href="#when-there-is-no-path-and-when-the-line-shows">When there is no path, and when the line shows</a></li><li class="toc-2"><a href="#objective-tracker">Objective tracker</a></li><li class="toc-2"><a href="#compass-bearing-readout-and-height-arrows">Compass bearing readout and height arrows</a></li><li class="toc-2"><a href="#floors">Floors</a></li><li class="toc-2"><a href="#map-legend-and-filters">Map legend and filters</a></li><li class="toc-2"><a href="#saving">Saving</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:raregeometrysupport@gmail.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

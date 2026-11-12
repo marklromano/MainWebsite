@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Common tasks and recipes | Rare Geometry</title>
+<meta name="description" content="Common tasks and recipes: documentation for the Bearing for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/bearing/docs/common-tasks.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Common tasks and recipes">
+<meta property="og:description" content="Common tasks and recipes: documentation for the Bearing for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/bearing/docs/common-tasks.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/bearing/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Bearing docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a><a href="fit-your-game.html">Fit it into your game</a><a href="common-tasks.html" aria-current="page">Common tasks and recipes</a></div><div class="docs-group"><p class=label>Features</p><a href="chart-table.html">Chart Table: places, states, chains, fast travel</a><a href="routes.html">Routes, tracker, floors and map filters</a><a href="player-map.html">Players on the map: pins, stamps, tracking, fast travel</a><a href="scan-and-entities.html">World scan and moving entities</a><a href="sharing.html">Sharing markers with other players</a><a href="waypoint.html">The Waypoint component</a><a href="hud.html">The Waypoint HUD: markers, edge arrows, compass, radar</a><a href="make-it-yours.html">Make it yours: presets and styles</a><a href="map.html">Maps: minimap and full-screen map</a><a href="discovery.html">Fog of war and region discovery</a><a href="trails.html">Objective trails, events and saving</a><a href="2d.html">2D and top-down games</a><a href="debugger.html">Why Can&#x27;t I See It? and the scene check</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="faq.html">Questions people ask</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a><a href="fit-your-game.html">Fit it into your game</a><a href="common-tasks.html" aria-current="page">Common tasks and recipes</a></div><div class="docs-group"><p class=label>Features</p><a href="chart-table.html">Chart Table: places, states, chains, fast travel</a><a href="routes.html">Routes, tracker, floors and map filters</a><a href="player-map.html">Players on the map: pins, stamps, tracking, fast travel</a><a href="scan-and-entities.html">World scan and moving entities</a><a href="sharing.html">Sharing markers with other players</a><a href="waypoint.html">The Waypoint component</a><a href="hud.html">The Waypoint HUD: markers, edge arrows, compass, radar</a><a href="make-it-yours.html">Make it yours: presets and styles</a><a href="map.html">Maps: minimap and full-screen map</a><a href="discovery.html">Fog of war and region discovery</a><a href="trails.html">Objective trails, events and saving</a><a href="2d.html">2D and top-down games</a><a href="debugger.html">Why Can&#x27;t I See It? and the scene check</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="faq.html">Questions people ask</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Bearing</a><span>/</span><span>Start here</span></nav>
+<h1 id="common-tasks-and-recipes">Common tasks and recipes</h1>
+<p>Short answers to "how do I...". Each points to the page with the details.</p>
+<h2 id="show-the-player-where-to-go-next">Show the player where to go next <a class="anchor" href="#show-the-player-where-to-go-next" aria-label="Link to this section">#</a></h2>
+<ol>
+<li>Add a Waypoint to the target (Add Component &gt; Bearing &gt; Waypoint) and set its State to <strong>Active</strong>.</li>
+<li>Players see a marker on screen, an arrow at the edge with the distance, an icon on the compass and the minimap, and a
+   pin on the full-screen map. Explorer also lights a beacon over it.</li>
+<li>When it's done, set the State to <strong>Completed</strong> (or use When Reached: Done) and make the next place Active. A
+   <strong>Waypoint Chain</strong> does this for you (Chart Table, Chains tab). See <a href="chart-table.html">Chart Table</a>.</li>
+</ol>
+<h2 id="hide-places-until-they-are-found">Hide places until they are found <a class="anchor" href="#hide-places-until-they-are-found" aria-label="Link to this section">#</a></h2>
+<p>Set the place's State to <strong>Undiscovered</strong> and Discover to <strong>When Near</strong> or <strong>When Seen</strong>. Undiscovered places show as
+"?" (the style's States section). For "somewhere around here", give it a <strong>Search area</strong> (Discovery and fast travel).
+See <a href="discovery.html">Fog of war and region discovery</a>.</p>
+<h2 id="a-lookout-tower-that-uncovers-the-map">A lookout tower that uncovers the map <a class="anchor" href="#a-lookout-tower-that-uncovers-the-map" aria-label="Link to this section">#</a></h2>
+<p>GameObject &gt; Bearing &gt; Region Reveal &gt; <strong>Tower</strong>, move it onto your tower and set its radius. Or, on a Map Region,
+pick <strong>Revealed by: A lookout tower</strong>. See <a href="discovery.html#towers-maps-and-story-reveals">Towers, maps and story reveals</a>.</p>
+<h2 id="fast-travel-with-a-lock-and-a-cost">Fast travel with a lock and a cost <a class="anchor" href="#fast-travel-with-a-lock-and-a-cost" aria-label="Link to this section">#</a></h2>
+<p>On the place, press <strong>Make it a travel point</strong> (Discovery and fast travel). Set When Place Completed and the place it
+needs, and a Locked Reason. Costs: <code>WaypointTravelPoint.Check = p =&gt; gold &lt; 50 ? "Costs 50 gold" : null;</code>. See
+<a href="player-map.html#travel-points-that-do-the-whole-job">Players on the map</a>.</p>
+<h2 id="a-building-with-floors">A building with floors <a class="anchor" href="#a-building-with-floors" aria-label="Link to this section">#</a></h2>
+<p>Give the building its own Waypoint Map with <strong>Is Area</strong> on and its floors (heights); press <strong>Bake All Floors</strong>. Players
+switch map automatically when they walk in. See <a href="map.html#buildings-caves-and-sections-map-areas">Maps</a>.</p>
+<h2 id="change-the-whole-look">Change the whole look <a class="anchor" href="#change-the-whole-look" aria-label="Link to this section">#</a></h2>
+<p>Pick a look on the HUD (Explorer, Tactical, Minimal, Holo), then <strong>Save as my own style</strong> and change anything. Fine-tune
+positions and sizes in the style's <strong>Layout</strong> section. See <a href="make-it-yours.html">Make it yours</a>.</p>
+<h2 id="let-players-choose-their-own-settings">Let players choose their own settings <a class="anchor" href="#let-players-choose-their-own-settings" aria-label="Link to this section">#</a></h2>
+<p>Players press <strong>O</strong> (or the map's Settings button). Choose what they may change and the slider limits with a <strong>Player
+Options</strong> asset (Chart Table gear, The player's options). From your own menu: <code>WaypointPlayerSettings.Current</code> then
+<code>WaypointPlayerSettings.Apply()</code>. See <a href="player-map.html">Players on the map</a>.</p>
+<h2 id="the-mouse-cursor-while-playing">The mouse cursor while playing <a class="anchor" href="#the-mouse-cursor-while-playing" aria-label="Link to this section">#</a></h2>
+<p>Bearing frees and shows the cursor whenever something the player can click is up: the full-screen map and the player
+options. Players can also hold <strong>Alt</strong> at any time for a free cursor (to click the HUD's buttons) and let go to look around
+again; a small hint ("Esc or hold Alt for the cursor") shows for a few seconds each time the mouse is captured. In a
+browser build, if the page loses or never gets pointer lock (Esc, a refused request), the cursor comes back instead of
+staying hidden. On the <strong>Waypoint HUD</strong>:</p>
+<ul>
+<li><strong>Cursor Policy</strong>: Free For Bearing Ui (the default, as above) or Game Owns It (Bearing leaves the cursor to your game;
+  the map frees it only if Free Mouse On Map is on).</li>
+<li><strong>Free Cursor Key</strong>: the key to hold (None for no key).</li>
+<li><strong>Show Cursor When Free</strong>: turn off if your game draws its own cursor and hides the system one.</li>
+<li><strong>Cursor Hint</strong> and <strong>Cursor Hint Text</strong>: the hint, and its words.</li>
+</ul>
+<p>If your controller captures the mouse on a click, skip the capture while <code>WaypointHud.WantsCursor</code> is true, so the first
+click on Bearing's map, options or buttons is a click.</p>
+<h2 id="show-it-in-another-language">Show it in another language <a class="anchor" href="#show-it-in-another-language" aria-label="Link to this section">#</a></h2>
+<p>Create a <strong>Text Table</strong>, press <strong>Collect Words</strong>, fill it in, set it on the HUD (More, Language). With Unity
+Localization add <strong>Waypoint Localization</strong>. See <a href="extending.html#words-for-other-languages">Code and your own UI</a>.</p>
+<h2 id="use-my-own-hud-art-or-my-own-ui">Use my own HUD art or my own UI <a class="anchor" href="#use-my-own-hud-art-or-my-own-ui" aria-label="Link to this section">#</a></h2>
+<p>Your own icons: Icon = Custom and your sprite (Keep its own colours for full-colour pictures). Your own marker background
+and arrow: the style's Marker and Edge Arrows sections. Your own UI for one part: turn Bearing's part off and add an
+<code>IWaypointDisplay</code> (see <a href="extending.html#your-own-ui">Code and your own UI</a>).</p>
+<h2 id="save-and-load">Save and load <a class="anchor" href="#save-and-load" aria-label="Link to this section">#</a></h2>
+<p><code>SaveService.Save("slot")</code> and <code>SaveService.Load("slot")</code>, or <code>WaypointSave.Capture()</code> and <code>Restore(json)</code> with your
+own save system. To try it: add <strong>Waypoint Save Keys</strong> (F5 and F9). See <a href="trails.html">Trails, events and saving</a>.</p>
+<h2 id="split-screen">Split screen <a class="anchor" href="#split-screen" aria-label="Link to this section">#</a></h2>
+<p>GameObject &gt; Bearing &gt; <strong>Split Screen (second player)</strong>. See <a href="fit-your-game.html#split-screen">Fit it into your game</a>.</p>
+<h2 id="recipes-from-code">Recipes from code <a class="anchor" href="#recipes-from-code" aria-label="Link to this section">#</a></h2>
+<pre><code class="language-csharp">// Mark a quest target when a quest starts, and clear it when the quest ends.
+var w = target.AddComponent&lt;Waypoint&gt;();
+w.Label = &quot;Find the smith&quot;;
+w.Icon = WaypointIcon.Talk;
+w.State = PoiState.Active;
+// ... later
+w.State = PoiState.Completed;
+
+// Open the map at a place (for a &quot;show on map&quot; button in your quest log).
+hud.OpenMap();
+hud.SearchMap(&quot;smith&quot;);
+hud.PickSearchResult();
+
+// Tell the player something in the HUD's own banner.
+hud.ShowBanner(&quot;Bridge repaired&quot;, &quot;Chapter 2&quot;);
+
+// React to discoveries (an achievement, a sound of your own).
+WaypointRegistry.AnyStateChanged += (place, from, to) =&gt;
+{
+    if (from == PoiState.Undiscovered) Achievements.Count(&quot;places&quot;);
+};
+</code></pre>
+<h2 id="a-heartbeat-near-the-objective">A heartbeat near the objective <a class="anchor" href="#a-heartbeat-near-the-objective" aria-label="Link to this section">#</a></h2>
+<p>Add <strong>Waypoint Sounds</strong> (on the HUD) and set <strong>Heartbeat</strong> to a short beat. Inside <strong>Heartbeat Range</strong> (40 m by default)
+of the tracked place, or else the current objective, it beats, quicker the closer the player gets (Heartbeat Interval:
+seconds between beats at the edge and right at the place). <code>sounds.HeartbeatGap</code> gives the gap now for your own effects.</p>
+<div class="doc-pager"><a class="pager prev" href="fit-your-game.html"><span class="label">Previous</span>Fit it into your game</a><a class="pager next" href="chart-table.html"><span class="label">Next</span>Chart Table: places, states, chains, fast travel</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Common+tasks+and+recipes" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#show-the-player-where-to-go-next">Show the player where to go next</a></li><li class="toc-2"><a href="#hide-places-until-they-are-found">Hide places until they are found</a></li><li class="toc-2"><a href="#a-lookout-tower-that-uncovers-the-map">A lookout tower that uncovers the map</a></li><li class="toc-2"><a href="#fast-travel-with-a-lock-and-a-cost">Fast travel with a lock and a cost</a></li><li class="toc-2"><a href="#a-building-with-floors">A building with floors</a></li><li class="toc-2"><a href="#change-the-whole-look">Change the whole look</a></li><li class="toc-2"><a href="#let-players-choose-their-own-settings">Let players choose their own settings</a></li><li class="toc-2"><a href="#the-mouse-cursor-while-playing">The mouse cursor while playing</a></li><li class="toc-2"><a href="#show-it-in-another-language">Show it in another language</a></li><li class="toc-2"><a href="#use-my-own-hud-art-or-my-own-ui">Use my own HUD art or my own UI</a></li><li class="toc-2"><a href="#save-and-load">Save and load</a></li><li class="toc-2"><a href="#split-screen">Split screen</a></li><li class="toc-2"><a href="#recipes-from-code">Recipes from code</a></li><li class="toc-2"><a href="#a-heartbeat-near-the-objective">A heartbeat near the objective</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:raregeometrysupport@gmail.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Maps: minimap and full-screen map | Rare Geometry</title>
+<meta name="description" content="Maps: minimap and full-screen map: documentation for the Bearing for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/bearing/docs/map.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Maps: minimap and full-screen map">
+<meta property="og:description" content="Maps: minimap and full-screen map: documentation for the Bearing for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/bearing/docs/map.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/bearing/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Bearing docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a><a href="fit-your-game.html">Fit it into your game</a><a href="common-tasks.html">Common tasks and recipes</a></div><div class="docs-group"><p class=label>Features</p><a href="chart-table.html">Chart Table: places, states, chains, fast travel</a><a href="routes.html">Routes, tracker, floors and map filters</a><a href="player-map.html">Players on the map: pins, stamps, tracking, fast travel</a><a href="scan-and-entities.html">World scan and moving entities</a><a href="sharing.html">Sharing markers with other players</a><a href="waypoint.html">The Waypoint component</a><a href="hud.html">The Waypoint HUD: markers, edge arrows, compass, radar</a><a href="make-it-yours.html">Make it yours: presets and styles</a><a href="map.html" aria-current="page">Maps: minimap and full-screen map</a><a href="discovery.html">Fog of war and region discovery</a><a href="trails.html">Objective trails, events and saving</a><a href="2d.html">2D and top-down games</a><a href="debugger.html">Why Can&#x27;t I See It? and the scene check</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="faq.html">Questions people ask</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a><a href="fit-your-game.html">Fit it into your game</a><a href="common-tasks.html">Common tasks and recipes</a></div><div class="docs-group"><p class=label>Features</p><a href="chart-table.html">Chart Table: places, states, chains, fast travel</a><a href="routes.html">Routes, tracker, floors and map filters</a><a href="player-map.html">Players on the map: pins, stamps, tracking, fast travel</a><a href="scan-and-entities.html">World scan and moving entities</a><a href="sharing.html">Sharing markers with other players</a><a href="waypoint.html">The Waypoint component</a><a href="hud.html">The Waypoint HUD: markers, edge arrows, compass, radar</a><a href="make-it-yours.html">Make it yours: presets and styles</a><a href="map.html" aria-current="page">Maps: minimap and full-screen map</a><a href="discovery.html">Fog of war and region discovery</a><a href="trails.html">Objective trails, events and saving</a><a href="2d.html">2D and top-down games</a><a href="debugger.html">Why Can&#x27;t I See It? and the scene check</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="faq.html">Questions people ask</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Bearing</a><span>/</span><span>Features</span></nav>
+<h1 id="maps-minimap-and-full-screen-map">Maps: minimap and full-screen map</h1>
+<p>A <strong>Waypoint Map</strong> is a picture of your level from above. The radar shows it as a <strong>minimap</strong>, and <strong>M</strong> opens it as a
+<strong>full-screen map</strong> with the player and every waypoint on it. Waypoints and the player move live on the map; the picture
+itself is made once, in the editor (it is not a live camera view).</p>
+<h2 id="add-one">Add one <a class="anchor" href="#add-one" aria-label="Link to this section">#</a></h2>
+<ul>
+<li>Setup Wizard step 3: <strong>Add Map And Make It</strong>, or</li>
+<li><strong>GameObject &gt; Bearing &gt; Waypoint Map</strong>, then <strong>Fit To Scene</strong> and <strong>Make Clean Map</strong>.</li>
+</ul>
+<p>The blue box in the Scene view is the area the map covers. Its top edge is north (the world's forward, Z).</p>
+<h2 id="three-kinds-of-picture">Three kinds of picture <a class="anchor" href="#three-kinds-of-picture" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Picture from</th>
+<th>What it is</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clean map</td>
+<td>A clean, flat map drawn from your level's shapes: roads, paths, grass, sand, water, rock, buildings and forest, with relief shading and outlines. No camera, so it is the same in Built-in, URP and HDRP.</td>
+<td>Most 3D games</td>
+</tr>
+<tr>
+<td>Photo from above</td>
+<td>A picture taken by a camera looking straight down.</td>
+<td>2D games, or levels the Clean map can't read</td>
+</tr>
+<tr>
+<td>My own picture</td>
+<td>Any top-down picture you painted, north at the top.</td>
+<td>Hand-made treasure maps, stylised games</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="making-a-clean-map">Making a Clean map <a class="anchor" href="#making-a-clean-map" aria-label="Link to this section">#</a></h2>
+<ol>
+<li>Press <strong>Preview</strong>. The map is drawn in the inspector without saving anything.</li>
+<li>Anything shown in <strong>pink</strong> wasn't recognised. It's listed under the preview: pick what each one is (Road, Building,
+   Water, Leave off the map...) and press <strong>Use</strong>. A rule is added and the preview is drawn again.</li>
+<li>Press <strong>Make Clean Map</strong>. The picture is saved in <code>Assets/RareGeometryData/Bearing/Maps</code>.</li>
+</ol>
+<p>How it decides what things are, first match wins:</p>
+<ol>
+<li>A <strong>Waypoint Map Category</strong> component on the object or a parent (add it to anything to say exactly what it is).</li>
+<li>Your <strong>rules</strong> (Colours, rules and finishing): words in a material name, object name, layer, tag or Terrain layer.</li>
+<li>The built-in words: road, street, asphalt; path, pavement, plaza, bridge; grass, lawn, field; sand, beach; water, sea,
+   lake, river; rock, cliff, mountain; house, building, shop, tower, tent; tree, forest, pine...</li>
+<li>Small things (under 1.5 m across) are left off: props, crates, plants, characters.</li>
+<li>A hint from the material's colour (green is grass, blue is water).</li>
+</ol>
+<p><strong>Terrains</strong> are drawn from their Terrain layers (named like grass, sand, road, rock...) and their painted trees become
+forest. <strong>Height range</strong> draws one floor of a multi-level place.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Picture size</td>
+<td>64 to 4096 pixels on the longer side. Bigger is sharper but uses more memory; 1024 or 2048 is usually plenty.</td>
+</tr>
+<tr>
+<td>Layers to draw</td>
+<td>Leave out the player, effects and UI.</td>
+</tr>
+<tr>
+<td>Unknown things become</td>
+<td>Left off (default), or drawn as ground.</td>
+</tr>
+<tr>
+<td>Relief, outlines</td>
+<td>Slope shading lit from the north-west; edges round buildings, roads and water.</td>
+</tr>
+<tr>
+<td>Colours</td>
+<td>One colour per kind of place, and the empty colour (sea, void).</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="the-full-screen-map">The full-screen map <a class="anchor" href="#the-full-screen-map" aria-label="Link to this section">#</a></h2>
+<p><strong>M</strong> (or <code>hud.ToggleMap()</code>) opens it. Drag to move, wheel or <strong>+</strong> / <strong>-</strong> to zoom, <strong>Me</strong> or Space to centre on the
+player, <strong>M</strong> or Escape to close. It shows the player arrow, every waypoint with its name, discovered region names,
+fog of war and a legend for Clean maps. On the HUD you choose the key, whether the mouse is freed (default) and whether
+the game pauses while it's open. Its look (colours, sizes, words) is in the style's <strong>Full-screen map</strong> section.</p>
+<p><strong>Coordinate grid.</strong> Full-screen map &gt; <strong>Grid</strong> draws columns A, B, C... and rows 1, 2, 3... over the map (square
+cells; Grid Columns sets how many across, Grid Color the lines), for strategy and survival games and for team callouts
+("enemy at C4"). Off by default.</p>
+<p><strong>Your own marker.</strong> Click anywhere on the map to place a marker there; click it again to remove it, or click
+somewhere else to move it. It is an ordinary waypoint, so it shows on the screen, the compass and the minimap too, and
+<code>WaypointSave</code> saves it. On level maps it lands on the ground below the point. Turn it off with <strong>Players can place a
+marker</strong> on the HUD; from code: <code>WaypointPlayerPin.Place(position)</code>, <code>PlaceOnMap(map, uv, height)</code>, <code>Clear()</code>,
+<code>Current</code>, and the <code>Changed</code> event.</p>
+<p><strong>Touch</strong> (phones and tablets): drag with one finger, pinch with two to zoom about the point between them, tap a place
+for its card (a finger gets a larger target than the mouse). It uses UI Toolkit's own touch events, so it needs no
+setup and the mouse and gamepad work as before.</p>
+<p><strong>Gamepad</strong> (with the Input System package): View/Select opens and closes the map, the left stick moves it under a
+crosshair, the triggers zoom, A (Cross) places or removes your marker at the crosshair, Y (Triangle) centres on you and
+B (Circle) closes. Turn it off with <strong>Gamepad controls the map</strong>. Your own input code can drive it instead by setting
+<code>BearingInput.PadOverride</code>, or call <code>hud.ToggleMap()</code>, <code>hud.ZoomMap(factor)</code> and <code>hud.PanMap(delta)</code>.
+While the map is open, <code>WaypointHud.IsAnyMapOpen</code> is true: ignore gameplay input then (the demo's controller does).</p>
+<h2 id="search">Search <a class="anchor" href="#search" aria-label="Link to this section">#</a></h2>
+<p>Players press <strong>F</strong> (or the <strong>Search</strong> button on the controls bar) and type part of a place's name or its category.
+Up and Down choose, Enter goes: the map zooms in enough for the place to show, turns to its floor, centres on it and
+opens its card. Only places the player knows are found, never an undiscovered place's name. The key and an off switch
+are on the HUD (Full-screen map); the words are in the style's map controls. From code: <code>hud.SearchMap("mill")</code>,
+<code>hud.MapSearchResults</code>, <code>hud.PickSearchResult()</code>.</p>
+<h2 id="zoom-detail">Zoom detail <a class="anchor" href="#zoom-detail" aria-label="Link to this section">#</a></h2>
+<p>Zoomed out, small places (chests, collectibles) can wait for the player to zoom in: the style's Full-screen map &gt; Zoom
+Detail sets from which zoom each category shows. The objective, tracked places and the player's own marks always show.
+The Chart Table's Map tab shows what appears zoomed out, half way and zoomed in.</p>
+<h2 id="why-not-a-live-camera-map">Why not a live camera map? <a class="anchor" href="#why-not-a-live-camera-map" aria-label="Link to this section">#</a></h2>
+<p>A live minimap renders the level a second time every frame through an extra camera, which works differently in each
+render pipeline and costs performance. A made picture looks the same everywhere, costs nothing, and never breaks with a
+Unity or pipeline update. If your level changes a lot while playing, make a few pictures and swap <code>WaypointMap.Picture</code>.</p>
+<h2 id="the-map-explains-itself">The map explains itself <a class="anchor" href="#the-map-explains-itself" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Controls bar</strong> along the bottom: move, zoom, centre, place a marker, fast travel (when a travel point is on the
+  map), legend and close, each with its key, and with gamepad buttons once a gamepad is used (Glyphs: Auto, Keyboard,
+  Gamepad, Both). Click Zoom, Centre, Legend or Close on the bar to do it.</li>
+<li><strong>Place cards:</strong> point at a place (or move the gamepad crosshair onto it) to see its name, state, category and
+  distance, with a <strong>Fast travel</strong> button when the place allows it. The card sits beside the place, never on it.</li>
+<li><strong>First-open hint:</strong> a line at the top the first time the map opens in a session (or every time).</li>
+<li><strong>L</strong> hides or shows the legends.</li>
+</ul>
+<p>All of it is in the style: Full-screen map &gt; <strong>Controls</strong> (on/off for each part, the words, the key and button
+names to match your own bindings, colours, hint time).</p>
+<h2 id="bridges">Bridges <a class="anchor" href="#bridges" aria-label="Link to this section">#</a></h2>
+<p>The Clean map draws bridges, piers, jetties, boardwalks and docks (by object or material name, or a Map Category of
+<strong>Bridge</strong>) over the water and paths they cross, whatever order things are drawn in, with a darker edge. Colour:
+Clean &gt; Bridge.</p>
+<h2 id="buildings-caves-and-sections-map-areas">Buildings, caves and sections: map areas <a class="anchor" href="#buildings-caves-and-sections-map-areas" aria-label="Link to this section">#</a></h2>
+<p>A map can be the map of one building, cave, district or dungeon section. Add a Waypoint Map to it, size its box to the
+building and tick <strong>Is Area</strong> (Waypoint Map &gt; Area and floors). While the player is inside the box (and the Area Height
+range), the minimap and the full-screen map show the area's map; walking out goes back to the map around it.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Area Name</td>
+<td>The name on the maps (the object's name when empty).</td>
+</tr>
+<tr>
+<td>Area Height</td>
+<td>The heights the area covers (both 0 = any height): a cellar under a house is its own area.</td>
+</tr>
+<tr>
+<td>Priority</td>
+<td>Where areas overlap, the higher priority wins (a room in a building in a district).</td>
+</tr>
+<tr>
+<td>Auto Switch</td>
+<td>Switch by itself when the player walks in (off: only from code).</td>
+</tr>
+<tr>
+<td>Transition, Transition Time</td>
+<td>How the minimap changes: fade or none.</td>
+</tr>
+<tr>
+<td>On Parent</td>
+<td>How the area shows on the map around it: outline, icon, its own picture, or nothing. Click it on the full-screen map to look inside.</td>
+</tr>
+</tbody>
+</table></div>
+<p>On the full-screen map, the button at the top left steps <strong>out</strong> to the map around an area and back <strong>in</strong>. Each HUD
+picks its own map, so split-screen players in different buildings each see their own. From code: <code>hud.ActiveMap</code>,
+<code>hud.ViewedMap</code>, <code>hud.ViewMap(map)</code>, <code>hud.ViewParentMap()</code>, <code>hud.MapChanged</code>, <code>WaypointMap.For(position)</code>.
+Areas work across scenes loaded together (each is found by its scene and name: keep area names different).</p>
+<h2 id="floors">Floors <a class="anchor" href="#floors" aria-label="Link to this section">#</a></h2>
+<p>Fill <strong>Floors</strong> with a name and the heights of each floor. <strong>Bake All Floors</strong> draws each floor from its own heights
+only, so the roof and the floors above are cut away, and sets each floor's picture (Clean maps and photos both).</p>
+<ul>
+<li>The player's floor follows their height, with <strong>Floor Hysteresis</strong> metres to spare, so stairs and jumps never make it</li>
+<li>Put the boundary between two floors about halfway up the stairs, not just under the upper floor: the player's height
+  is measured at their feet, and a player standing on the upper floor must be more than Floor Hysteresis above the
+  boundary to count as upstairs.
+  flicker. <code>hud.PlayerFloor</code>, <code>hud.FloorChanged</code>.</li>
+<li>The full-screen map opens on the player's floor; the arrows step through floors. When the objective is on another
+  floor, the floor name says which. <strong>Browse Unvisited Floors</strong> off: only floors the player has been on can be picked.</li>
+<li><strong>Other Floor Places:</strong> places on other floors are dimmed (the minimap adds up and down arrows), or hidden.</li>
+<li><strong>Fog Per Floor:</strong> each floor has its own fog of war.</li>
+<li>Saved: visited floors and each floor's fog (save format 5).</li>
+</ul>
+<p><strong>Diagnostics</strong> warns about floors without a picture (with a Bake All Floors button), places outside every floor's
+heights, and overlapping areas with the same priority. The Chart Table's Places list shows each place's area and lets
+you pick its floor by name.</p>
+<div class="doc-pager"><a class="pager prev" href="make-it-yours.html"><span class="label">Previous</span>Make it yours: presets and styles</a><a class="pager next" href="discovery.html"><span class="label">Next</span>Fog of war and region discovery</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Maps:+minimap+and+full-screen+map" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#add-one">Add one</a></li><li class="toc-2"><a href="#three-kinds-of-picture">Three kinds of picture</a></li><li class="toc-2"><a href="#making-a-clean-map">Making a Clean map</a></li><li class="toc-2"><a href="#the-full-screen-map">The full-screen map</a></li><li class="toc-2"><a href="#search">Search</a></li><li class="toc-2"><a href="#zoom-detail">Zoom detail</a></li><li class="toc-2"><a href="#why-not-a-live-camera-map">Why not a live camera map?</a></li><li class="toc-2"><a href="#the-map-explains-itself">The map explains itself</a></li><li class="toc-2"><a href="#bridges">Bridges</a></li><li class="toc-2"><a href="#buildings-caves-and-sections-map-areas">Buildings, caves and sections: map areas</a></li><li class="toc-2"><a href="#floors">Floors</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:raregeometrysupport@gmail.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

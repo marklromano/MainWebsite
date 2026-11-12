@@ -48,6 +48,7 @@ FOOTSTEP_VERSION = "0.1.0"
 HIT_FEEDBACK_VERSION = "1.0.0"
 TUTORIAL_VERSION = "1.0.0"
 WAYPOINT_VERSION = "1.0.0"
+BEARING_VERSION = "1.0.0"
 YEAR = "2026"
 
 ICON_EXTERNAL = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" '
@@ -488,6 +489,33 @@ PRODUCTS = [
         "shortcut_groups": {},
         "page_images": {},
     },
+    {
+        # Coming soon: page, manual and playable web demo up (Mark, 12 Nov: "push all five product pages, docs and web
+        # demos"); on launch day set "status": "live" and "store".
+        "slug": "bearing",
+        "lineup": True,
+        "name": "Bearing",
+        "short": "Bearing",
+        "the": "",
+        "accent": "c-bearing",
+        "status": "coming soon",
+        "version": BEARING_VERSION,
+        "store": "",
+        "summary": "Compass, minimap, world markers and a full-screen map built from your level, with routes that follow "
+                   "your roads, fast travel, fog of war and floors for buildings.",
+        "requirements": ["Unity 6000.0+", "Built-in, URP & HDRP", "Both input systems", "Full C# source"],
+        "menu": "Tools > Bearing",
+        "support_info": "In **Tools > Bearing > Help and Support**, click **Copy system info**",
+        "quick_start": [
+            "Import the package. Bearing lands in <code>Assets/RareGeometry/Bearing/</code>.",
+            "Open <strong>Tools &gt; Bearing &gt; Setup Wizard</strong>. It checks your scene and adds the HUD, your player and camera.",
+            "Add a <strong>Waypoint</strong> to a landmark and pick an icon, or add places from the <strong>Chart Table</strong>.",
+            "Bake the map from the Waypoint Map component, press Play and press <kbd>M</kbd> for the full map.",
+        ],
+        "pages": [],
+        "shortcut_groups": {},
+        "page_images": {},
+    },
 ]
 
 # Kits without docs yet, for the docs hub and "More from Rare Geometry": (name, accent, status, one line)
@@ -670,6 +698,8 @@ def og_image(path):
         return "prefab-builder/social.jpg"
     if path.startswith("shipready/"):
         return "shipready/social.jpg"
+    if path.startswith("bearing/"):
+        return "bearing/social.jpg"
     return "og-image.jpg"
 
 
@@ -860,6 +890,10 @@ HAND_PAGES = [
      "Shipready",
      "Menus, settings, saves, tutorials and playtest tools for Unity in one connected package: title screen, 92 player "
      "settings, crash-safe saves, first-time tours and bug reports with steps. Try the web demo. Coming soon to the Asset Store."),
+    ("bearing.html", "bearing/index.html", "../", "bearing",
+     "Bearing",
+     "Compass, minimap, world markers and a full-screen map built from your level for Unity, with routes that follow "
+     "your roads, fast travel, fog of war and floors. Play the demo in your browser. Coming soon to the Unity Asset Store."),
     ("support.html", "support/index.html", "../", "support",
      "Support",
      "Get help with Rare Geometry tools: documentation, bug reports, Discord and email."),

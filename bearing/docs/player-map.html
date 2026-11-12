@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Players on the map: pins, stamps, tracking and fast travel | Rare Geometry</title>
+<meta name="description" content="Players on the map: pins, stamps, tracking and fast travel: documentation for the Bearing for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/bearing/docs/player-map.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Players on the map: pins, stamps, tracking and fast travel">
+<meta property="og:description" content="Players on the map: pins, stamps, tracking and fast travel: documentation for the Bearing for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/bearing/docs/player-map.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/bearing/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Bearing docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a><a href="fit-your-game.html">Fit it into your game</a><a href="common-tasks.html">Common tasks and recipes</a></div><div class="docs-group"><p class=label>Features</p><a href="chart-table.html">Chart Table: places, states, chains, fast travel</a><a href="routes.html">Routes, tracker, floors and map filters</a><a href="player-map.html" aria-current="page">Players on the map: pins, stamps, tracking, fast travel</a><a href="scan-and-entities.html">World scan and moving entities</a><a href="sharing.html">Sharing markers with other players</a><a href="waypoint.html">The Waypoint component</a><a href="hud.html">The Waypoint HUD: markers, edge arrows, compass, radar</a><a href="make-it-yours.html">Make it yours: presets and styles</a><a href="map.html">Maps: minimap and full-screen map</a><a href="discovery.html">Fog of war and region discovery</a><a href="trails.html">Objective trails, events and saving</a><a href="2d.html">2D and top-down games</a><a href="debugger.html">Why Can&#x27;t I See It? and the scene check</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="faq.html">Questions people ask</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a><a href="fit-your-game.html">Fit it into your game</a><a href="common-tasks.html">Common tasks and recipes</a></div><div class="docs-group"><p class=label>Features</p><a href="chart-table.html">Chart Table: places, states, chains, fast travel</a><a href="routes.html">Routes, tracker, floors and map filters</a><a href="player-map.html" aria-current="page">Players on the map: pins, stamps, tracking, fast travel</a><a href="scan-and-entities.html">World scan and moving entities</a><a href="sharing.html">Sharing markers with other players</a><a href="waypoint.html">The Waypoint component</a><a href="hud.html">The Waypoint HUD: markers, edge arrows, compass, radar</a><a href="make-it-yours.html">Make it yours: presets and styles</a><a href="map.html">Maps: minimap and full-screen map</a><a href="discovery.html">Fog of war and region discovery</a><a href="trails.html">Objective trails, events and saving</a><a href="2d.html">2D and top-down games</a><a href="debugger.html">Why Can&#x27;t I See It? and the scene check</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Code and your own UI</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="faq.html">Questions people ask</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Bearing</a><span>/</span><span>Features</span></nav>
+<h1 id="players-on-the-map-pins-stamps-tracking-and-fast-travel">Players on the map: pins, stamps, tracking and fast travel</h1>
+<p>Players can mark the map, track places and fast travel, as far as you allow. You decide with one asset.</p>
+<h2 id="player-map-permissions">Player Map Permissions <a class="anchor" href="#player-map-permissions" aria-label="Link to this section">#</a></h2>
+<p>Create &gt; Bearing &gt; <strong>Player Map Permissions</strong> (or Chart Table &gt; gear &gt; <strong>What players may do on the map</strong>), then give it
+to the Waypoint HUD (<strong>What players may do</strong>). With none, the <strong>Open World</strong> preset applies. Split screen: each
+player's HUD can have its own.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Preset</th>
+<th>Players may</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Guided Story</td>
+<td>Look, filter and track. No marks of their own, no fast travel.</td>
+</tr>
+<tr>
+<td>Open World (default)</td>
+<td>Place pins (5) and stamps (100), choose their icon, colour and name, move and delete them, track, filter, fast travel to discovered travel points after a confirm.</td>
+</tr>
+<tr>
+<td>Survival Cartographer</td>
+<td>Everything, with notes, 10 pins and 300 stamps.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Every switch and limit can be changed after picking a preset: pins and stamps on or off and how many, the icons and
+colours players may pick from, renaming and the longest name, notes and the longest note, moving and deleting, filters
+(and categories players may not hide, such as Quest), tracking (objectives, places, their own marks), fast travel (off,
+unlocked travel points, any discovered place) and its confirm, seeing undiscovered "?" places, and changing settings.
+Players can never edit or delete your own places.</p>
+<h2 id="pins-and-stamps">Pins and stamps <a class="anchor" href="#pins-and-stamps" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Pins</strong> are few and show everywhere (screen, compass, minimap, map): for getting somewhere.</li>
+<li><strong>Stamps</strong> are many and show on the map only: for remembering things.</li>
+</ul>
+<p>On the full-screen map, click an empty spot and pick <strong>Pin</strong> or <strong>Stamp</strong>. Click a mark to open its card: icon, colour,
+name, note, <strong>Move</strong> (the next click puts it there) and <strong>Delete</strong>, each only when allowed. At the limit, a new mark
+replaces the oldest of its kind. Marks are listed in the legend as "My pins" and "My stamps", so they can be hidden.</p>
+<p>From code: <code>PlayerMarks.Add</code>, <code>AddOnMap</code>, <code>SetIcon</code>, <code>SetColour</code>, <code>Rename</code>, <code>SetNote</code>, <code>Move</code>, <code>Remove</code>, <code>Clear</code>, <code>All</code>,
+<code>Count</code>, <code>IsMark</code>, <code>MarkOf</code>; events <code>Changed</code> and <code>Refused (action, reason)</code>.</p>
+<p>The gamepad's place button keeps placing the single quick marker (<code>WaypointPlayerPin</code>) on an empty spot, and selects
+places (pressing it again on a travel point asks to travel).</p>
+<h2 id="tracking">Tracking <a class="anchor" href="#tracking" aria-label="Link to this section">#</a></h2>
+<p>The place card has <strong>Track</strong> for places players may track: the place joins the tracker and becomes the route's target
+(when the scene has a Waypoint Route). Tracking another place stops tracking the last. From code: <code>hud.Track(place)</code>,
+<code>hud.Untrack()</code>, <code>hud.TrackedPlace</code>, <code>hud.CanTrack(place)</code>.</p>
+<h2 id="fast-travel">Fast travel <a class="anchor" href="#fast-travel" aria-label="Link to this section">#</a></h2>
+<p>The place card shows <strong>Fast travel</strong> with the reason when it can't be used now: "Discover it first", "Fast travel is
+off", or your game's own reason. Your check: <code>hud.FastTravelCheck = place =&gt; inCombat ? "Not while fighting" : null;</code>
+(costs and cooldowns work the same way). With <strong>Confirm Travel</strong> on, the button asks "Travel to Camp?" first. Your game
+still does the move (<code>hud.FastTravelRequested</code>, the place's On Fast Travel Requested). From code: <code>hud.TravelStatus</code>,
+<code>hud.CanTravelTo</code>, <code>hud.TravelTo</code>.</p>
+<h3 id="travel-points-that-do-the-whole-job">Travel points that do the whole job <a class="anchor" href="#travel-points-that-do-the-whole-job" aria-label="Link to this section">#</a></h3>
+<p>The place inspector's <strong>Make it a travel point</strong> adds a <strong>Waypoint Travel Point</strong> with an <strong>Arrival</strong> spot in front of
+the place. It then:</p>
+<ul>
+<li>opens when the place is discovered, when another place is completed ("Light the lighthouse first."), or when your
+  game calls <code>OpenNow()</code>;</li>
+<li>shows its <strong>Locked Reason</strong> on the card until then;</li>
+<li>asks your cost or cooldown check: <code>WaypointTravelPoint.Check = p =&gt; gold &lt; 50 ? "Costs 50 gold" : null;</code></li>
+<li>moves the player to the Arrival (Character Controllers and Rigidbodies handled) and closes the map. Turn <strong>Move
+  Player</strong> off to do the move yourself (a scene load, a fade) in <strong>On Travel</strong>.</li>
+</ul>
+<h2 id="reduced-motion">Reduced motion <a class="anchor" href="#reduced-motion" aria-label="Link to this section">#</a></h2>
+<p><code>WaypointAccessibility.ReducedMotion = true;</code> makes every reveal animation an instant change and stops pulsing. Put it
+in your options menu.</p>
+<h2 id="saving">Saving <a class="anchor" href="#saving" aria-label="Link to this section">#</a></h2>
+<p><code>WaypointSave</code> (format 4) and the shared save keep the player's pins and stamps (with icon, colour, name, note and
+tracking) and Reduced Motion.</p>
+<div class="doc-pager"><a class="pager prev" href="routes.html"><span class="label">Previous</span>Routes, tracker, floors and map filters</a><a class="pager next" href="scan-and-entities.html"><span class="label">Next</span>World scan and moving entities</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Players+on+the+map:+pins%2C+stamps%2C+tracking+and+fast+travel" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#player-map-permissions">Player Map Permissions</a></li><li class="toc-2"><a href="#pins-and-stamps">Pins and stamps</a></li><li class="toc-2"><a href="#tracking">Tracking</a></li><li class="toc-2"><a href="#fast-travel">Fast travel</a></li><li class="toc-3"><a href="#travel-points-that-do-the-whole-job">Travel points that do the whole job</a></li><li class="toc-2"><a href="#reduced-motion">Reduced motion</a></li><li class="toc-2"><a href="#saving">Saving</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:raregeometrysupport@gmail.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>
