@@ -2,133 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#0B1220">
-<title>Troubleshooting and FAQ | Rare Geometry</title>
-<meta name="description" content="Troubleshooting and FAQ: documentation for the All In One Runtime Building Kit for Unity.">
-<link rel="canonical" href="https://raregeometry.github.io/runtime-building-kit/docs/troubleshooting.html">
-<meta property="og:site_name" content="Rare Geometry">
-<meta property="og:title" content="Troubleshooting and FAQ">
-<meta property="og:description" content="Troubleshooting and FAQ: documentation for the All In One Runtime Building Kit for Unity.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://raregeometry.github.io/runtime-building-kit/docs/troubleshooting.html">
-<meta property="og:image" content="https://raregeometry.github.io/assets/img/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moved | Rare Geometry</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://raregeometry.github.io/snapbuild/docs/">
+<meta http-equiv="refresh" content="0; url=../../snapbuild/docs/index.html">
 <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="wrap header-row">
-    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
-      <img src="../../assets/logo.svg" alt="" width="34" height="34">
-      <span>Rare Geometry</span>
-    </a>
-    <nav aria-label="Main">
-      <ul class="nav">
-        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<main id="main">
-<div class="wrap docs-shell">
-<aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">Runtime Building Kit docs</a><span class="pill">v1.0.0</span></div>
-  <div class="docs-search" hidden>
-    <label class="sr-only" for="docs-q">Search the documentation</label>
-    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
-    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
-    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
-  </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a><a href="walkthroughs.html">Walkthroughs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="kit-window.html">The kit window</a><a href="make-it-yours.html">Make it yours</a><a href="make-buildable.html">Make Buildable</a><a href="placement-and-sockets.html">Placement and sockets</a><a href="gameplay.html">Costs, tools, undo, saving</a><a href="multiplayer.html">Multiplayer</a></div><div class="docs-group"><p class=label>Reference</p><a href="extending.html">Extending (API)</a><a href="troubleshooting.html" aria-current="page">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a><a href="walkthroughs.html">Walkthroughs</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="kit-window.html">The kit window</a><a href="make-it-yours.html">Make it yours</a><a href="make-buildable.html">Make Buildable</a><a href="placement-and-sockets.html">Placement and sockets</a><a href="gameplay.html">Costs, tools, undo, saving</a><a href="multiplayer.html">Multiplayer</a></div><div class="docs-group"><p class=label>Reference</p><a href="extending.html">Extending (API)</a><a href="troubleshooting.html" aria-current="page">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
-  </nav>
-</aside>
-<article class="prose" id="doc">
-<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Runtime Building Kit</a><span>/</span><span>Reference</span></nav>
-<h1 id="troubleshooting-and-faq">Troubleshooting and FAQ</h1>
-<p><strong>The preview is pink or invisible.</strong> The preview uses the kit's own shader, which works in the Built-in pipeline, URP
-and HDRP. If the preview is missing in a build, assign the kit's ghost materials (<code>Runtime/Materials</code>) on the Builder so
-the shader is included in the build.</p>
-<p><strong>The samples look dark in HDRP.</strong> HDRP needs the project in <strong>Linear</strong> colour space (Project Settings &gt; Player &gt;
-Other Settings), which HDRP's setup wizard sets for you. The samples' sun switches to daylight lux in HDRP by itself.</p>
-<p><strong>My piece is far too big or small.</strong> Make Buildable warns about unusual sizes and offers a one-click <strong>Scale</strong> for the
-piece (your model is not changed). Or fix the model's import <strong>Scale Factor</strong> (1 unit = 1 metre), then in the Piece
-Definition press <strong>Measure from Prefab</strong>.</p>
-<p><strong>"Can't build on a wall or other upright surface".</strong> You're aiming at the side of something. Aim at the floor or ground,
-or at an open edge to snap. If a tip says "aim closer to the open edge", a matching socket is just behind what you aim at.</p>
-<p><strong>My piece floats or sinks.</strong> Its footprint doesn't match the model. Press <strong>Measure from Prefab</strong>, or adjust the box
-with <strong>Edit in Scene</strong>.</p>
-<p><strong>The wall faces the wrong way.</strong> Press <strong>R</strong> to turn it. Walls face along their thinnest side.</p>
-<p><strong>In a build, doorways and windows are closed.</strong> The piece uses a <strong>Mesh</strong> collider and its
-model's <strong>Read/Write</strong> is off, so the build can't make the collider and uses boxes instead (the Console says so once).
-Open the kit window's <strong>Pieces</strong> tab and click <strong>Turn on Read/Write</strong>, or tick it in the model's import settings.</p>
-<p><strong>It never snaps.</strong> The piece needs sockets whose types fit the target's (check the Pieces tab for "no socket type"),
-and the aim must pass within the Builder's Snap Radius of an open socket. Add Build Diagnostics and turn on Gizmos to
-see the sockets.</p>
-<p><strong>"Overlaps Player".</strong> The piece would be placed inside your character. Step back.</p>
-<p><strong>The sample doesn't react to keys.</strong> Click the Game view to capture the mouse. Esc releases it.</p>
-<p><strong>Can I use my own input?</strong> Yes. The kit never reads input: call the Builder's commands. The sample's
-<code>SampleBuildInput</code> shows how.</p>
-<p><strong>Do I need the Input System package?</strong> No. The samples use it when it is installed and active, and Unity's old
-Input Manager otherwise.</p>
-<p>For anything else, see <a href="support.html">Support</a>.</p>
-<div class="doc-pager"><a class="pager prev" href="extending.html"><span class="label">Previous</span>Extending (API)</a><a class="pager next" href="known-issues.html"><span class="label">Next</span>Known issues</a></div>
-<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Troubleshooting+and+FAQ" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
-</article>
-<nav class="docs-toc" aria-label="On this page"></nav>
-</div>
-</main>
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
-        <p>Core systems, carefully built.</p>
-      </div>
-      <div>
-        <h4>Products</h4>
-        <ul>
-          <li><a href="../../prefab-builder/index.html">Prefab Builder</a></li>
-          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
-          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
-          <li><a href="../../footstep-kit/index.html">Footstep Kit</a></li>
-          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
-          <li><a href="../../shipready/index.html">Shipready</a></li>
-          <li><a href="../../bearing/index.html">Bearing</a></li>
-          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Learn</h4>
-        <ul>
-          <li><a href="../../docs/index.html">Documentation</a></li>
-          <li><a href="../../support/index.html">Troubleshooting and help</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Help</h4>
-        <ul>
-          <li><a href="../../support/index.html">Support</a></li>
-          <li><a href="mailto:raregeometrysupport@gmail.com">Email</a></li>
-          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
-          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
-          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-base">
-      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
-      <p>No trackers, no cookies, no analytics.</p>
-    </div>
-  </div>
-</footer>
-<script src="search-index.js"></script>
-<script src="../../assets/docs.js"></script>
+<main id="main"><section class="section"><div class="wrap">
+<h1>This page has moved</h1>
+<p>It is now part of Snapbuild. <a href="../../snapbuild/docs/index.html">Continue to Snapbuild</a>.</p>
+</div></section></main>
+<script>location.replace("../../snapbuild/docs/index.html");</script>
 </body>
 </html>

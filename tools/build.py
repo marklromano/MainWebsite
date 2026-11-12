@@ -59,6 +59,9 @@ ICON_EXTERNAL = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" str
 PRODUCTS = [
     {
         "slug": "prefab-builder",
+        # Snapbuild is this kit's 2.0: the page forwards there, the 1.0 manual stays for 1.0 owners.
+        "retired_to": "snapbuild",
+        "keep_docs": True,
         "name": "All In One Prefab Builder Kit",
         "short": "Prefab Builder",
         "accent": "c-prefab",
@@ -544,6 +547,33 @@ PRODUCTS = [
         "shortcut_groups": {},
         "page_images": {},
     },
+    {
+        # Coming soon: page and playable web demo up (Mark, 12 Nov: "push all five product pages, docs and web demos");
+        # on launch day set "status": "live" and "store".
+        "slug": "interactra",
+        "lineup": True,
+        "name": "Interactra",
+        "short": "Interactra",
+        "the": "",
+        "accent": "c-interactra",
+        "status": "coming soon",
+        "version": "1.0.0",
+        "store": "",
+        "summary": "Make anything interactive, then let players build: doors, switches, keys and elevators from your "
+                   "own prefabs, runtime building with ghosts, blueprints and wiring, and one save for all of it.",
+        "requirements": ["Unity 6000.0+", "Built-in, URP & HDRP", "Both input systems", "Full C# source"],
+        "menu": "Tools > Interactra",
+        "support_info": "In **Tools > Interactra > Workbench**, open **Help**, then **Copy system info**",
+        "quick_start": [
+            "Import the package. Interactra lands in <code>Assets/RareGeometry/Interactra/</code>.",
+            "Open <strong>Tools &gt; Interactra &gt; Open Demo</strong> and play the Buildable Puzzle House.",
+            "Open <strong>Tools &gt; Interactra &gt; Setup Wizard</strong>, pick your prefab and what it does.",
+            "Open <strong>Tools &gt; Interactra &gt; Workbench</strong> to set up building pieces, wiring and rules.",
+        ],
+        "pages": [],
+        "shortcut_groups": {},
+        "page_images": {},
+    },
 ]
 
 # Kits without docs yet, for the docs hub and "More from Rare Geometry": (name, accent, status, one line)
@@ -730,6 +760,8 @@ def og_image(path):
         return "snapbuild/social.jpg"
     if path.startswith("bearing/"):
         return "bearing/social.jpg"
+    if path.startswith("interactra/"):
+        return "interactra/social.jpg"
     return "og-image.jpg"
 
 
@@ -928,6 +960,10 @@ HAND_PAGES = [
      "Snapbuild: Modular Level Builder",
      "Build whole levels in Unity from the modular packs you already own: drag a room and get a building, draw roads that "
      "join themselves, dress streets in one click. Try the demo in your browser."),
+    ("interactra.html", "interactra/index.html", "../", "",
+     "Interactra",
+     "Make anything interactive, then let players build, for Unity: doors, switches, keys and elevators from your own "
+     "prefabs, runtime building with ghosts, blueprints and wiring. Play the demo in your browser. Coming soon to the Unity Asset Store."),
     ("support.html", "support/index.html", "../", "support",
      "Support",
      "Get help with Rare Geometry tools: documentation, bug reports, Discord and email."),
