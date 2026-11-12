@@ -531,8 +531,8 @@ PRODUCTS = [
         "status": "live",
         "version": "2.0.0",
         "store": STORE_URL,
-        "summary": "Build whole levels from the modular packs you already own: drag a room and get a building, draw roads "
-                   "that join themselves, dress streets in one click.",
+        "summary": "Build whole worlds from the prefabs you already own: stamp and paint them on a grid that snaps, draw roads "
+                   "that join themselves, dress streets in one click and drag out whole buildings.",
         "requirements": ["Unity 6000.0.85f1+", "Built-in, URP & HDRP", "No dependencies", "Full C# source"],
         "menu": "Tools > Snapbuild",
         "support_info": "In the Level Builder, click **\u22ee > Copy support info**",
@@ -1035,9 +1035,9 @@ HAND_PAGES = [
      "Compass, minimap, world markers and a full-screen map built from your level for Unity, with routes that follow "
      "your roads, fast travel, fog of war and floors. Play the demo in your browser. Coming soon to the Unity Asset Store."),
     ("snapbuild.html", "snapbuild/index.html", "../", "",
-     "Snapbuild: Modular Level Builder",
-     "Build whole levels in Unity from the modular packs you already own: drag a room and get a building, draw roads that "
-     "join themselves, dress streets in one click. Try the demo in your browser."),
+     "Snapbuild: Prefab World Builder",
+     "Build whole worlds in Unity from the prefabs you already own: stamp and paint them on a grid that snaps, draw roads "
+     "that join themselves, dress streets in one click. Try the demo in your browser."),
     ("interactra.html", "interactra/index.html", "../", "",
      "Interactra",
      "Make anything interactive, then let players build, for Unity: doors, switches, keys and elevators from your own "
