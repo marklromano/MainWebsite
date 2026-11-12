@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Steam Cloud | Rare Geometry</title>
+<meta name="description" content="Steam Cloud: documentation for the Shipready for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/shipready/docs/save-steam-cloud.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Steam Cloud">
+<meta property="og:description" content="Steam Cloud: documentation for the Shipready for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/shipready/docs/save-steam-cloud.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/shipready/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Shipready docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="quick-start.html">Quick Start</a><a href="launch-desk.html">Launch Desk</a><a href="make-it-yours.html">Make it yours</a><a href="player-options.html">Player Options</a><a href="game-look.html">Game Look</a><a href="per-player-settings.html">Per-player settings</a><a href="game-colours.html">Game colours</a><a href="readiness.html">Ship Readiness Checker</a><a href="works-with.html">Working with other products</a></div><div class="docs-group"><p class=label>Menus and settings</p><a href="settings-index.html">Overview</a><a href="settings-quick-start.html">Quick Start</a><a href="settings-samples.html">Samples</a><a href="settings-existing-game.html">Using it in an existing game</a><a href="settings-make-it-yours.html">Make it yours</a><a href="settings-screens.html">Screens</a><a href="settings-settings-catalog.html">Settings catalog</a><a href="settings-settings-reference.html">Settings reference</a><a href="settings-display-safety.html">Display safety</a><a href="settings-audio.html">Audio</a><a href="settings-graphics.html">Graphics</a><a href="settings-controls-and-rebinding.html">Controls and rebinding</a><a href="settings-themes.html">Themes</a><a href="settings-accessibility.html">Accessibility</a><a href="settings-localization.html">Languages</a><a href="settings-pause-and-multiplayer.html">Pause and multiplayer hooks</a><a href="settings-extending-api.html">Extending and API</a><a href="settings-upgrading.html">Upgrading</a><a href="settings-troubleshooting.html">Troubleshooting and FAQ</a><a href="settings-known-issues.html">Known issues and limits</a><a href="settings-support.html">Support</a></div><div class="docs-group"><p class=label>Saves</p><a href="save-quick-start.html"> Quick Start</a><a href="save-guide.html"> Guide</a><a href="save-walkthroughs.html">Walkthroughs</a><a href="save-walkthroughs-first-save.html">Walkthrough: your first save</a><a href="save-walkthroughs-save-menu.html">Walkthrough: the save and load menu</a><a href="save-walkthroughs-world-objects.html">Walkthrough: world objects</a><a href="save-walkthroughs-backups-and-recovery.html">Walkthrough: backups and recovery</a><a href="save-walkthroughs-game-updates.html">Walkthrough: game updates and migrations</a><a href="save-walkthroughs-own-menu.html">Walkthrough: use your own menu</a><a href="save-walkthroughs-own-menu-ui-toolkit.html">Walkthrough: your own menu in UI Toolkit</a><a href="save-game-updates.html">Game Updates</a><a href="save-coop.html">Co-op</a><a href="save-steam-cloud.html" aria-current="page">Steam Cloud</a><a href="save-reference.html"> Reference</a><a href="save-api-reference.html"> API Reference</a><a href="save-limits-and-faq.html">Limits and FAQ</a><a href="save-troubleshooting.html">Troubleshooting</a><a href="save-known-issues.html">Known Issues</a><a href="save-changelog.html">Changelog</a><a href="save-support.html">Support</a></div><div class="docs-group"><p class=label>Tutorials</p><a href="tutorials-index.html">Overview</a><a href="tutorials-quick-start.html">Quick Start</a><a href="tutorials-flows-and-steps.html">Flows and Steps</a><a href="tutorials-targets.html">Targets</a><a href="tutorials-finishing-steps.html">Finishing a Step</a><a href="tutorials-coach-marks-and-hints.html">Coach Marks and Hints</a><a href="tutorials-make-it-yours.html">Make It Yours</a><a href="tutorials-button-pictures.html">Button Pictures</a><a href="tutorials-tools.html">Tools</a><a href="tutorials-integrations.html">Integrations</a><a href="tutorials-extending.html">Extending</a><a href="tutorials-samples.html">Samples</a><a href="tutorials-upgrading.html">Upgrading</a><a href="tutorials-troubleshooting.html">Troubleshooting</a><a href="tutorials-support.html">Support</a></div><div class="docs-group"><p class=label>Playtest</p><a href="playtest-index.html">Overview</a><a href="playtest-quick-start.html">Quick Start</a><a href="playtest-adding-to-your-game.html">Adding it to your own game</a><a href="playtest-report-form.html">The report form</a><a href="playtest-report-inbox.html">Report Inbox</a><a href="playtest-debug-overlay.html">Debug overlay</a><a href="playtest-settings.html">Settings</a><a href="playtest-builds-and-privacy.html">Builds and privacy</a><a href="playtest-make-it-yours.html">Make it yours</a><a href="playtest-extending.html">Extending</a><a href="playtest-samples.html">Samples</a><a href="playtest-upgrading.html">Upgrading</a><a href="playtest-troubleshooting.html">Troubleshooting</a><a href="playtest-support.html">Support</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="quick-start.html">Quick Start</a><a href="launch-desk.html">Launch Desk</a><a href="make-it-yours.html">Make it yours</a><a href="player-options.html">Player Options</a><a href="game-look.html">Game Look</a><a href="per-player-settings.html">Per-player settings</a><a href="game-colours.html">Game colours</a><a href="readiness.html">Ship Readiness Checker</a><a href="works-with.html">Working with other products</a></div><div class="docs-group"><p class=label>Menus and settings</p><a href="settings-index.html">Overview</a><a href="settings-quick-start.html">Quick Start</a><a href="settings-samples.html">Samples</a><a href="settings-existing-game.html">Using it in an existing game</a><a href="settings-make-it-yours.html">Make it yours</a><a href="settings-screens.html">Screens</a><a href="settings-settings-catalog.html">Settings catalog</a><a href="settings-settings-reference.html">Settings reference</a><a href="settings-display-safety.html">Display safety</a><a href="settings-audio.html">Audio</a><a href="settings-graphics.html">Graphics</a><a href="settings-controls-and-rebinding.html">Controls and rebinding</a><a href="settings-themes.html">Themes</a><a href="settings-accessibility.html">Accessibility</a><a href="settings-localization.html">Languages</a><a href="settings-pause-and-multiplayer.html">Pause and multiplayer hooks</a><a href="settings-extending-api.html">Extending and API</a><a href="settings-upgrading.html">Upgrading</a><a href="settings-troubleshooting.html">Troubleshooting and FAQ</a><a href="settings-known-issues.html">Known issues and limits</a><a href="settings-support.html">Support</a></div><div class="docs-group"><p class=label>Saves</p><a href="save-quick-start.html"> Quick Start</a><a href="save-guide.html"> Guide</a><a href="save-walkthroughs.html">Walkthroughs</a><a href="save-walkthroughs-first-save.html">Walkthrough: your first save</a><a href="save-walkthroughs-save-menu.html">Walkthrough: the save and load menu</a><a href="save-walkthroughs-world-objects.html">Walkthrough: world objects</a><a href="save-walkthroughs-backups-and-recovery.html">Walkthrough: backups and recovery</a><a href="save-walkthroughs-game-updates.html">Walkthrough: game updates and migrations</a><a href="save-walkthroughs-own-menu.html">Walkthrough: use your own menu</a><a href="save-walkthroughs-own-menu-ui-toolkit.html">Walkthrough: your own menu in UI Toolkit</a><a href="save-game-updates.html">Game Updates</a><a href="save-coop.html">Co-op</a><a href="save-steam-cloud.html" aria-current="page">Steam Cloud</a><a href="save-reference.html"> Reference</a><a href="save-api-reference.html"> API Reference</a><a href="save-limits-and-faq.html">Limits and FAQ</a><a href="save-troubleshooting.html">Troubleshooting</a><a href="save-known-issues.html">Known Issues</a><a href="save-changelog.html">Changelog</a><a href="save-support.html">Support</a></div><div class="docs-group"><p class=label>Tutorials</p><a href="tutorials-index.html">Overview</a><a href="tutorials-quick-start.html">Quick Start</a><a href="tutorials-flows-and-steps.html">Flows and Steps</a><a href="tutorials-targets.html">Targets</a><a href="tutorials-finishing-steps.html">Finishing a Step</a><a href="tutorials-coach-marks-and-hints.html">Coach Marks and Hints</a><a href="tutorials-make-it-yours.html">Make It Yours</a><a href="tutorials-button-pictures.html">Button Pictures</a><a href="tutorials-tools.html">Tools</a><a href="tutorials-integrations.html">Integrations</a><a href="tutorials-extending.html">Extending</a><a href="tutorials-samples.html">Samples</a><a href="tutorials-upgrading.html">Upgrading</a><a href="tutorials-troubleshooting.html">Troubleshooting</a><a href="tutorials-support.html">Support</a></div><div class="docs-group"><p class=label>Playtest</p><a href="playtest-index.html">Overview</a><a href="playtest-quick-start.html">Quick Start</a><a href="playtest-adding-to-your-game.html">Adding it to your own game</a><a href="playtest-report-form.html">The report form</a><a href="playtest-report-inbox.html">Report Inbox</a><a href="playtest-debug-overlay.html">Debug overlay</a><a href="playtest-settings.html">Settings</a><a href="playtest-builds-and-privacy.html">Builds and privacy</a><a href="playtest-make-it-yours.html">Make it yours</a><a href="playtest-extending.html">Extending</a><a href="playtest-samples.html">Samples</a><a href="playtest-upgrading.html">Upgrading</a><a href="playtest-troubleshooting.html">Troubleshooting</a><a href="playtest-support.html">Support</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Shipready</a><span>/</span><span>Saves</span></nav>
+<h1 id="steam-cloud">Steam Cloud</h1>
+<p>Steam Auto-Cloud copies the save files you choose to Steam's servers when the player quits. When the game starts again, on any PC, Steam copies them back. You set it up on the Steamworks partner site. It needs no game code, and Shipready works with it as it is.</p>
+<p>This guide gives the Auto-Cloud settings that match Shipready's folders and file names. Steam's own documentation is at <a href="https://partner.steamgames.com/doc/features/cloud">partner.steamgames.com/doc/features/cloud</a>.</p>
+<p><strong>Scope.</strong> Shipready 1.0 is tested on Windows, so this guide covers Windows builds. Shipready has no built-in cloud sync and never talks to Steam. Steam does all the copying.</p>
+<h2 id="before-you-start">Before you start <a class="anchor" href="#before-you-start" aria-label="Link to this section">#</a></h2>
+<p>Choose these names before your first release. Changing any of them later makes Shipready look in a different folder or for different files, so existing saves seem to disappear (see <a href="save-troubleshooting.html#sk100">SK100</a>):</p>
+<ul>
+<li><strong>Company Name</strong> and <strong>Product Name</strong> in <strong>Project Settings → Player</strong>.</li>
+<li><strong>Save Folder Name</strong>, <strong>Profile Folder</strong>, the file name patterns, <strong>File Options → File Extension</strong> and, if you use it, <strong>Global File Options → File Extension</strong> in the settings asset <code>ShipreadySaveSettings</code>.</li>
+</ul>
+<p>Settings in bold, such as <strong>Save Folder Name</strong>, are fields on that settings asset unless the text says otherwise. Select the asset in the Project window to change them.</p>
+<h2 id="step-1-set-the-byte-quota-and-the-file-count">Step 1: Set the byte quota and the file count <a class="anchor" href="#step-1-set-the-byte-quota-and-the-file-count" aria-label="Link to this section">#</a></h2>
+<p>Steam keeps Auto-Cloud locked until both limits are set.</p>
+<ol>
+<li>Open your app's <strong>Steam Cloud Settings</strong> page on the Steamworks partner site.</li>
+<li>Fill in <strong>Byte quota per user</strong> and <strong>Number of files allowed per user</strong>.</li>
+<li>Click <strong>Save</strong> at the bottom of the page, then publish the change.</li>
+</ol>
+<p><strong>Choosing the file count.</strong> Each save is one file. Add up:</p>
+<ul>
+<li><strong>Slot Count</strong> (10 by default)</li>
+<li><strong>Autosave File Count</strong> (3 by default)</li>
+<li>1 for the global file, which holds the Settings category, unless you keep it on the PC (Step 4)</li>
+<li>1 for the quicksave, if <strong>Quicksave Enabled</strong> is on</li>
+</ul>
+<p>With the defaults that is 14 files. Leave room to grow, for example 20. The most Shipready can ever write is 111 files: 99 slots, 10 autosaves, the global file and the quicksave.</p>
+<p><strong>Choosing the byte quota.</strong> Play far into your game, save, and note the file size. You can read it from the save result:</p>
+<pre><code class="language-csharp">using RareGeometry.Shipready.Save;
+using UnityEngine;
+
+public class SaveSizeCheck : MonoBehaviour
+{
+    public async void SaveAndMeasure()
+    {
+        SaveResult saved = await SaveKit.SaveAsync(slot: 1);
+        Debug.Log(&quot;Slot 1 is &quot; + saved.Report.FileBytes + &quot; bytes.&quot;);
+    }
+}
+</code></pre>
+<p>Multiply that size by your file count, then double it for growth. Turning on <strong>File Options → Compress</strong> makes saves much smaller, because JSON usually shrinks several times.</p>
+<p>Steam counts the quota for each player and each game separately. Backups, thumbnails and Shipready's other working files do not count toward it, because they never sync (see Step 5).</p>
+<p><strong>Checkpoint:</strong> the Auto-Cloud section now appears on the Steam Cloud Settings page.</p>
+<h2 id="step-2-add-the-root-path">Step 2: Add the Root Path <a class="anchor" href="#step-2-add-the-root-path" aria-label="Link to this section">#</a></h2>
+<p>On Windows, Unity keeps each game's files in this folder, which is <code>Application.persistentDataPath</code>:</p>
+<pre><code>%USERPROFILE%\AppData\LocalLow\&lt;Company Name&gt;\&lt;Product Name&gt;
+</code></pre>
+<p>Shipready saves into the <strong>Save Folder Name</strong> folder inside it, which is <code>Saves</code> by default. In the Auto-Cloud section, add one Root Path:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Root</td>
+<td><code>WinAppDataLocalLow</code></td>
+</tr>
+<tr>
+<td>Subdirectory</td>
+<td><code>&lt;Company Name&gt;/&lt;Product Name&gt;/Saves</code></td>
+</tr>
+<tr>
+<td>Pattern</td>
+<td><code>*.save</code></td>
+</tr>
+<tr>
+<td>OS</td>
+<td><code>[Cross-Platform]</code>, the default</td>
+</tr>
+<tr>
+<td>Recursive</td>
+<td>Off</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Subdirectory:</strong> copy Company Name and Product Name exactly as they appear in <strong>Project Settings → Player</strong>. For example, the company <code>MyStudio</code> and the product <code>Star Farm</code> give <code>MyStudio/Star Farm/Saves</code>. If you changed <strong>Save Folder Name</strong>, use your folder name instead of <code>Saves</code>.</li>
+<li><strong>Pattern:</strong> <code>*.save</code> matches Shipready's default <strong>File Options → File Extension</strong>. If you changed the extension, change the pattern to match, for example <code>*.sav</code>.</li>
+<li><strong>OS:</strong> Steam recommends Cross-Platform even for a game that ships on one platform, because files locked to one platform do not sync to others if you add platforms later.</li>
+<li><strong>Recursive:</strong> leave it off. Only the files in that one folder should sync.</li>
+</ul>
+<p>Click <strong>Save</strong>, then publish the change.</p>
+<p><strong>Find the exact folder.</strong> Set <strong>Log Level</strong> to Verbose in the settings asset and press Play. When Shipready starts, the Console shows a line like this:</p>
+<pre><code>[Shipready] Ready. Saves are kept in C:/Users/&lt;you&gt;/AppData/LocalLow/MyStudio/Star Farm\Saves.
+</code></pre>
+<p>The mix of <code>/</code> and <code>\</code> in that line is normal on Windows.</p>
+<p>You can also log it yourself with <code>Debug.Log(SaveKit.Storage.DescribeLocation());</code> once Shipready has started. On Windows, the Editor and a build use the same folder.</p>
+<p><strong>Checkpoint:</strong> <code>%USERPROFILE%\AppData\LocalLow\</code> followed by your Subdirectory gives exactly the folder that the Console line shows.</p>
+<h2 id="step-3-give-each-steam-user-their-own-folder">Step 3: Give each Steam user their own folder <a class="anchor" href="#step-3-give-each-steam-user-their-own-folder" aria-label="Link to this section">#</a></h2>
+<p>Two people can share one PC with two Steam accounts. If both accounts use the same save folder, they share one set of saves, and Steam uploads the same files into both accounts. Two placeholders, one on each side, keep them apart:</p>
+<ul>
+<li><strong>On Steam's side</strong>, the Subdirectory may contain <code>{64BitSteamID}</code>. Steam replaces it with the signed-in user's 64-bit Steam ID, such as <code>76561198000000000</code>.</li>
+<li><strong>On Shipready's side</strong>, <strong>Profile Folder</strong> set to <code>{profile}</code> puts the saves into a folder inside the save folder, named after <code>SaveKit.ProfileId</code>. Your game sets <code>SaveKit.ProfileId</code> to the same 64-bit Steam ID, so both sides name the same folder: <code>Saves/76561198000000000</code>.</li>
+</ul>
+<p>Shipready never talks to Steam and never fills in <code>{64BitSteamID}</code>: that placeholder only means something in Steamworks. Shipready only knows the ID your game gives it.</p>
+<ol>
+<li>In Steamworks, change the Subdirectory to <code>&lt;Company Name&gt;/&lt;Product Name&gt;/Saves/{64BitSteamID}</code>. Keep Recursive off. Click <strong>Save</strong>, then publish.</li>
+<li>In the settings asset, set <strong>Profile Folder</strong> to <code>{profile}</code>, and switch <strong>Initialise Automatically</strong> off (in the wizard: <strong>Profile folder (optional)</strong> in the first step, and <strong>Start Shipready by itself</strong> in the second).</li>
+<li>In your game, once Steam is running, set <code>SaveKit.ProfileId</code> to the player's Steam ID, then start Shipready.</li>
+</ol>
+<p><strong>Why Shipready must wait.</strong> With <strong>Initialise Automatically</strong> on, Shipready starts just before the first scene loads, before any of your scripts' <code>Awake</code> runs, and it reads <code>SaveKit.ProfileId</code> only at that moment. With <code>{profile}</code> in <strong>Profile Folder</strong> and no ID set yet, it refuses to start (<a href="save-troubleshooting.html#sk153">SK153</a>) rather than mix two players' saves, and the Console shows "Shipready could not start by itself". So switch automatic start off and start Shipready yourself, like this:</p>
+<pre><code class="language-csharp">using RareGeometry.Shipready.Save;
+using UnityEngine;
+
+// Settings asset: Profile Folder = {profile}, Initialise Automatically off.
+// Put this on an object in the first scene, after your Steamworks integration has started.
+public class SaveKitSteamStartup : MonoBehaviour
+{
+    void Start()
+    {
+        if (SaveKit.IsInitialised) return;
+
+        // The same number Steam puts in place of {64BitSteamID}. Without Steam, for example
+        // in the Editor, use a fixed name so Shipready still starts.
+        string steamId = GetSteamId64();
+        SaveKit.ProfileId = string.IsNullOrEmpty(steamId) ? &quot;local&quot; : steamId;
+
+        SaveResult started = SaveKit.Initialise();
+        if (!started.Success) Debug.LogError(started.ToString());
+    }
+
+    static string GetSteamId64()
+    {
+        // Ask your Steamworks integration for the signed-in user's 64-bit Steam ID and return
+        // it as a plain number, for example &quot;76561198000000000&quot;. Return an empty string when
+        // Steam is not running.
+        return string.Empty;
+    }
+}
+</code></pre>
+<p>This uses <code>Start</code> so that a Steamworks integration that starts in <code>Awake</code> is ready first. Any save or load before this runs returns <code>NotInitialised</code> (<a href="save-troubleshooting.html#sk005">SK005</a>), so start Shipready before your game's first save, load or save menu.</p>
+<p><strong>Keeping automatic start on instead.</strong> Unity runs a static method marked <code>[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]</code> before Shipready starts by itself. If your Steamworks integration can give you the ID that early, set <code>SaveKit.ProfileId</code> there and leave <strong>Initialise Automatically</strong> on. Do not use <code>SubsystemRegistration</code>, where Shipready clears the ID for each new Play session in an order you cannot control, or <code>BeforeSceneLoad</code>, which may run after Shipready has already started.</p>
+<p>Notes:</p>
+<ul>
+<li>The ID must be the plain decimal number, the same value Steam uses for <code>{64BitSteamID}</code>.</li>
+<li>When Steam is not running, the code above saves into <code>Saves/local</code>. Steam never syncs that folder, because its Root Path points at the ID folders.</li>
+<li><code>SaveKit.ProfileId</code> may hold letters, digits, <code>-</code> and <code>_</code>. A Steam ID is all digits.</li>
+<li>To switch to another Steam user while the game runs, call <code>SaveKit.Shutdown()</code>, set the new ID and call <code>SaveKit.Initialise()</code> again. <code>Shutdown</code> also removes your <code>SaveEvents</code> handlers, so add them again afterwards.</li>
+<li>Decide on profile folders before release. If you add them in an update, existing saves stay in <code>Saves</code> and seem to disappear (see <a href="save-troubleshooting.html#sk100">SK100</a>).</li>
+</ul>
+<p><strong>Checkpoint:</strong> after a save, the save folder contains a folder named after your Steam ID, and <code>slot_01.save</code> is inside it. With <strong>Log Level</strong> on Verbose, the Console line from Step 2 ends with that folder.</p>
+<h2 id="step-4-keep-device-specific-settings-local">Step 4: Keep device-specific settings local <a class="anchor" href="#step-4-keep-device-specific-settings-local" aria-label="Link to this section">#</a></h2>
+<p>Steam advises against syncing machine-specific settings such as video quality. A laptop and a gaming PC need different values.</p>
+<p>In Shipready, the categories marked Global (Settings by default) are kept in the global file, which is <code>global.save</code> by default. That name matches <code>*.save</code>, so it syncs. That suits preferences that should follow the player, such as subtitles, key bindings and volume. It does not suit screen resolution, graphics quality or the chosen monitor.</p>
+<p><strong>Keep the global file on the PC by giving it its own extension.</strong> The global file can have file options of its own, including its own extension. An extension that does not match <code>*.save</code>, such as <code>.local</code>, keeps it, and every working copy of it, on the PC:</p>
+<ol>
+<li>Select the settings asset and open its <strong>Advanced</strong> tab, <strong>Packing, encryption and backups</strong>. Under <strong>Shared file</strong>, tick <strong>Write it differently</strong> (in code: untick <strong>Use Slot Options For Global File</strong>).</li>
+<li>Set its <strong>File extension</strong> to <code>.local</code>, then click <strong>Apply the file options</strong>. Leave the other options as they are, or choose how the global file is packed: <strong>Indent the text</strong>, <strong>Compress</strong>, <strong>Encrypt</strong> and <strong>Older copies kept</strong> apply to it alone.</li>
+</ol>
+<p>The global file is then <code>global.local</code>, with <code>global.local.tmp</code> and <code>global.local.bak1</code> beside it, and none of them match <code>*.save</code>. Encryption, if you switch it on for the global file, uses the passphrase, salt and iterations from <strong>File Options</strong>, so every file of your game shares one key.</p>
+<ul>
+<li><strong>Everything Global stays on the PC.</strong> Shipready has one global file, so every Global category goes with it. If you want some preferences, such as key bindings, to follow the player while graphics settings stay on the PC, keep the global file syncing instead and store the machine-specific values in <code>PlayerPrefs</code>. On Windows, Unity keeps <code>PlayerPrefs</code> in the registry, not in the save folder, so Steam never syncs them.</li>
+<li><strong>The extension needs a dot and a few letters.</strong> It cannot be <code>.tmp</code> or start with <code>.bak</code> or <code>.corrupt</code>, which Shipready uses for its own copies. Otherwise Shipready refuses to start (<a href="save-troubleshooting.html#sk153">SK153</a>).</li>
+<li><strong>Switching in an update is safe.</strong> If a game update gives the global file its own extension, Shipready loads whichever of <code>global.save</code> and <code>global.local</code> was written last, so players keep their latest settings, and the next save writes <code>global.local</code>. The old <code>global.save</code> is left where it is, and Steam keeps the copy it already has; Shipready ignores it once <code>global.local</code> is newer.</li>
+</ul>
+<p><strong>Checkpoint:</strong> after the player changes a setting and the game saves the global file, the save folder holds <code>global.local</code> and no newer <code>global.save</code>.</p>
+<h2 id="step-5-what-stays-local">Step 5: What stays local <a class="anchor" href="#step-5-what-stays-local" aria-label="Link to this section">#</a></h2>
+<p>Every file Shipready writes for slot 1 is listed below. Only files that end in <code>.save</code> match the pattern <code>*.save</code>.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>File</th>
+<th>What it is</th>
+<th>Synced by <code>*.save</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>slot_01.save</code></td>
+<td>The save</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>autosave_1.save</code> to <code>autosave_3.save</code></td>
+<td>The rotating autosaves</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>quicksave.save</code></td>
+<td>The quicksave, when it is switched on</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>global.save</code></td>
+<td>The Global categories, such as Settings, while the global file uses the slots' extension</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>global.local</code></td>
+<td>The same file, when <strong>Global File Options → File Extension</strong> is <code>.local</code> (Step 4)</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>slot_01.save.tmp</code></td>
+<td>A save that was still being written</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>slot_01.save.bak0</code></td>
+<td>The file being replaced, for a moment during a save</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>slot_01.save.bak1</code>, <code>slot_01.save.bak2</code></td>
+<td>Backups, newest first (up to <code>.bak5</code> with <strong>Backup Count</strong> 5)</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>slot_01.save.corrupt-20261102-184107-123</code></td>
+<td>A damaged copy, kept for support (the time is UTC)</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>slot_01.save.thumb.png</code></td>
+<td>The thumbnail the save menu shows</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>slots.index</code></td>
+<td>Shipready's cache of slot info</td>
+<td>No</td>
+</tr>
+</tbody>
+</table></div>
+<p>Autosaves, the quicksave and the global file have the same kinds of working files, for example <code>global.save.bak1</code>, or <code>global.local.bak1</code> when the global file has its own extension. With a profile folder (Step 3), all of these sit in the player's ID folder.</p>
+<p>Here is why Shipready names its files like this:</p>
+<ul>
+<li><strong>Uploads stay small.</strong> Only the real saves count toward the quota and the file limit.</li>
+<li><strong>Backups stay a local safety net.</strong> If a save cannot be read, Shipready falls back to that PC's own backups as usual.</li>
+<li><strong>Half-written and damaged copies never travel.</strong> The <code>.tmp</code> and <code>.corrupt-</code> files only make sense on the PC that wrote them.</li>
+<li><strong>The slot cache stays correct.</strong> <code>slots.index</code> records each save's size and time, and Shipready uses an entry only while both still match. A save that Steam has just downloaded is therefore read fresh.</li>
+</ul>
+<p><strong>Thumbnails.</strong> Thumbnails stay on the PC too. On a second PC, a synced slot shows that PC's own older picture for the slot, or no picture, until the player saves that slot there. To sync thumbnails as well, add a second Root Path with the same Root and Subdirectory and the pattern <code>*.thumb.png</code>. Each thumbnail is a 320×180 PNG and one more file, so raise the file count and the byte quota to match.</p>
+<h2 id="step-6-test">Step 6: Test <a class="anchor" href="#step-6-test" aria-label="Link to this section">#</a></h2>
+<p>Steam's test steps:</p>
+<ol>
+<li>Sign in to Steam with an account that owns the game. If the game is already released, you can tick <strong>Enable cloud support for developers only</strong> while you test. Then only accounts with a developer licence for the game see the change.</li>
+<li>Open the Steam console by entering <code>steam://open/console</code> in your web browser.</li>
+<li>In the console, enter <code>testappcloudpaths &lt;AppId&gt;</code>, for example <code>testappcloudpaths 480</code>.</li>
+<li>Enter <code>set_spew_level 4 4</code> for detailed cloud logging.</li>
+<li>Start the game from Steam, save into a slot and quit. Steam uploads when the game exits. Watch the console.</li>
+<li>On a second PC, signed in to the same account, start the game. The slot shows the save from the first PC.</li>
+<li>When you have finished, enter <code>testappcloudpaths 0</code> and <code>set_spew_level 0 0</code>, then restart Steam. If you used developers-only mode, switch it off and publish.</li>
+</ol>
+<p>While you test, also check Shipready's side:</p>
+<ul>
+<li><strong>Only <code>.save</code> files sync.</strong> If the console shows <code>.bak1</code>, <code>.tmp</code> or <code>.thumb.png</code> files being uploaded and you did not add them on purpose, the pattern is too broad.</li>
+<li><strong>Steam users stay apart.</strong> Two Steam accounts on one PC each see only their own slots (Step 3).</li>
+<li><strong>Device settings stay put.</strong> With the global file kept on the PC (Step 4), the second PC keeps its own graphics settings, and the console shows no <code>global.local</code> upload.</li>
+<li><strong>Quitting saves first.</strong> With <strong>Autosave On Quit</strong> on (the default), Shipready finishes the quit autosave before the game exits, so Steam uploads a complete file.</li>
+</ul>
+<p><strong>Checkpoint:</strong> a save made on one PC loads on the other, and the second PC's save folder holds no <code>.bak</code>, <code>.tmp</code> or <code>.corrupt-</code> files that came from the first PC.</p>
+<h3 id="if-nothing-syncs">If nothing syncs <a class="anchor" href="#if-nothing-syncs" aria-label="Link to this section">#</a></h3>
+<ol>
+<li>Check that the Steamworks changes were published. Then wait up to 10 minutes, or restart Steam.</li>
+<li>Read <code>cloud_log.txt</code> in the <code>logs</code> folder of the Steam installation, for example <code>C:\Program Files (x86)\Steam\logs\cloud_log.txt</code>. It is Steam's own record of each sync.</li>
+<li>Compare the folder Steam uses with the folder from the Console line in Step 2. The usual causes are:
+   - Company Name or Product Name spelled differently, including spaces and capital letters.
+   - <strong>Save Folder Name</strong> changed in the settings asset but not in Steamworks.
+   - <strong>Profile Folder</strong> set to <code>{64BitSteamID}</code>, which Shipready does not know, instead of <code>{profile}</code>. Shipready then writes into a folder that is literally called <code>{64BitSteamID}</code>.
+   - <code>SaveKit.ProfileId</code> set to something other than the plain 64-bit Steam ID, such as a 32-bit account ID or the player's name, or set after Shipready had already started.
+   - A pattern that does not match <strong>File Options → File Extension</strong>.</li>
+</ol>
+<h2 id="settings-at-a-glance">Settings at a glance <a class="anchor" href="#settings-at-a-glance" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Where</th>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steamworks</td>
+<td>Byte quota per user</td>
+<td>Largest save × file count, doubled</td>
+</tr>
+<tr>
+<td>Steamworks</td>
+<td>Number of files allowed per user</td>
+<td>Slots + autosaves + 1 global + 1 quicksave, plus room</td>
+</tr>
+<tr>
+<td>Steamworks</td>
+<td>Root</td>
+<td><code>WinAppDataLocalLow</code></td>
+</tr>
+<tr>
+<td>Steamworks</td>
+<td>Subdirectory</td>
+<td><code>&lt;Company Name&gt;/&lt;Product Name&gt;/Saves</code>, or <code>.../Saves/{64BitSteamID}</code></td>
+</tr>
+<tr>
+<td>Steamworks</td>
+<td>Pattern</td>
+<td><code>*.save</code></td>
+</tr>
+<tr>
+<td>Steamworks</td>
+<td>OS</td>
+<td><code>[Cross-Platform]</code></td>
+</tr>
+<tr>
+<td>Steamworks</td>
+<td>Recursive</td>
+<td>Off</td>
+</tr>
+<tr>
+<td>Settings asset</td>
+<td><strong>Save Folder Name</strong></td>
+<td><code>Saves</code>, or the same name as in the Subdirectory</td>
+</tr>
+<tr>
+<td>Settings asset</td>
+<td><strong>Profile Folder</strong></td>
+<td><code>{profile}</code>, with the Subdirectory ending in <code>/{64BitSteamID}</code>; empty without it</td>
+</tr>
+<tr>
+<td>Settings asset</td>
+<td><strong>Initialise Automatically</strong></td>
+<td>Off with <code>{profile}</code>, unless you set the ID in an <code>AfterAssembliesLoaded</code> method</td>
+</tr>
+<tr>
+<td>Settings asset</td>
+<td><strong>File Options → File Extension</strong></td>
+<td><code>.save</code>, or the extension that matches the pattern</td>
+</tr>
+<tr>
+<td>Settings asset</td>
+<td><strong>Use Slot Options For Global File</strong></td>
+<td>Off, to keep the global file on the PC (optional)</td>
+</tr>
+<tr>
+<td>Settings asset</td>
+<td><strong>Global File Options → File Extension</strong></td>
+<td><code>.local</code>, or any extension the pattern does not match (optional)</td>
+</tr>
+<tr>
+<td>Your code</td>
+<td><code>SaveKit.ProfileId</code></td>
+<td>The player's 64-bit Steam ID, set before Shipready starts</td>
+</tr>
+</tbody>
+</table></div>
+<p>Something else not working? Every result code has an entry in <a href="save-troubleshooting.html">Troubleshooting</a>.</p>
+<div class="doc-pager"><a class="pager prev" href="save-coop.html"><span class="label">Previous</span>Co-op</a><a class="pager next" href="save-reference.html"><span class="label">Next</span> Reference</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Steam+Cloud" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#before-you-start">Before you start</a></li><li class="toc-2"><a href="#step-1-set-the-byte-quota-and-the-file-count">Step 1: Set the byte quota and the file count</a></li><li class="toc-2"><a href="#step-2-add-the-root-path">Step 2: Add the Root Path</a></li><li class="toc-2"><a href="#step-3-give-each-steam-user-their-own-folder">Step 3: Give each Steam user their own folder</a></li><li class="toc-2"><a href="#step-4-keep-device-specific-settings-local">Step 4: Keep device-specific settings local</a></li><li class="toc-2"><a href="#step-5-what-stays-local">Step 5: What stays local</a></li><li class="toc-2"><a href="#step-6-test">Step 6: Test</a></li><li class="toc-3"><a href="#if-nothing-syncs">If nothing syncs</a></li><li class="toc-2"><a href="#settings-at-a-glance">Settings at a glance</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

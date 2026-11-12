@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Adding it to your own game | Rare Geometry</title>
+<meta name="description" content="Adding it to your own game: documentation for the Shipready for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/shipready/docs/playtest-adding-to-your-game.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Adding it to your own game">
+<meta property="og:description" content="Adding it to your own game: documentation for the Shipready for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/shipready/docs/playtest-adding-to-your-game.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/shipready/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Shipready docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="quick-start.html">Quick Start</a><a href="launch-desk.html">Launch Desk</a><a href="make-it-yours.html">Make it yours</a><a href="player-options.html">Player Options</a><a href="game-look.html">Game Look</a><a href="per-player-settings.html">Per-player settings</a><a href="game-colours.html">Game colours</a><a href="readiness.html">Ship Readiness Checker</a><a href="works-with.html">Working with other products</a></div><div class="docs-group"><p class=label>Menus and settings</p><a href="settings-index.html">Overview</a><a href="settings-quick-start.html">Quick Start</a><a href="settings-samples.html">Samples</a><a href="settings-existing-game.html">Using it in an existing game</a><a href="settings-make-it-yours.html">Make it yours</a><a href="settings-screens.html">Screens</a><a href="settings-settings-catalog.html">Settings catalog</a><a href="settings-settings-reference.html">Settings reference</a><a href="settings-display-safety.html">Display safety</a><a href="settings-audio.html">Audio</a><a href="settings-graphics.html">Graphics</a><a href="settings-controls-and-rebinding.html">Controls and rebinding</a><a href="settings-themes.html">Themes</a><a href="settings-accessibility.html">Accessibility</a><a href="settings-localization.html">Languages</a><a href="settings-pause-and-multiplayer.html">Pause and multiplayer hooks</a><a href="settings-extending-api.html">Extending and API</a><a href="settings-upgrading.html">Upgrading</a><a href="settings-troubleshooting.html">Troubleshooting and FAQ</a><a href="settings-known-issues.html">Known issues and limits</a><a href="settings-support.html">Support</a></div><div class="docs-group"><p class=label>Saves</p><a href="save-quick-start.html"> Quick Start</a><a href="save-guide.html"> Guide</a><a href="save-walkthroughs.html">Walkthroughs</a><a href="save-walkthroughs-first-save.html">Walkthrough: your first save</a><a href="save-walkthroughs-save-menu.html">Walkthrough: the save and load menu</a><a href="save-walkthroughs-world-objects.html">Walkthrough: world objects</a><a href="save-walkthroughs-backups-and-recovery.html">Walkthrough: backups and recovery</a><a href="save-walkthroughs-game-updates.html">Walkthrough: game updates and migrations</a><a href="save-walkthroughs-own-menu.html">Walkthrough: use your own menu</a><a href="save-walkthroughs-own-menu-ui-toolkit.html">Walkthrough: your own menu in UI Toolkit</a><a href="save-game-updates.html">Game Updates</a><a href="save-coop.html">Co-op</a><a href="save-steam-cloud.html">Steam Cloud</a><a href="save-reference.html"> Reference</a><a href="save-api-reference.html"> API Reference</a><a href="save-limits-and-faq.html">Limits and FAQ</a><a href="save-troubleshooting.html">Troubleshooting</a><a href="save-known-issues.html">Known Issues</a><a href="save-changelog.html">Changelog</a><a href="save-support.html">Support</a></div><div class="docs-group"><p class=label>Tutorials</p><a href="tutorials-index.html">Overview</a><a href="tutorials-quick-start.html">Quick Start</a><a href="tutorials-flows-and-steps.html">Flows and Steps</a><a href="tutorials-targets.html">Targets</a><a href="tutorials-finishing-steps.html">Finishing a Step</a><a href="tutorials-coach-marks-and-hints.html">Coach Marks and Hints</a><a href="tutorials-make-it-yours.html">Make It Yours</a><a href="tutorials-button-pictures.html">Button Pictures</a><a href="tutorials-tools.html">Tools</a><a href="tutorials-integrations.html">Integrations</a><a href="tutorials-extending.html">Extending</a><a href="tutorials-samples.html">Samples</a><a href="tutorials-upgrading.html">Upgrading</a><a href="tutorials-troubleshooting.html">Troubleshooting</a><a href="tutorials-support.html">Support</a></div><div class="docs-group"><p class=label>Playtest</p><a href="playtest-index.html">Overview</a><a href="playtest-quick-start.html">Quick Start</a><a href="playtest-adding-to-your-game.html" aria-current="page">Adding it to your own game</a><a href="playtest-report-form.html">The report form</a><a href="playtest-report-inbox.html">Report Inbox</a><a href="playtest-debug-overlay.html">Debug overlay</a><a href="playtest-settings.html">Settings</a><a href="playtest-builds-and-privacy.html">Builds and privacy</a><a href="playtest-make-it-yours.html">Make it yours</a><a href="playtest-extending.html">Extending</a><a href="playtest-samples.html">Samples</a><a href="playtest-upgrading.html">Upgrading</a><a href="playtest-troubleshooting.html">Troubleshooting</a><a href="playtest-support.html">Support</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="quick-start.html">Quick Start</a><a href="launch-desk.html">Launch Desk</a><a href="make-it-yours.html">Make it yours</a><a href="player-options.html">Player Options</a><a href="game-look.html">Game Look</a><a href="per-player-settings.html">Per-player settings</a><a href="game-colours.html">Game colours</a><a href="readiness.html">Ship Readiness Checker</a><a href="works-with.html">Working with other products</a></div><div class="docs-group"><p class=label>Menus and settings</p><a href="settings-index.html">Overview</a><a href="settings-quick-start.html">Quick Start</a><a href="settings-samples.html">Samples</a><a href="settings-existing-game.html">Using it in an existing game</a><a href="settings-make-it-yours.html">Make it yours</a><a href="settings-screens.html">Screens</a><a href="settings-settings-catalog.html">Settings catalog</a><a href="settings-settings-reference.html">Settings reference</a><a href="settings-display-safety.html">Display safety</a><a href="settings-audio.html">Audio</a><a href="settings-graphics.html">Graphics</a><a href="settings-controls-and-rebinding.html">Controls and rebinding</a><a href="settings-themes.html">Themes</a><a href="settings-accessibility.html">Accessibility</a><a href="settings-localization.html">Languages</a><a href="settings-pause-and-multiplayer.html">Pause and multiplayer hooks</a><a href="settings-extending-api.html">Extending and API</a><a href="settings-upgrading.html">Upgrading</a><a href="settings-troubleshooting.html">Troubleshooting and FAQ</a><a href="settings-known-issues.html">Known issues and limits</a><a href="settings-support.html">Support</a></div><div class="docs-group"><p class=label>Saves</p><a href="save-quick-start.html"> Quick Start</a><a href="save-guide.html"> Guide</a><a href="save-walkthroughs.html">Walkthroughs</a><a href="save-walkthroughs-first-save.html">Walkthrough: your first save</a><a href="save-walkthroughs-save-menu.html">Walkthrough: the save and load menu</a><a href="save-walkthroughs-world-objects.html">Walkthrough: world objects</a><a href="save-walkthroughs-backups-and-recovery.html">Walkthrough: backups and recovery</a><a href="save-walkthroughs-game-updates.html">Walkthrough: game updates and migrations</a><a href="save-walkthroughs-own-menu.html">Walkthrough: use your own menu</a><a href="save-walkthroughs-own-menu-ui-toolkit.html">Walkthrough: your own menu in UI Toolkit</a><a href="save-game-updates.html">Game Updates</a><a href="save-coop.html">Co-op</a><a href="save-steam-cloud.html">Steam Cloud</a><a href="save-reference.html"> Reference</a><a href="save-api-reference.html"> API Reference</a><a href="save-limits-and-faq.html">Limits and FAQ</a><a href="save-troubleshooting.html">Troubleshooting</a><a href="save-known-issues.html">Known Issues</a><a href="save-changelog.html">Changelog</a><a href="save-support.html">Support</a></div><div class="docs-group"><p class=label>Tutorials</p><a href="tutorials-index.html">Overview</a><a href="tutorials-quick-start.html">Quick Start</a><a href="tutorials-flows-and-steps.html">Flows and Steps</a><a href="tutorials-targets.html">Targets</a><a href="tutorials-finishing-steps.html">Finishing a Step</a><a href="tutorials-coach-marks-and-hints.html">Coach Marks and Hints</a><a href="tutorials-make-it-yours.html">Make It Yours</a><a href="tutorials-button-pictures.html">Button Pictures</a><a href="tutorials-tools.html">Tools</a><a href="tutorials-integrations.html">Integrations</a><a href="tutorials-extending.html">Extending</a><a href="tutorials-samples.html">Samples</a><a href="tutorials-upgrading.html">Upgrading</a><a href="tutorials-troubleshooting.html">Troubleshooting</a><a href="tutorials-support.html">Support</a></div><div class="docs-group"><p class=label>Playtest</p><a href="playtest-index.html">Overview</a><a href="playtest-quick-start.html">Quick Start</a><a href="playtest-adding-to-your-game.html" aria-current="page">Adding it to your own game</a><a href="playtest-report-form.html">The report form</a><a href="playtest-report-inbox.html">Report Inbox</a><a href="playtest-debug-overlay.html">Debug overlay</a><a href="playtest-settings.html">Settings</a><a href="playtest-builds-and-privacy.html">Builds and privacy</a><a href="playtest-make-it-yours.html">Make it yours</a><a href="playtest-extending.html">Extending</a><a href="playtest-samples.html">Samples</a><a href="playtest-upgrading.html">Upgrading</a><a href="playtest-troubleshooting.html">Troubleshooting</a><a href="playtest-support.html">Support</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Shipready</a><span>/</span><span>Playtest</span></nav>
+<h1 id="adding-it-to-your-own-game">Adding it to your own game</h1>
+<p>Shipready starts by itself, so in most games there is nothing to do: press Play, then F8. This page is for games that
+already have their own input, pause menu, cameras, scenes or console, and for the questions that come up when Shipready
+meets them.</p>
+<p>To check that Shipready itself works, open <strong>Tools &gt; Shipready &gt; Playtest &gt; Why Isn't It Working</strong> while playing and
+click <strong>Open the Form Now</strong>. If the button opens the form but F8 doesn't, something in your game is taking the key.</p>
+<h2 id="keys">Keys <a class="anchor" href="#keys" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Your game</th>
+<th>What Shipready does</th>
+<th>What you can do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Already uses F8 or the key above Tab</td>
+<td>Both react</td>
+<td>Pick other keys in Settings (Open Key, Overlay Key). Set a key to None to switch it off and open the form from your own button with <code>BugReporter.Open()</code></td>
+</tr>
+<tr>
+<td>Has a chat box or a name field</td>
+<td>Ignores its keys while a Unity UI, TextMeshPro or UI Toolkit text field has focus</td>
+<td>Nothing</td>
+</tr>
+<tr>
+<td>Has its own text entry, rebinding screen or console</td>
+<td>Can't see it</td>
+<td><code>BugReporter.KeysBlocked = () =&gt; myChat.IsOpen;</code></td>
+</tr>
+<tr>
+<td>Uses touch gestures</td>
+<td>A three-finger tap opens the overlay, a four-finger tap the form</td>
+<td>Switch off Touch Gestures in Settings</td>
+</tr>
+</tbody>
+</table></div>
+<p>Closing the overlay with its key is never blocked, so it can't get stuck open.</p>
+<h2 id="your-games-input-while-the-form-is-open">Your game's input while the form is open <a class="anchor" href="#your-games-input-while-the-form-is-open" aria-label="Link to this section">#</a></h2>
+<p>The form takes the mouse and keyboard, but your game's own input keeps running underneath: typing "w" in the form can
+also walk the player forward. Pause it with Shipready's events:</p>
+<pre><code class="language-csharp">void OnEnable()
+{
+    BugReporter.FormOpened += PauseGameInput;
+    BugReporter.FormClosed += ResumeGameInput;
+}
+
+void OnDisable()
+{
+    BugReporter.FormOpened -= PauseGameInput;
+    BugReporter.FormClosed -= ResumeGameInput;
+}
+
+void PauseGameInput() =&gt; playerInput.actions.FindActionMap(&quot;Player&quot;).Disable();
+void ResumeGameInput() =&gt; playerInput.actions.FindActionMap(&quot;Player&quot;).Enable();
+</code></pre>
+<p>Shipready unlocks and shows the cursor while the form is open and puts it back afterwards, unless your game hid or
+locked it in the meantime.</p>
+<h2 id="pausing">Pausing <a class="anchor" href="#pausing" aria-label="Link to this section">#</a></h2>
+<p>With <strong>Pause While Open</strong> on (the default), the form sets <code>Time.timeScale</code> to 0 and puts the old value back when it
+closes. If your game sets a time scale other than 0 while the form is open (slow motion, say), Shipready keeps it. If it
+sets 0 (its own pause menu opening behind the form), Shipready can't tell that apart from its own pause and puts the old
+value back; switch off Pause While Open and pause from <code>BugReporter.FormOpened</code> instead if your game pauses itself. The
+kit itself runs on unscaled time, so the form and overlay work while your game is paused.</p>
+<p>The overlay's <code>timescale</code> command changes <code>Time.timeScale</code> directly. If your pause menu keeps its own "paused" flag,
+the two can disagree after using it; close your pause menu first.</p>
+<h2 id="scenes">Scenes <a class="anchor" href="#scenes" aria-label="Link to this section">#</a></h2>
+<p>Shipready lives on one hidden object that survives scene loads. A report records the active scene and every other scene
+loaded next to it. <strong>Go to where the tester was</strong> opens the same set (asking first if you have unsaved changes) and
+tells you if one of them isn't in this project.</p>
+<p>If your game destroys every object on reset, including ones kept with DontDestroyOnLoad, it destroys Shipready's too;
+call <code>BugReporter.Start()</code> after the reset to bring it back.</p>
+<p>Game state providers on objects that are destroyed are dropped by themselves.</p>
+<h2 id="cameras">Cameras <a class="anchor" href="#cameras" aria-label="Link to this section">#</a></h2>
+<p>The screenshot is always what was on screen. For <strong>Go to where the tester was</strong>, Shipready uses the camera tagged
+MainCamera, or else the screen camera drawn last (cameras that draw into a texture are skipped). The report names the
+camera it used. For split screen, a camera rig that isn't tagged, or Cinemachine, tell it which one:</p>
+<pre><code class="language-csharp">BugReporter.TesterCamera = () =&gt; localPlayer.Camera;
+</code></pre>
+<p>With Cinemachine, give the Unity camera that has the Cinemachine Brain, not a virtual camera.</p>
+<h2 id="ui">UI <a class="anchor" href="#ui" aria-label="Link to this section">#</a></h2>
+<p>The form and overlay are drawn on their own Canvases at very high sort orders (31990 and 32000), above almost any menu.
+They use your game's EventSystem when there is one, and add a hidden one only while one of Shipready's screens is showing
+when there isn't. Your EventSystem and its input module are never changed.</p>
+<p>Without the Unity UI package Shipready uses a simpler form with no markup; <strong>Why Isn't It Working</strong> says so.</p>
+<h2 id="your-own-code-and-assembly-definitions">Your own code and assembly definitions <a class="anchor" href="#your-own-code-and-assembly-definitions" aria-label="Link to this section">#</a></h2>
+<p>If your scripts are in an assembly definition, add <strong>RareGeometry.Shipready.Playtest</strong> to its references to call
+<code>BugReporter</code>, <code>DebugOptions</code> or <code>[DebugCommand]</code>. Scripts without one (Assembly-CSharp) see it already.</p>
+<p>Your calls stay in release builds and do nothing there; you don't need <code>#if</code> around them. Release builds leave out the
+Shipready's start-up code, its Unity UI screens, its Input System code and its settings, so nothing starts.</p>
+<p><code>[DebugCommand]</code> and <code>[DebugOption]</code> keep their methods and fields when IL2CPP strips code, so commands work in IL2CPP
+builds too.</p>
+<h2 id="other-consoles-and-error-reporting">Other consoles and error reporting <a class="anchor" href="#other-consoles-and-error-reporting" aria-label="Link to this section">#</a></h2>
+<p>Shipready reads the log with <code>Application.logMessageReceivedThreaded</code>, which works next to other consoles, Sentry,
+Backtrace or your own log handler. If your game sets <code>Debug.unityLogger.logEnabled = false</code>, reports have no log;
+<strong>Why Isn't It Working</strong> warns about it while playing. To use only the report form next to another console, switch off
+<strong>Enable Overlay</strong> in Settings.</p>
+<h2 id="big-logs-and-attachments">Big logs and attachments <a class="anchor" href="#big-logs-and-attachments" aria-label="Link to this section">#</a></h2>
+<p>Each log line and stack trace is kept up to 16,000 characters and Shipready keeps the last <strong>Log Lines</strong> of them (1,000
+by default). Attachments over <strong>Max Attachment Megabytes</strong> (50) are left out with a note in the report. Read a save
+file into memory when your attachment callback runs, rather than while the game is writing it.</p>
+<h2 id="several-game-windows-on-one-pc">Several game windows on one PC <a class="anchor" href="#several-game-windows-on-one-pc" aria-label="Link to this section">#</a></h2>
+<p>Every report file has its own random ID, so several copies of the game (multiplayer testing, ParrelSync) can save to
+the same folder. Unity sends key presses only to the focused window by default. Put "Host" or "Client" in the game
+state so you can tell the reports apart:</p>
+<pre><code class="language-csharp">BugReporter.SetContext(&quot;Network role&quot;, NetworkManager.Singleton.IsHost ? &quot;Host&quot; : &quot;Client&quot;);
+</code></pre>
+<h2 id="not-covered">Not covered <a class="anchor" href="#not-covered" aria-label="Link to this section">#</a></h2>
+<p>Native crashes and hard freezes can't be reported from inside the game. VR, consoles and phones have not been tested on
+real hardware; for VR, build your own form with <code>BugReporter.UseForm</code>.</p>
+<div class="doc-pager"><a class="pager prev" href="playtest-quick-start.html"><span class="label">Previous</span>Quick Start</a><a class="pager next" href="playtest-report-form.html"><span class="label">Next</span>The report form</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Adding+it+to+your+own+game" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#keys">Keys</a></li><li class="toc-2"><a href="#your-games-input-while-the-form-is-open">Your game&#x27;s input while the form is open</a></li><li class="toc-2"><a href="#pausing">Pausing</a></li><li class="toc-2"><a href="#scenes">Scenes</a></li><li class="toc-2"><a href="#cameras">Cameras</a></li><li class="toc-2"><a href="#ui">UI</a></li><li class="toc-2"><a href="#your-own-code-and-assembly-definitions">Your own code and assembly definitions</a></li><li class="toc-2"><a href="#other-consoles-and-error-reporting">Other consoles and error reporting</a></li><li class="toc-2"><a href="#big-logs-and-attachments">Big logs and attachments</a></li><li class="toc-2"><a href="#several-game-windows-on-one-pc">Several game windows on one PC</a></li><li class="toc-2"><a href="#not-covered">Not covered</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

@@ -451,6 +451,33 @@ PRODUCTS = [
         "shortcut_groups": {},
         "page_images": {},
     },
+    {
+        # Coming soon: page, docs (five manuals in one: --docs shipready=<stage made by Shipready's DevTools>) and the
+        # web demo (shipready/demo/) are up so the store description's links work. Launch day: "status": "live", "store".
+        "slug": "shipready",
+        "name": "Shipready",
+        "short": "Shipready",
+        "the": "",
+        "accent": "c-shipready",
+        "status": "coming soon",
+        "version": "1.0.0",
+        "store": "",
+        "summary": "Menus, settings, saves, tutorials and playtest tools in one connected package: the title screen, the "
+                   "settings players expect, saves that survive crashes, first-time tours and bug reports with steps.",
+        "requirements": ["Unity 6000.0.85f1+", "Built-in, URP & HDRP", "Unity UI + TextMesh Pro", "Full C# source"],
+        "menu": "Tools > Shipready",
+        "support_info": "Click the **?** in any Shipready window, then **Copy system info**",
+        "quick_start": [
+            "Import the package. Everything lands in <code>Assets/RareGeometry/Shipready/</code>. Try "
+            "<code>Samples/LighthouseBay/Showcase_LighthouseBay.unity</code> and press Play.",
+            "Open <strong>Tools &gt; Shipready &gt; Launch Desk</strong> and pick your game's starting point.",
+            "Click <strong>Connect My Game</strong>. Every step is shown before anything changes.",
+            "Press Play: the title screen opens, settings apply and the game saves and continues.",
+        ],
+        "pages": [],
+        "shortcut_groups": {},
+        "page_images": {},
+    },
 ]
 
 # Kits without docs yet, for the docs hub and "More from Rare Geometry": (name, accent, status, one line)
@@ -545,6 +572,8 @@ def og_image(path):
     """The link-preview picture: a kit's own social art on its pages, the Rare Geometry card everywhere else."""
     if path.startswith("prefab-builder/"):
         return "prefab-builder/social.jpg"
+    if path.startswith("shipready/"):
+        return "shipready/social.jpg"
     return "og-image.jpg"
 
 
@@ -644,7 +673,7 @@ def support_section(root, slug):
   <div class="wrap">
     <div class="section-head">
       <p class="label">Support</p>
-      <h2 id="support-title">Help with the {html.escape(product["short"])}</h2>
+      <h2 id="support-title">Help with {product.get("the", "the ")}{html.escape(product["short"])}</h2>
       <p>Stuck, found a bug or have an idea? Pick whichever is easiest. Every message gets an answer.</p>
     </div>
     <div class="tiles">
@@ -730,6 +759,10 @@ HAND_PAGES = [
      "All In One Waypoint & Minimap Kit",
      "Show players where to go in Unity: objective markers, edge arrows with distance, a compass bar, a minimap and a "
      "full-screen map, with a one-click map maker, fog of war and region discovery, without code. Coming soon to the Asset Store."),
+    ("shipready.html", "shipready/index.html", "../", "",
+     "Shipready",
+     "Menus, settings, saves, tutorials and playtest tools for Unity in one connected package: title screen, 92 player "
+     "settings, crash-safe saves, first-time tours and bug reports with steps. Try the web demo. Coming soon to the Asset Store."),
     ("support.html", "support/index.html", "../", "support",
      "Support",
      "Get help with Rare Geometry tools: documentation, bug reports, Discord and email."),

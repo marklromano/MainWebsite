@@ -300,6 +300,7 @@ a.product-link:hover { border-color: var(--accent); background: var(--surface-2)
 .c-save { --accent: var(--c-save); }
 .c-interact { --accent: var(--c-interact); }
 .c-settings { --accent: var(--c-settings); }
+.c-shipready { --accent: #5FA8D3; }
 .c-tutorial { --accent: var(--c-tutorial); }
 .c-runtime { --accent: var(--c-runtime); }
 .c-bugreport { --accent: var(--c-bugreport); }

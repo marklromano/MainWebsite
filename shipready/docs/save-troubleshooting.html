@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Troubleshooting | Rare Geometry</title>
+<meta name="description" content="Troubleshooting: documentation for the Shipready for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/shipready/docs/save-troubleshooting.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Troubleshooting">
+<meta property="og:description" content="Troubleshooting: documentation for the Shipready for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/shipready/docs/save-troubleshooting.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/shipready/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Shipready docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="quick-start.html">Quick Start</a><a href="launch-desk.html">Launch Desk</a><a href="make-it-yours.html">Make it yours</a><a href="player-options.html">Player Options</a><a href="game-look.html">Game Look</a><a href="per-player-settings.html">Per-player settings</a><a href="game-colours.html">Game colours</a><a href="readiness.html">Ship Readiness Checker</a><a href="works-with.html">Working with other products</a></div><div class="docs-group"><p class=label>Menus and settings</p><a href="settings-index.html">Overview</a><a href="settings-quick-start.html">Quick Start</a><a href="settings-samples.html">Samples</a><a href="settings-existing-game.html">Using it in an existing game</a><a href="settings-make-it-yours.html">Make it yours</a><a href="settings-screens.html">Screens</a><a href="settings-settings-catalog.html">Settings catalog</a><a href="settings-settings-reference.html">Settings reference</a><a href="settings-display-safety.html">Display safety</a><a href="settings-audio.html">Audio</a><a href="settings-graphics.html">Graphics</a><a href="settings-controls-and-rebinding.html">Controls and rebinding</a><a href="settings-themes.html">Themes</a><a href="settings-accessibility.html">Accessibility</a><a href="settings-localization.html">Languages</a><a href="settings-pause-and-multiplayer.html">Pause and multiplayer hooks</a><a href="settings-extending-api.html">Extending and API</a><a href="settings-upgrading.html">Upgrading</a><a href="settings-troubleshooting.html">Troubleshooting and FAQ</a><a href="settings-known-issues.html">Known issues and limits</a><a href="settings-support.html">Support</a></div><div class="docs-group"><p class=label>Saves</p><a href="save-quick-start.html"> Quick Start</a><a href="save-guide.html"> Guide</a><a href="save-walkthroughs.html">Walkthroughs</a><a href="save-walkthroughs-first-save.html">Walkthrough: your first save</a><a href="save-walkthroughs-save-menu.html">Walkthrough: the save and load menu</a><a href="save-walkthroughs-world-objects.html">Walkthrough: world objects</a><a href="save-walkthroughs-backups-and-recovery.html">Walkthrough: backups and recovery</a><a href="save-walkthroughs-game-updates.html">Walkthrough: game updates and migrations</a><a href="save-walkthroughs-own-menu.html">Walkthrough: use your own menu</a><a href="save-walkthroughs-own-menu-ui-toolkit.html">Walkthrough: your own menu in UI Toolkit</a><a href="save-game-updates.html">Game Updates</a><a href="save-coop.html">Co-op</a><a href="save-steam-cloud.html">Steam Cloud</a><a href="save-reference.html"> Reference</a><a href="save-api-reference.html"> API Reference</a><a href="save-limits-and-faq.html">Limits and FAQ</a><a href="save-troubleshooting.html" aria-current="page">Troubleshooting</a><a href="save-known-issues.html">Known Issues</a><a href="save-changelog.html">Changelog</a><a href="save-support.html">Support</a></div><div class="docs-group"><p class=label>Tutorials</p><a href="tutorials-index.html">Overview</a><a href="tutorials-quick-start.html">Quick Start</a><a href="tutorials-flows-and-steps.html">Flows and Steps</a><a href="tutorials-targets.html">Targets</a><a href="tutorials-finishing-steps.html">Finishing a Step</a><a href="tutorials-coach-marks-and-hints.html">Coach Marks and Hints</a><a href="tutorials-make-it-yours.html">Make It Yours</a><a href="tutorials-button-pictures.html">Button Pictures</a><a href="tutorials-tools.html">Tools</a><a href="tutorials-integrations.html">Integrations</a><a href="tutorials-extending.html">Extending</a><a href="tutorials-samples.html">Samples</a><a href="tutorials-upgrading.html">Upgrading</a><a href="tutorials-troubleshooting.html">Troubleshooting</a><a href="tutorials-support.html">Support</a></div><div class="docs-group"><p class=label>Playtest</p><a href="playtest-index.html">Overview</a><a href="playtest-quick-start.html">Quick Start</a><a href="playtest-adding-to-your-game.html">Adding it to your own game</a><a href="playtest-report-form.html">The report form</a><a href="playtest-report-inbox.html">Report Inbox</a><a href="playtest-debug-overlay.html">Debug overlay</a><a href="playtest-settings.html">Settings</a><a href="playtest-builds-and-privacy.html">Builds and privacy</a><a href="playtest-make-it-yours.html">Make it yours</a><a href="playtest-extending.html">Extending</a><a href="playtest-samples.html">Samples</a><a href="playtest-upgrading.html">Upgrading</a><a href="playtest-troubleshooting.html">Troubleshooting</a><a href="playtest-support.html">Support</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="quick-start.html">Quick Start</a><a href="launch-desk.html">Launch Desk</a><a href="make-it-yours.html">Make it yours</a><a href="player-options.html">Player Options</a><a href="game-look.html">Game Look</a><a href="per-player-settings.html">Per-player settings</a><a href="game-colours.html">Game colours</a><a href="readiness.html">Ship Readiness Checker</a><a href="works-with.html">Working with other products</a></div><div class="docs-group"><p class=label>Menus and settings</p><a href="settings-index.html">Overview</a><a href="settings-quick-start.html">Quick Start</a><a href="settings-samples.html">Samples</a><a href="settings-existing-game.html">Using it in an existing game</a><a href="settings-make-it-yours.html">Make it yours</a><a href="settings-screens.html">Screens</a><a href="settings-settings-catalog.html">Settings catalog</a><a href="settings-settings-reference.html">Settings reference</a><a href="settings-display-safety.html">Display safety</a><a href="settings-audio.html">Audio</a><a href="settings-graphics.html">Graphics</a><a href="settings-controls-and-rebinding.html">Controls and rebinding</a><a href="settings-themes.html">Themes</a><a href="settings-accessibility.html">Accessibility</a><a href="settings-localization.html">Languages</a><a href="settings-pause-and-multiplayer.html">Pause and multiplayer hooks</a><a href="settings-extending-api.html">Extending and API</a><a href="settings-upgrading.html">Upgrading</a><a href="settings-troubleshooting.html">Troubleshooting and FAQ</a><a href="settings-known-issues.html">Known issues and limits</a><a href="settings-support.html">Support</a></div><div class="docs-group"><p class=label>Saves</p><a href="save-quick-start.html"> Quick Start</a><a href="save-guide.html"> Guide</a><a href="save-walkthroughs.html">Walkthroughs</a><a href="save-walkthroughs-first-save.html">Walkthrough: your first save</a><a href="save-walkthroughs-save-menu.html">Walkthrough: the save and load menu</a><a href="save-walkthroughs-world-objects.html">Walkthrough: world objects</a><a href="save-walkthroughs-backups-and-recovery.html">Walkthrough: backups and recovery</a><a href="save-walkthroughs-game-updates.html">Walkthrough: game updates and migrations</a><a href="save-walkthroughs-own-menu.html">Walkthrough: use your own menu</a><a href="save-walkthroughs-own-menu-ui-toolkit.html">Walkthrough: your own menu in UI Toolkit</a><a href="save-game-updates.html">Game Updates</a><a href="save-coop.html">Co-op</a><a href="save-steam-cloud.html">Steam Cloud</a><a href="save-reference.html"> Reference</a><a href="save-api-reference.html"> API Reference</a><a href="save-limits-and-faq.html">Limits and FAQ</a><a href="save-troubleshooting.html" aria-current="page">Troubleshooting</a><a href="save-known-issues.html">Known Issues</a><a href="save-changelog.html">Changelog</a><a href="save-support.html">Support</a></div><div class="docs-group"><p class=label>Tutorials</p><a href="tutorials-index.html">Overview</a><a href="tutorials-quick-start.html">Quick Start</a><a href="tutorials-flows-and-steps.html">Flows and Steps</a><a href="tutorials-targets.html">Targets</a><a href="tutorials-finishing-steps.html">Finishing a Step</a><a href="tutorials-coach-marks-and-hints.html">Coach Marks and Hints</a><a href="tutorials-make-it-yours.html">Make It Yours</a><a href="tutorials-button-pictures.html">Button Pictures</a><a href="tutorials-tools.html">Tools</a><a href="tutorials-integrations.html">Integrations</a><a href="tutorials-extending.html">Extending</a><a href="tutorials-samples.html">Samples</a><a href="tutorials-upgrading.html">Upgrading</a><a href="tutorials-troubleshooting.html">Troubleshooting</a><a href="tutorials-support.html">Support</a></div><div class="docs-group"><p class=label>Playtest</p><a href="playtest-index.html">Overview</a><a href="playtest-quick-start.html">Quick Start</a><a href="playtest-adding-to-your-game.html">Adding it to your own game</a><a href="playtest-report-form.html">The report form</a><a href="playtest-report-inbox.html">Report Inbox</a><a href="playtest-debug-overlay.html">Debug overlay</a><a href="playtest-settings.html">Settings</a><a href="playtest-builds-and-privacy.html">Builds and privacy</a><a href="playtest-make-it-yours.html">Make it yours</a><a href="playtest-extending.html">Extending</a><a href="playtest-samples.html">Samples</a><a href="playtest-upgrading.html">Upgrading</a><a href="playtest-troubleshooting.html">Troubleshooting</a><a href="playtest-support.html">Support</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Shipready</a><span>/</span><span>Saves</span></nav>
+<h1 id="troubleshooting">Troubleshooting</h1>
+<p>Shipready never throws an exception into your game. Every save, load and delete returns a result instead. When there is something to report, the result carries a code such as <code>SK101</code>, a plain-English message and a link to this guide. This guide has one entry for each code. Each entry explains what the code means, what usually causes it and how to fix it.</p>
+<p><a id="missing-menus"></a></p>
+<h2 id="if-shipreadys-menus-are-missing-after-import">If Shipready's menus are missing after import <a class="anchor" href="#if-shipreadys-menus-are-missing-after-import" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> The save menu, the editor tools' windows (the Start window, the Setup Wizard, the Save Inspector and Diagnostics) and the demos are built on two Unity packages, <strong>Unity UI</strong> (<code>com.unity.ugui</code>) and <strong>TextMesh Pro</strong>, and one of them is missing from the project. TextMesh Pro is part of Unity UI from Unity 2023.2 and the separate <code>com.unity.textmeshpro</code> package in Unity 2022.3. Shipready still imports without compile errors: the runtime (<code>SaveKit</code>) and the core editor services (saved ids for Saveables, the registries and their <strong>Registries</strong> commands, and the migration link file for builds) compile and keep working. The menu, the windows and the demos wait for the package, so <strong>Tools → Shipready</strong> shows only <strong>Required Packages</strong> and the <strong>Registries</strong> commands. The Console shows a warning once per editor session that starts <code>[Shipready] Shipready's save menu, editor tool windows and demos need</code> and names the package, and says how to install it; <strong>Tools → Shipready → Saves → Required Packages</strong> shows the same steps. A player build stops with the same message until the package is in.</p>
+<p><strong>Likely cause:</strong> The project was not made from one of Unity's templates, or the package was removed. Projects made from Unity's templates already have both. The Asset Store installs them together with Shipready only when the publisher declares them as dependencies of the package.</p>
+<p><strong>Fix:</strong> Click <strong>Open Package Manager</strong> in the dialog (or choose <strong>Tools → Shipready → Saves → Required Packages</strong>, or open <strong>Window → Package Manager</strong> yourself). Choose <strong>Unity Registry</strong> at the top left, select the package and click <strong>Install</strong>. Shipready never installs packages itself. When Unity has finished compiling, Shipready's other commands appear and the Start window opens.</p>
+<h2 id="how-codes-appear">How codes appear <a class="anchor" href="#how-codes-appear" aria-label="Link to this section">#</a></h2>
+<p>Every <code>SaveKit</code> call returns a result. Saves and deletes return a <code>SaveResult</code> and loads return a <code>LoadResult</code>. Both have these parts:</p>
+<ul>
+<li><code>Success</code>: whether you got what you asked for. Only two outcomes count as success: a result with no code (SK000, which has no entry here) and SK102, a load that was rescued from a backup.</li>
+<li><code>Code</code>: a <code>SaveErrorCode</code>, written as <code>SK</code> plus three digits. Code numbers never change between versions, so a code quoted in an old support email still means the same thing.</li>
+<li><code>Message</code>: one plain sentence. Details such as the file name follow in brackets.</li>
+<li><code>DocumentationLink</code>: the path to this file plus the entry's anchor, for example <code>RareGeometry/Shipready/Save/Documentation/Troubleshooting.md#sk101</code>.</li>
+<li><code>Report</code>: counts, timings, bytes and <code>Warnings</code>. A call that succeeded can still carry warnings, and each warning has its own code.</li>
+</ul>
+<p><code>result.ToString()</code> puts the code, message and link on one line, ready for a log:</p>
+<pre><code class="language-csharp">LoadResult loaded = await SaveKit.LoadAsync(slot: 1);
+if (!loaded.Success) Debug.LogWarning(loaded.ToString());
+// SK120 This save was written by a newer version of the game. ... See RareGeometry/Shipready/Save/Documentation/Troubleshooting.md#sk120
+</code></pre>
+<p>The first digit groups the codes by area:</p>
+<ul>
+<li>SK0xx: general problems</li>
+<li>SK10x: save files</li>
+<li>SK11x: disk and storage</li>
+<li>SK12x: game updates</li>
+<li>SK13x: world persistence</li>
+<li>SK14x: co-op</li>
+<li>SK15x: slots and settings</li>
+</ul>
+<h2 id="reading-the-console-report">Reading the Console report <a class="anchor" href="#reading-the-console-report" aria-label="Link to this section">#</a></h2>
+<p>Every line Shipready writes to the Console starts with <code>[Shipready]</code>, followed by the code when there is one. A warning from a save or load looks like this:</p>
+<pre><code>[Shipready] SK130 Chest_03 (8c1f...): it is no longer in the scene, so its saved state was skipped.
+</code></pre>
+<p>Every save and load also prints a one-line report, while <strong>Report To Console</strong> is ticked (it is off by default) and <strong>Log Level</strong> is Warnings or Verbose:</p>
+<pre><code>[Shipready] Save slot_01.save: 12.4 ms, 5 categories, 214 values, 40 objects (3 spawned), 5321 bytes, 0 warnings
+[Shipready] Load slot_01.save: 9.8 ms, 5 categories, 214 values, 40 objects restored, 1 skipped, 5321 bytes, read from Backup1, 2 warnings
+</code></pre>
+<p>At Verbose the line also gives the time of each stage, after a <code>|</code>: capture, serialize, compress, encrypt, storage and restore. A save or load that failed says so straight after the file name, for example <code>Load slot_01.save failed with SK101 FileDamaged</code>. At Errors and Off no report line is printed. Tick <strong>Report To Console</strong> (under Diagnostics in the settings asset, or set <code>SaveLog.ReportToConsole</code> while the game runs) to get the line; the warnings themselves are always printed.</p>
+<ul>
+<li>"read from Backup1" means the load fell back to a backup (SK102).</li>
+<li>"skipped" counts saved objects that are no longer in the scene (SK130). Their names are listed in <code>Report.SkippedObjects</code>.</li>
+</ul>
+<p>Shipready does not print every failed call. SK151, for example, only appears in the result, so always check <code>Success</code> in your own code. Shipready's own autosaves do print their failures.</p>
+<p><strong>Logging levels.</strong> Set <strong>Log Level</strong> in the settings asset, under Diagnostics. The choices are Off, Errors, Warnings (the default) and Verbose. Shipready applies the level when <code>SaveKit.Initialise</code> runs. To change it while the game is running, set <code>SaveLog.Level</code> (in the namespace <code>RareGeometry.Shipready.Save.Diagnostics</code>). Use Verbose while you investigate a problem, and Warnings for release.</p>
+<p><strong>Settings in bold</strong>, such as <strong>Save Version</strong>, are fields on the settings asset <code>ShipreadySaveSettings</code>. The Start window (<strong>Create</strong>) or the Setup Wizard creates this asset in a <code>Resources</code> folder. To change a setting, select the asset in the Project window.</p>
+<p><strong>Where the files are.</strong> On Windows, saves are kept in <code>%USERPROFILE%\AppData\LocalLow\&lt;Company Name&gt;\&lt;Product Name&gt;\Saves</code>. That is <code>Application.persistentDataPath</code>, then <strong>Save Folder Name</strong>, then <strong>Profile Folder</strong> if one is set, with <code>{profile}</code> replaced by <code>SaveKit.ProfileId</code>. Slot 1 is saved as <code>slot_01.save</code>. Next to it you may find these files:</p>
+<ul>
+<li><code>slot_01.save.tmp</code>: a save that was still being written.</li>
+<li><code>slot_01.save.bak1</code> and <code>slot_01.save.bak2</code>: backups.</li>
+<li><code>slot_01.save.corrupt-&lt;time&gt;</code>: a damaged copy, kept for support.</li>
+</ul>
+<p><strong>Tools → Shipready → Saves → Save Inspector</strong> lists all of these files, opens any of them and opens the save folder.</p>
+<p><strong>Your players' saves are protected by design:</strong></p>
+<ul>
+<li>A save is first written to a temporary file. Shipready reads that file back to check it, and only then swaps it into place. A save that fails or is cut short leaves the previous save exactly as it was.</li>
+<li>A load tries the main file first. If that fails, it tries a complete temporary file, then each backup, newest first.</li>
+<li>A damaged file is renamed and kept. It is never deleted.</li>
+<li>The automatic fallback to a backup is on by default. If you turn off <strong>File Options → Automatic Fallback</strong>, a damaged main file makes the load fail with its damage code (SK101, SK103 to SK107), and nothing is moved aside. The player can then choose to restore the newest valid backup with <code>SaveKit.RestoreBackup(slot)</code>.</li>
+<li>A file the game cannot read safely, such as a save from a newer version, is left untouched.</li>
+</ul>
+<h2 id="quick-index">Quick index <a class="anchor" href="#quick-index" aria-label="Link to this section">#</a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Name</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#sk001">SK001</a></td>
+<td>Unknown</td>
+<td>Something failed that Shipready could not classify</td>
+</tr>
+<tr>
+<td><a href="#sk002">SK002</a></td>
+<td>InvalidArgument</td>
+<td>A value handed to Shipready was missing, empty or out of range</td>
+</tr>
+<tr>
+<td><a href="#sk003">SK003</a></td>
+<td>Busy</td>
+<td>Another save or load of the file did not finish in time</td>
+</tr>
+<tr>
+<td><a href="#sk004">SK004</a></td>
+<td>Cancelled</td>
+<td>The call was stopped before it finished</td>
+</tr>
+<tr>
+<td><a href="#sk005">SK005</a></td>
+<td>NotInitialised</td>
+<td>Shipready has no settings yet, or was stopped mid-call</td>
+</tr>
+<tr>
+<td><a href="#sk100">SK100</a></td>
+<td>FileNotFound</td>
+<td>There is no file under that name</td>
+</tr>
+<tr>
+<td><a href="#sk101">SK101</a></td>
+<td>FileDamaged</td>
+<td>The save and every copy of it are unreadable</td>
+</tr>
+<tr>
+<td><a href="#sk102">SK102</a></td>
+<td>RecoveredFromBackup</td>
+<td>Success: a backup was loaded instead of a damaged main file</td>
+</tr>
+<tr>
+<td><a href="#sk103">SK103</a></td>
+<td>UnsupportedFormat</td>
+<td>The file is not in a format Shipready version can read</td>
+</tr>
+<tr>
+<td><a href="#sk104">SK104</a></td>
+<td>ChecksumMismatch</td>
+<td>The file was edited or cut short after it was written</td>
+</tr>
+<tr>
+<td><a href="#sk105">SK105</a></td>
+<td>TamperDetected</td>
+<td>An encrypted file failed its tamper check</td>
+</tr>
+<tr>
+<td><a href="#sk106">SK106</a></td>
+<td>EncryptionKeyWrong</td>
+<td>An encrypted file was written with a different key</td>
+</tr>
+<tr>
+<td><a href="#sk107">SK107</a></td>
+<td>CompressionFailed</td>
+<td>Compressed data could not be unpacked</td>
+</tr>
+<tr>
+<td><a href="#sk110">SK110</a></td>
+<td>DiskFull</td>
+<td>The drive is full; existing saves were not touched</td>
+</tr>
+<tr>
+<td><a href="#sk111">SK111</a></td>
+<td>AccessDenied</td>
+<td>The file or folder could not be written or read</td>
+</tr>
+<tr>
+<td><a href="#sk112">SK112</a></td>
+<td>StorageUnavailable</td>
+<td>The save folder could not be reached at all</td>
+</tr>
+<tr>
+<td><a href="#sk113">SK113</a></td>
+<td>PathTooLong</td>
+<td>The save file path is too long for Windows</td>
+</tr>
+<tr>
+<td><a href="#sk120">SK120</a></td>
+<td>NewerVersion</td>
+<td>The save comes from a newer version of the game</td>
+</tr>
+<tr>
+<td><a href="#sk121">SK121</a></td>
+<td>MigrationMissing</td>
+<td>A step needed to upgrade an old save does not exist</td>
+</tr>
+<tr>
+<td><a href="#sk122">SK122</a></td>
+<td>MigrationFailed</td>
+<td>A migration step threw an exception</td>
+</tr>
+<tr>
+<td><a href="#sk123">SK123</a></td>
+<td>SaveVersionInvalid</td>
+<td>Save Version is not a whole number of 1 or more</td>
+</tr>
+<tr>
+<td><a href="#sk130">SK130</a></td>
+<td>ObjectNotFound</td>
+<td>A saved object or link no longer exists in the scene</td>
+</tr>
+<tr>
+<td><a href="#sk131">SK131</a></td>
+<td>PrefabNotRegistered</td>
+<td>A runtime object's prefab is not in the Prefab Registry</td>
+</tr>
+<tr>
+<td><a href="#sk132">SK132</a></td>
+<td>AssetNotRegistered</td>
+<td>A linked asset is not in the Asset Registry</td>
+</tr>
+<tr>
+<td><a href="#sk133">SK133</a></td>
+<td>SceneNotRegistered</td>
+<td>A scene with saved objects is not in the Scene Registry</td>
+</tr>
+<tr>
+<td><a href="#sk134">SK134</a></td>
+<td>SceneNotInBuildSettings</td>
+<td>A scene the save needs is not in Build Settings</td>
+</tr>
+<tr>
+<td><a href="#sk140">SK140</a></td>
+<td>HostOnly</td>
+<td>Only the host or a solo player may do this</td>
+</tr>
+<tr>
+<td><a href="#sk141">SK141</a></td>
+<td>PlayerUnknown</td>
+<td>A connected player has no stable player ID, so starts from defaults</td>
+</tr>
+<tr>
+<td><a href="#sk150">SK150</a></td>
+<td>CategoryUnknown</td>
+<td>A category name is not defined in the settings</td>
+</tr>
+<tr>
+<td><a href="#sk151">SK151</a></td>
+<td>SlotOutOfRange</td>
+<td>The slot number is outside the configured range</td>
+</tr>
+<tr>
+<td><a href="#sk152">SK152</a></td>
+<td>SlotEmpty</td>
+<td>The slot holds no save yet</td>
+</tr>
+<tr>
+<td><a href="#sk153">SK153</a></td>
+<td>SettingsInvalid</td>
+<td>A value in the settings asset, or SaveKit.ProfileId, cannot be used</td>
+</tr>
+<tr>
+<td><a href="#sk154">SK154</a></td>
+<td>LoadInProgress</td>
+<td>A save or restore was refused while a load was still loading scenes</td>
+</tr>
+</tbody>
+</table></div>
+<p><a id="sk001"></a></p>
+<h2 id="sk001-unknown">SK001: Unknown <a class="anchor" href="#sk001-unknown" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> Something failed that Shipready could not name more precisely. The detail in brackets says what Shipready was doing. As a warning inside a report, SK001 means the rest of the save or load still went ahead.</p>
+<p><strong>Likely cause:</strong> Usually an exception from game code Shipready calls, such as <code>ISaveable.CaptureState</code>, <code>RestoreState</code> or your <code>ISpawnHandler</code>. Also: a disk error Windows did not explain, a thumbnail that could not be encoded, or a saved scene that took longer than <code>SaveKit.World.SceneLoadTimeoutSeconds</code> (120 by default) to load. "Stopped unexpectedly" points to a kit bug.</p>
+<p><strong>Fix:</strong> Read the Console error and its stack trace. If it points into your script, fix that method. Shipready caught the exception, so the game kept running. For a scene timeout, check your <code>ISceneLoader</code> and <code>allowSceneActivation</code>. Send stack traces inside <code>RareGeometry.Shipready.Save</code> to support. A save that stops part-way never replaces the file on disk.</p>
+<p><a id="sk002"></a></p>
+<h2 id="sk002-invalidargument">SK002: InvalidArgument <a class="anchor" href="#sk002-invalidargument" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> Shipready was given a value it cannot use, so it refused the call. Nothing was written.</p>
+<p><strong>Likely cause:</strong> One of these:</p>
+<ul>
+<li><code>SaveKit.Quicksave()</code> was called while <strong>Quicksave Enabled</strong> is off.</li>
+<li>Encryption is on, but <strong>File Options → Passphrase</strong> is empty.</li>
+<li>The save data is nested more than 128 levels deep.</li>
+<li><code>SaveKit.LoadScene</code> was given an empty scene name, or <code>SaveKit.UnloadScene</code> was asked to unload the only loaded scene.</li>
+<li><code>SaveKit.RestoreBackup</code> was called on a slot whose main file reads correctly. The file was left as it was.</li>
+<li><code>SaveKit.Load</code>, <code>LoadAsync</code>, <code>Delete</code>, <code>RestoreBackup</code> or <code>RestoreBackupAsync</code> was given a <code>SlotInfo</code> that names no file of this game: no slot in range, autosave or quicksave, or null. A <code>SlotInfo</code> you build yourself, or one for the global file, is refused, so these calls can never reach a file Shipready does not own.</li>
+</ul>
+<p>In a save report, SK002 usually means the texture given to <code>SaveKit.SetNextThumbnail</code> is not readable. The save itself still succeeded. In the Console, SK002 can also mean that <code>SaveKit.Data.Set</code> or <code>SaveWriter.Write</code> was given a <code>Dictionary</code> it cannot save: only string or int keys, with values of a supported type, are saved. Such a dictionary is stored as no value, and <code>Get</code> returns your fallback.</p>
+<p><strong>Fix:</strong> The detail in brackets names the value. Turn on <strong>Quicksave Enabled</strong> or stop calling <code>Quicksave()</code>. Set a passphrase. Flatten very deep data, or store it through <code>ISaveable</code>. Save a dictionary with other keys or values as separate lists, or with <code>WriteAssets</code> for asset references. For thumbnails, pass a texture from <code>ScreenCapture.CaptureScreenshotAsTexture()</code>, or tick Read/Write in the texture's import settings. For a <code>SlotInfo</code>, pass one that <code>SaveKit.GetSlotInfo</code>, <code>GetAutosaveInfos</code> or <code>GetQuicksaveInfo</code> returned.</p>
+<p><a id="sk003"></a></p>
+<h2 id="sk003-busy">SK003: Busy <a class="anchor" href="#sk003-busy" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> A save or load could not start because another one on the same file did not finish in time. Nothing was written.</p>
+<p><strong>Likely cause:</strong> Shipready itself never returns SK003 in 1.0. Saves and loads of the same file wait in a queue and run in order, however long that takes. Only a custom <code>ISaveStorage</code> of your own could return this code.</p>
+<p><strong>Fix:</strong> If your storage returns SK003, <code>await</code> the earlier call, then try again. If the game freezes while saving instead, look for code on the main thread that calls <code>.Wait()</code> or reads <code>.Result</code> on a <code>SaveKit</code> task. The task needs the main thread to finish, so the game waits forever. Use the blocking <code>SaveKit.Save</code> or <code>SaveKit.Load</code> there instead. If you see SK003 without custom storage, it is a bug in Shipready, so please report it.</p>
+<p><a id="sk004"></a></p>
+<h2 id="sk004-cancelled">SK004: Cancelled <a class="anchor" href="#sk004-cancelled" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> A save or load was stopped before it finished.</p>
+<p><strong>Likely cause:</strong> The 1.0 API has no way to cancel a call, so Shipready itself never returns SK004. Only a custom <code>ISaveStorage</code> of your own could return it. If <code>SaveKit.Shutdown()</code> or a second <code>SaveKit.Initialise()</code> interrupts a save or load, the result is SK005, not SK004.</p>
+<p><strong>Fix:</strong> If your storage returns SK004, run the call again once the storage is ready. If you see SK004 without custom storage, please report it as a bug in Shipready. A stopped save never replaces the file already on disk, because the new file only goes into place after it has been written in full and checked.</p>
+<p><a id="sk005"></a></p>
+<h2 id="sk005-notinitialised">SK005: NotInitialised <a class="anchor" href="#sk005-notinitialised" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> Shipready was used before it had settings and a save folder, or it was stopped or restarted mid-call. Nothing was read or written.</p>
+<p><strong>Likely cause:</strong> One of these:</p>
+<ul>
+<li>The settings have not been created yet (the Start window's <strong>Create</strong>, or the Setup Wizard), or <code>ShipreadySaveSettings</code> is not inside a <code>Resources</code> folder.</li>
+<li><strong>Initialise Automatically</strong> is switched off in the settings asset, and <code>SaveKit.Initialise()</code> was never called, or it failed and nobody checked the result.</li>
+<li>Shipready tried to start by itself and could not. The Console then shows an error that starts "Shipready could not start by itself" and names the problem.</li>
+<li><code>SaveKit.Shutdown()</code> or a second <code>Initialise()</code> ran during a save or load, including from a <code>Saving</code> or <code>Loading</code> event handler.</li>
+</ul>
+<p>If domain reload is turned off (Enter Play Mode Options), Shipready still resets every time you press Play.</p>
+<p><strong>Fix:</strong> Open <strong>Tools → Shipready → Saves → Start</strong> and click <strong>Create</strong> next to <strong>No settings yet</strong>, or run the Setup Wizard. With <strong>Initialise Automatically</strong> on (the default, under Start-up in the settings asset), Shipready starts by itself just before the first scene loads, in the Editor and in builds, and nothing else is needed. With it off, call <code>SaveKit.Initialise()</code> once on the main thread before the first save or load, for example in <code>Awake</code> in your first scene, in every Play session. Either way, check the Console or <code>result.Success</code>: the code explains any problem with the settings.</p>
+<p><a id="sk100"></a></p>
+<h2 id="sk100-filenotfound">SK100: FileNotFound <a class="anchor" href="#sk100-filenotfound" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> There is no main file, temporary file or backup with that name. This is normal on a first run. Nothing was changed.</p>
+<p><strong>Likely cause:</strong> <code>SaveKit.LoadGlobal()</code>, <code>LoadNewestAutosave()</code> or <code>LoadQuicksave()</code> ran before that file was ever saved. If saves that used to load have disappeared, Shipready is looking somewhere else. That happens when <strong>Save Folder Name</strong>, <strong>Profile Folder</strong>, a file name pattern or <strong>File Options → File Extension</strong> changed. It also happens when Company Name or Product Name changed in Player Settings, because that moves <code>Application.persistentDataPath</code>.</p>
+<p><strong>Fix:</strong> On a first run, treat SK100 as "start from defaults". Otherwise, change the settings back to the values the saves were made with. The old files are still on disk under the old folder or name. The Save Inspector can open the save folder so you can see what is there.</p>
+<p><a id="sk101"></a></p>
+<h2 id="sk101-filedamaged">SK101: FileDamaged <a class="anchor" href="#sk101-filedamaged" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> The save could not be read, and neither could the temporary file or any backup. Nothing was deleted, and the game keeps running.</p>
+<p><strong>Likely cause:</strong> The copies are damaged in different ways: empty, cut short or not valid JSON. If they all fail the same way, you get that code instead. This usually follows a power cut or a faulty drive. SK101 also appears when:</p>
+<ul>
+<li>A save's new file did not read back correctly, so it was not swapped in.</li>
+<li>A save of only some categories found the old file unreadable, so it wrote nothing.</li>
+<li><code>SaveKit.RestoreBackup</code> found no valid backup.</li>
+<li><strong>Automatic Fallback</strong> is off and the main file of a slot, an autosave or the quicksave is missing or unreadable. A valid backup may well exist: the load does not use it on its own. With fallback off, a crash during the very first save of a slot, before the new file was swapped in, leaves only <code>slot_01.save.tmp</code>, and the load reports that as SK101 too. The global file always falls back, whatever the setting.</li>
+</ul>
+<p><strong>Fix:</strong> The report's warnings list every copy Shipready tried, with its code. With <strong>Automatic Fallback</strong> off, check <code>SaveKit.GetSlotInfo(slot).HasValidBackup</code>: when it is true, <code>SaveKit.RestoreBackup(slot)</code> puts the newest valid backup (or the <code>.tmp</code> file) in place and the slot loads again. The save menu offers this as Restore backup. Otherwise, import the player's file into the Save Inspector to look inside. Tell the player kindly that this save can't be loaded, and offer another slot, an autosave or a new game. After <code>SaveKit.NewGame()</code>, saving to that slot replaces the damaged file. Keep <strong>File Options → Backup Count</strong> at 1 or more.</p>
+<p><a id="sk102"></a></p>
+<h2 id="sk102-recoveredfrombackup">SK102: RecoveredFromBackup <a class="anchor" href="#sk102-recoveredfrombackup" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> Success. The main file could not be used, so Shipready loaded the newest good copy. <code>Success</code> and <code>RecoveredFromBackup</code> are both true. <code>LoadedFrom</code> names the copy (<code>Temporary</code>, <code>Backup1</code>, <code>Backup2</code> or <code>OlderBackup</code>), and <code>SavedUtc</code> says when that copy was saved. <code>Temporary</code> is a save that was being written when the game stopped, so it is the newest. <code>SaveKit.RestoreBackup</code> also returns SK102 when it has put a backup back.</p>
+<p><strong>Likely cause:</strong> The main file failed one of Shipready's checks, for example SK104 after a hand edit, or after a crash cut the file short. The report's warnings give the reason. In a save report, SK102 means the save kept the other categories from a backup.</p>
+<p><strong>Fix:</strong> No action is required. The damaged file was kept as <code>&lt;name&gt;.corrupt-&lt;time&gt;</code>, and the next save writes a new main file. Tell the player briefly, for example "Restored from backup (12 Oct, 18:41)", using <code>SavedUtc.ToLocalTime()</code>. Any progress made after that backup may be missing. Handle <code>SaveEvents.RecoveredFromBackup</code> to show the message from one place.</p>
+<p><a id="sk103"></a></p>
+<h2 id="sk103-unsupportedformat">SK103: UnsupportedFormat <a class="anchor" href="#sk103-unsupportedformat" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> Shipready version cannot read the file. Either Shipready did not write it, or it uses a newer file format. Shipready treats it like damage and tries the backups.</p>
+<p><strong>Likely cause:</strong> One of these:</p>
+<ul>
+<li>Another tool writes files with the same name and extension into the same folder.</li>
+<li>A file was renamed to <code>.save</code> by hand.</li>
+<li>A later Shipready version wrote the save in a newer format, and an older build is reading it.</li>
+</ul>
+<p><strong>Fix:</strong> Give Shipready its own folder with <strong>Save Folder Name</strong>, and set it before you ship, because changing it later hides existing saves. Use the same or a newer Shipready version in every build that reads the same saves. If a backup loaded, you get SK102 and the unreadable file is kept as <code>.corrupt-&lt;time&gt;</code>. If no copy could be read, or <strong>Automatic Fallback</strong> is off, nothing was touched.</p>
+<p><a id="sk104"></a></p>
+<h2 id="sk104-checksummismatch">SK104: ChecksumMismatch <a class="anchor" href="#sk104-checksummismatch" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> The data no longer matches the checksum in the file's header, so the file was edited or cut short after it was written. Changes to spacing only do not count. A readable file with no checksum at all is reported the same way.</p>
+<p><strong>Likely cause:</strong> Someone edited a readable save in a text editor, or the file was cut short. In a build, the default <strong>File Options → Checksum Policy</strong> (Treat Edits As Damaged) falls back to a backup, which gives SK102. You get SK104 when no copy can be used, or when <strong>Automatic Fallback</strong> is off. In the Editor, edited files always load, with SK104 as a warning, so you can tweak saves while testing.</p>
+<p><strong>Fix:</strong> To let players edit saves, for example for modding, set <strong>Checksum Policy</strong> to Accept With Warning. Otherwise nothing is needed. The backup loaded, and the edited file was kept as <code>.corrupt-&lt;time&gt;</code>. If every copy fails the check, nothing is touched. Open the file in the Save Inspector to see what it holds.</p>
+<p><a id="sk105"></a></p>
+<h2 id="sk105-tamperdetected">SK105: TamperDetected <a class="anchor" href="#sk105-tamperdetected" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> An encrypted save was written with the current passphrase, but it failed its tamper check, so its contents changed after it was written. Shipready treats it as damaged and tries the backups.</p>
+<p><strong>Likely cause:</strong> A player changed the encrypted file with a hex editor or a save-editing tool, or a faulty drive or another program changed bytes on disk. Even one changed byte causes this.</p>
+<p><strong>Fix:</strong> Usually nothing is needed. The newest good backup loads (SK102), and the changed file is kept as <code>.corrupt-&lt;time&gt;</code>. If every copy fails, or <strong>Automatic Fallback</strong> is off, nothing is touched. If many players report this code, check whether another program writes to the save folder. Remember that encryption only stops casual editing. The key ships inside the game, so encryption is not anti-cheat. In co-op, the host's save is the one that counts.</p>
+<p><a id="sk106"></a></p>
+<h2 id="sk106-encryptionkeywrong">SK106: EncryptionKeyWrong <a class="anchor" href="#sk106-encryptionkeywrong" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> An encrypted save was written with a different key from the one in the settings, so it cannot be opened. When every copy fails this way, nothing is moved or deleted.</p>
+<p><strong>Likely cause:</strong> One of these:</p>
+<ul>
+<li><strong>File Options → Passphrase</strong>, <strong>Key Salt</strong> or <strong>Key Iterations</strong> changed after the save was written.</li>
+<li>The settings asset was recreated. The Setup Wizard gives each new asset its own random salt.</li>
+<li><strong>Passphrase</strong> is empty.</li>
+<li>The file came from another game or project.</li>
+</ul>
+<p><strong>Fix:</strong> Put back the exact passphrase, salt and iteration count the save was written with, and the file loads again. Choose these values once, before release. Diagnostics warns while the default passphrase is still set. Keep the values in version control and never change them. Turning <strong>Encrypt</strong> off later is safe: each file records how it was packed, so old encrypted files still open as long as the key stays the same.</p>
+<p><a id="sk107"></a></p>
+<h2 id="sk107-compressionfailed">SK107: CompressionFailed <a class="anchor" href="#sk107-compressionfailed" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> The compressed (GZip) part of a save could not be unpacked. Shipready treats it as damaged and tries the backups.</p>
+<p><strong>Likely cause:</strong> The packed bytes of a compressed save were damaged on disk, for example by a faulty drive or by another program that changed the file. Encrypted files fail their tamper check (SK105) before they reach this point, so SK107 mostly appears for files that are compressed but not encrypted.</p>
+<p><strong>Fix:</strong> Usually nothing is needed. The newest good backup loads (SK102), and the damaged file is kept as <code>.corrupt-&lt;time&gt;</code>. If no copy can be read, or <strong>Automatic Fallback</strong> is off, nothing is touched. Turning <strong>File Options → Compress</strong> on or off in an update is safe and never causes this code. Each file records how it was packed, and Shipready reads it that way.</p>
+<p><a id="sk110"></a></p>
+<h2 id="sk110-diskfull">SK110: DiskFull <a class="anchor" href="#sk110-diskfull" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> The drive ran out of free space, so the save stopped. Existing saves were not changed, because Shipready writes a temporary file first and only swaps it in once it is complete and checked.</p>
+<p><strong>Likely cause:</strong> The player's system drive, which holds <code>AppData\LocalLow</code>, is full or nearly full. Large uncompressed saves with many backups make this more likely.</p>
+<p><strong>Fix:</strong> Tell the player plainly, and let them try again. For example: "There isn't enough disk space to save. Free up some space and try again. Your previous save is safe." To make saves smaller, turn on <strong>File Options → Compress</strong> (JSON usually shrinks several times) or lower <strong>Backup Count</strong>. Check <code>Success</code> after your own save calls too. Shipready's autosaves, including the one on quit, log their failures in the Console.</p>
+<p><a id="sk111"></a></p>
+<h2 id="sk111-accessdenied">SK111: AccessDenied <a class="anchor" href="#sk111-accessdenied" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> Windows did not let Shipready write, or sometimes read, the save file or folder. Existing saves were not changed.</p>
+<p><strong>Likely cause:</strong> One of these:</p>
+<ul>
+<li>The file or folder is marked read-only.</li>
+<li>Another program has the file open, such as a text editor, a virus scan, or a backup or cloud-sync tool.</li>
+<li>A second copy of the game is running.</li>
+<li>Security software blocks the folder.</li>
+</ul>
+<p>If the main file is locked during a load, Shipready deliberately does not fall back to an older backup, because the newest save is probably fine.</p>
+<p><strong>Fix:</strong> Close the other program or the second copy of the game, and try again. In File Explorer, right-click the file or folder, choose Properties and untick Read-only. If security software blocks the game, the player needs to allow it. Tell the player their save is safe and that retrying usually works.</p>
+<p><a id="sk112"></a></p>
+<h2 id="sk112-storageunavailable">SK112: StorageUnavailable <a class="anchor" href="#sk112-storageunavailable" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> Shipready could not reach the save folder at all, so nothing was read or written. Existing saves are not changed.</p>
+<p><strong>Likely cause:</strong> One of these:</p>
+<ul>
+<li><code>SaveKit.Initialise()</code> was called from a background thread. Unity then reports no persistent data path.</li>
+<li>The folder is on a drive that was disconnected.</li>
+<li>A cloud-sync tool still holds the file.</li>
+<li>Windows reported a disk error Shipready could not classify.</li>
+</ul>
+<p>During a load, Shipready does not fall back to an older backup for this code, because the newest save may be perfectly good.</p>
+<p><strong>Fix:</strong> Call <code>SaveKit.Initialise()</code> on the main thread, for example in <code>Awake</code>. Ask the player to reconnect the drive or wait for their sync tool to finish, then retry. The detail in brackets names the path Shipready tried, which helps when a player sends you their Console output.</p>
+<p><a id="sk113"></a></p>
+<h2 id="sk113-pathtoolong">SK113: PathTooLong <a class="anchor" href="#sk113-pathtoolong" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> The full path of a save file is longer than Windows allows (usually 260 characters), so the file could not be written or read. Existing saves were not changed.</p>
+<p><strong>Likely cause:</strong> The parts of the path add up to too many characters. The path is <code>C:\Users\&lt;user name&gt;\AppData\LocalLow\&lt;Company Name&gt;\&lt;Product Name&gt;</code>, followed by <strong>Save Folder Name</strong>, <strong>Profile Folder</strong>, the file name patterns and <strong>File Options → File Extension</strong>. Long company, product or Windows user names make it worse.</p>
+<p><strong>Fix:</strong> Shorten <strong>Save Folder Name</strong>, <strong>Profile Folder</strong> and the file name patterns in the settings asset, and keep Company Name and Product Name reasonably short in Player Settings. Do this before you ship. After release, changing any of these names makes Shipready look somewhere else, and existing saves seem to disappear (see SK100).</p>
+<p><a id="sk120"></a></p>
+<h2 id="sk120-newerversion">SK120: NewerVersion <a class="anchor" href="#sk120-newerversion" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> A newer build of the game wrote this save: its save version is higher than <strong>Save Version</strong> in this build. Shipready refuses to load it rather than risk damaging it, and leaves the file untouched.</p>
+<p><strong>Likely cause:</strong> The player went back to an older build, for example through a beta branch, a rollback or an old installer. Saves may also have been copied from a machine with a newer build, or <strong>Save Version</strong> was lowered.</p>
+<p><strong>Fix:</strong> Never lower <strong>Save Version</strong> after release. Tell the player: "This save was made with a newer version of the game. Update the game to load it." Use <code>SlotInfo.IsFromNewerVersion</code> to mark these slots in your menu. Ask the player before overwriting. A save of only some categories into that slot is refused. A save of every category replaces the newer file, and keeps it as the newest backup only while <strong>Backup Count</strong> is above 0.</p>
+<p><a id="sk121"></a></p>
+<h2 id="sk121-migrationmissing">SK121: MigrationMissing <a class="anchor" href="#sk121-migrationmissing" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> The save has an older save version, and a step needed to upgrade it does not exist. The load was refused and the file was left untouched. The message names the missing version.</p>
+<p><strong>Likely cause:</strong> <strong>Save Version</strong> was raised without a step for every version in between. A step marked <code>[SaveMigration(fromVersion: 3)]</code> turns a version 3 save into version 4. A step can also be missing because:</p>
+<ul>
+<li>It has the wrong shape. It must be <code>static</code>, take one <code>SaveTree</code> and return <code>void</code>. The Console warns when a step is ignored.</li>
+<li>It sits in an <code>Editor</code> folder, so builds do not include it.</li>
+<li>It sits in an assembly Shipready treats as part of .NET, Mono, Unity or NUnit, and skips. Those are the assemblies named exactly <code>System</code>, <code>mscorlib</code>, <code>netstandard</code>, <code>UnityEngine</code> or <code>UnityEditor</code>, and every assembly whose name starts with <code>System.</code>, <code>Unity.</code>, <code>UnityEngine.</code>, <code>UnityEditor.</code>, <code>Mono.</code> or <code>nunit.</code>. The match is case-sensitive, and each prefix includes its dot, so a game assembly such as <code>Systems.Gameplay</code>, <code>UnityExtras</code> or <code>MonoBehaviours.Core</code> is still searched.</li>
+<li><strong>Auto Discover Migrations</strong> is off, and the step was not added with <code>SaveKit.Migrations.Add</code>.</li>
+</ul>
+<p><strong>Fix:</strong> Add the missing step, for example <code>[SaveMigration(fromVersion: 3)] static void Upgrade3(SaveTree save) { ... }</code>. Test it with a real save from that version. The player's file loads as soon as a build with the step ships.</p>
+<p><a id="sk122"></a></p>
+<h2 id="sk122-migrationfailed">SK122: MigrationFailed <a class="anchor" href="#sk122-migrationfailed" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> A migration step ran but threw an exception. Steps work on a copy of the save, so the file was left untouched and nothing was half-changed.</p>
+<p><strong>Likely cause:</strong> The step's own code failed. It may have expected a key or category that the old save does not have, converted a value to the wrong type, or used a Unity object or API. Steps run on a background thread together with the rest of the file work, so they may only edit the <code>SaveTree</code>.</p>
+<p><strong>Fix:</strong> The message names the step (<code>Type.Method</code>) and the exception. Make the step tolerant of missing data: check that <code>save.FindPath(...)</code> is not null before you use a value. Prefer the tree helpers <code>RenameKeyEverywhere</code>, <code>RemoveKeyEverywhere</code>, <code>AddDefaultBeside</code> and <code>RenameCategory</code>, which just do nothing when a key is missing. Test every step with real saves from the old version before you release it.</p>
+<p><a id="sk123"></a></p>
+<h2 id="sk123-saveversioninvalid">SK123: SaveVersionInvalid <a class="anchor" href="#sk123-saveversioninvalid" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> <strong>Save Version</strong> in the settings asset is not a whole number of 1 or more, so Shipready refused to start. Nothing was read or written.</p>
+<p><strong>Likely cause:</strong> The field was set to 0 or a negative number, usually while experimenting with migrations or after resetting values by hand.</p>
+<p><strong>Fix:</strong> In the settings asset, under Game updates, set <strong>Save Version</strong> to 1 for a game that has never shipped. For a released game, set it back to the number your last release used. Then call <code>SaveKit.Initialise()</code> again. From then on, only ever raise it, by one each time your saved data changes shape, and add a <code>[SaveMigration]</code> step for each increase. Lowering it after release makes existing saves look newer than the game (SK120).</p>
+<p><a id="sk130"></a></p>
+<h2 id="sk130-objectnotfound">SK130: ObjectNotFound <a class="anchor" href="#sk130-objectnotfound" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> A saved object, link or parent points at something that is no longer in the scene, so that piece was skipped. The rest of the load succeeded. Skipped objects are listed in <code>Report.SkippedObjects</code>.</p>
+<p><strong>Likely cause:</strong> The object was deleted in a game update, or its Saveable was removed and added again, which gives it a new ID. A linked object or saved parent may be gone: the link becomes empty and the object stays where it is. An unsaved parent container may have been renamed: the object returns to the scene root, in the same world position. During a save, a field that links to a scene object without a Saveable is not saved. Links an <code>ISaveable</code> writes with <code>SaveWriter.WriteObjectLink</code> follow the same rules, and a warning names the value, such as <code>Chest (ChestScript) (door)</code>.</p>
+<p><strong>Fix:</strong> If you removed the object on purpose, nothing is needed. Otherwise, restore it with its original Saveable from version control. Add a Saveable to every object your saved fields link to. <strong>Tools → Shipready → Saves → Diagnostics</strong> finds missing and duplicate IDs. Give unsaved containers unique names without <code>/</code>.</p>
+<p><a id="sk131"></a></p>
+<h2 id="sk131-prefabnotregistered">SK131: PrefabNotRegistered <a class="anchor" href="#sk131-prefabnotregistered" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> A runtime object spawned from a prefab could not be re-created on load, so the object and its state were skipped. Everything else loaded.</p>
+<p><strong>Likely cause:</strong> The prefab is not in the Prefab Registry: it was deleted, it lost the Saveable on its root, or the settings asset's <strong>Prefab Registry</strong> field is empty. SK131 also appears when your <code>ISpawnHandler.Spawn</code> returns null or spawns a prefab without a Saveable on its root. During a save, it means an object was copied at runtime from something that is not a prefab, so that object is not saved.</p>
+<p><strong>Fix:</strong> Run <strong>Tools → Shipready → Saves → Registries → Rebuild Registries</strong>, or run <strong>Diagnostics</strong>, which registers the prefab in one click. Check <strong>Prefab Registry</strong> under World in the settings asset. Put the Saveable on the prefab's root, spawn from the prefab asset, and make your spawn handler return the object it created. Fix this before players save again, because the next save records the world without the skipped objects.</p>
+<p><a id="sk132"></a></p>
+<h2 id="sk132-assetnotregistered">SK132: AssetNotRegistered <a class="anchor" href="#sk132-assetnotregistered" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> A saved link to an asset, such as a ScriptableObject item definition, could not be saved or restored. The asset is in neither the Asset Registry nor the Prefab Registry. That link is empty, and everything else saved or loaded normally.</p>
+<p><strong>Likely cause:</strong> One of these:</p>
+<ul>
+<li>The asset was never registered. Assets are not added automatically the way prefabs are.</li>
+<li>The settings asset's <strong>Asset Registry</strong> field is empty.</li>
+<li>The asset was deleted or recreated, which gives it a new GUID.</li>
+<li>The project was copied without its <code>.meta</code> files.</li>
+</ul>
+<p><strong>Fix:</strong> Run <strong>Tools → Shipready → Saves → Diagnostics</strong>. It finds ticked fields that point at unregistered assets and registers them in one click. Diagnostics cannot see assets that only your own <code>ISaveable</code> code writes: select them in the Project window and run <strong>Tools → Shipready → Saves → Registries → Register Selected Assets</strong>, or call <code>RegistryUpkeep.RegisterAsset(registry, asset)</code> from an editor script. Set <strong>Asset Registry</strong> under World in the settings asset. Renaming or moving a registered asset is safe. Keep <code>.meta</code> files in version control.</p>
+<p><a id="sk133"></a></p>
+<h2 id="sk133-scenenotregistered">SK133: SceneNotRegistered <a class="anchor" href="#sk133-scenenotregistered" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> A scene that holds saved objects is not in the Scene Registry. When saving, Shipready stores that scene's objects under the scene's path instead of its permanent ID. When loading, a saved scene could not be found. Its state stays in memory and is applied if the scene loads later.</p>
+<p><strong>Likely cause:</strong> The settings asset's <strong>Scene Registry</strong> field is empty, or the registry was not updated after the scene was added. The scene may also have been deleted and created again, which gives it a new GUID. Scenes in Build Settings are registered automatically.</p>
+<p><strong>Fix:</strong> Run <strong>Tools → Shipready → Saves → Registries → Rebuild Registries</strong>, and set <strong>Scene Registry</strong> under World in the settings asset. Do this before you ship. A registered scene can be renamed or moved without breaking saves. Objects saved under a scene path are lost from the save if that path changes.</p>
+<p><a id="sk134"></a></p>
+<h2 id="sk134-scenenotinbuildsettings">SK134: SceneNotInBuildSettings <a class="anchor" href="#sk134-scenenotinbuildsettings" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> A scene that the save needs, or one passed to <code>SaveKit.LoadScene</code>, is not in Build Settings. In a build Unity cannot load it: the load carries on without that scene, and its saved state stays in memory and is applied if the scene loads later. In the Editor Shipready loads it straight from the project anyway and warns once per scene, because a build could not. When a saved scene cannot be loaded but is open already, its saved state is restored into the open scene, with this warning: in the Editor, an open scene with the same id, or with the same name when it has no file of its own; in a build, only an open scene with the same id, and never for the first saved scene, which decides the scenes that stay open.</p>
+<p><strong>Likely cause:</strong> The scene was never added to the build's scene list, or it was removed from it. Or your game loads the scene some other way, such as Addressables or asset bundles, that Shipready does not know about.</p>
+<p><strong>Fix:</strong> Add the scene to the build's scene list. In Unity 6, use <strong>File → Build Profiles</strong> (Scene List). In Unity 2022.3, use <strong>File → Build Settings</strong>. <strong>Tools → Shipready → Saves → Diagnostics</strong> finds these scenes and adds them in one click. If your game loads scenes its own way, set <code>SaveKit.World.SceneLoader</code> to your own <code>ISceneLoader</code>, or set <strong>World Load Mode</strong> to Restore Into Current Scenes.</p>
+<p><a id="sk140"></a></p>
+<h2 id="sk140-hostonly">SK140: HostOnly <a class="anchor" href="#sk140-hostonly" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> This copy of the game is a co-op client, and only the host or a solo player may save, load or delete world saves. The call was refused, and no file was touched.</p>
+<p><strong>Likely cause:</strong> <code>SaveKit.Authority</code> is set, and its <code>HasSaveAuthority</code> returned false. On this machine, Shipready then refuses slot saves, loads and deletes, autosaves, the quicksave, and <code>SaveKit.RestoreBackup</code>. If <code>HasSaveAuthority</code> throws an exception, Shipready also refuses, and says why in the Console.</p>
+<p><strong>Fix:</strong> This behaviour is by design. Check <code>SaveKit.CanSave</code> and <code>SaveKit.CanLoad</code> before you show a save or load button of your own; both are false on a client. Shipready's save menu does this itself: a client sees the slot cards without their Save, Load, Delete and Restore backup buttons, and a line saying only the host can save. Let the host save. Make sure your authority returns true on the host. For a solo game, leave <code>SaveKit.Authority</code> null, which always allows saving. Clients can still keep their own settings with <code>SaveKit.SaveGlobal()</code> and <code>SaveKit.LoadGlobal()</code>. The quit autosave does this for clients automatically.</p>
+<p><a id="sk141"></a></p>
+<h2 id="sk141-playerunknown">SK141: PlayerUnknown <a class="anchor" href="#sk141-playerunknown" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> Shipready could not match a connected player to a stable player ID, so it cannot find that player's saved data, and the player starts from defaults.</p>
+<p><strong>Likely cause:</strong> <code>SaveKit.Players.ForConnection(connectionId)</code> returned null and wrote SK141 to the Console, once per connection, for one of these reasons:</p>
+<ul>
+<li>No <code>IPlayerIdentity</code> is set: <code>SaveKit.Identity</code> is null.</li>
+<li>Your <code>IPlayerIdentity.TryGetPlayerId</code> returned false, or an empty ID, for that connection.</li>
+<li>Your <code>TryGetPlayerId</code> threw an exception. <code>SaveKit.Players.TryGetPlayerId</code> reports this case too; it is otherwise the quiet form, for code that asks again later.</li>
+</ul>
+<p>A player the save has never seen is not this code: <code>SaveKit.Players.For(id)</code> gives them empty data, and every <code>Get</code> returns the default value you pass.</p>
+<p><strong>Fix:</strong> Set <code>SaveKit.Identity</code> to your identity before players connect. Make <code>TryGetPlayerId</code> return false instead of throwing while a player's stable ID is not known yet, for example before their Steam ID arrives, and ask again later with <code>SaveKit.Players.TryGetPlayerId</code>, which stays quiet. Use an ID that stays the same every session, never the network connection number, which changes each time. Use <code>SaveKit.Players.Has(id)</code> to tell a returning player from a new one.</p>
+<p><a id="sk150"></a></p>
+<h2 id="sk150-categoryunknown">SK150: CategoryUnknown <a class="anchor" href="#sk150-categoryunknown" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> A category name was used that the settings asset does not define. Category names must match exactly, including capital letters.</p>
+<p><strong>Likely cause:</strong> A typo, such as <code>"progress"</code> instead of <code>"Progress"</code>. Look in <code>SaveKit.Data.Set</code>, in the categories passed to <code>Save</code> or <code>Load</code>, and in each Saveable's category. A category may also have been renamed or removed. <code>Initialise</code> also fails with SK150 in these cases:</p>
+<ul>
+<li>No categories exist.</li>
+<li><strong>Default Category</strong> is not in the list.</li>
+<li><strong>World Category</strong> is not in the list.</li>
+</ul>
+<p><strong>Fix:</strong> Add the category on the settings asset's <strong>Advanced</strong> tab, under <strong>Categories</strong>, or fix the spelling. A save or load that names an unknown category is refused before anything is written. Values set in an unknown category, and Saveables that use one, are never saved. The Console warns once for each unknown name.</p>
+<p><a id="sk151"></a></p>
+<h2 id="sk151-slotoutofrange">SK151: SlotOutOfRange <a class="anchor" href="#sk151-slotoutofrange" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> The slot number is outside the range the game offers. Slots are numbered from 1 up to <strong>Slot Count</strong> in the settings asset. Nothing was read or written.</p>
+<p><strong>Likely cause:</strong> One of these:</p>
+<ul>
+<li>Slot 0 was used. Slots start at 1, not 0.</li>
+<li>A menu's list index was passed without adding 1.</li>
+<li><strong>Slot Count</strong> was lowered in an update, so the higher slots no longer exist.</li>
+</ul>
+<p><strong>Fix:</strong> Pass a number from 1 to <code>SaveKit.Settings.SlotCount</code>. If you lowered <strong>Slot Count</strong> (1 to 99) after release, raise it again. Files in the higher slots are still on disk. Shipready just does not touch them while they are out of range.</p>
+<p><a id="sk152"></a></p>
+<h2 id="sk152-slotempty">SK152: SlotEmpty <a class="anchor" href="#sk152-slotempty" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> The slot has nothing saved in it yet: no main file, temporary file or backup. <code>SlotInfo.Status</code> also reports SK152 for empty slots shown in a menu. Nothing was changed.</p>
+<p><strong>Likely cause:</strong> <code>SaveKit.Load(slot)</code> was called on a slot the player never saved to, or on one they deleted. If slots that used to hold saves are suddenly empty, Shipready is probably looking in a different folder or for different file names (see SK100).</p>
+<p><strong>Fix:</strong> Before you offer Load, check <code>SaveKit.HasSave(slot)</code>, or read <code>SaveKit.GetSlotInfo(slot).Exists</code> when you draw the menu. For empty slots, offer New Game or Save instead.</p>
+<p><a id="sk153"></a></p>
+<h2 id="sk153-settingsinvalid">SK153: SettingsInvalid <a class="anchor" href="#sk153-settingsinvalid" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> A value in the settings asset cannot be used, so Shipready refused to start. Nothing was read or written. The message names the field and the problem.</p>
+<p><strong>Likely cause:</strong> One of these:</p>
+<ul>
+<li><strong>Slot File Name Format</strong> or <strong>Autosave File Name Format</strong> has no <code>{0}</code> in it, so every slot would write the same file; its braces are broken, as in <code>slot_{0</code> or <code>slot_{0:00</code>; or it uses another placeholder such as <code>{1}</code>.</li>
+<li><strong>Profile Folder</strong> holds <code>{profile}</code>, but <code>SaveKit.ProfileId</code> was empty when Shipready started, so Shipready could not tell whose saves to use. With <strong>Initialise Automatically</strong> ticked, this shows up as Shipready failing to start by itself.</li>
+<li><code>SaveKit.ProfileId</code> holds a character a folder name cannot hold, such as <code>/</code>, <code>\</code>, <code>:</code> or <code>..</code>.</li>
+<li>A category is called <code>players</code>. Shipready keeps each co-op player's own data under that name in every save, so a category with the same name would overwrite it.</li>
+<li><strong>Use Slot Options For Global File</strong> is unticked and <strong>Global File Options → File Extension</strong> cannot be used: it needs a dot and a few letters, and it cannot be <code>.tmp</code>, start with <code>.bak</code> or <code>.corrupt</code>, which Shipready uses for its own copies.</li>
+</ul>
+<p><strong>Fix:</strong> Use a file name pattern with <code>{0}</code> where the number goes. For example, <code>slot_{0:00}</code> gives <code>slot_01</code>, and <code>autosave_{0}</code> gives <code>autosave_1</code>; or leave the field empty to use the default. Change these patterns only before release, because after release Shipready would look for saves under the new names (see SK100). For a profile folder with <code>{profile}</code>, untick <strong>Initialise Automatically</strong>, set <code>SaveKit.ProfileId</code> (for example to the player's Steam ID) and then call <code>SaveKit.Initialise()</code>. Rename a category called <code>players</code>, for example to <code>PlayerProgress</code>. Give the global file an extension such as <code>.local</code>, or leave it empty to keep the slots' extension. Then call <code>SaveKit.Initialise()</code> again.</p>
+<p><a id="sk154"></a></p>
+<h2 id="sk154-loadinprogress">SK154: LoadInProgress <a class="anchor" href="#sk154-loadinprogress" aria-label="Link to this section">#</a></h2>
+<p><strong>What it means:</strong> A slot save, autosave, quicksave or <code>SaveKit.RestoreBackup</code> was requested while <code>SaveKit.LoadAsync</code> was still loading the scenes its save was made in. Saving or restoring at that moment would write over the save that was just loaded while the world is only half restored, so nothing was written.</p>
+<p><strong>Likely cause:</strong> Game code saved during a load. For example, the player pressed a save button, or a script saved straight after starting <code>LoadAsync</code> without awaiting it. Shipready's own timer and scene-change autosaves wait for the load to finish. The autosave on quit is skipped during a load, with a Console warning.</p>
+<p><strong>Fix:</strong> Before saving, <code>await SaveKit.LoadAsync(...)</code> or wait for the <code>SaveEvents.Loaded</code> event. Disable save buttons while a load runs, then save again once it has finished. Saving the global file with <code>SaveKit.SaveGlobal()</code> is still allowed during a load, so player settings are never blocked.</p>
+<h2 id="still-stuck">Still stuck? <a class="anchor" href="#still-stuck" aria-label="Link to this section">#</a></h2>
+<p>Report a bug with <a href="https://github.com/raregeometry/Support/issues/new?template=bug_report.yml">the bug report form</a>, ask a question in <a href="https://github.com/raregeometry/Support/discussions">Discussions</a>, email <strong>the address in Tools &gt; Shipready &gt; Saves &gt; Help</strong> or visit <strong>https://raregeometry.github.io/</strong>.</p>
+<p><strong>Get help:</strong> Discord https://discord.gg/AmpBDxRAKu · bug tracker https://github.com/raregeometry/Support · website https://raregeometry.github.io/ · e-mail the address in Tools &gt; Shipready &gt; Saves &gt; Help. With a question or a bug, please paste your system info: in Unity, <strong>Tools → Shipready → Saves → Start → Help and support → Copy system info</strong>. To get an answer quickly, please send:</p>
+<ol>
+<li><strong>The Console report.</strong> Include every line that starts with <code>[Shipready]</code> from around the time of the problem, with any stack trace. If you can reproduce the problem, set <strong>Log Level</strong> to Verbose first.</li>
+<li><strong>The save file.</strong> Use <strong>Tools → Shipready → Saves → Save Inspector</strong> to export the save. For a damaged save, zip the raw files from the save folder instead, including any <code>.bak</code>, <code>.tmp</code> and <code>.corrupt-</code> copies. The Save Inspector can open that folder for you.</li>
+<li><strong>Your Unity version</strong> (Help → About Unity) and <strong>platform</strong>: Windows 10 or 11, and whether it happened in the Editor, a Mono build or an IL2CPP build.</li>
+<li><strong>The SK code</strong> and what you were doing when it appeared.</li>
+</ol>
+<p>Support covers bugs in Shipready and questions about setting it up. It does not include reviewing or debugging your own game code. A stack trace usually shows which side a problem is on: one that ends in your script points at your code, and one inside <code>RareGeometry.Shipready.Save</code> points at Shipready.</p>
+<div class="doc-pager"><a class="pager prev" href="save-limits-and-faq.html"><span class="label">Previous</span>Limits and FAQ</a><a class="pager next" href="save-known-issues.html"><span class="label">Next</span>Known Issues</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Troubleshooting" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#if-shipreadys-menus-are-missing-after-import">If Shipready&#x27;s menus are missing after import</a></li><li class="toc-2"><a href="#how-codes-appear">How codes appear</a></li><li class="toc-2"><a href="#reading-the-console-report">Reading the Console report</a></li><li class="toc-2"><a href="#quick-index">Quick index</a></li><li class="toc-2"><a href="#sk001-unknown">SK001: Unknown</a></li><li class="toc-2"><a href="#sk002-invalidargument">SK002: InvalidArgument</a></li><li class="toc-2"><a href="#sk003-busy">SK003: Busy</a></li><li class="toc-2"><a href="#sk004-cancelled">SK004: Cancelled</a></li><li class="toc-2"><a href="#sk005-notinitialised">SK005: NotInitialised</a></li><li class="toc-2"><a href="#sk100-filenotfound">SK100: FileNotFound</a></li><li class="toc-2"><a href="#sk101-filedamaged">SK101: FileDamaged</a></li><li class="toc-2"><a href="#sk102-recoveredfrombackup">SK102: RecoveredFromBackup</a></li><li class="toc-2"><a href="#sk103-unsupportedformat">SK103: UnsupportedFormat</a></li><li class="toc-2"><a href="#sk104-checksummismatch">SK104: ChecksumMismatch</a></li><li class="toc-2"><a href="#sk105-tamperdetected">SK105: TamperDetected</a></li><li class="toc-2"><a href="#sk106-encryptionkeywrong">SK106: EncryptionKeyWrong</a></li><li class="toc-2"><a href="#sk107-compressionfailed">SK107: CompressionFailed</a></li><li class="toc-2"><a href="#sk110-diskfull">SK110: DiskFull</a></li><li class="toc-2"><a href="#sk111-accessdenied">SK111: AccessDenied</a></li><li class="toc-2"><a href="#sk112-storageunavailable">SK112: StorageUnavailable</a></li><li class="toc-2"><a href="#sk113-pathtoolong">SK113: PathTooLong</a></li><li class="toc-2"><a href="#sk120-newerversion">SK120: NewerVersion</a></li><li class="toc-2"><a href="#sk121-migrationmissing">SK121: MigrationMissing</a></li><li class="toc-2"><a href="#sk122-migrationfailed">SK122: MigrationFailed</a></li><li class="toc-2"><a href="#sk123-saveversioninvalid">SK123: SaveVersionInvalid</a></li><li class="toc-2"><a href="#sk130-objectnotfound">SK130: ObjectNotFound</a></li><li class="toc-2"><a href="#sk131-prefabnotregistered">SK131: PrefabNotRegistered</a></li><li class="toc-2"><a href="#sk132-assetnotregistered">SK132: AssetNotRegistered</a></li><li class="toc-2"><a href="#sk133-scenenotregistered">SK133: SceneNotRegistered</a></li><li class="toc-2"><a href="#sk134-scenenotinbuildsettings">SK134: SceneNotInBuildSettings</a></li><li class="toc-2"><a href="#sk140-hostonly">SK140: HostOnly</a></li><li class="toc-2"><a href="#sk141-playerunknown">SK141: PlayerUnknown</a></li><li class="toc-2"><a href="#sk150-categoryunknown">SK150: CategoryUnknown</a></li><li class="toc-2"><a href="#sk151-slotoutofrange">SK151: SlotOutOfRange</a></li><li class="toc-2"><a href="#sk152-slotempty">SK152: SlotEmpty</a></li><li class="toc-2"><a href="#sk153-settingsinvalid">SK153: SettingsInvalid</a></li><li class="toc-2"><a href="#sk154-loadinprogress">SK154: LoadInProgress</a></li><li class="toc-2"><a href="#still-stuck">Still stuck?</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

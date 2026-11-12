@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B1220">
+<title>Game Updates | Rare Geometry</title>
+<meta name="description" content="Game Updates: documentation for the Shipready for Unity.">
+<link rel="canonical" href="https://raregeometry.github.io/shipready/docs/save-game-updates.html">
+<meta property="og:site_name" content="Rare Geometry">
+<meta property="og:title" content="Game Updates">
+<meta property="og:description" content="Game Updates: documentation for the Shipready for Unity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raregeometry.github.io/shipready/docs/save-game-updates.html">
+<meta property="og:image" content="https://raregeometry.github.io/assets/img/shipready/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
+      <img src="../../assets/logo.svg" alt="" width="34" height="34">
+      <span>Rare Geometry</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap docs-shell">
+<aside class="docs-side" aria-label="Documentation">
+  <div class="docs-product"><a href="index.html">Shipready docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
+  <div class="docs-search" hidden>
+    <label class="sr-only" for="docs-q">Search the documentation</label>
+    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
+    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
+  </div>
+  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="quick-start.html">Quick Start</a><a href="launch-desk.html">Launch Desk</a><a href="make-it-yours.html">Make it yours</a><a href="player-options.html">Player Options</a><a href="game-look.html">Game Look</a><a href="per-player-settings.html">Per-player settings</a><a href="game-colours.html">Game colours</a><a href="readiness.html">Ship Readiness Checker</a><a href="works-with.html">Working with other products</a></div><div class="docs-group"><p class=label>Menus and settings</p><a href="settings-index.html">Overview</a><a href="settings-quick-start.html">Quick Start</a><a href="settings-samples.html">Samples</a><a href="settings-existing-game.html">Using it in an existing game</a><a href="settings-make-it-yours.html">Make it yours</a><a href="settings-screens.html">Screens</a><a href="settings-settings-catalog.html">Settings catalog</a><a href="settings-settings-reference.html">Settings reference</a><a href="settings-display-safety.html">Display safety</a><a href="settings-audio.html">Audio</a><a href="settings-graphics.html">Graphics</a><a href="settings-controls-and-rebinding.html">Controls and rebinding</a><a href="settings-themes.html">Themes</a><a href="settings-accessibility.html">Accessibility</a><a href="settings-localization.html">Languages</a><a href="settings-pause-and-multiplayer.html">Pause and multiplayer hooks</a><a href="settings-extending-api.html">Extending and API</a><a href="settings-upgrading.html">Upgrading</a><a href="settings-troubleshooting.html">Troubleshooting and FAQ</a><a href="settings-known-issues.html">Known issues and limits</a><a href="settings-support.html">Support</a></div><div class="docs-group"><p class=label>Saves</p><a href="save-quick-start.html"> Quick Start</a><a href="save-guide.html"> Guide</a><a href="save-walkthroughs.html">Walkthroughs</a><a href="save-walkthroughs-first-save.html">Walkthrough: your first save</a><a href="save-walkthroughs-save-menu.html">Walkthrough: the save and load menu</a><a href="save-walkthroughs-world-objects.html">Walkthrough: world objects</a><a href="save-walkthroughs-backups-and-recovery.html">Walkthrough: backups and recovery</a><a href="save-walkthroughs-game-updates.html">Walkthrough: game updates and migrations</a><a href="save-walkthroughs-own-menu.html">Walkthrough: use your own menu</a><a href="save-walkthroughs-own-menu-ui-toolkit.html">Walkthrough: your own menu in UI Toolkit</a><a href="save-game-updates.html" aria-current="page">Game Updates</a><a href="save-coop.html">Co-op</a><a href="save-steam-cloud.html">Steam Cloud</a><a href="save-reference.html"> Reference</a><a href="save-api-reference.html"> API Reference</a><a href="save-limits-and-faq.html">Limits and FAQ</a><a href="save-troubleshooting.html">Troubleshooting</a><a href="save-known-issues.html">Known Issues</a><a href="save-changelog.html">Changelog</a><a href="save-support.html">Support</a></div><div class="docs-group"><p class=label>Tutorials</p><a href="tutorials-index.html">Overview</a><a href="tutorials-quick-start.html">Quick Start</a><a href="tutorials-flows-and-steps.html">Flows and Steps</a><a href="tutorials-targets.html">Targets</a><a href="tutorials-finishing-steps.html">Finishing a Step</a><a href="tutorials-coach-marks-and-hints.html">Coach Marks and Hints</a><a href="tutorials-make-it-yours.html">Make It Yours</a><a href="tutorials-button-pictures.html">Button Pictures</a><a href="tutorials-tools.html">Tools</a><a href="tutorials-integrations.html">Integrations</a><a href="tutorials-extending.html">Extending</a><a href="tutorials-samples.html">Samples</a><a href="tutorials-upgrading.html">Upgrading</a><a href="tutorials-troubleshooting.html">Troubleshooting</a><a href="tutorials-support.html">Support</a></div><div class="docs-group"><p class=label>Playtest</p><a href="playtest-index.html">Overview</a><a href="playtest-quick-start.html">Quick Start</a><a href="playtest-adding-to-your-game.html">Adding it to your own game</a><a href="playtest-report-form.html">The report form</a><a href="playtest-report-inbox.html">Report Inbox</a><a href="playtest-debug-overlay.html">Debug overlay</a><a href="playtest-settings.html">Settings</a><a href="playtest-builds-and-privacy.html">Builds and privacy</a><a href="playtest-make-it-yours.html">Make it yours</a><a href="playtest-extending.html">Extending</a><a href="playtest-samples.html">Samples</a><a href="playtest-upgrading.html">Upgrading</a><a href="playtest-troubleshooting.html">Troubleshooting</a><a href="playtest-support.html">Support</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div>
+    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="quick-start.html">Quick Start</a><a href="launch-desk.html">Launch Desk</a><a href="make-it-yours.html">Make it yours</a><a href="player-options.html">Player Options</a><a href="game-look.html">Game Look</a><a href="per-player-settings.html">Per-player settings</a><a href="game-colours.html">Game colours</a><a href="readiness.html">Ship Readiness Checker</a><a href="works-with.html">Working with other products</a></div><div class="docs-group"><p class=label>Menus and settings</p><a href="settings-index.html">Overview</a><a href="settings-quick-start.html">Quick Start</a><a href="settings-samples.html">Samples</a><a href="settings-existing-game.html">Using it in an existing game</a><a href="settings-make-it-yours.html">Make it yours</a><a href="settings-screens.html">Screens</a><a href="settings-settings-catalog.html">Settings catalog</a><a href="settings-settings-reference.html">Settings reference</a><a href="settings-display-safety.html">Display safety</a><a href="settings-audio.html">Audio</a><a href="settings-graphics.html">Graphics</a><a href="settings-controls-and-rebinding.html">Controls and rebinding</a><a href="settings-themes.html">Themes</a><a href="settings-accessibility.html">Accessibility</a><a href="settings-localization.html">Languages</a><a href="settings-pause-and-multiplayer.html">Pause and multiplayer hooks</a><a href="settings-extending-api.html">Extending and API</a><a href="settings-upgrading.html">Upgrading</a><a href="settings-troubleshooting.html">Troubleshooting and FAQ</a><a href="settings-known-issues.html">Known issues and limits</a><a href="settings-support.html">Support</a></div><div class="docs-group"><p class=label>Saves</p><a href="save-quick-start.html"> Quick Start</a><a href="save-guide.html"> Guide</a><a href="save-walkthroughs.html">Walkthroughs</a><a href="save-walkthroughs-first-save.html">Walkthrough: your first save</a><a href="save-walkthroughs-save-menu.html">Walkthrough: the save and load menu</a><a href="save-walkthroughs-world-objects.html">Walkthrough: world objects</a><a href="save-walkthroughs-backups-and-recovery.html">Walkthrough: backups and recovery</a><a href="save-walkthroughs-game-updates.html">Walkthrough: game updates and migrations</a><a href="save-walkthroughs-own-menu.html">Walkthrough: use your own menu</a><a href="save-walkthroughs-own-menu-ui-toolkit.html">Walkthrough: your own menu in UI Toolkit</a><a href="save-game-updates.html" aria-current="page">Game Updates</a><a href="save-coop.html">Co-op</a><a href="save-steam-cloud.html">Steam Cloud</a><a href="save-reference.html"> Reference</a><a href="save-api-reference.html"> API Reference</a><a href="save-limits-and-faq.html">Limits and FAQ</a><a href="save-troubleshooting.html">Troubleshooting</a><a href="save-known-issues.html">Known Issues</a><a href="save-changelog.html">Changelog</a><a href="save-support.html">Support</a></div><div class="docs-group"><p class=label>Tutorials</p><a href="tutorials-index.html">Overview</a><a href="tutorials-quick-start.html">Quick Start</a><a href="tutorials-flows-and-steps.html">Flows and Steps</a><a href="tutorials-targets.html">Targets</a><a href="tutorials-finishing-steps.html">Finishing a Step</a><a href="tutorials-coach-marks-and-hints.html">Coach Marks and Hints</a><a href="tutorials-make-it-yours.html">Make It Yours</a><a href="tutorials-button-pictures.html">Button Pictures</a><a href="tutorials-tools.html">Tools</a><a href="tutorials-integrations.html">Integrations</a><a href="tutorials-extending.html">Extending</a><a href="tutorials-samples.html">Samples</a><a href="tutorials-upgrading.html">Upgrading</a><a href="tutorials-troubleshooting.html">Troubleshooting</a><a href="tutorials-support.html">Support</a></div><div class="docs-group"><p class=label>Playtest</p><a href="playtest-index.html">Overview</a><a href="playtest-quick-start.html">Quick Start</a><a href="playtest-adding-to-your-game.html">Adding it to your own game</a><a href="playtest-report-form.html">The report form</a><a href="playtest-report-inbox.html">Report Inbox</a><a href="playtest-debug-overlay.html">Debug overlay</a><a href="playtest-settings.html">Settings</a><a href="playtest-builds-and-privacy.html">Builds and privacy</a><a href="playtest-make-it-yours.html">Make it yours</a><a href="playtest-extending.html">Extending</a><a href="playtest-samples.html">Samples</a><a href="playtest-upgrading.html">Upgrading</a><a href="playtest-troubleshooting.html">Troubleshooting</a><a href="playtest-support.html">Support</a><a href="changelog.html">Changelog</a><a href="support.html">Support</a></div></div></details>
+  </nav>
+</aside>
+<article class="prose" id="doc">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Shipready</a><span>/</span><span>Saves</span></nav>
+<h1 id="game-updates">Game Updates</h1>
+<p>This guide is for programmers. It explains how to change your game after release without breaking the saves your players already have.</p>
+<p>Shipready plans for updates in three ways:</p>
+<ul>
+<li>Every save records which version of your save data it holds.</li>
+<li>Small <strong>migration steps</strong> that you write upgrade old saves one version at a time.</li>
+<li>Loading is tolerant, so most changes need no migration at all.</li>
+</ul>
+<h2 id="the-rules-in-short">The rules in short <a class="anchor" href="#the-rules-in-short" aria-label="Link to this section">#</a></h2>
+<ol>
+<li>Ship your first release with <strong>Save Version</strong> 1. It is in the settings asset <code>ShipreadySaveSettings</code>, under Game updates.</li>
+<li>When an update changes saved data in a way that old saves cannot handle by themselves, raise <strong>Save Version</strong> by one. Then write one migration step from the previous version.</li>
+<li>Keep every step you have ever written. A save from version 1 passes through every step on its way to the current version.</li>
+<li>Never lower <strong>Save Version</strong> after a release.</li>
+<li>Test every release with real save files from the versions you shipped before.</li>
+</ol>
+<p>Settings in bold, such as <strong>Save Version</strong>, are fields on the settings asset. Select the asset in the Project window to change them.</p>
+<h2 id="what-the-save-version-is">What the save version is <a class="anchor" href="#what-the-save-version-is" aria-label="Link to this section">#</a></h2>
+<p>Every save file starts with a header like this one:</p>
+<pre><code class="language-json">&quot;header&quot;: { &quot;saveVersion&quot;: 3, &quot;gameVersion&quot;: &quot;1.2.0&quot;, &quot;kitVersion&quot;: &quot;1.0.0&quot;,
+            &quot;savedUtc&quot;: &quot;2026-11-02T18:41:07Z&quot;, &quot;checksum&quot;: &quot;crc32:5F1A9C02&quot;, &quot;packing&quot;: &quot;readable&quot; }
+</code></pre>
+<ul>
+<li><code>saveVersion</code> is the <strong>Save Version</strong> of the build that wrote the file. This is the number Shipready acts on.</li>
+<li><code>gameVersion</code> is <strong>Version</strong> from <strong>Project Settings → Player</strong> (<code>Application.version</code>). It is recorded for your information. Shipready never decides anything from it.</li>
+<li><code>kitVersion</code> is the version of Shipready that wrote the file.</li>
+<li><code>packing</code> says how the data was stored: <code>readable</code>, <code>gzip</code>, <code>aes</code> or <code>gzip+aes</code>.</li>
+</ul>
+<p>When Shipready reads a file, it compares the file's <code>saveVersion</code> with the build's <strong>Save Version</strong>:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>The file's version is</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The same</td>
+<td>The file loads as it is.</td>
+</tr>
+<tr>
+<td>Older</td>
+<td>The migration steps run, in order, and then the file loads.</td>
+</tr>
+<tr>
+<td>Newer</td>
+<td>The load is refused with <code>NewerVersion</code>, and the file is left untouched.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Save Version</strong> has to be a whole number of 1 or more. Otherwise Shipready refuses to start (see <a href="save-troubleshooting.html#sk123">SK123</a>).</p>
+<h2 id="when-to-raise-the-save-version">When to raise the save version <a class="anchor" href="#when-to-raise-the-save-version" aria-label="Link to this section">#</a></h2>
+<p>Raise it only when old saves need help. Every version in the chain needs a step, even an empty one, so an unneeded raise just means an unneeded step.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>What your update changes</th>
+<th>Raise <strong>Save Version</strong>?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adds a new value, a new <code>ISaveable</code> value or a newly ticked field</td>
+<td>No. Old saves do not hold it, so it keeps its default.</td>
+</tr>
+<tr>
+<td>Adds a new object with a Saveable to a scene</td>
+<td>No. It keeps its scene defaults.</td>
+</tr>
+<tr>
+<td>Deletes a saved object from a scene</td>
+<td>No. Its saved state is skipped and reported.</td>
+</tr>
+<tr>
+<td>Reorders enum values or adds new ones</td>
+<td>No. Enums are saved by name.</td>
+</tr>
+<tr>
+<td>Renames or moves a scene</td>
+<td>No. The Scene Registry knows scenes by their permanent ID.</td>
+</tr>
+<tr>
+<td>Turns compression or encryption on or off</td>
+<td>No. Each file records how it was packed.</td>
+</tr>
+<tr>
+<td>Renames a value, a ticked field, an <code>ISaveable</code> component class or a category</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Changes what a value means, its type or its units (for example 0 to 100 becomes 0 to 1)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Moves a value from one category to another</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Renames an enum value</td>
+<td>Yes. The old name no longer matches, so the default would be used.</td>
+</tr>
+<tr>
+<td>Needs old saves to start a new value differently from new games</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Drops a value you no longer use</td>
+<td>Only if you want it gone, or if a new value will reuse its name. Otherwise it is simply ignored.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="writing-a-migration-step">Writing a migration step <a class="anchor" href="#writing-a-migration-step" aria-label="Link to this section">#</a></h2>
+<p>A migration step is a static method marked <code>[SaveMigration(fromVersion: N)]</code>. It upgrades a save from version N to version N + 1. It receives the whole save as a <code>SaveTree</code> and edits it, so it never needs your old classes.</p>
+<pre><code class="language-csharp">using RareGeometry.Shipready.Save;
+
+public static class SaveMigrations
+{
+    // Turns a version 1 save into a version 2 save.
+    [SaveMigration(fromVersion: 1, Description = &quot;cash renamed to money&quot;)]
+    static void RenameCashToMoney(SaveTree save)
+    {
+        save.RenameKeyEverywhere(&quot;cash&quot;, &quot;money&quot;);
+    }
+}
+</code></pre>
+<p>A step must follow these rules. When Shipready starts, it warns in the Console about any step it ignores.</p>
+<ul>
+<li><strong>Its shape:</strong> <code>static</code>, returns <code>void</code>, takes exactly one parameter of type <code>SaveTree</code>, and is not generic. It may be public or private, in any class, including a nested class.</li>
+<li><strong>Its number:</strong> <code>fromVersion</code> is the version the step upgrades from, starting at 1. A step marked 3 turns a version 3 save into a version 4 save.</li>
+<li><strong>Its name:</strong> <code>Description</code> is optional. Reports and the Console use it to name the step. Without it they use <code>ClassName.MethodName</code>.</li>
+<li><strong>It ships with the game.</strong> Do not put it in an <code>Editor</code> folder or an Editor-only assembly, because builds leave those out.</li>
+<li><strong>Its assembly must be one Shipready searches.</strong> When Shipready looks for steps, it skips the assemblies of .NET, Mono, Unity and NUnit: those called exactly <code>System</code>, <code>mscorlib</code>, <code>netstandard</code>, <code>UnityEngine</code> or <code>UnityEditor</code>, and those whose names start with <code>System.</code>, <code>Unity.</code>, <code>UnityEngine.</code>, <code>UnityEditor.</code>, <code>Mono.</code> or <code>nunit.</code>. So do not give your own assembly definition a name such as <code>Unity.Saves</code> or <code>System.Gameplay</code>. Names such as <code>Systems.Gameplay</code>, <code>UnityExtras</code> or <code>MyGame.Saves</code>, and the default <code>Assembly-CSharp</code>, are searched.</li>
+<li><strong>Discovery is on.</strong> <strong>Auto Discover Migrations</strong> (under Game updates) is on by default, so Shipready finds steps every time it starts. If you switch it off, add your steps by hand.</li>
+</ul>
+<h3 id="adding-steps-by-hand">Adding steps by hand <a class="anchor" href="#adding-steps-by-hand" aria-label="Link to this section">#</a></h3>
+<p>You can register a step in code instead of marking a method, with <code>SaveKit.Migrations.Add</code>. Add it before Shipready starts: Shipready loads the global file while it starts, and that file may need the step too. Shipready starts by itself just before the first scene loads, so add your steps in a static method that Unity runs earlier, marked <code>AfterAssembliesLoaded</code>:</p>
+<pre><code class="language-csharp">using RareGeometry.Shipready.Save;
+using UnityEngine;
+
+public static class HandAddedMigrations
+{
+    // Runs in every Play session and every build, before Shipready starts by itself.
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
+    static void AddSteps()
+    {
+        SaveKit.Migrations.Add(1, save =&gt; save.RenameKeyEverywhere(&quot;cash&quot;, &quot;money&quot;), &quot;cash renamed to money&quot;);
+    }
+}
+</code></pre>
+<p>With <strong>Initialise Automatically</strong> switched off, you can instead add the steps just before your own <code>SaveKit.Initialise()</code> call.</p>
+<ul>
+<li>A step added by hand always wins over a <code>[SaveMigration]</code> step for the same version, whichever was registered first.</li>
+<li><code>SaveKit.Shutdown()</code> forgets the steps added by hand, and so does the start of every Play session. Add them again before Shipready starts again; the method above does that by itself.</li>
+<li>A step added after Shipready has started still applies to every later load and save, but the global file was already loaded without it. If that file needed the step, it failed to load with a warning and the Global categories started empty; <code>SaveKit.LoadGlobal()</code> loads it again.</li>
+<li>Code stripping never removes a step added by hand, because your code calls it.</li>
+</ul>
+<h2 id="the-savetree-helpers">The SaveTree helpers <a class="anchor" href="#the-savetree-helpers" aria-label="Link to this section">#</a></h2>
+<p>A step gets the whole save:</p>
+<ul>
+<li><code>save.Data</code> holds one member per category, such as <code>Progress</code> or <code>World</code>.</li>
+<li><code>save.Info</code> holds the slot info that the menu shows.</li>
+<li><code>save.Header</code> holds the header. Shipready raises its <code>SaveVersion</code> after each step, so leave it alone.</li>
+</ul>
+<p>Most changes need only these helpers. Each one does nothing when the key or category is missing, so it is safe on every kind of save file.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Helper</th>
+<th>What it does</th>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RenameKeyEverywhere(from, to)</code></td>
+<td>Renames every value called <code>from</code>, at any depth, in every category</td>
+<td>How many it renamed</td>
+</tr>
+<tr>
+<td><code>RemoveKeyEverywhere(name)</code></td>
+<td>Removes every value called <code>name</code>, at any depth</td>
+<td>How many it removed</td>
+</tr>
+<tr>
+<td><code>AddDefaultBeside(besideName, name, value)</code></td>
+<td>Wherever a value called <code>besideName</code> exists and <code>name</code> does not, adds <code>name</code> with a copy of <code>value</code></td>
+<td>How many it added</td>
+</tr>
+<tr>
+<td><code>RenameCategory(from, to)</code></td>
+<td>Renames a category and keeps everything in it</td>
+<td><code>true</code> when it renamed one</td>
+</tr>
+<tr>
+<td><code>FindPath(path)</code></td>
+<td>Follows a path such as <code>Progress/stats/health</code> from the data root. In a list, a number picks the item</td>
+<td>The value, or <code>null</code></td>
+</tr>
+</tbody>
+</table></div>
+<p>There are more for anything the helpers do not cover: <code>GetCategory</code>, <code>HasCategory</code>, <code>RemoveCategory</code> and <code>VisitAll</code>, which walks every value.</p>
+<p>Renaming onto a name that already exists replaces that value. Values in the tree are <code>SaveNode</code>s. Make new ones with <code>ValueConverters.From(...)</code>, which writes numbers in Shipready's fixed format. Read them with <code>ValueConverters.ToInt32(node, fallback)</code> and the matching methods for other types. Both live in the namespace <code>RareGeometry.Shipready.Save.Data</code>.</p>
+<pre><code class="language-csharp">using RareGeometry.Shipready.Save;
+using RareGeometry.Shipready.Save.Data;
+
+public static class HelperExamples
+{
+    // Not a real step: each line shows one helper.
+    static void Examples(SaveTree save)
+    {
+        // &quot;cash&quot; is now called &quot;money&quot;.
+        save.RenameKeyEverywhere(&quot;cash&quot;, &quot;money&quot;);
+
+        // The hint system was removed.
+        save.RemoveKeyEverywhere(&quot;lastHint&quot;);
+
+        // New games start with tutorialDone = false, but players with an old save
+        // have finished the tutorial already.
+        save.AddDefaultBeside(&quot;money&quot;, &quot;tutorialDone&quot;, ValueConverters.From(true));
+
+        // The Quests category is now called Journal.
+        save.RenameCategory(&quot;Quests&quot;, &quot;Journal&quot;);
+
+        // Health was a whole number from 0 to 100 and is now a fraction from 0 to 1.
+        SaveNode stats = save.FindPath(&quot;Progress/stats&quot;);
+        if (stats != null &amp;&amp; stats.IsObject &amp;&amp; stats.HasMember(&quot;health&quot;))
+        {
+            int oldHealth = ValueConverters.ToInt32(stats.GetMember(&quot;health&quot;), 100);
+            stats.SetMember(&quot;health&quot;, ValueConverters.From(oldHealth / 100f));
+        }
+    }
+}
+</code></pre>
+<p><code>RenameKeyEverywhere</code> and <code>RemoveKeyEverywhere</code> really do work everywhere. If a common name such as <code>count</code> appears in several places, edit just the one you mean with <code>FindPath</code>.</p>
+<h3 id="where-your-values-are-in-the-tree">Where your values are in the tree <a class="anchor" href="#where-your-values-are-in-the-tree" aria-label="Link to this section">#</a></h3>
+<p>The easiest way to find a path is to open a readable save in a text editor. In the Editor and in development builds the file is indented, so it is easy to read.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Saved with</th>
+<th>Path from the data root</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SaveKit.Data.Set("gold", gold, "Progress")</code></td>
+<td><code>Progress/gold</code></td>
+</tr>
+<tr>
+<td>A field ticked in the Field Picker</td>
+<td><code>&lt;category&gt;/scenes/&lt;scene id&gt;/objects/&lt;object id&gt;/fields/&lt;Component&gt;.&lt;field&gt;</code>, for example <code>.../fields/Chest.isOpen</code></td>
+</tr>
+<tr>
+<td>An <code>ISaveable</code> component</td>
+<td><code>&lt;category&gt;/scenes/&lt;scene id&gt;/objects/&lt;object id&gt;/custom/&lt;Component&gt;/&lt;name&gt;</code></td>
+</tr>
+<tr>
+<td>An object marked DontDestroyOnLoad</td>
+<td><code>&lt;category&gt;/persistent/objects/&lt;object id&gt;/...</code></td>
+</tr>
+<tr>
+<td>An object spawned at runtime</td>
+<td><code>&lt;category&gt;/scenes/&lt;scene id&gt;/spawned/&lt;number&gt;/state/...</code></td>
+</tr>
+<tr>
+<td>Per-player data in co-op</td>
+<td><code>players/&lt;player id&gt;/&lt;category&gt;/&lt;name&gt;</code></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><code>&lt;category&gt;</code> for a Saveable is the category set on the component, which is World by default.</li>
+<li><code>&lt;Component&gt;</code> is the component's class name. A second component of the same class on one GameObject gets a number, for example <code>Chest[1]</code>.</li>
+</ul>
+<p>So renaming the ticked field <code>isOpen</code> to <code>opened</code> on a <code>Chest</code> component needs this:</p>
+<pre><code class="language-csharp">using RareGeometry.Shipready.Save;
+
+public static class ChestMigrations
+{
+    [SaveMigration(fromVersion: 4)]
+    static void IsOpenBecomesOpened(SaveTree save)
+    {
+        save.RenameKeyEverywhere(&quot;Chest.isOpen&quot;, &quot;Chest.opened&quot;);
+    }
+}
+</code></pre>
+<p>Two more things to do with a field rename:</p>
+<ul>
+<li>In the script, add Unity's <code>[FormerlySerializedAs("isOpen")]</code> to the renamed field, so scenes and prefabs keep their Inspector values.</li>
+<li>Tick the new field in the Field Picker on every Saveable that used the old one. A tick remembers the field by name.</li>
+</ul>
+<h3 id="per-player-data-and-renamecategory">Per-player data and RenameCategory <a class="anchor" href="#per-player-data-and-renamecategory" aria-label="Link to this section">#</a></h3>
+<p><code>RenameCategory</code> renames the category at the top of the data only. In a co-op save, each player's values sit under <code>players/&lt;player id&gt;/&lt;category&gt;</code>, so rename those as well:</p>
+<pre><code class="language-csharp">using RareGeometry.Shipready.Save;
+using RareGeometry.Shipready.Save.Data;
+
+public static class CoopMigrations
+{
+    [SaveMigration(fromVersion: 5)]
+    static void QuestsBecomeJournal(SaveTree save)
+    {
+        save.RenameCategory(&quot;Quests&quot;, &quot;Journal&quot;);
+
+        SaveNode players = save.FindPath(&quot;players&quot;);
+        if (players == null || !players.IsObject) return;
+        for (int i = 0; i &lt; players.MemberCount; i++)
+        {
+            SaveNode player = players.GetMemberAt(i);
+            if (player != null &amp;&amp; player.IsObject) player.RenameMember(&quot;Quests&quot;, &quot;Journal&quot;);
+        }
+    }
+}
+</code></pre>
+<p>Also rename the category in the settings asset under <strong>Categories</strong>.</p>
+<h3 id="renaming-an-enum-value">Renaming an enum value <a class="anchor" href="#renaming-an-enum-value" aria-label="Link to this section">#</a></h3>
+<p>Enums are saved by name, so reordering an enum or adding values never breaks a save. Renaming a value does: the old name no longer matches, so the default comes back. Rewrite the old name in a step:</p>
+<pre><code class="language-csharp">using RareGeometry.Shipready.Save;
+using RareGeometry.Shipready.Save.Data;
+
+public static class EnumMigrations
+{
+    // Difficulty.Hard was renamed to Difficulty.Expert.
+    [SaveMigration(fromVersion: 6)]
+    static void HardBecomesExpert(SaveTree save)
+    {
+        save.VisitAll((name, node) =&gt;
+        {
+            if (!node.IsObject) return;
+            SaveNode difficulty = node.GetMember(&quot;difficulty&quot;);
+            if (difficulty != null &amp;&amp; difficulty.Kind == SaveNodeKind.String &amp;&amp; difficulty.Text == &quot;Hard&quot;)
+            {
+                node.SetMember(&quot;difficulty&quot;, ValueConverters.From(&quot;Expert&quot;));
+            }
+        });
+    }
+}
+</code></pre>
+<h2 id="order-and-gaps">Order and gaps <a class="anchor" href="#order-and-gaps" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Steps run in order.</strong> They start from the file's version and run one version at a time. A version 1 save in a version 4 build runs steps 1, 2 and 3, and each step sees the save as the step before left it.</li>
+<li><strong>The whole chain is checked first.</strong> If any step is missing, nothing runs. The load returns <code>MigrationMissing</code> and names the missing version, and the file is left untouched (see <a href="save-troubleshooting.html#sk121">SK121</a>). The player's save loads as soon as a build with the missing step ships.</li>
+<li><strong>Steps run wherever an old file is read:</strong> slots, autosaves, the quicksave and the global file. A save into an old file runs them too, so one file never holds a mix of two versions. That is why a step must cope with files that lack the category it edits. The global file, for example, usually holds only Settings.</li>
+<li><strong>The report lists the steps.</strong> After a load, <code>loaded.Report.MigrationsRun</code> lists the versions whose steps ran, lowest first.</li>
+</ul>
+<h2 id="duplicates">Duplicates <a class="anchor" href="#duplicates" aria-label="Link to this section">#</a></h2>
+<p>Each version should have exactly one step.</p>
+<ul>
+<li>If two <code>[SaveMigration]</code> methods are marked for the same version, Shipready uses only the first one. It picks it in a fixed order: assembly name, then full class name, then method name, compared character by character. The Console warns and names both methods.</li>
+<li>A step added with <code>SaveKit.Migrations.Add</code> wins over every <code>[SaveMigration]</code> step for that version.</li>
+</ul>
+<h2 id="when-a-step-fails">When a step fails <a class="anchor" href="#when-a-step-fails" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Nothing is half-changed.</strong> Steps work on a copy of the save. If a step throws an exception, the load returns <code>MigrationFailed</code>, naming the step and the exception (see <a href="save-troubleshooting.html#sk122">SK122</a>). The file and the game's live data stay as they were.</li>
+<li><strong>Write tolerant steps.</strong> Check <code>FindPath</code> and <code>GetCategory</code> results for <code>null</code> before you use them. Prefer the helpers, which do nothing when a key is missing.</li>
+<li><strong>Steps run more than once.</strong> The same step runs on every load of an old file until that file is saved again, and on every slot. Keep it deterministic: the same input must always give the same output.</li>
+</ul>
+<h2 id="steps-run-on-a-background-thread">Steps run on a background thread <a class="anchor" href="#steps-run-on-a-background-thread" aria-label="Link to this section">#</a></h2>
+<p>Steps run on a background thread, together with the rest of the file work for that file. That is true for <code>LoadAsync</code> and <code>SaveAsync</code>, for autosaves, and for the blocking <code>Load</code> and <code>Save</code> too: those wait for the background work to finish, but the step itself still runs there. So a step must only edit the <code>SaveTree</code>. Inside a step, never touch:</p>
+<ul>
+<li>GameObjects, components or ScriptableObjects</li>
+<li><code>Resources</code>, <code>PlayerPrefs</code>, <code>Time</code> or <code>Application</code></li>
+<li>any other Unity API</li>
+</ul>
+<p>If a step needs a value such as a price table, write that value into the step's code as a constant.</p>
+<h2 id="saves-from-a-newer-version-are-refused">Saves from a newer version are refused <a class="anchor" href="#saves-from-a-newer-version-are-refused" aria-label="Link to this section">#</a></h2>
+<p>If a file's <code>saveVersion</code> is higher than the build's <strong>Save Version</strong>, the load returns <code>NewerVersion</code> and leaves the file untouched (see <a href="save-troubleshooting.html#sk120">SK120</a>). This happens when a player goes back to an older build, for example through a beta branch or a rollback.</p>
+<ul>
+<li><code>SlotInfo.IsFromNewerVersion</code> is <code>true</code> for such a slot. The save menu shows a "From a newer version" badge and does not load it.</li>
+<li>A save of only some categories into that slot is refused.</li>
+<li>A save of every category replaces the newer file. The newer file is kept as the newest backup while <strong>Backup Count</strong> is above 0.</li>
+</ul>
+<p>This is why <strong>Save Version</strong> must never go down after a release.</p>
+<h2 id="tolerant-loading-what-needs-no-migration">Tolerant loading: what needs no migration <a class="anchor" href="#tolerant-loading-what-needs-no-migration" aria-label="Link to this section">#</a></h2>
+<ul>
+<li><strong>Missing values use their defaults.</strong> <code>SaveKit.Data.Get("key", fallback)</code> and <code>SaveReader.Read(name, fallback)</code> return the fallback when the save has no such value. A ticked field the save does not hold keeps its current value. A <code>[Serializable]</code> class is filled in place, so fields added to it keep their defaults. A slot category the file does not hold starts empty.</li>
+<li><strong>Objects deleted from a scene are skipped and reported.</strong> The load still succeeds. Each skipped object is listed in <code>Report.SkippedObjects</code> and in a warning (see <a href="save-troubleshooting.html#sk130">SK130</a>).</li>
+<li><strong>New objects keep their scene defaults.</strong> An object the save knows nothing about is left exactly as the scene set it up.</li>
+<li><strong>Renamed or moved scenes still restore.</strong> The Scene Registry knows each scene by its Unity GUID and keeps the path only as a label. A scene that is deleted and created again gets a new GUID, so register it before you ship (see <a href="save-troubleshooting.html#sk133">SK133</a>).</li>
+<li><strong>Prefabs and registered assets can be renamed or moved.</strong> They are known by GUID too. Deleting one, or recreating it, breaks the link (see <a href="save-troubleshooting.html#sk131">SK131</a> and <a href="save-troubleshooting.html#sk132">SK132</a>).</li>
+<li><strong>Enums are saved by name.</strong> Reordering an enum never changes what an old save means.</li>
+</ul>
+<p>One thing does lose state: removing a Saveable and adding it again gives the object a new ID, so its old saved state is skipped.</p>
+<p>To see what was skipped after a load:</p>
+<pre><code class="language-csharp">using RareGeometry.Shipready.Save;
+using UnityEngine;
+
+public class LoadReportExample : MonoBehaviour
+{
+    public async void LoadSlotOne()
+    {
+        LoadResult loaded = await SaveKit.LoadAsync(slot: 1);
+        if (!loaded.Success)
+        {
+            Debug.LogWarning(loaded.ToString());
+            return;
+        }
+
+        foreach (string skipped in loaded.Report.SkippedObjects) Debug.Log(&quot;Skipped: &quot; + skipped);
+    }
+}
+</code></pre>
+<h2 id="changing-compression-or-encryption-in-an-update">Changing compression or encryption in an update <a class="anchor" href="#changing-compression-or-encryption-in-an-update" aria-label="Link to this section">#</a></h2>
+<p>Each file records how it was packed (<code>packing</code> in the header), and the loader follows the file, not the settings. That is why you can change these in an update without stranding old saves:</p>
+<ul>
+<li><strong>File Options → Compress</strong>, <strong>Encrypt</strong>, <strong>Encrypt Slot Info</strong> and <strong>Pretty Print</strong></li>
+<li><strong>Backup Count</strong>, <strong>Checksum Policy</strong> and <strong>Automatic Fallback</strong></li>
+<li><strong>Use Slot Options For Global File</strong> and the packing options in <strong>Global File Options</strong></li>
+<li>Giving the global file its own extension, such as <code>.local</code>, or taking it away again. Shipready then loads whichever of the old and the new global file was written last, so players keep their settings, and the next save writes the new name.</li>
+</ul>
+<p>The next save of each file uses the new options.</p>
+<p>Some settings must never change after release:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What goes wrong</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Passphrase</strong>, <strong>Key Salt</strong>, <strong>Key Iterations</strong></td>
+<td>Encrypted saves can no longer be opened (<a href="save-troubleshooting.html#sk106">SK106</a>). Keep them even after you switch <strong>Encrypt</strong> off, because old encrypted files still need the key. If <strong>Key Salt</strong> is empty, the key also depends on Product Name.</td>
+</tr>
+<tr>
+<td><strong>Save Folder Name</strong>, <strong>Profile Folder</strong>, the file name patterns, <strong>File Options → File Extension</strong>, Company Name, Product Name</td>
+<td>Shipready looks in another folder or for other names, so saves seem to disappear (<a href="save-troubleshooting.html#sk100">SK100</a>). With <code>{profile}</code> in <strong>Profile Folder</strong>, <code>SaveKit.ProfileId</code> must also stay the same for each player, so use an ID that never changes, such as a Steam ID.</td>
+</tr>
+<tr>
+<td><strong>Global File Options → File Extension</strong>, changed from one value to another</td>
+<td>Shipready looks for the global file under the new name and under the slots' extension only, so the player's settings seem to reset. Switching it on or off is safe (see above).</td>
+</tr>
+<tr>
+<td><strong>Save Version</strong> (lowering it)</td>
+<td>Existing saves look newer than the game (<a href="save-troubleshooting.html#sk120">SK120</a>).</td>
+</tr>
+<tr>
+<td><strong>Slot Count</strong> (lowering it)</td>
+<td>The higher slots fall out of range (<a href="save-troubleshooting.html#sk151">SK151</a>).</td>
+</tr>
+<tr>
+<td>Category names</td>
+<td>Rename one only together with a <code>RenameCategory</code> step.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="il2cpp-and-code-stripping">IL2CPP and code stripping <a class="anchor" href="#il2cpp-and-code-stripping" aria-label="Link to this section">#</a></h2>
+<p>Nothing in your game calls a <code>[SaveMigration]</code> method directly. Shipready finds the methods by their attribute, which IL2CPP code stripping cannot see, so stripping could remove the very methods old saves need.</p>
+<p>To prevent this, Shipready adds a link file to every player build. It lists each class that holds a <code>[SaveMigration]</code> method and tells the linker to keep those classes. The file is written to <code>Temp/RareGeometry.Shipready.Save/MigrationLink.xml</code> in your project and passed straight to the linker. Unity clears the <code>Temp</code> folder when the Editor closes, so nothing is added to your <code>Assets</code> folder. The build log confirms it:</p>
+<pre><code>[Shipready] Kept 2 migration type(s) from code stripping.
+</code></pre>
+<p>If the file cannot be written, the build log shows an error instead. Shipready's own tests run a migration in a Windows IL2CPP build with <strong>Managed Stripping Level</strong> set to High.</p>
+<ul>
+<li>The link file covers the scripts Unity compiles into the player: <code>Assembly-CSharp</code> and your assembly definitions.</li>
+<li>Steps inside a precompiled plugin DLL are not covered. List their classes in a <code>link.xml</code> of your own anywhere under <code>Assets</code>:</li>
+</ul>
+<pre><code class="language-xml">&lt;linker&gt;
+  &lt;assembly fullname=&quot;MyGame.Saves&quot;&gt;
+    &lt;type fullname=&quot;MyGame.Saves.SaveMigrations&quot; preserve=&quot;all&quot; /&gt;
+  &lt;/assembly&gt;
+&lt;/linker&gt;
+</code></pre>
+<ul>
+<li>Steps added with <code>SaveKit.Migrations.Add</code> need nothing extra.</li>
+</ul>
+<h2 id="the-pre-migration-file-stays-as-a-backup">The pre-migration file stays as a backup <a class="anchor" href="#the-pre-migration-file-stays-as-a-backup" aria-label="Link to this section">#</a></h2>
+<p>A load never writes to the file. Until the player saves that slot again, the file on disk stays at its old version, and every load migrates it again.</p>
+<p>The first save in the new version writes the upgraded file. The old file becomes <code>slot_01.save.bak1</code>, provided <strong>Backup Count</strong> is 1 or more. It then moves down one place with each later save, and it is deleted once more than <strong>Backup Count</strong> saves have followed. A step with a bug can therefore be caught while the original data still exists, but only for a few saves. Test before you release.</p>
+<h2 id="testing-with-old-save-files">Testing with old save files <a class="anchor" href="#testing-with-old-save-files" aria-label="Link to this section">#</a></h2>
+<p><strong>1. Keep real saves from every version you release.</strong> Before you raise <strong>Save Version</strong>, copy a few saves from the save folder into your project's repository: an early-game slot, a late-game slot, an autosave and <code>global.save</code>. A folder next to <code>Assets</code>, such as <code>SaveFixtures/v1/</code>, keeps Unity from importing them. Commit them to version control.</p>
+<p><strong>2. Try them by hand.</strong> Copy a fixture into the save folder and load it in Play Mode. Check the values, and check that <code>loaded.Report.MigrationsRun</code> lists the steps you expect. The Save Inspector (<strong>Tools → Shipready → Saves → Save Inspector</strong>) can import a file and open the save folder for you.</p>
+<p><strong>3. Test them automatically.</strong> An Edit Mode test with the Unity Test Framework can load a fixture into memory storage, so it never touches the real save folder. Add <code>RareGeometry.Shipready.Save</code> to the references of your test assembly definition.</p>
+<pre><code class="language-csharp">using System.IO;
+using RareGeometry.Shipready.Save;
+using RareGeometry.Shipready.Save.Settings;
+using RareGeometry.Shipready.Save.Storage;
+using NUnit.Framework;
+using UnityEngine;
+
+public class OldSaveTests
+{
+    [Test]
+    public void Version1SaveLoadsIntoThisVersion()
+    {
+        // A copy of your real settings: same save version, passphrase and categories.
+        SaveKitSettings settings = Object.Instantiate(SaveKitSettings.Load());
+        var storage = new MemorySaveStorage();
+        storage.SetFile(settings.GetSlotFileName(1), File.ReadAllBytes(&quot;SaveFixtures/v1/slot_01.save&quot;));
+
+        Assert.IsTrue(SaveKit.Initialise(settings, storage).Success);
+        try
+        {
+            LoadResult loaded = SaveKit.Load(1);
+            Assert.IsTrue(loaded.Success, loaded.ToString());
+            Assert.AreEqual(4300, SaveKit.Data.Get(&quot;money&quot;, 0, &quot;Progress&quot;));
+            Assert.IsFalse(SaveKit.Data.Has(&quot;cash&quot;, &quot;Progress&quot;));
+        }
+        finally
+        {
+            SaveKit.Shutdown();
+            Object.DestroyImmediate(settings);
+        }
+    }
+}
+</code></pre>
+<p><strong>4. Try the demo.</strong> The Game Updates demo ships in Shipready's <code>Samples</code> folder as the scene <code>GameUpdatesDemo</code>, together with a version 1 save file, <code>v1_example.save</code>. Press <strong>Simulate update</strong>: the demo starts Shipready at save version 2 with a migration that renames <code>cash</code> to <code>money</code>, loads the old file, and shows the values before and after, along with the steps that ran.</p>
+<h2 id="worked-example-version-1-to-version-3">Worked example: version 1 to version 3 <a class="anchor" href="#worked-example-version-1-to-version-3" aria-label="Link to this section">#</a></h2>
+<h3 id="version-1-shipped-with-save-version-1">Version 1 (shipped with Save Version 1) <a class="anchor" href="#version-1-shipped-with-save-version-1" aria-label="Link to this section">#</a></h3>
+<pre><code class="language-csharp">using System;
+using RareGeometry.Shipready.Save;
+
+[Serializable]
+public class PlayerStats
+{
+    public int health = 100;
+}
+
+public static class Version1Saving
+{
+    public static void Store(int cash, PlayerStats stats, int lastHint)
+    {
+        SaveKit.Data.Set(&quot;cash&quot;, cash, &quot;Progress&quot;);
+        SaveKit.Data.Set(&quot;stats&quot;, stats, &quot;Progress&quot;);
+        SaveKit.Data.Set(&quot;lastHint&quot;, lastHint, &quot;Quests&quot;);
+    }
+}
+</code></pre>
+<p>The data in a version 1 save:</p>
+<pre><code class="language-json">&quot;data&quot;: {
+  &quot;Progress&quot;: { &quot;cash&quot;: 4300, &quot;stats&quot;: { &quot;health&quot;: 80 } },
+  &quot;Quests&quot;:   { &quot;active&quot;: [&quot;find_the_dog&quot;], &quot;lastHint&quot;: 3 }
+}
+</code></pre>
+<h3 id="version-2-save-version-2">Version 2 (Save Version 2) <a class="anchor" href="#version-2-save-version-2" aria-label="Link to this section">#</a></h3>
+<ul>
+<li><code>cash</code> is renamed to <code>money</code>.</li>
+<li>A new value, <code>tutorialDone</code>, is <code>false</code> in a new game. Players who already have a save have finished the tutorial, so their saves should get <code>true</code>.</li>
+</ul>
+<h3 id="version-3-save-version-3">Version 3 (Save Version 3) <a class="anchor" href="#version-3-save-version-3" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>The Quests category is renamed to Journal, in the settings asset under <strong>Categories</strong> too.</li>
+<li>The hint system is removed, so <code>lastHint</code> goes.</li>
+<li><code>PlayerStats.health</code> becomes a <code>float</code> from 0 to 1 instead of a whole number from 0 to 100.</li>
+</ul>
+<h3 id="the-steps-in-the-version-3-build">The steps in the version 3 build <a class="anchor" href="#the-steps-in-the-version-3-build" aria-label="Link to this section">#</a></h3>
+<pre><code class="language-csharp">using RareGeometry.Shipready.Save;
+using RareGeometry.Shipready.Save.Data;
+
+public static class StarFarmMigrations
+{
+    [SaveMigration(fromVersion: 1, Description = &quot;money and tutorial&quot;)]
+    static void UpgradeTo2(SaveTree save)
+    {
+        save.RenameKeyEverywhere(&quot;cash&quot;, &quot;money&quot;);
+        save.AddDefaultBeside(&quot;money&quot;, &quot;tutorialDone&quot;, ValueConverters.From(true));
+    }
+
+    [SaveMigration(fromVersion: 2, Description = &quot;journal, no hints, health as a fraction&quot;)]
+    static void UpgradeTo3(SaveTree save)
+    {
+        save.RenameCategory(&quot;Quests&quot;, &quot;Journal&quot;);
+        save.RemoveKeyEverywhere(&quot;lastHint&quot;);
+
+        // The global file has no Progress category, so check before converting.
+        SaveNode stats = save.FindPath(&quot;Progress/stats&quot;);
+        if (stats == null || !stats.IsObject || !stats.HasMember(&quot;health&quot;)) return;
+
+        int oldHealth = ValueConverters.ToInt32(stats.GetMember(&quot;health&quot;), 100);
+        stats.SetMember(&quot;health&quot;, ValueConverters.From(oldHealth / 100f));
+    }
+}
+</code></pre>
+<h3 id="what-happens">What happens <a class="anchor" href="#what-happens" aria-label="Link to this section">#</a></h3>
+<ul>
+<li>A version 1 save loads in the version 3 build. Steps 1 and 2 run, and <code>loaded.Report.MigrationsRun</code> is <code>[1, 2]</code>.</li>
+<li>A version 2 save runs step 2 only. A version 3 save runs nothing.</li>
+<li>The global file runs both steps too. They change nothing in it, because it holds neither <code>cash</code>, <code>Quests</code> nor <code>Progress</code>.</li>
+</ul>
+<p>The data after loading the version 1 save:</p>
+<pre><code class="language-json">&quot;data&quot;: {
+  &quot;Progress&quot;: { &quot;money&quot;: 4300, &quot;stats&quot;: { &quot;health&quot;: 0.8 }, &quot;tutorialDone&quot;: true },
+  &quot;Journal&quot;:  { &quot;active&quot;: [&quot;find_the_dog&quot;] }
+}
+</code></pre>
+<p>A <code>float</code> is written with the fewest digits that read back as exactly the same float, so 0.8 shows as <code>0.8</code>. A few values need more digits, up to nine.</p>
+<p>The file on disk is still the version 1 file until the player saves. After that save, the slot holds version 3 data, and the version 1 file is kept as <code>slot_01.save.bak1</code>.</p>
+<p>Something else not working? Every result code has an entry in <a href="save-troubleshooting.html">Troubleshooting</a>.</p>
+<div class="doc-pager"><a class="pager prev" href="save-walkthroughs-own-menu-ui-toolkit.html"><span class="label">Previous</span>Walkthrough: your own menu in UI Toolkit</a><a class="pager next" href="save-coop.html"><span class="label">Next</span>Co-op</a></div>
+<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Game+Updates" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
+</article>
+<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#the-rules-in-short">The rules in short</a></li><li class="toc-2"><a href="#what-the-save-version-is">What the save version is</a></li><li class="toc-2"><a href="#when-to-raise-the-save-version">When to raise the save version</a></li><li class="toc-2"><a href="#writing-a-migration-step">Writing a migration step</a></li><li class="toc-3"><a href="#adding-steps-by-hand">Adding steps by hand</a></li><li class="toc-2"><a href="#the-savetree-helpers">The SaveTree helpers</a></li><li class="toc-3"><a href="#where-your-values-are-in-the-tree">Where your values are in the tree</a></li><li class="toc-3"><a href="#per-player-data-and-renamecategory">Per-player data and RenameCategory</a></li><li class="toc-3"><a href="#renaming-an-enum-value">Renaming an enum value</a></li><li class="toc-2"><a href="#order-and-gaps">Order and gaps</a></li><li class="toc-2"><a href="#duplicates">Duplicates</a></li><li class="toc-2"><a href="#when-a-step-fails">When a step fails</a></li><li class="toc-2"><a href="#steps-run-on-a-background-thread">Steps run on a background thread</a></li><li class="toc-2"><a href="#saves-from-a-newer-version-are-refused">Saves from a newer version are refused</a></li><li class="toc-2"><a href="#tolerant-loading-what-needs-no-migration">Tolerant loading: what needs no migration</a></li><li class="toc-2"><a href="#changing-compression-or-encryption-in-an-update">Changing compression or encryption in an update</a></li><li class="toc-2"><a href="#il2cpp-and-code-stripping">IL2CPP and code stripping</a></li><li class="toc-2"><a href="#the-pre-migration-file-stays-as-a-backup">The pre-migration file stays as a backup</a></li><li class="toc-2"><a href="#testing-with-old-save-files">Testing with old save files</a></li><li class="toc-2"><a href="#worked-example-version-1-to-version-3">Worked example: version 1 to version 3</a></li><li class="toc-3"><a href="#version-1-shipped-with-save-version-1">Version 1 (shipped with Save Version 1)</a></li><li class="toc-3"><a href="#version-2-save-version-2">Version 2 (Save Version 2)</a></li><li class="toc-3"><a href="#version-3-save-version-3">Version 3 (Save Version 3)</a></li><li class="toc-3"><a href="#the-steps-in-the-version-3-build">The steps in the version 3 build</a></li><li class="toc-3"><a href="#what-happens">What happens</a></li></ul></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
+        <p>Core systems, carefully built.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
+          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
+          <li><a href="../../save-kit/index.html">Save Kit</a></li>
+          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
+          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
+          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
+          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
+          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
+          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
+          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="../../docs/index.html">Documentation</a></li>
+          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
+          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/index.html">Support</a></li>
+          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
+          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
+          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
+          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
+      <p>No trackers, no cookies, no analytics.</p>
+    </div>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>
