@@ -2,153 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#0B1220">
-<title>Changelog | Rare Geometry</title>
-<meta name="description" content="Changelog: documentation for the All In One Bug Report Kit for Unity.">
-<link rel="canonical" href="https://raregeometry.github.io/bug-report-kit/docs/changelog.html">
-<meta property="og:site_name" content="Rare Geometry">
-<meta property="og:title" content="Changelog">
-<meta property="og:description" content="Changelog: documentation for the All In One Bug Report Kit for Unity.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://raregeometry.github.io/bug-report-kit/docs/changelog.html">
-<meta property="og:image" content="https://raregeometry.github.io/assets/img/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moved | Rare Geometry</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://raregeometry.github.io/shipready/docs/">
+<meta http-equiv="refresh" content="0; url=../../shipready/docs/index.html">
 <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="wrap header-row">
-    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
-      <img src="../../assets/logo.svg" alt="" width="34" height="34">
-      <span>Rare Geometry</span>
-    </a>
-    <nav aria-label="Main">
-      <ul class="nav">
-        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<main id="main">
-<div class="wrap docs-shell">
-<aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">Bug Report Kit docs</a><span class="pill">v1.0.1</span><span class="pill pill-dev">Coming soon</span></div>
-  <div class="docs-search" hidden>
-    <label class="sr-only" for="docs-q">Search the documentation</label>
-    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
-    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
-    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
-  </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a><a href="adding-to-your-game.html">Adding it to your own game</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="report-form.html">The report form</a><a href="debug-overlay.html">Debug overlay</a><a href="report-inbox.html">Report Inbox</a><a href="make-it-yours.html">Make it yours</a><a href="builds-and-privacy.html">Builds and privacy</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings.html">Settings</a><a href="extending.html">Extending (API)</a><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html" aria-current="page">Changelog</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a><a href="adding-to-your-game.html">Adding it to your own game</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="report-form.html">The report form</a><a href="debug-overlay.html">Debug overlay</a><a href="report-inbox.html">Report Inbox</a><a href="make-it-yours.html">Make it yours</a><a href="builds-and-privacy.html">Builds and privacy</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings.html">Settings</a><a href="extending.html">Extending (API)</a><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html" aria-current="page">Changelog</a></div></div></details>
-  </nav>
-</aside>
-<article class="prose" id="doc">
-<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Bug Report Kit</a><span>/</span><span>Reference</span></nav>
-<h1 id="changelog">Changelog</h1>
-<p>All notable changes to this kit are documented here, newest first, in Keep a Changelog style.</p>
-<h2 id="101---2026-11-08">[1.0.1] - 2026-11-08 <a class="anchor" href="#101---2026-11-08" aria-label="Link to this section">#</a></h2>
-<p>Safer in existing games, from a second-opinion review of how the kit meets other games' input, pausing, cameras and
-scenes.</p>
-<h3 id="added">Added <a class="anchor" href="#added" aria-label="Link to this section">#</a></h3>
-<ul>
-<li>The open and overlay keys do nothing while a Unity UI, TextMeshPro or UI Toolkit text field in your game has focus,
-  and <code>BugReporter.KeysBlocked</code> lets your game block them (a chat box, a rebinding screen). Closing the overlay always works.</li>
-<li><code>BugReporter.TesterCamera</code> chooses the camera for "Go to where the tester was". Without it the kit uses the MainCamera,
-  or else the screen camera drawn last, skipping cameras that draw into a texture. Reports name the camera.</li>
-<li>Reports list every other scene loaded next to the active one, and "Go to where the tester was" opens them too.</li>
-<li>Settings &gt; Max Attachment Megabytes (50): larger attachments are left out with a note.</li>
-<li>Why Isn't It Working: an Open the Form Now button while playing, and a warning when Unity's logging is switched off.</li>
-<li>Docs: "Adding it to your own game", and more Troubleshooting.</li>
-</ul>
-<h3 id="changed">Changed <a class="anchor" href="#changed" aria-label="Link to this section">#</a></h3>
-<ul>
-<li>Closing the form keeps a time scale other than 0 that your game set while it was open, and a cursor your game hid or
-  locked meanwhile, instead of undoing them.</li>
-<li>Very long log lines and stack traces are kept up to 16,000 characters each; the overlay shows up to 12,000 and Copy
-  copies all of it.</li>
-<li>Game state providers on destroyed objects are dropped instead of failing.</li>
-<li>The first console command scan reads only assemblies that use the kit.</li>
-</ul>
-<h2 id="100---2026-11-07">[1.0.0] - 2026-11-07 <a class="anchor" href="#100---2026-11-07" aria-label="Link to this section">#</a></h2>
-<h3 id="added_1">Added <a class="anchor" href="#added_1" aria-label="Link to this section">#</a></h3>
-<ul>
-<li>Report form (uGUI, with a simple fallback when uGUI isn't installed): screenshot taken before the form, markup,
-  category, severity, steps filled in from recent events, and a preview of every part with tick boxes.</li>
-<li>Each report is one zip: an HTML page, JSON, screenshot, replay of the last seconds, Console log with stack traces,
-  recent events, system info, game state and attachments.</li>
-<li>Optional Discord and HTTP destinations, off by default, with a retry queue.</li>
-<li>Debug overlay: console with search, level filters, collapse and Copy All; commands; stats strip and frame time graph;
-  debug options from attributes or a component, with no UI code; error badge; pinning.</li>
-<li>Report Inbox in the Editor: clickable stack traces, Go to where the tester was, statuses, notes, search, filters and
-  CSV export.</li>
-<li>Make it yours: four themes, theme and text table assets, text size, fonts, images, corners and sides, safe areas,
-  Display as for status messages, gamepad focus.</li>
-<li>Development builds only by default: release builds leave out the code that starts the kit, its Unity UI screens,
-  its input code and its settings.</li>
-<li>Setup Wizard, Why Isn't It Working, Help and Support, and two demo scenes.</li>
-</ul>
-<div class="doc-pager"><a class="pager prev" href="support.html"><span class="label">Previous</span>Support</a><span></span></div>
-<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Changelog" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
-</article>
-<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#101---2026-11-08">[1.0.1] - 2026-11-08</a></li><li class="toc-3"><a href="#added">Added</a></li><li class="toc-3"><a href="#changed">Changed</a></li><li class="toc-2"><a href="#100---2026-11-07">[1.0.0] - 2026-11-07</a></li><li class="toc-3"><a href="#added_1">Added</a></li></ul></nav>
-</div>
-</main>
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
-        <p>Core systems, carefully built.</p>
-      </div>
-      <div>
-        <h4>Products</h4>
-        <ul>
-          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
-          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
-          <li><a href="../../save-kit/index.html">Save Kit</a></li>
-          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
-          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
-          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
-          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
-          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
-          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
-          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
-          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Learn</h4>
-        <ul>
-          <li><a href="../../docs/index.html">Documentation</a></li>
-          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
-          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Help</h4>
-        <ul>
-          <li><a href="../../support/index.html">Support</a></li>
-          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
-          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
-          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
-          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-base">
-      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
-      <p>No trackers, no cookies, no analytics.</p>
-    </div>
-  </div>
-</footer>
-<script src="search-index.js"></script>
-<script src="../../assets/docs.js"></script>
+<main id="main"><section class="section"><div class="wrap">
+<h1>This page has moved</h1>
+<p>It is now part of Shipready. <a href="../../shipready/docs/index.html">Continue to Shipready</a>.</p>
+</div></section></main>
+<script>location.replace("../../shipready/docs/index.html");</script>
 </body>
 </html>

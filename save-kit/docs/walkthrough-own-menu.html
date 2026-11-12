@@ -2,142 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#0B1220">
-<title>Walkthrough: use your own menu | Rare Geometry</title>
-<meta name="description" content="Walkthrough: use your own menu: documentation for the All In One Save Kit for Unity.">
-<link rel="canonical" href="https://raregeometry.github.io/save-kit/docs/walkthrough-own-menu.html">
-<meta property="og:site_name" content="Rare Geometry">
-<meta property="og:title" content="Walkthrough: use your own menu">
-<meta property="og:description" content="Walkthrough: use your own menu: documentation for the All In One Save Kit for Unity.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://raregeometry.github.io/save-kit/docs/walkthrough-own-menu.html">
-<meta property="og:image" content="https://raregeometry.github.io/assets/img/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moved | Rare Geometry</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://raregeometry.github.io/shipready/docs/">
+<meta http-equiv="refresh" content="0; url=../../shipready/docs/index.html">
 <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="wrap header-row">
-    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
-      <img src="../../assets/logo.svg" alt="" width="34" height="34">
-      <span>Rare Geometry</span>
-    </a>
-    <nav aria-label="Main">
-      <ul class="nav">
-        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<main id="main">
-<div class="wrap docs-shell">
-<aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">Save Kit docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
-  <div class="docs-search" hidden>
-    <label class="sr-only" for="docs-q">Search the documentation</label>
-    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
-    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
-    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
-  </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="walkthroughs.html">Walkthroughs</a></div><div class="docs-group"><p class=label>Walkthroughs</p><a href="walkthrough-first-save.html">Your first save</a><a href="walkthrough-world-objects.html">World objects</a><a href="walkthrough-save-menu.html">The save menu</a><a href="walkthrough-own-menu.html" aria-current="page">Your own save menu (uGUI)</a><a href="walkthrough-own-menu-ui-toolkit.html">Your own save menu (UI Toolkit)</a><a href="walkthrough-backups.html">Backups and recovery</a><a href="walkthrough-game-updates.html">Game updates</a></div><div class="docs-group"><p class=label>Learn</p><a href="guide.html">Guide</a><a href="game-updates.html">Game updates and migrations</a><a href="coop.html">Co-op</a><a href="steam-cloud.html">Steam Cloud</a></div><div class="docs-group"><p class=label>Reference</p><a href="reference.html">Reference</a><a href="api.html">API reference</a><a href="limits-and-faq.html">Limits and FAQ</a><a href="troubleshooting.html">Troubleshooting</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="walkthroughs.html">Walkthroughs</a></div><div class="docs-group"><p class=label>Walkthroughs</p><a href="walkthrough-first-save.html">Your first save</a><a href="walkthrough-world-objects.html">World objects</a><a href="walkthrough-save-menu.html">The save menu</a><a href="walkthrough-own-menu.html" aria-current="page">Your own save menu (uGUI)</a><a href="walkthrough-own-menu-ui-toolkit.html">Your own save menu (UI Toolkit)</a><a href="walkthrough-backups.html">Backups and recovery</a><a href="walkthrough-game-updates.html">Game updates</a></div><div class="docs-group"><p class=label>Learn</p><a href="guide.html">Guide</a><a href="game-updates.html">Game updates and migrations</a><a href="coop.html">Co-op</a><a href="steam-cloud.html">Steam Cloud</a></div><div class="docs-group"><p class=label>Reference</p><a href="reference.html">Reference</a><a href="api.html">API reference</a><a href="limits-and-faq.html">Limits and FAQ</a><a href="troubleshooting.html">Troubleshooting</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
-  </nav>
-</aside>
-<article class="prose" id="doc">
-<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Save Kit</a><span>/</span><span>Walkthroughs</span></nav>
-<h1 id="walkthrough-use-your-own-menu">Walkthrough: use your own menu</h1>
-<p>The kit's save menu can be restyled a long way (see <a href="guide.html#make-it-yours">Make it yours</a>). If your game already has its own menu art, you can instead build the menu yourself on the kit's public API and keep everything else: slots, autosaves, backups, pictures and world saving. This page walks through the <strong>Own Menu</strong> demo, which does exactly that in one short script.</p>
-<h2 id="1-try-it">1. Try it <a class="anchor" href="#1-try-it" aria-label="Link to this section">#</a></h2>
-<p>Open <code>Samples/Demos/Scenes/OwnMenuDemo.unity</code> and press Play. A plain list shows five slots. Click <strong>+1 coin</strong> a few times, then <strong>Save</strong> on a slot: the row shows the date, "3 coins" and a picture of the scene. Click <strong>+1 coin</strong> again, then <strong>Load</strong>: the coin count goes back to what was saved. <strong>Delete</strong> empties the slot.</p>
-<p>Like every demo, it runs on its own settings and saves into its own folder (<code>SaveKitDemos/OwnMenu</code>), so it never touches your game's saves.</p>
-<h2 id="2-read-the-script">2. Read the script <a class="anchor" href="#2-read-the-script" aria-label="Link to this section">#</a></h2>
-<p><code>Samples/Demos/Scripts/OwnMenu/OwnMenuDemo.cs</code> builds its uGUI list in code, so the whole menu is in one file. The parts that use the kit are marked 1 to 5:</p>
-<ol>
-<li><strong>List the slots.</strong> <code>SaveKit.GetSlotInfos(list)</code> fills a list with one <code>SlotInfo</code> per slot: <code>Exists</code>, <code>SavedUtc</code>, <code>PlaytimeSeconds</code>, <code>Location</code>, <code>Summary</code> and more. Draw one row per entry.</li>
-<li><strong>Save.</strong> Set what the row will say, take a picture, then save:
-   <code>csharp
-   SaveKit.SetSummary(coins + " coins");
-   Texture2D picture = ThumbnailCapture.Capture(Camera.main);
-   SaveKit.SetNextThumbnail(picture);
-   SaveResult result = SaveKit.Save(slot);
-   Thumbnails.DestroyTexture(picture);</code></li>
-<li><strong>Load.</strong> <code>SaveKit.Load(slot)</code> restores every value and Saveable; read your values back afterwards, here with <code>SaveKit.Data.Get("coins", 0)</code>.</li>
-<li><strong>Delete.</strong> <code>SaveKit.Delete(slot)</code>; the save's backups and picture go with it.</li>
-<li><strong>Show the picture.</strong> <code>Thumbnails.Read(SaveKit.Storage, info.FileName)</code> returns the save's picture as a texture, or null. Destroy it with <code>Thumbnails.DestroyTexture</code> when the row goes away.</li>
-</ol>
-<p>Every call returns a result with <code>Success</code> and a plain-English <code>Message</code>, so the status line can say what happened.</p>
-<h2 id="3-make-it-your-own">3. Make it your own <a class="anchor" href="#3-make-it-your-own" aria-label="Link to this section">#</a></h2>
-<p>Copy the script into your project, rename it, and swap the plain boxes for your own prefabs. Things the kit's menu does for you that you may want too:</p>
-<ul>
-<li><strong>Ask before overwriting, loading or deleting:</strong> check <code>info.Exists</code> and show your own confirmation first.</li>
-<li><strong>Autosaves and the quicksave:</strong> <code>SaveKit.GetAutosaveInfos(list)</code> and <code>SaveKit.GetQuicksaveInfo()</code>; load them with <code>SaveKit.Load(info)</code>.</li>
-<li><strong>Damaged saves:</strong> <code>info.IsDamaged</code> and <code>info.HasValidBackup</code>; <code>SaveKit.RestoreBackup(slot)</code> puts the newest good backup back.</li>
-<li><strong>Saves from a newer version of the game:</strong> <code>info.IsFromNewerVersion</code>; do not offer Load for them.</li>
-<li><strong>Large lists:</strong> read pictures only for rows on screen, as the kit's menu does.</li>
-</ul>
-<p>The <a href="reference.html">Reference</a> lists every call.</p>
-<p><strong>Back to:</strong> <a href="walkthroughs.html">All walkthroughs</a>.</p>
-<div class="doc-pager"><a class="pager prev" href="walkthrough-save-menu.html"><span class="label">Previous</span>The save menu</a><a class="pager next" href="walkthrough-own-menu-ui-toolkit.html"><span class="label">Next</span>Your own save menu (UI Toolkit)</a></div>
-<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Walkthrough:+use+your+own+menu" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
-</article>
-<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#1-try-it">1. Try it</a></li><li class="toc-2"><a href="#2-read-the-script">2. Read the script</a></li><li class="toc-2"><a href="#3-make-it-your-own">3. Make it your own</a></li></ul></nav>
-</div>
-</main>
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
-        <p>Core systems, carefully built.</p>
-      </div>
-      <div>
-        <h4>Products</h4>
-        <ul>
-          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
-          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
-          <li><a href="../../save-kit/index.html">Save Kit</a></li>
-          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
-          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
-          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
-          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
-          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
-          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
-          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
-          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Learn</h4>
-        <ul>
-          <li><a href="../../docs/index.html">Documentation</a></li>
-          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
-          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Help</h4>
-        <ul>
-          <li><a href="../../support/index.html">Support</a></li>
-          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
-          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
-          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
-          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-base">
-      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
-      <p>No trackers, no cookies, no analytics.</p>
-    </div>
-  </div>
-</footer>
-<script src="search-index.js"></script>
-<script src="../../assets/docs.js"></script>
+<main id="main"><section class="section"><div class="wrap">
+<h1>This page has moved</h1>
+<p>It is now part of Shipready. <a href="../../shipready/docs/index.html">Continue to Shipready</a>.</p>
+</div></section></main>
+<script>location.replace("../../shipready/docs/index.html");</script>
 </body>
 </html>

@@ -2,131 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#0B1220">
-<title>Display safety | Rare Geometry</title>
-<meta name="description" content="Display safety: documentation for the All In One Game Settings &amp; Menu Kit for Unity.">
-<link rel="canonical" href="https://raregeometry.github.io/settings-menu-kit/docs/display-safety.html">
-<meta property="og:site_name" content="Rare Geometry">
-<meta property="og:title" content="Display safety">
-<meta property="og:description" content="Display safety: documentation for the All In One Game Settings &amp; Menu Kit for Unity.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://raregeometry.github.io/settings-menu-kit/docs/display-safety.html">
-<meta property="og:image" content="https://raregeometry.github.io/assets/img/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moved | Rare Geometry</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://raregeometry.github.io/shipready/docs/">
+<meta http-equiv="refresh" content="0; url=../../shipready/docs/index.html">
 <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="wrap header-row">
-    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
-      <img src="../../assets/logo.svg" alt="" width="34" height="34">
-      <span>Rare Geometry</span>
-    </a>
-    <nav aria-label="Main">
-      <ul class="nav">
-        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<main id="main">
-<div class="wrap docs-shell">
-<aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">Settings &amp; Menu Kit docs</a><span class="pill">v1.0.0</span></div>
-  <div class="docs-search" hidden>
-    <label class="sr-only" for="docs-q">Search the documentation</label>
-    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
-    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
-    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
-  </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a></div><div class="docs-group"><p class=label>Features</p><a href="screens.html">Screens</a><a href="settings-catalog.html">Settings catalog</a><a href="display-safety.html" aria-current="page">Display safety</a><a href="audio.html">Audio</a><a href="graphics.html">Graphics</a><a href="controls-and-rebinding.html">Controls and rebinding</a><a href="themes.html">Themes</a><a href="accessibility.html">Accessibility</a><a href="languages.html">Languages</a><a href="pause-and-multiplayer.html">Pause and multiplayer</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending and API</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings-reference.html">Settings reference</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a></div><div class="docs-group"><p class=label>Features</p><a href="screens.html">Screens</a><a href="settings-catalog.html">Settings catalog</a><a href="display-safety.html" aria-current="page">Display safety</a><a href="audio.html">Audio</a><a href="graphics.html">Graphics</a><a href="controls-and-rebinding.html">Controls and rebinding</a><a href="themes.html">Themes</a><a href="accessibility.html">Accessibility</a><a href="languages.html">Languages</a><a href="pause-and-multiplayer.html">Pause and multiplayer</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending and API</a><a href="upgrading.html">Upgrading</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings-reference.html">Settings reference</a><a href="troubleshooting.html">Troubleshooting and FAQ</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
-  </nav>
-</aside>
-<article class="prose" id="doc">
-<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Settings &amp; Menu Kit</a><span>/</span><span>Features</span></nav>
-<h1 id="display-safety">Display safety</h1>
-<p>Changing resolution, refresh rate, window mode or monitor can leave a player with a black screen. The kit protects them:</p>
-<ol>
-<li><strong>Confirmation:</strong> after a display change, "Keep these display settings?" counts down from 15 seconds. Without <strong>Keep</strong>, the previous mode comes back by itself.</li>
-<li><strong>Crash recovery:</strong> the kit notes the pending change in the settings file before applying it. If the game crashes or is closed during the countdown, the next start restores the previous mode.</li>
-<li><strong>First launch:</strong> the defaults are the mode the game started in, so nothing changes until the player chooses.</li>
-</ol>
-<figure class="doc-figure"><img src="img/display-change-clean.png" alt="Display change confirmation" loading="lazy"><figcaption>Display change confirmation</figcaption></figure>
-<h2 id="the-settings-file">The settings file <a class="anchor" href="#the-settings-file" aria-label="Link to this section">#</a></h2>
-<ul>
-<li>Saved as <code>settings.json</code> in <code>Application.persistentDataPath</code> (versioned JSON).</li>
-<li>Written safely: a temporary file is written first, and the previous file is kept as <code>settings.json.bak</code>.</li>
-<li>A damaged file is replaced by the backup or the defaults; the damaged copy is kept as <code>settings.json.corrupt</code> and one warning is logged.</li>
-<li>Start the game with <code>-reset-settings</code> to delete the saved settings (useful for support).</li>
-</ul>
-<h2 id="other-details">Other details <a class="anchor" href="#other-details" aria-label="Link to this section">#</a></h2>
-<ul>
-<li>Refresh rates are offered per resolution; a resolution change re-checks the refresh rate.</li>
-<li>Exclusive full screen is offered where the platform supports it.</li>
-<li>Monitor selection appears only on Windows with two or more monitors.</li>
-</ul>
-<div class="doc-pager"><a class="pager prev" href="settings-catalog.html"><span class="label">Previous</span>Settings catalog</a><a class="pager next" href="audio.html"><span class="label">Next</span>Audio</a></div>
-<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Display+safety" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
-</article>
-<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#the-settings-file">The settings file</a></li><li class="toc-2"><a href="#other-details">Other details</a></li></ul></nav>
-</div>
-</main>
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
-        <p>Core systems, carefully built.</p>
-      </div>
-      <div>
-        <h4>Products</h4>
-        <ul>
-          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
-          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
-          <li><a href="../../save-kit/index.html">Save Kit</a></li>
-          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
-          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
-          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
-          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
-          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
-          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
-          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
-          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Learn</h4>
-        <ul>
-          <li><a href="../../docs/index.html">Documentation</a></li>
-          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
-          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Help</h4>
-        <ul>
-          <li><a href="../../support/index.html">Support</a></li>
-          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
-          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
-          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
-          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-base">
-      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
-      <p>No trackers, no cookies, no analytics.</p>
-    </div>
-  </div>
-</footer>
-<script src="search-index.js"></script>
-<script src="../../assets/docs.js"></script>
+<main id="main"><section class="section"><div class="wrap">
+<h1>This page has moved</h1>
+<p>It is now part of Shipready. <a href="../../shipready/docs/index.html">Continue to Shipready</a>.</p>
+</div></section></main>
+<script>location.replace("../../shipready/docs/index.html");</script>
 </body>
 </html>

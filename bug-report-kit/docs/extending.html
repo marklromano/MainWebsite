@@ -2,154 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#0B1220">
-<title>Extending | Rare Geometry</title>
-<meta name="description" content="Extending: documentation for the All In One Bug Report Kit for Unity.">
-<link rel="canonical" href="https://raregeometry.github.io/bug-report-kit/docs/extending.html">
-<meta property="og:site_name" content="Rare Geometry">
-<meta property="og:title" content="Extending">
-<meta property="og:description" content="Extending: documentation for the All In One Bug Report Kit for Unity.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://raregeometry.github.io/bug-report-kit/docs/extending.html">
-<meta property="og:image" content="https://raregeometry.github.io/assets/img/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moved | Rare Geometry</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://raregeometry.github.io/shipready/docs/">
+<meta http-equiv="refresh" content="0; url=../../shipready/docs/index.html">
 <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="wrap header-row">
-    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
-      <img src="../../assets/logo.svg" alt="" width="34" height="34">
-      <span>Rare Geometry</span>
-    </a>
-    <nav aria-label="Main">
-      <ul class="nav">
-        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<main id="main">
-<div class="wrap docs-shell">
-<aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">Bug Report Kit docs</a><span class="pill">v1.0.1</span><span class="pill pill-dev">Coming soon</span></div>
-  <div class="docs-search" hidden>
-    <label class="sr-only" for="docs-q">Search the documentation</label>
-    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
-    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
-    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
-  </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a><a href="adding-to-your-game.html">Adding it to your own game</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="report-form.html">The report form</a><a href="debug-overlay.html">Debug overlay</a><a href="report-inbox.html">Report Inbox</a><a href="make-it-yours.html">Make it yours</a><a href="builds-and-privacy.html">Builds and privacy</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings.html">Settings</a><a href="extending.html" aria-current="page">Extending (API)</a><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="samples.html">Samples</a><a href="adding-to-your-game.html">Adding it to your own game</a></div><div class="docs-group"><p class=label>Using the kit</p><a href="report-form.html">The report form</a><a href="debug-overlay.html">Debug overlay</a><a href="report-inbox.html">Report Inbox</a><a href="make-it-yours.html">Make it yours</a><a href="builds-and-privacy.html">Builds and privacy</a></div><div class="docs-group"><p class=label>Reference</p><a href="settings.html">Settings</a><a href="extending.html" aria-current="page">Extending (API)</a><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
-  </nav>
-</aside>
-<article class="prose" id="doc">
-<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Bug Report Kit</a><span>/</span><span>Reference</span></nav>
-<h1 id="extending">Extending</h1>
-<p>Everything below works with no compile switches: in builds that leave the kit out, each call does nothing.</p>
-<h2 id="add-to-every-report">Add to every report <a class="anchor" href="#add-to-every-report" aria-label="Link to this section">#</a></h2>
-<pre><code>BugReporter.AddBreadcrumb(&quot;Opened the shop&quot;);            // a line in Recent events
-BugReporter.SetContext(&quot;Level&quot;, &quot;Forest 2&quot;);              // a line in Game state; null removes it
-BugReporter.AddContextProvider(myProvider);               // IReportContextProvider, read when a report starts
-BugReporter.AddAttachment(&quot;save.dat&quot;, () =&gt; File.ReadAllBytes(savePath));
-ReportPrivacy.Redact = text =&gt; Regex.Replace(text, @&quot;\S+@\S+&quot;, &quot;&lt;email&gt;&quot;);
-</code></pre>
-<p>With no code: add a <strong>Report Context Source</strong> component and list values to read from your components.</p>
-<h2 id="open-save-and-listen">Open, save and listen <a class="anchor" href="#open-save-and-listen" aria-label="Link to this section">#</a></h2>
-<pre><code>BugReporter.Open();                                       // the form, with a fresh screenshot
-BugReporter.Open(&quot;Boss fight softlocked&quot;);                // with What happened filled in
-BugReporter.SaveQuickReport(&quot;Crash in level 3&quot;);          // straight to a zip, no form
-BugReporter.ReportSaved += result =&gt; Debug.Log(result.ZipPath);
-BugReporter.FormOpened += PauseMyInput;
-BugReporter.FormClosed += ResumeMyInput;
-</code></pre>
-<h2 id="console-commands-and-options">Console commands and options <a class="anchor" href="#console-commands-and-options" aria-label="Link to this section">#</a></h2>
-<pre><code>[DebugCommand(&quot;give_gold&quot;, &quot;Adds gold.&quot;)]
-static string GiveGold(int amount) { Gold += amount; return &quot;Gold &quot; + Gold; }
-
-[DebugOption(&quot;Cheats/God Mode&quot;)] bool godMode;
-[DebugOption(&quot;Tuning/Speed&quot;, Min = 0, Max = 20, Step = 0.5f)] float speed;
-[DebugOption] void ResetLevel() { }
-
-void OnEnable() { DebugOptions.Register(this); DebugCommands.Register(this); }
-void OnDisable() { DebugOptions.Unregister(this); DebugCommands.Unregister(this); }
-</code></pre>
-<p>Static commands are found by themselves. With no code: a <strong>Debug Options Source</strong> component lists values and methods
-by name. From code: <code>DebugOptions.AddToggle</code>, <code>AddNumber</code>, <code>AddButton</code>, <code>AddReadOnly</code>, <code>DebugCommands.Add</code>.</p>
-<h2 id="your-own-ui-destinations-and-input">Your own UI, destinations and input <a class="anchor" href="#your-own-ui-destinations-and-input" aria-label="Link to this section">#</a></h2>
-<ul>
-<li><code>BugReporter.UseForm(IBugReportForm)</code>: your form gets a <code>ReportSession</code> with the screenshot, markup, parts and
-  <code>Submit</code>.</li>
-<li><code>BugReporter.UseOverlay(IDebugOverlay)</code>: your console; read lines with <code>BugReporter.GetLog()</code> and watch
-  <code>BugReporter.LogVersion</code>.</li>
-<li><code>BugReporter.AddDestination(IReportDestination)</code>: send reports anywhere; the local zip is always saved first.</li>
-<li><code>BugReporter.UseKeySource(IReportKeySource)</code>: your own input code for the keys.</li>
-<li><code>BugReporter.KeysBlocked</code>: return true while the kit's keys should do nothing, such as while your chat box is open.</li>
-<li><code>BugReporter.TesterCamera</code>: return the camera the player sees through, for split screen or an untagged camera.</li>
-<li><code>BugReporter.UseTheme(theme)</code>, <code>UsePreset(preset)</code>, <code>ThemeChanged</code>: switch the look while playing.</li>
-<li><code>ReportText.Translate</code>: reword or localise every word.</li>
-</ul>
-<div class="doc-pager"><a class="pager prev" href="settings.html"><span class="label">Previous</span>Settings</a><a class="pager next" href="upgrading.html"><span class="label">Next</span>Upgrading</a></div>
-<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Extending" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
-</article>
-<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#add-to-every-report">Add to every report</a></li><li class="toc-2"><a href="#open-save-and-listen">Open, save and listen</a></li><li class="toc-2"><a href="#console-commands-and-options">Console commands and options</a></li><li class="toc-2"><a href="#your-own-ui-destinations-and-input">Your own UI, destinations and input</a></li></ul></nav>
-</div>
-</main>
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
-        <p>Core systems, carefully built.</p>
-      </div>
-      <div>
-        <h4>Products</h4>
-        <ul>
-          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
-          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
-          <li><a href="../../save-kit/index.html">Save Kit</a></li>
-          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
-          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
-          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
-          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
-          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
-          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
-          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
-          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Learn</h4>
-        <ul>
-          <li><a href="../../docs/index.html">Documentation</a></li>
-          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
-          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Help</h4>
-        <ul>
-          <li><a href="../../support/index.html">Support</a></li>
-          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
-          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
-          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
-          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-base">
-      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
-      <p>No trackers, no cookies, no analytics.</p>
-    </div>
-  </div>
-</footer>
-<script src="search-index.js"></script>
-<script src="../../assets/docs.js"></script>
+<main id="main"><section class="section"><div class="wrap">
+<h1>This page has moved</h1>
+<p>It is now part of Shipready. <a href="../../shipready/docs/index.html">Continue to Shipready</a>.</p>
+</div></section></main>
+<script>location.replace("../../shipready/docs/index.html");</script>
 </body>
 </html>

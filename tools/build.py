@@ -33,7 +33,7 @@ PAGES = pathlib.Path(__file__).resolve().parent / "pages"
 SITE_URL = "https://raregeometry.github.io"
 STORE_URL = "https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146"
 PUBLISHER_URL = "https://assetstore.unity.com/publishers/160196"
-EMAIL = "marklromano@outlook.com"
+EMAIL = "raregeometrysupport@gmail.com"
 # Empty until they exist: the pages then show "soon" instead of a link.
 DISCORD_URL = "https://discord.gg/AmpBDxRAKu"
 ISSUES_URL = "https://github.com/raregeometry/Support/issues"
@@ -116,6 +116,7 @@ PRODUCTS = [
         # Coming soon: its page is up, its docs build with --docs save-kit=<folder> but are published (and listed
         # on the docs hub) only once "status" is "live" and "store" is set, on launch day.
         "slug": "save-kit",
+        "retired_to": "shipready",
         "name": "All In One Save Kit",
         "short": "Save Kit",
         "accent": "c-save",
@@ -160,6 +161,7 @@ PRODUCTS = [
         # Coming soon: page and docs are online before the store listing (Unity's reviewer opens them). On launch day:
         # "status": "live", "store": its Asset Store link, and the product page's pill and buttons (tools/pages/interaction-kit.html).
         "slug": "interaction-kit",
+        "retired_to": "interactra",
         "name": "All In One Interaction Kit",
         "short": "Interaction Kit",
         "accent": "c-interact",
@@ -202,6 +204,7 @@ PRODUCTS = [
         # Coming soon, like the Save Kit: page up, docs built locally, published on launch day.
         # Its Documentation/docs.json sets the sidebar groups, order and titles; this list only keeps the addresses.
         "slug": "runtime-building-kit",
+        "retired_to": "snapbuild",
         "name": "All In One Runtime Building Kit",
         "short": "Runtime Building Kit",
         "accent": "c-runtime",
@@ -249,6 +252,7 @@ PRODUCTS = [
     {
         # Coming soon, like the Save Kit: page up, docs built locally, published on launch day.
         "slug": "settings-menu-kit",
+        "retired_to": "shipready",
         "name": "All In One Game Settings & Menu Kit",
         "short": "Settings & Menu Kit",
         "accent": "c-settings",
@@ -292,6 +296,7 @@ PRODUCTS = [
     {
         # Coming soon, like the Save Kit: page up, docs built locally, published on launch day.
         "slug": "bug-report-kit",
+        "retired_to": "shipready",
         "free": True,
         "name": "All In One Bug Report Kit",
         "short": "Bug Report Kit",
@@ -337,6 +342,7 @@ PRODUCTS = [
         # Coming soon: page up, docs built with --docs footstep-kit=<folder>, published (and listed on the docs hub)
         # on launch day with "status": "live" and "store" set. Its Documentation/docs.json sets the sidebar.
         "slug": "footstep-kit",
+        "retired_to": "responsive-fx",
         "name": "All In One Surface Footstep Kit",
         "short": "Footstep Kit",
         "accent": "c-footstep",
@@ -363,6 +369,7 @@ PRODUCTS = [
         # Coming soon: page up, docs built with --docs hit-feedback-kit=<folder>, published (and listed on the docs hub)
         # on launch day with "status": "live" and "store" set. Its Documentation/docs.json sets the sidebar.
         "slug": "hit-feedback-kit",
+        "retired_to": "responsive-fx",
         "name": "All In One Hit Feedback Kit",
         "short": "Hit Feedback Kit",
         "accent": "c-hitfeedback",
@@ -390,6 +397,7 @@ PRODUCTS = [
         # Coming soon: submitted to the Asset Store (free), page and docs up so the store links work.
         # Its Documentation/docs.json sets the sidebar groups, order and titles.
         "slug": "tutorial-kit",
+        "retired_to": "shipready",
         "name": "All In One Tutorial Kit",
         "short": "Tutorial Kit",
         "accent": "c-tutorial",
@@ -414,6 +422,7 @@ PRODUCTS = [
     {
         # Coming soon, like the Save Kit: page up, docs built locally, published on launch day.
         "slug": "waypoint-minimap-kit",
+        "retired_to": "bearing",
         "name": "All In One Waypoint & Minimap Kit",
         "short": "Waypoint & Minimap Kit",
         "accent": "c-waypoint",
@@ -455,6 +464,7 @@ PRODUCTS = [
         # Coming soon: page, docs (five manuals in one: --docs shipready=<stage made by Shipready's DevTools>) and the
         # web demo (shipready/demo/) are up so the store description's links work. Launch day: "status": "live", "store".
         "slug": "shipready",
+        "lineup": True,
         "name": "Shipready",
         "short": "Shipready",
         "the": "",
@@ -483,9 +493,105 @@ PRODUCTS = [
 # Kits without docs yet, for the docs hub and "More from Rare Geometry": (name, accent, status, one line)
 COMING = []
 
+
+# ---- The lineup (Nov 2026): five products replace the ten kits. A product in the lineup has "lineup": True. An old
+# kit has "retired_to": the slug of the product it became; once that product's page is on the site, the old kit's
+# pages are written as redirects to it (the files stay, so links out in the world keep working). ----
+
+def retired(p):
+    """True when an old kit's replacement is on the site, so the kit is hidden and its pages redirect."""
+    return bool(p.get("retired_to")) and (SITE / p["retired_to"] / "index.html").exists()
+
+
+def current_products():
+    return [p for p in PRODUCTS if not retired(p)]
+
+
+def redirect_stub(root, target, label):
+    url = f"{root}{target}"
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moved | Rare Geometry</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="{SITE_URL}/{target.replace('index.html', '')}">
+<meta http-equiv="refresh" content="0; url={url}">
+<link rel="stylesheet" href="{root}styles.css">
+</head>
+<body>
+<main id="main"><section class="section"><div class="wrap">
+<h1>This page has moved</h1>
+<p>It is now part of {html.escape(label)}. <a href="{url}">Continue to {html.escape(label)}</a>.</p>
+</div></section></main>
+<script>location.replace({json.dumps(url)});</script>
+</body>
+</html>
+"""
+
+
+def write_redirects():
+    """Every page of a retired kit becomes a redirect: its product page to the new product, its docs to the new docs."""
+    names = {p["slug"]: p["name"] for p in PRODUCTS}
+    for p in PRODUCTS:
+        if not retired(p):
+            continue
+        new = p["retired_to"]
+        label = names.get(new, new.replace("-", " ").title())
+        has_docs = (SITE / new / "docs" / "index.html").exists()
+        folder = SITE / p["slug"]
+        pages = [folder / "index.html"] + (sorted(folder.rglob("*.html")) if folder.exists() and not p.get("keep_docs") else [])
+        for path in dict.fromkeys(pages):
+            rel = path.relative_to(SITE)
+            root = "../" * (len(rel.parts) - 1)
+            in_docs = len(rel.parts) > 2 and rel.parts[1] == "docs"
+            target = f"{new}/docs/index.html" if in_docs and has_docs else f"{new}/index.html"
+            write(rel.as_posix(), redirect_stub(root, target, label))
+
+
+ICON_DEFAULT = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">'
+                '<path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>')
+
+
+def product_cards(root):
+    """The home page's product cards: the lineup first, then anything else still current (the live Prefab Builder Kit)."""
+    cards = []
+    for p in sorted(current_products(), key=lambda q: (not q.get("lineup"), q["status"] != "live")):
+        slug = p["slug"]
+        if p["status"] == "live":
+            pill = '<span class="pill pill-live">On the Asset Store</span>'
+        else:
+            pill = f'<span class="pill pill-dev">{html.escape(p["status"].capitalize())}</span>'
+        links = []
+        if (SITE / slug / "demo" / "index.html").exists():
+            links.append(f'<a href="{root}{slug}/demo/index.html">Try the demo</a>')
+        if (SITE / slug / "docs" / "index.html").exists():
+            links.append(f'<a href="{root}{slug}/docs/index.html">Docs</a>')
+        links.append(f'<a href="{root}{slug}/index.html#support">Support</a>')
+        store = (f'<a class="btn" href="{p["store"]}" rel="noopener">View on the Asset Store {ICON_EXTERNAL}</a>'
+                 if p["status"] == "live" and p.get("store") else "")
+        cards.append(f"""<article class="product {p['accent']}">
+        <div class="product-top">
+          <span class="product-icon" aria-hidden="true">{p.get('icon', ICON_DEFAULT)}</span>
+          {pill}
+        </div>
+        <h3>{html.escape(p['name'])}</h3>
+        <p>{html.escape(p['summary'])}</p>
+        <div class="btn-row">
+          {store}<a class="btn btn-ghost" href="{root}{slug}/index.html">Details</a>
+        </div>
+        <p class="card-links">{''.join(links)}</p>
+      </article>""")
+    return "\n      ".join(cards)
+
+
+def footer_products(root):
+    return "\n          ".join(f'<li><a href="{root}{p["slug"]}/index.html">{html.escape(p["short"])}</a></li>'
+                              for p in current_products())
+
 NAV = [
     ("products", "Products", "index.html#products"),
-    ("prefab", "Prefab Builder", "prefab-builder/index.html"),
     ("docs", "Docs", "docs/index.html"),
     ("support", "Support", "support/index.html"),
 ]
@@ -496,7 +602,7 @@ def header(root, active):
     for key, label, href in NAV:
         current = ' aria-current="page"' if key == active else ""
         items.append(f'<li><a href="{root}{href}"{current}>{label}</a></li>')
-    items.append(f'<li class="nav-store"><a href="{STORE_URL}" rel="noopener">Asset Store</a></li>')
+    items.append(f'<li class="nav-store"><a href="{PUBLISHER_URL}" rel="noopener">Asset Store</a></li>')
     return f"""<a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-row">
@@ -528,16 +634,7 @@ def footer(root):
       <div>
         <h4>Products</h4>
         <ul>
-          <li><a href="{root}prefab-builder/index.html">Prefab Builder Kit</a></li>
-          <li><a href="{root}interaction-kit/index.html">Interaction Kit</a></li>
-          <li><a href="{root}save-kit/index.html">Save Kit</a></li>
-          <li><a href="{root}settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
-          <li><a href="{root}runtime-building-kit/index.html">Runtime Building Kit</a></li>
-          <li><a href="{root}bug-report-kit/index.html">Bug Report Kit</a></li>
-          <li><a href="{root}footstep-kit/index.html">Surface Footstep Kit</a></li>
-          <li><a href="{root}tutorial-kit/index.html">Tutorial Kit</a></li>
-          <li><a href="{root}hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
-          <li><a href="{root}waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
+          {footer_products(root)}
           <li><a href="{PUBLISHER_URL}" rel="noopener">Publisher page</a></li>
         </ul>
       </div>
@@ -545,8 +642,7 @@ def footer(root):
         <h4>Learn</h4>
         <ul>
           <li><a href="{root}docs/index.html">Documentation</a></li>
-          <li><a href="{root}prefab-builder/docs/getting-started.html">Getting started</a></li>
-          <li><a href="{root}prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
+          <li><a href="{root}support/index.html">Troubleshooting and help</a></li>
         </ul>
       </div>
       <div>
@@ -622,6 +718,7 @@ def fill(text, root, slug=""):
         "version": PREFAB_VERSION, "external": ICON_EXTERNAL,
         "discord_tile": discord_tile(), "issues_tile": issues_tile(root), "discord_button": discord_button(),
         "support": support_section(root, slug),
+        "product_cards": product_cards(root),
     }
     return re.sub(r"\{\{(\w+)\}\}", lambda m: values[m.group(1)], text)
 
@@ -629,7 +726,7 @@ def fill(text, root, slug=""):
 def more_from(root, slug):
     """The other kits, as cards linking to their pages (Shipping Standard: cross-link every product)."""
     cards, named = [], set()
-    for p in PRODUCTS:
+    for p in current_products():
         named.add(p["name"])
         if p["slug"] == slug:
             continue
@@ -648,7 +745,7 @@ def more_from(root, slug):
   <div class="wrap">
     <div class="section-head">
       <p class="label">More from Rare Geometry</p>
-      <h2 id="more-title">Other kits, built to the same standard</h2>
+      <h2 id="more-title">Other tools, built to the same standard</h2>
     </div>
     <div class="products">{"".join(cards)}</div>
   </div>
@@ -715,8 +812,8 @@ HAND_PAGES = [
     # fragment, output, root, active nav, title, description
     ("home.html", "index.html", "", "",
      "Rare Geometry",
-     "Unity editor tools by Rare Geometry. Home of the All In One Prefab Builder Kit: turn any pack of prefabs into a "
-     "world-building kit."),
+     "Unity tools by Rare Geometry: core systems for finished games, each one complete on its own and built to work "
+     "together. Documentation, web demos and support."),
     ("prefab-builder.html", "prefab-builder/index.html", "../", "prefab",
      "All In One Prefab Builder Kit",
      "Turn any pack of prefabs into a world-building kit: snap, draw roads, scatter, fence, dress streets, settle with "
@@ -773,9 +870,14 @@ HAND_PAGES = [
 
 
 def build_pages():
+    by_slug = {p["slug"]: p for p in PRODUCTS}
     for fragment, out, root, active, title, description in HAND_PAGES:
+        kit = by_slug.get(out.split("/")[0]) if "/" in out else None
+        if kit and retired(kit):
+            continue
         body = fill((PAGES / fragment).read_text(encoding="utf-8"), root, out.split("/")[0] if "/" in out else "")
         write(out, page(root, active, title, description, body, out))
+    write_redirects()
     build_docs_hub()
     sync_footers()
 
@@ -808,8 +910,10 @@ def write(out, text):
 def build_docs_hub():
     """docs/index.html: every kit's documentation in one place."""
     cards = []
-    for p in PRODUCTS:
+    for p in current_products():
         if p["status"] not in ("live", "coming soon"):
+            continue
+        if not (SITE / p["slug"] / "docs" / "index.html").exists():
             continue
         d = f"../{p['slug']}/docs/"
         pill = f'<span class="pill pill-live">v{p["version"]}</span>' if p["status"] == "live" else \

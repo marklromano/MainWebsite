@@ -2,147 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#0B1220">
-<title>Troubleshooting | Rare Geometry</title>
-<meta name="description" content="Troubleshooting: documentation for the All In One Tutorial Kit for Unity.">
-<link rel="canonical" href="https://raregeometry.github.io/tutorial-kit/docs/troubleshooting.html">
-<meta property="og:site_name" content="Rare Geometry">
-<meta property="og:title" content="Troubleshooting">
-<meta property="og:description" content="Troubleshooting: documentation for the All In One Tutorial Kit for Unity.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://raregeometry.github.io/tutorial-kit/docs/troubleshooting.html">
-<meta property="og:image" content="https://raregeometry.github.io/assets/img/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moved | Rare Geometry</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://raregeometry.github.io/shipready/docs/">
+<meta http-equiv="refresh" content="0; url=../../shipready/docs/index.html">
 <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="wrap header-row">
-    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
-      <img src="../../assets/logo.svg" alt="" width="34" height="34">
-      <span>Rare Geometry</span>
-    </a>
-    <nav aria-label="Main">
-      <ul class="nav">
-        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<main id="main">
-<div class="wrap docs-shell">
-<aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">Tutorial Kit docs</a><span class="pill">v1.0.0</span></div>
-  <div class="docs-search" hidden>
-    <label class="sr-only" for="docs-q">Search the documentation</label>
-    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
-    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
-    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
-  </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="flows-and-steps.html">Flows and steps</a><a href="targets.html">Targets</a><a href="finishing-steps.html">Finishing a step</a><a href="coach-marks-and-hints.html">Coach marks and hints</a><a href="make-it-yours.html">Make it yours</a><a href="button-pictures.html">Button pictures</a><a href="tools.html">Tools</a><a href="integrations.html">Integrations and saving</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending and code API</a></div><div class="docs-group"><p class=label>Help</p><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html" aria-current="page">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><p class=label>Start here</p><a href="index.html">Overview</a><a href="getting-started.html">Quick start</a><a href="samples.html">Demo scenes</a></div><div class="docs-group"><p class=label>Features</p><a href="flows-and-steps.html">Flows and steps</a><a href="targets.html">Targets</a><a href="finishing-steps.html">Finishing a step</a><a href="coach-marks-and-hints.html">Coach marks and hints</a><a href="make-it-yours.html">Make it yours</a><a href="button-pictures.html">Button pictures</a><a href="tools.html">Tools</a><a href="integrations.html">Integrations and saving</a></div><div class="docs-group"><p class=label>For programmers</p><a href="extending.html">Extending and code API</a></div><div class="docs-group"><p class=label>Help</p><a href="upgrading.html">Upgrading</a><a href="troubleshooting.html" aria-current="page">Troubleshooting</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
-  </nav>
-</aside>
-<article class="prose" id="doc">
-<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Tutorial Kit</a><span>/</span><span>Help</span></nav>
-<h1 id="troubleshooting">Troubleshooting</h1>
-<p>First open <strong>Tools &gt; All In One Tutorial Kit &gt; Why Is This Step Waiting</strong> while playing, and <strong>Scene Overview</strong> in the
-editor: they say what is wrong in plain words, and Scene Overview fixes most of it in one click.</p>
-<p><strong>The tutorial doesn't start.</strong> It may have run before: with <strong>Run Once Per Player</strong> on, a finished or skipped flow
-never runs again for that player. Press <strong>Restart</strong> in the flow's Inspector while playing. Or its <strong>Start</strong> is
-Manually: something has to call Play (a Tutorial Trigger, a button, a UnityEvent).</p>
-<p><strong>A step never finishes.</strong> The debugger says what it waits for (the step's Inspector says it too). A step with no rule
-needs its Next button (Next Button: Auto or Show). A Click Target step on a button that isn't interactable waits until
-the button can be used. An Input Action rule waits forever if your game has turned that action's map off: the debugger
-says so.</p>
-<p><strong>A step doesn't show at all.</strong> Its target isn't there yet (a closed menu, an object not spawned yet): with When Target
-Missing: Wait, the step waits for it without showing or blocking anything. The debugger says "Hidden while its target
-isn't there".</p>
-<p><strong>The spotlight is in the wrong place or missing.</strong> The target isn't set, is turned off, isn't under a Canvas, or (for
-UI Toolkit) no element has that name. For world objects, set the step's Camera when you use several cameras.</p>
-<p><strong>Clicks on the tip card do nothing.</strong> The scene needs an EventSystem. The kit adds one when Play starts; Scene
-Overview can add it in the editor.</p>
-<p><strong>My game's buttons can't be clicked.</strong> That's the Input Gate: Only Target lets only the spotlighted target through.
-Set it to Allow All, or use the Hint style.</p>
-<p><strong>The card is behind my UI.</strong> Raise the flow's <strong>Sort Order</strong> (above your highest canvas; the highest is 32767).</p>
-<p><strong>My pause menu opens behind the tutorial.</strong> Call <code>TutorialFlow.SuspendAll(true)</code> when it opens and <code>false</code> when it
-closes.</p>
-<p><strong>Escape skips the tutorial and opens my pause menu.</strong> Set the flow's Skip Key to None (the default for new flows).</p>
-<p><strong>A gamepad can't press the highlighted button.</strong> The scene's EventSystem needs an input module for your gamepad. The
-kit selects the highlighted button for gamepad players, so Submit presses it.</p>
-<p><strong>Typing in a text field finishes a Key step.</strong> The kit ignores keys while a uGUI Input Field (or TextMeshPro's) has
-focus. For other text input, add <code>TutorialInput.AddTypingCheck(...)</code>.</p>
-<p><strong>The tutorial highlights an item hidden in a scrolled list.</strong> Scroll Into View (on the target, on by default) scrolls
-uGUI Scroll Rects. UI Toolkit ListViews reuse their rows, so scroll the list yourself (ScrollToItem) and point at the list
-itself, or at a row by a name you set when you bind it.</p>
-<h2 id="still-stuck">Still stuck? <a class="anchor" href="#still-stuck" aria-label="Link to this section">#</a></h2>
-<ul>
-<li>Discord: https://discord.gg/AmpBDxRAKu (ask in #help)</li>
-<li>Report a bug: https://github.com/raregeometry/Support/issues</li>
-<li>Website: https://raregeometry.github.io/tutorial-kit/</li>
-</ul>
-<p>Press <strong>Copy system info</strong> in <strong>Tools &gt; All In One Tutorial Kit &gt; Help and Support</strong> and paste it into your message.</p>
-<div class="doc-pager"><a class="pager prev" href="upgrading.html"><span class="label">Previous</span>Upgrading</a><a class="pager next" href="support.html"><span class="label">Next</span>Support</a></div>
-<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Troubleshooting" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
-</article>
-<nav class="docs-toc" aria-label="On this page"></nav>
-</div>
-</main>
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
-        <p>Core systems, carefully built.</p>
-      </div>
-      <div>
-        <h4>Products</h4>
-        <ul>
-          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
-          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
-          <li><a href="../../save-kit/index.html">Save Kit</a></li>
-          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
-          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
-          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
-          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
-          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
-          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
-          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
-          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Learn</h4>
-        <ul>
-          <li><a href="../../docs/index.html">Documentation</a></li>
-          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
-          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Help</h4>
-        <ul>
-          <li><a href="../../support/index.html">Support</a></li>
-          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
-          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
-          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
-          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-base">
-      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
-      <p>No trackers, no cookies, no analytics.</p>
-    </div>
-  </div>
-</footer>
-<script src="search-index.js"></script>
-<script src="../../assets/docs.js"></script>
+<main id="main"><section class="section"><div class="wrap">
+<h1>This page has moved</h1>
+<p>It is now part of Shipready. <a href="../../shipready/docs/index.html">Continue to Shipready</a>.</p>
+</div></section></main>
+<script>location.replace("../../shipready/docs/index.html");</script>
 </body>
 </html>

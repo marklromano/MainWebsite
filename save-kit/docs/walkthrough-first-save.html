@@ -2,154 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#0B1220">
-<title>Walkthrough: your first save | Rare Geometry</title>
-<meta name="description" content="Walkthrough: your first save: documentation for the All In One Save Kit for Unity.">
-<link rel="canonical" href="https://raregeometry.github.io/save-kit/docs/walkthrough-first-save.html">
-<meta property="og:site_name" content="Rare Geometry">
-<meta property="og:title" content="Walkthrough: your first save">
-<meta property="og:description" content="Walkthrough: your first save: documentation for the All In One Save Kit for Unity.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://raregeometry.github.io/save-kit/docs/walkthrough-first-save.html">
-<meta property="og:image" content="https://raregeometry.github.io/assets/img/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moved | Rare Geometry</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://raregeometry.github.io/shipready/docs/">
+<meta http-equiv="refresh" content="0; url=../../shipready/docs/index.html">
 <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="wrap header-row">
-    <a class="brand" href="../../index.html" aria-label="Rare Geometry home">
-      <img src="../../assets/logo.svg" alt="" width="34" height="34">
-      <span>Rare Geometry</span>
-    </a>
-    <nav aria-label="Main">
-      <ul class="nav">
-        <li><a href="../../index.html#products">Products</a></li><li><a href="../../prefab-builder/index.html">Prefab Builder</a></li><li><a href="../../docs/index.html" aria-current="page">Docs</a></li><li><a href="../../support/index.html">Support</a></li><li class="nav-store"><a href="https://assetstore.unity.com/packages/tools/level-design/all-in-one-prefab-builder-kit-411146" rel="noopener">Asset Store</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<main id="main">
-<div class="wrap docs-shell">
-<aside class="docs-side" aria-label="Documentation">
-  <div class="docs-product"><a href="index.html">Save Kit docs</a><span class="pill">v1.0.0</span><span class="pill pill-dev">Coming soon</span></div>
-  <div class="docs-search" hidden>
-    <label class="sr-only" for="docs-q">Search the documentation</label>
-    <input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
-    <kbd class="docs-search-key" aria-hidden="true">/</kbd>
-    <div class="docs-results" id="docs-results" role="listbox" hidden></div>
-  </div>
-  <nav class="docs-nav"><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="walkthroughs.html">Walkthroughs</a></div><div class="docs-group"><p class=label>Walkthroughs</p><a href="walkthrough-first-save.html" aria-current="page">Your first save</a><a href="walkthrough-world-objects.html">World objects</a><a href="walkthrough-save-menu.html">The save menu</a><a href="walkthrough-own-menu.html">Your own save menu (uGUI)</a><a href="walkthrough-own-menu-ui-toolkit.html">Your own save menu (UI Toolkit)</a><a href="walkthrough-backups.html">Backups and recovery</a><a href="walkthrough-game-updates.html">Game updates</a></div><div class="docs-group"><p class=label>Learn</p><a href="guide.html">Guide</a><a href="game-updates.html">Game updates and migrations</a><a href="coop.html">Co-op</a><a href="steam-cloud.html">Steam Cloud</a></div><div class="docs-group"><p class=label>Reference</p><a href="reference.html">Reference</a><a href="api.html">API reference</a><a href="limits-and-faq.html">Limits and FAQ</a><a href="troubleshooting.html">Troubleshooting</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div>
-    <details><summary>All pages</summary><div class="docs-links"><div class="docs-group"><a href="index.html">Overview</a></div><div class="docs-group"><p class=label>Start here</p><a href="getting-started.html">Quick start</a><a href="walkthroughs.html">Walkthroughs</a></div><div class="docs-group"><p class=label>Walkthroughs</p><a href="walkthrough-first-save.html" aria-current="page">Your first save</a><a href="walkthrough-world-objects.html">World objects</a><a href="walkthrough-save-menu.html">The save menu</a><a href="walkthrough-own-menu.html">Your own save menu (uGUI)</a><a href="walkthrough-own-menu-ui-toolkit.html">Your own save menu (UI Toolkit)</a><a href="walkthrough-backups.html">Backups and recovery</a><a href="walkthrough-game-updates.html">Game updates</a></div><div class="docs-group"><p class=label>Learn</p><a href="guide.html">Guide</a><a href="game-updates.html">Game updates and migrations</a><a href="coop.html">Co-op</a><a href="steam-cloud.html">Steam Cloud</a></div><div class="docs-group"><p class=label>Reference</p><a href="reference.html">Reference</a><a href="api.html">API reference</a><a href="limits-and-faq.html">Limits and FAQ</a><a href="troubleshooting.html">Troubleshooting</a><a href="known-issues.html">Known issues</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a></div></div></details>
-  </nav>
-</aside>
-<article class="prose" id="doc">
-<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Save Kit</a><span>/</span><span>Walkthroughs</span></nav>
-<h1 id="walkthrough-your-first-save">Walkthrough: your first save</h1>
-<p>Make one object remember its state and see it come back, without code, in about five minutes. The <a href="getting-started.html">Quick Start</a> is the short version.</p>
-<h2 id="1-open-the-start-window">1. Open the Start window <a class="anchor" href="#1-open-the-start-window" aria-label="Link to this section">#</a></h2>
-<p>After the kit is imported, the <strong>Start</strong> window opens by itself. Any time later, choose <strong>Tools → All In One Save Kit → Start</strong>.</p>
-<figure class="doc-figure"><img src="img/Walkthroughs/start-window.png" alt="The Start window: the &quot;Before your first save&quot; checks with a fix button for each, and the three choices" loading="lazy"><figcaption>The Start window: the &quot;Before your first save&quot; checks with a fix button for each, and the three choices</figcaption></figure>
-<p>Open the scene you want to test in. The strip at the top checks five things a first save needs. Click the button under each one that is not green yet:</p>
-<ul>
-<li><strong>Create</strong> makes the kit's settings in <code>Assets/AllInOneSaveKitData</code>, outside the kit's folder, so kit updates never overwrite them.</li>
-<li><strong>Save scene</strong> saves the open scene. A load re-opens the scene the save was made in, and only a saved scene can be re-opened.</li>
-<li><strong>Add</strong> (Build Settings) lists the scene, so a build can load it too.</li>
-<li><strong>Add</strong> (hotkeys) puts the save menu and the F5 / F9 test hotkeys in the scene. The keys work in the Editor only.</li>
-<li><strong>Import</strong> (menu text) adds TextMesh Pro's essential resources, so the menu shows its text.</li>
-</ul>
-<p>Each fix except Import is one step on <strong>Edit → Undo</strong>.</p>
-<h2 id="2-pick-what-should-be-remembered">2. Pick what should be remembered <a class="anchor" href="#2-pick-what-should-be-remembered" aria-label="Link to this section">#</a></h2>
-<p>Click <strong>Make objects remember their state</strong>. Select a door, a chest or a crate in the Hierarchy (hold Ctrl for several) and click <strong>Make the selected objects remember their state</strong>.</p>
-<p>Each object gets a <strong>Saveable</strong> component. Select one: the first line of its Inspector says what it saves, for example "Saves position, active state and whether it was destroyed."</p>
-<figure class="doc-figure"><img src="img/Walkthroughs/chest-saveable.png" alt="A chest's Saveable: &quot;Saves 1 field: Is Open&quot;, with Is Open ticked under the chest's script" loading="lazy"><figcaption>A chest's Saveable: &quot;Saves 1 field: Is Open&quot;, with Is Open ticked under the chest's script</figcaption></figure>
-<p>To save a value from one of your scripts, such as whether a chest is open, tick it under <strong>Values from your scripts</strong>. Only fields Unity itself saves are offered: <code>public</code> fields and fields marked <code>[SerializeField]</code>.</p>
-<p>If the script sets that value in <code>Start</code>, the Saveable warns you: the kit restores values before <code>Start</code> runs, so set starting values in <code>Awake</code> or in the field's declaration.</p>
-<p>Save the scene (Ctrl+S).</p>
-<h2 id="3-save-change-load">3. Save, change, load <a class="anchor" href="#3-save-change-load" aria-label="Link to this section">#</a></h2>
-<ol>
-<li>Press <strong>Play</strong>.</li>
-<li>Press <strong>F5</strong> and click <strong>Save</strong> on <strong>Slot 1</strong>.</li>
-<li>Change something: open the chest, or drag the crate somewhere else in the Scene view.</li>
-<li>Press <strong>F9</strong>, click <strong>Load</strong> on <strong>Slot 1</strong> and confirm.</li>
-</ol>
-<p>A note appears at the top of the Game view after each save and load:</p>
-<figure class="doc-figure"><img src="img/Walkthroughs/toast-save.png" alt="The Play Mode note after a save: Saved Slot 1: 11 objects, 50 values" loading="lazy"><figcaption>The Play Mode note after a save: Saved Slot 1: 11 objects, 50 values</figcaption></figure>
-<figure class="doc-figure"><img src="img/Walkthroughs/toast-load.png" alt="The Play Mode note after a load: Loaded Slot 1: 11 restored" loading="lazy"><figcaption>The Play Mode note after a load: Loaded Slot 1: 11 restored</figcaption></figure>
-<p>If something was skipped, the note says which object and why, with a code such as SK130. Click the note to open the full report in the Save Inspector.</p>
-<h2 id="4-look-inside-the-save">4. Look inside the save <a class="anchor" href="#4-look-inside-the-save" aria-label="Link to this section">#</a></h2>
-<p><strong>Tools → All In One Save Kit → Save Inspector</strong> lists every save file. Click one to open it as a tree: file, category, scene, object, value. Your object is under <strong>World</strong>, by name.</p>
-<!-- TODO-SHOT save-inspector: the Save Inspector with slot_01.save open and the chest's values showing -->
-
-<h2 id="when-something-does-not-come-back">When something does not come back <a class="anchor" href="#when-something-does-not-come-back" aria-label="Link to this section">#</a></h2>
-<ul>
-<li><strong>F5 and F9 do nothing:</strong> the Start window's strip shows <strong>No hotkeys</strong> or <strong>Hotkeys off</strong>; click its button.</li>
-<li><strong>"Saving is not available yet."</strong> in the menu: there are no settings yet; click <strong>Create</strong>.</li>
-<li><strong>A value resets right after a load:</strong> a script sets it in <code>Start</code>; move that line to <code>Awake</code>.</li>
-</ul>
-<p>Every message from the kit starts with <code>[All In One Save Kit]</code> and has a code with its own entry in <a href="troubleshooting.html">Troubleshooting</a>.</p>
-<p><strong>Next:</strong> <a href="walkthrough-world-objects.html">World objects</a> shows pickups, spawned objects and links between objects.</p>
-<div class="doc-pager"><a class="pager prev" href="walkthroughs.html"><span class="label">Previous</span>Walkthroughs</a><a class="pager next" href="walkthrough-world-objects.html"><span class="label">Next</span>World objects</a></div>
-<p class="doc-report"><a href="https://github.com/raregeometry/Support/issues/new?title=Docs:+Walkthrough:+your+first+save" rel="noopener">Something unclear or wrong? Tell us</a> &middot; <a href="../../support/index.html">Get help</a></p>
-</article>
-<nav class="docs-toc" aria-label="On this page"><p class="label">On this page</p><ul><li class="toc-2"><a href="#1-open-the-start-window">1. Open the Start window</a></li><li class="toc-2"><a href="#2-pick-what-should-be-remembered">2. Pick what should be remembered</a></li><li class="toc-2"><a href="#3-save-change-load">3. Save, change, load</a></li><li class="toc-2"><a href="#4-look-inside-the-save">4. Look inside the save</a></li><li class="toc-2"><a href="#when-something-does-not-come-back">When something does not come back</a></li></ul></nav>
-</div>
-</main>
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="../../index.html"><img src="../../assets/logo.svg" alt="" width="34" height="34"><span>Rare Geometry</span></a>
-        <p>Core systems, carefully built.</p>
-      </div>
-      <div>
-        <h4>Products</h4>
-        <ul>
-          <li><a href="../../prefab-builder/index.html">Prefab Builder Kit</a></li>
-          <li><a href="../../interaction-kit/index.html">Interaction Kit</a></li>
-          <li><a href="../../save-kit/index.html">Save Kit</a></li>
-          <li><a href="../../settings-menu-kit/index.html">Settings &amp; Menu Kit</a></li>
-          <li><a href="../../runtime-building-kit/index.html">Runtime Building Kit</a></li>
-          <li><a href="../../bug-report-kit/index.html">Bug Report Kit</a></li>
-          <li><a href="../../footstep-kit/index.html">Surface Footstep Kit</a></li>
-          <li><a href="../../tutorial-kit/index.html">Tutorial Kit</a></li>
-          <li><a href="../../hit-feedback-kit/index.html">Hit Feedback Kit</a></li>
-          <li><a href="../../waypoint-minimap-kit/index.html">Waypoint &amp; Minimap Kit</a></li>
-          <li><a href="https://assetstore.unity.com/publishers/160196" rel="noopener">Publisher page</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Learn</h4>
-        <ul>
-          <li><a href="../../docs/index.html">Documentation</a></li>
-          <li><a href="../../prefab-builder/docs/getting-started.html">Getting started</a></li>
-          <li><a href="../../prefab-builder/docs/troubleshooting.html">Troubleshooting</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Help</h4>
-        <ul>
-          <li><a href="../../support/index.html">Support</a></li>
-          <li><a href="mailto:marklromano@outlook.com">Email</a></li>
-          <li><a href="https://discord.gg/AmpBDxRAKu" rel="noopener">Discord</a></li>
-          <li><a href="https://github.com/raregeometry/Support/issues" rel="noopener">Bug tracker</a></li>
-          <li><a href="https://github.com/raregeometry" rel="noopener">GitHub</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-base">
-      <p>&copy; 2026 Rare Geometry. Unity is a trademark of Unity Technologies.</p>
-      <p>No trackers, no cookies, no analytics.</p>
-    </div>
-  </div>
-</footer>
-<script src="search-index.js"></script>
-<script src="../../assets/docs.js"></script>
+<main id="main"><section class="section"><div class="wrap">
+<h1>This page has moved</h1>
+<p>It is now part of Shipready. <a href="../../shipready/docs/index.html">Continue to Shipready</a>.</p>
+</div></section></main>
+<script>location.replace("../../shipready/docs/index.html");</script>
 </body>
 </html>
