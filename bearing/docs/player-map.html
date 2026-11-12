@@ -85,6 +85,9 @@ colours players may pick from, renaming and the longest name, notes and the long
 unlocked travel points, any discovered place) and its confirm, seeing undiscovered "?" places, and changing settings.
 Players can never edit or delete your own places.</p>
 <h2 id="pins-and-stamps">Pins and stamps <a class="anchor" href="#pins-and-stamps" aria-label="Link to this section">#</a></h2>
+<figure class="doc-figure" data-site-figure><a href="../../assets/img/bearing/docs/map-pin-editor-explorer.jpg"><img src="../../assets/img/bearing/docs/map-pin-editor-explorer.jpg" alt="A player placing a pin: name, icon and colour." width="1280" height="720" loading="lazy" decoding="async"></a><figcaption>A player placing a pin: name, icon and colour.</figcaption></figure>
+
+
 <ul>
 <li><strong>Pins</strong> are few and show everywhere (screen, compass, minimap, map): for getting somewhere.</li>
 <li><strong>Stamps</strong> are many and show on the map only: for remembering things.</li>
@@ -101,6 +104,9 @@ places (pressing it again on a travel point asks to travel).</p>
 (when the scene has a Waypoint Route). Tracking another place stops tracking the last. From code: <code>hud.Track(place)</code>,
 <code>hud.Untrack()</code>, <code>hud.TrackedPlace</code>, <code>hud.CanTrack(place)</code>.</p>
 <h2 id="fast-travel">Fast travel <a class="anchor" href="#fast-travel" aria-label="Link to this section">#</a></h2>
+<figure class="doc-figure" data-site-figure><a href="../../assets/img/bearing/docs/10-after-fast-travel.jpg"><img src="../../assets/img/bearing/docs/10-after-fast-travel.jpg" alt="Arriving at a camp after fast travel." width="1600" height="841" loading="lazy" decoding="async"></a><figcaption>Arriving at a camp after fast travel.</figcaption></figure>
+
+
 <p>The place card shows <strong>Fast travel</strong> with the reason when it can't be used now: "Discover it first", "Fast travel is
 off", or your game's own reason. Your check: <code>hud.FastTravelCheck = place =&gt; inCombat ? "Not while fighting" : null;</code>
 (costs and cooldowns work the same way). With <strong>Confirm Travel</strong> on, the button asks "Travel to Camp?" first. Your game

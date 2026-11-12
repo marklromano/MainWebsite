@@ -53,6 +53,9 @@
 <nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span><a href="index.html">Bearing</a><span>/</span><span>Features</span></nav>
 <h1 id="world-scan-and-moving-entities">World scan and moving entities</h1>
 <h2 id="world-scan">World scan <a class="anchor" href="#world-scan" aria-label="Link to this section">#</a></h2>
+<figure class="doc-figure" data-site-figure><a href="../../assets/img/bearing/docs/09-world-scan.jpg"><img src="../../assets/img/bearing/docs/09-world-scan.jpg" alt="A world scan: the ring sweeps out and marks what it passes." width="1600" height="900" loading="lazy" decoding="async"></a><figcaption>A world scan: the ring sweeps out and marks what it passes.</figcaption></figure>
+
+
 <p>Add a <strong>Waypoint World Scan</strong> (GameObject &gt; Bearing &gt; World Scan puts it on the HUD's player). A scan sends a pulse out
 from the player: places it reaches are found as the pulse passes them. Undiscovered places are discovered (and play
 their reveal animation); places already known play a highlight.</p>
@@ -99,6 +102,9 @@ the map (each can be off), its colour and size, and the highlight animation.</p>
 <p>From code: <code>scan.Scan()</code> (from your own ability; false while cooling down), <code>scan.CanScan</code>, <code>scan.CooldownLeft</code>,
 <code>scan.Found</code>, <code>scan.Started</code>, <code>WaypointWorldScan.PlaceFound (scan, place, discovered)</code>, <code>WaypointWorldScan.Current</code>.</p>
 <h2 id="moving-entities">Moving entities <a class="anchor" href="#moving-entities" aria-label="Link to this section">#</a></h2>
+<figure class="doc-figure" data-site-figure><a href="../../assets/img/bearing/docs/10-entities.jpg"><img src="../../assets/img/bearing/docs/10-entities.jpg" alt="Moving entities: two boats tracked in the world and on the minimap." width="1600" height="900" loading="lazy" decoding="async"></a><figcaption>Moving entities: two boats tracked in the world and on the minimap.</figcaption></figure>
+
+
 <p>Add a <strong>Waypoint Entity</strong> to anything that moves: enemies, allies, vehicles, mounts, NPCs, other players
 (GameObject &gt; Bearing &gt; Moving Entity, with the object selected). It adds a Waypoint shown on the minimap and map only.</p>
 <div class="table-wrap"><table>

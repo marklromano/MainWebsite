@@ -1098,6 +1098,185 @@ def issues_tile(root):
             '<h3>Public bug tracker</h3><p>A GitHub issue tracker is on the way. Until then, email bug reports.</p></div>')
 
 
+# ---- Pictures in the manuals. The site adds these to a product's docs pages; the words still come from the
+# Documentation folder that ships in the package. slug -> page.html -> [(picture under assets/img/, caption, where)].
+# "where" is the id of the section heading the picture goes under; leave it out for under the page's opening
+# paragraph. Every picture is a real capture or a store slide made from real captures. A product's own
+# "page_images" in PRODUCTS (one picture per page) still works and is added to these. ----
+
+DOC_IMAGES = {
+    "bearing": {
+        "getting-started.html": [
+            ("bearing/docs/14-setup-wizard.jpg", "The Setup Wizard: add the HUD, mark your objects, pick the objective.", "1-add-the-hud"),
+            ("bearing/docs/01-hero.jpg", "After the wizard: the compass, the objective tracker and the minimap, with the objective marked in the world.", "4-press-play"),
+        ],
+        "samples.html": [("bearing/docs/01-demo-in-editor.jpg", "The demo island, open in the editor.")],
+        "chart-table.html": [("bearing/chart-table.jpg", "The Chart Table lists every place in the level; the small picture is the same level in the game.")],
+        "hud.html": [
+            ("bearing/docs/01-hero.jpg", "The HUD: compass along the top, objective tracker top right, minimap bottom left and a marker over the objective."),
+            ("bearing/docs/18-skins-fantasy.jpg", "The same HUD with the Fantasy frames.", "look"),
+        ],
+        "make-it-yours.html": [("bearing/docs/02-four-looks.jpg", "The four ready-made looks on the same scene.")],
+        "visibility.html": [("bearing/docs/20-calm.jpg", "Calm by default: only the objective and what is close by show on screen.")],
+        "map.html": [
+            ("bearing/docs/15-map-from-world.jpg", "A level seen from above, and the Clean map made from it.", "making-a-clean-map"),
+            ("bearing/docs/03-full-map.jpg", "The full-screen map: places, the tracked objective, the map key and the controls along the bottom.", "the-full-screen-map"),
+            ("bearing/docs/07-floors.jpg", "A building's ground floor on the map.", "floors"),
+        ],
+        "discovery.html": [
+            ("bearing/docs/06-lookout-reveal.jpg", "Fog of war: a lookout reveals the land around it.", "fog-of-war"),
+            ("bearing/docs/05-discovery.jpg", "Discovering a place: the banner, and its icon turning from a question mark.", "regions"),
+        ],
+        "routes.html": [("bearing/docs/08-route.jpg", "A route to the objective that follows the road and the bridge.", "routes")],
+        "player-map.html": [
+            ("bearing/docs/map-pin-editor-explorer.jpg", "A player placing a pin: name, icon and colour.", "pins-and-stamps"),
+            ("bearing/docs/10-after-fast-travel.jpg", "Arriving at a camp after fast travel.", "fast-travel"),
+        ],
+        "scan-and-entities.html": [
+            ("bearing/docs/09-world-scan.jpg", "A world scan: the ring sweeps out and marks what it passes.", "world-scan"),
+            ("bearing/docs/10-entities.jpg", "Moving entities: two boats tracked in the world and on the minimap.", "moving-entities"),
+        ],
+        "sharing.html": [("bearing/docs/11-sharing.jpg", "A marker shared by another player, in the world and on the compass.")],
+        "fit-your-game.html": [("bearing/docs/12-player-options.jpg", "The player options screen: players choose what the map and HUD show, within your limits.")],
+        "2d.html": [("bearing/docs/17-top-down.jpg", "Bearing in a top-down game.")],
+        "trails.html": [("bearing/docs/04-chain-wired.jpg", "A chain of objectives set up in the Chart Table.")],
+    },
+    "interactra": {
+        "getting-started.html": [("interactra/docs/01-interactive-then-build.jpg", "The demo house: a lever wired to a powered door and a lamp.")],
+        "setup-wizard.html": [("interactra/docs/02-your-prefab.jpg", "The Setup Wizard: pick your model, pick what it does, press Create.")],
+        "ways-to-interact.html": [("interactra/docs/06-several-actions.jpg", "One door, two actions: tap to open, hold to lock, each with its own prompt line.")],
+        "components.html": [("interactra/docs/10-doors-locks-keys.jpg", "A locked door, a physics door, keys and a keypad.")],
+        "hands-on-objects.html": [("interactra/11-keypad.jpg", "A keypad, used with the mouse or a gamepad.")],
+        "more-objects.html": [("interactra/docs/11-machines.jpg", "An elevator, its call button, a valve and a breakable crate.")],
+        "power-and-puzzles.html": [("interactra/docs/07-power.jpg", "Power: the lever feeds the door and the lamp through a wire.")],
+        "build-feel-and-wiring.html": [
+            ("interactra/docs/05-build-animations.jpg", "The four ways a piece can arrive: grow, rise, drop or assemble.", "build-animations"),
+            ("interactra/docs/08-wires.jpg", "The four wire looks: tidy, loose, straight or hidden.", "wire-looks"),
+        ],
+        "prompts.html": [("interactra/08-locked.jpg", "A prompt that says why: the door is locked and needs its key.")],
+        "customizing.html": [("interactra/docs/13-four-looks.jpg", "The four ready-made looks: Clean, Industrial, Fantasy and Sci-Fi.")],
+        "accessibility.html": [("interactra/docs/14-player-options.jpg", "The player options screen: prompt size, press instead of hold, captions and reduced motion.")],
+        "saving-and-integrations.html": [("interactra/docs/15-everything-saves.jpg", "Before saving, cleared, and after loading: built pieces, wires and every object's state come back.")],
+        "tools.html": [("interactra/docs/16-workbench.jpg", "The Workbench: its Objects, Pieces and Test pages.")],
+        "samples.html": [("interactra/docs/12-build-menu.jpg", "The demo's build menu, with its categories and costs.")],
+        "troubleshooting.html": [("interactra/docs/09-placement-reasons.jpg", "A refused spot says why, in the game and in the editor.")],
+    },
+    "responsive-fx": {
+        "getting-started.html": [("responsive-fx/docs/01-one-volley-three-answers.jpg", "One volley, three answers: wood splinters, armour sparks, glass shatters.")],
+        "impact-lab.html": [("responsive-fx/docs/04-meet-impact-lab.jpg", "Impact Lab: every surface against every kind of contact. Pick a square, press Listen, adjust it.")],
+        "surfaces.html": [("responsive-fx/docs/02-same-blade.jpg", "The same blade on two surfaces: the surface decides the response.")],
+        "contacts.html": [("responsive-fx/docs/15-every-bump.jpg", "Physics impacts: a tumbling crate gets the sound and effect of the surface it lands on.")],
+        "noise-and-hearing.html": [
+            ("responsive-fx/docs/07-your-steps-they-hear.jpg", "A guard hears the player's steps; the trace shows what was heard.", "let-ai-hear"),
+            ("responsive-fx/docs/14-hear-it-find-it.jpg", "Showing the player where a sound came from, even off screen.", "show-the-player"),
+        ],
+        "player-options.html": [("responsive-fx/docs/09-comfort-on-their-terms.jpg", "The feedback options screen your players get.")],
+        "response-graph.html": [("responsive-fx/docs/16-response-graph.jpg", "The Response Graph: when it happens, check the rule, fire the response.")],
+        "integrations.html": [("responsive-fx/docs/20-ready-for-your-game.jpg", "Bridges, render pipelines and Unity versions.")],
+        "hits.html": [("responsive-fx/docs/03-glass-breaks.jpg", "Hit by hit, the glass cracks, clouds over and shatters.")],
+        "hits-samples.html": [("responsive-fx/volley.jpg", "The Response Playground demo.")],
+        "hits-profiles.html": [("responsive-fx/docs/10-four-looks-one-system.jpg", "Four ready-made looks for the same hit.")],
+        "hit-recipe-studio.html": [("responsive-fx/docs/05-build-the-feel.jpg", "Hit Recipe Studio beside the recipe library in Impact Lab.")],
+        "health-bars.html": [("responsive-fx/docs/19-first-hit-to-final-blow.jpg", "A boss bar across the top, and the kill moment.")],
+        "player-feedback.html": [("responsive-fx/docs/13-feel-the-hit.jpg", "Damage direction, screen-edge feedback and the low-health warning.")],
+        "accessibility.html": [("responsive-fx/docs/08-sound-you-can-see.jpg", "Sound captions make important sounds visible.")],
+        "hits-2d.html": [("responsive-fx/docs/12-2d-hits-full-force.jpg", "Damage numbers, flashes and impacts in a 2D game, in the four looks.")],
+        "why-no-feedback.html": [("responsive-fx/docs/17-set-it-up-find-the-fix.jpg", "The Setup Wizard, and the Why No Feedback? and Why No Footstep? windows.")],
+        "steps.html": [("responsive-fx/docs/06-every-step-leaves-a-mark.jpg", "Footprints follow the character across the snow.")],
+        "effects-and-footprints.html": [("responsive-fx/snow.jpg", "A trail of footprints in fresh snow.")],
+        "ai-hearing.html": [("responsive-fx/heard.jpg", "A guard turns towards a sound; the meter shows how loud the player is.")],
+        "surface-zones.html": [("responsive-fx/docs/18-the-world-changes.jpg", "Weather, trails and rooms change what the world hears and remembers.")],
+        "steps-2d.html": [("responsive-fx/docs/11-2d-steps-explained.jpg", "A 2D walker, with the panel that says which surface was found and which response played.")],
+        "steps-samples.html": [("responsive-fx/glass.jpg", "The demo scene: surfaces to walk on and things to hit.")],
+    },
+    "snapbuild": {
+        "getting-started.html": [("snapbuild/01-build-worlds.jpg", "A whole town made with Snapbuild from one modular pack.")],
+        "world-builder-window.html": [("snapbuild/20-level-builder.jpg", "The Level Builder: every tool in one window, in the order you build.")],
+        "adding-packs.html": [
+            ("snapbuild/03-your-pack.jpg", "Turn a pack into a kit: choose it, check the review, build."),
+            ("snapbuild/howto-pack-review.jpg", "The review screen: what each piece was recognised as.", "3-the-review-screen"),
+        ],
+        "place-tab.html": [
+            ("snapbuild/02-prefabs.jpg", "Stamp: pick a prefab, click, and it snaps to the grid and its neighbours.", "stamp"),
+            ("snapbuild/06-brush.jpg", "Brush: paint pieces across the ground.", "brush"),
+            ("snapbuild/07-fill.jpg", "Fill: cover an area in one go.", "fill"),
+            ("snapbuild/04-roads.jpg", "Roads: drag along the grid and the straights, corners and junctions join themselves.", "roads"),
+        ],
+        "build-catalog.html": [("snapbuild/21-build-menus.jpg", "Build menus made from your pack.")],
+        "rooms.html": [("snapbuild/15-rooms.jpg", "Drag a room and get a building: walls, corners, floor, roof and door.")],
+        "dress-tab.html": [("snapbuild/05-dress-the-street.jpg", "Dress a street in one click: lights, bins and signs along the road.")],
+        "move-tab.html": [("snapbuild/13-line-it-up.jpg", "Line pieces up and space them evenly.")],
+        "physics-tab.html": [("snapbuild/09-physics.jpg", "Physics: drop pieces and let them settle.")],
+        "check-tab.html": [("snapbuild/18-find-problems.jpg", "Check finds problems in the scene and points at each one.")],
+        "make-playable.html": [("snapbuild/19-ready-to-play.jpg", "Make Playable: ids, map places, surfaces and doors marked for your game.")],
+        "rules-and-data.html": [("snapbuild/12-vary.jpg", "Variation rules keep repeated pieces from looking the same.")],
+    },
+}
+
+
+def doc_images_for(product, out):
+    """The pictures for one docs page: the product's own page_images entry first, then DOC_IMAGES."""
+    own = product.get("page_images", {}).get(out)
+    return ([tuple(own)] if own else []) + DOC_IMAGES.get(product["slug"], {}).get(out, [])
+
+
+def doc_figure(img, caption, lazy=True):
+    """A picture in a manual page: opens full size when clicked. Marked so the build can replace it later. The one
+    at the top of a page is on screen at once, so it is not loaded lazily."""
+    path = SITE / "assets" / "img" / img
+    width, height = jpeg_size(path) if path.exists() else (1920, 1080)
+    cap = html.escape(caption)
+    return (f'<figure class="doc-figure" data-site-figure><a href="../../assets/img/{img}">'
+            f'<img src="../../assets/img/{img}" alt="{cap}" width="{width}" height="{height}"{' loading="lazy" decoding="async"' if lazy else ""}>'
+            f'</a><figcaption>{cap}</figcaption></figure>')
+
+
+SITE_FIGURE = re.compile(r'<figure class="doc-figure" data-site-figure>.*?</figure>', re.S)
+
+
+def add_doc_figures(body_html, images):
+    """Puts each picture under its section heading, or under the page's opening paragraph when it names none (or
+    when the page no longer has that section). Safe to run again: it takes its own earlier pictures out first."""
+    body_html = SITE_FIGURE.sub("", body_html)
+    top = []
+    for image in images:
+        img, caption, where = (tuple(image) + (None,))[:3]
+        if not (SITE / "assets" / "img" / img).exists():
+            print(f"WARNING: docs picture {img} is not in assets/img; left out.")
+            continue
+        heading = re.search(rf'<h2 id="{re.escape(where)}"[^>]*>.*?</h2>', body_html, re.S) if where else None
+        if heading:
+            body_html = body_html[:heading.end()] + "\n" + doc_figure(img, caption) + body_html[heading.end():]
+        else:
+            top.append(doc_figure(img, caption, lazy=False))
+    if top:
+        figs = "".join(top)
+        if re.search(r"</h1>\s*<p>.*?</p>", body_html, re.S):
+            body_html = re.sub(r"(</h1>\s*<p>.*?</p>)", lambda m_: m_.group(1) + figs, body_html, count=1, flags=re.S)
+        else:
+            body_html = re.sub(r"(</h1>)", lambda m_: m_.group(1) + figs, body_html, count=1)
+    return body_html
+
+
+def apply_doc_images():
+    """Adds the pictures to docs pages already on the site, so a product's manual need not be rebuilt for them."""
+    for p in current_products():
+        for out in sorted(set(DOC_IMAGES.get(p["slug"], {}))):
+            path = SITE / p["slug"] / "docs" / out
+            if not path.exists():
+                print(f"WARNING: {p['slug']}/docs/{out} has pictures listed but is not on the site.")
+                continue
+            text = path.read_text(encoding="utf-8")
+            start = text.find('<article class="prose" id="doc">')
+            end = text.find('<div class="doc-pager">', start)
+            if start < 0 or end < 0:
+                continue
+            new = text[:start] + add_doc_figures(text[start:end], doc_images_for(p, out)) + text[end:]
+            if new != text:
+                path.write_text(new, encoding="utf-8")
+                print("pictures", f"{p['slug']}/docs/{out}")
+
+
 # ---- Hand-written pages (tools/pages/*.html) ----
 
 HAND_PAGES = [
@@ -1198,6 +1377,7 @@ def build_pages():
             body = title_with_icon(body, root, kit)
         write(out, page(root, active, title, description, body, out))
     write_redirects()
+    apply_doc_images()
     build_docs_hub()
     sync_footers()
 
@@ -1616,11 +1796,9 @@ def build_docs(product, kit_root):
             body_html, toc = convert(text, doc_out, folders.get(out, ""))
             m = re.search(r"<h1[^>]*>(.*?)</h1>", body_html)
             h1 = plain(m.group(1)) if m else title
-            if out in product.get("page_images", {}):
-                img, cap = product["page_images"][out]
-                fig = (f'<figure class="doc-figure"><img src="../../assets/img/{img}" alt="{html.escape(cap)}" '
-                       f'width="1920" height="1080" loading="lazy"><figcaption>{html.escape(cap)}</figcaption></figure>')
-                body_html = re.sub(r"(</h1>\s*<p>.*?</p>)", lambda m_: m_.group(1) + fig, body_html, count=1, flags=re.S)
+            images = doc_images_for(product, out)
+            if images:
+                body_html = add_doc_figures(body_html, images)
             search += sections(body_html, h1, out)
         crumbs = (f'<nav class="crumbs" aria-label="Breadcrumb"><a href="../../docs/index.html">Docs</a><span>/</span>'
                   f'<a href="index.html">{html.escape(product["short"])}</a>'

@@ -89,6 +89,9 @@ itself is made once, in the editor (it is not a live camera view).</p>
 </tbody>
 </table></div>
 <h2 id="making-a-clean-map">Making a Clean map <a class="anchor" href="#making-a-clean-map" aria-label="Link to this section">#</a></h2>
+<figure class="doc-figure" data-site-figure><a href="../../assets/img/bearing/docs/15-map-from-world.jpg"><img src="../../assets/img/bearing/docs/15-map-from-world.jpg" alt="A level seen from above, and the Clean map made from it." width="1600" height="900" loading="lazy" decoding="async"></a><figcaption>A level seen from above, and the Clean map made from it.</figcaption></figure>
+
+
 <ol>
 <li>Press <strong>Preview</strong>. The map is drawn in the inspector without saving anything.</li>
 <li>Anything shown in <strong>pink</strong> wasn't recognised. It's listed under the preview: pick what each one is (Road, Building,
@@ -137,6 +140,9 @@ forest. <strong>Height range</strong> draws one floor of a multi-level place.</p
 </tbody>
 </table></div>
 <h2 id="the-full-screen-map">The full-screen map <a class="anchor" href="#the-full-screen-map" aria-label="Link to this section">#</a></h2>
+<figure class="doc-figure" data-site-figure><a href="../../assets/img/bearing/docs/03-full-map.jpg"><img src="../../assets/img/bearing/docs/03-full-map.jpg" alt="The full-screen map: places, the tracked objective, the map key and the controls along the bottom." width="1600" height="900" loading="lazy" decoding="async"></a><figcaption>The full-screen map: places, the tracked objective, the map key and the controls along the bottom.</figcaption></figure>
+
+
 <p><strong>M</strong> (or <code>hud.ToggleMap()</code>) opens it. Drag to move, wheel or <strong>+</strong> / <strong>-</strong> to zoom, <strong>Me</strong> or Space to centre on the
 player, <strong>M</strong> or Escape to close. It shows the player arrow, every waypoint with its name, discovered region names,
 fog of war and a legend for Clean maps. On the HUD you choose the key, whether the mouse is freed (default) and whether
@@ -230,6 +236,9 @@ picks its own map, so split-screen players in different buildings each see their
 <code>hud.ViewedMap</code>, <code>hud.ViewMap(map)</code>, <code>hud.ViewParentMap()</code>, <code>hud.MapChanged</code>, <code>WaypointMap.For(position)</code>.
 Areas work across scenes loaded together (each is found by its scene and name: keep area names different).</p>
 <h2 id="floors">Floors <a class="anchor" href="#floors" aria-label="Link to this section">#</a></h2>
+<figure class="doc-figure" data-site-figure><a href="../../assets/img/bearing/docs/07-floors.jpg"><img src="../../assets/img/bearing/docs/07-floors.jpg" alt="A building&#x27;s ground floor on the map." width="1600" height="900" loading="lazy" decoding="async"></a><figcaption>A building&#x27;s ground floor on the map.</figcaption></figure>
+
+
 <p>Fill <strong>Floors</strong> with a name and the heights of each floor. <strong>Bake All Floors</strong> draws each floor from its own heights
 only, so the roof and the floors above are cut away, and sets each floor's picture (Clean maps and photos both).</p>
 <ul>

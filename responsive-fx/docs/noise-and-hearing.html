@@ -55,6 +55,9 @@
 <p>Every step and contact can make <strong>noise</strong>: a place and a radius. Noise is for your AI, not for the player's ears. It
 never follows the player's volume setting, so a player who turns footsteps down is still heard.</p>
 <h2 id="let-ai-hear">Let AI hear <a class="anchor" href="#let-ai-hear" aria-label="Link to this section">#</a></h2>
+<figure class="doc-figure" data-site-figure><a href="../../assets/img/responsive-fx/docs/07-your-steps-they-hear.jpg"><img src="../../assets/img/responsive-fx/docs/07-your-steps-they-hear.jpg" alt="A guard hears the player&#x27;s steps; the trace shows what was heard." width="1600" height="900" loading="lazy" decoding="async"></a><figcaption>A guard hears the player&#x27;s steps; the trace shows what was heard.</figcaption></figure>
+
+
 <p>Add a <strong>Noise Listener</strong> to a guard. It hears a noise when the noise's radius reaches its ears.</p>
 <ul>
 <li><strong>Hearing</strong> scales how far it hears: 2 hears twice as far.</li>
@@ -89,6 +92,9 @@ Radius and walks it, newest last: it raises <strong>On Track Found</strong>, the
 (wire it to your NavMeshAgent), and <strong>On Trail Ended</strong> when it caught up or the rest went cold.</p>
 <p>In code: <code>Trails.FindFreshest(position, radius, out var point)</code> and <code>Trails.Next(point, out var next)</code>.</p>
 <h2 id="show-the-player">Show the player <a class="anchor" href="#show-the-player" aria-label="Link to this section">#</a></h2>
+<figure class="doc-figure" data-site-figure><a href="../../assets/img/responsive-fx/docs/14-hear-it-find-it.jpg"><img src="../../assets/img/responsive-fx/docs/14-hear-it-find-it.jpg" alt="Showing the player where a sound came from, even off screen." width="1600" height="900" loading="lazy" decoding="async"></a><figcaption>Showing the player where a sound came from, even off screen.</figcaption></figure>
+
+
 <ul>
 <li>The <strong>Noise Meter</strong> shows how much noise the player is making and changes the moment someone hears it.</li>
 <li>The <strong>Sound Ring</strong> marks where a listener who just heard the player stands.</li>
