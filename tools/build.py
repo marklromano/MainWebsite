@@ -587,7 +587,8 @@ PRODUCTS = [
         "version": "1.0.0",
         "store": "",
         "summary": "Game feel for every hit, step and impact: sound, effects, marks, screen feedback and noise your AI "
-                   "hears, tuned in one window and adjustable by your players.",
+                   "hears, tuned in one window and adjustable by your players. The Feedback Player gives every other "
+                   "moment (a pickup, a jump, a button) its own list of feedbacks.",
         "requirements": ["Unity 6000.0+", "Built-in, URP & HDRP", "No dependencies", "Full C# source"],
         "menu": "Tools > Responsive FX",
         "support_info": "In **Tools > Responsive FX > Help and Support**, click **Copy system info**",
@@ -602,6 +603,7 @@ PRODUCTS = [
         "pages": [
             ("Start here", "QuickStart.md", "getting-started.html", "Quick start"),
             ("Start here", "ImpactLab.md", "impact-lab.html", "Impact Lab"),
+            ("Start here", "Feedbacks.md", "feedback-player.html", "Feedback Player"),
             ("The system", "Surfaces.md", "surfaces.html", "Surfaces and responses"),
             ("The system", "Contacts.md", "contacts.html", "Contacts"),
             ("The system", "NoiseAndHearing.md", "noise-and-hearing.html", "Noise and hearing"),
